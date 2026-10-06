@@ -9,141 +9,795 @@
     "plantlife.org.uk"
   ],
   "edibles": [
-    { "name": "Agaricus campestris", "sources": [] },
-    { "name": "Agaricus arvensis", "sources": [] },
-    { "name": "Agaricus silvicola", "sources": [] },
-    { "name": "Agaricus augustus", "sources": [] },
-    { "name": "Macrolepiota procera", "sources": [] },
-    { "name": "Chlorophyllum rhacodes", "sources": [] },
-    { "name": "Coprinus comatus", "sources": [] },
-    { "name": "Calvatia gigantea", "sources": [] },
-    { "name": "Lycoperdon perlatum", "sources": [] },
-    { "name": "Cantharellus cibarius", "sources": [] },
-    { "name": "Craterellus cornucopioides", "sources": [] },
-    { "name": "Craterellus tubaeformis", "sources": [] },
-    { "name": "Hydnum repandum", "sources": [] },
-    { "name": "Hydnum rufescens", "sources": [] },
-    { "name": "Boletus edulis", "sources": [] },
-    { "name": "Imleria badia", "sources": [] },
-    { "name": "Leccinum scabrum", "sources": [] },
-    { "name": "Leccinum versipelle", "sources": [] },
-    { "name": "Suillus luteus", "sources": [] },
-    { "name": "Suillus grevillei", "sources": [] },
-    { "name": "Laetiporus sulphureus", "sources": [] },
-    { "name": "Fistulina hepatica", "sources": [] },
-    { "name": "Grifola frondosa", "sources": [] },
-    { "name": "Sparassis crispa", "sources": [] },
-    { "name": "Pleurotus ostreatus", "sources": [] },
-    { "name": "Pleurotus pulmonarius", "sources": [] },
-    { "name": "Flammulina velutipes", "sources": [] },
-    { "name": "Lepista nuda", "sources": [] },
-    { "name": "Lepista personata", "sources": [] },
-    { "name": "Calocybe gambosa", "sources": [] },
-    { "name": "Marasmius oreades", "sources": [] },
-    { "name": "Laccaria amethystina", "sources": [] },
-    { "name": "Laccaria laccata", "sources": [] },
-    { "name": "Auricularia auricula-judae", "sources": [] },
-    { "name": "Morchella esculenta", "sources": [] },
-    { "name": "Russula cyanoxantha", "sources": [] },
-    { "name": "Lactarius deliciosus", "sources": [] },
-    { "name": "Cortinarius caperatus", "sources": [] },
-    { "name": "Amanita rubescens", "sources": [] },
-    { "name": "Polyporus squamosus", "sources": [] },
-    { "name": "Armillaria mellea", "sources": [] },
-    { "name": "Kuehneromyces mutabilis", "sources": [] },
-    { "name": "Clitopilus prunulus", "sources": [] },
-    { "name": "Hericium erinaceus", "sources": [] }
+    {
+      "name": "Agaricus campestris",
+      "sources": [
+        "https://www.first-nature.com/fungi/agaricus-campestris.php",
+        "https://www.wildfooduk.com/mushroom-guide/field-mushroom/"
+      ]
+    },
+    {
+      "name": "Agaricus arvensis",
+      "sources": [
+        "https://www.first-nature.com/fungi/agaricus-arvensis.php",
+        "https://www.wildfooduk.com/mushroom-guide/horse-mushroom-2/"
+      ]
+    },
+    {
+      "name": "Agaricus sylvicola",
+      "sources": [
+        "https://www.first-nature.com/fungi/agaricus-sylvicola.php",
+        "https://www.wildfooduk.com/mushroom-guide/wood-mushroom/"
+      ]
+    },
+    {
+      "name": "Macrolepiota procera",
+      "sources": [
+        "https://www.first-nature.com/fungi/macrolepiota-procera.php",
+        "https://www.wildfooduk.com/mushroom-guide/parasol/"
+      ]
+    },
+    {
+      "name": "Coprinus comatus",
+      "sources": [
+        "https://www.first-nature.com/fungi/coprinus-comatus.php",
+        "https://www.wildfooduk.com/mushroom-guide/shaggy-inkcap/"
+      ]
+    },
+    {
+      "name": "Calvatia gigantea",
+      "sources": [
+        "https://www.first-nature.com/fungi/calvatia-gigantea.php",
+        "https://www.wildfooduk.com/mushroom-guide/giant-puffball/"
+      ]
+    },
+    {
+      "name": "Lycoperdon perlatum",
+      "sources": [
+        "https://www.first-nature.com/fungi/lycoperdon-perlatum.php",
+        "https://www.wildfooduk.com/mushroom-guide/common-puffball/"
+      ]
+    },
+    {
+      "name": "Cantharellus cibarius",
+      "sources": [
+        "https://www.first-nature.com/fungi/cantharellus-cibarius.php",
+        "https://www.wildfooduk.com/mushroom-guide/chanterelle-3/"
+      ]
+    },
+    {
+      "name": "Craterellus cornucopioides",
+      "sources": [
+        "https://www.first-nature.com/fungi/craterellus-cornucopioides.php",
+        "https://www.wildfooduk.com/mushroom-guide/horn-of-plenty/"
+      ]
+    },
+    {
+      "name": "Hydnum repandum",
+      "sources": [
+        "https://www.first-nature.com/fungi/hydnum-repandum.php",
+        "https://www.wildfooduk.com/mushroom-guide/hedgehog-fungus/"
+      ]
+    },
+    {
+      "name": "Hydnum rufescens",
+      "sources": [
+        "https://www.first-nature.com/fungi/hydnum-rufescens.php",
+        "https://www.wildfooduk.com/mushroom-guide/terracotta-hedgehog/"
+      ]
+    },
+    {
+      "name": "Boletus edulis",
+      "sources": [
+        "https://www.first-nature.com/fungi/boletus-edulis.php",
+        "https://www.wildfooduk.com/mushroom-guide/cep/"
+      ]
+    },
+    {
+      "name": "Imleria badia",
+      "sources": [
+        "https://www.first-nature.com/fungi/imleria-badia.php",
+        "https://www.wildfooduk.com/mushroom-guide/bay-bolete/"
+      ]
+    },
+    {
+      "name": "Leccinum scabrum",
+      "sources": [
+        "https://www.first-nature.com/fungi/leccinum-scabrum.php",
+        "https://www.wildfooduk.com/mushroom-guide/brown-birch-bolete/"
+      ]
+    },
+    {
+      "name": "Leccinum versipelle",
+      "sources": [
+        "https://www.first-nature.com/fungi/leccinum-versipelle.php",
+        "https://www.wildfooduk.com/mushroom-guide/orange-birch-bolete/"
+      ]
+    },
+    {
+      "name": "Suillus luteus",
+      "sources": [
+        "https://www.first-nature.com/fungi/suillus-luteus.php",
+        "https://www.wildfooduk.com/mushroom-guide/slippery-jack/"
+      ]
+    },
+    {
+      "name": "Laetiporus sulphureus",
+      "sources": [
+        "https://www.first-nature.com/fungi/laetiporus-sulphureus.php",
+        "https://www.wildfooduk.com/mushroom-guide/chicken-of-the-woods-2/"
+      ]
+    },
+    {
+      "name": "Fistulina hepatica",
+      "sources": [
+        "https://www.first-nature.com/fungi/fistulina-hepatica.php",
+        "https://www.wildfooduk.com/mushroom-guide/beefsteak-fungus-fistulina-hepatica/"
+      ]
+    },
+    {
+      "name": "Grifola frondosa",
+      "sources": [
+        "https://www.first-nature.com/fungi/grifola-frondosa.php",
+        "https://www.wildfooduk.com/mushroom-guide/hen-of-the-woods/"
+      ]
+    },
+    {
+      "name": "Sparassis crispa",
+      "sources": [
+        "https://www.first-nature.com/fungi/sparassis-crispa.php",
+        "https://www.wildfooduk.com/mushroom-guide/cauliflower-fungus/"
+      ]
+    },
+    {
+      "name": "Pleurotus ostreatus",
+      "sources": [
+        "https://www.first-nature.com/fungi/pleurotus-ostreatus.php",
+        "https://www.wildfooduk.com/mushroom-guide/oyster-mushroom/"
+      ]
+    },
+    {
+      "name": "Pleurotus pulmonarius",
+      "sources": [
+        "https://www.wildfooduk.com/mushroom-guide/pale-oyster-mushroom/",
+        "https://en.wikipedia.org/wiki/Pleurotus_pulmonarius"
+      ]
+    },
+    {
+      "name": "Flammulina velutipes",
+      "sources": [
+        "https://www.first-nature.com/fungi/flammulina-velutipes.php",
+        "https://www.wildfooduk.com/mushroom-guide/velvet-shank/"
+      ]
+    },
+    {
+      "name": "Calocybe gambosa",
+      "sources": [
+        "https://www.first-nature.com/fungi/calocybe-gambosa.php",
+        "https://www.wildfooduk.com/mushroom-guide/st-georges-mushroom/"
+      ]
+    },
+    {
+      "name": "Marasmius oreades",
+      "sources": [
+        "https://www.first-nature.com/fungi/marasmius-oreades.php",
+        "https://www.wildfooduk.com/mushroom-guide/fairy-ring-champignon/"
+      ]
+    },
+    {
+      "name": "Laccaria amethystina",
+      "sources": [
+        "https://www.first-nature.com/fungi/laccaria-amethystina.php",
+        "https://www.wildfooduk.com/mushroom-guide/amethyst-deceiver-3/"
+      ]
+    },
+    {
+      "name": "Auricularia auricula-judae",
+      "sources": [
+        "https://www.first-nature.com/fungi/auricularia-auricula-judae.php",
+        "https://www.wildfooduk.com/mushroom-guide/wood-ear/"
+      ]
+    },
+    {
+      "name": "Morchella esculenta",
+      "sources": [
+        "https://www.first-nature.com/fungi/morchella-esculenta.php",
+        "https://www.wildfooduk.com/mushroom-guide/morel/"
+      ]
+    },
+    {
+      "name": "Lactarius deliciosus",
+      "sources": [
+        "https://www.first-nature.com/fungi/lactarius-deliciosus.php",
+        "https://www.wildfooduk.com/mushroom-guide/saffron-milk-cap/"
+      ]
+    },
+    {
+      "name": "Amanita rubescens",
+      "sources": [
+        "https://www.first-nature.com/fungi/amanita-rubescens.php",
+        "https://www.wildfooduk.com/mushroom-guide/blusher/"
+      ]
+    },
+    {
+      "name": "Cerioporus squamosus",
+      "sources": [
+        "https://www.first-nature.com/fungi/polyporus-squamosus.php",
+        "https://www.wildfooduk.com/mushroom-guide/dryads-saddle/"
+      ]
+    },
+    {
+      "name": "Kuehneromyces mutabilis",
+      "sources": [
+        "https://www.first-nature.com/fungi/kuehneromyces-mutabilis.php",
+        "https://www.wildfooduk.com/mushroom-guide/sheathed-woodtuft/"
+      ]
+    },
+    {
+      "name": "Clitopilus prunulus",
+      "sources": [
+        "https://www.wildfooduk.com/mushroom-guide/the-miller/",
+        "https://en.wikipedia.org/wiki/Clitopilus_prunulus"
+      ]
+    }
   ],
   "dangerous": [
-    { "name": "Amanita phalloides", "level": "deadly", "sources": [] },
-    { "name": "Amanita virosa", "level": "deadly", "sources": [] },
-    { "name": "Amanita pantherina", "level": "poisonous", "sources": [] },
-    { "name": "Galerina marginata", "level": "deadly", "sources": [] },
-    { "name": "Lepiota brunneoincarnata", "level": "deadly", "sources": [] },
-    { "name": "Lepiota subincarnata", "level": "deadly", "sources": [] },
-    { "name": "Cortinarius rubellus", "level": "deadly", "sources": [] },
-    { "name": "Cortinarius orellanus", "level": "deadly", "sources": [] },
-    { "name": "Inocybe erubescens", "level": "deadly", "sources": [] },
-    { "name": "Clitocybe rivulosa", "level": "deadly", "sources": [] },
-    { "name": "Clitocybe dealbata", "level": "poisonous", "sources": [] },
-    { "name": "Gyromitra esculenta", "level": "deadly", "sources": [] },
-    { "name": "Paxillus involutus", "level": "deadly", "sources": [] },
-    { "name": "Pholiotina rugosa", "level": "deadly", "sources": [] },
-    { "name": "Agaricus xanthodermus", "level": "poisonous", "sources": [] },
-    { "name": "Entoloma sinuatum", "level": "poisonous", "sources": [] },
-    { "name": "Hypholoma fasciculare", "level": "poisonous", "sources": [] },
-    { "name": "Omphalotus illudens", "level": "poisonous", "sources": [] },
-    { "name": "Hygrophoropsis aurantiaca", "level": "poisonous", "sources": [] },
-    { "name": "Rubroboletus satanas", "level": "poisonous", "sources": [] },
-    { "name": "Scleroderma citrinum", "level": "poisonous", "sources": [] },
-    { "name": "Coprinopsis atramentaria", "level": "poisonous", "sources": [] },
-    { "name": "Russula emetica", "level": "poisonous", "sources": [] },
-    { "name": "Lactarius torminosus", "level": "poisonous", "sources": [] },
-    { "name": "Mycena pura", "level": "poisonous", "sources": [] },
-    { "name": "Inocybe geophylla", "level": "poisonous", "sources": [] }
+    {
+      "name": "Amanita phalloides",
+      "level": "deadly",
+      "sources": [
+        "https://www.first-nature.com/fungi/amanita-phalloides.php",
+        "https://www.wildfooduk.com/mushroom-guide/deathcap/"
+      ]
+    },
+    {
+      "name": "Amanita virosa",
+      "level": "deadly",
+      "sources": [
+        "https://www.first-nature.com/fungi/amanita-virosa.php",
+        "https://www.wildfooduk.com/mushroom-guide/destroying-angel/"
+      ]
+    },
+    {
+      "name": "Amanita pantherina",
+      "level": "deadly",
+      "sources": [
+        "https://www.first-nature.com/fungi/amanita-pantherina.php",
+        "https://www.wildfooduk.com/mushroom-guide/panther-cap/"
+      ]
+    },
+    {
+      "name": "Galerina marginata",
+      "level": "deadly",
+      "sources": [
+        "https://www.first-nature.com/fungi/galerina-marginata.php",
+        "https://www.wildfooduk.com/mushroom-guide/velvet-shank/"
+      ]
+    },
+    {
+      "name": "Lepiota brunneoincarnata",
+      "level": "deadly",
+      "sources": [
+        "https://www.first-nature.com/fungi/lepiota-brunneoincarnata.php",
+        "https://en.wikipedia.org/wiki/Lepiota_brunneoincarnata"
+      ]
+    },
+    {
+      "name": "Lepiota subincarnata",
+      "level": "deadly",
+      "sources": [
+        "https://www.first-nature.com/fungi/lepiota-subincarnata.php",
+        "https://en.wikipedia.org/wiki/Lepiota_subincarnata"
+      ]
+    },
+    {
+      "name": "Cortinarius rubellus",
+      "level": "deadly",
+      "sources": [
+        "https://www.first-nature.com/fungi/cortinarius-rubellus.php",
+        "https://www.wildfooduk.com/mushroom-guide/deadly-webcap-2/"
+      ]
+    },
+    {
+      "name": "Cortinarius orellanus",
+      "level": "deadly",
+      "sources": [
+        "https://www.first-nature.com/fungi/cortinarius-orellanus.php",
+        "https://www.wildfooduk.com/mushroom-guide/deadly-webcap-2/"
+      ]
+    },
+    {
+      "name": "Inosperma erubescens",
+      "level": "deadly",
+      "sources": [
+        "https://www.first-nature.com/fungi/inocybe-erubescens.php",
+        "https://www.wildfooduk.com/mushroom-guide/deadly-fibrecap/"
+      ]
+    },
+    {
+      "name": "Inocybe geophylla",
+      "level": "deadly",
+      "sources": [
+        "https://www.first-nature.com/fungi/inocybe-geophylla.php",
+        "https://www.wildfooduk.com/mushroom-guide/inocybe-geophylla/"
+      ]
+    },
+    {
+      "name": "Inocybe lilacina",
+      "level": "deadly",
+      "sources": [
+        "https://www.first-nature.com/fungi/inocybe-geophylla-lilacina.php",
+        "https://www.wildfooduk.com/mushroom-guide/amethyst-deceiver-3/"
+      ]
+    },
+    {
+      "name": "Collybia rivulosa",
+      "level": "deadly",
+      "sources": [
+        "https://www.first-nature.com/fungi/clitocybe-rivulosa.php",
+        "https://www.wildfooduk.com/mushroom-guide/clitocybe-rivulosa-2/"
+      ]
+    },
+    {
+      "name": "Collybia dealbata",
+      "level": "deadly",
+      "sources": [
+        "https://www.first-nature.com/fungi/clitocybe-rivulosa.php",
+        "https://en.wikipedia.org/wiki/Clitocybe_dealbata"
+      ]
+    },
+    {
+      "name": "Gyromitra esculenta",
+      "level": "deadly",
+      "sources": [
+        "https://www.first-nature.com/fungi/gyromitra-esculenta.php",
+        "https://www.wildfooduk.com/mushroom-guide/false-morel/"
+      ]
+    },
+    {
+      "name": "Paxillus involutus",
+      "level": "deadly",
+      "sources": [
+        "https://www.first-nature.com/fungi/paxillus-involutus.php",
+        "https://www.wildfooduk.com/mushroom-guide/brown-roll-rim/"
+      ]
+    },
+    {
+      "name": "Pholiotina rugosa",
+      "level": "deadly",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Pholiotina_rugosa",
+        "https://www.first-nature.com/fungi/conocybe-rugosa.php"
+      ]
+    },
+    {
+      "name": "Pleurocybella porrigens",
+      "level": "deadly",
+      "sources": [
+        "https://www.first-nature.com/fungi/pleurocybella-porrigens.php",
+        "https://en.wikipedia.org/wiki/Pleurocybella_porrigens"
+      ]
+    },
+    {
+      "name": "Tricholoma terreum",
+      "level": "deadly",
+      "sources": [
+        "https://www.wildfooduk.com/mushroom-guide/the-grey-knight/",
+        "https://www.first-nature.com/fungi/tricholoma-terreum.php"
+      ]
+    },
+    {
+      "name": "Lepiota cristata",
+      "level": "poisonous",
+      "sources": [
+        "https://www.first-nature.com/fungi/lepiota-cristata.php",
+        "https://www.wildfooduk.com/mushroom-guide/stinking-dapperling/"
+      ]
+    },
+    {
+      "name": "Chlorophyllum rhacodes",
+      "level": "poisonous",
+      "sources": [
+        "https://www.first-nature.com/fungi/chlorophyllum-rhacodes.php",
+        "https://www.wildfooduk.com/mushroom-guide/shaggy-parasol/"
+      ]
+    },
+    {
+      "name": "Agaricus xanthodermus",
+      "level": "poisonous",
+      "sources": [
+        "https://www.first-nature.com/fungi/agaricus-xanthodermus.php",
+        "https://www.wildfooduk.com/mushroom-guide/yellow-stainer/"
+      ]
+    },
+    {
+      "name": "Entoloma sinuatum",
+      "level": "poisonous",
+      "sources": [
+        "https://www.first-nature.com/fungi/entoloma-sinuatum.php",
+        "https://en.wikipedia.org/wiki/Entoloma_sinuatum"
+      ]
+    },
+    {
+      "name": "Omphalotus illudens",
+      "level": "poisonous",
+      "sources": [
+        "https://www.first-nature.com/fungi/omphalotus-illudens.php",
+        "https://www.wildfooduk.com/mushroom-guide/chanterelle-3/"
+      ]
+    },
+    {
+      "name": "Hygrophoropsis aurantiaca",
+      "level": "poisonous",
+      "sources": [
+        "https://www.first-nature.com/fungi/hygrophoropsis-aurantiaca.php",
+        "https://www.wildfooduk.com/mushroom-guide/false-chanterelle/"
+      ]
+    },
+    {
+      "name": "Scleroderma citrinum",
+      "level": "poisonous",
+      "sources": [
+        "https://www.first-nature.com/fungi/scleroderma-citrinum.php",
+        "https://www.wildfooduk.com/mushroom-guide/common-earth-ball/"
+      ]
+    },
+    {
+      "name": "Coprinopsis picacea",
+      "level": "poisonous",
+      "sources": [
+        "https://www.first-nature.com/fungi/coprinopsis-picacea.php",
+        "https://www.wildfooduk.com/mushroom-guide/magpie-fungus/"
+      ]
+    },
+    {
+      "name": "Lactarius torminosus",
+      "level": "poisonous",
+      "sources": [
+        "https://www.first-nature.com/fungi/lactarius-torminosus.php",
+        "https://www.wildfooduk.com/mushroom-guide/wooly-milk-cap/"
+      ]
+    }
   ],
   "pairs": [
-    { "edible": "Agaricus campestris", "dangerous": "Agaricus xanthodermus", "sources": [] },
-    { "edible": "Agaricus campestris", "dangerous": "Amanita virosa", "sources": [] },
-    { "edible": "Agaricus campestris", "dangerous": "Amanita phalloides", "sources": [] },
-    { "edible": "Agaricus arvensis", "dangerous": "Agaricus xanthodermus", "sources": [] },
-    { "edible": "Agaricus arvensis", "dangerous": "Amanita virosa", "sources": [] },
-    { "edible": "Agaricus silvicola", "dangerous": "Agaricus xanthodermus", "sources": [] },
-    { "edible": "Agaricus silvicola", "dangerous": "Amanita virosa", "sources": [] },
-    { "edible": "Agaricus silvicola", "dangerous": "Amanita phalloides", "sources": [] },
-    { "edible": "Agaricus augustus", "dangerous": "Agaricus xanthodermus", "sources": [] },
-    { "edible": "Macrolepiota procera", "dangerous": "Lepiota brunneoincarnata", "sources": [] },
-    { "edible": "Macrolepiota procera", "dangerous": "Lepiota subincarnata", "sources": [] },
-    { "edible": "Chlorophyllum rhacodes", "dangerous": "Lepiota brunneoincarnata", "sources": [] },
-    { "edible": "Coprinus comatus", "dangerous": "Coprinopsis atramentaria", "sources": [] },
-    { "edible": "Calvatia gigantea", "dangerous": "Scleroderma citrinum", "sources": [] },
-    { "edible": "Lycoperdon perlatum", "dangerous": "Scleroderma citrinum", "sources": [] },
-    { "edible": "Lycoperdon perlatum", "dangerous": "Amanita phalloides", "sources": [] },
-    { "edible": "Cantharellus cibarius", "dangerous": "Hygrophoropsis aurantiaca", "sources": [] },
-    { "edible": "Cantharellus cibarius", "dangerous": "Omphalotus illudens", "sources": [] },
-    { "edible": "Boletus edulis", "dangerous": "Rubroboletus satanas", "sources": [] },
-    { "edible": "Flammulina velutipes", "dangerous": "Galerina marginata", "sources": [] },
-    { "edible": "Lepista nuda", "dangerous": "Inocybe geophylla", "sources": [] },
-    { "edible": "Lepista nuda", "dangerous": "Mycena pura", "sources": [] },
-    { "edible": "Calocybe gambosa", "dangerous": "Inocybe erubescens", "sources": [] },
-    { "edible": "Calocybe gambosa", "dangerous": "Entoloma sinuatum", "sources": [] },
-    { "edible": "Marasmius oreades", "dangerous": "Clitocybe rivulosa", "sources": [] },
-    { "edible": "Marasmius oreades", "dangerous": "Clitocybe dealbata", "sources": [] },
-    { "edible": "Laccaria amethystina", "dangerous": "Mycena pura", "sources": [] },
-    { "edible": "Laccaria amethystina", "dangerous": "Inocybe geophylla", "sources": [] },
-    { "edible": "Morchella esculenta", "dangerous": "Gyromitra esculenta", "sources": [] },
-    { "edible": "Russula cyanoxantha", "dangerous": "Amanita phalloides", "sources": [] },
-    { "edible": "Russula cyanoxantha", "dangerous": "Russula emetica", "sources": [] },
-    { "edible": "Lactarius deliciosus", "dangerous": "Lactarius torminosus", "sources": [] },
-    { "edible": "Amanita rubescens", "dangerous": "Amanita pantherina", "sources": [] },
-    { "edible": "Armillaria mellea", "dangerous": "Galerina marginata", "sources": [] },
-    { "edible": "Armillaria mellea", "dangerous": "Hypholoma fasciculare", "sources": [] },
-    { "edible": "Kuehneromyces mutabilis", "dangerous": "Galerina marginata", "sources": [] },
-    { "edible": "Clitopilus prunulus", "dangerous": "Clitocybe rivulosa", "sources": [] },
-    { "edible": "Clitopilus prunulus", "dangerous": "Clitocybe dealbata", "sources": [] },
-    { "edible": "Clitopilus prunulus", "dangerous": "Entoloma sinuatum", "sources": [] }
+    {
+      "edible": "Agaricus campestris",
+      "dangerous": "Agaricus xanthodermus",
+      "sources": [
+        "https://www.wildfooduk.com/mushroom-guide/field-mushroom/",
+        "https://www.first-nature.com/fungi/agaricus-xanthodermus.php"
+      ]
+    },
+    {
+      "edible": "Agaricus arvensis",
+      "dangerous": "Agaricus xanthodermus",
+      "sources": [
+        "https://www.first-nature.com/fungi/agaricus-arvensis.php",
+        "https://www.wildfooduk.com/mushroom-guide/horse-mushroom-2/"
+      ]
+    },
+    {
+      "edible": "Agaricus arvensis",
+      "dangerous": "Amanita virosa",
+      "sources": [
+        "https://www.first-nature.com/fungi/agaricus-arvensis.php",
+        "https://www.wildfooduk.com/mushroom-guide/horse-mushroom-2/"
+      ]
+    },
+    {
+      "edible": "Agaricus arvensis",
+      "dangerous": "Amanita phalloides",
+      "sources": [
+        "https://www.first-nature.com/fungi/amanita-phalloides.php",
+        "https://www.wildfooduk.com/mushroom-guide/horse-mushroom-2/"
+      ]
+    },
+    {
+      "edible": "Agaricus sylvicola",
+      "dangerous": "Agaricus xanthodermus",
+      "sources": [
+        "https://www.first-nature.com/fungi/agaricus-sylvicola.php",
+        "https://www.wildfooduk.com/mushroom-guide/wood-mushroom/"
+      ]
+    },
+    {
+      "edible": "Macrolepiota procera",
+      "dangerous": "Chlorophyllum rhacodes",
+      "sources": [
+        "https://www.first-nature.com/fungi/macrolepiota-procera.php",
+        "https://www.wildfooduk.com/mushroom-guide/parasol/"
+      ]
+    },
+    {
+      "edible": "Macrolepiota procera",
+      "dangerous": "Lepiota brunneoincarnata",
+      "sources": [
+        "https://www.first-nature.com/fungi/macrolepiota-procera.php",
+        "https://www.wildfooduk.com/mushroom-guide/parasol/"
+      ]
+    },
+    {
+      "edible": "Macrolepiota procera",
+      "dangerous": "Lepiota subincarnata",
+      "sources": [
+        "https://www.first-nature.com/fungi/macrolepiota-procera.php",
+        "https://www.wildfooduk.com/mushroom-guide/parasol/"
+      ]
+    },
+    {
+      "edible": "Macrolepiota procera",
+      "dangerous": "Lepiota cristata",
+      "sources": [
+        "https://www.first-nature.com/fungi/lepiota-cristata.php",
+        "https://www.wildfooduk.com/mushroom-guide/parasol/"
+      ]
+    },
+    {
+      "edible": "Coprinus comatus",
+      "dangerous": "Coprinopsis picacea",
+      "sources": [
+        "https://www.first-nature.com/fungi/coprinus-comatus.php",
+        "https://www.wildfooduk.com/mushroom-guide/shaggy-inkcap/"
+      ]
+    },
+    {
+      "edible": "Lycoperdon perlatum",
+      "dangerous": "Scleroderma citrinum",
+      "sources": [
+        "https://www.first-nature.com/fungi/scleroderma-citrinum.php",
+        "https://www.wildfooduk.com/mushroom-guide/common-puffball/"
+      ]
+    },
+    {
+      "edible": "Cantharellus cibarius",
+      "dangerous": "Hygrophoropsis aurantiaca",
+      "sources": [
+        "https://www.first-nature.com/fungi/cantharellus-cibarius.php",
+        "https://www.wildfooduk.com/mushroom-guide/chanterelle-3/"
+      ]
+    },
+    {
+      "edible": "Cantharellus cibarius",
+      "dangerous": "Omphalotus illudens",
+      "sources": [
+        "https://www.first-nature.com/fungi/omphalotus-illudens.php",
+        "https://www.wildfooduk.com/mushroom-guide/chanterelle-3/"
+      ]
+    },
+    {
+      "edible": "Cantharellus cibarius",
+      "dangerous": "Cortinarius rubellus",
+      "sources": [
+        "https://www.first-nature.com/fungi/omphalotus-illudens.php",
+        "https://en.wikipedia.org/wiki/Cortinarius_rubellus"
+      ]
+    },
+    {
+      "edible": "Pleurotus ostreatus",
+      "dangerous": "Pleurocybella porrigens",
+      "sources": [
+        "https://www.first-nature.com/fungi/pleurocybella-porrigens.php",
+        "https://www.wildfooduk.com/mushroom-guide/oyster-mushroom/"
+      ]
+    },
+    {
+      "edible": "Pleurotus pulmonarius",
+      "dangerous": "Pleurocybella porrigens",
+      "sources": [
+        "https://www.first-nature.com/fungi/pleurocybella-porrigens.php",
+        "https://www.wildfooduk.com/mushroom-guide/pale-oyster-mushroom/"
+      ]
+    },
+    {
+      "edible": "Flammulina velutipes",
+      "dangerous": "Galerina marginata",
+      "sources": [
+        "https://www.wildfooduk.com/mushroom-guide/velvet-shank/",
+        "https://en.wikipedia.org/wiki/Galerina_marginata"
+      ]
+    },
+    {
+      "edible": "Calocybe gambosa",
+      "dangerous": "Inosperma erubescens",
+      "sources": [
+        "https://www.first-nature.com/fungi/calocybe-gambosa.php",
+        "https://www.wildfooduk.com/mushroom-guide/st-georges-mushroom/"
+      ]
+    },
+    {
+      "edible": "Calocybe gambosa",
+      "dangerous": "Entoloma sinuatum",
+      "sources": [
+        "https://www.first-nature.com/fungi/entoloma-sinuatum.php",
+        "https://en.wikipedia.org/wiki/Entoloma_sinuatum"
+      ]
+    },
+    {
+      "edible": "Marasmius oreades",
+      "dangerous": "Collybia rivulosa",
+      "sources": [
+        "https://www.first-nature.com/fungi/marasmius-oreades.php",
+        "https://www.wildfooduk.com/mushroom-guide/fairy-ring-champignon/"
+      ]
+    },
+    {
+      "edible": "Marasmius oreades",
+      "dangerous": "Collybia dealbata",
+      "sources": [
+        "https://www.first-nature.com/fungi/marasmius-oreades.php",
+        "https://www.wildfooduk.com/mushroom-guide/fairy-ring-champignon/"
+      ]
+    },
+    {
+      "edible": "Laccaria amethystina",
+      "dangerous": "Inocybe lilacina",
+      "sources": [
+        "https://www.first-nature.com/fungi/inocybe-geophylla-lilacina.php",
+        "https://www.wildfooduk.com/mushroom-guide/amethyst-deceiver-3/"
+      ]
+    },
+    {
+      "edible": "Morchella esculenta",
+      "dangerous": "Gyromitra esculenta",
+      "sources": [
+        "https://www.first-nature.com/fungi/morchella-esculenta.php",
+        "https://www.wildfooduk.com/mushroom-guide/morel/"
+      ]
+    },
+    {
+      "edible": "Lactarius deliciosus",
+      "dangerous": "Lactarius torminosus",
+      "sources": [
+        "https://www.first-nature.com/fungi/lactarius-deliciosus.php",
+        "https://www.wildfooduk.com/mushroom-guide/saffron-milk-cap/"
+      ]
+    },
+    {
+      "edible": "Lactarius deliciosus",
+      "dangerous": "Paxillus involutus",
+      "sources": [
+        "https://www.first-nature.com/fungi/paxillus-involutus.php",
+        "https://www.wildfooduk.com/mushroom-guide/brown-roll-rim/"
+      ]
+    },
+    {
+      "edible": "Amanita rubescens",
+      "dangerous": "Amanita pantherina",
+      "sources": [
+        "https://www.first-nature.com/fungi/amanita-rubescens.php",
+        "https://www.wildfooduk.com/mushroom-guide/blusher/"
+      ]
+    },
+    {
+      "edible": "Kuehneromyces mutabilis",
+      "dangerous": "Galerina marginata",
+      "sources": [
+        "https://www.first-nature.com/fungi/kuehneromyces-mutabilis.php",
+        "https://www.wildfooduk.com/mushroom-guide/sheathed-woodtuft/"
+      ]
+    },
+    {
+      "edible": "Clitopilus prunulus",
+      "dangerous": "Collybia rivulosa",
+      "sources": [
+        "https://www.wildfooduk.com/mushroom-guide/the-miller/",
+        "https://en.wikipedia.org/wiki/Clitopilus_prunulus"
+      ]
+    },
+    {
+      "edible": "Clitopilus prunulus",
+      "dangerous": "Collybia dealbata",
+      "sources": [
+        "https://www.wildfooduk.com/mushroom-guide/the-miller/",
+        "https://en.wikipedia.org/wiki/Clitopilus_prunulus"
+      ]
+    }
   ],
   "noDangerousLookalike": [
-    { "edible": "Craterellus cornucopioides", "sources": [] },
-    { "edible": "Craterellus tubaeformis", "sources": [] },
-    { "edible": "Hydnum repandum", "sources": [] },
-    { "edible": "Hydnum rufescens", "sources": [] },
-    { "edible": "Imleria badia", "sources": [] },
-    { "edible": "Leccinum scabrum", "sources": [] },
-    { "edible": "Leccinum versipelle", "sources": [] },
-    { "edible": "Suillus luteus", "sources": [] },
-    { "edible": "Suillus grevillei", "sources": [] },
-    { "edible": "Laetiporus sulphureus", "sources": [] },
-    { "edible": "Fistulina hepatica", "sources": [] },
-    { "edible": "Grifola frondosa", "sources": [] },
-    { "edible": "Sparassis crispa", "sources": [] },
-    { "edible": "Pleurotus ostreatus", "sources": [] },
-    { "edible": "Pleurotus pulmonarius", "sources": [] },
-    { "edible": "Lepista personata", "sources": [] },
-    { "edible": "Laccaria laccata", "sources": [] },
-    { "edible": "Auricularia auricula-judae", "sources": [] },
-    { "edible": "Cortinarius caperatus", "sources": [] },
-    { "edible": "Polyporus squamosus", "sources": [] },
-    { "edible": "Hericium erinaceus", "sources": [] }
+    {
+      "edible": "Calvatia gigantea",
+      "sources": [
+        "https://www.first-nature.com/fungi/calvatia-gigantea.php",
+        "https://www.wildfooduk.com/mushroom-guide/giant-puffball/"
+      ]
+    },
+    {
+      "edible": "Craterellus cornucopioides",
+      "sources": [
+        "https://www.first-nature.com/fungi/craterellus-cornucopioides.php",
+        "https://www.wildfooduk.com/mushroom-guide/horn-of-plenty/"
+      ]
+    },
+    {
+      "edible": "Hydnum repandum",
+      "sources": [
+        "https://www.first-nature.com/fungi/hydnum-repandum.php",
+        "https://www.wildfooduk.com/mushroom-guide/hedgehog-fungus/"
+      ]
+    },
+    {
+      "edible": "Hydnum rufescens",
+      "sources": [
+        "https://www.first-nature.com/fungi/hydnum-rufescens.php",
+        "https://www.wildfooduk.com/mushroom-guide/terracotta-hedgehog/"
+      ]
+    },
+    {
+      "edible": "Boletus edulis",
+      "sources": [
+        "https://www.first-nature.com/fungi/boletus-edulis.php",
+        "https://www.wildfooduk.com/mushroom-guide/cep/"
+      ]
+    },
+    {
+      "edible": "Imleria badia",
+      "sources": [
+        "https://www.first-nature.com/fungi/imleria-badia.php",
+        "https://www.wildfooduk.com/mushroom-guide/bay-bolete/"
+      ]
+    },
+    {
+      "edible": "Leccinum scabrum",
+      "sources": [
+        "https://www.first-nature.com/fungi/leccinum-scabrum.php",
+        "https://www.wildfooduk.com/mushroom-guide/brown-birch-bolete/"
+      ]
+    },
+    {
+      "edible": "Leccinum versipelle",
+      "sources": [
+        "https://www.first-nature.com/fungi/leccinum-versipelle.php",
+        "https://www.wildfooduk.com/mushroom-guide/orange-birch-bolete/"
+      ]
+    },
+    {
+      "edible": "Suillus luteus",
+      "sources": [
+        "https://www.first-nature.com/fungi/suillus-luteus.php",
+        "https://www.wildfooduk.com/mushroom-guide/slippery-jack/"
+      ]
+    },
+    {
+      "edible": "Laetiporus sulphureus",
+      "sources": [
+        "https://www.first-nature.com/fungi/laetiporus-sulphureus.php",
+        "https://www.wildfooduk.com/mushroom-guide/chicken-of-the-woods-2/"
+      ]
+    },
+    {
+      "edible": "Fistulina hepatica",
+      "sources": [
+        "https://www.first-nature.com/fungi/fistulina-hepatica.php",
+        "https://www.wildfooduk.com/mushroom-guide/beefsteak-fungus-fistulina-hepatica/"
+      ]
+    },
+    {
+      "edible": "Grifola frondosa",
+      "sources": [
+        "https://www.first-nature.com/fungi/grifola-frondosa.php",
+        "https://www.wildfooduk.com/mushroom-guide/hen-of-the-woods/"
+      ]
+    },
+    {
+      "edible": "Sparassis crispa",
+      "sources": [
+        "https://www.first-nature.com/fungi/sparassis-crispa.php",
+        "https://www.wildfooduk.com/mushroom-guide/cauliflower-fungus/"
+      ]
+    },
+    {
+      "edible": "Auricularia auricula-judae",
+      "sources": [
+        "https://www.first-nature.com/fungi/auricularia-auricula-judae.php",
+        "https://www.wildfooduk.com/mushroom-guide/wood-ear/"
+      ]
+    },
+    {
+      "edible": "Cerioporus squamosus",
+      "sources": [
+        "https://www.first-nature.com/fungi/polyporus-squamosus.php",
+        "https://www.wildfooduk.com/mushroom-guide/dryads-saddle/"
+      ]
+    }
   ]
 }
