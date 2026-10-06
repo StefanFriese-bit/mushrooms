@@ -1,0 +1,259 @@
+{
+  "slug": "morel",
+  "inatId": 58682,
+  "scientific": "Morchella esculenta",
+  "english": "Morel",
+  "olderNames": [],
+  "edibility": {
+    "value": "edible-cooked",
+    "sources": [
+      "fn",
+      "wf",
+      "wp",
+      "wt"
+    ]
+  },
+  "edibilityNote": {
+    "value": "Poisonous raw or undercooked — always cook morels thoroughly.",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "Cap a honeycomb of pits and narrow ridges, pale cream, tan or grey-brown.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp",
+        "wt"
+      ]
+    },
+    {
+      "value": "Cut it top to bottom: one single hollow from the tip of the cap to the base of the stem.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "The cap is joined to the stem at its lower edge.",
+      "sources": [
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "Stem white or cream, hollow, often swollen at the base.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "In spring, often on chalk or limestone, under trees, in gardens and on waste ground.",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "Under broadleaved trees on chalky or limy soil; also gardens, verges, waste ground and dunes.",
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      3,
+      4,
+      5
+    ],
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "sporePrint": {
+    "value": "Cream to pale ochre",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "other",
+      "sources": [
+        "wf",
+        "wp"
+      ]
+    },
+    "ring": {
+      "value": "no",
+      "sources": [
+        "wp",
+        "fn"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "wp",
+        "fn"
+      ]
+    },
+    "growsOn": {
+      "value": "ground",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "capCm": {
+      "value": [
+        3,
+        7
+      ],
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "fleshChange": {
+      "value": "Thin and white; hollow inside",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "smell": {
+      "value": "Not distinctive, or faintly pleasant",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    }
+  },
+  "lookalikes": [
+    {
+      "scientific": "Gyromitra esculenta",
+      "english": "False Morel",
+      "slug": "false-morel",
+      "kind": "deadly",
+      "tellApart": [
+        {
+          "feature": "Cap",
+          "thisOne": "A honeycomb of pits and ridges",
+          "thatOne": "Brain-like folds and lobes, without pits",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "fn-fm",
+            "wf-fm",
+            "wp-fm"
+          ]
+        },
+        {
+          "feature": "Cut top to bottom",
+          "thisOne": "One single hollow throughout",
+          "thatOne": "Divided into several chambers",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "fn-fm",
+            "wf-fm"
+          ]
+        },
+        {
+          "feature": "Colour",
+          "thisOne": "Pale cream, tan or grey-brown",
+          "thatOne": "Orange-brown to dark reddish-brown",
+          "sources": [
+            "fn",
+            "wp",
+            "wf-fm",
+            "wp-fm"
+          ]
+        },
+        {
+          "feature": "Where it grows",
+          "thisOne": "Often on chalky soil under broadleaved trees, in gardens and on waste ground",
+          "thatOne": "Under pines on sandy soil",
+          "sources": [
+            "fn",
+            "wf",
+            "wf-fm",
+            "wp-fm"
+          ]
+        }
+      ]
+    }
+  ],
+  "noDangerousLookalike": null,
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Morchella esculenta, Morel",
+      "url": "https://www.first-nature.com/fungi/morchella-esculenta.php"
+    },
+    {
+      "id": "wf",
+      "title": "Wild Food UK — Morel",
+      "url": "https://www.wildfooduk.com/mushroom-guide/morel/"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Morchella esculenta",
+      "url": "https://en.wikipedia.org/wiki/Morchella_esculenta"
+    },
+    {
+      "id": "wt",
+      "title": "Woodland Trust — Morel",
+      "url": "https://www.woodlandtrust.org.uk/trees-woods-and-wildlife/fungi-and-lichens/morel/"
+    },
+    {
+      "id": "fn-fm",
+      "title": "First Nature — Gyromitra esculenta, False Morel",
+      "url": "https://www.first-nature.com/fungi/gyromitra-esculenta.php"
+    },
+    {
+      "id": "wf-fm",
+      "title": "Wild Food UK — False Morel",
+      "url": "https://www.wildfooduk.com/mushroom-guide/false-morel/"
+    },
+    {
+      "id": "wp-fm",
+      "title": "Wikipedia — Gyromitra esculenta",
+      "url": "https://en.wikipedia.org/wiki/Gyromitra_esculenta"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}

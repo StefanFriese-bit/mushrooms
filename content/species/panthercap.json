@@ -1,0 +1,270 @@
+{
+  "slug": "panthercap",
+  "inatId": 48418,
+  "scientific": "Amanita pantherina",
+  "english": "Panthercap",
+  "olderNames": [],
+  "edibility": {
+    "value": "poisonous",
+    "sources": [
+      "wf",
+      "wp"
+    ]
+  },
+  "edibilityNote": {
+    "value": "More poisonous than the Fly Agaric (vomiting, diarrhoea, confusion); First Nature calls it deadly.",
+    "sources": [
+      "wp",
+      "fn"
+    ]
+  },
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "Cap brown to grey-brown, evenly dotted with pure white warts.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "Flesh white, and it stays white when cut — it never blushes pink.",
+      "sources": [
+        "wf",
+        "fn-bl",
+        "wp-bl"
+      ]
+    },
+    {
+      "value": "A smooth ring with no grooves on top.",
+      "sources": [
+        "wf",
+        "wp-bl"
+      ]
+    },
+    {
+      "value": "Stem base: a bulb with a rim, or one or two narrow hoop-like rings just above it.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "Gills white, crowded and free of the stem.",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    {
+      "value": "Mostly under oak and beech.",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "Woodland, mostly broadleaved — especially under oak and beech.",
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "sporePrint": {
+    "value": "White",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "gills",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    "ring": {
+      "value": "yes",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    "bagAtBase": {
+      "value": "yes",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    "growsOn": {
+      "value": "ground",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "capCm": {
+      "value": [
+        5,
+        18
+      ],
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    "fleshChange": {
+      "value": "White; does not change when cut",
+      "sources": [
+        "wf",
+        "fn-bl"
+      ]
+    },
+    "smell": {
+      "value": "Not distinctive; faintly of radish when bruised",
+      "sources": [
+        "fn"
+      ]
+    }
+  },
+  "lookalikes": [
+    {
+      "scientific": "Amanita rubescens",
+      "english": "Blusher",
+      "slug": "blusher",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Ring",
+          "thisOne": "Smooth, with no grooves",
+          "thatOne": "Fine grooves on its upper side",
+          "sources": [
+            "wf",
+            "wf-bl",
+            "wp-bl"
+          ]
+        },
+        {
+          "feature": "Flesh when cut or bruised",
+          "thisOne": "Stays white",
+          "thatOne": "Turns pink to red",
+          "sources": [
+            "wf",
+            "fn-bl",
+            "wf-bl",
+            "wp-bl"
+          ]
+        },
+        {
+          "feature": "Warts on the cap",
+          "thisOne": "Pure white",
+          "thatOne": "Off-white, grey or pinkish",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-bl",
+            "wf-bl"
+          ]
+        },
+        {
+          "feature": "Stem base",
+          "thisOne": "A bulb with a rim, or one or two narrow hoop-like rings above it",
+          "thatOne": "Swollen, with no rim",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "fn-bl",
+            "wf-bl"
+          ]
+        },
+        {
+          "feature": "Cap colour",
+          "thisOne": "Darker brown to grey-brown",
+          "thatOne": "Pinkish-brown, often lighter",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-bl",
+            "wf-bl"
+          ]
+        }
+      ]
+    }
+  ],
+  "noDangerousLookalike": null,
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Amanita pantherina, Panthercap",
+      "url": "https://www.first-nature.com/fungi/amanita-pantherina.php"
+    },
+    {
+      "id": "wf",
+      "title": "Wild Food UK — Panthercap",
+      "url": "https://www.wildfooduk.com/mushroom-guide/panther-cap/"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Amanita pantherina",
+      "url": "https://en.wikipedia.org/wiki/Amanita_pantherina"
+    },
+    {
+      "id": "fn-bl",
+      "title": "First Nature — Amanita rubescens, Blusher",
+      "url": "https://www.first-nature.com/fungi/amanita-rubescens.php"
+    },
+    {
+      "id": "wf-bl",
+      "title": "Wild Food UK — Blusher",
+      "url": "https://www.wildfooduk.com/mushroom-guide/blusher/"
+    },
+    {
+      "id": "wp-bl",
+      "title": "Wikipedia — Amanita rubescens",
+      "url": "https://en.wikipedia.org/wiki/Amanita_rubescens"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}
