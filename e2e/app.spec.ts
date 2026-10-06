@@ -125,3 +125,18 @@ test('Check turns a feature red when it fits a lookalike, and never says anythin
   await expect(page.getByRole('heading', { name: 'Before eating any wild mushroom' })).toBeVisible();
   expect(await page.locator('main').innerText()).not.toMatch(EDIBILITY_WORDS);
 });
+
+test('Check on a deadly species: its own features are red; an edible lookalike\'s features are no reason to trust it', async ({ page }) => {
+  await page.goto(`${site.url}#/check/deathcap`);
+  await expect(page.getByRole('heading', { name: /Check: Deathcap/ })).toBeVisible();
+  const row = (feature: string) => page.locator('[data-test=check-row]').filter({ has: page.getByRole('heading', { name: feature, exact: true }) });
+  await row('Stem base').getByRole('button', { name: /Field Mushroom\s*No bag/ }).click();
+  await expect(row('Stem base')).not.toHaveClass(/red/);
+  const verdict = page.locator('[data-test=verdict]');
+  await expect(verdict).toContainText('That is not proof');
+  await expect(verdict).not.toContainText('Treat your mushroom as Field Mushroom');
+  await expect(verdict.getByRole('link', { name: /Check it against the Field Mushroom/ })).toBeVisible();
+  await row('Spore print').getByRole('button', { name: /Deathcap\s*White/ }).click();
+  await expect(row('Spore print')).toHaveClass(/red/);
+  await expect(verdict).toContainText('Treat your mushroom as Deathcap: do not eat it');
+});

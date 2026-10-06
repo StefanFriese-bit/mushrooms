@@ -64,3 +64,4 @@ ol.answers li { margin: 2px 0; }
 .flag { color: var(--deadly); font-weight: 600; margin: 6px 0 0; }
 .verdict.red { color: var(--deadly); border: 2px solid var(--deadly); font-weight: 600; }
 .confirm h2 { margin-top: 4px; }
+.check-row.other { border-color: var(--plain); }

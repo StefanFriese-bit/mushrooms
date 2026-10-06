@@ -38,7 +38,12 @@ export function Check({ slug }: { slug: string }) {
     if (next.get(row) === col) next.delete(row); else next.set(row, col);
     return next;
   });
-  const red = [...new Set(v.fitsLookalike.flatMap((f) => f.lookalikes))];
+  const tickOf = (row: number) => v.ticks.find((x) => x.feature === t.rows[row].feature);
+  const dangerWord = (cols: Column[]) => {
+    const kinds = new Set(cols.map((c) => c.danger));
+    return kinds.size === 1 ? `${cols.length === 1 ? 'is' : 'are'} ${[...kinds][0]}` : 'are deadly or poisonous';
+  };
+  const elsewhere = v.others.filter((c) => c.slug && c.slug !== s.slug && bySlug(ALL_SPECIES, c.slug));
   return (
     <>
       <h1>Check: {s.english} {ownDanger && <span class={`tag ${s.edibility.value}`}>{ownDanger}</span>}</h1>
@@ -51,9 +56,10 @@ export function Check({ slug }: { slug: string }) {
           <p class="muted">For each feature, tap the words that match what you see. Skip what you cannot see.</p>
           {t.rows.map((r, ri) => {
             const picked = ticks.get(ri);
-            const flagged = picked !== undefined && picked > 0;
+            const k = picked === undefined ? undefined : tickOf(ri);
+            const state = !k ? '' : k.dangerous ? ' red' : picked === 0 ? ' fits' : ' other';
             return (
-              <div class={`check-row${flagged ? ' red' : picked === 0 ? ' fits' : ''}`} key={r.feature} data-test="check-row">
+              <div class={`check-row${state}`} key={r.feature} data-test="check-row">
                 <h3>{r.feature}</h3>
                 {r.cells.map((words, ci) => words !== null && (
                   <button type="button" class="pick" aria-pressed={picked === ci} onClick={() => tick(ri, ci)} key={ci}>
@@ -61,17 +67,24 @@ export function Check({ slug }: { slug: string }) {
                     <span>{words}</span>
                   </button>
                 ))}
-                {flagged && <p class="flag" role="alert">This fits {names(v.fitsLookalike.find((f) => f.feature === r.feature)!.lookalikes)} better.</p>}
+                {k && k.dangerous && <p class="flag" role="alert">This fits {names(k.species)}, which {dangerWord(k.species.filter((c) => c.danger))}.</p>}
+                {k && !k.dangerous && picked !== 0 && <p class="note">This fits {names(k.species)}.</p>}
               </div>
             );
           })}
           <div aria-live="polite">
-            {red.length > 0 ? (
-              <p class="card verdict red" data-test="verdict">Some features fit {names(red)} better than the {own.english}.
-                Treat your mushroom as {names(red)}: do not eat it.</p>
+            {v.dangerous.length > 0 ? (
+              <p class="card verdict red" data-test="verdict">Some features fit {names(v.dangerous)}, which{' '}
+                {dangerWord(v.dangerous)}. Treat your mushroom as {names(v.dangerous)}: do not eat it.</p>
             ) : v.ticked > 0 ? (
-              <p class="card verdict" data-test="verdict">The {v.ticked} {v.ticked === 1 ? 'feature' : 'features'} you ticked
-                {v.ticked === 1 ? ' fits' : ' fit'} the {own.english}. That is not proof.</p>
+              <div class="card verdict" data-test="verdict">
+                <p>The {v.ticked === 1 ? 'feature' : 'features'} you ticked {v.ticked === 1 ? 'fits' : 'fit'}{' '}
+                  {names(v.others)}. That is not proof.</p>
+                {elsewhere.map((c) => (
+                  <p key={c.scientific}><a href={hrefFor({ name: 'check', slug: c.slug! })}>Check it against the {c.english} and its
+                    lookalikes</a></p>
+                ))}
+              </div>
             ) : null}
             {v.ticked > 0 && <p><button type="button" class="small-button" onClick={() => setTicks(new Map())}>Clear my ticks</button></p>}
           </div>

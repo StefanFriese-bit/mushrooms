@@ -2,18 +2,22 @@ import { describe, expect, it } from 'vitest';
 import { checkTable, verdict } from './check';
 import type { SpeciesRecord } from './types';
 import field from '../content/species/field-mushroom.json';
+import deathcapPage from '../content/species/deathcap.json';
 
 const rec = field as unknown as SpeciesRecord;
 const t = checkTable(rec);
 
 describe('checkTable', () => {
   it('puts the species first, then its lookalikes in the page order, with their danger and pages', () => {
-    expect(t.columns.map((c) => [c.english, c.kind, c.slug])).toEqual([
-      ['Field Mushroom', null, 'field-mushroom'],
-      ['Deathcap', 'deadly', 'deathcap'],
-      ['Destroying Angel', 'deadly', 'destroying-angel'],
-      ['Yellow Stainer', 'poisonous', 'yellow-stainer'],
+    expect(t.columns.map((c) => [c.english, c.kind, c.slug, c.danger])).toEqual([
+      ['Field Mushroom', null, 'field-mushroom', null],
+      ['Deathcap', 'deadly', 'deathcap', 'deadly'],
+      ['Destroying Angel', 'deadly', 'destroying-angel', 'deadly'],
+      ['Yellow Stainer', 'poisonous', 'yellow-stainer', 'poisonous'],
     ]);
+  });
+  it('a dangerous species being checked carries its own danger', () => {
+    expect(checkTable(deathcapPage as unknown as SpeciesRecord).columns[0].danger).toBe('deadly');
   });
   it('has one row per feature, in order of first appearance', () => {
     expect(t.rows.map((r) => r.feature)).toEqual(
@@ -33,19 +37,30 @@ describe('checkTable', () => {
 });
 
 describe('verdict', () => {
+  const names = (cols: Array<{ english: string }>) => cols.map((c) => c.english);
   it('nothing ticked says nothing', () => {
-    expect(verdict(t, new Map())).toEqual({ ticked: 0, fitsSpecies: 0, fitsLookalike: [] });
+    expect(verdict(t, new Map())).toEqual({ ticked: 0, ticks: [], dangerous: [], others: [] });
   });
-  it('every tick on the species fits it', () => {
+  it('every tick on the Field Mushroom fits it, and nothing is dangerous', () => {
     const v = verdict(t, new Map(t.rows.map((_, i) => [i, 0])));
-    expect(v).toEqual({ ticked: 8, fitsSpecies: 8, fitsLookalike: [] });
+    expect([v.ticked, names(v.dangerous), names(v.others)]).toEqual([8, [], ['Field Mushroom']]);
   });
-  it('a tick on a lookalike names it, and every other lookalike with the same words in that row', () => {
+  it('a tick on a dangerous lookalike is red and names every lookalike with the same words in that row', () => {
     const v = verdict(t, new Map([[0, 0], [3, 1]])); // gills fit; spore print white = Deathcap AND Destroying Angel
-    expect(v.ticked).toBe(2);
-    expect(v.fitsLookalike.map((f) => [f.feature, f.lookalikes.map((l) => l.english)])).toEqual([
-      ['Spore print', ['Deathcap', 'Destroying Angel']],
+    expect(v.ticks.map((x) => [x.feature, names(x.species), x.dangerous])).toEqual([
+      ['Gills', ['Field Mushroom'], false],
+      ['Spore print', ['Deathcap', 'Destroying Angel'], true],
     ]);
+    expect(names(v.dangerous)).toEqual(['Deathcap', 'Destroying Angel']);
+  });
+  it('checking a deadly species: its own words are red; an edible lookalike\'s words are not a danger sign', () => {
+    const d = checkTable(deathcapPage as unknown as SpeciesRecord);
+    const base = d.rows.findIndex((r) => r.feature === 'Stem base');
+    const spore = d.rows.findIndex((r) => r.feature === 'Spore print');
+    const edible = verdict(d, new Map([[base, 1]])); // "No bag" = Field AND Horse Mushroom
+    expect([names(edible.dangerous), names(edible.others)]).toEqual([[], ['Field Mushroom', 'Horse Mushroom']]);
+    const own = verdict(d, new Map([[spore, 0]])); // "White" = the Deathcap's own words
+    expect([names(own.dangerous), own.ticks[0].dangerous]).toEqual([['Deathcap'], true]);
   });
   it('ignores a tick on an empty cell', () => {
     expect(verdict(t, new Map([[2, 3]])).ticked).toBe(0);
