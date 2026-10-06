@@ -6,7 +6,8 @@ const LATIN_LINE = /^([A-Z][a-z]+ [a-z][a-z-]+(?: (?:var|f|subsp|ssp)\. [a-z][a-
 const clean = (english: string) => english.replace(/\s*\*+$/, '').trim();
 
 export function parseBmsLatinToEnglish(raw: string): { names: Map<string, string>; unparsed: string[] } {
-  const lines = raw.split(/\r?\n/).map((l) => l.trim());
+  // A page break (form feed) ends a line too: the PDF puts each page's number right after its last name.
+  const lines = raw.split(/[\r\n\f]+/).map((l) => l.trim());
   const start = lines.findIndex((l) => /^Current Scientific Latin name/i.test(l));
   const end = lines.findIndex((l) => /^English to Latin names/i.test(l));
   if (start < 0 || end <= start) throw new Error('Could not find the Latin-to-English section in the BMS list');

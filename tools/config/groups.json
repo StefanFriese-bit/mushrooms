@@ -1,18 +1,75 @@
 {
   "placeId": 6857,
   "include": [
-    { "name": "Agaricomycetes", "rank": "class" },
-    { "name": "Pezizomycetes", "rank": "class" },
-    { "name": "Tremellomycetes", "rank": "class" },
-    { "name": "Dacrymycetes", "rank": "class" },
-    { "name": "Leotiomycetes", "rank": "class" },
-    { "name": "Xylariales", "rank": "order" },
-    { "name": "Hypocreales", "rank": "order" }
+    {
+      "name": "Agaricomycetes",
+      "rank": "class"
+    },
+    {
+      "name": "Pezizomycetes",
+      "rank": "class"
+    },
+    {
+      "name": "Tremellomycetes",
+      "rank": "class"
+    },
+    {
+      "name": "Dacrymycetes",
+      "rank": "class"
+    },
+    {
+      "name": "Leotiomycetes",
+      "rank": "class"
+    },
+    {
+      "name": "Xylariales",
+      "rank": "order"
+    },
+    {
+      "name": "Hypocreales",
+      "rank": "order"
+    }
   ],
   "exclude": [
-    { "name": "Erysiphaceae", "rank": "family", "why": "powdery mildews" },
-    { "name": "Rhytismatales", "rank": "order", "why": "tar spots" },
-    { "name": "Nectriaceae", "rank": "family", "why": "coral spot and other small pustules on plants" },
-    { "name": "Clavicipitaceae", "rank": "family", "why": "ergot" }
+    {
+      "name": "Erysiphaceae",
+      "rank": "family",
+      "why": "powdery mildews"
+    },
+    {
+      "name": "Rhytismatales",
+      "rank": "order",
+      "why": "tar spots"
+    },
+    {
+      "name": "Nectriaceae",
+      "rank": "family",
+      "why": "coral spot and other small pustules on plants"
+    },
+    {
+      "name": "Clavicipitaceae",
+      "rank": "family",
+      "why": "ergot"
+    },
+    {
+      "name": "Illosporiopsis",
+      "rank": "genus",
+      "why": "pink spots on lichens (a lichen parasite)"
+    },
+    {
+      "name": "Erythricium",
+      "rank": "genus",
+      "why": "orange patches on lichens (a lichen parasite)"
+    },
+    {
+      "name": "Diplocarpon",
+      "rank": "genus",
+      "why": "black spot on rose leaves"
+    },
+    {
+      "name": "Trochila",
+      "rank": "genus",
+      "why": "speckles on fallen holly leaves"
+    }
   ]
 }

@@ -33,6 +33,14 @@ describe('parseBmsLatinToEnglish', () => {
     expect(names.get('Hericium erinaceum')).toBe('Bearded Tooth');
   });
 
+  it('treats a page break as a line break (22 in the 2005 list put the page number after the last name)', () => {
+    const paged = parseBmsLatinToEnglish(
+      ['Current Scientific Latin name Recommended English', 'Byssomerulius corium Netted Crust\f2', 'Agaricus arvensis Horse Mushroom', 'English to Latin names'].join('\n'),
+    );
+    expect(paged.names.get('Byssomerulius corium')).toBe('Netted Crust');
+    expect(paged.unparsed).toEqual(['2']);
+  });
+
   it('joins a Latin name and its English name split over two lines', () => {
     expect(names.get('Astraeus hygrometricus')).toBe('Barometer Earthstar');
   });

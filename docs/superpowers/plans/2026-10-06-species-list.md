@@ -994,8 +994,11 @@ Use this WebFetch prompt for every page (fill in the name):
 - **Edible entry:** add both URLs if both pages say it is edible. If only one does, find a second allowed source
   (Wikipedia, Kew, Woodland Trust, NHM, Plantlife). If none is found, **remove the species from `edibles`**, together
   with its pairs and no-lookalike entry. Note it in the research report.
-- **Dangerous entry:** add both URLs if both pages say it is poisonous. Set `level` to `deadly` only when **both**
-  sources call it deadly or potentially fatal; otherwise set it to `poisonous`.
+- **Dangerous entry:** add both URLs if both pages say it is poisonous. Set `level` to `deadly` when one source calls
+  it deadly or potentially fatal outright and the other agrees it is dangerous. When the two disagree, use the more
+  dangerous answer (spec 5.3). Otherwise set it to `poisonous`. *(Amended 06/10 while executing: the first wording
+  asked for both sources to say "deadly", which contradicted the spec's cautious rule. The research report lists the
+  three species this decided.)*
 - **Pair:** add the URLs of two different websites that each name the dangerous species as a confusion risk for the
   edible one. The statement may be on either species' page. If fewer than two websites name a pair, remove it.
 - **New pairs:** when two websites name a dangerous lookalike that the seed lacks, add a pair. Add the species to
