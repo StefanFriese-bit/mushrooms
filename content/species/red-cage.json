@@ -1,0 +1,157 @@
+{
+  "slug": "red-cage",
+  "inatId": 56534,
+  "scientific": "Clathrus ruber",
+  "english": "Red Cage",
+  "olderNames": [
+    "Clathrus cancellatus"
+  ],
+  "edibility": {
+    "value": "poisonous",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "edibilityNote": {
+    "value": "Its eggs are said to be edible, but eating them has caused serious stomach upsets (First Nature), and Wikipedia reports poisonings; British guides list it as inedible or poisonous.",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "A bright red, hollow ball of spongy lattice, 5–20 cm tall, rising from a white egg.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    {
+      "value": "Olive-brown slime on the inside of the lattice smells strongly of rotting meat.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    {
+      "value": "In gardens and parks, on mulch and compost; rare in mainland Britain.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "Gardens and parks, on bark mulch, compost and decaying plant matter; rare in mainland Britain, commoner in the Channel Islands.",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      6,
+      7,
+      8,
+      9
+    ],
+    "sources": [
+      "fn"
+    ]
+  },
+  "sporePrint": {
+    "value": "Olive-brown",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "other",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "ring": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "bagAtBase": {
+      "value": "yes",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "growsOn": {
+      "value": "ground",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "capCm": {
+      "value": [
+        5,
+        20
+      ],
+      "sources": [
+        "wp"
+      ]
+    },
+    "fleshChange": {
+      "value": "Spongy red lattice; jelly inside the egg",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "smell": {
+      "value": "Strong, of rotting meat",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    }
+  },
+  "lookalikes": [],
+  "noDangerousLookalike": null,
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Clathrus ruber, Red Cage",
+      "url": "https://www.first-nature.com/fungi/clathrus-ruber.php"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Clathrus ruber",
+      "url": "https://en.wikipedia.org/wiki/Clathrus_ruber"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}

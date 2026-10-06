@@ -1,23 +1,22 @@
 {
-  "slug": "ugly-milkcap",
-  "inatId": 382886,
-  "scientific": "Lactarius turpis",
-  "english": "Ugly Milkcap",
-  "olderNames": [
-    "Lactarius necator",
-    "Lactarius plumbeus"
-  ],
+  "slug": "beech-milkcap",
+  "inatId": 382877,
+  "scientific": "Lactarius blennius",
+  "english": "Beech Milkcap",
+  "olderNames": [],
   "edibility": {
-    "value": "poisonous",
+    "value": "not-edible",
     "sources": [
       "fn",
+      "wf",
       "wp"
     ]
   },
   "edibilityNote": {
-    "value": "It was once boiled and used as a spice in parts of northern Europe, but it contains a compound that may cause cancer (First Nature; Wikipedia: mutagenic, and boiling does not remove it all).",
+    "value": "Some call it edible but mediocre; others class it as inedible or even poisonous (Wikipedia). Its milk is hot and acrid.",
     "sources": [
       "fn",
+      "wf",
       "wp"
     ]
   },
@@ -30,39 +29,33 @@
   },
   "topPoints": [
     {
-      "value": "Dark olive-brown to almost black cap, 4–20 cm, slimy when wet, often dirty-looking with debris.",
+      "value": "A slimy olive-grey to greenish-grey cap, 4–10 cm, with rings of darker blotches.",
       "sources": [
         "fn",
+        "wf",
         "wp"
       ]
     },
     {
-      "value": "Crowded cream gills that ooze a white milk when damaged; old milk stains them brown.",
+      "value": "Crowded white gills that ooze white milk when damaged; the milk dries grey.",
       "sources": [
         "fn",
-        "wp"
+        "wf"
       ]
     },
     {
-      "value": "Stem the colour of the cap or paler; no ring.",
+      "value": "Nearly always under beech.",
       "sources": [
         "fn",
-        "wp"
-      ]
-    },
-    {
-      "value": "Under birch, especially in damp woods.",
-      "sources": [
-        "fn",
-        "wp"
+        "wf"
       ]
     }
   ],
   "habitat": {
-    "value": "Under birch, especially in damp woods; also with spruce and pine in mixed woodland.",
+    "value": "Nearly always under beech; very occasionally with oak.",
     "sources": [
       "fn",
-      "wp"
+      "wf"
     ]
   },
   "seasonMonths": {
@@ -73,11 +66,12 @@
       11
     ],
     "sources": [
-      "fn"
+      "fn",
+      "wf"
     ]
   },
   "sporePrint": {
-    "value": "Creamy white",
+    "value": "Cream",
     "sources": [
       "fn",
       "wp"
@@ -88,6 +82,7 @@
       "value": "gills",
       "sources": [
         "fn",
+        "wf",
         "wp"
       ]
     },
@@ -109,24 +104,25 @@
       "value": "ground",
       "sources": [
         "fn",
-        "wp"
+        "wf"
       ]
     },
     "capCm": {
       "value": [
         4,
-        20
+        10
       ],
       "sources": [
         "fn",
+        "wf",
         "wp"
       ]
     },
     "fleshChange": {
-      "value": "A white milk when damaged, staining the gills olive-brown",
+      "value": "White milk when damaged, drying grey",
       "sources": [
         "fn",
-        "wp"
+        "wf"
       ]
     },
     "smell": {
@@ -138,31 +134,30 @@
   },
   "lookalikes": [
     {
-      "scientific": "Lactarius blennius",
-      "english": "Beech Milkcap",
-      "slug": "beech-milkcap",
-      "kind": "not-edible",
+      "scientific": "Lactarius turpis",
+      "english": "Ugly Milkcap",
+      "slug": "ugly-milkcap",
+      "kind": "poisonous",
       "tellApart": [
         {
           "feature": "Cap colour",
-          "thisOne": "Dark olive-brown to almost black",
-          "thatOne": "Pale olive-grey to greenish-grey",
+          "thisOne": "Pale olive-grey to greenish-grey",
+          "thatOne": "Dark olive-brown to almost black",
           "sources": [
             "fn",
-            "wp",
-            "fn-bm",
-            "wf-bm"
+            "wf",
+            "fn-um",
+            "wp-um"
           ]
         },
         {
-          "feature": "Tree",
-          "thisOne": "Birch",
-          "thatOne": "Beech",
+          "feature": "Gills when bruised",
+          "thisOne": "Grey-buff",
+          "thatOne": "Stained olive-brown",
           "sources": [
             "fn",
-            "wp",
-            "fn-bm",
-            "wf-bm"
+            "fn-um",
+            "wp-um"
           ]
         }
       ]
@@ -173,23 +168,28 @@
   "sources": [
     {
       "id": "fn",
-      "title": "First Nature — Lactarius turpis, Ugly Milkcap",
-      "url": "https://www.first-nature.com/fungi/lactarius-turpis.php"
-    },
-    {
-      "id": "wp",
-      "title": "Wikipedia — Lactarius turpis",
-      "url": "https://en.wikipedia.org/wiki/Lactarius_turpis"
-    },
-    {
-      "id": "fn-bm",
       "title": "First Nature — Lactarius blennius, Beech Milkcap",
       "url": "https://www.first-nature.com/fungi/lactarius-blennius.php"
     },
     {
-      "id": "wf-bm",
+      "id": "wf",
       "title": "Wild Food UK — Beech Milkcap",
       "url": "https://www.wildfooduk.com/mushroom-guide/beech-milkcap/"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Lactarius blennius",
+      "url": "https://en.wikipedia.org/wiki/Lactarius_blennius"
+    },
+    {
+      "id": "fn-um",
+      "title": "First Nature — Lactarius turpis, Ugly Milkcap",
+      "url": "https://www.first-nature.com/fungi/lactarius-turpis.php"
+    },
+    {
+      "id": "wp-um",
+      "title": "Wikipedia — Lactarius turpis",
+      "url": "https://en.wikipedia.org/wiki/Lactarius_turpis"
     },
     {
       "id": "wf-prot",

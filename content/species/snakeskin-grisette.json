@@ -1,0 +1,279 @@
+{
+  "slug": "snakeskin-grisette",
+  "inatId": 154366,
+  "scientific": "Amanita ceciliae",
+  "english": "Snakeskin Grisette",
+  "olderNames": [
+    "Amanita inaurata",
+    "Amanita strangulata"
+  ],
+  "edibility": {
+    "value": "edible-some-react",
+    "sources": [
+      "wf",
+      "wp",
+      "fn"
+    ]
+  },
+  "edibilityNote": {
+    "value": "Its edibility is disputed: Wild Food UK and Wikipedia call it edible but not recommended, while First Nature reports it as at least slightly poisonous. All warn that it is easily confused with the poisonous Panthercap and the deadly Amanitas — not for beginners.",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "A brown cap, 6–12 cm, with charcoal-grey patches that rub off and a strongly lined edge.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "No ring; the stem is banded with grey zig-zags like snakeskin.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "A fragile bag (volva) at the base that soon collapses into grey patches.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "White gills, free of the stem; white spore print.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "Broadleaved and mixed woods, often in parkland.",
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      8,
+      9,
+      10,
+      11
+    ],
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "sporePrint": {
+    "value": "White",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "gills",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    "ring": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    "bagAtBase": {
+      "value": "yes",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    "growsOn": {
+      "value": "ground",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "capCm": {
+      "value": [
+        6,
+        12
+      ],
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "fleshChange": {
+      "value": "No colour change when cut is described",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "smell": {
+      "value": "Not significant",
+      "sources": [
+        "fn"
+      ]
+    }
+  },
+  "lookalikes": [
+    {
+      "scientific": "Amanita pantherina",
+      "english": "Panthercap",
+      "slug": "panthercap",
+      "kind": "poisonous",
+      "tellApart": [
+        {
+          "feature": "Ring",
+          "thisOne": "None",
+          "thatOne": "A smooth ring on the stem",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "fn-pc",
+            "wf-pc"
+          ]
+        },
+        {
+          "feature": "Cap patches",
+          "thisOne": "Charcoal-grey",
+          "thatOne": "Pure white",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-pc",
+            "wf-pc"
+          ]
+        }
+      ]
+    },
+    {
+      "scientific": "Amanita phalloides",
+      "english": "Deathcap",
+      "slug": "deathcap",
+      "kind": "deadly",
+      "tellApart": [
+        {
+          "feature": "Ring",
+          "thisOne": "None",
+          "thatOne": "A floppy white ring",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "fn-dc",
+            "wp-dc"
+          ]
+        },
+        {
+          "feature": "Cap",
+          "thisOne": "Brown with grey patches and a lined edge",
+          "thatOne": "Usually olive-green to yellowish, smooth-edged",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-dc",
+            "wf-dc"
+          ]
+        }
+      ]
+    }
+  ],
+  "noDangerousLookalike": null,
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Amanita ceciliae, Snakeskin Grisette",
+      "url": "https://www.first-nature.com/fungi/amanita-ceciliae.php"
+    },
+    {
+      "id": "wf",
+      "title": "Wild Food UK — Snakeskin Grisette",
+      "url": "https://www.wildfooduk.com/mushroom-guide/snakeskin-grisette/"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Amanita ceciliae",
+      "url": "https://en.wikipedia.org/wiki/Amanita_ceciliae"
+    },
+    {
+      "id": "fn-pc",
+      "title": "First Nature — Amanita pantherina, Panthercap",
+      "url": "https://www.first-nature.com/fungi/amanita-pantherina.php"
+    },
+    {
+      "id": "wf-pc",
+      "title": "Wild Food UK — Panthercap",
+      "url": "https://www.wildfooduk.com/mushroom-guide/panther-cap/"
+    },
+    {
+      "id": "wp-pc",
+      "title": "Wikipedia — Amanita pantherina",
+      "url": "https://en.wikipedia.org/wiki/Amanita_pantherina"
+    },
+    {
+      "id": "fn-dc",
+      "title": "First Nature — Amanita phalloides, Deathcap",
+      "url": "https://www.first-nature.com/fungi/amanita-phalloides.php"
+    },
+    {
+      "id": "wf-dc",
+      "title": "Wild Food UK — Deathcap",
+      "url": "https://www.wildfooduk.com/mushroom-guide/deathcap/"
+    },
+    {
+      "id": "wp-dc",
+      "title": "Wikipedia — Amanita phalloides",
+      "url": "https://en.wikipedia.org/wiki/Amanita_phalloides"
+    },
+    {
+      "id": "wt-dc",
+      "title": "Woodland Trust — Deathcap",
+      "url": "https://www.woodlandtrust.org.uk/trees-woods-and-wildlife/fungi-and-lichens/deathcap/"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}

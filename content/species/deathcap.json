@@ -575,6 +575,37 @@
           ]
         }
       ]
+    },
+    {
+      "scientific": "Amanita ceciliae",
+      "english": "Snakeskin Grisette",
+      "slug": "snakeskin-grisette",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Ring",
+          "thisOne": "A floppy white ring",
+          "thatOne": "None",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-sg",
+            "wf-sg",
+            "wp-sg"
+          ]
+        },
+        {
+          "feature": "Cap",
+          "thisOne": "Usually olive-green to yellowish, smooth-edged",
+          "thatOne": "Brown with grey patches and a lined edge",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-sg",
+            "wf-sg"
+          ]
+        }
+      ]
     }
   ],
   "noDangerousLookalike": null,
@@ -788,6 +819,21 @@
       "id": "wf-mp",
       "title": "Wild Food UK — Mosaic Puffball",
       "url": "https://www.wildfooduk.com/mushroom-guide/mosaic-puffball/"
+    },
+    {
+      "id": "fn-sg",
+      "title": "First Nature — Amanita ceciliae, Snakeskin Grisette",
+      "url": "https://www.first-nature.com/fungi/amanita-ceciliae.php"
+    },
+    {
+      "id": "wf-sg",
+      "title": "Wild Food UK — Snakeskin Grisette",
+      "url": "https://www.wildfooduk.com/mushroom-guide/snakeskin-grisette/"
+    },
+    {
+      "id": "wp-sg",
+      "title": "Wikipedia — Amanita ceciliae",
+      "url": "https://en.wikipedia.org/wiki/Amanita_ceciliae"
     },
     {
       "id": "wf-prot",

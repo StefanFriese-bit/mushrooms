@@ -53,10 +53,10 @@ export function checkRecord(r: SpeciesRecord, allowedHosts: string[]): string[] 
   (r.edibility.value.startsWith('edible') ? sourced : sourcedOnce)('sporePrint', r.sporePrint.sources);
   if (sporeGroups(r.sporePrint.value).length === 0) say(`sporePrint "${r.sporePrint.value}" names no colour group Identify can ask about`);
   // The structural features the Check screen compares need two websites; how the flesh changes and how it smells
-  // are descriptions (their safety use is in the "tell them apart" rows, which need two). The cap size of a species
-  // that is neither edible nor dangerous is a description too: it only decides where a harmless species appears in
-  // Identify, and for many small or common fungi only one trusted site gives a size.
-  const DESCRIPTIVE = new Set(['fleshChange', 'smell', ...(r.edibility.value === 'not-edible' ? ['capCm'] : [])]);
+  // are descriptions (their safety use is in the "tell them apart" rows, which need two). The cap size needs two only
+  // on an edible page: elsewhere it just places the species in Identify, many fungi have a size on one trusted site
+  // only, and a dangerous species is safer with a page than without one (as for the spore print, above).
+  const DESCRIPTIVE = new Set(['fleshChange', 'smell', ...(r.edibility.value.startsWith('edible') ? [] : ['capCm'])]);
   for (const [k, v] of Object.entries(r.features)) (DESCRIPTIVE.has(k) ? sourcedOnce : sourced)(`feature ${k}`, v.sources);
 
   for (const l of r.lookalikes) {

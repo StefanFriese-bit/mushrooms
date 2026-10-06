@@ -288,6 +288,37 @@
           ]
         }
       ]
+    },
+    {
+      "scientific": "Amanita ceciliae",
+      "english": "Snakeskin Grisette",
+      "slug": "snakeskin-grisette",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Ring",
+          "thisOne": "A smooth ring on the stem",
+          "thatOne": "None",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-sg",
+            "wf-sg",
+            "wp-sg"
+          ]
+        },
+        {
+          "feature": "Cap patches",
+          "thisOne": "Pure white",
+          "thatOne": "Charcoal-grey",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-sg",
+            "wp-sg"
+          ]
+        }
+      ]
     }
   ],
   "noDangerousLookalike": null,
@@ -366,6 +397,21 @@
       "id": "fn-efb",
       "title": "First Nature — Amanita excelsa, European False Blusher",
       "url": "https://www.first-nature.com/fungi/amanita-excelsa.php"
+    },
+    {
+      "id": "fn-sg",
+      "title": "First Nature — Amanita ceciliae, Snakeskin Grisette",
+      "url": "https://www.first-nature.com/fungi/amanita-ceciliae.php"
+    },
+    {
+      "id": "wf-sg",
+      "title": "Wild Food UK — Snakeskin Grisette",
+      "url": "https://www.wildfooduk.com/mushroom-guide/snakeskin-grisette/"
+    },
+    {
+      "id": "wp-sg",
+      "title": "Wikipedia — Amanita ceciliae",
+      "url": "https://en.wikipedia.org/wiki/Amanita_ceciliae"
     },
     {
       "id": "wf-prot",

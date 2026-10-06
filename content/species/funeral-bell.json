@@ -379,6 +379,45 @@
           ]
         }
       ]
+    },
+    {
+      "scientific": "Psilocybe cyanescens",
+      "english": "Blueleg Brownie",
+      "slug": "blueleg-brownie",
+      "kind": "poisonous",
+      "tellApart": [
+        {
+          "feature": "Bruising",
+          "thisOne": "Does not bruise blue",
+          "thatOne": "Bruises blue",
+          "sources": [
+            "fn-bl",
+            "wp-bl"
+          ]
+        },
+        {
+          "feature": "Ring",
+          "thisOne": "A small but distinct ring",
+          "thatOne": "A faint ring zone that soon vanishes",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-bl"
+          ]
+        },
+        {
+          "feature": "Spore print",
+          "thisOne": "Rusty brown",
+          "thatOne": "Very dark purple-brown",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "fn-bl",
+            "wp-bl"
+          ]
+        }
+      ]
     }
   ],
   "noDangerousLookalike": null,
@@ -502,6 +541,16 @@
       "id": "wp-pf",
       "title": "Wikipedia — Cyclocybe cylindracea",
       "url": "https://en.wikipedia.org/wiki/Cyclocybe_cylindracea"
+    },
+    {
+      "id": "fn-bl",
+      "title": "First Nature — Psilocybe cyanescens, Blueleg Brownie",
+      "url": "https://www.first-nature.com/fungi/psilocybe-cyanescens.php"
+    },
+    {
+      "id": "wp-bl",
+      "title": "Wikipedia — Psilocybe cyanescens",
+      "url": "https://en.wikipedia.org/wiki/Psilocybe_cyanescens"
     },
     {
       "id": "wf-prot",

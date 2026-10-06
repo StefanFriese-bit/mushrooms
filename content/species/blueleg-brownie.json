@@ -1,0 +1,219 @@
+{
+  "slug": "blueleg-brownie",
+  "inatId": 179085,
+  "scientific": "Psilocybe cyanescens",
+  "english": "Blueleg Brownie",
+  "olderNames": [],
+  "edibility": {
+    "value": "poisonous",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "edibilityNote": {
+    "value": "Contains the hallucinogens psilocybin and psilocin, which can cause vomiting, stomach pains and anxiety attacks (First Nature). Like the Liberty Cap, it is a Class A drug in the UK: illegal to pick or keep.",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "A caramel to chestnut-brown cap, 1.5–5 cm, wavy at the edge when mature, drying pale buff.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    {
+      "value": "It bruises blue — the cap edge and the white stem.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    {
+      "value": "Gills brown, turning purple-brown; very dark spore print.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    {
+      "value": "On woodchip mulch in flowerbeds and parks, in autumn and winter.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "Woodchip mulch in flowerbeds, parks and gardens; probably introduced to Britain.",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      9,
+      10,
+      11,
+      12,
+      1,
+      2
+    ],
+    "sources": [
+      "fn"
+    ]
+  },
+  "sporePrint": {
+    "value": "Very dark purple-brown",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "gills",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "ring": {
+      "value": "sometimes",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "growsOn": {
+      "value": "wood",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "capCm": {
+      "value": [
+        1.5,
+        5
+      ],
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "fleshChange": {
+      "value": "Bruises blue",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "smell": {
+      "value": "Faint or faintly mealy",
+      "sources": [
+        "fn"
+      ]
+    }
+  },
+  "lookalikes": [
+    {
+      "scientific": "Galerina marginata",
+      "english": "Funeral Bell",
+      "slug": "funeral-bell",
+      "kind": "deadly",
+      "tellApart": [
+        {
+          "feature": "Bruising",
+          "thisOne": "Bruises blue",
+          "thatOne": "Does not bruise blue",
+          "sources": [
+            "fn",
+            "wp"
+          ]
+        },
+        {
+          "feature": "Ring",
+          "thisOne": "A faint ring zone that soon vanishes",
+          "thatOne": "A small but distinct ring",
+          "sources": [
+            "fn",
+            "fn-fb",
+            "wf-fb"
+          ]
+        },
+        {
+          "feature": "Spore print",
+          "thisOne": "Very dark purple-brown",
+          "thatOne": "Rusty brown",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-fb",
+            "wf-fb",
+            "wp-fb"
+          ]
+        }
+      ]
+    }
+  ],
+  "noDangerousLookalike": null,
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Psilocybe cyanescens, Blueleg Brownie",
+      "url": "https://www.first-nature.com/fungi/psilocybe-cyanescens.php"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Psilocybe cyanescens",
+      "url": "https://en.wikipedia.org/wiki/Psilocybe_cyanescens"
+    },
+    {
+      "id": "fn-fb",
+      "title": "First Nature — Galerina marginata, Funeral Bell",
+      "url": "https://www.first-nature.com/fungi/galerina-marginata.php"
+    },
+    {
+      "id": "wf-fb",
+      "title": "Wild Food UK — Funeral Bell",
+      "url": "https://www.wildfooduk.com/mushroom-guide/funeral-bell/"
+    },
+    {
+      "id": "wp-fb",
+      "title": "Wikipedia — Galerina marginata",
+      "url": "https://en.wikipedia.org/wiki/Galerina_marginata"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}
