@@ -5,6 +5,7 @@ import { SpeciesPage } from './screens/species-page';
 import { Learn } from './screens/learn';
 import { About } from './screens/about';
 import { ComingSoon } from './screens/coming-soon';
+import brand from './brand.json';
 
 const TABS = [
   { name: 'scan', label: 'Scan' },
@@ -13,6 +14,26 @@ const TABS = [
   { name: 'finds', label: 'Finds' },
   { name: 'learn', label: 'Learn' },
 ] as const;
+
+/** The green band at the top: the mark from the home-screen icon, the name and the tagline (src/brand.json). */
+function Header() {
+  return (
+    <header class="app-header">
+      <a class="brand" href={hrefFor({ name: 'guide', query: '' })} aria-label={`${brand.name}, open the guide`}>
+        <svg class="brand-mark" viewBox="88 96 336 344" aria-hidden="true">
+          <path d="M96 268c0-92 72-164 160-164s160 72 160 164c0 14-11 24-25 24H121c-14 0-25-10-25-24z" fill="#e9d8b4" />
+          <circle cx="200" cy="200" r="18" fill="#c9b48a" /><circle cx="296" cy="176" r="14" fill="#c9b48a" />
+          <circle cx="338" cy="236" r="12" fill="#c9b48a" />
+          <path d="M216 292h80l-10 116c-1 14-13 24-27 24h-6c-14 0-26-10-27-24z" fill="#f6f1e6" />
+        </svg>
+        <span class="brand-text">
+          <span class="brand-name">{brand.name}</span>
+          <span class="brand-tagline">{brand.tagline}</span>
+        </span>
+      </a>
+    </header>
+  );
+}
 
 function screen(route: Route) {
   switch (route.name) {
@@ -41,6 +62,7 @@ export function App() {
   const active = route.name === 'species' ? 'guide' : route.name;
   return (
     <div class="shell">
+      <Header />
       <div class="test-banner" role="note">Test version — not for identifying mushrooms</div>
       <main>{screen(route)}</main>
       <nav class="tabs" aria-label="Sections">

@@ -1,6 +1,7 @@
 import { expect, test } from '@playwright/test';
 import { fileURLToPath } from 'node:url';
 import { startServer } from './server';
+import brand from '../src/brand.json' with { type: 'json' };
 
 const DIST = fileURLToPath(new URL('../dist', import.meta.url));
 const BANNER = 'Test version — not for identifying mushrooms';
@@ -55,4 +56,13 @@ test('works with the server switched off once it has been opened', async ({ page
 test('About says whether the phone keeps the data (the app asks at start)', async ({ page }) => {
   await page.goto(`${site.url}#/about`);
   await expect(page.getByText(/Storage kept by the phone: (yes|not yet|not supported in this browser)$/)).toBeVisible();
+});
+
+test('the header shows the name and tagline from src/brand.json, and takes you to the guide', async ({ page }) => {
+  await page.goto(`${site.url}#/learn`);
+  const header = page.locator('header.app-header');
+  await expect(header).toContainText(brand.name);
+  await expect(header).toContainText(brand.tagline);
+  await header.getByRole('link').click();
+  await expect(page.locator('[data-test=species-row]')).toHaveCount(10);
 });
