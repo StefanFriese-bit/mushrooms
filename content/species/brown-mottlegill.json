@@ -1,0 +1,179 @@
+{
+  "slug": "brown-mottlegill",
+  "inatId": 902551,
+  "scientific": "Panaeolus foenisecii",
+  "english": "Brown Mottlegill",
+  "olderNames": [
+    "Panaeolina foenisecii"
+  ],
+  "edibility": {
+    "value": "not-edible",
+    "sources": [
+      "wf",
+      "wp"
+    ]
+  },
+  "edibilityNote": {
+    "value": "First Nature reports children falling ill after eating it and advises treating it as toxic; Wikipedia notes it is sometimes mistaken for a hallucinogenic mottlegill.",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "Small brown cap, 1–4 cm, bell-shaped then convex, drying to beige from the centre outwards.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "Gills pale brown, becoming mottled with dark brown spots; dark brown spore print.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "Thin, pale stem with no ring.",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    {
+      "value": "On lawns, verges and other short grass, often in groups — the \"mower's mushroom\".",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "Lawns, roadside verges, parks, cemeteries and other short grass, in groups.",
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "sporePrint": {
+    "value": "Dark brown",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "gills",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    "ring": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "growsOn": {
+      "value": "ground",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "capCm": {
+      "value": [
+        1,
+        4
+      ],
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "fleshChange": {
+      "value": "Very thin and watery",
+      "sources": [
+        "wf"
+      ]
+    },
+    "smell": {
+      "value": "Slightly unpleasant, or not distinctive",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    }
+  },
+  "lookalikes": [],
+  "noDangerousLookalike": null,
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Panaeolus foenisecii, Brown Mottlegill",
+      "url": "https://www.first-nature.com/fungi/panaeolina-foenisecii.php"
+    },
+    {
+      "id": "wf",
+      "title": "Wild Food UK — Brown Mottlegill",
+      "url": "https://www.wildfooduk.com/mushroom-guide/brown-mottlegill/"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Panaeolus foenisecii",
+      "url": "https://en.wikipedia.org/wiki/Panaeolus_foenisecii"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}

@@ -1,0 +1,179 @@
+{
+  "slug": "pestle-puffball",
+  "inatId": 154675,
+  "scientific": "Lycoperdon excipuliforme",
+  "english": "Pestle Puffball",
+  "olderNames": [
+    "Handkea excipuliformis",
+    "Calvatia excipuliformis"
+  ],
+  "edibility": {
+    "value": "edible-cooked",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "edibilityNote": {
+    "value": "Edible only while it is white all through; once the inside turns yellow or olive, it is not.",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "A tall puffball shaped like a pestle: a round head on a thick, stem-like base.",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    {
+      "value": "White at first, covered in soft pointed warts that rub off; it turns ochre to brown.",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    {
+      "value": "Inside: white and firm when young, then olive-brown spores.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "In woods, especially edges and clearings; sometimes grassland.",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "Broadleaved and conifer woods, especially edges and clearings; sometimes grassland and hedgerows.",
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      8,
+      9,
+      10,
+      11
+    ],
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "sporePrint": {
+    "value": "Olive-brown",
+    "sources": [
+      "wf",
+      "fn"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "other",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "ring": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "growsOn": {
+      "value": "ground",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "capCm": {
+      "value": [
+        6,
+        10
+      ],
+      "sources": [
+        "wf",
+        "wp"
+      ]
+    },
+    "fleshChange": {
+      "value": "White, turning green to olive-brown as the spores ripen",
+      "sources": [
+        "wf"
+      ]
+    },
+    "smell": {
+      "value": "Not distinctive",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    }
+  },
+  "lookalikes": [],
+  "noDangerousLookalike": {
+    "sources": [
+      "wf",
+      "fn"
+    ]
+  },
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Lycoperdon excipuliforme, Pestle Puffball",
+      "url": "https://www.first-nature.com/fungi/lycoperdon-excipuliforme.php"
+    },
+    {
+      "id": "wf",
+      "title": "Wild Food UK — Pestle Puffball",
+      "url": "https://www.wildfooduk.com/mushroom-guide/pestle-puffball/"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Lycoperdon excipuliforme",
+      "url": "https://en.wikipedia.org/wiki/Lycoperdon_excipuliforme"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}

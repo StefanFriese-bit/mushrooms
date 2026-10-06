@@ -1,0 +1,160 @@
+{
+  "slug": "fluted-bird-s-nest",
+  "inatId": 120242,
+  "scientific": "Cyathus striatus",
+  "english": "Fluted Bird's Nest",
+  "olderNames": [],
+  "edibility": {
+    "value": "not-edible",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "edibilityNote": null,
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "Tiny cups, 6–10 mm, like birds' nests holding small grey \"eggs\".",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    {
+      "value": "The inside of each cup is fluted with fine grooves; the outside is hairy and brown.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    {
+      "value": "In clusters on dead wood, twigs and woodchip.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "In clusters on dead wood, twigs, bark and woodchip, in woods, parks and gardens.",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "sporePrint": {
+    "value": "White",
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "other",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "ring": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "growsOn": {
+      "value": "wood",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "capCm": {
+      "value": [
+        0.6,
+        1
+      ],
+      "sources": [
+        "wp"
+      ]
+    },
+    "fleshChange": {
+      "value": "Paper thin; leathery with age",
+      "sources": [
+        "wf"
+      ]
+    },
+    "smell": {
+      "value": "Not distinctive",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    }
+  },
+  "lookalikes": [],
+  "noDangerousLookalike": null,
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Cyathus striatus, Fluted Bird's Nest",
+      "url": "https://www.first-nature.com/fungi/cyathus-striatus.php"
+    },
+    {
+      "id": "wf",
+      "title": "Wild Food UK — Fluted Bird's Nest",
+      "url": "https://www.wildfooduk.com/mushroom-guide/fluted-birds-nest/"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Cyathus striatus",
+      "url": "https://en.wikipedia.org/wiki/Cyathus_striatus"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}

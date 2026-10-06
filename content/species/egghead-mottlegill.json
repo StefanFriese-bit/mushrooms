@@ -1,0 +1,179 @@
+{
+  "slug": "egghead-mottlegill",
+  "inatId": 124539,
+  "scientific": "Panaeolus semiovatus",
+  "english": "Egghead Mottlegill",
+  "olderNames": [
+    "Anellaria semiovata"
+  ],
+  "edibility": {
+    "value": "not-edible",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "edibilityNote": null,
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "A cream to clay-coloured cap like half an egg, 2–9 cm, shiny and often wrinkled.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "Gills mottled, turning black; black spore print.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "Tall, thin stem with a small ring that soon blackens.",
+      "sources": [
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "On or beside dung, especially horse dung, in grazed fields.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "On or beside dung, especially horse dung, in meadows and grazed land.",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "sporePrint": {
+    "value": "Black",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "gills",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    "ring": {
+      "value": "sometimes",
+      "sources": [
+        "wf",
+        "wp"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "growsOn": {
+      "value": "dung",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    "capCm": {
+      "value": [
+        2,
+        9
+      ],
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "fleshChange": {
+      "value": "Pale, darker towards the base",
+      "sources": [
+        "wf"
+      ]
+    },
+    "smell": {
+      "value": "Not distinctive",
+      "sources": [
+        "fn"
+      ]
+    }
+  },
+  "lookalikes": [],
+  "noDangerousLookalike": null,
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Panaeolus semiovatus, Egghead Mottlegill",
+      "url": "https://www.first-nature.com/fungi/panaeolus-semiovatus.php"
+    },
+    {
+      "id": "wf",
+      "title": "Wild Food UK — Egghead Mottlegill",
+      "url": "https://www.wildfooduk.com/mushroom-guide/egghead-mottlegill/"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Panaeolus semiovatus",
+      "url": "https://en.wikipedia.org/wiki/Panaeolus_semiovatus"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}
