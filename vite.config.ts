@@ -5,22 +5,37 @@ import preact from '@preact/preset-vite';
 import { VitePWA } from 'vite-plugin-pwa';
 import brand from './src/brand.json' with { type: 'json' };
 
-// The model runner's engines (onnxruntime-web WebAssembly files) served beside the app as /ort/<file>, fetched only
-// when a page runs a model — never precached on every install.
-const ORT_FILES = ['ort-wasm-simd-threaded.wasm', 'ort-wasm-simd-threaded.asyncify.wasm'];
-const ORT_DIR = fileURLToPath(new URL('./node_modules/onnxruntime-web/dist/', import.meta.url));
-const ortWasm: Plugin = {
-  name: 'ort-wasm',
+// Files from packages that must sit beside the app at a fixed address, served by the dev server and written into the
+// build: the model runner's engines (onnxruntime-web WebAssembly, /ort/…) and the map's worker (MapLibre's worker
+// module and the shared module it imports, /maplibre/…; given .js names, which every host serves as JavaScript).
+type Vendored = { to: string; from: string; type: string; edit?: (text: string) => string };
+const NM = fileURLToPath(new URL('./node_modules/', import.meta.url));
+const VENDORED: Vendored[] = [
+  { to: 'ort/ort-wasm-simd-threaded.wasm', from: 'onnxruntime-web/dist/ort-wasm-simd-threaded.wasm', type: 'application/wasm' },
+  { to: 'ort/ort-wasm-simd-threaded.asyncify.wasm', from: 'onnxruntime-web/dist/ort-wasm-simd-threaded.asyncify.wasm', type: 'application/wasm' },
+  { to: 'maplibre/maplibre-gl-worker.js', from: 'maplibre-gl/dist/maplibre-gl-worker.mjs', type: 'text/javascript',
+    edit: (t) => t.replace('from"./maplibre-gl-shared.mjs"', 'from"./maplibre-gl-shared.js"') },
+  { to: 'maplibre/maplibre-gl-shared.js', from: 'maplibre-gl/dist/maplibre-gl-shared.mjs', type: 'text/javascript' },
+];
+const readVendored = (v: Vendored): string | Buffer => {
+  if (!v.edit) return readFileSync(NM + v.from);
+  const text = readFileSync(NM + v.from, 'utf8');
+  const out = v.edit(text);
+  if (out === text) throw new Error(`${v.from}: the expected text to change was not found (a new package version?)`);
+  return out;
+};
+const vendored: Plugin = {
+  name: 'vendored-files',
   configureServer(server) {
     server.middlewares.use((req, res, next) => {
-      const m = /\/ort\/([\w.-]+\.wasm)$/.exec(req.url ?? '');
-      if (!m || !ORT_FILES.includes(m[1])) return next();
-      res.setHeader('Content-Type', 'application/wasm');
-      res.end(readFileSync(ORT_DIR + m[1]));
+      const v = VENDORED.find((x) => (req.url ?? '').split('?')[0].endsWith(`/${x.to}`));
+      if (!v) return next();
+      res.setHeader('Content-Type', v.type);
+      res.end(readVendored(v));
     });
   },
   generateBundle() {
-    for (const f of ORT_FILES) this.emitFile({ type: 'asset', fileName: `ort/${f}`, source: readFileSync(ORT_DIR + f) });
+    for (const v of VENDORED) this.emitFile({ type: 'asset', fileName: v.to, source: readVendored(v) });
   },
 };
 
@@ -29,7 +44,7 @@ export default defineConfig({
   define: { __BUILD_DATE__: JSON.stringify(new Date().toISOString().slice(0, 10)) },
   plugins: [
     preact(),
-    ortWasm,
+    vendored,
     // %APP_NAME% / %APP_SHORT_NAME% in index.html come from src/brand.json, so the name is changed in one place.
     { name: 'brand-html', transformIndexHtml: (html: string) => html.replaceAll('%APP_NAME%', brand.name).replaceAll('%APP_SHORT_NAME%', brand.shortName) },
     VitePWA({
@@ -55,6 +70,17 @@ export default defineConfig({
       workbox: {
         globPatterns: ['**/*.{js,css,html,webp,png,svg,ico,webmanifest}'],
         maximumFileSizeToCacheInBytes: 5 * 1024 * 1024,
+        // Map areas he has looked at stay on the phone (spec 7): OpenFreeMap's style, tiles, fonts and icons, kept
+        // after the first view, up to a limit; never fetched in bulk.
+        runtimeCaching: [{
+          urlPattern: ({ url }) => url.origin === 'https://tiles.openfreemap.org',
+          handler: 'CacheFirst',
+          options: {
+            cacheName: 'map-viewed',
+            expiration: { maxEntries: 6000, maxAgeSeconds: 120 * 24 * 3600 },
+            cacheableResponse: { statuses: [200] },
+          },
+        }],
       },
     }),
   ],

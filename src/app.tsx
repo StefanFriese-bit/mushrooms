@@ -8,6 +8,9 @@ import { ComingSoon } from './screens/coming-soon';
 import { ScanSpeed } from './screens/scan-speed';
 import { Identify } from './screens/identify';
 import { Check } from './screens/check';
+import { Finds } from './screens/finds';
+import { FindNew } from './screens/find-new';
+import { FindPage } from './screens/find-page';
 import brand from './brand.json';
 
 const TABS = [
@@ -54,7 +57,9 @@ function screen(route: Route) {
     case 'scan': return <ComingSoon title="Scan" what="The photo scan" />;
     case 'identify': return <Identify query={route.query} />;
     case 'check': return <Check slug={route.slug} key={route.slug} />;
-    case 'finds': return <ComingSoon title="Finds" what="Your map of finds" />;
+    case 'finds': return <Finds />;
+    case 'find-new': return <FindNew />;
+    case 'find': return <FindPage id={route.id} key={route.id} />;
     default: return <><h1>Not found</h1><p><a href="#/guide">Open the guide</a></p></>;
   }
 }
@@ -70,7 +75,7 @@ export function App() {
     setRoute((r) => (JSON.stringify(r) === JSON.stringify(now) ? r : now));
     return () => removeEventListener('hashchange', onHash);
   }, []);
-  const active = route.name === 'species' ? 'guide' : route.name;
+  const active = route.name === 'species' ? 'guide' : route.name === 'find' || route.name === 'find-new' ? 'finds' : route.name;
   return (
     <div class="shell">
       <Header />

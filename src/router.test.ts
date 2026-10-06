@@ -23,6 +23,13 @@ describe('parseHash', () => {
     expect(parseHash('#/check/field-mushroom')).toEqual({ name: 'check', slug: 'field-mushroom' });
     expect(parseHash('#/check')).toEqual({ name: 'not-found', path: '/check' });
   });
+  it('reads the finds: the map, a new find and one find', () => {
+    expect(parseHash('#/finds')).toEqual({ name: 'finds' });
+    expect(parseHash('#/finds/new')).toEqual({ name: 'find-new' });
+    expect(parseHash('#/finds/2f1c')).toEqual({ name: 'find', id: '2f1c' });
+    expect(hrefFor({ name: 'find', id: '2f1c' })).toBe('#/finds/2f1c');
+    expect(hrefFor({ name: 'find-new' })).toBe('#/finds/new');
+  });
   it('reports an unknown address', () => {
     expect(parseHash('#/nowhere')).toEqual({ name: 'not-found', path: '/nowhere' });
   });

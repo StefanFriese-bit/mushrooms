@@ -140,3 +140,65 @@ test('Check on a deadly species: its own features are red; an edible lookalike\'
   await expect(row('Spore print')).toHaveClass(/red/);
   await expect(verdict).toContainText('Treat your mushroom as Deathcap: do not eat it');
 });
+
+// Finds: no real map service in tests — the map style is a plain background, so only the app's own code is tested.
+const PLAIN_MAP = { version: 8, sources: {}, layers: [{ id: 'bg', type: 'background', paint: { 'background-color': '#e8efe0' } }] };
+const PHOTO = fileURLToPath(new URL('../public/photos/chanterelle/1.webp', import.meta.url));
+test.describe('Finds', () => {
+  test.use({ serviceWorkers: 'block', geolocation: { latitude: 51.6588, longitude: 0.0466, accuracy: 7 }, permissions: ['geolocation'] });
+  test.beforeEach(async ({ page }) => {
+    await page.route('https://tiles.openfreemap.org/**', (r) => (r.request().url().includes('/styles/') ? r.fulfill({ json: PLAIN_MAP }) : r.fulfill({ status: 404 })));
+  });
+
+  test('a find saves its GPS spot, photo, species and notes on the phone, and "Take me there" walks to it', async ({ page }) => {
+    const hosts = new Set<string>();
+    page.on('request', (r) => { const u = new URL(r.url()); if (/^https?:$/.test(u.protocol)) hosts.add(u.host); }); // blob: = in the phone's memory
+    await page.goto(`${site.url}#/finds`);
+    await page.getByRole('link', { name: 'Add a find here' }).click();
+    await expect(page.locator('[data-test=where]')).toHaveText('Your position, within 7 m', { timeout: 15000 });
+    await page.locator('input[type=file]').setInputFiles(PHOTO);
+    await expect(page.locator('.thumbs img')).toHaveCount(1);
+    await page.getByLabel('What it is').selectOption('Cantharellus cibarius');
+    await page.getByLabel('Notes').fill('Under beech, by the stream.');
+    await page.getByRole('button', { name: 'Save the find' }).click();
+    await expect(page.getByRole('heading', { name: 'Chanterelle', exact: true })).toBeVisible();
+    await expect(page.locator('[data-test=take-me-there]')).toHaveAttribute('href', 'https://maps.apple.com/?daddr=51.65880,0.04660&dirflg=w');
+    await expect(page.getByText('Under beech, by the stream.')).toBeVisible();
+    await expect(page.locator('.photos img')).toHaveCount(1);
+    await page.reload();
+    await expect(page.getByRole('heading', { name: 'Chanterelle', exact: true })).toBeVisible();
+    await page.goto(`${site.url}#/finds`);
+    await expect(page.locator('[data-test=find-row]')).toHaveCount(1);
+    await expect(page.locator('[data-test=map-pin]')).toHaveCount(1);
+    // Spec 9: his finds go nowhere — the only addresses are the app's own and the map's.
+    expect([...hosts].filter((h) => h !== new URL(site.url).host && h !== 'tiles.openfreemap.org')).toEqual([]);
+  });
+
+  test('a find can be changed and deleted', async ({ page }) => {
+    await page.goto(`${site.url}#/finds/new`);
+    await expect(page.locator('[data-test=where]')).toContainText('within 7 m', { timeout: 15000 });
+    await page.getByRole('button', { name: 'Save the find' }).click();
+    await expect(page.getByRole('heading', { name: 'Not identified yet' })).toBeVisible();
+    await page.getByRole('button', { name: 'Change what it is or the notes' }).click();
+    await page.getByLabel('What it is').selectOption('Macrolepiota procera');
+    await page.getByRole('button', { name: 'Save changes' }).click();
+    await expect(page.getByRole('heading', { name: 'Parasol', exact: true })).toBeVisible();
+    page.once('dialog', (d) => d.accept());
+    await page.getByRole('button', { name: 'Delete this find' }).click();
+    await expect(page.getByRole('heading', { name: 'Finds' })).toBeVisible();
+    await expect(page.locator('[data-test=find-row]')).toHaveCount(0);
+  });
+});
+
+test.describe('Finds without location', () => {
+  test.use({ serviceWorkers: 'block', permissions: [] });
+  test('with location refused, the pin is placed by hand on the map', async ({ page }) => {
+    await page.route('https://tiles.openfreemap.org/**', (r) => (r.request().url().includes('/styles/') ? r.fulfill({ json: PLAIN_MAP }) : r.fulfill({ status: 404 })));
+    await page.goto(`${site.url}#/finds/new`);
+    await expect(page.locator('[data-test=where]')).toContainText(/Location is off|No GPS fix/, { timeout: 35000 });
+    await page.locator('[data-test=map] canvas').click({ position: { x: 120, y: 90 } });
+    await expect(page.locator('[data-test=where]')).toHaveText('Placed by hand on the map');
+    await page.getByRole('button', { name: 'Save the find' }).click();
+    await expect(page.getByText('placed by hand')).toBeVisible();
+  });
+});
