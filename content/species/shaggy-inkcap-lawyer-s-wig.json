@@ -1,0 +1,236 @@
+{
+  "slug": "shaggy-inkcap-lawyer-s-wig",
+  "inatId": 47392,
+  "scientific": "Coprinus comatus",
+  "english": "Shaggy Inkcap / Lawyer's Wig",
+  "olderNames": [],
+  "edibility": {
+    "value": "edible-cooked",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "edibilityNote": {
+    "value": "Pick only young ones with white gills and cook them the same day: once the gills blacken they melt into ink and turn bitter.",
+    "sources": [
+      "fn",
+      "wp",
+      "wf"
+    ]
+  },
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "Tall white cap shaped like an egg or a lawyer's wig, covered in shaggy white to pale brown scales.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "Gills white, then pink, then black — they melt into black ink from the cap's edge.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "A thin loose ring that slips down the stem and often falls off.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "In groups on grass verges, lawns, path edges and disturbed ground.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "Grass verges, lawns, path edges, grassland and freshly disturbed soil; often in groups or lines.",
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "sporePrint": {
+    "value": "Black",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "gills",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    "ring": {
+      "value": "sometimes",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "growsOn": {
+      "value": "ground",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "capCm": {
+      "value": [
+        4,
+        6
+      ],
+      "sources": [
+        "wf",
+        "wp"
+      ]
+    },
+    "fleshChange": {
+      "value": "White; no colour change when cut is described",
+      "sources": [
+        "wf",
+        "wp"
+      ]
+    },
+    "smell": {
+      "value": "Faint and pleasant; not distinctive",
+      "sources": [
+        "fn"
+      ]
+    }
+  },
+  "lookalikes": [
+    {
+      "scientific": "Coprinopsis picacea",
+      "english": "Magpie Inkcap",
+      "slug": "magpie-inkcap",
+      "kind": "poisonous",
+      "tellApart": [
+        {
+          "feature": "Cap colour",
+          "thisOne": "White, with white to pale brown scales",
+          "thatOne": "Dark brown to black, with white patches like a magpie's feathers",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-mi",
+            "wf-mi",
+            "wp-mi"
+          ]
+        },
+        {
+          "feature": "Young buttons",
+          "thisOne": "White, with a pale brown top",
+          "thatOne": "White at first too — it can pass for a Shaggy Inkcap until the cap opens",
+          "sources": [
+            "fn",
+            "fn-mi",
+            "wp-mi"
+          ]
+        },
+        {
+          "feature": "Where it grows",
+          "thisOne": "Grass: verges, lawns, path edges",
+          "thatOne": "Woods, mostly under beech on chalky soil",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-mi",
+            "wf-mi"
+          ]
+        }
+      ]
+    }
+  ],
+  "noDangerousLookalike": null,
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Coprinus comatus, Shaggy Inkcap / Lawyer's Wig",
+      "url": "https://www.first-nature.com/fungi/coprinus-comatus.php"
+    },
+    {
+      "id": "wf",
+      "title": "Wild Food UK — Shaggy Inkcap / Lawyer's Wig",
+      "url": "https://www.wildfooduk.com/mushroom-guide/shaggy-inkcap/"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Coprinus comatus",
+      "url": "https://en.wikipedia.org/wiki/Coprinus_comatus"
+    },
+    {
+      "id": "fn-mi",
+      "title": "First Nature — Coprinopsis picacea, Magpie Inkcap",
+      "url": "https://www.first-nature.com/fungi/coprinopsis-picacea.php"
+    },
+    {
+      "id": "wf-mi",
+      "title": "Wild Food UK — Magpie Inkcap",
+      "url": "https://www.wildfooduk.com/mushroom-guide/magpie-fungus/"
+    },
+    {
+      "id": "wp-mi",
+      "title": "Wikipedia — Coprinopsis picacea",
+      "url": "https://en.wikipedia.org/wiki/Coprinopsis_picacea"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}
