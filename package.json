@@ -8,12 +8,29 @@
     "check-core-lists": "tsx tools/check-core-lists.ts",
     "check-core-names": "tsx tools/check-core-names.ts",
     "species-list": "tsx tools/build-species-list.ts",
-    "approve-species-list": "tsx tools/approve-species-list.ts"
+    "approve-species-list": "tsx tools/approve-species-list.ts",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "e2e": "playwright test",
+    "check-content": "tsx tools/check-content.ts",
+    "fetch-photos": "tsx tools/fetch-photos.ts",
+    "icons": "pwa-assets-generator --preset minimal-2023 public/icon.svg"
   },
   "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "@preact/preset-vite": "^2.10.6",
     "@types/node": "^24.19.1",
+    "@vite-pwa/assets-generator": "^2.0.0",
+    "sharp": "^0.35.5",
     "tsx": "^4.23.15",
     "typescript": "^7.0.2",
-    "vitest": "^5.0.3"
+    "vite": "^8.3.3",
+    "vite-plugin-pwa": "^2.0.0",
+    "vitest": "^5.0.3",
+    "workbox-window": "^7.4.1"
+  },
+  "dependencies": {
+    "preact": "^11.0.0"
   }
 }
