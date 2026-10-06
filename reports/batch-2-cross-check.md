@@ -63,7 +63,7 @@ Verdicts on the 194 new pages: 113 not edible, 44 edible (cook first), 9 edible 
 5. **"Reported edible, but not worth picking" counts as edible** when both sites say it: Pink Waxcap (vulnerable
    worldwide — its note says never pick it), Meadow Coral, White and Smoky Spindles, Crested Coral, Yellowleg Bonnet,
    Jelly Tooth. You could make these "not edible" instead.
-6. **(Decided: six for every species.) Photos: two per new species, not four.** Every photo is part of what the phone downloads for offline use. The
+6. **(Decided: six for every species — done; the offline download is now 174 MB, 1,590 files, against 36 MB for the live app.) Photos: two per new species, not four.** Every photo is part of what the phone downloads for offline use. The
    two each added 37 MB: the download is now about 95 MB (the live app today: about 36 MB; batch 1 alone took it to
    58 MB). Four each would add roughly another 37 MB. Say if you want four.
 7. **The approved core list** (`tools/config/core-lists.json`) is unchanged. The new edible–dangerous pairs below live
