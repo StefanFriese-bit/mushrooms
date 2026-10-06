@@ -3,23 +3,40 @@ import { fileURLToPath } from 'node:url';
 import { startServer } from './server';
 import brand from '../src/brand.json' with { type: 'json' };
 import { MODEL_FILES } from '../src/scan/model-files';
+import { readFileSync, readdirSync } from 'node:fs';
+import { narrow, QUESTIONS, UNSURE, type Answers } from '../src/identify';
+import { searchSpecies } from '../src/species';
+import type { SpeciesRecord } from '../src/types';
 
 const DIST = fileURLToPath(new URL('../dist', import.meta.url));
 const BANNER = 'Test version — not for identifying mushrooms';
 let site: Awaited<ReturnType<typeof startServer>>;
+// The guide grows batch by batch, so the expected numbers are worked out from the content itself.
+const SPECIES_DIR = new URL('../content/species/', import.meta.url);
+const ALL = readdirSync(SPECIES_DIR).filter((f) => f.endsWith('.json'))
+  .map((f) => JSON.parse(readFileSync(new URL(f, SPECIES_DIR), 'utf8')) as SpeciesRecord);
+/** The Identify answers that the buttons with these labels give, in question order. */
+function answersFor(labels: string[]): Answers {
+  const a: Answers = {};
+  QUESTIONS.forEach((q, i) => { a[q.id] = labels[i] === q.unsureLabel ? UNSURE : q.options.find((o) => o.label === labels[i])!.value; });
+  return a;
+}
 
 test.beforeEach(async () => { site = await startServer(DIST); });
 test.afterEach(async () => { await site.stop(); });
 
-test('shows the TEST banner and the ten sample species', async ({ page }) => {
+test('shows the TEST banner and every species in the guide', async ({ page }) => {
   await page.goto(site.url);
   await expect(page.getByText(BANNER)).toBeVisible();
-  await expect(page.locator('[data-test=species-row]')).toHaveCount(10);
+  await expect(page.locator('[data-test=species-row]')).toHaveCount(ALL.length);
 });
 
 test('search narrows the list', async ({ page }) => {
   await page.goto(`${site.url}#/guide?q=amanita`);
-  await expect(page.locator('[data-test=species-row]')).toHaveCount(2);
+  const expected = searchSpecies(ALL, 'amanita').length;
+  expect(expected).toBeGreaterThan(1);
+  expect(expected).toBeLessThan(ALL.length);
+  await expect(page.locator('[data-test=species-row]')).toHaveCount(expected);
 });
 
 test('a species page shows its edibility, lookalikes and photo credits, and a lookalike opens its page', async ({ page }) => {
@@ -34,7 +51,7 @@ test('a species page shows its edibility, lookalikes and photo credits, and a lo
 });
 
 test('no page ever says "safe"', async ({ page }) => {
-  for (const slug of ['field-mushroom', 'horse-mushroom', 'yellow-stainer', 'destroying-angel', 'deathcap', 'chanterelle', 'false-chanterelle', 'deadly-webcap', 'parasol', 'deadly-dapperling']) {
+  for (const slug of ALL.map((s) => s.slug)) {
     await page.goto(`${site.url}#/species/${slug}`);
     await expect(page.getByRole('heading', { level: 1 })).toBeVisible();
     expect(await page.locator('main').innerText()).not.toMatch(/\bsafe\b/i);
@@ -49,7 +66,7 @@ test('works with the server switched off once it has been opened', async ({ page
   await site.stop();
   await page.reload();
   await expect(page.getByText(BANNER)).toBeVisible();
-  await expect(page.locator('[data-test=species-row]')).toHaveCount(10);
+  await expect(page.locator('[data-test=species-row]')).toHaveCount(ALL.length);
   await page.goto(`${site.url}#/species/deathcap`);
   await expect(page.getByRole('heading', { name: 'Deathcap' })).toBeVisible();
 });
@@ -65,7 +82,7 @@ test('the header shows the name and tagline from src/brand.json, and takes you t
   await expect(header).toContainText(brand.name);
   await expect(header).toContainText(brand.tagline);
   await header.getByRole('link').click();
-  await expect(page.locator('[data-test=species-row]')).toHaveCount(10);
+  await expect(page.locator('[data-test=species-row]')).toHaveCount(ALL.length);
 });
 
 test('the hidden speed test runs the scan model and names the Deathcap from its own photo', async ({ page }) => {
@@ -86,11 +103,12 @@ const EDIBILITY_WORDS = /Edible, cooked|Edible, but some people react|Not edible
 test('Identify narrows question by question and never drops a dangerous lookalike', async ({ page }) => {
   await page.goto(`${site.url}#/identify`);
   await expect(page.getByRole('heading', { name: 'What is under the cap?' })).toBeVisible();
-  for (const answer of ['Gills (thin blades)', 'The ground (soil, grass, leaves)', 'No ring, and no trace of one',
-    'No bag: I dug out the whole base', 'Not sure', 'I have not made one']) {
-    await page.getByRole('link', { name: answer, exact: true }).click();
-  }
-  await expect(page.getByRole('heading', { name: 'Fit every answer (4)' })).toBeVisible();
+  const labels = ['Gills (thin blades)', 'The ground (soil, grass, leaves)', 'No ring, and no trace of one',
+    'No bag: I dug out the whole base', 'Not sure', 'I have not made one'];
+  for (const answer of labels) await page.getByRole('link', { name: answer, exact: true }).click();
+  const fit = narrow(ALL, answersFor(labels)).matches.length;
+  expect(fit).toBeGreaterThan(1);
+  await expect(page.getByRole('heading', { name: `Fit every answer (${fit})` })).toBeVisible();
   const rows = page.locator('[data-test=identify-row]');
   await expect(rows.filter({ hasText: 'Field Mushroom' }).first()).toBeVisible();
   await expect(page.getByRole('heading', { name: /Kept on the list: dangerous lookalikes/ })).toBeVisible();
@@ -108,7 +126,7 @@ test('Identify: "Not sure" never narrows, and an answer can be changed', async (
   await expect(page.getByRole('heading', { name: 'What is under the cap?' })).toBeVisible();
   await expect(page.locator('[data-test=answers]')).toHaveCount(0);
   for (let i = 0; i < 6; i++) await page.locator('a.choice.unsure').click();
-  await expect(page.getByRole('heading', { name: 'Fit every answer (10)' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: `Fit every answer (${ALL.length})` })).toBeVisible();
 });
 
 test('Check turns a feature red when it fits a lookalike, and never says anything about eating it', async ({ page }) => {

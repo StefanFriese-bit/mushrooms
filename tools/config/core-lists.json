@@ -816,6 +816,22 @@
         "https://www.wildfooduk.com/mushroom-guide/charcoal-burner-3/",
         "https://en.wikipedia.org/wiki/Russula_cyanoxantha"
       ]
+    },
+    {
+      "edible": "Lycoperdon perlatum",
+      "dangerous": "Amanita phalloides",
+      "sources": [
+        "https://www.first-nature.com/fungi/lycoperdon-perlatum.php",
+        "https://en.wikipedia.org/wiki/Amanita_phalloides"
+      ]
+    },
+    {
+      "edible": "Cantharellus cibarius",
+      "dangerous": "Cortinarius orellanus",
+      "sources": [
+        "https://www.first-nature.com/fungi/cortinarius-orellanus.php",
+        "https://en.wikipedia.org/wiki/Cortinarius_orellanus"
+      ]
     }
   ],
   "noDangerousLookalike": [
