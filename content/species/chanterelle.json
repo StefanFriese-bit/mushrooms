@@ -219,6 +219,58 @@
       ]
     },
     {
+      "scientific": "Cortinarius orellanus",
+      "english": "Fool's Webcap",
+      "slug": "fool-s-webcap",
+      "kind": "deadly",
+      "tellApart": [
+        {
+          "feature": "Underneath",
+          "thisOne": "Blunt, forked ridges",
+          "thatOne": "True gills, yellowish then rusty red-brown",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-fw",
+            "wp-fw"
+          ]
+        },
+        {
+          "feature": "Cap",
+          "thisOne": "Egg-yolk yellow funnel with a wavy edge",
+          "thatOne": "Tawny to reddish-orange, dry and finely scaly, with a slight hump",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-fw",
+            "wp-fw"
+          ]
+        },
+        {
+          "feature": "Spore print",
+          "thisOne": "Pale yellow to cream",
+          "thatOne": "Rusty red-brown",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-fw",
+            "wp-fw"
+          ]
+        },
+        {
+          "feature": "Smell",
+          "thisOne": "Fruity, like apricots",
+          "thatOne": "Slight, of radish",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-fw",
+            "wp-fw"
+          ]
+        }
+      ]
+    },
+    {
       "scientific": "Hygrophoropsis aurantiaca",
       "english": "False Chanterelle",
       "slug": "false-chanterelle",
@@ -406,6 +458,16 @@
       "id": "wp-jol",
       "title": "Wikipedia — Omphalotus illudens",
       "url": "https://en.wikipedia.org/wiki/Omphalotus_illudens"
+    },
+    {
+      "id": "fn-fw",
+      "title": "First Nature — Cortinarius orellanus, Fool's Webcap",
+      "url": "https://www.first-nature.com/fungi/cortinarius-orellanus.php"
+    },
+    {
+      "id": "wp-fw",
+      "title": "Wikipedia — Cortinarius orellanus",
+      "url": "https://en.wikipedia.org/wiki/Cortinarius_orellanus"
     },
     {
       "id": "wf-prot",

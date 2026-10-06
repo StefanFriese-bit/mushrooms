@@ -1,0 +1,250 @@
+{
+  "slug": "fool-s-webcap",
+  "inatId": 337849,
+  "scientific": "Cortinarius orellanus",
+  "english": "Fool's Webcap",
+  "olderNames": [],
+  "edibility": {
+    "value": "deadly",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "edibilityNote": {
+    "value": "Contains orellanine, which destroys the kidneys and damages the liver; people have died. Do not taste even a small piece.",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "Tawny to reddish-orange cap, 3–8 cm, dry and finely scaly, with a slight hump.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    {
+      "value": "Gills well spaced, yellowish at first, then rusty red-brown; rusty spore print.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    {
+      "value": "Stem paler than the cap and fibrous — without the yellow zig-zag bands of the Deadly Webcap.",
+      "sources": [
+        "fn",
+        "wf-dw"
+      ]
+    },
+    {
+      "value": "Under oak, beech and other broadleaved trees, sometimes near pines; late summer to autumn.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "Under oak, beech, hornbeam and other broadleaved trees, sometimes near conifers, on chalky or acid soil.",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      8,
+      9,
+      10,
+      11
+    ],
+    "sources": [
+      "fn"
+    ]
+  },
+  "sporePrint": {
+    "value": "Rusty red-brown",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "gills",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "ring": {
+      "value": "sometimes",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "growsOn": {
+      "value": "ground",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "capCm": {
+      "value": [
+        3,
+        8
+      ],
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "fleshChange": {
+      "value": "Firm, pale ochre; no colour change when cut is described",
+      "sources": [
+        "wp"
+      ]
+    },
+    "smell": {
+      "value": "Slight, of radish",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    }
+  },
+  "lookalikes": [
+    {
+      "scientific": "Cantharellus cibarius",
+      "english": "Chanterelle",
+      "slug": "chanterelle",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Underneath",
+          "thisOne": "True gills, yellowish then rusty red-brown",
+          "thatOne": "Blunt, forked ridges",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-ch",
+            "wf-ch"
+          ]
+        },
+        {
+          "feature": "Cap",
+          "thisOne": "Tawny to reddish-orange, dry and finely scaly, with a slight hump",
+          "thatOne": "Egg-yolk yellow funnel with a wavy edge",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-ch",
+            "wf-ch"
+          ]
+        },
+        {
+          "feature": "Spore print",
+          "thisOne": "Rusty red-brown",
+          "thatOne": "Pale yellow to cream",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-ch",
+            "wp-ch"
+          ]
+        },
+        {
+          "feature": "Smell",
+          "thisOne": "Slight, of radish",
+          "thatOne": "Fruity, like apricots",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-ch",
+            "wf-ch"
+          ]
+        }
+      ]
+    }
+  ],
+  "noDangerousLookalike": null,
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Cortinarius orellanus, Fool's Webcap",
+      "url": "https://www.first-nature.com/fungi/cortinarius-orellanus.php"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Cortinarius orellanus",
+      "url": "https://en.wikipedia.org/wiki/Cortinarius_orellanus"
+    },
+    {
+      "id": "fn-ch",
+      "title": "First Nature — Cantharellus cibarius, Chanterelle",
+      "url": "https://www.first-nature.com/fungi/cantharellus-cibarius.php"
+    },
+    {
+      "id": "wf-ch",
+      "title": "Wild Food UK — Chanterelle",
+      "url": "https://www.wildfooduk.com/mushroom-guide/chanterelle-3/"
+    },
+    {
+      "id": "wp-ch",
+      "title": "Wikipedia — Cantharellus cibarius",
+      "url": "https://en.wikipedia.org/wiki/Cantharellus_cibarius"
+    },
+    {
+      "id": "wt-ch",
+      "title": "Woodland Trust — Chanterelle",
+      "url": "https://www.woodlandtrust.org.uk/trees-woods-and-wildlife/fungi-and-lichens/chanterelle/"
+    },
+    {
+      "id": "fn-dw",
+      "title": "First Nature — Cortinarius rubellus, Deadly Webcap",
+      "url": "https://www.first-nature.com/fungi/cortinarius-rubellus.php"
+    },
+    {
+      "id": "wf-dw",
+      "title": "Wild Food UK — Deadly Webcap",
+      "url": "https://www.wildfooduk.com/mushroom-guide/deadly-webcap-2/"
+    },
+    {
+      "id": "wp-dw",
+      "title": "Wikipedia — Cortinarius rubellus",
+      "url": "https://en.wikipedia.org/wiki/Cortinarius_rubellus"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}
