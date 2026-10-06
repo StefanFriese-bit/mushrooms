@@ -39,3 +39,26 @@ def write(slug, *, extract, partners=(), extra=(), drop=(), titles=None, **field
         rec['photos'] = json.loads(old.read_text()).get('photos', [])
     old.write_text(json.dumps(rec, ensure_ascii=False, indent=2) + '\n')
     print('wrote', slug)
+
+
+KIND = {'edible-cooked': 'edible', 'edible-some-react': 'edible', 'not-edible': 'not-edible', 'poisonous': 'poisonous', 'deadly': 'deadly'}
+
+
+def link_back(target, *, page, extract, suffix, rows):
+    """Give page `target` a lookalike entry pointing at the written page `page` (its tell-apart rows written from the
+    target's side; ids with `-suffix` are the page's own sources, added to the target's sources from `extract`)."""
+    sys.path.insert(0, str(ROOT / 'tools/research'))
+    from sources import found
+    me = json.loads((ROOT / f'content/species/{page}.json').read_text())
+    p = ROOT / f'content/species/{target}.json'
+    r = json.loads(p.read_text())
+    entry = {'scientific': me['scientific'], 'english': me['english'], 'slug': me['slug'], 'kind': KIND[me['edibility']['value']],
+             'tellApart': rows}
+    r['lookalikes'] = [l for l in r['lookalikes'] if l['scientific'] != me['scientific']] + [entry]
+    have = {s['id'] for s in r['sources']}
+    used = {i for row in rows for i in row['sources']}
+    add = [{'id': f'{tag}-{suffix}', 'title': t, 'url': u} for tag, t, u in found(extract) if f'{tag}-{suffix}' in used and f'{tag}-{suffix}' not in have]
+    at = next((i for i, s in enumerate(r['sources']) if s['id'] == 'wf-prot'), len(r['sources']))
+    r['sources'][at:at] = add
+    p.write_text(json.dumps(r, ensure_ascii=False, indent=2) + '\n')
+    print('linked back', target, '->', page)
