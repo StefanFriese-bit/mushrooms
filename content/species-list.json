@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-06T11:14:49.436Z",
+  "generated": "2026-10-06T11:21:39.453Z",
   "placeId": 6857,
   "target": 300,
   "species": [
@@ -809,6 +809,18 @@
       "dangerLevel": "poisonous"
     },
     {
+      "inatId": 118336,
+      "name": "Inocybe geophylla",
+      "english": "White Fibrecap",
+      "englishSource": "bms-2005",
+      "englishVia": null,
+      "ukRecords": 43,
+      "reasons": [
+        "added-by-stefan"
+      ],
+      "dangerLevel": null
+    },
+    {
       "inatId": 48715,
       "name": "Amanita muscaria",
       "english": "Fly Agaric",
@@ -850,7 +862,7 @@
       "english": "Turkeytail",
       "englishSource": "bms-2005",
       "englishVia": null,
-      "ukRecords": 7835,
+      "ukRecords": 7836,
       "reasons": [
         "most-recorded"
       ],
@@ -1270,7 +1282,7 @@
       "english": "Purple Jellydisc",
       "englishSource": "bms-2005",
       "englishVia": null,
-      "ukRecords": 1027,
+      "ukRecords": 1028,
       "reasons": [
         "most-recorded"
       ],
@@ -1390,7 +1402,7 @@
       "english": "Crystal Brain",
       "englishSource": "bms-2005",
       "englishVia": "Exidia nucleata",
-      "ukRecords": 824,
+      "ukRecords": 825,
       "reasons": [
         "most-recorded"
       ],
@@ -3603,18 +3615,11 @@
         "most-recorded"
       ],
       "dangerLevel": null
-    },
-    {
-      "inatId": 790781,
-      "name": "Cystoderma aureum",
-      "english": "Golden Bootleg",
-      "englishSource": "bms-2005",
-      "englishVia": "Phaeolepiota aurea",
-      "ukRecords": 96,
-      "reasons": [
-        "most-recorded"
-      ],
-      "dangerLevel": null
     }
-  ]
+  ],
+  "approved": {
+    "by": "Stefan",
+    "on": "2026-10-06",
+    "count": 300
+  }
 }

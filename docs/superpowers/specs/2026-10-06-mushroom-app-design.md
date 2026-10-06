@@ -309,6 +309,12 @@ weekly allowance, so he is asked first.
 
 - **Stage 1:** that UK observation counts give a sensible list once lichens, moulds and rusts are left out; that the
   British Mycological Society's English names can be matched to the species.
+  *Proven 06/10/2026:* 300 species after leaving out powdery mildews, tar spots, coral spot, ergot, two lichen parasites,
+  rose black spot and holly speckle (these last four were found by reading the first list). British Mycological Society
+  English names matched for 269 of 300 (73 of them through an older scientific name); 1 name set by hand with a
+  source; 27 from iNaturalist; 3 none. The safety list was then cross-checked (Wikipedia, Woodland Trust —
+  `reports/cross-check.md`), and Stefan approved the list on 06/10/2026: 17 deadly, 11 dangerous lookalikes, 38 edible,
+  1 added by him (White Fibrecap), 233 most recorded.
 - **Stage 2:** that the model runs in Safari on his iPhone in about 3 seconds per scan; that persistent storage is
   granted on his phone; that viewed map areas show offline; what deleting the home-screen icon does to the data;
   that the share sheet hands photos to the iNaturalist app.
