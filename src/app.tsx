@@ -5,6 +5,9 @@ import { SpeciesPage } from './screens/species-page';
 import { Learn } from './screens/learn';
 import { About } from './screens/about';
 import { ComingSoon } from './screens/coming-soon';
+import { ScanSpeed } from './screens/scan-speed';
+import { Identify } from './screens/identify';
+import { Check } from './screens/check';
 import brand from './brand.json';
 
 const TABS = [
@@ -35,14 +38,22 @@ function Header() {
   );
 }
 
+/** A tab opens its section from the start (the guide unsearched, Identify with no answers). */
+function tabHref(name: (typeof TABS)[number]['name']): string {
+  if (name === 'guide' || name === 'identify') return hrefFor({ name, query: '' });
+  return hrefFor({ name });
+}
+
 function screen(route: Route) {
   switch (route.name) {
     case 'guide': return <Guide query={route.query} />;
     case 'species': return <SpeciesPage slug={route.slug} />;
     case 'learn': return <Learn />;
     case 'about': return <About />;
+    case 'scan-speed': return <ScanSpeed />;
     case 'scan': return <ComingSoon title="Scan" what="The photo scan" />;
-    case 'identify': return <ComingSoon title="Identify" what="Identifying by questions" />;
+    case 'identify': return <Identify query={route.query} />;
+    case 'check': return <Check slug={route.slug} key={route.slug} />;
     case 'finds': return <ComingSoon title="Finds" what="Your map of finds" />;
     default: return <><h1>Not found</h1><p><a href="#/guide">Open the guide</a></p></>;
   }
@@ -67,7 +78,7 @@ export function App() {
       <main>{screen(route)}</main>
       <nav class="tabs" aria-label="Sections">
         {TABS.map((t) => (
-          <a key={t.name} href={hrefFor(t.name === 'guide' ? { name: 'guide', query: '' } : { name: t.name })}
+          <a key={t.name} href={tabHref(t.name)}
             aria-current={active === t.name ? 'page' : undefined}>{t.label}</a>
         ))}
       </nav>

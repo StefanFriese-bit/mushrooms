@@ -13,7 +13,15 @@ describe('parseHash', () => {
     expect(parseHash('#/species/field-mushroom')).toEqual({ name: 'species', slug: 'field-mushroom' });
   });
   it('reads the other tabs', () => {
-    for (const n of ['scan', 'identify', 'finds', 'learn', 'about'] as const) expect(parseHash(`#/${n}`)).toEqual({ name: n });
+    for (const n of ['scan', 'finds', 'learn', 'about', 'scan-speed'] as const) expect(parseHash(`#/${n}`)).toEqual({ name: n });
+  });
+  it('keeps the Identify answers as they are written', () => {
+    expect(parseHash('#/identify')).toEqual({ name: 'identify', query: '' });
+    expect(parseHash('#/identify?underside=gills&ring=unsure')).toEqual({ name: 'identify', query: 'underside=gills&ring=unsure' });
+  });
+  it('reads a check', () => {
+    expect(parseHash('#/check/field-mushroom')).toEqual({ name: 'check', slug: 'field-mushroom' });
+    expect(parseHash('#/check')).toEqual({ name: 'not-found', path: '/check' });
   });
   it('reports an unknown address', () => {
     expect(parseHash('#/nowhere')).toEqual({ name: 'not-found', path: '/nowhere' });
@@ -25,5 +33,8 @@ describe('hrefFor', () => {
     expect(hrefFor({ name: 'species', slug: 'deathcap' })).toBe('#/species/deathcap');
     expect(hrefFor({ name: 'guide', query: 'yellow stainer' })).toBe('#/guide?q=yellow+stainer');
     expect(parseHash(hrefFor({ name: 'guide', query: 'yellow stainer' }))).toEqual({ name: 'guide', query: 'yellow stainer' });
+    expect(hrefFor({ name: 'identify', query: 'underside=gills' })).toBe('#/identify?underside=gills');
+    expect(hrefFor({ name: 'identify', query: '' })).toBe('#/identify');
+    expect(hrefFor({ name: 'check', slug: 'deathcap' })).toBe('#/check/deathcap');
   });
 });

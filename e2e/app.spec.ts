@@ -2,6 +2,7 @@ import { expect, test } from '@playwright/test';
 import { fileURLToPath } from 'node:url';
 import { startServer } from './server';
 import brand from '../src/brand.json' with { type: 'json' };
+import { MODEL_FILES } from '../src/scan/model-files';
 
 const DIST = fileURLToPath(new URL('../dist', import.meta.url));
 const BANNER = 'Test version — not for identifying mushrooms';
@@ -65,4 +66,62 @@ test('the header shows the name and tagline from src/brand.json, and takes you t
   await expect(header).toContainText(brand.tagline);
   await header.getByRole('link').click();
   await expect(page.locator('[data-test=species-row]')).toHaveCount(10);
+});
+
+test('the hidden speed test runs the scan model and names the Deathcap from its own photo', async ({ page }) => {
+  test.setTimeout(120_000);
+  test.skip(MODEL_FILES.length === 0, 'no 8-bit model file yet (plan 2d-1, task 7)');
+  await page.goto(`${site.url}#/about`);
+  await page.getByRole('link', { name: 'Scan speed test' }).click();
+  await expect(page.getByRole('heading', { name: 'Scan speed test' })).toBeVisible();
+  await page.getByRole('button', { name: 'Run with WebAssembly' }).first().click();
+  const row = page.locator('[data-test=speed-results] tbody tr').first();
+  await expect(row).toBeVisible({ timeout: 90_000 });
+  await expect(row.locator('[data-test=scan-seconds]')).toHaveText(/^\d+\.\d\d s$/);
+  await expect(row).toContainText('Deathcap');
+});
+
+const EDIBILITY_WORDS = /Edible, cooked|Edible, but some people react|Not edible|\bsafe\b/i;
+
+test('Identify narrows question by question and never drops a dangerous lookalike', async ({ page }) => {
+  await page.goto(`${site.url}#/identify`);
+  await expect(page.getByRole('heading', { name: 'What is under the cap?' })).toBeVisible();
+  for (const answer of ['Gills (thin blades)', 'The ground (soil, grass, leaves)', 'No ring, and no trace of one',
+    'No bag: I dug out the whole base', 'Not sure', 'I have not made one']) {
+    await page.getByRole('link', { name: answer, exact: true }).click();
+  }
+  await expect(page.getByRole('heading', { name: 'Fit every answer (4)' })).toBeVisible();
+  const rows = page.locator('[data-test=identify-row]');
+  await expect(rows.filter({ hasText: 'Field Mushroom' }).first()).toBeVisible();
+  await expect(page.getByRole('heading', { name: /Kept on the list: dangerous lookalikes/ })).toBeVisible();
+  for (const name of ['Deathcap', 'Destroying Angel']) {
+    await expect(rows.filter({ hasText: name }).filter({ hasText: 'Mistaken for Field Mushroom' })).toHaveCount(1);
+  }
+  expect(await page.locator('main').innerText()).not.toMatch(EDIBILITY_WORDS);
+});
+
+test('Identify: "Not sure" never narrows, and an answer can be changed', async ({ page }) => {
+  await page.goto(`${site.url}#/identify`);
+  await page.getByRole('link', { name: 'Gills (thin blades)', exact: true }).click();
+  await expect(page.locator('[data-test=answers]')).toContainText('Gills (thin blades)');
+  await page.getByRole('link', { name: 'change' }).click();
+  await expect(page.getByRole('heading', { name: 'What is under the cap?' })).toBeVisible();
+  await expect(page.locator('[data-test=answers]')).toHaveCount(0);
+  for (let i = 0; i < 6; i++) await page.locator('a.choice.unsure').click();
+  await expect(page.getByRole('heading', { name: 'Fit every answer (10)' })).toBeVisible();
+});
+
+test('Check turns a feature red when it fits a lookalike, and never says anything about eating it', async ({ page }) => {
+  await page.goto(`${site.url}#/species/field-mushroom`);
+  await page.getByRole('link', { name: 'Check a mushroom against this one' }).click();
+  await expect(page.getByRole('heading', { name: 'Check: Field Mushroom' })).toBeVisible();
+  const spore = page.locator('[data-test=check-row]').filter({ has: page.getByRole('heading', { name: 'Spore print' }) });
+  await spore.getByRole('button', { name: /Deathcap\s*White/ }).click();
+  await expect(spore).toHaveClass(/red/);
+  await expect(page.locator('[data-test=verdict]')).toContainText('Treat your mushroom as Deathcap or Destroying Angel');
+  await spore.getByRole('button', { name: /Field Mushroom\s*Chocolate brown/ }).click();
+  await expect(spore).not.toHaveClass(/red/);
+  await expect(page.locator('[data-test=verdict]')).toContainText('That is not proof');
+  await expect(page.getByRole('heading', { name: 'Before eating any wild mushroom' })).toBeVisible();
+  expect(await page.locator('main').innerText()).not.toMatch(EDIBILITY_WORDS);
 });

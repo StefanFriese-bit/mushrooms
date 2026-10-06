@@ -55,6 +55,9 @@ export function SpeciesPage({ slug }: { slug: string }) {
           </table>
         </div>
       ))}
+      {s.lookalikes.length > 0 && (
+        <p><a class="small-button" href={hrefFor({ name: 'check', slug: s.slug })}>Check a mushroom against this one</a></p>
+      )}
 
       <h2>Where and when</h2>
       {line('Habitat', s.habitat)}
