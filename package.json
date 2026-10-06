@@ -1,0 +1,19 @@
+{
+  "name": "mushrooms",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "check-core-lists": "tsx tools/check-core-lists.ts",
+    "check-core-names": "tsx tools/check-core-names.ts",
+    "species-list": "tsx tools/build-species-list.ts",
+    "approve-species-list": "tsx tools/approve-species-list.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^24.19.1",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.3"
+  }
+}
