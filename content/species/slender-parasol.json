@@ -1,0 +1,322 @@
+{
+  "slug": "slender-parasol",
+  "inatId": 351447,
+  "scientific": "Macrolepiota mastoidea",
+  "english": "Slender Parasol",
+  "olderNames": [
+    "Lepiota mastoidea",
+    "Macrolepiota rickenii",
+    "Macrolepiota konradii"
+  ],
+  "edibility": {
+    "value": "edible-cooked",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "edibilityNote": {
+    "value": "Good to eat, without the tough stem. First Nature and Wikipedia warn that the Shaggy Parasol and its relatives look similar and can cause very serious stomach upsets: check that the cut flesh does not turn orange-red.",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "A pale cap, about 12 cm (up to 15), with fine brown scales on a white background and a pronounced central bump.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "A slender stem with fine brownish scales — only a faint snakeskin — and a movable double ring.",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    {
+      "value": "White, crowded gills, free of the stem; white spore print.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "The cut flesh does not turn red or orange.",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    {
+      "value": "In grassy woodland clearings and edges on chalky soil; also dunes.",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "Grassy woodland clearings and edges, grassland and moors on chalky soil; also sand dunes.",
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "sporePrint": {
+    "value": "White or pale cream",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "gills",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    "ring": {
+      "value": "yes",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "growsOn": {
+      "value": "ground",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "capCm": {
+      "value": [
+        12,
+        12
+      ],
+      "sources": [
+        "wf",
+        "wp"
+      ]
+    },
+    "fleshChange": {
+      "value": "White, browning slightly; it never turns red or orange",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "smell": {
+      "value": "Slight, mushroomy",
+      "sources": [
+        "fn"
+      ]
+    }
+  },
+  "lookalikes": [
+    {
+      "scientific": "Lepiota brunneoincarnata",
+      "english": "Deadly Dapperling",
+      "slug": "deadly-dapperling",
+      "kind": "deadly",
+      "tellApart": [
+        {
+          "feature": "Size",
+          "thisOne": "Cap about 12 cm, up to 15",
+          "thatOne": "Cap only 2.5–6 cm",
+          "sources": [
+            "wf",
+            "wp",
+            "fn-dd",
+            "wp-dd"
+          ]
+        },
+        {
+          "feature": "Ring",
+          "thisOne": "A double ring that becomes movable",
+          "thatOne": "Only a vague ring zone",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-dd",
+            "wp-dd"
+          ]
+        }
+      ]
+    },
+    {
+      "scientific": "Chlorophyllum rhacodes",
+      "english": "Shaggy Parasol",
+      "slug": "shaggy-parasol",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Cut flesh",
+          "thisOne": "Does not turn red or orange",
+          "thatOne": "Turns orange-red",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-sp",
+            "wf-sp"
+          ]
+        },
+        {
+          "feature": "Stem",
+          "thisOne": "Fine brownish scales",
+          "thatOne": "Smooth and plain",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-sp",
+            "wp-sp"
+          ]
+        }
+      ]
+    },
+    {
+      "scientific": "Macrolepiota procera",
+      "english": "Parasol",
+      "slug": "parasol",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Stem",
+          "thisOne": "A faint, pale snakeskin",
+          "thatOne": "A bold, dark snakeskin pattern",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-pa",
+            "wf-pa"
+          ]
+        },
+        {
+          "feature": "Size",
+          "thisOne": "Smaller and slimmer",
+          "thatOne": "Very large: cap 10–25 cm",
+          "sources": [
+            "fn",
+            "fn-pa",
+            "wp-pa"
+          ]
+        }
+      ]
+    }
+  ],
+  "noDangerousLookalike": null,
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Macrolepiota mastoidea, Slender Parasol",
+      "url": "https://www.first-nature.com/fungi/macrolepiota-mastoidea.php"
+    },
+    {
+      "id": "wf",
+      "title": "Wild Food UK — Slender Parasol",
+      "url": "https://www.wildfooduk.com/mushroom-guide/slender-parasol/"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Macrolepiota mastoidea",
+      "url": "https://en.wikipedia.org/wiki/Macrolepiota_mastoidea"
+    },
+    {
+      "id": "fn-sp",
+      "title": "First Nature — Chlorophyllum rhacodes, Shaggy Parasol",
+      "url": "https://www.first-nature.com/fungi/chlorophyllum-rhacodes.php"
+    },
+    {
+      "id": "wf-sp",
+      "title": "Wild Food UK — Shaggy Parasol",
+      "url": "https://www.wildfooduk.com/mushroom-guide/shaggy-parasol/"
+    },
+    {
+      "id": "wp-sp",
+      "title": "Wikipedia — Chlorophyllum rhacodes",
+      "url": "https://en.wikipedia.org/wiki/Chlorophyllum_rhacodes"
+    },
+    {
+      "id": "wt-sp",
+      "title": "Woodland Trust — Shaggy Parasol",
+      "url": "https://www.woodlandtrust.org.uk/trees-woods-and-wildlife/fungi-and-lichens/shaggy-parasol/"
+    },
+    {
+      "id": "fn-pa",
+      "title": "First Nature — Macrolepiota procera, Parasol",
+      "url": "https://www.first-nature.com/fungi/macrolepiota-procera.php"
+    },
+    {
+      "id": "wf-pa",
+      "title": "Wild Food UK — Parasol",
+      "url": "https://www.wildfooduk.com/mushroom-guide/parasol/"
+    },
+    {
+      "id": "wp-pa",
+      "title": "Wikipedia — Macrolepiota procera",
+      "url": "https://en.wikipedia.org/wiki/Macrolepiota_procera"
+    },
+    {
+      "id": "fn-dd",
+      "title": "First Nature — Lepiota brunneoincarnata, Deadly Dapperling",
+      "url": "https://www.first-nature.com/fungi/lepiota-brunneoincarnata.php"
+    },
+    {
+      "id": "wp-dd",
+      "title": "Wikipedia — Lepiota brunneoincarnata",
+      "url": "https://en.wikipedia.org/wiki/Lepiota_brunneoincarnata"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}

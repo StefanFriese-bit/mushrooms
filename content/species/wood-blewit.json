@@ -173,6 +173,36 @@
           ]
         }
       ]
+    },
+    {
+      "scientific": "Mycena pura",
+      "english": "Lilac Bonnet",
+      "slug": "lilac-bonnet",
+      "kind": "poisonous",
+      "tellApart": [
+        {
+          "feature": "Build",
+          "thisOne": "Stocky: cap 6–15 cm, a stout stem",
+          "thatOne": "Small and thin: cap 2–6 cm, a thin stem",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-lb",
+            "wp-lb"
+          ]
+        },
+        {
+          "feature": "Smell",
+          "thisOne": "Sweet and perfumed",
+          "thatOne": "Of radish",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-lb",
+            "wf-lb"
+          ]
+        }
+      ]
     }
   ],
   "noDangerousLookalike": null,
@@ -197,6 +227,21 @@
       "id": "wt",
       "title": "Woodland Trust — Wood Blewit",
       "url": "https://www.woodlandtrust.org.uk/trees-woods-and-wildlife/fungi-and-lichens/wood-blewit/"
+    },
+    {
+      "id": "fn-lb",
+      "title": "First Nature — Mycena pura, Lilac Bonnet",
+      "url": "https://www.first-nature.com/fungi/mycena-pura.php"
+    },
+    {
+      "id": "wf-lb",
+      "title": "Wild Food UK — Lilac Bonnet",
+      "url": "https://www.wildfooduk.com/mushroom-guide/lilac-bonnet/"
+    },
+    {
+      "id": "wp-lb",
+      "title": "Wikipedia — Mycena pura",
+      "url": "https://en.wikipedia.org/wiki/Mycena_pura"
     },
     {
       "id": "wf-prot",

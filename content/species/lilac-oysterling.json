@@ -1,0 +1,173 @@
+{
+  "slug": "lilac-oysterling",
+  "inatId": 59249,
+  "scientific": "Panus conchatus",
+  "english": "Lilac Oysterling",
+  "olderNames": [
+    "Panus torulosus",
+    "Lentinus torulosus"
+  ],
+  "edibility": {
+    "value": "not-edible",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "edibilityNote": {
+    "value": "Not generally eaten in Europe (it is listed as edible in China); tough and possibly bitter.",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "Oyster- or shell-shaped caps, 3–17 cm, lilac to reddish-purple-brown when young, fading to tan.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "Crowded, forking gills running down a short, off-centre stem; pale lilac when fresh.",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    {
+      "value": "In clusters on fallen trunks and stumps of broadleaved trees.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "Dead broadleaved wood — fallen trunks, stumps and large branches of oak, birch, beech and ash; rarely conifers.",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      8,
+      9,
+      10,
+      11
+    ],
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "sporePrint": {
+    "value": "White to pale cream",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "gills",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    "ring": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "growsOn": {
+      "value": "wood",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    "capCm": {
+      "value": [
+        3,
+        17
+      ],
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    "fleshChange": {
+      "value": "Thin, leathery, white to cream",
+      "sources": [
+        "wf"
+      ]
+    },
+    "smell": {
+      "value": "Not distinctive; somewhat sweet (Wild Food UK)",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    }
+  },
+  "lookalikes": [],
+  "noDangerousLookalike": null,
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Panus conchatus, Lilac Oysterling",
+      "url": "https://www.first-nature.com/fungi/panus-conchatus.php"
+    },
+    {
+      "id": "wf",
+      "title": "Wild Food UK — Lilac Oysterling",
+      "url": "https://www.wildfooduk.com/mushroom-guide/lilac-oysterling/"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Panus conchatus",
+      "url": "https://en.wikipedia.org/wiki/Panus_conchatus"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}

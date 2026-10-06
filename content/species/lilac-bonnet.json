@@ -1,9 +1,11 @@
 {
-  "slug": "rosy-bonnet",
-  "inatId": 512746,
-  "scientific": "Mycena rosea",
-  "english": "Rosy Bonnet",
-  "olderNames": [],
+  "slug": "lilac-bonnet",
+  "inatId": 63473,
+  "scientific": "Mycena pura",
+  "english": "Lilac Bonnet",
+  "olderNames": [
+    "Prunulus purus"
+  ],
   "edibility": {
     "value": "poisonous",
     "sources": [
@@ -13,10 +15,11 @@
     ]
   },
   "edibilityNote": {
-    "value": "Once thought edible, but it contains muscarine, though in low amounts.",
+    "value": "It contains muscarine: once thought edible, it is now known to be poisonous.",
     "sources": [
       "fn",
-      "wf"
+      "wf",
+      "wp"
     ]
   },
   "protectedInUk": {
@@ -28,7 +31,7 @@
   },
   "topPoints": [
     {
-      "value": "Pink cap, 2–6 cm, from almost white to deep pink, with a darker centre and fine lines towards the edge.",
+      "value": "A lilac to pinkish cap, 2–6 cm, lined towards the edge, often paler in dry weather.",
       "sources": [
         "fn",
         "wf",
@@ -36,22 +39,21 @@
       ]
     },
     {
-      "value": "Gills pale pink to off-white; white spore print.",
-      "sources": [
-        "fn",
-        "wf",
-        "wp"
-      ]
-    },
-    {
-      "value": "Pink stem, often tapering upwards; no ring.",
+      "value": "Smells of radish when crushed.",
       "sources": [
         "fn",
         "wf"
       ]
     },
     {
-      "value": "In leaf litter in broadleaved and mixed woods, especially under beech.",
+      "value": "Gills pale grey with a lilac tint; a thin, often twisted stem.",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    {
+      "value": "In leaf litter in broadleaved and conifer woods.",
       "sources": [
         "fn",
         "wf"
@@ -59,7 +61,7 @@
     }
   ],
   "habitat": {
-    "value": "Leaf litter in broadleaved and mixed woods, especially under beech; also verges by beech hedges.",
+    "value": "Leaf litter in broadleaved and conifer woods; less often open grassland.",
     "sources": [
       "fn",
       "wf"
@@ -67,6 +69,7 @@
   },
   "seasonMonths": {
     "value": [
+      6,
       7,
       8,
       9,
@@ -106,7 +109,7 @@
       "value": "no",
       "sources": [
         "fn",
-        "wf"
+        "wp"
       ]
     },
     "growsOn": {
@@ -133,7 +136,7 @@
       ]
     },
     "smell": {
-      "value": "Of radish",
+      "value": "Of radish, when crushed",
       "sources": [
         "fn",
         "wf"
@@ -142,20 +145,50 @@
   },
   "lookalikes": [
     {
-      "scientific": "Mycena pura",
-      "english": "Lilac Bonnet",
-      "slug": "lilac-bonnet",
+      "scientific": "Mycena rosea",
+      "english": "Rosy Bonnet",
+      "slug": "rosy-bonnet",
       "kind": "poisonous",
       "tellApart": [
         {
           "feature": "Colour and size",
-          "thisOne": "Pink, larger",
-          "thatOne": "Lilac, smaller",
+          "thisOne": "Lilac, smaller",
+          "thatOne": "Pink, larger",
           "sources": [
             "fn",
             "wf",
-            "fn-lb",
-            "wf-lb"
+            "fn-rb",
+            "wf-rb"
+          ]
+        }
+      ]
+    },
+    {
+      "scientific": "Lepista nuda",
+      "english": "Wood Blewit",
+      "slug": "wood-blewit",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Build",
+          "thisOne": "Small and thin: cap 2–6 cm, a thin stem",
+          "thatOne": "Stocky: cap 6–15 cm, a stout stem",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-wb",
+            "wf-wb"
+          ]
+        },
+        {
+          "feature": "Smell",
+          "thisOne": "Of radish",
+          "thatOne": "Sweet and perfumed",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-wb",
+            "wf-wb"
           ]
         }
       ]
@@ -166,28 +199,53 @@
   "sources": [
     {
       "id": "fn",
-      "title": "First Nature — Mycena rosea, Rosy Bonnet",
-      "url": "https://www.first-nature.com/fungi/mycena-rosea.php"
-    },
-    {
-      "id": "wf",
-      "title": "Wild Food UK — Rosy Bonnet",
-      "url": "https://www.wildfooduk.com/mushroom-guide/mycena-rosea/"
-    },
-    {
-      "id": "wp",
-      "title": "Wikipedia — Mycena rosea",
-      "url": "https://en.wikipedia.org/wiki/Mycena_rosea"
-    },
-    {
-      "id": "fn-lb",
       "title": "First Nature — Mycena pura, Lilac Bonnet",
       "url": "https://www.first-nature.com/fungi/mycena-pura.php"
     },
     {
-      "id": "wf-lb",
+      "id": "wf",
       "title": "Wild Food UK — Lilac Bonnet",
       "url": "https://www.wildfooduk.com/mushroom-guide/lilac-bonnet/"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Mycena pura",
+      "url": "https://en.wikipedia.org/wiki/Mycena_pura"
+    },
+    {
+      "id": "fn-rb",
+      "title": "First Nature — Mycena rosea, Rosy Bonnet",
+      "url": "https://www.first-nature.com/fungi/mycena-rosea.php"
+    },
+    {
+      "id": "wf-rb",
+      "title": "Wild Food UK — Rosy Bonnet",
+      "url": "https://www.wildfooduk.com/mushroom-guide/mycena-rosea/"
+    },
+    {
+      "id": "wp-rb",
+      "title": "Wikipedia — Mycena rosea",
+      "url": "https://en.wikipedia.org/wiki/Mycena_rosea"
+    },
+    {
+      "id": "fn-wb",
+      "title": "First Nature — Collybia nuda, Wood Blewit",
+      "url": "https://www.first-nature.com/fungi/lepista-nuda.php"
+    },
+    {
+      "id": "wf-wb",
+      "title": "Wild Food UK — Wood Blewit",
+      "url": "https://www.wildfooduk.com/mushroom-guide/wood-blewit/"
+    },
+    {
+      "id": "wp-wb",
+      "title": "Wikipedia — Collybia nuda",
+      "url": "https://en.wikipedia.org/wiki/Collybia_nuda"
+    },
+    {
+      "id": "wt-wb",
+      "title": "Woodland Trust — Wood Blewit",
+      "url": "https://www.woodlandtrust.org.uk/trees-woods-and-wildlife/fungi-and-lichens/wood-blewit/"
     },
     {
       "id": "wf-prot",

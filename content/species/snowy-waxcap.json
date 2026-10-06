@@ -178,6 +178,23 @@
           ]
         }
       ]
+    },
+    {
+      "scientific": "Cuphophyllus russocoriaceus",
+      "english": "Cedarwood Waxcap",
+      "slug": "cedarwood-waxcap",
+      "kind": "not-edible",
+      "tellApart": [
+        {
+          "feature": "Smell",
+          "thisOne": "No particular smell",
+          "thatOne": "Strong, of cedarwood or leather",
+          "sources": [
+            "fn-cw",
+            "wf-cw"
+          ]
+        }
+      ]
     }
   ],
   "noDangerousLookalike": null,
@@ -207,6 +224,16 @@
       "id": "wp-da",
       "title": "Wikipedia — Amanita virosa",
       "url": "https://en.wikipedia.org/wiki/Amanita_virosa"
+    },
+    {
+      "id": "fn-cw",
+      "title": "First Nature — Cuphophyllus russocoriaceus, Cedarwood Waxcap",
+      "url": "https://www.first-nature.com/fungi/cuphophyllus-russocoriaceus.php"
+    },
+    {
+      "id": "wf-cw",
+      "title": "Wild Food UK — Cedarwood Waxcap",
+      "url": "https://www.wildfooduk.com/mushroom-guide/cedarwood-waxcap/"
     },
     {
       "id": "wf-prot",

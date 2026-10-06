@@ -1,19 +1,21 @@
 {
-  "slug": "rosy-bonnet",
-  "inatId": 512746,
-  "scientific": "Mycena rosea",
-  "english": "Rosy Bonnet",
-  "olderNames": [],
+  "slug": "cedarwood-waxcap",
+  "inatId": 485130,
+  "scientific": "Cuphophyllus russocoriaceus",
+  "english": "Cedarwood Waxcap",
+  "olderNames": [
+    "Hygrocybe russocoriacea",
+    "Camarophyllus russocoriaceus"
+  ],
   "edibility": {
-    "value": "poisonous",
+    "value": "not-edible",
     "sources": [
-      "fn",
       "wf",
-      "wp"
+      "fn"
     ]
   },
   "edibilityNote": {
-    "value": "Once thought edible, but it contains muscarine, though in low amounts.",
+    "value": "Some guides call it edible, but it is far too small to be of interest (First Nature); Wild Food UK: inedible.",
     "sources": [
       "fn",
       "wf"
@@ -28,30 +30,28 @@
   },
   "topPoints": [
     {
-      "value": "Pink cap, 2–6 cm, from almost white to deep pink, with a darker centre and fine lines towards the edge.",
-      "sources": [
-        "fn",
-        "wf",
-        "wp"
-      ]
-    },
-    {
-      "value": "Gills pale pink to off-white; white spore print.",
-      "sources": [
-        "fn",
-        "wf",
-        "wp"
-      ]
-    },
-    {
-      "value": "Pink stem, often tapering upwards; no ring.",
+      "value": "A small ivory-white to cream cap, 0.5–3 cm, slightly sticky, translucent when wet.",
       "sources": [
         "fn",
         "wf"
       ]
     },
     {
-      "value": "In leaf litter in broadleaved and mixed woods, especially under beech.",
+      "value": "A strong smell of cedarwood, sandalwood or leather — the key feature.",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    {
+      "value": "White gills, widely spaced, running down the stem.",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    {
+      "value": "In short, mossy, unfertilised grassland — lawns, churchyards, dunes.",
       "sources": [
         "fn",
         "wf"
@@ -59,7 +59,7 @@
     }
   ],
   "habitat": {
-    "value": "Leaf litter in broadleaved and mixed woods, especially under beech; also verges by beech hedges.",
+    "value": "Short, mossy, unfertilised grassland — lawns, parks, churchyards, pastures and coastal dunes.",
     "sources": [
       "fn",
       "wf"
@@ -67,11 +67,12 @@
   },
   "seasonMonths": {
     "value": [
-      7,
-      8,
       9,
       10,
-      11
+      11,
+      12,
+      1,
+      2
     ],
     "sources": [
       "fn",
@@ -81,9 +82,7 @@
   "sporePrint": {
     "value": "White",
     "sources": [
-      "fn",
-      "wf",
-      "wp"
+      "fn"
     ]
   },
   "features": {
@@ -91,15 +90,14 @@
       "value": "gills",
       "sources": [
         "fn",
-        "wf",
-        "wp"
+        "wf"
       ]
     },
     "ring": {
       "value": "no",
       "sources": [
         "fn",
-        "wp"
+        "wf"
       ]
     },
     "bagAtBase": {
@@ -118,22 +116,22 @@
     },
     "capCm": {
       "value": [
-        2,
-        6
+        0.5,
+        3
       ],
       "sources": [
         "fn",
-        "wp"
+        "wf"
       ]
     },
     "fleshChange": {
-      "value": "White to lilac",
+      "value": "Thin and watery-white",
       "sources": [
         "wf"
       ]
     },
     "smell": {
-      "value": "Of radish",
+      "value": "Strong, of cedarwood, sandalwood or leather",
       "sources": [
         "fn",
         "wf"
@@ -142,20 +140,18 @@
   },
   "lookalikes": [
     {
-      "scientific": "Mycena pura",
-      "english": "Lilac Bonnet",
-      "slug": "lilac-bonnet",
-      "kind": "poisonous",
+      "scientific": "Cuphophyllus virgineus",
+      "english": "Snowy Waxcap",
+      "slug": "snowy-waxcap",
+      "kind": "edible",
       "tellApart": [
         {
-          "feature": "Colour and size",
-          "thisOne": "Pink, larger",
-          "thatOne": "Lilac, smaller",
+          "feature": "Smell",
+          "thisOne": "Strong, of cedarwood or leather",
+          "thatOne": "No particular smell",
           "sources": [
             "fn",
-            "wf",
-            "fn-lb",
-            "wf-lb"
+            "wf"
           ]
         }
       ]
@@ -166,28 +162,23 @@
   "sources": [
     {
       "id": "fn",
-      "title": "First Nature — Mycena rosea, Rosy Bonnet",
-      "url": "https://www.first-nature.com/fungi/mycena-rosea.php"
+      "title": "First Nature — Cuphophyllus russocoriaceus, Cedarwood Waxcap",
+      "url": "https://www.first-nature.com/fungi/cuphophyllus-russocoriaceus.php"
     },
     {
       "id": "wf",
-      "title": "Wild Food UK — Rosy Bonnet",
-      "url": "https://www.wildfooduk.com/mushroom-guide/mycena-rosea/"
+      "title": "Wild Food UK — Cedarwood Waxcap",
+      "url": "https://www.wildfooduk.com/mushroom-guide/cedarwood-waxcap/"
     },
     {
-      "id": "wp",
-      "title": "Wikipedia — Mycena rosea",
-      "url": "https://en.wikipedia.org/wiki/Mycena_rosea"
+      "id": "fn-sw",
+      "title": "First Nature — Cuphophyllus virgineus, Snowy Waxcap",
+      "url": "https://www.first-nature.com/fungi/cuphophyllus-virgineus.php"
     },
     {
-      "id": "fn-lb",
-      "title": "First Nature — Mycena pura, Lilac Bonnet",
-      "url": "https://www.first-nature.com/fungi/mycena-pura.php"
-    },
-    {
-      "id": "wf-lb",
-      "title": "Wild Food UK — Lilac Bonnet",
-      "url": "https://www.wildfooduk.com/mushroom-guide/lilac-bonnet/"
+      "id": "wp-sw",
+      "title": "Wikipedia — Cuphophyllus virgineus",
+      "url": "https://en.wikipedia.org/wiki/Cuphophyllus_virgineus"
     },
     {
       "id": "wf-prot",

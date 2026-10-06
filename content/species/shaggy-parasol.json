@@ -254,6 +254,36 @@
           ]
         }
       ]
+    },
+    {
+      "scientific": "Macrolepiota mastoidea",
+      "english": "Slender Parasol",
+      "slug": "slender-parasol",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Cut flesh",
+          "thisOne": "Turns orange-red",
+          "thatOne": "Does not turn red or orange",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-sl",
+            "wf-sl"
+          ]
+        },
+        {
+          "feature": "Stem",
+          "thisOne": "Smooth and plain",
+          "thatOne": "Fine brownish scales",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-sl",
+            "wf-sl"
+          ]
+        }
+      ]
     }
   ],
   "noDangerousLookalike": null,
@@ -342,6 +372,16 @@
       "id": "wp-sd",
       "title": "Wikipedia — Lepiota cristata",
       "url": "https://en.wikipedia.org/wiki/Lepiota_cristata"
+    },
+    {
+      "id": "fn-sl",
+      "title": "First Nature — Macrolepiota mastoidea, Slender Parasol",
+      "url": "https://www.first-nature.com/fungi/macrolepiota-mastoidea.php"
+    },
+    {
+      "id": "wf-sl",
+      "title": "Wild Food UK — Slender Parasol",
+      "url": "https://www.wildfooduk.com/mushroom-guide/slender-parasol/"
     },
     {
       "id": "wf-prot",
