@@ -250,16 +250,30 @@
     {
       "file": "photos/stinking-dapperling/3.webp",
       "view": "whole",
-      "credit": "(c) Aaron Chidwick, some rights reserved (CC BY)",
-      "licence": "cc-by",
-      "link": "https://www.inaturalist.org/observations/190913043"
+      "credit": "(c) stephjrobertson, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/58130050"
     },
     {
       "file": "photos/stinking-dapperling/4.webp",
       "view": "whole",
-      "credit": "(c) Andy Donegan, some rights reserved (CC BY-NC)",
+      "credit": "(c) sharoncooper, some rights reserved (CC BY)",
+      "licence": "cc-by",
+      "link": "https://www.inaturalist.org/observations/186863535"
+    },
+    {
+      "file": "photos/stinking-dapperling/5.webp",
+      "view": "whole",
+      "credit": "(c) stephjrobertson, some rights reserved (CC BY-NC)",
       "licence": "cc-by-nc",
-      "link": "https://www.inaturalist.org/observations/16646050"
+      "link": "https://www.inaturalist.org/observations/58130050"
+    },
+    {
+      "file": "photos/stinking-dapperling/6.webp",
+      "view": "whole",
+      "credit": "(c) sharoncooper, some rights reserved (CC BY)",
+      "licence": "cc-by",
+      "link": "https://www.inaturalist.org/observations/186863535"
     }
   ],
   "sources": [

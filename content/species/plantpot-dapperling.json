@@ -184,16 +184,44 @@
     {
       "file": "photos/plantpot-dapperling/1.webp",
       "view": "whole",
+      "credit": "(c) felixmac, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/55904688"
+    },
+    {
+      "file": "photos/plantpot-dapperling/2.webp",
+      "view": "whole",
+      "credit": "(c) Juliad323, some rights reserved (CC BY)",
+      "licence": "cc-by",
+      "link": "https://www.inaturalist.org/observations/176152842"
+    },
+    {
+      "file": "photos/plantpot-dapperling/3.webp",
+      "view": "whole",
       "credit": "(c) swilby, some rights reserved (CC BY-NC)",
       "licence": "cc-by-nc",
       "link": "https://www.inaturalist.org/observations/234415340"
     },
     {
-      "file": "photos/plantpot-dapperling/2.webp",
+      "file": "photos/plantpot-dapperling/4.webp",
       "view": "whole",
-      "credit": "(c) felixmac, some rights reserved (CC BY-NC)",
+      "credit": "(c) sagoncalves, some rights reserved (CC BY-NC)",
       "licence": "cc-by-nc",
-      "link": "https://www.inaturalist.org/observations/55904688"
+      "link": "https://www.inaturalist.org/observations/331455876"
+    },
+    {
+      "file": "photos/plantpot-dapperling/5.webp",
+      "view": "whole",
+      "credit": "(c) Mariya, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/127766038"
+    },
+    {
+      "file": "photos/plantpot-dapperling/6.webp",
+      "view": "whole",
+      "credit": "(c) Juliad323, some rights reserved (CC BY)",
+      "licence": "cc-by",
+      "link": "https://www.inaturalist.org/observations/176152842"
     }
   ],
   "sources": [

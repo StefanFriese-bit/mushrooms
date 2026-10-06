@@ -171,9 +171,23 @@
     {
       "file": "photos/grey-knight/4.webp",
       "view": "whole",
-      "credit": "(c) jturner123, some rights reserved (CC BY-NC)",
+      "credit": "(c) Kieran Roy Powell, some rights reserved (CC BY)",
+      "licence": "cc-by",
+      "link": "https://www.inaturalist.org/observations/191190490"
+    },
+    {
+      "file": "photos/grey-knight/5.webp",
+      "view": "whole",
+      "credit": "(c) hectortamayo10, some rights reserved (CC BY-NC)",
       "licence": "cc-by-nc",
-      "link": "https://www.inaturalist.org/observations/63576004"
+      "link": "https://www.inaturalist.org/observations/329257962"
+    },
+    {
+      "file": "photos/grey-knight/6.webp",
+      "view": "whole",
+      "credit": "(c) Kieran Roy Powell, some rights reserved (CC BY)",
+      "licence": "cc-by",
+      "link": "https://www.inaturalist.org/observations/191190490"
     }
   ],
   "sources": [

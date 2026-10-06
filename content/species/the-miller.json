@@ -325,16 +325,30 @@
     {
       "file": "photos/the-miller/3.webp",
       "view": "whole",
-      "credit": "(c) Sharon Z, some rights reserved (CC BY-NC)",
-      "licence": "cc-by-nc",
-      "link": "https://www.inaturalist.org/observations/321208849"
+      "credit": "(c) Victoria M., some rights reserved (CC BY)",
+      "licence": "cc-by",
+      "link": "https://www.inaturalist.org/observations/98121182"
     },
     {
       "file": "photos/the-miller/4.webp",
       "view": "whole",
+      "credit": "(c) kayholford, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/176123962"
+    },
+    {
+      "file": "photos/the-miller/5.webp",
+      "view": "whole",
       "credit": "(c) Victoria M., some rights reserved (CC BY)",
       "licence": "cc-by",
       "link": "https://www.inaturalist.org/observations/98121182"
+    },
+    {
+      "file": "photos/the-miller/6.webp",
+      "view": "whole",
+      "credit": "(c) kayholford, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/176123962"
     }
   ],
   "sources": [

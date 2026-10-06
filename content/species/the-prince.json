@@ -227,7 +227,7 @@
       "tellApart": [
         {
           "feature": "Smell",
-          "thisOne": "Strongly of bitter almonds, like marzipan",
+          "thisOne": "Bitter almonds, like marzipan",
           "thatOne": "Ink, iodine or carbolic soap — strongest at the cut stem base",
           "sources": [
             "fn",
@@ -250,7 +250,7 @@
         },
         {
           "feature": "Cap",
-          "thisOne": "Large, 10–25 cm, with chestnut-brown scales",
+          "thisOne": "Flat chestnut-brown scales on cream",
           "thatOne": "White, often square-topped when young",
           "sources": [
             "fn",
@@ -283,16 +283,30 @@
     {
       "file": "photos/the-prince/3.webp",
       "view": "whole",
-      "credit": "(c) Kieran Roy Powell, some rights reserved (CC BY)",
-      "licence": "cc-by",
-      "link": "https://www.inaturalist.org/observations/320825152"
+      "credit": "(c) pixiepoo, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/193778209"
     },
     {
       "file": "photos/the-prince/4.webp",
       "view": "whole",
-      "credit": "(c) tami marisol, some rights reserved (CC BY-NC)",
+      "credit": "(c) Lauren Ware, some rights reserved (CC BY)",
+      "licence": "cc-by",
+      "link": "https://www.inaturalist.org/observations/174493079"
+    },
+    {
+      "file": "photos/the-prince/5.webp",
+      "view": "whole",
+      "credit": "(c) pixiepoo, some rights reserved (CC BY-NC)",
       "licence": "cc-by-nc",
-      "link": "https://www.inaturalist.org/observations/304192582"
+      "link": "https://www.inaturalist.org/observations/193778209"
+    },
+    {
+      "file": "photos/the-prince/6.webp",
+      "view": "whole",
+      "credit": "(c) Lauren Ware, some rights reserved (CC BY)",
+      "licence": "cc-by",
+      "link": "https://www.inaturalist.org/observations/174493079"
     }
   ],
   "sources": [

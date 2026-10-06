@@ -165,16 +165,44 @@
     {
       "file": "photos/oak-bracket/1.webp",
       "view": "whole",
+      "credit": "(c) inaturalistpnw, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/227580820"
+    },
+    {
+      "file": "photos/oak-bracket/2.webp",
+      "view": "whole",
       "credit": "(c) Barry Walter, some rights reserved (CC BY)",
       "licence": "cc-by",
       "link": "https://www.inaturalist.org/observations/74031095"
     },
     {
-      "file": "photos/oak-bracket/2.webp",
+      "file": "photos/oak-bracket/3.webp",
       "view": "whole",
       "credit": "(c) Mark Wilson, some rights reserved (CC BY-NC)",
       "licence": "cc-by-nc",
       "link": "https://www.inaturalist.org/observations/309727490"
+    },
+    {
+      "file": "photos/oak-bracket/4.webp",
+      "view": "whole",
+      "credit": "(c) Barry Walter, some rights reserved (CC BY)",
+      "licence": "cc-by",
+      "link": "https://www.inaturalist.org/observations/74031095"
+    },
+    {
+      "file": "photos/oak-bracket/5.webp",
+      "view": "whole",
+      "credit": "(c) Mark Wilson, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/309727490"
+    },
+    {
+      "file": "photos/oak-bracket/6.webp",
+      "view": "whole",
+      "credit": "(c) Barry Walter, some rights reserved (CC BY)",
+      "licence": "cc-by",
+      "link": "https://www.inaturalist.org/observations/74031095"
     }
   ],
   "sources": [

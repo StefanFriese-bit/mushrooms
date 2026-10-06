@@ -425,16 +425,16 @@
     {
       "file": "photos/funeral-bell/1.webp",
       "view": "whole",
-      "credit": "(c) tbrownhill, some rights reserved (CC BY-NC)",
+      "credit": "(c) snootsnoot, some rights reserved (CC BY-NC)",
       "licence": "cc-by-nc",
-      "link": "https://www.inaturalist.org/observations/105430735"
+      "link": "https://www.inaturalist.org/observations/191038355"
     },
     {
       "file": "photos/funeral-bell/2.webp",
       "view": "whole",
-      "credit": "(c) Liz Downey, some rights reserved (CC BY-NC)",
+      "credit": "(c) plantfiendd, some rights reserved (CC BY-NC)",
       "licence": "cc-by-nc",
-      "link": "https://www.inaturalist.org/observations/256127365"
+      "link": "https://www.inaturalist.org/observations/190712967"
     },
     {
       "file": "photos/funeral-bell/3.webp",
@@ -446,9 +446,23 @@
     {
       "file": "photos/funeral-bell/4.webp",
       "view": "whole",
+      "credit": "(c) snootsnoot, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/191038355"
+    },
+    {
+      "file": "photos/funeral-bell/5.webp",
+      "view": "whole",
       "credit": "(c) plantfiendd, some rights reserved (CC BY-NC)",
       "licence": "cc-by-nc",
       "link": "https://www.inaturalist.org/observations/190712967"
+    },
+    {
+      "file": "photos/funeral-bell/6.webp",
+      "view": "whole",
+      "credit": "(c) snootsnoot, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/191038355"
     }
   ],
   "sources": [

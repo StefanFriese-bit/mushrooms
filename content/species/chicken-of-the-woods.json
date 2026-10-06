@@ -180,16 +180,30 @@
     {
       "file": "photos/chicken-of-the-woods/3.webp",
       "view": "whole",
-      "credit": "(c) tomnapper, some rights reserved (CC BY-NC)",
-      "licence": "cc-by-nc",
-      "link": "https://www.inaturalist.org/observations/301500554"
+      "credit": "(c) Lera Miles, some rights reserved (CC BY)",
+      "licence": "cc-by",
+      "link": "https://www.inaturalist.org/observations/46766148"
     },
     {
       "file": "photos/chicken-of-the-woods/4.webp",
       "view": "whole",
+      "credit": "(c) handsomeinsect, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/133745675"
+    },
+    {
+      "file": "photos/chicken-of-the-woods/5.webp",
+      "view": "whole",
       "credit": "(c) Lera Miles, some rights reserved (CC BY)",
       "licence": "cc-by",
       "link": "https://www.inaturalist.org/observations/46766148"
+    },
+    {
+      "file": "photos/chicken-of-the-woods/6.webp",
+      "view": "whole",
+      "credit": "(c) handsomeinsect, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/133745675"
     }
   ],
   "sources": [

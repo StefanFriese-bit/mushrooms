@@ -14,6 +14,7 @@ describe('checkTable', () => {
       ['Deathcap', 'deadly', 'deathcap', 'deadly'],
       ['Destroying Angel', 'deadly', 'destroying-angel', 'deadly'],
       ['Yellow Stainer', 'poisonous', 'yellow-stainer', 'poisonous'],
+      ['Inky Mushroom', 'poisonous', 'inky-mushroom', 'poisonous'],
     ]);
   });
   it('a dangerous species being checked carries its own danger', () => {
@@ -21,11 +22,11 @@ describe('checkTable', () => {
   });
   it('has one row per feature, in order of first appearance', () => {
     expect(t.rows.map((r) => r.feature)).toEqual(
-      ['Gills', 'Stem base', 'Cap colour', 'Spore print', 'Cut stem base', 'Smell', 'Ring', 'Stem base shape']);
+      ['Gills', 'Stem base', 'Cap colour', 'Spore print', 'Cut stem base', 'Smell', 'Ring', 'Stem base shape', 'Where it grows']);
   });
   it('gives the species its own words once, and a lookalike without that row no cell', () => {
     expect(t.rows[0].cells[0]).toBe('Pink from the start, then chocolate brown');
-    expect(t.rows[2].cells.map((c) => c === null)).toEqual([false, false, true, true]);
+    expect(t.rows[2].cells.map((c) => c === null)).toEqual([false, false, true, true, true]);
   });
   it('joins two different wordings of the species for one feature', () => {
     const two = { ...rec, lookalikes: [
@@ -43,7 +44,7 @@ describe('verdict', () => {
   });
   it('every tick on the Field Mushroom fits it, and nothing is dangerous', () => {
     const v = verdict(t, new Map(t.rows.map((_, i) => [i, 0])));
-    expect([v.ticked, names(v.dangerous), names(v.others)]).toEqual([8, [], ['Field Mushroom']]);
+    expect([v.ticked, names(v.dangerous), names(v.others)]).toEqual([9, [], ['Field Mushroom']]);
   });
   it('a tick on a dangerous lookalike is red and names every lookalike with the same words in that row', () => {
     const v = verdict(t, new Map([[0, 0], [3, 1]])); // gills fit; spore print white = Deathcap AND Destroying Angel

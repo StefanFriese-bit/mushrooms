@@ -241,9 +241,23 @@
     {
       "file": "photos/fairy-ring-champignon/4.webp",
       "view": "whole",
-      "credit": "(c) Frederick Robert McCreery, some rights reserved (CC BY-NC)",
-      "licence": "cc-by-nc",
-      "link": "https://www.inaturalist.org/observations/189557331"
+      "credit": "(c) Arthur Gelling, some rights reserved (CC BY)",
+      "licence": "cc-by",
+      "link": "https://www.inaturalist.org/observations/137882709"
+    },
+    {
+      "file": "photos/fairy-ring-champignon/5.webp",
+      "view": "whole",
+      "credit": "goldfjnch, no rights reserved (CC0)",
+      "licence": "cc0",
+      "link": "https://www.inaturalist.org/observations/58984897"
+    },
+    {
+      "file": "photos/fairy-ring-champignon/6.webp",
+      "view": "whole",
+      "credit": "goldfjnch, no rights reserved (CC0)",
+      "licence": "cc0",
+      "link": "https://www.inaturalist.org/observations/58984897"
     }
   ],
   "sources": [

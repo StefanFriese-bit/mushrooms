@@ -173,16 +173,44 @@
     {
       "file": "photos/alder-bracket/1.webp",
       "view": "whole",
-      "credit": "(c) nicklear, some rights reserved (CC BY-NC)",
-      "licence": "cc-by-nc",
-      "link": "https://www.inaturalist.org/observations/191172240"
+      "credit": "(c) Daniel Greenwood, some rights reserved (CC BY)",
+      "licence": "cc-by",
+      "link": "https://www.inaturalist.org/observations/140882858"
     },
     {
       "file": "photos/alder-bracket/2.webp",
       "view": "whole",
-      "credit": "(c) Virn Stothers, some rights reserved (CC BY)",
+      "credit": "(c) Nicolas Schwab, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/242959405"
+    },
+    {
+      "file": "photos/alder-bracket/3.webp",
+      "view": "whole",
+      "credit": "(c) Leah Bendlin, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/243198541"
+    },
+    {
+      "file": "photos/alder-bracket/4.webp",
+      "view": "whole",
+      "credit": "(c) Daniel Greenwood, some rights reserved (CC BY)",
       "licence": "cc-by",
-      "link": "https://www.inaturalist.org/observations/247645503"
+      "link": "https://www.inaturalist.org/observations/140882858"
+    },
+    {
+      "file": "photos/alder-bracket/5.webp",
+      "view": "whole",
+      "credit": "(c) Leah Bendlin, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/243198541"
+    },
+    {
+      "file": "photos/alder-bracket/6.webp",
+      "view": "whole",
+      "credit": "(c) Daniel Greenwood, some rights reserved (CC BY)",
+      "licence": "cc-by",
+      "link": "https://www.inaturalist.org/observations/140882858"
     }
   ],
   "sources": [

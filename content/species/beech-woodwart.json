@@ -183,16 +183,44 @@
     {
       "file": "photos/beech-woodwart/1.webp",
       "view": "whole",
+      "credit": "(c) rps2005, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/185559419"
+    },
+    {
+      "file": "photos/beech-woodwart/2.webp",
+      "view": "whole",
       "credit": "(c) Jamie Gorzynski, some rights reserved (CC BY-NC)",
       "licence": "cc-by-nc",
       "link": "https://www.inaturalist.org/observations/74057110"
     },
     {
-      "file": "photos/beech-woodwart/2.webp",
+      "file": "photos/beech-woodwart/3.webp",
       "view": "whole",
-      "credit": "(c) rps2005, some rights reserved (CC BY-NC)",
+      "credit": "Aleksandra Pompa, no rights reserved (CC0)",
+      "licence": "cc0",
+      "link": "https://www.inaturalist.org/observations/150123474"
+    },
+    {
+      "file": "photos/beech-woodwart/4.webp",
+      "view": "whole",
+      "credit": "(c) Steve, some rights reserved (CC BY-NC)",
       "licence": "cc-by-nc",
-      "link": "https://www.inaturalist.org/observations/185559419"
+      "link": "https://www.inaturalist.org/observations/125814771"
+    },
+    {
+      "file": "photos/beech-woodwart/5.webp",
+      "view": "whole",
+      "credit": "(c) Jamie Gorzynski, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/74057110"
+    },
+    {
+      "file": "photos/beech-woodwart/6.webp",
+      "view": "whole",
+      "credit": "(c) Jamie Gorzynski, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/74057110"
     }
   ],
   "sources": [

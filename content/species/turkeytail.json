@@ -227,9 +227,37 @@
     {
       "file": "photos/turkeytail/2.webp",
       "view": "whole",
+      "credit": "(c) Henry Miller, some rights reserved (CC BY)",
+      "licence": "cc-by",
+      "link": "https://www.inaturalist.org/observations/141315186"
+    },
+    {
+      "file": "photos/turkeytail/3.webp",
+      "view": "whole",
+      "credit": "(c) tca54, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/138897795"
+    },
+    {
+      "file": "photos/turkeytail/4.webp",
+      "view": "whole",
       "credit": "(c) bethan_n, some rights reserved (CC BY-NC)",
       "licence": "cc-by-nc",
       "link": "https://www.inaturalist.org/observations/38385995"
+    },
+    {
+      "file": "photos/turkeytail/5.webp",
+      "view": "whole",
+      "credit": "eth, no rights reserved (CC0)",
+      "licence": "cc0",
+      "link": "https://www.inaturalist.org/observations/252312572"
+    },
+    {
+      "file": "photos/turkeytail/6.webp",
+      "view": "whole",
+      "credit": "(c) Henry Miller, some rights reserved (CC BY)",
+      "licence": "cc-by",
+      "link": "https://www.inaturalist.org/observations/141315186"
     }
   ],
   "sources": [

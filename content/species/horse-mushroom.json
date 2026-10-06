@@ -306,9 +306,23 @@
     {
       "file": "photos/horse-mushroom/4.webp",
       "view": "whole",
-      "credit": "(c) drzuz, some rights reserved (CC BY-NC)",
+      "credit": "(c) liradie, some rights reserved (CC BY-NC)",
       "licence": "cc-by-nc",
-      "link": "https://www.inaturalist.org/observations/164199457"
+      "link": "https://www.inaturalist.org/observations/134864352"
+    },
+    {
+      "file": "photos/horse-mushroom/5.webp",
+      "view": "whole",
+      "credit": "(c) pfox2495, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/137438175"
+    },
+    {
+      "file": "photos/horse-mushroom/6.webp",
+      "view": "whole",
+      "credit": "Kian Hayles-Cotton, no rights reserved (CC0)",
+      "licence": "cc0",
+      "link": "https://www.inaturalist.org/observations/253225628"
     }
   ],
   "sources": [

@@ -326,7 +326,7 @@
       "tellApart": [
         {
           "feature": "Cap",
-          "thisOne": "Large, ivory-white to pale grey-brown, often with a broad hump",
+          "thisOne": "Ivory-white to pale grey-brown, smooth",
           "thatOne": "White to pale grey, soft like suede, with a wavy edge and a sunken centre",
           "sources": [
             "fn",
@@ -337,7 +337,7 @@
         },
         {
           "feature": "Gills",
-          "thisOne": "Yellowish at first, turning pink",
+          "thisOne": "Yellowish, turning pink as it ripens",
           "thatOne": "Running down the stem; white turning pink",
           "sources": [
             "fn",
@@ -348,7 +348,7 @@
         },
         {
           "feature": "Smell",
-          "thisOne": "Usually unpleasant or rancid — but sometimes of flour, so smell alone is not enough",
+          "thisOne": "Usually unpleasant or rancid — but it can smell of flour too",
           "thatOne": "Strongly of raw dough, flour or cucumber",
           "sources": [
             "fn",
@@ -372,19 +372,33 @@
     {
       "file": "photos/livid-pinkgill/2.webp",
       "view": "whole",
+      "credit": "(c) charliegiblet, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/58221240"
+    },
+    {
+      "file": "photos/livid-pinkgill/3.webp",
+      "view": "whole",
+      "credit": "(c) charliegiblet, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/58221240"
+    },
+    {
+      "file": "photos/livid-pinkgill/4.webp",
+      "view": "whole",
       "credit": "(c) Federico Calledda, some rights reserved (CC BY-NC)",
       "licence": "cc-by-nc",
       "link": "https://www.inaturalist.org/observations/68907782"
     },
     {
-      "file": "photos/livid-pinkgill/3.webp",
+      "file": "photos/livid-pinkgill/5.webp",
       "view": "whole",
       "credit": "(c) Felipe Hidalgo, some rights reserved (CC BY-NC)",
       "licence": "cc-by-nc",
       "link": "https://www.inaturalist.org/observations/142677842"
     },
     {
-      "file": "photos/livid-pinkgill/4.webp",
+      "file": "photos/livid-pinkgill/6.webp",
       "view": "whole",
       "credit": "(c) Nicolas Schwab, some rights reserved (CC BY-NC)",
       "licence": "cc-by-nc",

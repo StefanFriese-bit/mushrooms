@@ -167,23 +167,37 @@
     {
       "file": "photos/slippery-jack/2.webp",
       "view": "whole",
+      "credit": "(c) darrendeeside, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/325675787"
+    },
+    {
+      "file": "photos/slippery-jack/3.webp",
+      "view": "whole",
+      "credit": "Uilleam Uir, no rights reserved (CC0)",
+      "licence": "cc0",
+      "link": "https://www.inaturalist.org/observations/324535325"
+    },
+    {
+      "file": "photos/slippery-jack/4.webp",
+      "view": "whole",
       "credit": "snakesandladders, no rights reserved (CC0)",
       "licence": "cc0",
       "link": "https://www.inaturalist.org/observations/243679291"
     },
     {
-      "file": "photos/slippery-jack/3.webp",
+      "file": "photos/slippery-jack/5.webp",
       "view": "whole",
-      "credit": "(c) Adam, some rights reserved (CC BY-NC)",
+      "credit": "(c) darrendeeside, some rights reserved (CC BY-NC)",
       "licence": "cc-by-nc",
-      "link": "https://www.inaturalist.org/observations/132025667"
+      "link": "https://www.inaturalist.org/observations/325675787"
     },
     {
-      "file": "photos/slippery-jack/4.webp",
+      "file": "photos/slippery-jack/6.webp",
       "view": "whole",
-      "credit": "(c) kayholford, some rights reserved (CC BY-NC)",
-      "licence": "cc-by-nc",
-      "link": "https://www.inaturalist.org/observations/140757647"
+      "credit": "snakesandladders, no rights reserved (CC0)",
+      "licence": "cc0",
+      "link": "https://www.inaturalist.org/observations/243679291"
     }
   ],
   "sources": [

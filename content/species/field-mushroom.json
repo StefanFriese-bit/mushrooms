@@ -320,8 +320,8 @@
       "kind": "poisonous",
       "tellApart": [
         {
-          "feature": "Cut or bruised flesh",
-          "thisOne": "Stays white or turns slightly pink — never yellow",
+          "feature": "Cut stem base",
+          "thisOne": "Stays white or turns slightly pink",
           "thatOne": "Turns yellow, most at the stem base; later brown",
           "sources": [
             "fn",
@@ -344,7 +344,7 @@
           ]
         },
         {
-          "feature": "Where",
+          "feature": "Where it grows",
           "thisOne": "Open grassland — pasture, parks and lawns; rarely in woods",
           "thatOne": "Broadleaved woods and under hedges; now and then in grass",
           "sources": [
@@ -363,30 +363,44 @@
     {
       "file": "photos/field-mushroom/1.webp",
       "view": "whole",
-      "credit": "(c) Paul Masters, some rights reserved (CC BY-NC)",
+      "credit": "(c) Will Brantingham, some rights reserved (CC BY-NC)",
       "licence": "cc-by-nc",
-      "link": "https://www.inaturalist.org/observations/191666211"
+      "link": "https://www.inaturalist.org/observations/172989338"
     },
     {
       "file": "photos/field-mushroom/2.webp",
       "view": "whole",
-      "credit": "(c) shelbourne, some rights reserved (CC BY-NC)",
-      "licence": "cc-by-nc",
-      "link": "https://www.inaturalist.org/observations/189512783"
+      "credit": "Rosie, no rights reserved (CC0)",
+      "licence": "cc0",
+      "link": "https://www.inaturalist.org/observations/172876317"
     },
     {
       "file": "photos/field-mushroom/3.webp",
       "view": "whole",
-      "credit": "(c) shaunydee, some rights reserved (CC BY-NC)",
+      "credit": "(c) Will Brantingham, some rights reserved (CC BY-NC)",
       "licence": "cc-by-nc",
-      "link": "https://www.inaturalist.org/observations/31907061"
+      "link": "https://www.inaturalist.org/observations/172989338"
     },
     {
       "file": "photos/field-mushroom/4.webp",
       "view": "whole",
-      "credit": "(c) Andy, some rights reserved (CC BY-NC)",
+      "credit": "Rosie, no rights reserved (CC0)",
+      "licence": "cc0",
+      "link": "https://www.inaturalist.org/observations/172876317"
+    },
+    {
+      "file": "photos/field-mushroom/5.webp",
+      "view": "whole",
+      "credit": "(c) Will Brantingham, some rights reserved (CC BY-NC)",
       "licence": "cc-by-nc",
-      "link": "https://www.inaturalist.org/observations/311500611"
+      "link": "https://www.inaturalist.org/observations/172989338"
+    },
+    {
+      "file": "photos/field-mushroom/6.webp",
+      "view": "whole",
+      "credit": "Rosie, no rights reserved (CC0)",
+      "licence": "cc0",
+      "link": "https://www.inaturalist.org/observations/172876317"
     }
   ],
   "sources": [

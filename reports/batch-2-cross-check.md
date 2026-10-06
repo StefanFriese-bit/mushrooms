@@ -12,9 +12,22 @@ when you are back on Wi-Fi.
 Verdicts on the 194 new pages: 113 not edible, 44 edible (cook first), 9 edible but some people react,
 27 poisonous, 1 deadly.
 
+## Your rulings (06/10/2026)
+
+- **The three looser rules stay**, and with them the 46 pages that need them (decision 1).
+- **I may name the likeliest dangerous lookalike** where the sites only warn in general, and **a lookalike named by one
+  website is shown too — in batch 1 as well** (decision 2). Batch 1 gained six two-way warnings: Field Mushroom ↔
+  Inky Mushroom, The Prince ↔ Yellow Stainer, The Miller ↔ Livid Pinkgill (First Nature names it too — the batch-1
+  report missed that), Shaggy Parasol ↔ Deathcap (Wild Food UK: young, it "looks similar to some of the deadly
+  Amanitas"; naming the Deathcap is my reading), St George's Mushroom ↔ Frosty Funnel and The Miller ↔ Frosty Funnel.
+- **The Shaggy Parasol** was settled by the sites themselves (decision 4).
+- **Six photos per species, all 260**, up to three from each sighting so the strip shows the gills and stem, not only
+  the top (decision 6). Every photo was looked at; sightings whose photos would mislead (taken under UV light, a
+  person in the picture …) are never used — each is listed with its reason in `tools/config/photo-skip.json`.
+
 ## Things for you to decide
 
-1. **Three rule changes I made so the minor species could have pages** (each with a test; easy to undo). 46 of the
+1. **(Decided: they stay.) Three rule changes I made so the minor species could have pages** (each with a test; easy to undo). 46 of the
    194 new pages rely on at least one of them; without them those 46 pages go:
    - A **"not edible" verdict may rest on one trusted website**, and so may the note under it. It is the cautious
      verdict — the page tells no one to eat it — and for many crusts, jelly fungi and tiny bonnets only one site says
@@ -26,7 +39,7 @@ Verdicts on the 194 new pages: 113 not edible, 44 edible (cook first), 9 edible 
      on First Nature only) and the Red Cage (size on Wikipedia only).
    - **A crust with no set size can say so**; Identify then keeps it under every size answer. Used for the Brittle
      Cinder, Cobalt Crust, Oak Crust and Glue Crust.
-2. **Dangerous lookalikes the sites warn about without naming them: I named the likeliest one.** An edible page shows
+2. **(Decided: yes, and batch 1 too.) Dangerous lookalikes the sites warn about without naming them: I named the likeliest one.** An edible page shows
    the dangerous species it can be mistaken for, each with a "tell them apart" row. For some edible species the sites
    only warn in general. There I named the species myself — **my reading**, please confirm or strike (checked against
    the sites' own words):
@@ -50,7 +63,7 @@ Verdicts on the 194 new pages: 113 not edible, 44 edible (cook first), 9 edible 
 5. **"Reported edible, but not worth picking" counts as edible** when both sites say it: Pink Waxcap (vulnerable
    worldwide — its note says never pick it), Meadow Coral, White and Smoky Spindles, Crested Coral, Yellowleg Bonnet,
    Jelly Tooth. You could make these "not edible" instead.
-6. **Photos: two per new species, not four.** Every photo is part of what the phone downloads for offline use. The
+6. **(Decided: six for every species.) Photos: two per new species, not four.** Every photo is part of what the phone downloads for offline use. The
    two each added 37 MB: the download is now about 95 MB (the live app today: about 36 MB; batch 1 alone took it to
    58 MB). Four each would add roughly another 37 MB. Say if you want four.
 7. **The approved core list** (`tools/config/core-lists.json`) is unchanged. The new edible–dangerous pairs below live

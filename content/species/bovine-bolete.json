@@ -182,16 +182,44 @@
     {
       "file": "photos/bovine-bolete/1.webp",
       "view": "whole",
-      "credit": "(c) Sam Piper, some rights reserved (CC BY-NC)",
+      "credit": "(c) alangray222, some rights reserved (CC BY-NC)",
       "licence": "cc-by-nc",
-      "link": "https://www.inaturalist.org/observations/323242566"
+      "link": "https://www.inaturalist.org/observations/241525874"
     },
     {
       "file": "photos/bovine-bolete/2.webp",
       "view": "whole",
-      "credit": "(c) Liz Downey, some rights reserved (CC BY-NC)",
+      "credit": "(c) Will Brantingham, some rights reserved (CC BY-NC)",
       "licence": "cc-by-nc",
-      "link": "https://www.inaturalist.org/observations/322458522"
+      "link": "https://www.inaturalist.org/observations/241312503"
+    },
+    {
+      "file": "photos/bovine-bolete/3.webp",
+      "view": "whole",
+      "credit": "snakesandladders, no rights reserved (CC0)",
+      "licence": "cc0",
+      "link": "https://www.inaturalist.org/observations/243679589"
+    },
+    {
+      "file": "photos/bovine-bolete/4.webp",
+      "view": "whole",
+      "credit": "(c) Will Brantingham, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/241312503"
+    },
+    {
+      "file": "photos/bovine-bolete/5.webp",
+      "view": "whole",
+      "credit": "snakesandladders, no rights reserved (CC0)",
+      "licence": "cc0",
+      "link": "https://www.inaturalist.org/observations/243679589"
+    },
+    {
+      "file": "photos/bovine-bolete/6.webp",
+      "view": "whole",
+      "credit": "(c) Will Brantingham, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/241312503"
     }
   ],
   "sources": [

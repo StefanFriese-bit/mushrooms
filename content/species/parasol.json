@@ -315,32 +315,46 @@
   "noDangerousLookalike": null,
   "photos": [
     {
-      "file": "photos/parasol/3.webp",
-      "view": "whole",
-      "credit": "Jonathan Hughes, no rights reserved (CC0)",
-      "licence": "cc0",
-      "link": "https://www.inaturalist.org/observations/98191067"
-    },
-    {
-      "file": "photos/parasol/4.webp",
-      "view": "whole",
-      "credit": "(c) Barry Stewart, some rights reserved (CC BY)",
-      "licence": "cc-by",
-      "link": "https://www.inaturalist.org/observations/386688419"
-    },
-    {
-      "file": "photos/parasol/2.webp",
+      "file": "photos/parasol/1.webp",
       "view": "whole",
       "credit": "(c) Simeon Cathcart, some rights reserved (CC BY-NC)",
       "licence": "cc-by-nc",
       "link": "https://www.inaturalist.org/observations/314159389"
     },
     {
-      "file": "photos/parasol/1.webp",
+      "file": "photos/parasol/2.webp",
       "view": "whole",
-      "credit": "(c) kayholford, some rights reserved (CC BY-NC)",
-      "licence": "cc-by-nc",
-      "link": "https://www.inaturalist.org/observations/141720980"
+      "credit": "Jonathan Hughes, no rights reserved (CC0)",
+      "licence": "cc0",
+      "link": "https://www.inaturalist.org/observations/98191067"
+    },
+    {
+      "file": "photos/parasol/3.webp",
+      "view": "whole",
+      "credit": "(c) Barry Stewart, some rights reserved (CC BY)",
+      "licence": "cc-by",
+      "link": "https://www.inaturalist.org/observations/386688419"
+    },
+    {
+      "file": "photos/parasol/4.webp",
+      "view": "whole",
+      "credit": "Alison Westwood, no rights reserved (CC0)",
+      "licence": "cc0",
+      "link": "https://www.inaturalist.org/observations/188240039"
+    },
+    {
+      "file": "photos/parasol/5.webp",
+      "view": "whole",
+      "credit": "Jonathan Hughes, no rights reserved (CC0)",
+      "licence": "cc0",
+      "link": "https://www.inaturalist.org/observations/98191067"
+    },
+    {
+      "file": "photos/parasol/6.webp",
+      "view": "whole",
+      "credit": "Jonathan Hughes, no rights reserved (CC0)",
+      "licence": "cc0",
+      "link": "https://www.inaturalist.org/observations/98191067"
     }
   ],
   "sources": [

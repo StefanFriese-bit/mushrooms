@@ -144,9 +144,37 @@
     {
       "file": "photos/honey-waxcap/2.webp",
       "view": "whole",
-      "credit": "(c) David Callender, some rights reserved (CC BY)",
+      "credit": "Jonathan Hughes, no rights reserved (CC0)",
+      "licence": "cc0",
+      "link": "https://www.inaturalist.org/observations/313354443"
+    },
+    {
+      "file": "photos/honey-waxcap/3.webp",
+      "view": "whole",
+      "credit": "(c) Melanie Stanton, some rights reserved (CC BY)",
       "licence": "cc-by",
-      "link": "https://www.inaturalist.org/observations/188024417"
+      "link": "https://www.inaturalist.org/observations/325334891"
+    },
+    {
+      "file": "photos/honey-waxcap/4.webp",
+      "view": "whole",
+      "credit": "Jonathan Hughes, no rights reserved (CC0)",
+      "licence": "cc0",
+      "link": "https://www.inaturalist.org/observations/313354443"
+    },
+    {
+      "file": "photos/honey-waxcap/5.webp",
+      "view": "whole",
+      "credit": "(c) Melanie Stanton, some rights reserved (CC BY)",
+      "licence": "cc-by",
+      "link": "https://www.inaturalist.org/observations/325334891"
+    },
+    {
+      "file": "photos/honey-waxcap/6.webp",
+      "view": "whole",
+      "credit": "Jonathan Hughes, no rights reserved (CC0)",
+      "licence": "cc0",
+      "link": "https://www.inaturalist.org/observations/313354443"
     }
   ],
   "sources": [

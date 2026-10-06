@@ -148,9 +148,37 @@
     {
       "file": "photos/ivory-bonnet/2.webp",
       "view": "whole",
-      "credit": "(c) Jamie Robbins, some rights reserved (CC BY-NC)",
+      "credit": "(c) Emma, some rights reserved (CC BY-NC)",
       "licence": "cc-by-nc",
-      "link": "https://www.inaturalist.org/observations/326339227"
+      "link": "https://www.inaturalist.org/observations/240775726"
+    },
+    {
+      "file": "photos/ivory-bonnet/3.webp",
+      "view": "whole",
+      "credit": "Anne Taylor, no rights reserved (CC0)",
+      "licence": "cc0",
+      "link": "https://www.inaturalist.org/observations/254712916"
+    },
+    {
+      "file": "photos/ivory-bonnet/4.webp",
+      "view": "whole",
+      "credit": "(c) Katherine King, some rights reserved (CC BY)",
+      "licence": "cc-by",
+      "link": "https://www.inaturalist.org/observations/100416330"
+    },
+    {
+      "file": "photos/ivory-bonnet/5.webp",
+      "view": "whole",
+      "credit": "(c) Emma, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/240775726"
+    },
+    {
+      "file": "photos/ivory-bonnet/6.webp",
+      "view": "whole",
+      "credit": "(c) Emma, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/240775726"
     }
   ],
   "sources": [

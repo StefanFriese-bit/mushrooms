@@ -263,9 +263,23 @@
     {
       "file": "photos/oyster-mushroom/4.webp",
       "view": "whole",
-      "credit": "(c) mikebwd, some rights reserved (CC BY-NC)",
-      "licence": "cc-by-nc",
-      "link": "https://www.inaturalist.org/observations/142452377"
+      "credit": "(c) Jose Gutierrez Higa, some rights reserved (CC BY)",
+      "licence": "cc-by",
+      "link": "https://www.inaturalist.org/observations/338612879"
+    },
+    {
+      "file": "photos/oyster-mushroom/5.webp",
+      "view": "whole",
+      "credit": "Piermario Maculan, no rights reserved (CC0)",
+      "licence": "cc0",
+      "link": "https://www.inaturalist.org/observations/68431546"
+    },
+    {
+      "file": "photos/oyster-mushroom/6.webp",
+      "view": "whole",
+      "credit": "(c) Jose Gutierrez Higa, some rights reserved (CC BY)",
+      "licence": "cc-by",
+      "link": "https://www.inaturalist.org/observations/338612879"
     }
   ],
   "sources": [

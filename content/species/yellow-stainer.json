@@ -291,7 +291,7 @@
       "tellApart": [
         {
           "feature": "Smell",
-          "thisOne": "Ink, iodine or carbolic soap — strongest at the cut stem base",
+          "thisOne": "Of ink, iodine or carbolic soap — strongest at the cut base",
           "thatOne": "Strongly of bitter almonds, like marzipan",
           "sources": [
             "fn",
@@ -302,7 +302,7 @@
         },
         {
           "feature": "Cut stem base",
-          "thisOne": "Bright chrome yellow at once",
+          "thisOne": "Turns bright chrome yellow at once",
           "thatOne": "At most faintly yellow",
           "sources": [
             "fn",
@@ -340,23 +340,37 @@
     {
       "file": "photos/yellow-stainer/2.webp",
       "view": "whole",
-      "credit": "(c) Lukas Large, some rights reserved (CC BY)",
-      "licence": "cc-by",
-      "link": "https://www.inaturalist.org/observations/187006368"
+      "credit": "Piermario Maculan, no rights reserved (CC0)",
+      "licence": "cc0",
+      "link": "https://www.inaturalist.org/observations/141079385"
     },
     {
       "file": "photos/yellow-stainer/3.webp",
       "view": "whole",
-      "credit": "(c) christinemosses, some rights reserved (CC BY-NC)",
-      "licence": "cc-by-nc",
-      "link": "https://www.inaturalist.org/observations/188194658"
+      "credit": "(c) Jan Sheppard, some rights reserved (CC BY)",
+      "licence": "cc-by",
+      "link": "https://www.inaturalist.org/observations/137009071"
     },
     {
       "file": "photos/yellow-stainer/4.webp",
       "view": "whole",
-      "credit": "(c) John Hepburn, some rights reserved (CC BY-NC)",
-      "licence": "cc-by-nc",
-      "link": "https://www.inaturalist.org/observations/154869982"
+      "credit": "Piermario Maculan, no rights reserved (CC0)",
+      "licence": "cc0",
+      "link": "https://www.inaturalist.org/observations/141079385"
+    },
+    {
+      "file": "photos/yellow-stainer/5.webp",
+      "view": "whole",
+      "credit": "(c) Jan Sheppard, some rights reserved (CC BY)",
+      "licence": "cc-by",
+      "link": "https://www.inaturalist.org/observations/137009071"
+    },
+    {
+      "file": "photos/yellow-stainer/6.webp",
+      "view": "whole",
+      "credit": "Piermario Maculan, no rights reserved (CC0)",
+      "licence": "cc0",
+      "link": "https://www.inaturalist.org/observations/141079385"
     }
   ],
   "sources": [

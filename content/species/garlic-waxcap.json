@@ -145,9 +145,37 @@
     {
       "file": "photos/garlic-waxcap/2.webp",
       "view": "whole",
+      "credit": "(c) jimbob98, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/377850603"
+    },
+    {
+      "file": "photos/garlic-waxcap/3.webp",
+      "view": "whole",
       "credit": "(c) Charles F Gunn, some rights reserved (CC BY-NC)",
       "licence": "cc-by-nc",
       "link": "https://www.inaturalist.org/observations/295737902"
+    },
+    {
+      "file": "photos/garlic-waxcap/4.webp",
+      "view": "whole",
+      "credit": "(c) Laura, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/316957770"
+    },
+    {
+      "file": "photos/garlic-waxcap/5.webp",
+      "view": "whole",
+      "credit": "(c) jimbob98, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/377850603"
+    },
+    {
+      "file": "photos/garlic-waxcap/6.webp",
+      "view": "whole",
+      "credit": "(c) jimbob98, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/377850603"
     }
   ],
   "sources": [

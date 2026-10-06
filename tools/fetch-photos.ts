@@ -18,9 +18,12 @@ const PER_SIGHTING = 3;
 const UK = '6857';
 const EUROPE = '97391';
 const inat = createInatClient();
-// Sightings never to use (UV light, microscope pictures …), each with a reason: tools/config/photo-skip.json.
-const SKIP = new Set((JSON.parse(readFileSync(new URL('tools/config/photo-skip.json', ROOT), 'utf8')) as { skip: Array<{ observation: number }> })
-  .skip.map((s) => s.observation));
+// Sightings and single photos never to use (UV light, microscope pictures, people …), each with a reason:
+// tools/config/photo-skip.json.
+const SKIPS = (JSON.parse(readFileSync(new URL('tools/config/photo-skip.json', ROOT), 'utf8')) as
+  { skip: Array<{ observation?: number; photo?: number }> }).skip;
+const SKIP_SIGHTING = new Set(SKIPS.flatMap((s) => (s.observation ? [s.observation] : [])));
+const SKIP_PHOTO = new Set(SKIPS.flatMap((s) => (s.photo ? [s.photo] : [])));
 
 /** The photo's bytes, asked for up to three times; null when it cannot be had (it is then left out, never half-saved). */
 async function download(url: string): Promise<Buffer | null> {
@@ -44,7 +47,9 @@ for (const file of readdirSync(new URL('content/species/', ROOT)).filter((f) => 
       taxon_id: String(rec.inatId), place_id: placeId, quality_grade: 'research', photos: 'true',
       photo_license: 'cc0,cc-by,cc-by-nc', order_by: 'votes', per_page: '30',
     });
-    return ((await inat.getJson(`/observations?${q}`)).results as InatObservation[]).filter((o) => !SKIP.has(o.id));
+    return ((await inat.getJson(`/observations?${q}`)).results as InatObservation[])
+      .filter((o) => !SKIP_SIGHTING.has(o.id))
+      .map((o) => ({ ...o, photos: o.photos.filter((p) => !SKIP_PHOTO.has(p.id)) }));
   };
   const uk = await search(UK);
   const picked = pickPhotos(uk, WANT, PER_SIGHTING);

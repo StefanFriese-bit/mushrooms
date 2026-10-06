@@ -198,7 +198,7 @@
       "kind": "edible",
       "tellApart": [
         {
-          "feature": "Cut or bruised flesh",
+          "feature": "Cut stem base",
           "thisOne": "Turns yellow, most at the stem base; later brown",
           "thatOne": "Stays white or turns slightly pink — never yellow",
           "sources": [
@@ -212,7 +212,7 @@
         },
         {
           "feature": "Smell",
-          "thisOne": "Unpleasant: ink or carbolic soap",
+          "thisOne": "Unpleasant: ink or carbolic soap, strongest when bruised",
           "thatOne": "Pleasant, mushroomy",
           "sources": [
             "fn",
@@ -222,7 +222,7 @@
           ]
         },
         {
-          "feature": "Where",
+          "feature": "Where it grows",
           "thisOne": "Broadleaved woods and under hedges; now and then in grass",
           "thatOne": "Open grassland — pasture, parks and lawns; rarely in woods",
           "sources": [
@@ -255,16 +255,30 @@
     {
       "file": "photos/inky-mushroom/3.webp",
       "view": "whole",
-      "credit": "(c) Steve, some rights reserved (CC BY-NC)",
+      "credit": "(c) kboase1, some rights reserved (CC BY-NC)",
       "licence": "cc-by-nc",
-      "link": "https://www.inaturalist.org/observations/178256587"
+      "link": "https://www.inaturalist.org/observations/141541003"
     },
     {
       "file": "photos/inky-mushroom/4.webp",
       "view": "whole",
-      "credit": "(c) Cara Ennis, some rights reserved (CC BY)",
+      "credit": "(c) J Castillo, some rights reserved (CC BY)",
       "licence": "cc-by",
-      "link": "https://www.inaturalist.org/observations/321420311"
+      "link": "https://www.inaturalist.org/observations/139224221"
+    },
+    {
+      "file": "photos/inky-mushroom/5.webp",
+      "view": "whole",
+      "credit": "(c) gooska, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/400785914"
+    },
+    {
+      "file": "photos/inky-mushroom/6.webp",
+      "view": "whole",
+      "credit": "(c) J Castillo, some rights reserved (CC BY)",
+      "licence": "cc-by",
+      "link": "https://www.inaturalist.org/observations/139224221"
     }
   ],
   "sources": [

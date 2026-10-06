@@ -179,9 +179,37 @@
     {
       "file": "photos/sulphur-knight/2.webp",
       "view": "whole",
+      "credit": "(c) nevermetsnails, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/62714401"
+    },
+    {
+      "file": "photos/sulphur-knight/3.webp",
+      "view": "whole",
       "credit": "(c) Tara Higgs, some rights reserved (CC BY-NC)",
       "licence": "cc-by-nc",
       "link": "https://www.inaturalist.org/observations/142298678"
+    },
+    {
+      "file": "photos/sulphur-knight/4.webp",
+      "view": "whole",
+      "credit": "(c) Paco Bergson, some rights reserved (CC BY)",
+      "licence": "cc-by",
+      "link": "https://www.inaturalist.org/observations/188000220"
+    },
+    {
+      "file": "photos/sulphur-knight/5.webp",
+      "view": "whole",
+      "credit": "(c) nevermetsnails, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/62714401"
+    },
+    {
+      "file": "photos/sulphur-knight/6.webp",
+      "view": "whole",
+      "credit": "(c) Paco Bergson, some rights reserved (CC BY)",
+      "licence": "cc-by",
+      "link": "https://www.inaturalist.org/observations/188000220"
     }
   ],
   "sources": [

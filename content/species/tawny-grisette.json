@@ -196,9 +196,37 @@
     {
       "file": "photos/tawny-grisette/2.webp",
       "view": "whole",
-      "credit": "(c) iamjoeg18, some rights reserved (CC BY-NC)",
+      "credit": "(c) ikelman, some rights reserved (CC BY)",
+      "licence": "cc-by",
+      "link": "https://www.inaturalist.org/observations/232567382"
+    },
+    {
+      "file": "photos/tawny-grisette/3.webp",
+      "view": "whole",
+      "credit": "(c) kwal, some rights reserved (CC BY-NC)",
       "licence": "cc-by-nc",
-      "link": "https://www.inaturalist.org/observations/323327836"
+      "link": "https://www.inaturalist.org/observations/232076080"
+    },
+    {
+      "file": "photos/tawny-grisette/4.webp",
+      "view": "whole",
+      "credit": "(c) badgerwhisper, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/54049809"
+    },
+    {
+      "file": "photos/tawny-grisette/5.webp",
+      "view": "whole",
+      "credit": "(c) mickr, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/58613063"
+    },
+    {
+      "file": "photos/tawny-grisette/6.webp",
+      "view": "whole",
+      "credit": "(c) ikelman, some rights reserved (CC BY)",
+      "licence": "cc-by",
+      "link": "https://www.inaturalist.org/observations/232567382"
     }
   ],
   "sources": [

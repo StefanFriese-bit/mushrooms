@@ -232,16 +232,30 @@
     {
       "file": "photos/deadly-fibrecap/3.webp",
       "view": "whole",
-      "credit": "(c) Andy Donegan, some rights reserved (CC BY-NC)",
-      "licence": "cc-by-nc",
-      "link": "https://www.inaturalist.org/observations/142948215"
+      "credit": "Sara Scorey, no rights reserved (CC0)",
+      "licence": "cc0",
+      "link": "https://www.inaturalist.org/observations/370374285"
     },
     {
       "file": "photos/deadly-fibrecap/4.webp",
       "view": "whole",
-      "credit": "(c) David Gibbs, some rights reserved (CC BY-NC)",
+      "credit": "(c) harriethughes, some rights reserved (CC BY-NC)",
       "licence": "cc-by-nc",
-      "link": "https://www.inaturalist.org/observations/368103101"
+      "link": "https://www.inaturalist.org/observations/120809478"
+    },
+    {
+      "file": "photos/deadly-fibrecap/5.webp",
+      "view": "whole",
+      "credit": "Sara Scorey, no rights reserved (CC0)",
+      "licence": "cc0",
+      "link": "https://www.inaturalist.org/observations/370374285"
+    },
+    {
+      "file": "photos/deadly-fibrecap/6.webp",
+      "view": "whole",
+      "credit": "(c) harriethughes, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/120809478"
     }
   ],
   "sources": [

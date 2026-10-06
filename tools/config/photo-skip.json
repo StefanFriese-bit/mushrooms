@@ -1,7 +1,115 @@
 {
-  "about": "iNaturalist sightings whose photos the guide must not use: tools/fetch-photos.ts leaves them out. Each has a reason, found by looking at the photos.",
+  "about": "iNaturalist photos the guide must not use: tools/fetch-photos.ts leaves out a whole sighting (\"observation\") or one photo of it (\"photo\"). Every photo was looked at on 06/10/2026; each entry says why.",
   "skip": [
-    { "observation": 140759259, "species": "sulphur-tuft", "why": "photographed under UV light: the caps glow green" },
-    { "observation": 321124367, "species": "sulphur-tuft", "why": "photographed under UV light: the caps glow green" }
+    {
+      "observation": 140759259,
+      "species": "sulphur-tuft",
+      "why": "photographed under UV light: the caps glow green"
+    },
+    {
+      "observation": 321124367,
+      "species": "sulphur-tuft",
+      "why": "photographed under UV light: the caps glow green"
+    },
+    {
+      "observation": 171313403,
+      "species": "bitter-beech-bolete",
+      "why": "a person's face behind the mushroom"
+    },
+    {
+      "observation": 301500554,
+      "species": "chicken-of-the-woods",
+      "why": "a drawing in a notebook, not a photo"
+    },
+    {
+      "observation": 176491519,
+      "species": "common-earthball",
+      "why": "mostly another fungus (a bright orange Yellow Stagshorn); the earthball is small in a corner"
+    },
+    {
+      "observation": 250693739,
+      "species": "crested-coral",
+      "why": "microscope pictures of spores, and unbranched pink clubs unlike a crested coral"
+    },
+    {
+      "observation": 127489705,
+      "species": "jack-o-lantern",
+      "why": "taken in the dark to show the gills' faint green glow: real, but not what you see by day"
+    },
+    {
+      "observation": 141720980,
+      "species": "parasol",
+      "why": "a person's face beside the mushroom"
+    },
+    {
+      "observation": 145918993,
+      "species": "tripe-fungus",
+      "why": "mostly a door frame; the fungus is a few tiny bits on top of it"
+    },
+    {
+      "observation": 69770230,
+      "species": "witches-butter",
+      "why": "lit from behind, so the black jelly looks red-brown, like another jelly fungus"
+    },
+    {
+      "photo": 572703431,
+      "species": "garlic-waxcap",
+      "why": "held over a field guide's page of drawings of other waxcaps"
+    },
+    {
+      "photo": 441949123,
+      "species": "meadow-coral",
+      "why": "a microscope picture of spores"
+    },
+    {
+      "photo": 613179985,
+      "species": "scurfy-twiglet",
+      "why": "a microscope picture of spores"
+    },
+    {
+      "photo": 351241858,
+      "species": "white-brain",
+      "why": "a microscope picture of spores"
+    },
+    {
+      "photo": 550404365,
+      "species": "willow-shield",
+      "why": "mostly moss; the cap only at the edge"
+    },
+    {
+      "photo": 440749621,
+      "species": "wood-mushroom",
+      "why": "a blur of white cap surface filling the frame"
+    },
+    {
+      "photo": 441949130,
+      "species": "meadow-coral",
+      "why": "a microscope picture of spores or cells"
+    },
+    {
+      "photo": 613180004,
+      "species": "scurfy-twiglet",
+      "why": "a microscope picture of spores or cells"
+    },
+    {
+      "photo": 613180016,
+      "species": "scurfy-twiglet",
+      "why": "a microscope picture of spores or cells"
+    },
+    {
+      "photo": 613180032,
+      "species": "scurfy-twiglet",
+      "why": "a microscope picture of spores or cells"
+    },
+    {
+      "photo": 613180042,
+      "species": "scurfy-twiglet",
+      "why": "a microscope picture of spores or cells"
+    },
+    {
+      "photo": 613180051,
+      "species": "scurfy-twiglet",
+      "why": "a microscope picture of spores or cells"
+    }
   ]
 }

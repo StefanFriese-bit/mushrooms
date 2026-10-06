@@ -270,7 +270,7 @@
       "tellApart": [
         {
           "feature": "Season",
-          "thisOne": "Spring: April to June",
+          "thisOne": "Spring",
           "thatOne": "July to December",
           "sources": [
             "fn",
@@ -292,7 +292,7 @@
         },
         {
           "feature": "Smell",
-          "thisOne": "Strongly mealy, like fresh flour or cucumber",
+          "thisOne": "Strongly mealy (fresh flour)",
           "thatOne": "Sweet, or strong and spicy",
           "sources": [
             "fn",
@@ -330,9 +330,23 @@
     {
       "file": "photos/st-george-s-mushroom/4.webp",
       "view": "whole",
-      "credit": "(c) Ellie B, some rights reserved (CC BY)",
+      "credit": "(c) Susan Marley, some rights reserved (CC BY)",
       "licence": "cc-by",
-      "link": "https://www.inaturalist.org/observations/150415220"
+      "link": "https://www.inaturalist.org/observations/153840815"
+    },
+    {
+      "file": "photos/st-george-s-mushroom/5.webp",
+      "view": "whole",
+      "credit": "(c) Lee, some rights reserved (CC BY)",
+      "licence": "cc-by",
+      "link": "https://www.inaturalist.org/observations/160062642"
+    },
+    {
+      "file": "photos/st-george-s-mushroom/6.webp",
+      "view": "whole",
+      "credit": "(c) Susan Marley, some rights reserved (CC BY)",
+      "licence": "cc-by",
+      "link": "https://www.inaturalist.org/observations/153840815"
     }
   ],
   "sources": [

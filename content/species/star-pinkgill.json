@@ -140,16 +140,44 @@
     {
       "file": "photos/star-pinkgill/1.webp",
       "view": "whole",
-      "credit": "(c) Owen and Carol Fawcett., some rights reserved (CC BY)",
-      "licence": "cc-by",
-      "link": "https://www.inaturalist.org/observations/324875006"
+      "credit": "(c) Charlie Wingert, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/134152904"
     },
     {
       "file": "photos/star-pinkgill/2.webp",
       "view": "whole",
-      "credit": "(c) Simon M Davies, some rights reserved (CC BY-NC)",
+      "credit": "Kian Hayles-Cotton, no rights reserved (CC0)",
+      "licence": "cc0",
+      "link": "https://www.inaturalist.org/observations/251160034"
+    },
+    {
+      "file": "photos/star-pinkgill/3.webp",
+      "view": "whole",
+      "credit": "(c) naturenab, some rights reserved (CC BY-NC)",
       "licence": "cc-by-nc",
-      "link": "https://www.inaturalist.org/observations/322287107"
+      "link": "https://www.inaturalist.org/observations/250350032"
+    },
+    {
+      "file": "photos/star-pinkgill/4.webp",
+      "view": "whole",
+      "credit": "Kian Hayles-Cotton, no rights reserved (CC0)",
+      "licence": "cc0",
+      "link": "https://www.inaturalist.org/observations/251160034"
+    },
+    {
+      "file": "photos/star-pinkgill/5.webp",
+      "view": "whole",
+      "credit": "(c) naturenab, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/250350032"
+    },
+    {
+      "file": "photos/star-pinkgill/6.webp",
+      "view": "whole",
+      "credit": "Kian Hayles-Cotton, no rights reserved (CC0)",
+      "licence": "cc0",
+      "link": "https://www.inaturalist.org/observations/251160034"
     }
   ],
   "sources": [

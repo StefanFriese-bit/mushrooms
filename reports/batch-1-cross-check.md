@@ -64,6 +64,11 @@ Each mix-up is named by two websites, so it is now on the core list (`tools/conf
 
 ## Mix-ups named by only one website (not added — two are needed)
 
+**Update 06/10/2026 — added on Stefan's ruling** (a warning named by one website is shown too, as in batch 2): all of
+the pairs below are now on both pages. The Miller ↔ Livid Pinkgill was in fact named by two websites: First Nature's
+Livid Pinkgill page names the Miller as well. For the Shaggy Parasol the lookalike is named as the Deathcap (Wild Food
+UK says only "some of the deadly Amanitas").
+
 - Field Mushroom ↔ Inky Mushroom (only First Nature's Inky Mushroom page).
 - The Prince ↔ Yellow Stainer (only Wikipedia's Yellow Stainer page).
 - The Prince ↔ Freckled Dapperling (only Wild Food UK; the Freckled Dapperling is a batch-2 page, so look again then).

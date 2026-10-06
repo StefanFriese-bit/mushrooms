@@ -295,9 +295,23 @@
     {
       "file": "photos/common-puffball/4.webp",
       "view": "whole",
-      "credit": "(c) Tal Northcroft, some rights reserved (CC BY-NC)",
+      "credit": "(c) littlelinden, some rights reserved (CC BY-NC)",
       "licence": "cc-by-nc",
-      "link": "https://www.inaturalist.org/observations/139210115"
+      "link": "https://www.inaturalist.org/observations/101247238"
+    },
+    {
+      "file": "photos/common-puffball/5.webp",
+      "view": "whole",
+      "credit": "(c) Kieran Roy Powell, some rights reserved (CC BY)",
+      "licence": "cc-by",
+      "link": "https://www.inaturalist.org/observations/248592115"
+    },
+    {
+      "file": "photos/common-puffball/6.webp",
+      "view": "whole",
+      "credit": "(c) Kieran Roy Powell, some rights reserved (CC BY)",
+      "licence": "cc-by",
+      "link": "https://www.inaturalist.org/observations/248592115"
     }
   ],
   "sources": [

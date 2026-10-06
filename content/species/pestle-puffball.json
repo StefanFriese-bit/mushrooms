@@ -158,9 +158,37 @@
     {
       "file": "photos/pestle-puffball/2.webp",
       "view": "whole",
+      "credit": "(c) harleymathieson, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/133617155"
+    },
+    {
+      "file": "photos/pestle-puffball/3.webp",
+      "view": "whole",
+      "credit": "(c) guywallbanks, some rights reserved (CC BY)",
+      "licence": "cc-by",
+      "link": "https://www.inaturalist.org/observations/336125433"
+    },
+    {
+      "file": "photos/pestle-puffball/4.webp",
+      "view": "whole",
+      "credit": "(c) Sam, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/398842131"
+    },
+    {
+      "file": "photos/pestle-puffball/5.webp",
+      "view": "whole",
       "credit": "(c) Craignerrad, some rights reserved (CC BY)",
       "licence": "cc-by",
       "link": "https://www.inaturalist.org/observations/342941217"
+    },
+    {
+      "file": "photos/pestle-puffball/6.webp",
+      "view": "whole",
+      "credit": "(c) Sam, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/398842131"
     }
   ],
   "sources": [
