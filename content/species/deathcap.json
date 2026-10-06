@@ -606,6 +606,39 @@
           ]
         }
       ]
+    },
+    {
+      "scientific": "Chlorophyllum rhacodes",
+      "english": "Shaggy Parasol",
+      "slug": "shaggy-parasol",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Stem base",
+          "thisOne": "Swollen, in a white bag-like volva — scrape away the soil to see it",
+          "thatOne": "Very bulbous, but no bag (volva)",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "wt",
+            "fn-shp",
+            "wf-shp",
+            "wp-shp"
+          ]
+        },
+        {
+          "feature": "Cut flesh",
+          "thisOne": "White; no colour change",
+          "thatOne": "Turns orange-red",
+          "sources": [
+            "wf",
+            "fn-shp",
+            "wf-shp",
+            "wp-shp"
+          ]
+        }
+      ]
     }
   ],
   "noDangerousLookalike": null,
@@ -634,9 +667,23 @@
     {
       "file": "photos/deathcap/4.webp",
       "view": "whole",
-      "credit": "(c) rgoatley, some rights reserved (CC BY-NC)",
+      "credit": "(c) phlambler, some rights reserved (CC BY-NC)",
       "licence": "cc-by-nc",
-      "link": "https://www.inaturalist.org/observations/186570255"
+      "link": "https://www.inaturalist.org/observations/62879846"
+    },
+    {
+      "file": "photos/deathcap/5.webp",
+      "view": "whole",
+      "credit": "(c) Myles McSweeney, some rights reserved (CC BY)",
+      "licence": "cc-by",
+      "link": "https://www.inaturalist.org/observations/136465579"
+    },
+    {
+      "file": "photos/deathcap/6.webp",
+      "view": "whole",
+      "credit": "(c) Myles McSweeney, some rights reserved (CC BY)",
+      "licence": "cc-by",
+      "link": "https://www.inaturalist.org/observations/136465579"
     }
   ],
   "sources": [
@@ -834,6 +881,21 @@
       "id": "wp-sg",
       "title": "Wikipedia — Amanita ceciliae",
       "url": "https://en.wikipedia.org/wiki/Amanita_ceciliae"
+    },
+    {
+      "id": "fn-shp",
+      "title": "First Nature — Chlorophyllum rhacodes, Shaggy Parasol",
+      "url": "https://www.first-nature.com/fungi/chlorophyllum-rhacodes.php"
+    },
+    {
+      "id": "wf-shp",
+      "title": "Wild Food UK — Shaggy Parasol",
+      "url": "https://www.wildfooduk.com/mushroom-guide/shaggy-parasol/"
+    },
+    {
+      "id": "wp-shp",
+      "title": "Wikipedia — Chlorophyllum rhacodes",
+      "url": "https://en.wikipedia.org/wiki/Chlorophyllum_rhacodes"
     },
     {
       "id": "wf-prot",

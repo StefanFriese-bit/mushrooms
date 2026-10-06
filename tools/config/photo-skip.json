@@ -1,0 +1,7 @@
+{
+  "about": "iNaturalist sightings whose photos the guide must not use: tools/fetch-photos.ts leaves them out. Each has a reason, found by looking at the photos.",
+  "skip": [
+    { "observation": 140759259, "species": "sulphur-tuft", "why": "photographed under UV light: the caps glow green" },
+    { "observation": 321124367, "species": "sulphur-tuft", "why": "photographed under UV light: the caps glow green" }
+  ]
+}

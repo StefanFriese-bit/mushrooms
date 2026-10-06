@@ -222,6 +222,88 @@
           ]
         }
       ]
+    },
+    {
+      "scientific": "Entoloma sinuatum",
+      "english": "Livid Pinkgill",
+      "slug": "livid-pinkgill",
+      "kind": "deadly",
+      "tellApart": [
+        {
+          "feature": "Cap",
+          "thisOne": "White to pale grey, soft like suede, with a wavy edge and a sunken centre",
+          "thatOne": "Large, ivory-white to pale grey-brown, often with a broad hump",
+          "sources": [
+            "wf",
+            "wp",
+            "fn-lp",
+            "wp-lp"
+          ]
+        },
+        {
+          "feature": "Gills",
+          "thisOne": "Running down the stem; white turning pink",
+          "thatOne": "Yellowish at first, turning pink",
+          "sources": [
+            "wf",
+            "wp",
+            "fn-lp",
+            "wp-lp"
+          ]
+        },
+        {
+          "feature": "Smell",
+          "thisOne": "Strongly of raw dough, flour or cucumber",
+          "thatOne": "Usually unpleasant or rancid — but sometimes of flour, so smell alone is not enough",
+          "sources": [
+            "wf",
+            "wp",
+            "fn-lp",
+            "wp-lp"
+          ]
+        }
+      ]
+    },
+    {
+      "scientific": "Collybia phyllophila",
+      "english": "Frosty Funnel",
+      "slug": "frosty-funnel",
+      "kind": "deadly",
+      "tellApart": [
+        {
+          "feature": "Smell",
+          "thisOne": "Strongly of raw dough, flour or cucumber",
+          "thatOne": "Sweet, or strong and spicy",
+          "sources": [
+            "wf",
+            "wp",
+            "fn-fr",
+            "wp-fr"
+          ]
+        },
+        {
+          "feature": "Gills",
+          "thisOne": "Running down the stem; white turning pink",
+          "thatOne": "White to cream, crowded",
+          "sources": [
+            "wf",
+            "wp",
+            "fn-fr",
+            "wp-fr"
+          ]
+        },
+        {
+          "feature": "Spore print",
+          "thisOne": "Pink",
+          "thatOne": "Cream with a pinkish-buff tinge",
+          "sources": [
+            "wf",
+            "wp",
+            "fn-fr",
+            "wp-fr"
+          ]
+        }
+      ]
     }
   ],
   "noDangerousLookalike": null,
@@ -290,6 +372,26 @@
       "id": "wp-if",
       "title": "Wikipedia — Collybia dealbata",
       "url": "https://en.wikipedia.org/wiki/Clitocybe_dealbata"
+    },
+    {
+      "id": "fn-lp",
+      "title": "First Nature — Entoloma sinuatum, Livid Pinkgill",
+      "url": "https://www.first-nature.com/fungi/entoloma-sinuatum.php"
+    },
+    {
+      "id": "wp-lp",
+      "title": "Wikipedia — Entoloma sinuatum",
+      "url": "https://en.wikipedia.org/wiki/Entoloma_sinuatum"
+    },
+    {
+      "id": "fn-fr",
+      "title": "First Nature — Collybia phyllophila, Frosty Funnel",
+      "url": "https://www.first-nature.com/fungi/clitocybe-phyllophila.php"
+    },
+    {
+      "id": "wp-fr",
+      "title": "Wikipedia — Collybia phyllophila",
+      "url": "https://en.wikipedia.org/wiki/Collybia_phyllophila"
     },
     {
       "id": "wf-prot",

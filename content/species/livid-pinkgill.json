@@ -317,6 +317,47 @@
           ]
         }
       ]
+    },
+    {
+      "scientific": "Clitopilus prunulus",
+      "english": "The Miller",
+      "slug": "the-miller",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Cap",
+          "thisOne": "Large, ivory-white to pale grey-brown, often with a broad hump",
+          "thatOne": "White to pale grey, soft like suede, with a wavy edge and a sunken centre",
+          "sources": [
+            "fn",
+            "wp",
+            "wf-mi",
+            "wp-mi"
+          ]
+        },
+        {
+          "feature": "Gills",
+          "thisOne": "Yellowish at first, turning pink",
+          "thatOne": "Running down the stem; white turning pink",
+          "sources": [
+            "fn",
+            "wp",
+            "wf-mi",
+            "wp-mi"
+          ]
+        },
+        {
+          "feature": "Smell",
+          "thisOne": "Usually unpleasant or rancid — but sometimes of flour, so smell alone is not enough",
+          "thatOne": "Strongly of raw dough, flour or cucumber",
+          "sources": [
+            "fn",
+            "wp",
+            "wf-mi",
+            "wp-mi"
+          ]
+        }
+      ]
     }
   ],
   "noDangerousLookalike": null,
@@ -425,6 +466,16 @@
       "id": "wp-cd",
       "title": "Wikipedia — Lyophyllum decastes",
       "url": "https://en.wikipedia.org/wiki/Lyophyllum_decastes"
+    },
+    {
+      "id": "wf-mi",
+      "title": "Wild Food UK — The Miller",
+      "url": "https://www.wildfooduk.com/mushroom-guide/the-miller/"
+    },
+    {
+      "id": "wp-mi",
+      "title": "Wikipedia — Clitopilus prunulus",
+      "url": "https://en.wikipedia.org/wiki/Clitopilus_prunulus"
     },
     {
       "id": "wf-prot",

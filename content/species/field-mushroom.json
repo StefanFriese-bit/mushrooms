@@ -312,6 +312,50 @@
           ]
         }
       ]
+    },
+    {
+      "scientific": "Agaricus moelleri",
+      "english": "Inky Mushroom",
+      "slug": "inky-mushroom",
+      "kind": "poisonous",
+      "tellApart": [
+        {
+          "feature": "Cut or bruised flesh",
+          "thisOne": "Stays white or turns slightly pink — never yellow",
+          "thatOne": "Turns yellow, most at the stem base; later brown",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "fn-im",
+            "wf-im",
+            "wp-im"
+          ]
+        },
+        {
+          "feature": "Smell",
+          "thisOne": "Pleasant, mushroomy",
+          "thatOne": "Unpleasant: ink or carbolic soap",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-im",
+            "wp-im"
+          ]
+        },
+        {
+          "feature": "Where",
+          "thisOne": "Open grassland — pasture, parks and lawns; rarely in woods",
+          "thatOne": "Broadleaved woods and under hedges; now and then in grass",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "fn-im",
+            "wf-im"
+          ]
+        }
+      ]
     }
   ],
   "noDangerousLookalike": null,
@@ -405,6 +449,21 @@
       "id": "wt-poison",
       "title": "Woodland Trust — Poisonous mushrooms: 8 most dangerous UK mushrooms",
       "url": "https://www.woodlandtrust.org.uk/blog/2025/02/poisonous-mushrooms/"
+    },
+    {
+      "id": "fn-im",
+      "title": "First Nature — Agaricus moelleri, Inky Mushroom",
+      "url": "https://www.first-nature.com/fungi/agaricus-moelleri.php"
+    },
+    {
+      "id": "wf-im",
+      "title": "Wild Food UK — Inky Mushroom",
+      "url": "https://www.wildfooduk.com/mushroom-guide/inky-mushroom/"
+    },
+    {
+      "id": "wp-im",
+      "title": "Wikipedia — Agaricus moelleri",
+      "url": "https://en.wikipedia.org/wiki/Agaricus_moelleri"
     },
     {
       "id": "wf-prot",

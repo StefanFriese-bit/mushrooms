@@ -14,6 +14,17 @@ describe('pickPhotos', () => {
     expect(picked[0]).toMatchObject({ licence: 'cc-by-nc', link: 'https://www.inaturalist.org/observations/3' });
     expect(picked[0].largeUrl).toBe('https://inaturalist-open-data.s3.amazonaws.com/photos/30/large.jpg');
   });
+  it('takes up to N open photos from each sighting, and lists every sighting\'s first photo before the second ones', () => {
+    const many = (id: number, faves: number, licences: Array<string | null>) => ({
+      id, faves_count: faves,
+      photos: licences.map((l, i) => ({ id: id * 10 + i, license_code: l, attribution: `(c) person ${id}`, url: `https://x/photos/${id * 10 + i}/square.jpg` })),
+    });
+    // Sighting 2 is the most faved; its second photo is all-rights-reserved, so its first and third are taken.
+    const picked = pickPhotos([many(1, 3, ['cc-by', 'cc-by', 'cc-by', 'cc-by']), many(2, 8, ['cc0', null, 'cc0']), many(3, 1, ['cc-by-nc'])], 6, 3);
+    expect(picked.map((p) => p.photoId)).toEqual([20, 10, 30, 22, 11, 12]);
+    expect(picked.every((p) => p.licence !== null)).toBe(true);
+    expect(pickPhotos([many(1, 3, ['cc-by', 'cc-by', 'cc-by'])], 6, 3)).toHaveLength(3);
+  });
   it('names the observer on a CC0 photo, whose iNaturalist credit is only "no rights reserved"', () => {
     const cc0 = (user: { login: string; name?: string | null }) => ({
       id: 7, faves_count: 0, user,

@@ -190,6 +190,50 @@
           ]
         }
       ]
+    },
+    {
+      "scientific": "Agaricus campestris",
+      "english": "Field Mushroom",
+      "slug": "field-mushroom",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Cut or bruised flesh",
+          "thisOne": "Turns yellow, most at the stem base; later brown",
+          "thatOne": "Stays white or turns slightly pink — never yellow",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "fn-fm",
+            "wf-fm",
+            "wp-fm"
+          ]
+        },
+        {
+          "feature": "Smell",
+          "thisOne": "Unpleasant: ink or carbolic soap",
+          "thatOne": "Pleasant, mushroomy",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-fm",
+            "wf-fm"
+          ]
+        },
+        {
+          "feature": "Where",
+          "thisOne": "Broadleaved woods and under hedges; now and then in grass",
+          "thatOne": "Open grassland — pasture, parks and lawns; rarely in woods",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-fm",
+            "wf-fm",
+            "wp-fm"
+          ]
+        }
+      ]
     }
   ],
   "noDangerousLookalike": null,
@@ -253,6 +297,21 @@
       "id": "wp-pr",
       "title": "Wikipedia — Agaricus augustus",
       "url": "https://en.wikipedia.org/wiki/Agaricus_augustus"
+    },
+    {
+      "id": "fn-fm",
+      "title": "First Nature — Agaricus campestris, Field Mushroom",
+      "url": "https://www.first-nature.com/fungi/agaricus-campestris.php"
+    },
+    {
+      "id": "wf-fm",
+      "title": "Wild Food UK — Field Mushroom",
+      "url": "https://www.wildfooduk.com/mushroom-guide/field-mushroom/"
+    },
+    {
+      "id": "wp-fm",
+      "title": "Wikipedia — Agaricus campestris",
+      "url": "https://en.wikipedia.org/wiki/Agaricus_campestris"
     },
     {
       "id": "wf-prot",

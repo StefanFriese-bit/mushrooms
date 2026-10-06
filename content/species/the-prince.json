@@ -218,6 +218,50 @@
           ]
         }
       ]
+    },
+    {
+      "scientific": "Agaricus xanthodermus",
+      "english": "Yellow Stainer",
+      "slug": "yellow-stainer",
+      "kind": "poisonous",
+      "tellApart": [
+        {
+          "feature": "Smell",
+          "thisOne": "Strongly of bitter almonds, like marzipan",
+          "thatOne": "Ink, iodine or carbolic soap — strongest at the cut stem base",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-ys",
+            "wp-ys"
+          ]
+        },
+        {
+          "feature": "Cut stem base",
+          "thisOne": "At most faintly yellow",
+          "thatOne": "Bright chrome yellow at once",
+          "sources": [
+            "wf",
+            "wp",
+            "fn-ys",
+            "wf-ys",
+            "wp-ys"
+          ]
+        },
+        {
+          "feature": "Cap",
+          "thisOne": "Large, 10–25 cm, with chestnut-brown scales",
+          "thatOne": "White, often square-topped when young",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "fn-ys",
+            "wf-ys",
+            "wp-ys"
+          ]
+        }
+      ]
     }
   ],
   "noDangerousLookalike": null,
@@ -291,6 +335,21 @@
       "id": "wp-fd",
       "title": "Wikipedia — Echinoderma asperum",
       "url": "https://en.wikipedia.org/wiki/Echinoderma_asperum"
+    },
+    {
+      "id": "fn-ys",
+      "title": "First Nature — Agaricus xanthodermus, Yellow Stainer",
+      "url": "https://www.first-nature.com/fungi/agaricus-xanthodermus.php"
+    },
+    {
+      "id": "wf-ys",
+      "title": "Wild Food UK — Yellow Stainer",
+      "url": "https://www.wildfooduk.com/mushroom-guide/yellow-stainer/"
+    },
+    {
+      "id": "wp-ys",
+      "title": "Wikipedia — Agaricus xanthodermus",
+      "url": "https://en.wikipedia.org/wiki/Agaricus_xanthodermus"
     },
     {
       "id": "wf-prot",

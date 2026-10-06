@@ -261,6 +261,47 @@
           ]
         }
       ]
+    },
+    {
+      "scientific": "Collybia phyllophila",
+      "english": "Frosty Funnel",
+      "slug": "frosty-funnel",
+      "kind": "deadly",
+      "tellApart": [
+        {
+          "feature": "Season",
+          "thisOne": "Spring: April to June",
+          "thatOne": "July to December",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-fr"
+          ]
+        },
+        {
+          "feature": "Cap",
+          "thisOne": "White to cream, thick and firm, often misshapen",
+          "thatOne": "White with a frosty, chalky coating; flat to slightly sunken",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "fn-fr",
+            "wp-fr"
+          ]
+        },
+        {
+          "feature": "Smell",
+          "thisOne": "Strongly mealy, like fresh flour or cucumber",
+          "thatOne": "Sweet, or strong and spicy",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-fr",
+            "wp-fr"
+          ]
+        }
+      ]
     }
   ],
   "noDangerousLookalike": null,
@@ -334,6 +375,16 @@
       "id": "wp-lp",
       "title": "Wikipedia — Entoloma sinuatum",
       "url": "https://en.wikipedia.org/wiki/Entoloma_sinuatum"
+    },
+    {
+      "id": "fn-fr",
+      "title": "First Nature — Collybia phyllophila, Frosty Funnel",
+      "url": "https://www.first-nature.com/fungi/clitocybe-phyllophila.php"
+    },
+    {
+      "id": "wp-fr",
+      "title": "Wikipedia — Collybia phyllophila",
+      "url": "https://en.wikipedia.org/wiki/Collybia_phyllophila"
     },
     {
       "id": "wf-prot",

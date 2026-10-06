@@ -286,6 +286,39 @@
           ]
         }
       ]
+    },
+    {
+      "scientific": "Amanita phalloides",
+      "english": "Deathcap",
+      "slug": "deathcap",
+      "kind": "deadly",
+      "tellApart": [
+        {
+          "feature": "Stem base",
+          "thisOne": "Very bulbous, but no bag (volva)",
+          "thatOne": "Swollen, in a white bag-like volva — scrape away the soil to see it",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "fn-dc",
+            "wf-dc",
+            "wp-dc",
+            "wt-dc"
+          ]
+        },
+        {
+          "feature": "Cut flesh",
+          "thisOne": "Turns orange-red",
+          "thatOne": "White; no colour change",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "wf-dc"
+          ]
+        }
+      ]
     }
   ],
   "noDangerousLookalike": null,
@@ -384,6 +417,26 @@
       "id": "wf-sl",
       "title": "Wild Food UK — Slender Parasol",
       "url": "https://www.wildfooduk.com/mushroom-guide/slender-parasol/"
+    },
+    {
+      "id": "fn-dc",
+      "title": "First Nature — Amanita phalloides, Deathcap",
+      "url": "https://www.first-nature.com/fungi/amanita-phalloides.php"
+    },
+    {
+      "id": "wf-dc",
+      "title": "Wild Food UK — Deathcap",
+      "url": "https://www.wildfooduk.com/mushroom-guide/deathcap/"
+    },
+    {
+      "id": "wp-dc",
+      "title": "Wikipedia — Amanita phalloides",
+      "url": "https://en.wikipedia.org/wiki/Amanita_phalloides"
+    },
+    {
+      "id": "wt-dc",
+      "title": "Woodland Trust — Deathcap",
+      "url": "https://www.woodlandtrust.org.uk/trees-woods-and-wildlife/fungi-and-lichens/deathcap/"
     },
     {
       "id": "wf-prot",

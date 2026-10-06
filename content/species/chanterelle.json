@@ -367,16 +367,16 @@
     {
       "file": "photos/chanterelle/1.webp",
       "view": "whole",
-      "credit": "Piermario Maculan, no rights reserved (CC0)",
-      "licence": "cc0",
-      "link": "https://www.inaturalist.org/observations/241726630"
+      "credit": "(c) Tomos Hughes, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/176629299"
     },
     {
       "file": "photos/chanterelle/2.webp",
       "view": "whole",
-      "credit": "(c) Tomos Hughes, some rights reserved (CC BY-NC)",
-      "licence": "cc-by-nc",
-      "link": "https://www.inaturalist.org/observations/176629299"
+      "credit": "Piermario Maculan, no rights reserved (CC0)",
+      "licence": "cc0",
+      "link": "https://www.inaturalist.org/observations/241726630"
     },
     {
       "file": "photos/chanterelle/3.webp",
@@ -388,9 +388,23 @@
     {
       "file": "photos/chanterelle/4.webp",
       "view": "whole",
-      "credit": "(c) lgrant12, some rights reserved (CC BY-NC)",
+      "credit": "(c) Tomos Hughes, some rights reserved (CC BY-NC)",
       "licence": "cc-by-nc",
-      "link": "https://www.inaturalist.org/observations/92229402"
+      "link": "https://www.inaturalist.org/observations/176629299"
+    },
+    {
+      "file": "photos/chanterelle/5.webp",
+      "view": "whole",
+      "credit": "Piermario Maculan, no rights reserved (CC0)",
+      "licence": "cc0",
+      "link": "https://www.inaturalist.org/observations/241726630"
+    },
+    {
+      "file": "photos/chanterelle/6.webp",
+      "view": "whole",
+      "credit": "Piermario Maculan, no rights reserved (CC0)",
+      "licence": "cc0",
+      "link": "https://www.inaturalist.org/observations/241726630"
     }
   ],
   "sources": [

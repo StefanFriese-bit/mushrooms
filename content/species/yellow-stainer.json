@@ -282,6 +282,50 @@
           ]
         }
       ]
+    },
+    {
+      "scientific": "Agaricus augustus",
+      "english": "The Prince",
+      "slug": "the-prince",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Smell",
+          "thisOne": "Ink, iodine or carbolic soap — strongest at the cut stem base",
+          "thatOne": "Strongly of bitter almonds, like marzipan",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-pr",
+            "wp-pr"
+          ]
+        },
+        {
+          "feature": "Cut stem base",
+          "thisOne": "Bright chrome yellow at once",
+          "thatOne": "At most faintly yellow",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "wf-pr",
+            "wp-pr"
+          ]
+        },
+        {
+          "feature": "Cap",
+          "thisOne": "White, often square-topped when young",
+          "thatOne": "Large, 10–25 cm, with chestnut-brown scales",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "fn-pr",
+            "wf-pr",
+            "wp-pr"
+          ]
+        }
+      ]
     }
   ],
   "noDangerousLookalike": null,
@@ -370,6 +414,21 @@
       "id": "fn-dc",
       "title": "First Nature — Amanita phalloides, Deathcap",
       "url": "https://www.first-nature.com/fungi/amanita-phalloides.php"
+    },
+    {
+      "id": "fn-pr",
+      "title": "First Nature — Agaricus augustus, The Prince",
+      "url": "https://www.first-nature.com/fungi/agaricus-augustus.php"
+    },
+    {
+      "id": "wf-pr",
+      "title": "Wild Food UK — The Prince",
+      "url": "https://www.wildfooduk.com/mushroom-guide/prince/"
+    },
+    {
+      "id": "wp-pr",
+      "title": "Wikipedia — Agaricus augustus",
+      "url": "https://en.wikipedia.org/wiki/Agaricus_augustus"
     },
     {
       "id": "wf-prot",

@@ -139,7 +139,90 @@
       ]
     }
   },
-  "lookalikes": [],
+  "lookalikes": [
+    {
+      "scientific": "Calocybe gambosa",
+      "english": "St. George's Mushroom",
+      "slug": "st-george-s-mushroom",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Season",
+          "thisOne": "July to December",
+          "thatOne": "Spring: April to June",
+          "sources": [
+            "fn",
+            "fn-sg",
+            "wp-sg"
+          ]
+        },
+        {
+          "feature": "Cap",
+          "thisOne": "White with a frosty, chalky coating; flat to slightly sunken",
+          "thatOne": "White to cream, thick and firm, often misshapen",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-sg",
+            "wf-sg",
+            "wp-sg"
+          ]
+        },
+        {
+          "feature": "Smell",
+          "thisOne": "Sweet, or strong and spicy",
+          "thatOne": "Strongly mealy, like fresh flour or cucumber",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-sg",
+            "wp-sg"
+          ]
+        }
+      ]
+    },
+    {
+      "scientific": "Clitopilus prunulus",
+      "english": "The Miller",
+      "slug": "the-miller",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Smell",
+          "thisOne": "Sweet, or strong and spicy",
+          "thatOne": "Strongly of raw dough, flour or cucumber",
+          "sources": [
+            "fn",
+            "wp",
+            "wf-mi",
+            "wp-mi"
+          ]
+        },
+        {
+          "feature": "Gills",
+          "thisOne": "White to cream, crowded",
+          "thatOne": "Running down the stem; white turning pink",
+          "sources": [
+            "fn",
+            "wp",
+            "wf-mi",
+            "wp-mi"
+          ]
+        },
+        {
+          "feature": "Spore print",
+          "thisOne": "Cream with a pinkish-buff tinge",
+          "thatOne": "Pink",
+          "sources": [
+            "fn",
+            "wp",
+            "wf-mi",
+            "wp-mi"
+          ]
+        }
+      ]
+    }
+  ],
   "noDangerousLookalike": null,
   "photos": [
     {
@@ -181,6 +264,31 @@
       "id": "wp",
       "title": "Wikipedia — Collybia phyllophila",
       "url": "https://en.wikipedia.org/wiki/Collybia_phyllophila"
+    },
+    {
+      "id": "fn-sg",
+      "title": "First Nature — Calocybe gambosa, St. George's Mushroom",
+      "url": "https://www.first-nature.com/fungi/calocybe-gambosa.php"
+    },
+    {
+      "id": "wf-sg",
+      "title": "Wild Food UK — St. George's Mushroom",
+      "url": "https://www.wildfooduk.com/mushroom-guide/st-georges-mushroom/"
+    },
+    {
+      "id": "wp-sg",
+      "title": "Wikipedia — Calocybe gambosa",
+      "url": "https://en.wikipedia.org/wiki/Calocybe_gambosa"
+    },
+    {
+      "id": "wf-mi",
+      "title": "Wild Food UK — The Miller",
+      "url": "https://www.wildfooduk.com/mushroom-guide/the-miller/"
+    },
+    {
+      "id": "wp-mi",
+      "title": "Wikipedia — Clitopilus prunulus",
+      "url": "https://en.wikipedia.org/wiki/Clitopilus_prunulus"
     },
     {
       "id": "wf-prot",
