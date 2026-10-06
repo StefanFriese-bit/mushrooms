@@ -60,6 +60,19 @@ describe('checkRecord', () => {
     const r = rec({ edibility: { value: 'edible-cooked', sources: ['fn'] } });
     expect(checkRecord(r, HOSTS)).toContain('field-mushroom: edibility needs sources from two different websites (has 1)');
   });
+  it('takes the season from one source (it is not a safety fact), but not from none', () => {
+    expect(checkRecord(rec({ seasonMonths: { value: [7, 8, 9, 10, 11], sources: ['fn'] } }), HOSTS)).toEqual([]);
+    expect(checkRecord(rec({ seasonMonths: { value: [7, 8], sources: [] } }), HOSTS))
+      .toContain('field-mushroom: seasonMonths needs at least one source');
+  });
+  it('takes flesh change and smell from one source, but the structural features from two websites', () => {
+    const r = rec();
+    r.features.fleshChange = { value: 'White; no change described', sources: ['wf'] };
+    r.features.smell = { value: 'Faint', sources: ['fn'] };
+    expect(checkRecord(r, HOSTS)).toEqual([]);
+    r.features.bagAtBase = { value: 'no', sources: ['fn'] };
+    expect(checkRecord(r, HOSTS)).toContain('field-mushroom: feature bagAtBase needs sources from two different websites (has 1)');
+  });
   it('refuses a source id the record does not declare', () => {
     const r = rec({ sporePrint: { value: 'Dark brown', sources: ['fn', 'zz'] } });
     expect(checkRecord(r, HOSTS)).toContain('field-mushroom: sporePrint names an undeclared source "zz"');

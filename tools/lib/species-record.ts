@@ -27,6 +27,11 @@ export function checkRecord(r: SpeciesRecord, allowedHosts: string[]): string[] 
     }
     if (hosts.size < 2) say(`${what} needs sources from two different websites (has ${hosts.size})`);
   };
+  // Not a safety fact (spec 5.3): one declared, allowed source is enough.
+  const sourcedOnce = (what: string, sources: string[]) => {
+    for (const id of sources) if (!r.sources.some((s) => s.id === id)) say(`${what} names an undeclared source "${id}"`);
+    if (!sources.some((id) => hostById.has(id))) say(`${what} needs at least one source`);
+  };
 
   if (!/^[a-z0-9-]+$/.test(r.slug)) say('slug must be lower-case letters, digits and hyphens');
   if (!EDIBILITY.includes(r.edibility.value)) say(`edibility "${r.edibility.value}" is not one of ${EDIBILITY.join(', ')}`);
@@ -36,9 +41,12 @@ export function checkRecord(r: SpeciesRecord, allowedHosts: string[]): string[] 
   if (r.topPoints.length < 3 || r.topPoints.length > 6) say(`needs 3 to 6 top points (has ${r.topPoints.length})`);
   r.topPoints.forEach((t, i) => sourced(`top point ${i + 1}`, t.sources));
   sourced('habitat', r.habitat.sources);
-  sourced('seasonMonths', r.seasonMonths.sources);
+  sourcedOnce('seasonMonths', r.seasonMonths.sources);
   sourced('sporePrint', r.sporePrint.sources);
-  for (const [k, v] of Object.entries(r.features)) sourced(`feature ${k}`, v.sources);
+  // The structural features the Check screen compares need two websites; how the flesh changes and how it smells
+  // are descriptions (their safety use is in the "tell them apart" rows, which need two).
+  const DESCRIPTIVE = new Set(['fleshChange', 'smell']);
+  for (const [k, v] of Object.entries(r.features)) (DESCRIPTIVE.has(k) ? sourcedOnce : sourced)(`feature ${k}`, v.sources);
 
   for (const l of r.lookalikes) {
     if (!KINDS.includes(l.kind)) say(`lookalike ${l.english} has an unknown kind "${l.kind}"`);
