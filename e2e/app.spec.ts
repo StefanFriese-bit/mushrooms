@@ -9,7 +9,7 @@ import { searchSpecies } from '../src/species';
 import type { SpeciesRecord } from '../src/types';
 
 const DIST = fileURLToPath(new URL('../dist', import.meta.url));
-const BANNER = 'Test version — not for identifying mushrooms';
+const TEST_WORDS = /test version|\(test\)/i; // the early test version's wording, gone since 06/10/2026
 let site: Awaited<ReturnType<typeof startServer>>;
 // The guide grows batch by batch, so the expected numbers are worked out from the content itself.
 const SPECIES_DIR = new URL('../content/species/', import.meta.url);
@@ -25,10 +25,17 @@ function answersFor(labels: string[]): Answers {
 test.beforeEach(async () => { site = await startServer(DIST); });
 test.afterEach(async () => { await site.stop(); });
 
-test('shows the TEST banner and every species in the guide', async ({ page }) => {
+test('every species is in the guide, and no screen calls the app a test version', async ({ page }) => {
   await page.goto(site.url);
-  await expect(page.getByText(BANNER)).toBeVisible();
   await expect(page.locator('[data-test=species-row]')).toHaveCount(ALL.length);
+  expect(await page.title()).not.toMatch(TEST_WORDS);
+  for (const route of ['#/guide', '#/identify', '#/scan', '#/finds', '#/learn', '#/about', '#/species/deathcap']) {
+    await page.goto(`${site.url}${route}`);
+    await expect(page.getByRole('heading', { level: 1 }).first()).toBeVisible();
+    expect(await page.locator('body').innerText()).not.toMatch(TEST_WORDS);
+  }
+  await page.goto(`${site.url}#/about`);
+  await expect(page.getByText("Never eat a mushroom on this app's word.")).toBeVisible();
 });
 
 test('search narrows the list', async ({ page }) => {
@@ -47,7 +54,7 @@ test('a species page shows its edibility, lookalikes and photo credits, and a lo
   await expect(page.locator('figcaption').first()).toContainText('iNaturalist');
   await page.getByRole('link', { name: 'Yellow Stainer', exact: true }).click(); // source titles name it too
   await expect(page.getByRole('heading', { name: 'Yellow Stainer', exact: true })).toBeVisible();
-  await expect(page.getByText(BANNER)).toBeVisible();
+  await expect(page.locator('header.app-header')).toContainText(brand.name);
 });
 
 test('no page ever says "safe"', async ({ page }) => {
@@ -65,7 +72,7 @@ test('works with the server switched off once it has been opened', async ({ page
   await expect.poll(() => page.evaluate(() => Boolean(navigator.serviceWorker.controller))).toBe(true);
   await site.stop();
   await page.reload();
-  await expect(page.getByText(BANNER)).toBeVisible();
+  await expect(page.locator('header.app-header')).toContainText(brand.name);
   await expect(page.locator('[data-test=species-row]')).toHaveCount(ALL.length);
   await page.goto(`${site.url}#/species/deathcap`);
   await expect(page.getByRole('heading', { name: 'Deathcap' })).toBeVisible();

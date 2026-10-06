@@ -61,9 +61,9 @@ export default defineConfig({
       injectRegister: false,
       includeAssets: ['favicon.ico', 'apple-touch-icon-180x180.png'],
       manifest: {
-        name: `${brand.name} (test version)`,
+        name: brand.name,
         short_name: brand.shortName,
-        description: 'A UK mushroom guide. Test version: not for identifying mushrooms.',
+        description: 'A UK mushroom field guide.',
         theme_color: '#2f3a2f',
         background_color: '#ffffff',
         display: 'standalone',

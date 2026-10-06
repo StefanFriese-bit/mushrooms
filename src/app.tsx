@@ -79,7 +79,6 @@ export function App() {
   return (
     <div class="shell">
       <Header />
-      <div class="test-banner" role="note">Test version — not for identifying mushrooms</div>
       <main>{screen(route)}</main>
       <nav class="tabs" aria-label="Sections">
         {TABS.map((t) => (

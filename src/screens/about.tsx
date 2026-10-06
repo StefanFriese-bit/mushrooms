@@ -9,11 +9,11 @@ export function About() {
   return (
     <>
       <h1>About</h1>
-      <p class="card">Test version — not for identifying mushrooms. Never eat a mushroom on this app's word.</p>
-      <p>{ALL_SPECIES.length} sample species. Built {__BUILD_DATE__}.</p>
+      <p class="card">Never eat a mushroom on this app's word.</p>
+      <p>{ALL_SPECIES.length} species in the guide. Built {__BUILD_DATE__}.</p>
       <p>Storage kept by the phone: {kept}</p>
       {MODEL_FILES.length > 0 && (
-        <p><a href="#/scan-speed">Scan speed test</a> (for the test version: how fast the scan model runs on this phone)</p>
+        <p><a href="#/scan-speed">Scan speed test</a> (how fast the scan model runs on this phone)</p>
       )}
       <h2>Credits</h2>
       <p>Photos from iNaturalist observers, each credited on its species page (CC0, CC BY or CC BY-NC). Facts from First
