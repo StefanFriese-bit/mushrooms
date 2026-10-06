@@ -1,0 +1,261 @@
+{
+  "slug": "verdigris-agaric",
+  "inatId": 55583,
+  "scientific": "Stropharia aeruginosa",
+  "english": "Verdigris Agaric",
+  "olderNames": [
+    "Psilocybe aeruginosa"
+  ],
+  "edibility": {
+    "value": "poisonous",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "edibilityNote": {
+    "value": "Many guides list it as poisonous, though the effects are unclear (Wikipedia); a few European guides call it edible. First Nature: inedible and probably poisonous.",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "A vivid blue-green, very slimy cap, 2–8 cm, flecked with white veil near the edge; it fades to yellow-ochre.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    {
+      "value": "Gills grey to clay-brown, turning purple-brown, with white edges.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    {
+      "value": "A fragile ring that soon turns brown; below it the stem is blue-green with white scales.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    {
+      "value": "In grassy woods, pastures and on roadside verges.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "In grass and leaf litter in woods and pastures, and on roadside verges.",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      7,
+      8,
+      9,
+      10
+    ],
+    "sources": [
+      "fn"
+    ]
+  },
+  "sporePrint": {
+    "value": "Purple-black to purple-brown",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "gills",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "ring": {
+      "value": "sometimes",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "growsOn": {
+      "value": "ground",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "capCm": {
+      "value": [
+        2,
+        8
+      ],
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "fleshChange": {
+      "value": "No colour change when cut is described",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "smell": {
+      "value": "Not distinctive",
+      "sources": [
+        "fn"
+      ]
+    }
+  },
+  "lookalikes": [
+    {
+      "scientific": "Stropharia caerulea",
+      "english": "Blue Roundhead",
+      "slug": "blue-roundhead",
+      "kind": "poisonous",
+      "tellApart": [
+        {
+          "feature": "Gill edges",
+          "thisOne": "White",
+          "thatOne": "Brown, like the gills",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-br",
+            "wf-br"
+          ]
+        },
+        {
+          "feature": "Cap colour",
+          "thisOne": "Darker blue-green, scales lasting",
+          "thatOne": "Paler blue-green, scales mainly when young",
+          "sources": [
+            "fn",
+            "fn-br",
+            "wp-br"
+          ]
+        }
+      ]
+    },
+    {
+      "scientific": "Clitocybe odora",
+      "english": "Aniseed Funnel",
+      "slug": "aniseed-funnel",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Cap",
+          "thisOne": "Slimy, with white scales",
+          "thatOne": "Dry and smooth",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-af"
+          ]
+        },
+        {
+          "feature": "Smell",
+          "thisOne": "Not distinctive",
+          "thatOne": "Strong aniseed",
+          "sources": [
+            "fn",
+            "wf-af"
+          ]
+        },
+        {
+          "feature": "Spore print",
+          "thisOne": "Purple-black",
+          "thatOne": "White",
+          "sources": [
+            "fn",
+            "wp",
+            "wf-af"
+          ]
+        }
+      ]
+    }
+  ],
+  "noDangerousLookalike": null,
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Stropharia aeruginosa, Verdigris Agaric",
+      "url": "https://www.first-nature.com/fungi/stropharia-aeruginosa.php"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Stropharia aeruginosa",
+      "url": "https://en.wikipedia.org/wiki/Stropharia_aeruginosa"
+    },
+    {
+      "id": "fn-br",
+      "title": "First Nature — Stropharia caerulea, Blue Roundhead",
+      "url": "https://www.first-nature.com/fungi/stropharia-caerulea.php"
+    },
+    {
+      "id": "wf-br",
+      "title": "Wild Food UK — Blue Roundhead",
+      "url": "https://www.wildfooduk.com/mushroom-guide/blue-roundhead-stropharia-caerulea/"
+    },
+    {
+      "id": "wp-br",
+      "title": "Wikipedia — Stropharia caerulea",
+      "url": "https://en.wikipedia.org/wiki/Stropharia_caerulea"
+    },
+    {
+      "id": "fn-af",
+      "title": "First Nature — Collybia odora, Aniseed Funnel",
+      "url": "https://www.first-nature.com/fungi/clitocybe-odora.php"
+    },
+    {
+      "id": "wf-af",
+      "title": "Wild Food UK — Aniseed Funnel",
+      "url": "https://www.wildfooduk.com/mushroom-guide/aniseed-funnel/"
+    },
+    {
+      "id": "wp-af",
+      "title": "Wikipedia — Collybia odora",
+      "url": "https://en.wikipedia.org/wiki/Clitocybe_odora"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}
