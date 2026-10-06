@@ -283,7 +283,7 @@
     {
       "scientific": "Agaricus sylvicola",
       "english": "Wood Mushroom",
-      "slug": null,
+      "slug": "wood-mushroom",
       "kind": "edible",
       "tellApart": [
         {

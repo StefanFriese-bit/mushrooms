@@ -1,0 +1,354 @@
+{
+  "slug": "wood-mushroom",
+  "inatId": 154291,
+  "scientific": "Agaricus sylvicola",
+  "english": "Wood Mushroom",
+  "olderNames": [
+    "Agaricus silvicola"
+  ],
+  "edibility": {
+    "value": "edible-cooked",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "edibilityNote": {
+    "value": "Eat it cooked. The deadly Deathcap and Destroying Angel grow in the same woods and can be white too: check every point below.",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "White to cream cap, 6–14 cm, that bruises and ages yellow-ochre.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "Gills free, white or greyish-pink at first, then chocolate brown.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "Smells of aniseed or almond.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "A drooping ring, and a small bulb at the stem base — no bag.",
+      "sources": [
+        "wf",
+        "wp",
+        "fn"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "In all kinds of woodland, usually in troops.",
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      8,
+      9,
+      10,
+      11
+    ],
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "sporePrint": {
+    "value": "Chocolate to purple-brown",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "gills",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    "ring": {
+      "value": "yes",
+      "sources": [
+        "wf",
+        "wp"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "growsOn": {
+      "value": "ground",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "capCm": {
+      "value": [
+        6,
+        14
+      ],
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "fleshChange": {
+      "value": "White and thin; slowly bruises yellow-ochre",
+      "sources": [
+        "wf",
+        "wp"
+      ]
+    },
+    "smell": {
+      "value": "Aniseed or almond",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    }
+  },
+  "lookalikes": [
+    {
+      "scientific": "Amanita phalloides",
+      "english": "Deathcap",
+      "slug": "deathcap",
+      "kind": "deadly",
+      "tellApart": [
+        {
+          "feature": "Gills",
+          "thisOne": "White only at first, soon greyish-pink, then chocolate brown",
+          "thatOne": "White, then cream (at most faintly pink) — never brown",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-dc",
+            "wf-dc"
+          ]
+        },
+        {
+          "feature": "Stem base",
+          "thisOne": "A small bulb, no bag",
+          "thatOne": "Swollen base in a white, bag-like volva",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-dc",
+            "wf-dc"
+          ]
+        },
+        {
+          "feature": "Spore print",
+          "thisOne": "Chocolate to purple-brown",
+          "thatOne": "White",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-dc",
+            "wf-dc"
+          ]
+        }
+      ]
+    },
+    {
+      "scientific": "Amanita virosa",
+      "english": "Destroying Angel",
+      "slug": "destroying-angel",
+      "kind": "deadly",
+      "tellApart": [
+        {
+          "feature": "Gills",
+          "thisOne": "White only at first, soon greyish-pink, then chocolate brown",
+          "thatOne": "Pure white, staying white",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-da",
+            "wf-da"
+          ]
+        },
+        {
+          "feature": "Stem base",
+          "thisOne": "A small bulb, no bag",
+          "thatOne": "Bag-like volva, often buried deep in the soil",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-da",
+            "wf-da"
+          ]
+        },
+        {
+          "feature": "Smell",
+          "thisOne": "Aniseed",
+          "thatOne": "Faint: radish when young, sickly-sweet when old",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-da",
+            "wp-da"
+          ]
+        },
+        {
+          "feature": "Spore print",
+          "thisOne": "Chocolate to purple-brown",
+          "thatOne": "White",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-da",
+            "wf-da"
+          ]
+        }
+      ]
+    },
+    {
+      "scientific": "Agaricus xanthodermus",
+      "english": "Yellow Stainer",
+      "slug": "yellow-stainer",
+      "kind": "poisonous",
+      "tellApart": [
+        {
+          "feature": "Bruised or cut",
+          "thisOne": "Slowly turns ochre-yellow",
+          "thatOne": "Bright chrome yellow at once",
+          "sources": [
+            "wf",
+            "wp",
+            "fn-ys",
+            "wp-ys"
+          ]
+        },
+        {
+          "feature": "Smell",
+          "thisOne": "Aniseed",
+          "thatOne": "Of ink, iodine or carbolic soap",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-ys",
+            "wp-ys"
+          ]
+        }
+      ]
+    }
+  ],
+  "noDangerousLookalike": null,
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Agaricus sylvicola, Wood Mushroom",
+      "url": "https://www.first-nature.com/fungi/agaricus-sylvicola.php"
+    },
+    {
+      "id": "wf",
+      "title": "Wild Food UK — Wood Mushroom",
+      "url": "https://www.wildfooduk.com/mushroom-guide/wood-mushroom/"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Agaricus sylvicola",
+      "url": "https://en.wikipedia.org/wiki/Agaricus_sylvicola"
+    },
+    {
+      "id": "fn-dc",
+      "title": "First Nature — Amanita phalloides, Deathcap",
+      "url": "https://www.first-nature.com/fungi/amanita-phalloides.php"
+    },
+    {
+      "id": "wf-dc",
+      "title": "Wild Food UK — Deathcap",
+      "url": "https://www.wildfooduk.com/mushroom-guide/deathcap/"
+    },
+    {
+      "id": "wp-dc",
+      "title": "Wikipedia — Amanita phalloides",
+      "url": "https://en.wikipedia.org/wiki/Amanita_phalloides"
+    },
+    {
+      "id": "wt-dc",
+      "title": "Woodland Trust — Deathcap",
+      "url": "https://www.woodlandtrust.org.uk/trees-woods-and-wildlife/fungi-and-lichens/deathcap/"
+    },
+    {
+      "id": "fn-da",
+      "title": "First Nature — Amanita virosa, Destroying Angel",
+      "url": "https://www.first-nature.com/fungi/amanita-virosa.php"
+    },
+    {
+      "id": "wf-da",
+      "title": "Wild Food UK — Destroying Angel",
+      "url": "https://www.wildfooduk.com/mushroom-guide/destroying-angel/"
+    },
+    {
+      "id": "wp-da",
+      "title": "Wikipedia — Amanita virosa",
+      "url": "https://en.wikipedia.org/wiki/Amanita_virosa"
+    },
+    {
+      "id": "fn-ys",
+      "title": "First Nature — Agaricus xanthodermus, Yellow Stainer",
+      "url": "https://www.first-nature.com/fungi/agaricus-xanthodermus.php"
+    },
+    {
+      "id": "wf-ys",
+      "title": "Wild Food UK — Yellow Stainer",
+      "url": "https://www.wildfooduk.com/mushroom-guide/yellow-stainer/"
+    },
+    {
+      "id": "wp-ys",
+      "title": "Wikipedia — Agaricus xanthodermus",
+      "url": "https://en.wikipedia.org/wiki/Agaricus_xanthodermus"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}
