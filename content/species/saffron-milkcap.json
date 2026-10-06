@@ -226,7 +226,36 @@
     }
   ],
   "noDangerousLookalike": null,
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/saffron-milkcap/1.webp",
+      "view": "whole",
+      "credit": "(c) kayholford, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/140769767"
+    },
+    {
+      "file": "photos/saffron-milkcap/2.webp",
+      "view": "whole",
+      "credit": "(c) maxevans, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/136406017"
+    },
+    {
+      "file": "photos/saffron-milkcap/3.webp",
+      "view": "whole",
+      "credit": "(c) janwel, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/63981971"
+    },
+    {
+      "file": "photos/saffron-milkcap/4.webp",
+      "view": "whole",
+      "credit": "(c) acidsugarbee, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/321203120"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

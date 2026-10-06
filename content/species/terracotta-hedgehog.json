@@ -135,7 +135,36 @@
       "wf"
     ]
   },
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/terracotta-hedgehog/1.webp",
+      "view": "whole",
+      "credit": "(c) xanthropocene, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/240977738"
+    },
+    {
+      "file": "photos/terracotta-hedgehog/2.webp",
+      "view": "whole",
+      "credit": "Helen Mhari Graham, no rights reserved (CC0)",
+      "licence": "cc0",
+      "link": "https://www.inaturalist.org/observations/148998218"
+    },
+    {
+      "file": "photos/terracotta-hedgehog/3.webp",
+      "view": "whole",
+      "credit": "(c) Nida Baltaityte, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/247975902"
+    },
+    {
+      "file": "photos/terracotta-hedgehog/4.webp",
+      "view": "whole",
+      "credit": "(c) Paco Bergson, some rights reserved (CC BY)",
+      "licence": "cc-by",
+      "link": "https://www.inaturalist.org/observations/96212004"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

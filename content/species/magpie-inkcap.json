@@ -190,7 +190,36 @@
     }
   ],
   "noDangerousLookalike": null,
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/magpie-inkcap/1.webp",
+      "view": "whole",
+      "credit": "(c) dylanfc, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/21061562"
+    },
+    {
+      "file": "photos/magpie-inkcap/2.webp",
+      "view": "whole",
+      "credit": "Rachel Bramwell, no rights reserved (CC0)",
+      "licence": "cc0",
+      "link": "https://www.inaturalist.org/observations/245214818"
+    },
+    {
+      "file": "photos/magpie-inkcap/3.webp",
+      "view": "whole",
+      "credit": "(c) lindageary, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/106549454"
+    },
+    {
+      "file": "photos/magpie-inkcap/4.webp",
+      "view": "whole",
+      "credit": "(c) jsdoc, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/97800412"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

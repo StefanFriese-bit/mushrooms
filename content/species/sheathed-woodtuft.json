@@ -209,7 +209,36 @@
     }
   ],
   "noDangerousLookalike": null,
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/sheathed-woodtuft/1.webp",
+      "view": "whole",
+      "credit": "(c) Phil James, some rights reserved (CC BY)",
+      "licence": "cc-by",
+      "link": "https://www.inaturalist.org/observations/100185937"
+    },
+    {
+      "file": "photos/sheathed-woodtuft/2.webp",
+      "view": "whole",
+      "credit": "(c) Robin Pétermann, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/258654113"
+    },
+    {
+      "file": "photos/sheathed-woodtuft/3.webp",
+      "view": "whole",
+      "credit": "(c) Jazz, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/171843985"
+    },
+    {
+      "file": "photos/sheathed-woodtuft/4.webp",
+      "view": "whole",
+      "credit": "(c) cav91, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/139565910"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

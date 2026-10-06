@@ -189,7 +189,36 @@
     }
   ],
   "noDangerousLookalike": null,
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/shaggy-inkcap-lawyer-s-wig/1.webp",
+      "view": "whole",
+      "credit": "(c) Kieran Roy Powell, some rights reserved (CC BY)",
+      "licence": "cc-by",
+      "link": "https://www.inaturalist.org/observations/192464456"
+    },
+    {
+      "file": "photos/shaggy-inkcap-lawyer-s-wig/2.webp",
+      "view": "whole",
+      "credit": "(c) Stu Walker, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/99200068"
+    },
+    {
+      "file": "photos/shaggy-inkcap-lawyer-s-wig/3.webp",
+      "view": "whole",
+      "credit": "(c) alp42, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/22253170"
+    },
+    {
+      "file": "photos/shaggy-inkcap-lawyer-s-wig/4.webp",
+      "view": "whole",
+      "credit": "(c) Sabarni Sarker, some rights reserved (CC BY)",
+      "licence": "cc-by",
+      "link": "https://www.inaturalist.org/observations/405550853"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

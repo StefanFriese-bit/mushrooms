@@ -153,7 +153,36 @@
       "wf"
     ]
   },
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/wood-hedgehog/1.webp",
+      "view": "whole",
+      "credit": "(c) jaminiamanita, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/191285498"
+    },
+    {
+      "file": "photos/wood-hedgehog/2.webp",
+      "view": "whole",
+      "credit": "(c) mtbeer, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/97653124"
+    },
+    {
+      "file": "photos/wood-hedgehog/3.webp",
+      "view": "whole",
+      "credit": "(c) Andy Goerdel - Texas Master Naturalist, Good Water Chapter, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/326446671"
+    },
+    {
+      "file": "photos/wood-hedgehog/4.webp",
+      "view": "whole",
+      "credit": "(c) Colin Doull, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/306351193"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

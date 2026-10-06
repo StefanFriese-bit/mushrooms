@@ -215,7 +215,36 @@
     }
   ],
   "noDangerousLookalike": null,
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/common-earthball/1.webp",
+      "view": "whole",
+      "credit": "(c) ClaireMM, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/75776390"
+    },
+    {
+      "file": "photos/common-earthball/2.webp",
+      "view": "whole",
+      "credit": "(c) nataliamyco, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/176491519"
+    },
+    {
+      "file": "photos/common-earthball/3.webp",
+      "view": "whole",
+      "credit": "(c) Kieran Roy Powell, some rights reserved (CC BY)",
+      "licence": "cc-by",
+      "link": "https://www.inaturalist.org/observations/247339590"
+    },
+    {
+      "file": "photos/common-earthball/4.webp",
+      "view": "whole",
+      "credit": "(c) avoidasher, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/247386799"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

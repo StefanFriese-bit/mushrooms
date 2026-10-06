@@ -191,7 +191,36 @@
     }
   ],
   "noDangerousLookalike": null,
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/the-prince/1.webp",
+      "view": "whole",
+      "credit": "(c) pixiepoo, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/193778209"
+    },
+    {
+      "file": "photos/the-prince/2.webp",
+      "view": "whole",
+      "credit": "(c) Lauren Ware, some rights reserved (CC BY)",
+      "licence": "cc-by",
+      "link": "https://www.inaturalist.org/observations/174493079"
+    },
+    {
+      "file": "photos/the-prince/3.webp",
+      "view": "whole",
+      "credit": "(c) Kieran Roy Powell, some rights reserved (CC BY)",
+      "licence": "cc-by",
+      "link": "https://www.inaturalist.org/observations/320825152"
+    },
+    {
+      "file": "photos/the-prince/4.webp",
+      "view": "whole",
+      "credit": "(c) tami marisol, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/304192582"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

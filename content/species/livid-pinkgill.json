@@ -198,7 +198,36 @@
     }
   ],
   "noDangerousLookalike": null,
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/livid-pinkgill/1.webp",
+      "view": "whole",
+      "credit": "(c) charliegiblet, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/58221240"
+    },
+    {
+      "file": "photos/livid-pinkgill/2.webp",
+      "view": "whole",
+      "credit": "(c) Federico Calledda, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/68907782"
+    },
+    {
+      "file": "photos/livid-pinkgill/3.webp",
+      "view": "whole",
+      "credit": "(c) Felipe Hidalgo, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/142677842"
+    },
+    {
+      "file": "photos/livid-pinkgill/4.webp",
+      "view": "whole",
+      "credit": "(c) Nicolas Schwab, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/314095357"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

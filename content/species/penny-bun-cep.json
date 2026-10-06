@@ -174,7 +174,36 @@
       "wp"
     ]
   },
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/penny-bun-cep/1.webp",
+      "view": "whole",
+      "credit": "(c) mickr, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/34403981"
+    },
+    {
+      "file": "photos/penny-bun-cep/2.webp",
+      "view": "whole",
+      "credit": "(c) pmgaspar, some rights reserved (CC BY)",
+      "licence": "cc-by",
+      "link": "https://www.inaturalist.org/observations/245736172"
+    },
+    {
+      "file": "photos/penny-bun-cep/3.webp",
+      "view": "whole",
+      "credit": "(c) mattstrand, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/336515627"
+    },
+    {
+      "file": "photos/penny-bun-cep/4.webp",
+      "view": "whole",
+      "credit": "(c) akel05, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/185052092"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

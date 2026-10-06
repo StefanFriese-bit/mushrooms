@@ -132,7 +132,36 @@
       "wf"
     ]
   },
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/horn-of-plenty/1.webp",
+      "view": "whole",
+      "credit": "(c) zoepan, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/140981478"
+    },
+    {
+      "file": "photos/horn-of-plenty/2.webp",
+      "view": "whole",
+      "credit": "(c) gemha, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/99971390"
+    },
+    {
+      "file": "photos/horn-of-plenty/3.webp",
+      "view": "whole",
+      "credit": "(c) Cara Ennis, some rights reserved (CC BY)",
+      "licence": "cc-by",
+      "link": "https://www.inaturalist.org/observations/319831841"
+    },
+    {
+      "file": "photos/horn-of-plenty/4.webp",
+      "view": "whole",
+      "credit": "(c) Reinier van der Kuip, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/180811539"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

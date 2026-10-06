@@ -216,7 +216,36 @@
     }
   ],
   "noDangerousLookalike": null,
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/fairy-ring-champignon/1.webp",
+      "view": "whole",
+      "credit": "(c) charmaine09, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/100136269"
+    },
+    {
+      "file": "photos/fairy-ring-champignon/2.webp",
+      "view": "whole",
+      "credit": "goldfjnch, no rights reserved (CC0)",
+      "licence": "cc0",
+      "link": "https://www.inaturalist.org/observations/58984897"
+    },
+    {
+      "file": "photos/fairy-ring-champignon/3.webp",
+      "view": "whole",
+      "credit": "(c) rishi1111111, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/185455419"
+    },
+    {
+      "file": "photos/fairy-ring-champignon/4.webp",
+      "view": "whole",
+      "credit": "(c) Frederick Robert McCreery, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/189557331"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

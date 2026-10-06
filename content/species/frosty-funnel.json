@@ -141,7 +141,36 @@
   },
   "lookalikes": [],
   "noDangerousLookalike": null,
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/frosty-funnel/1.webp",
+      "view": "whole",
+      "credit": "(c) Rob Foster, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/98043244"
+    },
+    {
+      "file": "photos/frosty-funnel/2.webp",
+      "view": "whole",
+      "credit": "(c) rhubarbnhol, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/323900822"
+    },
+    {
+      "file": "photos/frosty-funnel/3.webp",
+      "view": "whole",
+      "credit": "(c) Paco Bergson, some rights reserved (CC BY)",
+      "licence": "cc-by",
+      "link": "https://www.inaturalist.org/observations/72102349"
+    },
+    {
+      "file": "photos/frosty-funnel/4.webp",
+      "view": "whole",
+      "credit": "(c) Andy Donegan, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/251215408"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

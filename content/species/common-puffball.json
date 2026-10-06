@@ -238,7 +238,36 @@
     }
   ],
   "noDangerousLookalike": null,
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/common-puffball/1.webp",
+      "view": "whole",
+      "credit": "(c) Kieran Roy Powell, some rights reserved (CC BY)",
+      "licence": "cc-by",
+      "link": "https://www.inaturalist.org/observations/248592115"
+    },
+    {
+      "file": "photos/common-puffball/2.webp",
+      "view": "whole",
+      "credit": "(c) paterbr, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/94858453"
+    },
+    {
+      "file": "photos/common-puffball/3.webp",
+      "view": "whole",
+      "credit": "(c) phouse, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/141696775"
+    },
+    {
+      "file": "photos/common-puffball/4.webp",
+      "view": "whole",
+      "credit": "(c) Tal Northcroft, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/139210115"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

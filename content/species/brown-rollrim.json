@@ -195,7 +195,36 @@
     }
   ],
   "noDangerousLookalike": null,
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/brown-rollrim/1.webp",
+      "view": "whole",
+      "credit": "(c) Victoria M., some rights reserved (CC BY)",
+      "licence": "cc-by",
+      "link": "https://www.inaturalist.org/observations/97027061"
+    },
+    {
+      "file": "photos/brown-rollrim/2.webp",
+      "view": "whole",
+      "credit": "(c) Jason Lee, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/311708113"
+    },
+    {
+      "file": "photos/brown-rollrim/3.webp",
+      "view": "whole",
+      "credit": "(c) apatel1, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/185455800"
+    },
+    {
+      "file": "photos/brown-rollrim/4.webp",
+      "view": "whole",
+      "credit": "(c) Dal, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/322125909"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

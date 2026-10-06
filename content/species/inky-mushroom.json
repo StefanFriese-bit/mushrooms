@@ -193,7 +193,36 @@
     }
   ],
   "noDangerousLookalike": null,
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/inky-mushroom/1.webp",
+      "view": "whole",
+      "credit": "(c) J Castillo, some rights reserved (CC BY)",
+      "licence": "cc-by",
+      "link": "https://www.inaturalist.org/observations/139224221"
+    },
+    {
+      "file": "photos/inky-mushroom/2.webp",
+      "view": "whole",
+      "credit": "(c) gooska, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/400785914"
+    },
+    {
+      "file": "photos/inky-mushroom/3.webp",
+      "view": "whole",
+      "credit": "(c) Steve, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/178256587"
+    },
+    {
+      "file": "photos/inky-mushroom/4.webp",
+      "view": "whole",
+      "credit": "(c) Cara Ennis, some rights reserved (CC BY)",
+      "licence": "cc-by",
+      "link": "https://www.inaturalist.org/observations/321420311"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

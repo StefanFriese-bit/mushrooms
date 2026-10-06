@@ -188,7 +188,36 @@
     }
   ],
   "noDangerousLookalike": null,
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/fool-s-webcap/1.webp",
+      "view": "whole",
+      "credit": "(c) Federico Calledda, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/69403150"
+    },
+    {
+      "file": "photos/fool-s-webcap/2.webp",
+      "view": "whole",
+      "credit": "(c) Marco Floriani, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/137721031"
+    },
+    {
+      "file": "photos/fool-s-webcap/3.webp",
+      "view": "whole",
+      "credit": "(c) ljantos, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/229287805"
+    },
+    {
+      "file": "photos/fool-s-webcap/4.webp",
+      "view": "whole",
+      "credit": "(c) Federico Calledda, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/72423280"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

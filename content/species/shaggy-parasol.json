@@ -257,7 +257,36 @@
     }
   ],
   "noDangerousLookalike": null,
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/shaggy-parasol/1.webp",
+      "view": "whole",
+      "credit": "(c) ellisandmum, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/245364113"
+    },
+    {
+      "file": "photos/shaggy-parasol/2.webp",
+      "view": "whole",
+      "credit": "(c) frecklegoat, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/54377347"
+    },
+    {
+      "file": "photos/shaggy-parasol/3.webp",
+      "view": "whole",
+      "credit": "(c) David Ashcroft, some rights reserved (CC BY)",
+      "licence": "cc-by",
+      "link": "https://www.inaturalist.org/observations/98278500"
+    },
+    {
+      "file": "photos/shaggy-parasol/4.webp",
+      "view": "whole",
+      "credit": "Piermario Maculan, no rights reserved (CC0)",
+      "licence": "cc0",
+      "link": "https://www.inaturalist.org/observations/137603729"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

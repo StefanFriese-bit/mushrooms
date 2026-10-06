@@ -216,7 +216,36 @@
     }
   ],
   "noDangerousLookalike": null,
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/angel-s-wings/1.webp",
+      "view": "whole",
+      "credit": "(c) irinaarmstrong, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/185745143"
+    },
+    {
+      "file": "photos/angel-s-wings/2.webp",
+      "view": "whole",
+      "credit": "(c) Guy Milligan, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/313511760"
+    },
+    {
+      "file": "photos/angel-s-wings/3.webp",
+      "view": "whole",
+      "credit": "(c) nebrooks, some rights reserved (CC BY)",
+      "licence": "cc-by",
+      "link": "https://www.inaturalist.org/observations/327172574"
+    },
+    {
+      "file": "photos/angel-s-wings/4.webp",
+      "view": "whole",
+      "credit": "(c) niccitango, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/137787246"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

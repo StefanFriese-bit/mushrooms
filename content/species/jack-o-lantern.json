@@ -191,7 +191,36 @@
     }
   ],
   "noDangerousLookalike": null,
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/jack-o-lantern/1.webp",
+      "view": "whole",
+      "credit": "(c) ionafraser, some rights reserved (CC BY)",
+      "licence": "cc-by",
+      "link": "https://www.inaturalist.org/observations/176866962"
+    },
+    {
+      "file": "photos/jack-o-lantern/2.webp",
+      "view": "whole",
+      "credit": "(c) misskirst, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/240186297"
+    },
+    {
+      "file": "photos/jack-o-lantern/3.webp",
+      "view": "whole",
+      "credit": "(c) Max Mudie, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/127489705"
+    },
+    {
+      "file": "photos/jack-o-lantern/4.webp",
+      "view": "whole",
+      "credit": "(c) Paul Cook, some rights reserved (CC BY)",
+      "licence": "cc-by",
+      "link": "https://www.inaturalist.org/observations/404821801"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

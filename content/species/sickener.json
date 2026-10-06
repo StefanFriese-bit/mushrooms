@@ -181,7 +181,36 @@
     }
   ],
   "noDangerousLookalike": null,
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/sickener/1.webp",
+      "view": "whole",
+      "credit": "(c) Simon M Davies, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/319849584"
+    },
+    {
+      "file": "photos/sickener/2.webp",
+      "view": "whole",
+      "credit": "(c) mwcs105, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/269159843"
+    },
+    {
+      "file": "photos/sickener/3.webp",
+      "view": "whole",
+      "credit": "(c) Scott Shanks, some rights reserved (CC BY)",
+      "licence": "cc-by",
+      "link": "https://www.inaturalist.org/observations/311966547"
+    },
+    {
+      "file": "photos/sickener/4.webp",
+      "view": "whole",
+      "credit": "(c) Nick, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/308428908"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

@@ -216,7 +216,36 @@
     }
   ],
   "noDangerousLookalike": null,
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/lilac-fibrecap/1.webp",
+      "view": "whole",
+      "credit": "(c) tim-indie, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/325014273"
+    },
+    {
+      "file": "photos/lilac-fibrecap/2.webp",
+      "view": "whole",
+      "credit": "(c) Lukas Large, some rights reserved (CC BY)",
+      "licence": "cc-by",
+      "link": "https://www.inaturalist.org/observations/139089518"
+    },
+    {
+      "file": "photos/lilac-fibrecap/3.webp",
+      "view": "whole",
+      "credit": "(c) Andy Donegan, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/106970909"
+    },
+    {
+      "file": "photos/lilac-fibrecap/4.webp",
+      "view": "whole",
+      "credit": "(c) ingebeck, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/323323751"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

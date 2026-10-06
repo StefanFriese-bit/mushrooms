@@ -157,7 +157,36 @@
       "wf"
     ]
   },
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/dryad-s-saddle/1.webp",
+      "view": "whole",
+      "credit": "(c) nathan-gregory, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/49864726"
+    },
+    {
+      "file": "photos/dryad-s-saddle/2.webp",
+      "view": "whole",
+      "credit": "(c) Darren Obbard, some rights reserved (CC BY)",
+      "licence": "cc-by",
+      "link": "https://www.inaturalist.org/observations/281737458"
+    },
+    {
+      "file": "photos/dryad-s-saddle/3.webp",
+      "view": "whole",
+      "credit": "(c) Sophie Headland, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/168078559"
+    },
+    {
+      "file": "photos/dryad-s-saddle/4.webp",
+      "view": "whole",
+      "credit": "(c) fatsquirrel, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/131707616"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

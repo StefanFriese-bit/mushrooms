@@ -154,7 +154,36 @@
       "wf"
     ]
   },
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/giant-puffball/1.webp",
+      "view": "whole",
+      "credit": "(c) forever_failure, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/89047635"
+    },
+    {
+      "file": "photos/giant-puffball/2.webp",
+      "view": "whole",
+      "credit": "(c) gimboid45, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/132676170"
+    },
+    {
+      "file": "photos/giant-puffball/3.webp",
+      "view": "whole",
+      "credit": "(c) naturevideogameguy, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/31601253"
+    },
+    {
+      "file": "photos/giant-puffball/4.webp",
+      "view": "whole",
+      "credit": "(c) Henry Miller, some rights reserved (CC BY)",
+      "licence": "cc-by",
+      "link": "https://www.inaturalist.org/observations/135931255"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

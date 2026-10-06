@@ -175,7 +175,36 @@
     }
   ],
   "noDangerousLookalike": null,
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/pale-oyster/1.webp",
+      "view": "whole",
+      "credit": "(c) laurabulpitt, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/120643162"
+    },
+    {
+      "file": "photos/pale-oyster/2.webp",
+      "view": "whole",
+      "credit": "(c) tpreece, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/87677053"
+    },
+    {
+      "file": "photos/pale-oyster/3.webp",
+      "view": "whole",
+      "credit": "(c) Jonathan Prior, some rights reserved (CC BY)",
+      "licence": "cc-by",
+      "link": "https://www.inaturalist.org/observations/130140043"
+    },
+    {
+      "file": "photos/pale-oyster/4.webp",
+      "view": "whole",
+      "credit": "(c) peterpowell, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/300338414"
+    }
+  ],
   "sources": [
     {
       "id": "wf",

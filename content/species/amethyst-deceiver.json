@@ -224,7 +224,36 @@
     }
   ],
   "noDangerousLookalike": null,
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/amethyst-deceiver/1.webp",
+      "view": "whole",
+      "credit": "(c) Ellie B, some rights reserved (CC BY)",
+      "licence": "cc-by",
+      "link": "https://www.inaturalist.org/observations/137394309"
+    },
+    {
+      "file": "photos/amethyst-deceiver/2.webp",
+      "view": "whole",
+      "credit": "(c) devinenature, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/326356118"
+    },
+    {
+      "file": "photos/amethyst-deceiver/3.webp",
+      "view": "whole",
+      "credit": "(c) BirdNerding, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/102954768"
+    },
+    {
+      "file": "photos/amethyst-deceiver/4.webp",
+      "view": "whole",
+      "credit": "(c) Philippa Holdridge, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/187675636"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

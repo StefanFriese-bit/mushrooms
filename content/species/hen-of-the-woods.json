@@ -146,7 +146,36 @@
       "wf"
     ]
   },
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/hen-of-the-woods/1.webp",
+      "view": "whole",
+      "credit": "(c) Pea-en, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/94328368"
+    },
+    {
+      "file": "photos/hen-of-the-woods/2.webp",
+      "view": "whole",
+      "credit": "(c) Nick Taylor Buck, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/61405678"
+    },
+    {
+      "file": "photos/hen-of-the-woods/3.webp",
+      "view": "whole",
+      "credit": "(c) jenmlc, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/97706744"
+    },
+    {
+      "file": "photos/hen-of-the-woods/4.webp",
+      "view": "whole",
+      "credit": "(c) Jethro Reading, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/62384579"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

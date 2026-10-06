@@ -165,7 +165,36 @@
       "wf"
     ]
   },
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/orange-birch-bolete/1.webp",
+      "view": "whole",
+      "credit": "(c) charman13, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/399599555"
+    },
+    {
+      "file": "photos/orange-birch-bolete/2.webp",
+      "view": "whole",
+      "credit": "(c) mags49, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/8467743"
+    },
+    {
+      "file": "photos/orange-birch-bolete/3.webp",
+      "view": "whole",
+      "credit": "(c) Christy, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/187505676"
+    },
+    {
+      "file": "photos/orange-birch-bolete/4.webp",
+      "view": "whole",
+      "credit": "(c) Joe Holt, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/136808458"
+    }
+  ],
   "sources": [
     {
       "id": "fn",
