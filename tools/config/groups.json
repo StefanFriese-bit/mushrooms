@@ -1,0 +1,18 @@
+{
+  "placeId": 6857,
+  "include": [
+    { "name": "Agaricomycetes", "rank": "class" },
+    { "name": "Pezizomycetes", "rank": "class" },
+    { "name": "Tremellomycetes", "rank": "class" },
+    { "name": "Dacrymycetes", "rank": "class" },
+    { "name": "Leotiomycetes", "rank": "class" },
+    { "name": "Xylariales", "rank": "order" },
+    { "name": "Hypocreales", "rank": "order" }
+  ],
+  "exclude": [
+    { "name": "Erysiphaceae", "rank": "family", "why": "powdery mildews" },
+    { "name": "Rhytismatales", "rank": "order", "why": "tar spots" },
+    { "name": "Nectriaceae", "rank": "family", "why": "coral spot and other small pustules on plants" },
+    { "name": "Clavicipitaceae", "rank": "family", "why": "ergot" }
+  ]
+}
