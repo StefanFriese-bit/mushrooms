@@ -1,0 +1,184 @@
+{
+  "slug": "ruby-bolete",
+  "inatId": 833474,
+  "scientific": "Hortiboletus rubellus",
+  "english": "Ruby Bolete",
+  "olderNames": [
+    "Xerocomus rubellus",
+    "Boletus rubellus",
+    "Xerocomellus rubellus"
+  ],
+  "edibility": {
+    "value": "edible-cooked",
+    "sources": [
+      "wf",
+      "wp",
+      "fn"
+    ]
+  },
+  "edibilityNote": {
+    "value": "Edible but poor: it tastes of soap to some and is often full of maggots.",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "A small bolete with a velvety scarlet to raspberry-red cap, 3–8 cm, fading olive-red, often with a yellow edge.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "Underneath: lemon-yellow pores, greenish with age, slowly bruising blue.",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    {
+      "value": "Stem yellow at the top, increasingly red below.",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    {
+      "value": "Under oak and beech, often in parks, gardens and grassy woods.",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "Rich soil under oak and beech, often in parks, gardens and grassy woodland.",
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      8,
+      9
+    ],
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "sporePrint": {
+    "value": "Olive-brown",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "pores",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    "ring": {
+      "value": "no",
+      "sources": [
+        "wp",
+        "fn",
+        "wf"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "wp",
+        "fn",
+        "wf"
+      ]
+    },
+    "growsOn": {
+      "value": "ground",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "capCm": {
+      "value": [
+        3,
+        8
+      ],
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    "fleshChange": {
+      "value": "Yellowish, slowly turning blue when cut",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    "smell": {
+      "value": "Faint and pleasant",
+      "sources": [
+        "fn"
+      ]
+    }
+  },
+  "lookalikes": [],
+  "noDangerousLookalike": {
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Hortiboletus rubellus, Ruby Bolete",
+      "url": "https://www.first-nature.com/fungi/hortiboletus-rubellus.php"
+    },
+    {
+      "id": "wf",
+      "title": "Wild Food UK — Ruby Bolete",
+      "url": "https://www.wildfooduk.com/mushroom-guide/ruby-bolete/"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Hortiboletus rubellus",
+      "url": "https://en.wikipedia.org/wiki/Hortiboletus_rubellus"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}

@@ -498,6 +498,36 @@
           ]
         }
       ]
+    },
+    {
+      "scientific": "Rhodocollybia maculata",
+      "english": "Spotted Toughshank",
+      "slug": "spotted-toughshank",
+      "kind": "not-edible",
+      "tellApart": [
+        {
+          "feature": "Spots",
+          "thisOne": "Pure white all over, no spots",
+          "thatOne": "Rusty-brown spots on cap, gills and stem with age",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-st",
+            "wf-st"
+          ]
+        },
+        {
+          "feature": "Stem base",
+          "thisOne": "A bag (volva), often buried deep",
+          "thatOne": "No bag; often rooting",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-st",
+            "wf-st"
+          ]
+        }
+      ]
     }
   ],
   "noDangerousLookalike": null,
@@ -656,6 +686,16 @@
       "id": "wf-wd",
       "title": "Wild Food UK — White Dapperling",
       "url": "https://www.wildfooduk.com/mushroom-guide/white-dapperling/"
+    },
+    {
+      "id": "fn-st",
+      "title": "First Nature — Rhodocollybia maculata, Spotted Toughshank",
+      "url": "https://www.first-nature.com/fungi/rhodocollybia-maculata.php"
+    },
+    {
+      "id": "wf-st",
+      "title": "Wild Food UK — Spotted Toughshank",
+      "url": "https://www.wildfooduk.com/mushroom-guide/spotted-toughshank/"
     },
     {
       "id": "wf-prot",

@@ -1,10 +1,10 @@
 {
-  "slug": "deer-shield",
-  "inatId": 60782,
-  "scientific": "Pluteus cervinus",
-  "english": "Deer Shield",
+  "slug": "whitelaced-shank",
+  "inatId": 1097548,
+  "scientific": "Megacollybia platyphylla",
+  "english": "Whitelaced Shank",
   "olderNames": [
-    "Pluteus atricapillus"
+    "Tricholomopsis platyphylla"
   ],
   "edibility": {
     "value": "not-edible",
@@ -14,11 +14,10 @@
     ]
   },
   "edibilityNote": {
-    "value": "Many guides call it edible but poor (Wikipedia), but some people have been ill after eating it: First Nature advises against gathering it, and Wild Food UK calls it inedible.",
+    "value": "Reports conflict, and some people have been sick after eating it: \"for looking, not for cooking\" (First Nature).",
     "sources": [
       "fn",
-      "wf",
-      "wp"
+      "wf"
     ]
   },
   "protectedInUk": {
@@ -30,31 +29,28 @@
   },
   "topPoints": [
     {
-      "value": "Brown cap, 3–14 cm, streaked with darker fibres, bell-shaped then flat.",
+      "value": "A grey-brown cap, 5–15 cm, streaked with radial fibres, often splitting at the edge.",
       "sources": [
         "fn",
-        "wf",
-        "wp"
+        "wf"
       ]
     },
     {
-      "value": "Crowded gills, free of the stem, white turning pink; pink spore print.",
+      "value": "Very broad, crowded white gills, turning cream.",
       "sources": [
         "fn",
-        "wf",
-        "wp"
+        "wf"
       ]
     },
     {
-      "value": "White stem streaked with dark fibres; no ring.",
+      "value": "Thick white cords run from the stem base into the wood — the key feature.",
       "sources": [
         "fn",
-        "wf",
-        "wp"
+        "wf"
       ]
     },
     {
-      "value": "On rotting stumps, logs, woodchip and sawdust of broadleaved trees.",
+      "value": "On or near rotting broadleaved wood — stumps, logs, buried roots.",
       "sources": [
         "fn",
         "wf"
@@ -62,7 +58,7 @@
     }
   ],
   "habitat": {
-    "value": "Stumps, fallen branches and woody debris of broadleaved trees, rarely conifers; also woodchip and sawdust heaps.",
+    "value": "On and near dead broadleaved wood — trunks, stumps, branches and buried roots; rarely conifers.",
     "sources": [
       "fn",
       "wf"
@@ -70,18 +66,12 @@
   },
   "seasonMonths": {
     "value": [
-      1,
-      2,
-      3,
-      4,
-      5,
       6,
       7,
       8,
       9,
       10,
-      11,
-      12
+      11
     ],
     "sources": [
       "fn",
@@ -89,10 +79,10 @@
     ]
   },
   "sporePrint": {
-    "value": "Pale pink to salmon",
+    "value": "White",
     "sources": [
       "fn",
-      "wp"
+      "wf"
     ]
   },
   "features": {
@@ -100,14 +90,12 @@
       "value": "gills",
       "sources": [
         "fn",
-        "wf",
-        "wp"
+        "wf"
       ]
     },
     "ring": {
       "value": "no",
       "sources": [
-        "wp",
         "fn",
         "wf"
       ]
@@ -115,7 +103,6 @@
     "bagAtBase": {
       "value": "no",
       "sources": [
-        "wp",
         "fn",
         "wf"
       ]
@@ -129,23 +116,23 @@
     },
     "capCm": {
       "value": [
-        3,
-        14
+        5,
+        15
       ],
       "sources": [
-        "wf",
-        "wp"
+        "fn",
+        "wf"
       ]
     },
     "fleshChange": {
-      "value": "White and firm; no colour change when cut is described",
+      "value": "Thin and white; no colour change when cut is described",
       "sources": [
         "fn",
         "wf"
       ]
     },
     "smell": {
-      "value": "Faint; like radish (Wild Food UK)",
+      "value": "Not significant",
       "sources": [
         "fn",
         "wf"
@@ -154,31 +141,31 @@
   },
   "lookalikes": [
     {
-      "scientific": "Megacollybia platyphylla",
-      "english": "Whitelaced Shank",
-      "slug": "whitelaced-shank",
+      "scientific": "Pluteus cervinus",
+      "english": "Deer Shield",
+      "slug": "deer-shield",
       "kind": "not-edible",
       "tellApart": [
         {
           "feature": "Gills",
-          "thisOne": "Free of the stem, turning pink",
-          "thatOne": "White to cream, attached to the stem",
+          "thisOne": "White to cream, attached to the stem",
+          "thatOne": "Free of the stem, turning pink",
           "sources": [
             "fn",
             "wf",
-            "fn-ws",
-            "wf-ws"
+            "fn-ds",
+            "wf-ds"
           ]
         },
         {
           "feature": "Spore print",
-          "thisOne": "Pale pink to salmon",
-          "thatOne": "White",
+          "thisOne": "White",
+          "thatOne": "Pale pink to salmon",
           "sources": [
             "fn",
-            "wp",
-            "fn-ws",
-            "wf-ws"
+            "wf",
+            "fn-ds",
+            "wp-ds"
           ]
         }
       ]
@@ -189,28 +176,28 @@
   "sources": [
     {
       "id": "fn",
-      "title": "First Nature — Pluteus cervinus, Deer Shield",
-      "url": "https://www.first-nature.com/fungi/pluteus-cervinus.php"
-    },
-    {
-      "id": "wf",
-      "title": "Wild Food UK — Deer Shield",
-      "url": "https://www.wildfooduk.com/mushroom-guide/deer-shield/"
-    },
-    {
-      "id": "wp",
-      "title": "Wikipedia — Pluteus cervinus",
-      "url": "https://en.wikipedia.org/wiki/Pluteus_cervinus"
-    },
-    {
-      "id": "fn-ws",
       "title": "First Nature — Megacollybia platyphylla, Whitelaced Shank",
       "url": "https://www.first-nature.com/fungi/megacollybia-platyphylla.php"
     },
     {
-      "id": "wf-ws",
+      "id": "wf",
       "title": "Wild Food UK — Whitelaced Shank",
       "url": "https://www.wildfooduk.com/mushroom-guide/whitelaced-shank/"
+    },
+    {
+      "id": "fn-ds",
+      "title": "First Nature — Pluteus cervinus, Deer Shield",
+      "url": "https://www.first-nature.com/fungi/pluteus-cervinus.php"
+    },
+    {
+      "id": "wf-ds",
+      "title": "Wild Food UK — Deer Shield",
+      "url": "https://www.wildfooduk.com/mushroom-guide/deer-shield/"
+    },
+    {
+      "id": "wp-ds",
+      "title": "Wikipedia — Pluteus cervinus",
+      "url": "https://en.wikipedia.org/wiki/Pluteus_cervinus"
     },
     {
       "id": "wf-prot",
