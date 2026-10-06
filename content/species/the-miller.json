@@ -1,0 +1,277 @@
+{
+  "slug": "the-miller",
+  "inatId": 64708,
+  "scientific": "Clitopilus prunulus",
+  "english": "The Miller",
+  "olderNames": [
+    "Agaricus prunulus"
+  ],
+  "edibility": {
+    "value": "edible-cooked",
+    "sources": [
+      "wf",
+      "wp"
+    ]
+  },
+  "edibilityNote": {
+    "value": "It looks very like the deadly Fool's Funnel: check for a pink spore print and the smell of raw dough.",
+    "sources": [
+      "wf",
+      "wp"
+    ]
+  },
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "Cap white to pale grey, soft like suede, with a wavy edge and a sunken centre.",
+      "sources": [
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "Gills running down the stem, white turning pink; pink spore print.",
+      "sources": [
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "Strong smell of raw dough, flour or cucumber.",
+      "sources": [
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "In woodland clearings and edges, hedgerows and roadsides.",
+      "sources": [
+        "wf",
+        "wp"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "Clearings and edges of broadleaved and conifer woods, hedgerows and roadsides; sometimes in grass.",
+    "sources": [
+      "wf",
+      "wp"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "sources": [
+      "wf",
+      "wp"
+    ]
+  },
+  "sporePrint": {
+    "value": "Pink",
+    "sources": [
+      "wf",
+      "wp"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "gills",
+      "sources": [
+        "wf",
+        "wp"
+      ]
+    },
+    "ring": {
+      "value": "no",
+      "sources": [
+        "wp",
+        "wf"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "wp",
+        "wf"
+      ]
+    },
+    "growsOn": {
+      "value": "ground",
+      "sources": [
+        "wf",
+        "wp"
+      ]
+    },
+    "capCm": {
+      "value": [
+        6,
+        9
+      ],
+      "sources": [
+        "wf",
+        "wp"
+      ]
+    },
+    "fleshChange": {
+      "value": "White to greyish white; no colour change when cut is described",
+      "sources": [
+        "wf"
+      ]
+    },
+    "smell": {
+      "value": "Strongly of raw dough, flour or cucumber",
+      "sources": [
+        "wf",
+        "wp"
+      ]
+    }
+  },
+  "lookalikes": [
+    {
+      "scientific": "Collybia rivulosa",
+      "english": "Fool's Funnel",
+      "slug": "fool-s-funnel",
+      "kind": "deadly",
+      "tellApart": [
+        {
+          "feature": "Spore print",
+          "thisOne": "Pink",
+          "thatOne": "White",
+          "sources": [
+            "wf",
+            "wp",
+            "fn-ff",
+            "wf-ff",
+            "wp-ff"
+          ]
+        },
+        {
+          "feature": "Smell",
+          "thisOne": "Strongly of raw dough, flour or cucumber",
+          "thatOne": "Nothing distinctive",
+          "sources": [
+            "wf",
+            "wp",
+            "fn-ff",
+            "wp-ff"
+          ]
+        },
+        {
+          "feature": "Where it grows",
+          "thisOne": "Woodland clearings and edges, hedgerows and roadsides",
+          "thatOne": "Grass — lawns, verges, parks, pasture — often in rings",
+          "sources": [
+            "wf",
+            "wp",
+            "fn-ff",
+            "wf-ff",
+            "wp-ff"
+          ]
+        }
+      ]
+    },
+    {
+      "scientific": "Collybia dealbata",
+      "english": "Ivory Funnel",
+      "slug": "ivory-funnel",
+      "kind": "deadly",
+      "tellApart": [
+        {
+          "feature": "Spore print",
+          "thisOne": "Pink",
+          "thatOne": "White",
+          "sources": [
+            "wf",
+            "wp",
+            "fn-if",
+            "wp-if"
+          ]
+        },
+        {
+          "feature": "Smell",
+          "thisOne": "Strongly of raw dough, flour or cucumber",
+          "thatOne": "Nothing distinctive",
+          "sources": [
+            "wf",
+            "wp",
+            "fn-if",
+            "wp-if"
+          ]
+        },
+        {
+          "feature": "Where it grows",
+          "thisOne": "Woodland clearings and edges, hedgerows and roadsides",
+          "thatOne": "Grass — lawns, verges, parks, pasture — often in rings",
+          "sources": [
+            "wf",
+            "wp",
+            "fn-if",
+            "wp-if"
+          ]
+        }
+      ]
+    }
+  ],
+  "noDangerousLookalike": null,
+  "photos": [],
+  "sources": [
+    {
+      "id": "wf",
+      "title": "Wild Food UK — The Miller",
+      "url": "https://www.wildfooduk.com/mushroom-guide/the-miller/"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Clitopilus prunulus",
+      "url": "https://en.wikipedia.org/wiki/Clitopilus_prunulus"
+    },
+    {
+      "id": "fn-ff",
+      "title": "First Nature — Collybia rivulosa, Fool's Funnel",
+      "url": "https://www.first-nature.com/fungi/clitocybe-rivulosa.php"
+    },
+    {
+      "id": "wf-ff",
+      "title": "Wild Food UK — Fool's Funnel",
+      "url": "https://www.wildfooduk.com/mushroom-guide/clitocybe-rivulosa-2/"
+    },
+    {
+      "id": "wp-ff",
+      "title": "Wikipedia — Collybia rivulosa",
+      "url": "https://en.wikipedia.org/wiki/Clitocybe_rivulosa"
+    },
+    {
+      "id": "fn-if",
+      "title": "First Nature — Collybia dealbata, Ivory Funnel",
+      "url": "https://www.first-nature.com/fungi/clitocybe-rivulosa.php"
+    },
+    {
+      "id": "wp-if",
+      "title": "Wikipedia — Collybia dealbata",
+      "url": "https://en.wikipedia.org/wiki/Clitocybe_dealbata"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}

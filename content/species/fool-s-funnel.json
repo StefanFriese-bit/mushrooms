@@ -1,0 +1,285 @@
+{
+  "slug": "fool-s-funnel",
+  "inatId": 1525557,
+  "scientific": "Collybia rivulosa",
+  "english": "Fool's Funnel",
+  "olderNames": [
+    "Clitocybe rivulosa"
+  ],
+  "edibility": {
+    "value": "deadly",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "edibilityNote": {
+    "value": "Contains muscarine: sweating, drooling and tears within half an hour, then stomach pains, sickness and blurred vision. Deaths are rare but have happened. Do not taste it.",
+    "sources": [
+      "fn",
+      "wp",
+      "wf"
+    ]
+  },
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "Small white cap, 1–6 cm, chalky or floury, flat to slightly sunken, with the edge rolled under.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "Gills crowded, white to cream, running down the stem.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "White spore print; no distinctive smell.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "In grass — lawns, pasture, verges and parks — often in rings, like the Fairy Ring Champignon.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "Lawns, pasture, roadside verges, parks and path edges, often in rings or troops; also coastal dunes.",
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "sporePrint": {
+    "value": "White",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "gills",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    "ring": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "growsOn": {
+      "value": "ground",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "capCm": {
+      "value": [
+        1,
+        6
+      ],
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "fleshChange": {
+      "value": "Off-white; no colour change when cut is described",
+      "sources": [
+        "wf"
+      ]
+    },
+    "smell": {
+      "value": "Faintly sweet, or nothing distinctive",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    }
+  },
+  "lookalikes": [
+    {
+      "scientific": "Marasmius oreades",
+      "english": "Fairy Ring Champignon",
+      "slug": "fairy-ring-champignon",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Gills",
+          "thisOne": "Crowded; running down the stem",
+          "thatOne": "Well spaced; free of the stem or barely touching it",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "fn-fr",
+            "wf-fr",
+            "wp-fr"
+          ]
+        },
+        {
+          "feature": "Cap",
+          "thisOne": "White, chalky or floury; flat to slightly sunken, edge rolled under",
+          "thatOne": "Tan to buff, with a broad hump in the middle",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "fn-fr",
+            "wf-fr",
+            "wp-fr"
+          ]
+        }
+      ]
+    },
+    {
+      "scientific": "Clitopilus prunulus",
+      "english": "The Miller",
+      "slug": "the-miller",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Spore print",
+          "thisOne": "White",
+          "thatOne": "Pink",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "wf-mi",
+            "wp-mi"
+          ]
+        },
+        {
+          "feature": "Smell",
+          "thisOne": "Nothing distinctive",
+          "thatOne": "Strongly of raw dough, flour or cucumber",
+          "sources": [
+            "fn",
+            "wp",
+            "wf-mi",
+            "wp-mi"
+          ]
+        },
+        {
+          "feature": "Where it grows",
+          "thisOne": "Grass — lawns, verges, parks, pasture — often in rings",
+          "thatOne": "Woodland clearings and edges, hedgerows and roadsides",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "wf-mi",
+            "wp-mi"
+          ]
+        }
+      ]
+    }
+  ],
+  "noDangerousLookalike": null,
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Collybia rivulosa, Fool's Funnel",
+      "url": "https://www.first-nature.com/fungi/clitocybe-rivulosa.php"
+    },
+    {
+      "id": "wf",
+      "title": "Wild Food UK — Fool's Funnel",
+      "url": "https://www.wildfooduk.com/mushroom-guide/clitocybe-rivulosa-2/"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Collybia rivulosa",
+      "url": "https://en.wikipedia.org/wiki/Clitocybe_rivulosa"
+    },
+    {
+      "id": "fn-fr",
+      "title": "First Nature — Marasmius oreades, Fairy Ring Champignon",
+      "url": "https://www.first-nature.com/fungi/marasmius-oreades.php"
+    },
+    {
+      "id": "wf-fr",
+      "title": "Wild Food UK — Fairy Ring Champignon",
+      "url": "https://www.wildfooduk.com/mushroom-guide/fairy-ring-champignons/"
+    },
+    {
+      "id": "wp-fr",
+      "title": "Wikipedia — Marasmius oreades",
+      "url": "https://en.wikipedia.org/wiki/Marasmius_oreades"
+    },
+    {
+      "id": "wf-mi",
+      "title": "Wild Food UK — The Miller",
+      "url": "https://www.wildfooduk.com/mushroom-guide/the-miller/"
+    },
+    {
+      "id": "wp-mi",
+      "title": "Wikipedia — Clitopilus prunulus",
+      "url": "https://en.wikipedia.org/wiki/Clitopilus_prunulus"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}

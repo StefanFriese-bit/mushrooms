@@ -1,0 +1,273 @@
+{
+  "slug": "fairy-ring-champignon",
+  "inatId": 118240,
+  "scientific": "Marasmius oreades",
+  "english": "Fairy Ring Champignon",
+  "olderNames": [],
+  "edibility": {
+    "value": "edible-cooked",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "edibilityNote": {
+    "value": "Deadly white funnels grow in the same grass, even in rings, from mid-summer. Check every one: gills well spaced and free of the stem, never running down it.",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "Small tan to buff cap, 2–5 cm, with a broad hump in the middle; it turns paler as it dries.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "Gills well spaced, white to cream, free of the stem or barely touching it — never running down it.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "Stem thin, tough and bendy; no ring.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "In rings or arcs in short grass: lawns, verges, parks and pasture.",
+      "sources": [
+        "wf",
+        "wp",
+        "fn"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "Short grass on lawns, roadside verges, parks and pasture, usually in rings or arcs; occasionally at woodland edges.",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "sources": [
+      "wf",
+      "wp"
+    ]
+  },
+  "sporePrint": {
+    "value": "White",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "gills",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    "ring": {
+      "value": "no",
+      "sources": [
+        "wf",
+        "wp"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "growsOn": {
+      "value": "ground",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "capCm": {
+      "value": [
+        2,
+        5
+      ],
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "fleshChange": {
+      "value": "White to off-white and thin; no colour change when cut is described",
+      "sources": [
+        "wf",
+        "fn"
+      ]
+    },
+    "smell": {
+      "value": "Mushroomy, not distinctive",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    }
+  },
+  "lookalikes": [
+    {
+      "scientific": "Collybia rivulosa",
+      "english": "Fool's Funnel",
+      "slug": "fool-s-funnel",
+      "kind": "deadly",
+      "tellApart": [
+        {
+          "feature": "Gills",
+          "thisOne": "Well spaced; free of the stem or barely touching it",
+          "thatOne": "Crowded; running down the stem",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "fn-ff",
+            "wf-ff",
+            "wp-ff"
+          ]
+        },
+        {
+          "feature": "Cap",
+          "thisOne": "Tan to buff, with a broad hump in the middle",
+          "thatOne": "White, chalky or floury; flat to slightly sunken, edge rolled under",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "fn-ff",
+            "wf-ff",
+            "wp-ff"
+          ]
+        }
+      ]
+    },
+    {
+      "scientific": "Collybia dealbata",
+      "english": "Ivory Funnel",
+      "slug": "ivory-funnel",
+      "kind": "deadly",
+      "tellApart": [
+        {
+          "feature": "Gills",
+          "thisOne": "Well spaced; free of the stem or barely touching it",
+          "thatOne": "Crowded; joined to the stem or running down it",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "fn-if",
+            "wp-if"
+          ]
+        },
+        {
+          "feature": "Cap",
+          "thisOne": "Tan to buff, with a broad hump in the middle",
+          "thatOne": "White, sometimes dusted buff; flat to slightly sunken",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "fn-if",
+            "wp-if"
+          ]
+        }
+      ]
+    }
+  ],
+  "noDangerousLookalike": null,
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Marasmius oreades, Fairy Ring Champignon",
+      "url": "https://www.first-nature.com/fungi/marasmius-oreades.php"
+    },
+    {
+      "id": "wf",
+      "title": "Wild Food UK — Fairy Ring Champignon",
+      "url": "https://www.wildfooduk.com/mushroom-guide/fairy-ring-champignons/"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Marasmius oreades",
+      "url": "https://en.wikipedia.org/wiki/Marasmius_oreades"
+    },
+    {
+      "id": "fn-ff",
+      "title": "First Nature — Collybia rivulosa, Fool's Funnel",
+      "url": "https://www.first-nature.com/fungi/clitocybe-rivulosa.php"
+    },
+    {
+      "id": "wf-ff",
+      "title": "Wild Food UK — Fool's Funnel",
+      "url": "https://www.wildfooduk.com/mushroom-guide/clitocybe-rivulosa-2/"
+    },
+    {
+      "id": "wp-ff",
+      "title": "Wikipedia — Collybia rivulosa",
+      "url": "https://en.wikipedia.org/wiki/Clitocybe_rivulosa"
+    },
+    {
+      "id": "fn-if",
+      "title": "First Nature — Collybia dealbata, Ivory Funnel",
+      "url": "https://www.first-nature.com/fungi/clitocybe-rivulosa.php"
+    },
+    {
+      "id": "wp-if",
+      "title": "Wikipedia — Collybia dealbata",
+      "url": "https://en.wikipedia.org/wiki/Clitocybe_dealbata"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}
