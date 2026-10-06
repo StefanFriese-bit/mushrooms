@@ -18,7 +18,8 @@ HELD = {'Chlorociboria aeruginascens',  # Green Elfcup: no edibility on any trus
         'Armillaria ostoyae',  # Dark Honey Fungus: edible, but only First Nature gives a cap size
         'Collybia sordida',  # Sordid Blewit: edible; only First Nature gives the spore print that tells it from webcaps
         'Xerocomellus pruinatus',  # Matt Bolete: edible per First Nature only; Wikipedia's article is a stub
-        'Cyathus olla'}  # Field Bird's Nest: no trusted site gives a spore colour
+        'Cyathus olla',  # Field Bird's Nest: no trusted site gives a spore colour
+        'Phaeotremella frondosa'}  # edible (Wikipedia; First Nature: very poor), but only First Nature gives a spore print
 rows = []
 for s in lst:
     if s in b1 or s['name'] in have or s['name'] in HELD:
