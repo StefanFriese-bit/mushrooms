@@ -14,7 +14,8 @@ Verdicts on the 194 new pages: 113 not edible, 44 edible (cook first), 9 edible 
 
 ## Things for you to decide
 
-1. **Three rule changes I made so the minor species could have pages** (each with a test; easy to undo):
+1. **Three rule changes I made so the minor species could have pages** (each with a test; easy to undo). 46 of the
+   194 new pages rely on at least one of them; without them those 46 pages go:
    - A **"not edible" verdict may rest on one trusted website**, and so may the note under it. It is the cautious
      verdict — the page tells no one to eat it — and for many crusts, jelly fungi and tiny bonnets only one site says
      anything about eating them. Edible, poisonous and deadly still need two websites. Used on 21 pages, e.g. the
@@ -25,21 +26,27 @@ Verdicts on the 194 new pages: 113 not edible, 44 edible (cook first), 9 edible 
      on First Nature only) and the Red Cage (size on Wikipedia only).
    - **A crust with no set size can say so**; Identify then keeps it under every size answer. Used for the Brittle
      Cinder, Cobalt Crust, Oak Crust and Glue Crust.
-2. **Dangerous lookalikes named by only one website are listed** (the cautious answer), and where the sources warn of
-   "deadly Amanitas" or "toxic brittlegills" without naming one, I listed the obvious one. These are **my reading** —
-   please confirm or strike:
-   Tawny and Orange Grisette → Deathcap (and Panthercap); Snakeskin Grisette → Deathcap; Golden Waxcap → Blackening
-   Waxcap; Poplar Fieldcap → Funeral Bell; Ochre Brittlegill → Sickener; Clustered Domecap → Livid Pinkgill
-   ("poisonous Entoloma species"); Slender Parasol → Deadly Dapperling; Meadow Coral → "yellow coral fungi (Ramaria)".
-   In batch 1 I left off mix-ups named by one website; the same rule would now add them (they are listed in that
-   report). Your call whether to apply it there too.
+2. **Dangerous lookalikes the sites warn about without naming them: I named the likeliest one.** An edible page shows
+   the dangerous species it can be mistaken for, each with a "tell them apart" row. For some edible species the sites
+   only warn in general. There I named the species myself — **my reading**, please confirm or strike (checked against
+   the sites' own words):
+   Tawny Grisette → Panthercap (First Nature: "confusion with poisonous amanitas"); Orange Grisette → Deathcap (First
+   Nature: "confusion with deadly poisonous Amanita species"); Snakeskin Grisette → Deathcap (Wild Food UK: "other
+   seriously poisonous Amanitas"); Poplar Fieldcap → Funeral Bell (Wikipedia: "resembles some deadly species"); Golden Waxcap → Blackening Waxcap (Wild Food UK: other yellow waxcaps, "some are listed as poisonous");
+   Ochre Brittlegill → Sickener (First Nature: "a small number of species in this genus are known to be toxic");
+   Clustered Domecap → Livid Pinkgill (Wikipedia: "poisonous Entoloma species"); Slender Parasol → Deadly Dapperling
+   (no site names it for this species); Meadow Coral → yellow coral fungi (Wikipedia names them as look-alikes;
+   calling them poisonous is mine).
+   Lookalikes named by only ONE site are listed too (the cautious answer), e.g. Tawny Grisette → Deathcap (First
+   Nature), Snakeskin Grisette → Panthercap (Wild Food UK). In batch 1 I left off mix-ups named by one website; the
+   same rule would now add them (they are listed in that report). Your call whether to apply it there too.
 3. **"No dangerous lookalike"** is recorded on 25 edible pages because every lookalike the sites name is harmless —
    no site says so in as many words, except for the Bovine Bolete (First Nature and Wild Food UK: no Suillus is toxic).
-4. **The Slender Parasol vs the Shaggy Parasol.** Both the Slender Parasol's First Nature and Wikipedia pages call the
-   Shaggy Parasol toxic ("can cause very serious stomach upsets"). The guide's own Shaggy Parasol page says "Edible, but
-   some people react" (the batch-1 majority). I kept the Shaggy Parasol as edible everywhere (every lookalike in the
-   guide matches its own page — checked, no exceptions) and put the warning in the Slender Parasol's note. You could
-   make the Shaggy Parasol "not edible" instead.
+4. **The Shaggy Parasol — settled (no decision needed).** Of the four trusted sites, three call it edible but say it
+   upsets some people: Wild Food UK (try a small amount first), Wikipedia (not for beginners) and the Woodland Trust
+   ("can cause stomach upsets in around one in 25 people"). Only First Nature says avoid it, on its own page and on
+   the Slender Parasol's ("a toxic toadstool"). The page stays "Edible, but some people react"; its note now gives
+   the Woodland Trust's one in 25, and the Slender Parasol's note keeps First Nature's warning.
 5. **"Reported edible, but not worth picking" counts as edible** when both sites say it: Pink Waxcap (vulnerable
    worldwide — its note says never pick it), Meadow Coral, White and Smoky Spindles, Crested Coral, Yellowleg Bonnet,
    Jelly Tooth. You could make these "not edible" instead.
@@ -83,15 +90,17 @@ All recorded on both pages. "1 site" = named by one website (decision 2); "my re
 | Golden Waxcap | Blackening Waxcap | my reading |
 | Honey Fungus | Shaggy Scalycap | FN + WP + WF |
 | Lurid, Peppery and Scarletina Boletes | Devil's Bolete (Lurid also: Oldrose, Bilious and Ruddy Boletes) | Lurid: all three; Peppery: FN; Scarletina: WF + WP |
-| Meadow Coral | Yellow coral fungi (Ramaria) | my reading |
+| Meadow Coral | Yellow coral fungi (Ramaria) | WP names them as similar; "poisonous" is my reading |
 | Mosaic, Stump Puffballs | Common Earthball; Deathcap (button) | FN / WF + WP |
 | Ochre Brittlegill | Sickener | my reading |
-| Orange, Tawny, Snakeskin Grisettes | Deathcap; Panthercap | my reading (Snakeskin: Panthercap WF) |
+| Tawny Grisette | Deathcap; Panthercap | FN (1 site); my reading |
+| Orange Grisette | Deathcap | my reading |
+| Snakeskin Grisette | Panthercap; Deathcap | WF (1 site); my reading |
 | Poplar Fieldcap | Funeral Bell | my reading |
 | Scarlet Waxcap | Crimson Waxcap; Blackening Waxcap | FN + WP; FN |
 | Shaggy Inkcap | Common Inkcap (with alcohol) | WP + WF |
 | Silky, Stubble Rosegills | Destroying Angel; Deathcap | FN + WF; FN |
-| Slender Parasol | Deadly Dapperling | my reading (see decision 4) |
+| Slender Parasol | Deadly Dapperling | my reading |
 | Snowy Waxcap | Destroying Angel | FN (1 site) |
 | Stinkhorn | Deathcap egg; Common Earthball; False Morel | WF |
 | The Prince | Freckled Dapperling | WF (1 site) — closes the batch-1 note |

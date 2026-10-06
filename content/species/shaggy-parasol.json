@@ -14,15 +14,17 @@
     "sources": [
       "fn",
       "wf",
-      "wp"
+      "wp",
+      "wt"
     ]
   },
   "edibilityNote": {
-    "value": "Cook it well. It upsets some people's stomachs and some react strongly to it; First Nature advises not eating it at all.",
+    "value": "Cook it well. It upsets the stomach of about one person in 25 (Woodland Trust) and some people react strongly to it; Wikipedia does not recommend it to beginners, and First Nature advises not eating it at all.",
     "sources": [
       "fn",
       "wf",
-      "wp"
+      "wp",
+      "wt"
     ]
   },
   "protectedInUk": {
