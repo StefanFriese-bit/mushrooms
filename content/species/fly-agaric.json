@@ -1,0 +1,238 @@
+{
+  "slug": "fly-agaric",
+  "inatId": 48715,
+  "scientific": "Amanita muscaria",
+  "english": "Fly Agaric",
+  "olderNames": [],
+  "edibility": {
+    "value": "poisonous",
+    "sources": [
+      "wf",
+      "wp",
+      "fn",
+      "wt"
+    ]
+  },
+  "edibilityNote": {
+    "value": "Poisonous and hallucinogenic: sickness, confusion and hallucinations. Deaths are extremely rare.",
+    "sources": [
+      "wp",
+      "fn",
+      "wt"
+    ]
+  },
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "Bright red (sometimes orange) cap, 8–20 cm, with white to yellowish warts that rain can wash off.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp",
+        "wt"
+      ]
+    },
+    {
+      "value": "Gills white, free and crowded; white spore print.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp",
+        "wt"
+      ]
+    },
+    {
+      "value": "White stem with a large hanging ring, and a swollen base ringed with the remains of its bag.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "Under birch especially, also pines and spruces.",
+      "sources": [
+        "fn",
+        "wf",
+        "wt"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "Under birch especially, and pines and spruces, in woods, heaths and parks.",
+    "sources": [
+      "fn",
+      "wf",
+      "wt"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "sources": [
+      "fn",
+      "wf",
+      "wt"
+    ]
+  },
+  "sporePrint": {
+    "value": "White",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "gills",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    "ring": {
+      "value": "yes",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    "bagAtBase": {
+      "value": "yes",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    "growsOn": {
+      "value": "ground",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "capCm": {
+      "value": [
+        8,
+        20
+      ],
+      "sources": [
+        "fn",
+        "wf",
+        "wt"
+      ]
+    },
+    "fleshChange": {
+      "value": "White; just under the cap skin it turns yellow when damaged",
+      "sources": [
+        "fn"
+      ]
+    },
+    "smell": {
+      "value": "Not distinctive, or savoury",
+      "sources": [
+        "fn",
+        "wf",
+        "wt"
+      ]
+    }
+  },
+  "lookalikes": [
+    {
+      "scientific": "Amanita rubescens",
+      "english": "Blusher",
+      "slug": "blusher",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Damaged flesh",
+          "thisOne": "Never pink or red; just under the cap skin it turns yellow",
+          "thatOne": "Turns pink to red where damaged",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-bl",
+            "wf-bl"
+          ]
+        },
+        {
+          "feature": "Cap",
+          "thisOne": "Red, orange or orange-brown, with pure white warts",
+          "thatOne": "Brown to pinkish-brown, with grey or off-white warts",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "fn-bl",
+            "wf-bl"
+          ]
+        }
+      ]
+    }
+  ],
+  "noDangerousLookalike": null,
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Amanita muscaria, Fly Agaric",
+      "url": "https://www.first-nature.com/fungi/amanita-muscaria.php"
+    },
+    {
+      "id": "wf",
+      "title": "Wild Food UK — Fly Agaric",
+      "url": "https://www.wildfooduk.com/mushroom-guide/fly-agaric/"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Amanita muscaria",
+      "url": "https://en.wikipedia.org/wiki/Amanita_muscaria"
+    },
+    {
+      "id": "wt",
+      "title": "Woodland Trust — Fly Agaric",
+      "url": "https://www.woodlandtrust.org.uk/trees-woods-and-wildlife/fungi-and-lichens/fly-agaric/"
+    },
+    {
+      "id": "fn-bl",
+      "title": "First Nature — Amanita rubescens, Blusher",
+      "url": "https://www.first-nature.com/fungi/amanita-rubescens.php"
+    },
+    {
+      "id": "wf-bl",
+      "title": "Wild Food UK — Blusher",
+      "url": "https://www.wildfooduk.com/mushroom-guide/blusher/"
+    },
+    {
+      "id": "wp-bl",
+      "title": "Wikipedia — Amanita rubescens",
+      "url": "https://en.wikipedia.org/wiki/Amanita_rubescens"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}

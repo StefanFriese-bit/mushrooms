@@ -8,9 +8,24 @@ def S(value, *ids):
     return {'value': value, 'sources': list(ids)}
 
 
-def write(slug, *, extract, partners=(), **fields):
+# Shared articles that cover several species, cited by id like a page's own sources.
+SHARED = {
+    'wf-poison': ('Wild Food UK — The most poisonous UK fungi, part 1', 'https://www.wildfooduk.com/articles/the-most-poisonous-uk-fungi-part-1/'),
+    'wt-poison': ('Woodland Trust — Poisonous mushrooms: 8 most dangerous UK mushrooms', 'https://www.woodlandtrust.org.uk/blog/2025/02/poisonous-mushrooms/'),
+    'wt-bracket': ('Woodland Trust — Bracket fungi ID: common UK species', 'https://www.woodlandtrust.org.uk/blog/2021/10/bracket-fungi-identification/'),
+}
+
+
+def write(slug, *, extract, partners=(), extra=(), drop=(), titles=None, **fields):
+    """extra: ids from SHARED to add; drop: source ids to leave out (a page with no content); titles: {id: title}."""
     src = json.loads(subprocess.run([sys.executable, str(ROOT / 'tools/research/sources.py'), extract, *partners],
                                     capture_output=True, text=True, check=True).stdout)
+    src = [s for s in src if s['id'] not in drop]
+    at = next((i for i, s in enumerate(src) if s['id'] == 'wf-prot'), len(src))
+    src[at:at] = [{'id': k, 'title': SHARED[k][0], 'url': SHARED[k][1]} for k in extra]
+    for s in src:
+        if titles and s['id'] in titles:
+            s['title'] = titles[s['id']]
     lst = {s['name']: s for s in json.loads((ROOT / 'content/species-list.json').read_text())['species']}
     sp = lst[fields['scientific']]
     rec = {'slug': slug, 'inatId': sp['inatId'], 'scientific': fields['scientific'], 'english': sp['english'] or fields['scientific'],

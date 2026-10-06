@@ -3,6 +3,7 @@
 from each cited source (its full article text, kept by gather.py). A source whose best sentence shares little with the
 claim is marked '??' — read it, and fix the claim or the citation. Usage: verify.py <slug> [--all]"""
 import json, pathlib, re, sys
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 
 ROOT = pathlib.Path(__file__).resolve().parents[2]
 R = ROOT / 'cache/research'
@@ -17,6 +18,10 @@ def words(t):
 
 def text_by_url():
     out = {}
+    from page import SHARED  # shared articles are kept as full/<id>.txt
+    for sid, (_, url) in SHARED.items():
+        if (R / 'full' / f'{sid}.txt').exists():
+            out[url] = (R / 'full' / f'{sid}.txt').read_text()
     for ex in R.glob('*.txt'):
         for site, url in re.findall(r'^\[(fn|wf|wp|wt)\] (https?://\S+)', ex.read_text(), re.M):
             f = R / 'full' / f'{ex.stem}.{site}.txt'

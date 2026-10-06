@@ -1,0 +1,177 @@
+{
+  "slug": "birch-polypore-razorstrop-fungus",
+  "inatId": 775410,
+  "scientific": "Fomitopsis betulina",
+  "english": "Birch Polypore / Razorstrop Fungus",
+  "olderNames": [
+    "Piptoporus betulinus",
+    "Polyporus betulinus"
+  ],
+  "edibility": {
+    "value": "not-edible",
+    "sources": [
+      "wp",
+      "fn"
+    ]
+  },
+  "edibilityNote": {
+    "value": "Rubbery, then corky; First Nature calls it bitter and not worth collecting.",
+    "sources": [
+      "wp",
+      "fn"
+    ]
+  },
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "A thick, rounded bracket up to 25–30 cm across, smooth and grey-brown to cream on top.",
+      "sources": [
+        "fn",
+        "wp",
+        "wt-bracket"
+      ]
+    },
+    {
+      "value": "Underneath: white, very small pores, turning buff with age.",
+      "sources": [
+        "fn",
+        "wp",
+        "wt-bracket"
+      ]
+    },
+    {
+      "value": "Only on birch — living, dying or dead trunks — often several up one trunk like steps.",
+      "sources": [
+        "fn",
+        "wp",
+        "wt-bracket"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "Only on birch: living, dying and dead trunks, in any birch wood.",
+    "sources": [
+      "fn",
+      "wp",
+      "wt-bracket"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "sources": [
+      "fn"
+    ]
+  },
+  "sporePrint": {
+    "value": "White",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "pores",
+      "sources": [
+        "fn",
+        "wp",
+        "wt-bracket"
+      ]
+    },
+    "ring": {
+      "value": "no",
+      "sources": [
+        "wp",
+        "fn"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "wp",
+        "fn"
+      ]
+    },
+    "growsOn": {
+      "value": "wood",
+      "sources": [
+        "fn",
+        "wp",
+        "wt-bracket"
+      ]
+    },
+    "capCm": {
+      "value": [
+        10,
+        30
+      ],
+      "sources": [
+        "fn",
+        "wt-bracket"
+      ]
+    },
+    "fleshChange": {
+      "value": "White; rubbery when young, corky with age",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "smell": {
+      "value": "Faint and mushroomy",
+      "sources": [
+        "fn"
+      ]
+    }
+  },
+  "lookalikes": [],
+  "noDangerousLookalike": null,
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Fomitopsis betulina, Birch Polypore / Razorstrop Fungus",
+      "url": "https://www.first-nature.com/fungi/piptoporus-betulinus.php"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Fomitopsis betulina",
+      "url": "https://en.wikipedia.org/wiki/Fomitopsis_betulina"
+    },
+    {
+      "id": "wt-bracket",
+      "title": "Woodland Trust — Bracket fungi ID: common UK species",
+      "url": "https://www.woodlandtrust.org.uk/blog/2021/10/bracket-fungi-identification/"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}

@@ -1,0 +1,175 @@
+{
+  "slug": "candlesnuff-fungus",
+  "inatId": 55267,
+  "scientific": "Xylaria hypoxylon",
+  "english": "Candlesnuff Fungus",
+  "olderNames": [
+    "Hypoxylon vulgare"
+  ],
+  "edibility": {
+    "value": "not-edible",
+    "sources": [
+      "wf",
+      "wp"
+    ]
+  },
+  "edibilityNote": null,
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "Thin upright sticks 3–8 cm tall, often forked like small antlers or a snuffed-out candle wick.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp",
+        "wt"
+      ]
+    },
+    {
+      "value": "Black and finely hairy at the base, white and powdery at the tips; later black all over.",
+      "sources": [
+        "fn",
+        "wf",
+        "wt"
+      ]
+    },
+    {
+      "value": "On dead wood and stumps of broadleaved trees, all year round.",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "Fallen branches and rotting stumps of broadleaved trees; rarely on conifer stumps.",
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "sporePrint": {
+    "value": "Black",
+    "sources": [
+      "fn",
+      "wp",
+      "wt"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "other",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "ring": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "growsOn": {
+      "value": "wood",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "capCm": {
+      "value": [
+        0.2,
+        3
+      ],
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    "fleshChange": {
+      "value": "Thin, white and tough",
+      "sources": [
+        "wf"
+      ]
+    },
+    "smell": {
+      "value": "Not distinctive",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    }
+  },
+  "lookalikes": [],
+  "noDangerousLookalike": null,
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Xylaria hypoxylon, Candlesnuff Fungus",
+      "url": "https://www.first-nature.com/fungi/xylaria-hypoxylon.php"
+    },
+    {
+      "id": "wf",
+      "title": "Wild Food UK — Candlesnuff Fungus",
+      "url": "https://www.wildfooduk.com/mushroom-guide/candlesnuff-fungus/"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Xylaria hypoxylon",
+      "url": "https://en.wikipedia.org/wiki/Xylaria_hypoxylon"
+    },
+    {
+      "id": "wt",
+      "title": "Woodland Trust — Candlesnuff Fungus",
+      "url": "https://www.woodlandtrust.org.uk/trees-woods-and-wildlife/fungi-and-lichens/candlesnuff-fungus/"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}

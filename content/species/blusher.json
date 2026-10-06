@@ -220,6 +220,37 @@
           ]
         }
       ]
+    },
+    {
+      "scientific": "Amanita muscaria",
+      "english": "Fly Agaric",
+      "slug": "fly-agaric",
+      "kind": "poisonous",
+      "tellApart": [
+        {
+          "feature": "Damaged flesh",
+          "thisOne": "Turns pink to red where damaged",
+          "thatOne": "Never pink or red; just under the cap skin it turns yellow",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-fa",
+            "wf-fa"
+          ]
+        },
+        {
+          "feature": "Cap",
+          "thisOne": "Brown to pinkish-brown, with grey or off-white warts",
+          "thatOne": "Red, orange or orange-brown, with pure white warts",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-fa",
+            "wf-fa",
+            "wp-fa"
+          ]
+        }
+      ]
     }
   ],
   "noDangerousLookalike": null,
@@ -283,6 +314,21 @@
       "id": "wp-pc",
       "title": "Wikipedia — Amanita pantherina",
       "url": "https://en.wikipedia.org/wiki/Amanita_pantherina"
+    },
+    {
+      "id": "fn-fa",
+      "title": "First Nature — Amanita muscaria, Fly Agaric",
+      "url": "https://www.first-nature.com/fungi/amanita-muscaria.php"
+    },
+    {
+      "id": "wf-fa",
+      "title": "Wild Food UK — Fly Agaric",
+      "url": "https://www.wildfooduk.com/mushroom-guide/fly-agaric/"
+    },
+    {
+      "id": "wp-fa",
+      "title": "Wikipedia — Amanita muscaria",
+      "url": "https://en.wikipedia.org/wiki/Amanita_muscaria"
     },
     {
       "id": "wf-prot",
