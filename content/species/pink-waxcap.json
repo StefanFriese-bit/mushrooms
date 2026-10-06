@@ -134,7 +134,35 @@
       ]
     }
   },
-  "lookalikes": [],
+  "lookalikes": [
+    {
+      "scientific": "Gliophorus reginae",
+      "english": "Jubilee Waxcap",
+      "slug": "jubilee-waxcap",
+      "kind": "not-edible",
+      "tellApart": [
+        {
+          "feature": "Cap",
+          "thisOne": "Greasy, not slimy, pointed at first",
+          "thatOne": "Slimy, with a broad bump",
+          "sources": [
+            "fn",
+            "wp",
+            "wf-jw"
+          ]
+        },
+        {
+          "feature": "Colour",
+          "thisOne": "Paler pink to lilac",
+          "thatOne": "Deeper pink to violet-purple",
+          "sources": [
+            "fn",
+            "wf-jw"
+          ]
+        }
+      ]
+    }
+  ],
   "noDangerousLookalike": {
     "sources": [
       "fn",
@@ -152,6 +180,11 @@
       "id": "wp",
       "title": "Wikipedia — Porpolomopsis calyptriformis",
       "url": "https://en.wikipedia.org/wiki/Porpolomopsis_calyptriformis"
+    },
+    {
+      "id": "wf-jw",
+      "title": "Wild Food UK — Jubilee Waxcap",
+      "url": "https://www.wildfooduk.com/mushroom-guide/jubilee-waxcap/"
     },
     {
       "id": "wf-prot",

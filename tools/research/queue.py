@@ -11,7 +11,8 @@ slug = lambda n: re.sub(r'[^a-z0-9]+', '-', n.lower()).strip('-')
 # Held back: no trusted site gives what a page must have (each one is named in the batch report).
 HELD = {'Chlorociboria aeruginascens',  # Green Elfcup: no edibility on any trusted site
         'Agrocybe rivulosa',  # Wrinkled Fieldcap: Wikipedia's article is a stub; gills, ring, habitat on one site only
-        'Clavulina rugosa'}  # Wrinkled Club: edible, but only First Nature gives its spore print (edible pages need two)
+        'Clavulina rugosa',  # Wrinkled Club: edible, but only First Nature gives its spore print (edible pages need two)
+        'Lycoperdon pratense'}  # Meadow Puffball: edible, but Wikipedia's article is a stub (no spore colour, no stem)
 rows = []
 for s in lst:
     if s in b1 or s['name'] in have or s['name'] in HELD:

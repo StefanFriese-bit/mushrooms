@@ -141,7 +141,27 @@
       ]
     }
   },
-  "lookalikes": [],
+  "lookalikes": [
+    {
+      "scientific": "Caloboletus calopus",
+      "english": "Bitter Beech Bolete",
+      "slug": "bitter-beech-bolete",
+      "kind": "not-edible",
+      "tellApart": [
+        {
+          "feature": "Stem",
+          "thisOne": "Yellow, with no red",
+          "thatOne": "Red below, under a pale net",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-bb",
+            "wf-bb"
+          ]
+        }
+      ]
+    }
+  ],
   "noDangerousLookalike": null,
   "photos": [],
   "sources": [
@@ -159,6 +179,16 @@
       "id": "wp",
       "title": "Wikipedia — Caloboletus radicans",
       "url": "https://en.wikipedia.org/wiki/Caloboletus_radicans"
+    },
+    {
+      "id": "fn-bb",
+      "title": "First Nature — Caloboletus calopus, Bitter Beech Bolete",
+      "url": "https://www.first-nature.com/fungi/caloboletus-calopus.php"
+    },
+    {
+      "id": "wf-bb",
+      "title": "Wild Food UK — Bitter Beech Bolete",
+      "url": "https://www.wildfooduk.com/mushroom-guide/bitter-beech-bolete-boletus-caloboletus-calopus/"
     },
     {
       "id": "wf-prot",

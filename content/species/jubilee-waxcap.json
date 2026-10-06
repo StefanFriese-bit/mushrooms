@@ -1,0 +1,242 @@
+{
+  "slug": "jubilee-waxcap",
+  "inatId": 509069,
+  "scientific": "Gliophorus reginae",
+  "english": "Jubilee Waxcap",
+  "olderNames": [],
+  "edibility": {
+    "value": "not-edible",
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "edibilityNote": {
+    "value": "Rare and threatened worldwide (listed as vulnerable): never pick it.",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "A slimy pink to lilac or violet-purple cap, 2–6 cm, with a broad bump in the centre.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "Widely spaced pink gills with cross-veins; the gills are not slimy.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "A pale, slimy stem, white to pinkish, often orange-tinged.",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    {
+      "value": "Late in the year, in old unfertilised grassland.",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "Old, unfertilised, mossy grassland — fields, pastures and churchyards.",
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      10,
+      11,
+      12,
+      1
+    ],
+    "sources": [
+      "fn"
+    ]
+  },
+  "sporePrint": {
+    "value": "White",
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "gills",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    "ring": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "growsOn": {
+      "value": "ground",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "capCm": {
+      "value": [
+        2,
+        6
+      ],
+      "sources": [
+        "wf",
+        "wp"
+      ]
+    },
+    "fleshChange": {
+      "value": "The colour of the outside; the stem is hollow",
+      "sources": [
+        "wf"
+      ]
+    },
+    "smell": {
+      "value": "Not distinctive",
+      "sources": [
+        "fn"
+      ]
+    }
+  },
+  "lookalikes": [
+    {
+      "scientific": "Gliophorus psittacinus",
+      "english": "Parrot Waxcap",
+      "slug": "parrot-waxcap",
+      "kind": "not-edible",
+      "tellApart": [
+        {
+          "feature": "Colour",
+          "thisOne": "Pink to violet-purple",
+          "thatOne": "Green when young, at least at the top of the stem",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-pw",
+            "wf-pw"
+          ]
+        }
+      ]
+    },
+    {
+      "scientific": "Porpolomopsis calyptriformis",
+      "english": "Pink Waxcap",
+      "slug": "pink-waxcap",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Cap",
+          "thisOne": "Slimy, with a broad bump",
+          "thatOne": "Greasy, not slimy, pointed at first",
+          "sources": [
+            "wf",
+            "fn-pk",
+            "wp-pk"
+          ]
+        },
+        {
+          "feature": "Colour",
+          "thisOne": "Deeper pink to violet-purple",
+          "thatOne": "Paler pink to lilac",
+          "sources": [
+            "wf",
+            "fn-pk"
+          ]
+        }
+      ]
+    }
+  ],
+  "noDangerousLookalike": null,
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Gliophorus reginae, Jubilee Waxcap",
+      "url": "https://www.first-nature.com/fungi/gliophorus-reginae.php"
+    },
+    {
+      "id": "wf",
+      "title": "Wild Food UK — Jubilee Waxcap",
+      "url": "https://www.wildfooduk.com/mushroom-guide/jubilee-waxcap/"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Gliophorus reginae",
+      "url": "https://en.wikipedia.org/wiki/Gliophorus_reginae"
+    },
+    {
+      "id": "fn-pw",
+      "title": "First Nature — Gliophorus psittacinus, Parrot Waxcap",
+      "url": "https://www.first-nature.com/fungi/gliophorus-psittacinus.php"
+    },
+    {
+      "id": "wf-pw",
+      "title": "Wild Food UK — Parrot Waxcap",
+      "url": "https://www.wildfooduk.com/mushroom-guide/parrot-waxcap/"
+    },
+    {
+      "id": "wp-pw",
+      "title": "Wikipedia — Gliophorus psittacinus",
+      "url": "https://en.wikipedia.org/wiki/Gliophorus_psittacinus"
+    },
+    {
+      "id": "fn-pk",
+      "title": "First Nature — Porpolomopsis calyptriformis, Pink Waxcap",
+      "url": "https://www.first-nature.com/fungi/porpolomopsis-calyptriformis.php"
+    },
+    {
+      "id": "wp-pk",
+      "title": "Wikipedia — Porpolomopsis calyptriformis",
+      "url": "https://en.wikipedia.org/wiki/Porpolomopsis_calyptriformis"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}

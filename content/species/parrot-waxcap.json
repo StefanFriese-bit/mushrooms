@@ -141,7 +141,27 @@
       ]
     }
   },
-  "lookalikes": [],
+  "lookalikes": [
+    {
+      "scientific": "Gliophorus reginae",
+      "english": "Jubilee Waxcap",
+      "slug": "jubilee-waxcap",
+      "kind": "not-edible",
+      "tellApart": [
+        {
+          "feature": "Colour",
+          "thisOne": "Green when young, at least at the top of the stem",
+          "thatOne": "Pink to violet-purple",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-jw",
+            "wp-jw"
+          ]
+        }
+      ]
+    }
+  ],
   "noDangerousLookalike": null,
   "photos": [],
   "sources": [
@@ -159,6 +179,16 @@
       "id": "wp",
       "title": "Wikipedia — Gliophorus psittacinus",
       "url": "https://en.wikipedia.org/wiki/Gliophorus_psittacinus"
+    },
+    {
+      "id": "fn-jw",
+      "title": "First Nature — Gliophorus reginae, Jubilee Waxcap",
+      "url": "https://www.first-nature.com/fungi/gliophorus-reginae.php"
+    },
+    {
+      "id": "wp-jw",
+      "title": "Wikipedia — Gliophorus reginae",
+      "url": "https://en.wikipedia.org/wiki/Gliophorus_reginae"
     },
     {
       "id": "wf-prot",

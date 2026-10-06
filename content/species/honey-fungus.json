@@ -221,6 +221,34 @@
           ]
         }
       ]
+    },
+    {
+      "scientific": "Armillaria gallica",
+      "english": "Bulbous Honey Fungus",
+      "slug": "bulbous-honey-fungus",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Ring",
+          "thisOne": "A lasting ring",
+          "thatOne": "Cobweb-like, soon gone",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-bh",
+            "wp-bh"
+          ]
+        },
+        {
+          "feature": "Stem",
+          "thisOne": "Thinner",
+          "thatOne": "Thicker, swelling at the base",
+          "sources": [
+            "fn-bh",
+            "wp-bh"
+          ]
+        }
+      ]
     }
   ],
   "noDangerousLookalike": null,
@@ -294,6 +322,16 @@
       "id": "wp-ss",
       "title": "Wikipedia — Pholiota squarrosa",
       "url": "https://en.wikipedia.org/wiki/Pholiota_squarrosa"
+    },
+    {
+      "id": "fn-bh",
+      "title": "First Nature — Armillaria gallica, Bulbous Honey Fungus",
+      "url": "https://www.first-nature.com/fungi/armillaria-gallica.php"
+    },
+    {
+      "id": "wp-bh",
+      "title": "Wikipedia — Armillaria gallica",
+      "url": "https://en.wikipedia.org/wiki/Armillaria_gallica"
     },
     {
       "id": "wf-prot",

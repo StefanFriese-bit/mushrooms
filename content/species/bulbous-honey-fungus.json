@@ -1,18 +1,21 @@
 {
-  "slug": "shaggy-scalycap",
-  "inatId": 153445,
-  "scientific": "Pholiota squarrosa",
-  "english": "Shaggy Scalycap",
-  "olderNames": [],
+  "slug": "bulbous-honey-fungus",
+  "inatId": 118401,
+  "scientific": "Armillaria gallica",
+  "english": "Bulbous Honey Fungus",
+  "olderNames": [
+    "Armillaria bulbosa",
+    "Armillaria lutea"
+  ],
   "edibility": {
-    "value": "poisonous",
+    "value": "edible-some-react",
     "sources": [
-      "wp",
-      "fn"
+      "fn",
+      "wp"
     ]
   },
   "edibilityNote": {
-    "value": "Not edible (First Nature); eaten with alcohol it has caused several poisonings, with vomiting and diarrhoea about ten hours later (Wikipedia).",
+    "value": "Cook it thoroughly (it is acrid raw) and try a small portion first: some people get an upset stomach (Wikipedia). First Nature adds that honey fungi on broadleaved trees are considered suspect by some, as poisonings have been linked to them.",
     "sources": [
       "fn",
       "wp"
@@ -27,28 +30,28 @@
   },
   "topPoints": [
     {
-      "value": "Straw-yellow cap, 3–12 cm, covered in upturned brown scales.",
+      "value": "Ochre-brown to red-brown cap, 4–10 cm, covered in fine brown scales, darker in the centre.",
       "sources": [
         "fn",
         "wp"
       ]
     },
     {
-      "value": "Scaly stem below a ragged ring, smooth above it.",
+      "value": "Gills whitish, turning yellowish-brown; white spore print.",
       "sources": [
         "fn",
         "wp"
       ]
     },
     {
-      "value": "Gills pale yellow, turning cinnamon; rusty-brown spore print.",
+      "value": "A cobweb-like ring that soon disappears; the stem swells towards the base.",
       "sources": [
         "fn",
         "wp"
       ]
     },
     {
-      "value": "In clusters at the base of broadleaved trees and stumps, especially beech.",
+      "value": "In clusters, usually on the ground from buried roots and wood of broadleaved trees.",
       "sources": [
         "fn",
         "wp"
@@ -56,7 +59,7 @@
     }
   ],
   "habitat": {
-    "value": "In clusters at the base of living or dead broadleaved trees and stumps, especially beech; rarely conifers.",
+    "value": "On the ground from buried roots and rotting wood of broadleaved trees, sometimes on stumps; rarely under conifers.",
     "sources": [
       "fn",
       "wp"
@@ -64,6 +67,8 @@
   },
   "seasonMonths": {
     "value": [
+      6,
+      7,
       8,
       9,
       10,
@@ -74,7 +79,7 @@
     ]
   },
   "sporePrint": {
-    "value": "Rusty brown",
+    "value": "White or very pale cream",
     "sources": [
       "fn",
       "wp"
@@ -89,7 +94,7 @@
       ]
     },
     "ring": {
-      "value": "yes",
+      "value": "sometimes",
       "sources": [
         "fn",
         "wp"
@@ -103,7 +108,7 @@
       ]
     },
     "growsOn": {
-      "value": "wood",
+      "value": "ground",
       "sources": [
         "fn",
         "wp"
@@ -111,8 +116,8 @@
     },
     "capCm": {
       "value": [
-        3,
-        12
+        4,
+        9.5
       ],
       "sources": [
         "fn",
@@ -120,19 +125,50 @@
       ]
     },
     "fleshChange": {
-      "value": "Pale yellow; no colour change when cut is described",
+      "value": "White and firm; no colour change when cut is described",
       "sources": [
-        "fn"
+        "fn",
+        "wp"
       ]
     },
     "smell": {
-      "value": "Of radish",
+      "value": "Sweet; like camembert cheese (Wikipedia)",
       "sources": [
-        "fn"
+        "fn",
+        "wp"
       ]
     }
   },
   "lookalikes": [
+    {
+      "scientific": "Pholiota squarrosa",
+      "english": "Shaggy Scalycap",
+      "slug": "shaggy-scalycap",
+      "kind": "poisonous",
+      "tellApart": [
+        {
+          "feature": "Gills with age",
+          "thisOne": "Turn yellowish-brown",
+          "thatOne": "Turn rusty brown",
+          "sources": [
+            "fn",
+            "fn-ss",
+            "wp-ss"
+          ]
+        },
+        {
+          "feature": "Spore print",
+          "thisOne": "White or very pale cream",
+          "thatOne": "Rusty brown",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-ss",
+            "wp-ss"
+          ]
+        }
+      ]
+    },
     {
       "scientific": "Armillaria mellea",
       "english": "Honey Fungus",
@@ -140,55 +176,23 @@
       "kind": "edible",
       "tellApart": [
         {
-          "feature": "Spore print",
-          "thisOne": "Rusty brown",
-          "thatOne": "White to pale cream",
-          "sources": [
-            "fn",
-            "wp",
-            "fn-hf",
-            "wf-hf",
-            "wp-hf"
-          ]
-        },
-        {
-          "feature": "Scales",
-          "thisOne": "Thick, upturned brown scales all over the cap, and on the stem below the ring",
-          "thatOne": "At most a few small dark scales, mostly near the cap centre",
+          "feature": "Ring",
+          "thisOne": "Cobweb-like, soon gone",
+          "thatOne": "A lasting ring",
           "sources": [
             "fn",
             "wp",
             "fn-hf",
             "wf-hf"
           ]
-        }
-      ]
-    },
-    {
-      "scientific": "Armillaria gallica",
-      "english": "Bulbous Honey Fungus",
-      "slug": "bulbous-honey-fungus",
-      "kind": "edible",
-      "tellApart": [
-        {
-          "feature": "Gills with age",
-          "thisOne": "Turn rusty brown",
-          "thatOne": "Turn yellowish-brown",
-          "sources": [
-            "fn",
-            "wp",
-            "fn-bh"
-          ]
         },
         {
-          "feature": "Spore print",
-          "thisOne": "Rusty brown",
-          "thatOne": "White or very pale cream",
+          "feature": "Stem",
+          "thisOne": "Thicker, swelling at the base",
+          "thatOne": "Thinner",
           "sources": [
             "fn",
-            "wp",
-            "fn-bh",
-            "wp-bh"
+            "wp"
           ]
         }
       ]
@@ -199,13 +203,13 @@
   "sources": [
     {
       "id": "fn",
-      "title": "First Nature — Pholiota squarrosa, Shaggy Scalycap",
-      "url": "https://www.first-nature.com/fungi/pholiota-squarrosa.php"
+      "title": "First Nature — Armillaria gallica, Bulbous Honey Fungus",
+      "url": "https://www.first-nature.com/fungi/armillaria-gallica.php"
     },
     {
       "id": "wp",
-      "title": "Wikipedia — Pholiota squarrosa",
-      "url": "https://en.wikipedia.org/wiki/Pholiota_squarrosa"
+      "title": "Wikipedia — Armillaria gallica",
+      "url": "https://en.wikipedia.org/wiki/Armillaria_gallica"
     },
     {
       "id": "fn-hf",
@@ -223,14 +227,14 @@
       "url": "https://en.wikipedia.org/wiki/Armillaria_mellea"
     },
     {
-      "id": "fn-bh",
-      "title": "First Nature — Armillaria gallica, Bulbous Honey Fungus",
-      "url": "https://www.first-nature.com/fungi/armillaria-gallica.php"
+      "id": "fn-ss",
+      "title": "First Nature — Pholiota squarrosa, Shaggy Scalycap",
+      "url": "https://www.first-nature.com/fungi/pholiota-squarrosa.php"
     },
     {
-      "id": "wp-bh",
-      "title": "Wikipedia — Armillaria gallica",
-      "url": "https://en.wikipedia.org/wiki/Armillaria_gallica"
+      "id": "wp-ss",
+      "title": "Wikipedia — Pholiota squarrosa",
+      "url": "https://en.wikipedia.org/wiki/Pholiota_squarrosa"
     },
     {
       "id": "wf-prot",
