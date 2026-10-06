@@ -131,7 +131,22 @@
   },
   "lookalikes": [],
   "noDangerousLookalike": null,
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/orange-bonnet/1.webp",
+      "view": "whole",
+      "credit": "Rosie, no rights reserved (CC0)",
+      "licence": "cc0",
+      "link": "https://www.inaturalist.org/observations/137776425"
+    },
+    {
+      "file": "photos/orange-bonnet/2.webp",
+      "view": "whole",
+      "credit": "(c) Daisy Cadet, some rights reserved (CC BY)",
+      "licence": "cc-by",
+      "link": "https://www.inaturalist.org/observations/305520024"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

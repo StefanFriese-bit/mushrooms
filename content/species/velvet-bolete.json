@@ -181,7 +181,22 @@
       "wf"
     ]
   },
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/velvet-bolete/1.webp",
+      "view": "whole",
+      "credit": "(c) Andrew Melton, some rights reserved (CC BY)",
+      "licence": "cc-by",
+      "link": "https://www.inaturalist.org/observations/138894091"
+    },
+    {
+      "file": "photos/velvet-bolete/2.webp",
+      "view": "whole",
+      "credit": "(c) Anthony Jiang, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/313809253"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

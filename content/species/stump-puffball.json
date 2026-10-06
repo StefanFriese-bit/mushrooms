@@ -222,7 +222,22 @@
     }
   ],
   "noDangerousLookalike": null,
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/stump-puffball/1.webp",
+      "view": "whole",
+      "credit": "(c) springwaterexplorer, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/94091472"
+    },
+    {
+      "file": "photos/stump-puffball/2.webp",
+      "view": "whole",
+      "credit": "(c) luciearmstrong1987, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/141312586"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

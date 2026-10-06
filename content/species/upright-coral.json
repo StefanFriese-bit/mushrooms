@@ -179,7 +179,22 @@
     }
   ],
   "noDangerousLookalike": null,
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/upright-coral/1.webp",
+      "view": "whole",
+      "credit": "(c) Damon Tighe, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/241651159"
+    },
+    {
+      "file": "photos/upright-coral/2.webp",
+      "view": "whole",
+      "credit": "John Potter, no rights reserved (CC0)",
+      "licence": "cc0",
+      "link": "https://www.inaturalist.org/observations/100858612"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

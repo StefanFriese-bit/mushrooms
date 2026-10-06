@@ -151,7 +151,22 @@
     }
   ],
   "noDangerousLookalike": null,
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/white-brain/1.webp",
+      "view": "whole",
+      "credit": "(c) Colin Legg, some rights reserved (CC BY)",
+      "licence": "cc-by",
+      "link": "https://www.inaturalist.org/observations/199193906"
+    },
+    {
+      "file": "photos/white-brain/2.webp",
+      "view": "whole",
+      "credit": "(c) phlambler, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/108014413"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

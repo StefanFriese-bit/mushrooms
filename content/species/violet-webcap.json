@@ -136,7 +136,22 @@
   },
   "lookalikes": [],
   "noDangerousLookalike": null,
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/violet-webcap/1.webp",
+      "view": "whole",
+      "credit": "(c) gaps_dmg, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/178901519"
+    },
+    {
+      "file": "photos/violet-webcap/2.webp",
+      "view": "whole",
+      "credit": "(c) helenmcara, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/188809802"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

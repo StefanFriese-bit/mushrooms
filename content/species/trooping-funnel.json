@@ -221,7 +221,22 @@
     }
   ],
   "noDangerousLookalike": null,
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/trooping-funnel/1.webp",
+      "view": "whole",
+      "credit": "(c) cassandra_li, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/139624089"
+    },
+    {
+      "file": "photos/trooping-funnel/2.webp",
+      "view": "whole",
+      "credit": "(c) Anton, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/192181752"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

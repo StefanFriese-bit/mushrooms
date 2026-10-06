@@ -155,7 +155,22 @@
     }
   ],
   "noDangerousLookalike": null,
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/warlock-s-butter/1.webp",
+      "view": "whole",
+      "credit": "(c) whinaem, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/105032190"
+    },
+    {
+      "file": "photos/warlock-s-butter/2.webp",
+      "view": "whole",
+      "credit": "(c) Meg, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/79759410"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

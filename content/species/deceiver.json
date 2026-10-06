@@ -206,7 +206,22 @@
     }
   ],
   "noDangerousLookalike": null,
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/deceiver/1.webp",
+      "view": "whole",
+      "credit": "(c) bnwthrs, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/31058913"
+    },
+    {
+      "file": "photos/deceiver/2.webp",
+      "view": "whole",
+      "credit": "(c) LaMaureen, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/249667020"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

@@ -143,7 +143,22 @@
   },
   "lookalikes": [],
   "noDangerousLookalike": null,
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/yellow-brain/1.webp",
+      "view": "whole",
+      "credit": "Dr. Alan Inman, no rights reserved (CC0)",
+      "licence": "cc0",
+      "link": "https://www.inaturalist.org/observations/201477778"
+    },
+    {
+      "file": "photos/yellow-brain/2.webp",
+      "view": "whole",
+      "credit": "(c) ina22, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/67194293"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

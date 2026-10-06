@@ -136,7 +136,22 @@
       "wp"
     ]
   },
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/smoky-spindles/1.webp",
+      "view": "whole",
+      "credit": "(c) Peachysteve, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/60800282"
+    },
+    {
+      "file": "photos/smoky-spindles/2.webp",
+      "view": "whole",
+      "credit": "(c) fionanicholls, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/139611679"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

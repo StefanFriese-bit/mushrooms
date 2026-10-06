@@ -165,7 +165,22 @@
     }
   ],
   "noDangerousLookalike": null,
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/red-banded-polypore/1.webp",
+      "view": "whole",
+      "credit": "(c) ffoxed, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/142909172"
+    },
+    {
+      "file": "photos/red-banded-polypore/2.webp",
+      "view": "whole",
+      "credit": "(c) tiplog, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/97557385"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

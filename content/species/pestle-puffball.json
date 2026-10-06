@@ -147,7 +147,22 @@
       "fn"
     ]
   },
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/pestle-puffball/1.webp",
+      "view": "whole",
+      "credit": "(c) rodca, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/139234374"
+    },
+    {
+      "file": "photos/pestle-puffball/2.webp",
+      "view": "whole",
+      "credit": "(c) Craignerrad, some rights reserved (CC BY)",
+      "licence": "cc-by",
+      "link": "https://www.inaturalist.org/observations/342941217"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

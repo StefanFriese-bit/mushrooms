@@ -149,7 +149,22 @@
       "wp"
     ]
   },
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/butter-cap/1.webp",
+      "view": "whole",
+      "credit": "(c) Joe Holt, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/138971408"
+    },
+    {
+      "file": "photos/butter-cap/2.webp",
+      "view": "whole",
+      "credit": "(c) Paco Bergson, some rights reserved (CC BY)",
+      "licence": "cc-by",
+      "link": "https://www.inaturalist.org/observations/64170567"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

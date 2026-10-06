@@ -206,7 +206,22 @@
     }
   ],
   "noDangerousLookalike": null,
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/wood-blewit/1.webp",
+      "view": "whole",
+      "credit": "(c) konopel, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/253027071"
+    },
+    {
+      "file": "photos/wood-blewit/2.webp",
+      "view": "whole",
+      "credit": "(c) devinenature, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/326356264"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

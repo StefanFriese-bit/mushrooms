@@ -190,7 +190,22 @@
     }
   ],
   "noDangerousLookalike": null,
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/yellow-fieldcap/1.webp",
+      "view": "whole",
+      "credit": "(c) Dylan Otte, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/251305087"
+    },
+    {
+      "file": "photos/yellow-fieldcap/2.webp",
+      "view": "whole",
+      "credit": "(c) oldnog, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/186533538"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

@@ -163,7 +163,22 @@
     }
   ],
   "noDangerousLookalike": null,
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/rooting-bolete/1.webp",
+      "view": "whole",
+      "credit": "(c) nataliamyco, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/175989295"
+    },
+    {
+      "file": "photos/rooting-bolete/2.webp",
+      "view": "whole",
+      "credit": "(c) pastor_philip87, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/220277222"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

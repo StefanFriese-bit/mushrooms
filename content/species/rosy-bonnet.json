@@ -162,7 +162,22 @@
     }
   ],
   "noDangerousLookalike": null,
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/rosy-bonnet/1.webp",
+      "view": "whole",
+      "credit": "(c) Virn Stothers, some rights reserved (CC BY)",
+      "licence": "cc-by",
+      "link": "https://www.inaturalist.org/observations/248308762"
+    },
+    {
+      "file": "photos/rosy-bonnet/2.webp",
+      "view": "whole",
+      "credit": "(c) daniellecarbott, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/110090891"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

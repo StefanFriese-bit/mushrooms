@@ -134,7 +134,22 @@
       "wp"
     ]
   },
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/jelly-tooth/1.webp",
+      "view": "whole",
+      "credit": "(c) Pea-en, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/103154962"
+    },
+    {
+      "file": "photos/jelly-tooth/2.webp",
+      "view": "whole",
+      "credit": "(c) hadynrmurray, some rights reserved (CC BY)",
+      "licence": "cc-by",
+      "link": "https://www.inaturalist.org/observations/67409941"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

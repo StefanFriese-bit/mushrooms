@@ -204,7 +204,22 @@
     }
   ],
   "noDangerousLookalike": null,
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/verdigris-agaric/1.webp",
+      "view": "whole",
+      "credit": "(c) Eszter Fazekas, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/139735974"
+    },
+    {
+      "file": "photos/verdigris-agaric/2.webp",
+      "view": "whole",
+      "credit": "(c) marcus and tilly, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/33594611"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

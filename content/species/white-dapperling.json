@@ -238,7 +238,22 @@
     }
   ],
   "noDangerousLookalike": null,
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/white-dapperling/1.webp",
+      "view": "whole",
+      "credit": "(c) Sue Mallender, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/134795272"
+    },
+    {
+      "file": "photos/white-dapperling/2.webp",
+      "view": "whole",
+      "credit": "(c) Max Mudie, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/328350481"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

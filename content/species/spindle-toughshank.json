@@ -140,7 +140,22 @@
   },
   "lookalikes": [],
   "noDangerousLookalike": null,
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/spindle-toughshank/1.webp",
+      "view": "whole",
+      "credit": "(c) cuz, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/56908258"
+    },
+    {
+      "file": "photos/spindle-toughshank/2.webp",
+      "view": "whole",
+      "credit": "(c) wildlifemandan, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/307242344"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

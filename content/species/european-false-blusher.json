@@ -179,7 +179,22 @@
     }
   ],
   "noDangerousLookalike": null,
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/european-false-blusher/1.webp",
+      "view": "whole",
+      "credit": "(c) ikelman, some rights reserved (CC BY)",
+      "licence": "cc-by",
+      "link": "https://www.inaturalist.org/observations/374236325"
+    },
+    {
+      "file": "photos/european-false-blusher/2.webp",
+      "view": "whole",
+      "credit": "(c) esgy, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/173604892"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

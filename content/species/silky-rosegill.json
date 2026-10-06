@@ -224,7 +224,22 @@
     }
   ],
   "noDangerousLookalike": null,
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/silky-rosegill/1.webp",
+      "view": "whole",
+      "credit": "(c) james whitwell, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/162527623"
+    },
+    {
+      "file": "photos/silky-rosegill/2.webp",
+      "view": "whole",
+      "credit": "(c) NickS, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/229911353"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

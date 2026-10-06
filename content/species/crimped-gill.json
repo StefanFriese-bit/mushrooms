@@ -131,7 +131,22 @@
   },
   "lookalikes": [],
   "noDangerousLookalike": null,
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/crimped-gill/1.webp",
+      "view": "whole",
+      "credit": "(c) local_dragon, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/100875993"
+    },
+    {
+      "file": "photos/crimped-gill/2.webp",
+      "view": "whole",
+      "credit": "(c) whinaem, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/73307582"
+    }
+  ],
   "sources": [
     {
       "id": "wf",

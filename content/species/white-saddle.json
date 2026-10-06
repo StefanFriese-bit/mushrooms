@@ -135,7 +135,22 @@
   },
   "lookalikes": [],
   "noDangerousLookalike": null,
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/white-saddle/1.webp",
+      "view": "whole",
+      "credit": "(c) cav91, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/101720009"
+    },
+    {
+      "file": "photos/white-saddle/2.webp",
+      "view": "whole",
+      "credit": "(c) nataliamyco, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/324425860"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

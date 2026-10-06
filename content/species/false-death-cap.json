@@ -196,7 +196,22 @@
     }
   ],
   "noDangerousLookalike": null,
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/false-death-cap/1.webp",
+      "view": "whole",
+      "credit": "(c) jaminiamanita, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/317320343"
+    },
+    {
+      "file": "photos/false-death-cap/2.webp",
+      "view": "whole",
+      "credit": "(c) Taras Zavalinii, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/323794868"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

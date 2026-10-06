@@ -161,7 +161,22 @@
     }
   ],
   "noDangerousLookalike": null,
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/bitter-oysterling/1.webp",
+      "view": "whole",
+      "credit": "(c) lizfrost47, some rights reserved (CC BY)",
+      "licence": "cc-by",
+      "link": "https://www.inaturalist.org/observations/253191561"
+    },
+    {
+      "file": "photos/bitter-oysterling/2.webp",
+      "view": "whole",
+      "credit": "(c) hjjones91, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/330963717"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

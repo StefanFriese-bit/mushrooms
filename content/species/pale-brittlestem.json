@@ -143,7 +143,22 @@
       "wp"
     ]
   },
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/pale-brittlestem/1.webp",
+      "view": "whole",
+      "credit": "(c) Kieran Roy Powell, some rights reserved (CC BY)",
+      "licence": "cc-by",
+      "link": "https://www.inaturalist.org/observations/300741160"
+    },
+    {
+      "file": "photos/pale-brittlestem/2.webp",
+      "view": "whole",
+      "credit": "(c) jayneer57, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/220649483"
+    }
+  ],
   "sources": [
     {
       "id": "wf",

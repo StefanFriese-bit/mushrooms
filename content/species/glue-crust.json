@@ -132,7 +132,22 @@
   },
   "lookalikes": [],
   "noDangerousLookalike": null,
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/glue-crust/1.webp",
+      "view": "whole",
+      "credit": "(c) whale_nerd, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/59078507"
+    },
+    {
+      "file": "photos/glue-crust/2.webp",
+      "view": "whole",
+      "credit": "(c) Mike Roberts, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/266983439"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

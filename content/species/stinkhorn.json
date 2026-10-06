@@ -250,7 +250,22 @@
     }
   ],
   "noDangerousLookalike": null,
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/stinkhorn/1.webp",
+      "view": "whole",
+      "credit": "(c) Ian Andrews, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/31627811"
+    },
+    {
+      "file": "photos/stinkhorn/2.webp",
+      "view": "whole",
+      "credit": "(c) dreggman, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/56492855"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

@@ -191,7 +191,22 @@
     }
   ],
   "noDangerousLookalike": null,
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/mosaic-puffball/1.webp",
+      "view": "whole",
+      "credit": "(c) Jeff Jones, some rights reserved (CC BY)",
+      "licence": "cc-by",
+      "link": "https://www.inaturalist.org/observations/84708706"
+    },
+    {
+      "file": "photos/mosaic-puffball/2.webp",
+      "view": "whole",
+      "credit": "J Mark Earlam, no rights reserved (CC0)",
+      "licence": "cc0",
+      "link": "https://www.inaturalist.org/observations/65939189"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

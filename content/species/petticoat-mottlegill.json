@@ -169,7 +169,22 @@
     }
   ],
   "noDangerousLookalike": null,
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/petticoat-mottlegill/1.webp",
+      "view": "whole",
+      "credit": "(c) Sue Brownbridge, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/61193178"
+    },
+    {
+      "file": "photos/petticoat-mottlegill/2.webp",
+      "view": "whole",
+      "credit": "(c) Claire Webster, some rights reserved (CC BY)",
+      "licence": "cc-by",
+      "link": "https://www.inaturalist.org/observations/60193815"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

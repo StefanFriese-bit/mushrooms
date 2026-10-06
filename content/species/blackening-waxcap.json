@@ -205,7 +205,22 @@
     }
   ],
   "noDangerousLookalike": null,
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/blackening-waxcap/1.webp",
+      "view": "whole",
+      "credit": "(c) nataliamyco, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/175989032"
+    },
+    {
+      "file": "photos/blackening-waxcap/2.webp",
+      "view": "whole",
+      "credit": "(c) lgrant12, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/91551286"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

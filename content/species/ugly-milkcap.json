@@ -169,7 +169,22 @@
     }
   ],
   "noDangerousLookalike": null,
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/ugly-milkcap/1.webp",
+      "view": "whole",
+      "credit": "(c) kinkypink, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/185900964"
+    },
+    {
+      "file": "photos/ugly-milkcap/2.webp",
+      "view": "whole",
+      "credit": "(c) mdr, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/59459893"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

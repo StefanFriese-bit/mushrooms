@@ -164,7 +164,22 @@
     }
   ],
   "noDangerousLookalike": null,
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/beech-milkcap/1.webp",
+      "view": "whole",
+      "credit": "(c) Clare McQ, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/240766543"
+    },
+    {
+      "file": "photos/beech-milkcap/2.webp",
+      "view": "whole",
+      "credit": "Piermario Maculan, no rights reserved (CC0)",
+      "licence": "cc0",
+      "link": "https://www.inaturalist.org/observations/250224256"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

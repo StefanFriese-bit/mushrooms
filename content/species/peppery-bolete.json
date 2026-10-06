@@ -184,7 +184,22 @@
     }
   ],
   "noDangerousLookalike": null,
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/peppery-bolete/1.webp",
+      "view": "whole",
+      "credit": "(c) Stanley Chan, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/303674506"
+    },
+    {
+      "file": "photos/peppery-bolete/2.webp",
+      "view": "whole",
+      "credit": "(c) clairedoble, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/321436506"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

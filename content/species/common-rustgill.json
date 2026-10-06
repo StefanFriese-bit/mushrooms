@@ -183,7 +183,22 @@
     }
   ],
   "noDangerousLookalike": null,
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/common-rustgill/1.webp",
+      "view": "whole",
+      "credit": "eth, no rights reserved (CC0)",
+      "licence": "cc0",
+      "link": "https://www.inaturalist.org/observations/252312578"
+    },
+    {
+      "file": "photos/common-rustgill/2.webp",
+      "view": "whole",
+      "credit": "(c) sallyferg, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/207558397"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

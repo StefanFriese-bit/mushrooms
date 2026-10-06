@@ -157,7 +157,22 @@
     }
   ],
   "noDangerousLookalike": null,
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/willow-shield/1.webp",
+      "view": "whole",
+      "credit": "(c) Gulsen Cingoz, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/243278819"
+    },
+    {
+      "file": "photos/willow-shield/2.webp",
+      "view": "whole",
+      "credit": "(c) Tilly, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/305281088"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

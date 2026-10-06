@@ -186,7 +186,22 @@
     }
   ],
   "noDangerousLookalike": null,
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/fly-agaric/1.webp",
+      "view": "whole",
+      "credit": "(c) Max Mudie, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/140759375"
+    },
+    {
+      "file": "photos/fly-agaric/2.webp",
+      "view": "whole",
+      "credit": "(c) Jarro Nevsbaru, some rights reserved (CC BY)",
+      "licence": "cc-by",
+      "link": "https://www.inaturalist.org/observations/316848962"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

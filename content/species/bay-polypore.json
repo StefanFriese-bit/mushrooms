@@ -139,7 +139,22 @@
   },
   "lookalikes": [],
   "noDangerousLookalike": null,
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/bay-polypore/1.webp",
+      "view": "whole",
+      "credit": "(c) rhubarbnhol, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/246695782"
+    },
+    {
+      "file": "photos/bay-polypore/2.webp",
+      "view": "whole",
+      "credit": "(c) sharoncooper, some rights reserved (CC BY)",
+      "licence": "cc-by",
+      "link": "https://www.inaturalist.org/observations/141280635"
+    }
+  ],
   "sources": [
     {
       "id": "wf",

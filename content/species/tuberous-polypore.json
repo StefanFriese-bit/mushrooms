@@ -137,7 +137,22 @@
       "fn"
     ]
   },
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/tuberous-polypore/1.webp",
+      "view": "whole",
+      "credit": "(c) Nicolas Schwab, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/242955502"
+    },
+    {
+      "file": "photos/tuberous-polypore/2.webp",
+      "view": "whole",
+      "credit": "(c) dwilliams95, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/357882652"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

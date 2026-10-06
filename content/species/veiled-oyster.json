@@ -142,7 +142,22 @@
       "wp"
     ]
   },
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/veiled-oyster/1.webp",
+      "view": "whole",
+      "credit": "(c) cav91, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/139576007"
+    },
+    {
+      "file": "photos/veiled-oyster/2.webp",
+      "view": "whole",
+      "credit": "(c) Jacqueline Worthington, some rights reserved (CC BY)",
+      "licence": "cc-by",
+      "link": "https://www.inaturalist.org/observations/179356111"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

@@ -155,7 +155,22 @@
     }
   ],
   "noDangerousLookalike": null,
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/slimy-waxcap/1.webp",
+      "view": "whole",
+      "credit": "(c) Owen and Carol Fawcett., some rights reserved (CC BY)",
+      "licence": "cc-by",
+      "link": "https://www.inaturalist.org/observations/320389606"
+    },
+    {
+      "file": "photos/slimy-waxcap/2.webp",
+      "view": "whole",
+      "credit": "(c) jonathanbarnaby, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/324207059"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

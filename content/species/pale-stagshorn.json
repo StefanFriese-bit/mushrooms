@@ -163,7 +163,22 @@
     }
   ],
   "noDangerousLookalike": null,
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/pale-stagshorn/1.webp",
+      "view": "whole",
+      "credit": "(c) Rowan McCulloch, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/223231515"
+    },
+    {
+      "file": "photos/pale-stagshorn/2.webp",
+      "view": "whole",
+      "credit": "(c) Cara Ennis, some rights reserved (CC BY)",
+      "licence": "cc-by",
+      "link": "https://www.inaturalist.org/observations/312992337"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

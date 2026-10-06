@@ -176,7 +176,22 @@
     }
   ],
   "noDangerousLookalike": null,
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/crimson-waxcap/1.webp",
+      "view": "whole",
+      "credit": "(c) fromephil, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/249764422"
+    },
+    {
+      "file": "photos/crimson-waxcap/2.webp",
+      "view": "whole",
+      "credit": "(c) Elinor Scott-lester, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/320665546"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

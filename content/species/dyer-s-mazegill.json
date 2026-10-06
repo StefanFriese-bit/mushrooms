@@ -133,7 +133,22 @@
   },
   "lookalikes": [],
   "noDangerousLookalike": null,
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/dyer-s-mazegill/1.webp",
+      "view": "whole",
+      "credit": "(c) danielluscombe, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/310541956"
+    },
+    {
+      "file": "photos/dyer-s-mazegill/2.webp",
+      "view": "whole",
+      "credit": "(c) NatHistoryRen, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/396771121"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

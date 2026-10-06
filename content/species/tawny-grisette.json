@@ -185,7 +185,22 @@
     }
   ],
   "noDangerousLookalike": null,
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/tawny-grisette/1.webp",
+      "view": "whole",
+      "credit": "(c) mickr, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/58613063"
+    },
+    {
+      "file": "photos/tawny-grisette/2.webp",
+      "view": "whole",
+      "credit": "(c) iamjoeg18, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/323327836"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

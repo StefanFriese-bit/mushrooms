@@ -178,7 +178,22 @@
       "wf"
     ]
   },
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/bovine-bolete/1.webp",
+      "view": "whole",
+      "credit": "(c) Sam Piper, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/323242566"
+    },
+    {
+      "file": "photos/bovine-bolete/2.webp",
+      "view": "whole",
+      "credit": "(c) Liz Downey, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/322458522"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

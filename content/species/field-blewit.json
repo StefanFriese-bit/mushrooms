@@ -176,7 +176,22 @@
     }
   ],
   "noDangerousLookalike": null,
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/field-blewit/1.webp",
+      "view": "whole",
+      "credit": "(c) jonnyjukebox, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/289815385"
+    },
+    {
+      "file": "photos/field-blewit/2.webp",
+      "view": "whole",
+      "credit": "(c) probreviceps, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/249932340"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

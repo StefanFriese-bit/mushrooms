@@ -158,7 +158,22 @@
     }
   ],
   "noDangerousLookalike": null,
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/cedarwood-waxcap/1.webp",
+      "view": "whole",
+      "credit": "(c) Peachysteve, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/251788121"
+    },
+    {
+      "file": "photos/cedarwood-waxcap/2.webp",
+      "view": "whole",
+      "credit": "(c) james_ferns_etc, some rights reserved (CC BY)",
+      "licence": "cc-by",
+      "link": "https://www.inaturalist.org/observations/323182031"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

@@ -172,7 +172,22 @@
     }
   ],
   "noDangerousLookalike": null,
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/whitelaced-shank/1.webp",
+      "view": "whole",
+      "credit": "(c) Myles McSweeney, some rights reserved (CC BY)",
+      "licence": "cc-by",
+      "link": "https://www.inaturalist.org/observations/114405407"
+    },
+    {
+      "file": "photos/whitelaced-shank/2.webp",
+      "view": "whole",
+      "credit": "(c) Myles McSweeney, some rights reserved (CC BY)",
+      "licence": "cc-by",
+      "link": "https://www.inaturalist.org/observations/112564099"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

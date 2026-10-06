@@ -159,7 +159,22 @@
     }
   ],
   "noDangerousLookalike": null,
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/crystal-brain/1.webp",
+      "view": "whole",
+      "credit": "(c) Daniel Cahen, some rights reserved (CC BY)",
+      "licence": "cc-by",
+      "link": "https://www.inaturalist.org/observations/255204499"
+    },
+    {
+      "file": "photos/crystal-brain/2.webp",
+      "view": "whole",
+      "credit": "(c) stottparsons, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/146233847"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

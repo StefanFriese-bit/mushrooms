@@ -205,7 +205,22 @@
     }
   ],
   "noDangerousLookalike": null,
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/dusky-puffball/1.webp",
+      "view": "whole",
+      "credit": "(c) Graeme Baxter, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/97397084"
+    },
+    {
+      "file": "photos/dusky-puffball/2.webp",
+      "view": "whole",
+      "credit": "(c) reagan peschke, some rights reserved (CC BY)",
+      "licence": "cc-by",
+      "link": "https://www.inaturalist.org/observations/322565041"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

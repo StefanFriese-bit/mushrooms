@@ -168,7 +168,22 @@
     }
   ],
   "noDangerousLookalike": null,
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/lilac-pinkgill/1.webp",
+      "view": "whole",
+      "credit": "(c) Ben Deed, some rights reserved (CC BY)",
+      "licence": "cc-by",
+      "link": "https://www.inaturalist.org/observations/324220422"
+    },
+    {
+      "file": "photos/lilac-pinkgill/2.webp",
+      "view": "whole",
+      "credit": "(c) Arthur Gelling, some rights reserved (CC BY)",
+      "licence": "cc-by",
+      "link": "https://www.inaturalist.org/observations/326648315"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

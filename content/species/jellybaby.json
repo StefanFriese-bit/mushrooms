@@ -124,7 +124,22 @@
   },
   "lookalikes": [],
   "noDangerousLookalike": null,
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/jellybaby/1.webp",
+      "view": "whole",
+      "credit": "(c) Steve Orridge, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/65874094"
+    },
+    {
+      "file": "photos/jellybaby/2.webp",
+      "view": "whole",
+      "credit": "(c) Anna Kellagher, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/331349533"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

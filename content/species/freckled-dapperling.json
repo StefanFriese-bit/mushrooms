@@ -200,7 +200,22 @@
     }
   ],
   "noDangerousLookalike": null,
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/freckled-dapperling/1.webp",
+      "view": "whole",
+      "credit": "(c) ashleigh666, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/180297757"
+    },
+    {
+      "file": "photos/freckled-dapperling/2.webp",
+      "view": "whole",
+      "credit": "(c) Cara Ennis, some rights reserved (CC BY)",
+      "licence": "cc-by",
+      "link": "https://www.inaturalist.org/observations/319622328"
+    }
+  ],
   "sources": [
     {
       "id": "wf",

@@ -191,7 +191,22 @@
     }
   ],
   "noDangerousLookalike": null,
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/bitter-beech-bolete/1.webp",
+      "view": "whole",
+      "credit": "(c) Sonny Hallett, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/138837600"
+    },
+    {
+      "file": "photos/bitter-beech-bolete/2.webp",
+      "view": "whole",
+      "credit": "(c) nataliamyco, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/171313403"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

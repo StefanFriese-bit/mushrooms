@@ -161,7 +161,22 @@
     }
   ],
   "noDangerousLookalike": null,
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/orange-grisette/1.webp",
+      "view": "whole",
+      "credit": "John Kenrick Gibson, no rights reserved (CC0)",
+      "licence": "cc0",
+      "link": "https://www.inaturalist.org/observations/183651294"
+    },
+    {
+      "file": "photos/orange-grisette/2.webp",
+      "view": "whole",
+      "credit": "(c) Colin Doull, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/179514772"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

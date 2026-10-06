@@ -165,7 +165,22 @@
     }
   ],
   "noDangerousLookalike": null,
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/common-porecrust/1.webp",
+      "view": "whole",
+      "credit": "(c) Cara Ennis, some rights reserved (CC BY)",
+      "licence": "cc-by",
+      "link": "https://www.inaturalist.org/observations/340794351"
+    },
+    {
+      "file": "photos/common-porecrust/2.webp",
+      "view": "whole",
+      "credit": "(c) RHODRI WILLIAM THOMAS, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/245850231"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

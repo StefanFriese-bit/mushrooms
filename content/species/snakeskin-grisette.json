@@ -212,7 +212,22 @@
     }
   ],
   "noDangerousLookalike": null,
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/snakeskin-grisette/1.webp",
+      "view": "whole",
+      "credit": "(c) Nida Baltaityte, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/121455822"
+    },
+    {
+      "file": "photos/snakeskin-grisette/2.webp",
+      "view": "whole",
+      "credit": "(c) durhambob23, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/325060212"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

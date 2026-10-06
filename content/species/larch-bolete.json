@@ -215,7 +215,22 @@
       "fn"
     ]
   },
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/larch-bolete/1.webp",
+      "view": "whole",
+      "credit": "(c) ineslopescunha, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/138030104"
+    },
+    {
+      "file": "photos/larch-bolete/2.webp",
+      "view": "whole",
+      "credit": "(c) philhicks, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/34265590"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

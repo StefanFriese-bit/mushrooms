@@ -163,7 +163,22 @@
     }
   ],
   "noDangerousLookalike": null,
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/parrot-waxcap/1.webp",
+      "view": "whole",
+      "credit": "(c) Peachysteve, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/191102687"
+    },
+    {
+      "file": "photos/parrot-waxcap/2.webp",
+      "view": "whole",
+      "credit": "(c) Peachysteve, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/100213044"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

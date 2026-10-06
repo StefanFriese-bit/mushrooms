@@ -182,7 +182,22 @@
     }
   ],
   "noDangerousLookalike": null,
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/purplepore-bracket/1.webp",
+      "view": "whole",
+      "credit": "(c) jasgrogan, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/136810849"
+    },
+    {
+      "file": "photos/purplepore-bracket/2.webp",
+      "view": "whole",
+      "credit": "(c) percy42, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/100527574"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

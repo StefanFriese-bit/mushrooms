@@ -160,7 +160,22 @@
     }
   ],
   "noDangerousLookalike": null,
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/olive-oysterling/1.webp",
+      "view": "whole",
+      "credit": "(c) Christopher O'Malley, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/101627000"
+    },
+    {
+      "file": "photos/olive-oysterling/2.webp",
+      "view": "whole",
+      "credit": "(c) cav91, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/102870391"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

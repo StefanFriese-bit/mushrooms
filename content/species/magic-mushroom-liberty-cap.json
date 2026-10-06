@@ -142,7 +142,22 @@
   },
   "lookalikes": [],
   "noDangerousLookalike": null,
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/magic-mushroom-liberty-cap/1.webp",
+      "view": "whole",
+      "credit": "(c) cliffwillis, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/32837082"
+    },
+    {
+      "file": "photos/magic-mushroom-liberty-cap/2.webp",
+      "view": "whole",
+      "credit": "(c) Randall Willingham, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/63365518"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

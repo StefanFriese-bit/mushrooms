@@ -195,7 +195,22 @@
     }
   ],
   "noDangerousLookalike": null,
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/scarletina-bolete/1.webp",
+      "view": "whole",
+      "credit": "(c) snootsnoot, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/186203422"
+    },
+    {
+      "file": "photos/scarletina-bolete/2.webp",
+      "view": "whole",
+      "credit": "(c) avoidasher, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/134349992"
+    }
+  ],
   "sources": [
     {
       "id": "wf",

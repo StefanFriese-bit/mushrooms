@@ -193,7 +193,22 @@
     }
   ],
   "noDangerousLookalike": null,
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/witches-butter/1.webp",
+      "view": "whole",
+      "credit": "(c) bsteer, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/69770230"
+    },
+    {
+      "file": "photos/witches-butter/2.webp",
+      "view": "whole",
+      "credit": "(c) steffie22, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/262806231"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

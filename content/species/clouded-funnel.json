@@ -169,7 +169,22 @@
     }
   ],
   "noDangerousLookalike": null,
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/clouded-funnel/1.webp",
+      "view": "whole",
+      "credit": "(c) chris_lines, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/63007359"
+    },
+    {
+      "file": "photos/clouded-funnel/2.webp",
+      "view": "whole",
+      "credit": "(c) wildflowerwendy, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/63718494"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

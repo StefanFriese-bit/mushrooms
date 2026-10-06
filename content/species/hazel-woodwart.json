@@ -161,7 +161,22 @@
     }
   ],
   "noDangerousLookalike": null,
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/hazel-woodwart/1.webp",
+      "view": "whole",
+      "credit": "(c) Alex Press, some rights reserved (CC BY)",
+      "licence": "cc-by",
+      "link": "https://www.inaturalist.org/observations/262728274"
+    },
+    {
+      "file": "photos/hazel-woodwart/2.webp",
+      "view": "whole",
+      "credit": "(c) Adrian Smith, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/340460379"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

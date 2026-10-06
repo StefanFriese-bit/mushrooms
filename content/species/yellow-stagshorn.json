@@ -164,7 +164,22 @@
     }
   ],
   "noDangerousLookalike": null,
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/yellow-stagshorn/1.webp",
+      "view": "whole",
+      "credit": "(c) Anja Cervencl, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/31913941"
+    },
+    {
+      "file": "photos/yellow-stagshorn/2.webp",
+      "view": "whole",
+      "credit": "(c) ws10s10, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/138838348"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

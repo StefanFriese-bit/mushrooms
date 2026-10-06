@@ -131,7 +131,22 @@
   },
   "lookalikes": [],
   "noDangerousLookalike": null,
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/silverleaf-fungus/1.webp",
+      "view": "whole",
+      "credit": "(c) charlienaysmith, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/52450032"
+    },
+    {
+      "file": "photos/silverleaf-fungus/2.webp",
+      "view": "whole",
+      "credit": "(c) Jim Easton 54, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/196661660"
+    }
+  ],
   "sources": [
     {
       "id": "wf",

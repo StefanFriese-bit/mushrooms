@@ -245,7 +245,22 @@
     }
   ],
   "noDangerousLookalike": null,
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/slender-parasol/1.webp",
+      "view": "whole",
+      "credit": "(c) Paco Bergson, some rights reserved (CC BY)",
+      "licence": "cc-by",
+      "link": "https://www.inaturalist.org/observations/72404020"
+    },
+    {
+      "file": "photos/slender-parasol/2.webp",
+      "view": "whole",
+      "credit": "(c) Jenny Griffiths, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/138254280"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

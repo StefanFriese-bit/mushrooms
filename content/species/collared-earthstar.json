@@ -121,7 +121,22 @@
   },
   "lookalikes": [],
   "noDangerousLookalike": null,
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/collared-earthstar/1.webp",
+      "view": "whole",
+      "credit": "(c) bexoiogist, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/247502020"
+    },
+    {
+      "file": "photos/collared-earthstar/2.webp",
+      "view": "whole",
+      "credit": "(c) topbud00, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/39053171"
+    }
+  ],
   "sources": [
     {
       "id": "wf",

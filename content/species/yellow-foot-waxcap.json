@@ -159,7 +159,22 @@
     }
   ],
   "noDangerousLookalike": null,
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/yellow-foot-waxcap/1.webp",
+      "view": "whole",
+      "credit": "(c) Alex Playford, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/100622177"
+    },
+    {
+      "file": "photos/yellow-foot-waxcap/2.webp",
+      "view": "whole",
+      "credit": "(c) Peachysteve, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/60596621"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

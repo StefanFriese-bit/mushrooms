@@ -133,7 +133,22 @@
       "wp"
     ]
   },
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/giant-polypore/1.webp",
+      "view": "whole",
+      "credit": "(c) mickr, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/34313310"
+    },
+    {
+      "file": "photos/giant-polypore/2.webp",
+      "view": "whole",
+      "credit": "(c) gaps_dmg, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/239167239"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

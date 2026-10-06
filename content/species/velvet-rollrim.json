@@ -177,7 +177,22 @@
     }
   ],
   "noDangerousLookalike": null,
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/velvet-rollrim/1.webp",
+      "view": "whole",
+      "credit": "(c) Nida Baltaityte, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/247963823"
+    },
+    {
+      "file": "photos/velvet-rollrim/2.webp",
+      "view": "whole",
+      "credit": "(c) Billy0623, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/397555094"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

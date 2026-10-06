@@ -137,7 +137,22 @@
   },
   "lookalikes": [],
   "noDangerousLookalike": null,
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/collared-parachute/1.webp",
+      "view": "whole",
+      "credit": "(c) Andy Donegan, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/106957555"
+    },
+    {
+      "file": "photos/collared-parachute/2.webp",
+      "view": "whole",
+      "credit": "(c) shelbourne, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/181453456"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

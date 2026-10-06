@@ -5,10 +5,13 @@ import { createInatClient } from './lib/inat.ts';
 import { pickPhotos, type InatObservation } from './lib/photo-picker.ts';
 import type { SpeciesRecord } from '../src/types.ts';
 
-// For every species record with fewer than four photos: the most-faved UK research-grade iNaturalist observations
-// with an open licence (topped up from Europe when the UK has too few), saved as 800px WebP copies, each credited.
+// For every species record with fewer than four photos (or `--want N`): the most-faved UK research-grade
+// iNaturalist observations with an open licence (topped up from Europe when the UK has too few), saved as 800px WebP
+// copies, each credited. Every photo is part of the app's offline download, so the minor species get fewer.
 const ROOT = new URL('../', import.meta.url);
-const WANT = 4;
+const wantArg = process.argv.indexOf('--want');
+const WANT = wantArg > 0 ? Number(process.argv[wantArg + 1]) : 4;
+if (!Number.isInteger(WANT) || WANT < 1) throw new Error('--want needs a whole number of photos, 1 or more');
 const UK = '6857';
 const EUROPE = '97391';
 const inat = createInatClient();

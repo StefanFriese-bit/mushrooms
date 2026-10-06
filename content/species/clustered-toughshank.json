@@ -139,7 +139,22 @@
   },
   "lookalikes": [],
   "noDangerousLookalike": null,
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/clustered-toughshank/1.webp",
+      "view": "whole",
+      "credit": "(c) gillsiss, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/137124894"
+    },
+    {
+      "file": "photos/clustered-toughshank/2.webp",
+      "view": "whole",
+      "credit": "(c) Jerry Cooper, some rights reserved (CC BY)",
+      "licence": "cc-by",
+      "link": "https://www.inaturalist.org/observations/19575282"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

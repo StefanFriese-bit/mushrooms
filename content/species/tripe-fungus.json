@@ -134,7 +134,22 @@
   },
   "lookalikes": [],
   "noDangerousLookalike": null,
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/tripe-fungus/1.webp",
+      "view": "whole",
+      "credit": "(c) zoobotanical, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/146865003"
+    },
+    {
+      "file": "photos/tripe-fungus/2.webp",
+      "view": "whole",
+      "credit": "(c) kwicher, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/34625311"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

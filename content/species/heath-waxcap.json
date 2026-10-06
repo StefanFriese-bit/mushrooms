@@ -144,7 +144,22 @@
       "fn"
     ]
   },
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/heath-waxcap/1.webp",
+      "view": "whole",
+      "credit": "(c) Peachysteve, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/250799435"
+    },
+    {
+      "file": "photos/heath-waxcap/2.webp",
+      "view": "whole",
+      "credit": "(c) Peachysteve, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/106902680"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

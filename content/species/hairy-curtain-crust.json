@@ -165,7 +165,22 @@
     }
   ],
   "noDangerousLookalike": null,
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/hairy-curtain-crust/1.webp",
+      "view": "whole",
+      "credit": "(c) tomaheyes, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/72771522"
+    },
+    {
+      "file": "photos/hairy-curtain-crust/2.webp",
+      "view": "whole",
+      "credit": "(c) arryharrington, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/66774100"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

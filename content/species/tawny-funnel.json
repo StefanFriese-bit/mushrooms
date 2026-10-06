@@ -135,7 +135,22 @@
       "wp"
     ]
   },
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/tawny-funnel/1.webp",
+      "view": "whole",
+      "credit": "(c) cryptogams, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/380681972"
+    },
+    {
+      "file": "photos/tawny-funnel/2.webp",
+      "view": "whole",
+      "credit": "(c) robertchugg, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/194009829"
+    }
+  ],
   "sources": [
     {
       "id": "wf",

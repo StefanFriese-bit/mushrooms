@@ -195,7 +195,22 @@
     }
   ],
   "noDangerousLookalike": null,
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/lilac-bonnet/1.webp",
+      "view": "whole",
+      "credit": "(c) oburridge, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/84550512"
+    },
+    {
+      "file": "photos/lilac-bonnet/2.webp",
+      "view": "whole",
+      "credit": "(c) Garry Lydon, some rights reserved (CC BY)",
+      "licence": "cc-by",
+      "link": "https://www.inaturalist.org/observations/250392562"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

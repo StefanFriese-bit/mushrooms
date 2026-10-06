@@ -138,7 +138,22 @@
   },
   "lookalikes": [],
   "noDangerousLookalike": null,
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/artist-s-bracket/1.webp",
+      "view": "whole",
+      "credit": "(c) maporgogledd, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/24461869"
+    },
+    {
+      "file": "photos/artist-s-bracket/2.webp",
+      "view": "whole",
+      "credit": "(c) Paul Lewis, some rights reserved (CC BY)",
+      "licence": "cc-by",
+      "link": "https://www.inaturalist.org/observations/99662513"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

@@ -169,7 +169,22 @@
     }
   ],
   "noDangerousLookalike": null,
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/golden-waxcap/1.webp",
+      "view": "whole",
+      "credit": "(c) Beth, some rights reserved (CC BY)",
+      "licence": "cc-by",
+      "link": "https://www.inaturalist.org/observations/251599611"
+    },
+    {
+      "file": "photos/golden-waxcap/2.webp",
+      "view": "whole",
+      "credit": "(c) edtyler, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/242292443"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

@@ -136,7 +136,22 @@
       "wp"
     ]
   },
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/fairy-inkcap/1.webp",
+      "view": "whole",
+      "credit": "(c) magikarp99, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/97929139"
+    },
+    {
+      "file": "photos/fairy-inkcap/2.webp",
+      "view": "whole",
+      "credit": "(c) stargazerben, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/181438314"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

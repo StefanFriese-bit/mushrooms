@@ -156,7 +156,22 @@
     }
   ],
   "noDangerousLookalike": null,
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/dead-man-s-fingers/1.webp",
+      "view": "whole",
+      "credit": "(c) mikbone, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/261382023"
+    },
+    {
+      "file": "photos/dead-man-s-fingers/2.webp",
+      "view": "whole",
+      "credit": "(c) rogue_mycologist, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/103004662"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

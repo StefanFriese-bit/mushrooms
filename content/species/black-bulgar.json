@@ -156,7 +156,22 @@
     }
   ],
   "noDangerousLookalike": null,
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/black-bulgar/1.webp",
+      "view": "whole",
+      "credit": "(c) Croxteth Park Volunteer Group, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/134864094"
+    },
+    {
+      "file": "photos/black-bulgar/2.webp",
+      "view": "whole",
+      "credit": "(c) cassandra_li, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/139614414"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

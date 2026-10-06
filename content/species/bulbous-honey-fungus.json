@@ -199,7 +199,22 @@
     }
   ],
   "noDangerousLookalike": null,
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/bulbous-honey-fungus/1.webp",
+      "view": "whole",
+      "credit": "(c) seahorsedreams, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/98871062"
+    },
+    {
+      "file": "photos/bulbous-honey-fungus/2.webp",
+      "view": "whole",
+      "credit": "(c) maxb23, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/73954070"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

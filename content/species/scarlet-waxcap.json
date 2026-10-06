@@ -203,7 +203,22 @@
     }
   ],
   "noDangerousLookalike": null,
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/scarlet-waxcap/1.webp",
+      "view": "whole",
+      "credit": "(c) kamonsen, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/314322743"
+    },
+    {
+      "file": "photos/scarlet-waxcap/2.webp",
+      "view": "whole",
+      "credit": "(c) jamiebg, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/248778487"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

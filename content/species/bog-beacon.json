@@ -124,7 +124,22 @@
   },
   "lookalikes": [],
   "noDangerousLookalike": null,
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/bog-beacon/1.webp",
+      "view": "whole",
+      "credit": "(c) Max Mudie, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/155868570"
+    },
+    {
+      "file": "photos/bog-beacon/2.webp",
+      "view": "whole",
+      "credit": "(c) Jennie, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/151212337"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

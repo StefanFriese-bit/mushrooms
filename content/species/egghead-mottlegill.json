@@ -187,7 +187,22 @@
     }
   ],
   "noDangerousLookalike": null,
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/egghead-mottlegill/1.webp",
+      "view": "whole",
+      "credit": "(c) jasgrogan, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/135903772"
+    },
+    {
+      "file": "photos/egghead-mottlegill/2.webp",
+      "view": "whole",
+      "credit": "(c) fireh9lly, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/115122731"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

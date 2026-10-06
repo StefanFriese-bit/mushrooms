@@ -132,7 +132,22 @@
   },
   "lookalikes": [],
   "noDangerousLookalike": null,
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/elfin-saddle/1.webp",
+      "view": "whole",
+      "credit": "(c) Vojta Hybl, some rights reserved (CC BY)",
+      "licence": "cc-by",
+      "link": "https://www.inaturalist.org/observations/229220448"
+    },
+    {
+      "file": "photos/elfin-saddle/2.webp",
+      "view": "whole",
+      "credit": "(c) zoobotanical, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/190822559"
+    }
+  ],
   "sources": [
     {
       "id": "fn",

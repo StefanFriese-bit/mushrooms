@@ -175,7 +175,22 @@
     }
   ],
   "noDangerousLookalike": null,
-  "photos": [],
+  "photos": [
+    {
+      "file": "photos/common-inkcap/1.webp",
+      "view": "whole",
+      "credit": "(c) liradie, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/79772596"
+    },
+    {
+      "file": "photos/common-inkcap/2.webp",
+      "view": "whole",
+      "credit": "(c) Carlene Cliver, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/53579093"
+    }
+  ],
   "sources": [
     {
       "id": "fn",
