@@ -231,6 +231,35 @@
           ]
         }
       ]
+    },
+    {
+      "scientific": "Apioperdon pyriforme",
+      "english": "Stump Puffball",
+      "slug": "stump-puffball",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Inside",
+          "thisOne": "Dark purple-brown to black with white veins — never pure white",
+          "thatOne": "White and soft, later olive-brown powder",
+          "sources": [
+            "fn",
+            "wf",
+            "wf-sp",
+            "fn-sp"
+          ]
+        },
+        {
+          "feature": "Feel",
+          "thisOne": "Hard and firm",
+          "thatOne": "Soft and spongy",
+          "sources": [
+            "fn",
+            "wp",
+            "wf-sp"
+          ]
+        }
+      ]
     }
   ],
   "noDangerousLookalike": null,
@@ -309,6 +338,16 @@
       "id": "wp-sh",
       "title": "Wikipedia — Phallus impudicus",
       "url": "https://en.wikipedia.org/wiki/Phallus_impudicus"
+    },
+    {
+      "id": "fn-sp",
+      "title": "First Nature — Apioperdon pyriforme, Stump Puffball",
+      "url": "https://www.first-nature.com/fungi/lycoperdon-pyriforme.php"
+    },
+    {
+      "id": "wf-sp",
+      "title": "Wild Food UK — Stump Puffball",
+      "url": "https://www.wildfooduk.com/mushroom-guide/stump-puffball/"
     },
     {
       "id": "wf-prot",

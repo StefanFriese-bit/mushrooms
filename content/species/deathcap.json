@@ -396,6 +396,24 @@
           ]
         }
       ]
+    },
+    {
+      "scientific": "Apioperdon pyriforme",
+      "english": "Stump Puffball",
+      "slug": "stump-puffball",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Cut top to bottom (a young button)",
+          "thisOne": "The outline of a cap, gills and stem, inside a white bag",
+          "thatOne": "Pure white and even all through when young",
+          "sources": [
+            "fn",
+            "wf-sp",
+            "fn-sp"
+          ]
+        }
+      ]
     }
   ],
   "noDangerousLookalike": null,
@@ -529,6 +547,16 @@
       "id": "wf-fd",
       "title": "Wild Food UK — False Death-cap",
       "url": "https://www.wildfooduk.com/mushroom-guide/false-death-cap/"
+    },
+    {
+      "id": "fn-sp",
+      "title": "First Nature — Apioperdon pyriforme, Stump Puffball",
+      "url": "https://www.first-nature.com/fungi/lycoperdon-pyriforme.php"
+    },
+    {
+      "id": "wf-sp",
+      "title": "Wild Food UK — Stump Puffball",
+      "url": "https://www.wildfooduk.com/mushroom-guide/stump-puffball/"
     },
     {
       "id": "wf-prot",

@@ -1,0 +1,165 @@
+{
+  "slug": "dyer-s-mazegill",
+  "inatId": 118084,
+  "scientific": "Phaeolus schweinitzii",
+  "english": "Dyer's Mazegill",
+  "olderNames": [
+    "Polyporus schweinitzii",
+    "Phaeolus spadiceus"
+  ],
+  "edibility": {
+    "value": "not-edible",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "edibilityNote": null,
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "Large, flat, felty rosettes, 15–25 cm or more, rusty-brown with a bright yellow edge.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "Underneath: greenish-yellow pores, turning reddish-brown.",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    {
+      "value": "At the base of pines and spruces, on the roots — it can seem to grow from the ground.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "On the roots and at the base of conifers, especially pines and spruces; also their stumps.",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "sporePrint": {
+    "value": "Very pale yellow",
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "pores",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    "ring": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "growsOn": {
+      "value": "wood",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "capCm": {
+      "value": [
+        15,
+        30
+      ],
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "fleshChange": {
+      "value": "Brown to almost black, fibrous",
+      "sources": [
+        "wf"
+      ]
+    },
+    "smell": {
+      "value": "Not distinctive",
+      "sources": [
+        "fn"
+      ]
+    }
+  },
+  "lookalikes": [],
+  "noDangerousLookalike": null,
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Phaeolus schweinitzii, Dyer's Mazegill",
+      "url": "https://www.first-nature.com/fungi/phaeolus-schweinitzii.php"
+    },
+    {
+      "id": "wf",
+      "title": "Wild Food UK — Dyer's Mazegill",
+      "url": "https://www.wildfooduk.com/mushroom-guide/dyers-mazegill/"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Phaeolus schweinitzii",
+      "url": "https://en.wikipedia.org/wiki/Phaeolus_schweinitzii"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}

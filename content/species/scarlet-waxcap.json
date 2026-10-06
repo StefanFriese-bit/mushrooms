@@ -1,0 +1,207 @@
+{
+  "slug": "scarlet-waxcap",
+  "inatId": 55245,
+  "scientific": "Hygrocybe coccinea",
+  "english": "Scarlet Waxcap",
+  "olderNames": [
+    "Hygrophorus coccineus"
+  ],
+  "edibility": {
+    "value": "edible-cooked",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "edibilityNote": {
+    "value": "Generally regarded as edible, but waxcap grasslands are declining and mycologists would rather they were left alone.",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "Small, waxy, bright scarlet cap, 2–5 cm, bell-shaped then flat, fading to orange.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    {
+      "value": "Thick, widely spaced red-orange gills with yellowish edges.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    {
+      "value": "Red to orange stem, yellow towards the base; no ring.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    {
+      "value": "In old, unfertilised grassland, lawns and churchyards.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "Old, unfertilised grassland, lawns, churchyards and woodland clearings.",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      9,
+      10
+    ],
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "sporePrint": {
+    "value": "White",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "gills",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "ring": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "growsOn": {
+      "value": "ground",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "capCm": {
+      "value": [
+        2,
+        5
+      ],
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "fleshChange": {
+      "value": "Pale orange in the stem",
+      "sources": [
+        "fn"
+      ]
+    },
+    "smell": {
+      "value": "Not distinctive",
+      "sources": [
+        "fn"
+      ]
+    }
+  },
+  "lookalikes": [
+    {
+      "scientific": "Hygrocybe conica",
+      "english": "Blackening Waxcap",
+      "slug": "blackening-waxcap",
+      "kind": "poisonous",
+      "tellApart": [
+        {
+          "feature": "Blackening",
+          "thisOne": "Does not turn black",
+          "thatOne": "Turns black where touched, and all over with age",
+          "sources": [
+            "fn",
+            "fn-bw",
+            "wf-bw"
+          ]
+        },
+        {
+          "feature": "Cap shape",
+          "thisOne": "Bell-shaped, then flat",
+          "thatOne": "Pointed and conical",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-bw",
+            "wp-bw"
+          ]
+        }
+      ]
+    }
+  ],
+  "noDangerousLookalike": null,
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Hygrocybe coccinea, Scarlet Waxcap",
+      "url": "https://www.first-nature.com/fungi/hygrocybe-coccinea.php"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Hygrocybe coccinea",
+      "url": "https://en.wikipedia.org/wiki/Hygrocybe_coccinea"
+    },
+    {
+      "id": "fn-bw",
+      "title": "First Nature — Hygrocybe conica, Blackening Waxcap",
+      "url": "https://www.first-nature.com/fungi/hygrocybe-conica.php"
+    },
+    {
+      "id": "wf-bw",
+      "title": "Wild Food UK — Blackening Waxcap",
+      "url": "https://www.wildfooduk.com/mushroom-guide/blackening-waxcap/"
+    },
+    {
+      "id": "wp-bw",
+      "title": "Wikipedia — Hygrocybe conica",
+      "url": "https://en.wikipedia.org/wiki/Hygrocybe_conica"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}

@@ -1,0 +1,264 @@
+{
+  "slug": "stump-puffball",
+  "inatId": 972793,
+  "scientific": "Apioperdon pyriforme",
+  "english": "Stump Puffball",
+  "olderNames": [
+    "Morganella pyriformis",
+    "Lycoperdon pyriforme"
+  ],
+  "edibility": {
+    "value": "edible-cooked",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "edibilityNote": {
+    "value": "Eat only young ones that are pure white right through. Cut each one top to bottom: a deadly Amanita button shows the outline of a cap and gills.",
+    "sources": [
+      "wf",
+      "fn",
+      "wp"
+    ]
+  },
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "Pear-shaped puffballs, 1.5–4 cm across, in dense clusters on rotting wood.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "Off-white to brown, covered at first in tiny warts.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    {
+      "value": "White and firm inside when young, turning yellow, then olive-brown and powdery.",
+      "sources": [
+        "wf",
+        "fn"
+      ]
+    },
+    {
+      "value": "On stumps and buried roots — it can look as if it grows from soil.",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "On rotting stumps and buried roots of trees, mostly broadleaved, in woods, pasture, commons and heaths.",
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "sporePrint": {
+    "value": "Olive-brown",
+    "sources": [
+      "wf",
+      "fn"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "other",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "ring": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "growsOn": {
+      "value": "wood",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "capCm": {
+      "value": [
+        1.5,
+        3
+      ],
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "fleshChange": {
+      "value": "White and firm when young; turns yellow, then olive-brown",
+      "sources": [
+        "wf",
+        "fn"
+      ]
+    },
+    "smell": {
+      "value": "Unpleasant, like gas",
+      "sources": [
+        "fn"
+      ]
+    }
+  },
+  "lookalikes": [
+    {
+      "scientific": "Scleroderma citrinum",
+      "english": "Common Earthball",
+      "slug": "common-earthball",
+      "kind": "poisonous",
+      "tellApart": [
+        {
+          "feature": "Inside",
+          "thisOne": "White and soft, later olive-brown powder",
+          "thatOne": "Dark purple-brown to black with white veins — never pure white",
+          "sources": [
+            "wf",
+            "fn",
+            "fn-ce",
+            "wf-ce"
+          ]
+        },
+        {
+          "feature": "Feel",
+          "thisOne": "Soft and spongy",
+          "thatOne": "Hard and firm",
+          "sources": [
+            "wf",
+            "wp",
+            "fn-ce",
+            "wp-ce"
+          ]
+        }
+      ]
+    },
+    {
+      "scientific": "Amanita phalloides",
+      "english": "Deathcap",
+      "slug": "deathcap",
+      "kind": "deadly",
+      "tellApart": [
+        {
+          "feature": "Cut top to bottom (a young button)",
+          "thisOne": "Pure white and even all through when young",
+          "thatOne": "The outline of a cap, gills and stem, inside a white bag",
+          "sources": [
+            "wf",
+            "fn",
+            "fn-dc"
+          ]
+        }
+      ]
+    }
+  ],
+  "noDangerousLookalike": null,
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Apioperdon pyriforme, Stump Puffball",
+      "url": "https://www.first-nature.com/fungi/lycoperdon-pyriforme.php"
+    },
+    {
+      "id": "wf",
+      "title": "Wild Food UK — Stump Puffball",
+      "url": "https://www.wildfooduk.com/mushroom-guide/stump-puffball/"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Apioperdon pyriforme",
+      "url": "https://en.wikipedia.org/wiki/Apioperdon_pyriforme"
+    },
+    {
+      "id": "fn-ce",
+      "title": "First Nature — Scleroderma citrinum, Common Earthball",
+      "url": "https://www.first-nature.com/fungi/scleroderma-citrinum.php"
+    },
+    {
+      "id": "wf-ce",
+      "title": "Wild Food UK — Common Earthball",
+      "url": "https://www.wildfooduk.com/mushroom-guide/common-earth-ball/"
+    },
+    {
+      "id": "wp-ce",
+      "title": "Wikipedia — Scleroderma citrinum",
+      "url": "https://en.wikipedia.org/wiki/Scleroderma_citrinum"
+    },
+    {
+      "id": "wt-ce",
+      "title": "Woodland Trust — Common Earthball",
+      "url": "https://www.woodlandtrust.org.uk/trees-woods-and-wildlife/fungi-and-lichens/common-earthball/"
+    },
+    {
+      "id": "fn-dc",
+      "title": "First Nature — Amanita phalloides, Deathcap",
+      "url": "https://www.first-nature.com/fungi/amanita-phalloides.php"
+    },
+    {
+      "id": "wf-dc",
+      "title": "Wild Food UK — Deathcap",
+      "url": "https://www.wildfooduk.com/mushroom-guide/deathcap/"
+    },
+    {
+      "id": "wp-dc",
+      "title": "Wikipedia — Amanita phalloides",
+      "url": "https://en.wikipedia.org/wiki/Amanita_phalloides"
+    },
+    {
+      "id": "wt-dc",
+      "title": "Woodland Trust — Deathcap",
+      "url": "https://www.woodlandtrust.org.uk/trees-woods-and-wildlife/fungi-and-lichens/deathcap/"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}
