@@ -8,14 +8,15 @@
     "value": "poisonous",
     "sources": [
       "fn",
+      "wf",
       "wp"
     ]
   },
   "edibilityNote": {
-    "value": "Contains muscarine, though in low amounts.",
+    "value": "Once thought edible, but it contains muscarine, though in low amounts.",
     "sources": [
       "fn",
-      "wp"
+      "wf"
     ]
   },
   "protectedInUk": {
@@ -27,49 +28,61 @@
   },
   "topPoints": [
     {
-      "value": "Pink cap, 2–6 cm, from almost white to deep pink, bell-shaped then flatter.",
+      "value": "Pink cap, 2–6 cm, from almost white to deep pink, with a darker centre and fine lines towards the edge.",
       "sources": [
         "fn",
+        "wf",
         "wp"
       ]
     },
     {
-      "value": "Gills pale pink and crowded; white spore print.",
+      "value": "Gills pale pink to off-white; white spore print.",
       "sources": [
         "fn",
+        "wf",
         "wp"
+      ]
+    },
+    {
+      "value": "Pink stem, often tapering upwards; no ring.",
+      "sources": [
+        "fn",
+        "wf"
       ]
     },
     {
       "value": "In leaf litter in broadleaved and mixed woods, especially under beech.",
       "sources": [
         "fn",
-        "wp"
+        "wf"
       ]
     }
   ],
   "habitat": {
-    "value": "In leaf litter in broadleaved and mixed woods, especially under beech; also on verges by beech hedges.",
+    "value": "Leaf litter in broadleaved and mixed woods, especially under beech; also verges by beech hedges.",
     "sources": [
       "fn",
-      "wp"
+      "wf"
     ]
   },
   "seasonMonths": {
     "value": [
+      7,
       8,
       9,
       10,
       11
     ],
     "sources": [
-      "fn"
+      "fn",
+      "wf"
     ]
   },
   "sporePrint": {
     "value": "White",
     "sources": [
       "fn",
+      "wf",
       "wp"
     ]
   },
@@ -78,6 +91,7 @@
       "value": "gills",
       "sources": [
         "fn",
+        "wf",
         "wp"
       ]
     },
@@ -92,14 +106,14 @@
       "value": "no",
       "sources": [
         "fn",
-        "wp"
+        "wf"
       ]
     },
     "growsOn": {
       "value": "ground",
       "sources": [
         "fn",
-        "wp"
+        "wf"
       ]
     },
     "capCm": {
@@ -113,15 +127,16 @@
       ]
     },
     "fleshChange": {
-      "value": "No colour change when cut is described",
+      "value": "White to lilac",
       "sources": [
-        "fn"
+        "wf"
       ]
     },
     "smell": {
-      "value": "Strongly of radish when crushed",
+      "value": "Of radish",
       "sources": [
-        "fn"
+        "fn",
+        "wf"
       ]
     }
   },
@@ -133,6 +148,11 @@
       "id": "fn",
       "title": "First Nature — Mycena rosea, Rosy Bonnet",
       "url": "https://www.first-nature.com/fungi/mycena-rosea.php"
+    },
+    {
+      "id": "wf",
+      "title": "Wild Food UK — Rosy Bonnet",
+      "url": "https://www.wildfooduk.com/mushroom-guide/mycena-rosea/"
     },
     {
       "id": "wp",
