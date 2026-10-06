@@ -1,0 +1,380 @@
+{
+  "slug": "parasol",
+  "inatId": 63401,
+  "scientific": "Macrolepiota procera",
+  "english": "Parasol",
+  "olderNames": [
+    "Lepiota procera",
+    "Macrolepiota fuliginosa",
+    "Lepiota permixta",
+    "Macrolepiota permixta"
+  ],
+  "edibility": {
+    "value": "edible-cooked",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "edibilityNote": {
+    "value": "Pick only large, opened caps: a cap under 10–12 cm across may be one of the small, deadly dapperlings, and young closed ones can look like deadly Amanitas.",
+    "sources": [
+      "fn",
+      "wf",
+      "wp",
+      "fn-dd"
+    ]
+  },
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "Very large: cap 10–25 cm across, on a tall stem of up to 30 cm or more.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "A brown snakeskin pattern of bands on the stem.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "A thick double ring that slides up and down the stem.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "Cap pale with darker brown scales and a smooth, dark bump in the middle.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "Flesh white, not reddening when cut.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    {
+      "value": "White gills, free of the stem.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "Grassy places beside woods, woodland clearings, pasture and verges; alone, in groups or in rings.",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "sporePrint": {
+    "value": "White to pale cream",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "gills",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    "ring": {
+      "value": "yes",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "growsOn": {
+      "value": "ground",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "capCm": {
+      "value": [
+        10,
+        25
+      ],
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    "fleshChange": {
+      "value": "White; does not change when cut",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "smell": {
+      "value": "Not distinctive, or pleasantly nutty",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    }
+  },
+  "lookalikes": [
+    {
+      "scientific": "Lepiota brunneoincarnata",
+      "english": "Deadly Dapperling",
+      "slug": "deadly-dapperling",
+      "kind": "deadly",
+      "tellApart": [
+        {
+          "feature": "Size",
+          "thisOne": "Cap 10–25 cm when open",
+          "thatOne": "Cap only 2.5–6 cm",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-dd",
+            "wp-dd"
+          ]
+        },
+        {
+          "feature": "Stem",
+          "thisOne": "Tall, with a brown snakeskin pattern",
+          "thatOne": "Short (2–5 cm), with dark brown scales on the lower half",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-dd",
+            "wp-dd"
+          ]
+        },
+        {
+          "feature": "Ring",
+          "thisOne": "Thick and double, sliding on the stem",
+          "thatOne": "Only a vague ring zone",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-dd",
+            "wp-dd"
+          ]
+        }
+      ]
+    },
+    {
+      "scientific": "Lepiota subincarnata",
+      "english": "Fatal Dapperling",
+      "slug": null,
+      "kind": "deadly",
+      "tellApart": [
+        {
+          "feature": "Size",
+          "thisOne": "Cap 10–25 cm when open",
+          "thatOne": "Small: cap 2–3.5 cm",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-fd",
+            "wf"
+          ]
+        },
+        {
+          "feature": "Cap",
+          "thisOne": "Pale with darker brown scales",
+          "thatOne": "Pinkish to red-brown scales in rings on a cream background",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-fd",
+            "wp-fd"
+          ]
+        }
+      ]
+    },
+    {
+      "scientific": "Lepiota cristata",
+      "english": "Stinking Dapperling",
+      "slug": null,
+      "kind": "poisonous",
+      "tellApart": [
+        {
+          "feature": "Size",
+          "thisOne": "Cap 10–25 cm when open",
+          "thatOne": "Small: cap 1–6 cm",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-sd",
+            "wp-sd"
+          ]
+        },
+        {
+          "feature": "Smell",
+          "thisOne": "Not distinctive, or pleasantly nutty",
+          "thatOne": "Unpleasant — rubbery, or like coal gas",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-sd",
+            "wf-sd"
+          ]
+        },
+        {
+          "feature": "Ring",
+          "thisOne": "Thick and double, sliding on the stem",
+          "thatOne": "Small and fragile, soon lost",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-sd",
+            "wf-sd",
+            "wp-sd"
+          ]
+        }
+      ]
+    }
+  ],
+  "noDangerousLookalike": null,
+  "photos": [
+    {
+      "file": "photos/parasol/3.webp",
+      "view": "whole",
+      "credit": "Jonathan Hughes, no rights reserved (CC0)",
+      "licence": "cc0",
+      "link": "https://www.inaturalist.org/observations/98191067"
+    },
+    {
+      "file": "photos/parasol/4.webp",
+      "view": "whole",
+      "credit": "(c) Barry Stewart, some rights reserved (CC BY)",
+      "licence": "cc-by",
+      "link": "https://www.inaturalist.org/observations/386688419"
+    },
+    {
+      "file": "photos/parasol/2.webp",
+      "view": "whole",
+      "credit": "(c) Simeon Cathcart, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/314159389"
+    },
+    {
+      "file": "photos/parasol/1.webp",
+      "view": "whole",
+      "credit": "(c) kayholford, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/141720980"
+    }
+  ],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Macrolepiota procera, Parasol",
+      "url": "https://www.first-nature.com/fungi/macrolepiota-procera.php"
+    },
+    {
+      "id": "wf",
+      "title": "Wild Food UK — Parasol",
+      "url": "https://www.wildfooduk.com/mushroom-guide/parasol/"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Macrolepiota procera",
+      "url": "https://en.wikipedia.org/wiki/Macrolepiota_procera"
+    },
+    {
+      "id": "fn-dd",
+      "title": "First Nature — Lepiota brunneoincarnata, Deadly Dapperling",
+      "url": "https://www.first-nature.com/fungi/lepiota-brunneoincarnata.php"
+    },
+    {
+      "id": "wp-dd",
+      "title": "Wikipedia — Lepiota brunneoincarnata",
+      "url": "https://en.wikipedia.org/wiki/Lepiota_brunneoincarnata"
+    },
+    {
+      "id": "fn-fd",
+      "title": "First Nature — Lepiota subincarnata, Fatal Dapperling",
+      "url": "https://www.first-nature.com/fungi/lepiota-subincarnata.php"
+    },
+    {
+      "id": "wp-fd",
+      "title": "Wikipedia — Lepiota subincarnata",
+      "url": "https://en.wikipedia.org/wiki/Lepiota_subincarnata"
+    },
+    {
+      "id": "fn-sd",
+      "title": "First Nature — Lepiota cristata, Stinking Dapperling",
+      "url": "https://www.first-nature.com/fungi/lepiota-cristata.php"
+    },
+    {
+      "id": "wf-sd",
+      "title": "Wild Food UK — Stinking Dapperling",
+      "url": "https://www.wildfooduk.com/mushroom-guide/stinking-dapperling/"
+    },
+    {
+      "id": "wp-sd",
+      "title": "Wikipedia — Lepiota cristata",
+      "url": "https://en.wikipedia.org/wiki/Lepiota_cristata"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}

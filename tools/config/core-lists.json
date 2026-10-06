@@ -768,6 +768,40 @@
       ]
     },
     {
+      "edible": "Agaricus campestris",
+      "dangerous": "Amanita phalloides",
+      "sources": [
+        "https://www.first-nature.com/fungi/amanita-phalloides.php",
+        "https://www.woodlandtrust.org.uk/blog/2025/02/poisonous-mushrooms/"
+      ]
+    },
+    {
+      "edible": "Agaricus campestris",
+      "dangerous": "Amanita virosa",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Agaricus_campestris",
+        "https://www.first-nature.com/fungi/amanita-virosa.php",
+        "https://www.woodlandtrust.org.uk/blog/2025/02/poisonous-mushrooms/"
+      ]
+    },
+    {
+      "edible": "Agaricus sylvicola",
+      "dangerous": "Amanita phalloides",
+      "sources": [
+        "https://www.first-nature.com/fungi/amanita-phalloides.php",
+        "https://en.wikipedia.org/wiki/Amanita_virosa"
+      ]
+    },
+    {
+      "edible": "Agaricus sylvicola",
+      "dangerous": "Amanita virosa",
+      "sources": [
+        "https://www.first-nature.com/fungi/amanita-virosa.php",
+        "https://en.wikipedia.org/wiki/Amanita_virosa",
+        "https://www.woodlandtrust.org.uk/blog/2025/02/poisonous-mushrooms/"
+      ]
+    },
+    {
       "edible": "Craterellus tubaeformis",
       "dangerous": "Cortinarius rubellus",
       "sources": [

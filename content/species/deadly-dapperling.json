@@ -1,0 +1,313 @@
+{
+  "slug": "deadly-dapperling",
+  "inatId": 515954,
+  "scientific": "Lepiota brunneoincarnata",
+  "english": "Deadly Dapperling",
+  "olderNames": [
+    "Lepiota patouillardi"
+  ],
+  "edibility": {
+    "value": "deadly",
+    "sources": [
+      "fn",
+      "wp",
+      "wf-poison"
+    ]
+  },
+  "edibilityNote": {
+    "value": "Contains the same poison as the Deathcap. Small dapperlings are very hard to tell apart and several are deadly — never eat one.",
+    "sources": [
+      "fn",
+      "wp",
+      "wf-poison"
+    ]
+  },
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "Small: cap 2.5–6 cm across.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    {
+      "value": "Cap pinkish-brown, with darker scales in rough rings, darkest in the centre.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    {
+      "value": "Stem pinkish above, with dark brown scales below a vague ring zone.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    {
+      "value": "White gills, free of the stem; white spore print.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    {
+      "value": "Grows in grassy places, including gardens and dunes, and in broadleaved woods.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    {
+      "value": "Rare in Britain.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "Grassy places (gardens, dunes) and broadleaved or mixed woods; a rare find in Britain.",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "sources": [
+      "fn"
+    ]
+  },
+  "sporePrint": {
+    "value": "White",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "gills",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "ring": {
+      "value": "sometimes",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "growsOn": {
+      "value": "ground",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "capCm": {
+      "value": [
+        2.5,
+        6
+      ],
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "fleshChange": {
+      "value": "White; Wikipedia says it reddens when bruised or cut",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "smell": {
+      "value": "Faint, fruity",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    }
+  },
+  "lookalikes": [
+    {
+      "scientific": "Macrolepiota procera",
+      "english": "Parasol",
+      "slug": "parasol",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Size",
+          "thisOne": "Cap only 2.5–6 cm",
+          "thatOne": "Cap 10–25 cm when open",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-pa",
+            "wp-pa"
+          ]
+        },
+        {
+          "feature": "Stem",
+          "thisOne": "Short (2–5 cm), with dark brown scales on the lower half",
+          "thatOne": "Tall, with a brown snakeskin pattern",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-pa",
+            "wf-pa"
+          ]
+        },
+        {
+          "feature": "Ring",
+          "thisOne": "Only a vague ring zone",
+          "thatOne": "Thick and double, sliding on the stem",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-pa",
+            "wf-pa"
+          ]
+        }
+      ]
+    },
+    {
+      "scientific": "Chlorophyllum rhacodes",
+      "english": "Shaggy Parasol",
+      "slug": null,
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Size",
+          "thisOne": "Cap only 2.5–6 cm",
+          "thatOne": "Cap 5–20 cm",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-sp",
+            "wf-sp",
+            "wt-sp"
+          ]
+        },
+        {
+          "feature": "Ring and base",
+          "thisOne": "Only a vague ring zone",
+          "thatOne": "Thick double ring that slides, and a very bulbous base",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-sp",
+            "wf-sp",
+            "wt-sp"
+          ]
+        }
+      ]
+    }
+  ],
+  "noDangerousLookalike": null,
+  "photos": [
+    {
+      "file": "photos/deadly-dapperling/1.webp",
+      "view": "whole",
+      "credit": "(c) vuikaan, some rights reserved (CC BY)",
+      "licence": "cc-by",
+      "link": "https://www.inaturalist.org/observations/181183977"
+    },
+    {
+      "file": "photos/deadly-dapperling/2.webp",
+      "view": "whole",
+      "credit": "(c) pmacbride53, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/324603569"
+    },
+    {
+      "file": "photos/deadly-dapperling/3.webp",
+      "view": "whole",
+      "credit": "(c) ionafraser, some rights reserved (CC BY)",
+      "licence": "cc-by",
+      "link": "https://www.inaturalist.org/observations/245857796"
+    }
+  ],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Lepiota brunneoincarnata, Deadly Dapperling",
+      "url": "https://www.first-nature.com/fungi/lepiota-brunneoincarnata.php"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Lepiota brunneoincarnata",
+      "url": "https://en.wikipedia.org/wiki/Lepiota_brunneoincarnata"
+    },
+    {
+      "id": "wf-poison",
+      "title": "Wild Food UK — The most poisonous UK fungi, part 1",
+      "url": "https://www.wildfooduk.com/articles/the-most-poisonous-uk-fungi-part-1/"
+    },
+    {
+      "id": "fn-pa",
+      "title": "First Nature — Macrolepiota procera, Parasol",
+      "url": "https://www.first-nature.com/fungi/macrolepiota-procera.php"
+    },
+    {
+      "id": "wf-pa",
+      "title": "Wild Food UK — Parasol",
+      "url": "https://www.wildfooduk.com/mushroom-guide/parasol/"
+    },
+    {
+      "id": "wp-pa",
+      "title": "Wikipedia — Macrolepiota procera",
+      "url": "https://en.wikipedia.org/wiki/Macrolepiota_procera"
+    },
+    {
+      "id": "fn-sp",
+      "title": "First Nature — Chlorophyllum rhacodes, Shaggy Parasol",
+      "url": "https://www.first-nature.com/fungi/chlorophyllum-rhacodes.php"
+    },
+    {
+      "id": "wf-sp",
+      "title": "Wild Food UK — Shaggy Parasol",
+      "url": "https://www.wildfooduk.com/mushroom-guide/shaggy-parasol/"
+    },
+    {
+      "id": "wt-sp",
+      "title": "Woodland Trust — Shaggy parasol",
+      "url": "https://www.woodlandtrust.org.uk/trees-woods-and-wildlife/fungi-and-lichens/shaggy-parasol/"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}

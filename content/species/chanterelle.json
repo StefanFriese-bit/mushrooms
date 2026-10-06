@@ -1,0 +1,413 @@
+{
+  "slug": "chanterelle",
+  "inatId": 47347,
+  "scientific": "Cantharellus cibarius",
+  "english": "Chanterelle",
+  "olderNames": [],
+  "edibility": {
+    "value": "edible-cooked",
+    "sources": [
+      "fn",
+      "wf",
+      "wp",
+      "wt"
+    ]
+  },
+  "edibilityNote": null,
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "Underneath: blunt, forked ridges running down the stem — not thin, blade-like gills.",
+      "sources": [
+        "fn",
+        "wf",
+        "wt"
+      ]
+    },
+    {
+      "value": "Egg-yolk yellow; the cap becomes a funnel with a wavy edge.",
+      "sources": [
+        "fn",
+        "wf",
+        "wt"
+      ]
+    },
+    {
+      "value": "Flesh white to pale inside.",
+      "sources": [
+        "wf",
+        "fn-tub"
+      ]
+    },
+    {
+      "value": "Smells fruity, like apricots.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "Stem solid and the same colour as the cap.",
+      "sources": [
+        "fn",
+        "wf",
+        "wt",
+        "fn-tub"
+      ]
+    },
+    {
+      "value": "Grows from the ground in woodland.",
+      "sources": [
+        "fn",
+        "wf",
+        "wt"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "Woodland — mostly broadleaved (oak, beech, birch, hazel) but also under conifers; often in moss, on acid soils.",
+    "sources": [
+      "fn",
+      "wf",
+      "wt"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "sources": [
+      "fn",
+      "wf",
+      "wp",
+      "wt"
+    ]
+  },
+  "sporePrint": {
+    "value": "Pale yellow to cream",
+    "sources": [
+      "fn",
+      "wp",
+      "wt"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "ridges",
+      "sources": [
+        "fn",
+        "wf",
+        "wt"
+      ]
+    },
+    "ring": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wt"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "growsOn": {
+      "value": "ground",
+      "sources": [
+        "fn",
+        "wf",
+        "wt"
+      ]
+    },
+    "capCm": {
+      "value": [
+        3,
+        10
+      ],
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    "fleshChange": {
+      "value": "Flesh white; damaged caps can show red spots",
+      "sources": [
+        "wf",
+        "wp"
+      ]
+    },
+    "smell": {
+      "value": "Fruity, like apricots",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    }
+  },
+  "lookalikes": [
+    {
+      "scientific": "Cortinarius rubellus",
+      "english": "Deadly Webcap",
+      "slug": "deadly-webcap",
+      "kind": "deadly",
+      "tellApart": [
+        {
+          "feature": "Underneath",
+          "thisOne": "Blunt, forked ridges",
+          "thatOne": "True gills, paler at first, then rusty brown",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-dw",
+            "wf-dw",
+            "wp-dw"
+          ]
+        },
+        {
+          "feature": "Cap",
+          "thisOne": "Egg-yolk yellow funnel with a wavy edge",
+          "thatOne": "Tawny orange-brown, dry and finely scaly, with a pointed bump in the middle",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-dw",
+            "wf-dw",
+            "wp-dw"
+          ]
+        },
+        {
+          "feature": "Stem",
+          "thisOne": "The same colour as the cap",
+          "thatOne": "Yellowish zig-zag bands (remains of a cobweb-like veil)",
+          "sources": [
+            "fn",
+            "wt",
+            "fn-dw",
+            "wf-dw",
+            "wp-dw"
+          ]
+        },
+        {
+          "feature": "Smell",
+          "thisOne": "Fruity, like apricots",
+          "thatOne": "Faintly of radish",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-dw",
+            "wf-dw",
+            "wp-dw"
+          ]
+        }
+      ]
+    },
+    {
+      "scientific": "Hygrophoropsis aurantiaca",
+      "english": "False Chanterelle",
+      "slug": "false-chanterelle",
+      "kind": "poisonous",
+      "tellApart": [
+        {
+          "feature": "Underneath",
+          "thisOne": "Blunt, forked ridges",
+          "thatOne": "Thin, crowded gills forking again and again, often brighter orange than the cap",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-fc",
+            "wf-fc",
+            "wp-fc"
+          ]
+        },
+        {
+          "feature": "Colour",
+          "thisOne": "Egg-yolk yellow",
+          "thatOne": "Orange to orange-yellow",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-fc",
+            "wp-fc"
+          ]
+        },
+        {
+          "feature": "Smell",
+          "thisOne": "Fruity, like apricots",
+          "thatOne": "No apricot smell — not distinctive, or earthy",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-fc",
+            "wp-fc"
+          ]
+        }
+      ]
+    },
+    {
+      "scientific": "Omphalotus illudens",
+      "english": "Jack O'Lantern",
+      "slug": null,
+      "kind": "poisonous",
+      "tellApart": [
+        {
+          "feature": "Where it grows",
+          "thisOne": "From the ground",
+          "thatOne": "In dense clusters on wood or on buried roots of broadleaved trees",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-jol",
+            "wp-jol"
+          ]
+        },
+        {
+          "feature": "Underneath",
+          "thisOne": "Blunt, forked ridges",
+          "thatOne": "True gills that do not fork",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-jol"
+          ]
+        },
+        {
+          "feature": "Colour",
+          "thisOne": "Egg-yolk yellow",
+          "thatOne": "Orange, deeper than a chanterelle",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-jol",
+            "wp-jol"
+          ]
+        }
+      ]
+    }
+  ],
+  "noDangerousLookalike": null,
+  "photos": [
+    {
+      "file": "photos/chanterelle/1.webp",
+      "view": "whole",
+      "credit": "Piermario Maculan, no rights reserved (CC0)",
+      "licence": "cc0",
+      "link": "https://www.inaturalist.org/observations/241726630"
+    },
+    {
+      "file": "photos/chanterelle/2.webp",
+      "view": "whole",
+      "credit": "(c) Tomos Hughes, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/176629299"
+    },
+    {
+      "file": "photos/chanterelle/3.webp",
+      "view": "whole",
+      "credit": "(c) itsben, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/29773001"
+    },
+    {
+      "file": "photos/chanterelle/4.webp",
+      "view": "whole",
+      "credit": "(c) lgrant12, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/92229402"
+    }
+  ],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Cantharellus cibarius, Chanterelle",
+      "url": "https://www.first-nature.com/fungi/cantharellus-cibarius.php"
+    },
+    {
+      "id": "wf",
+      "title": "Wild Food UK — Chanterelle",
+      "url": "https://www.wildfooduk.com/mushroom-guide/chanterelle-3/"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Cantharellus cibarius",
+      "url": "https://en.wikipedia.org/wiki/Cantharellus_cibarius"
+    },
+    {
+      "id": "wt",
+      "title": "Woodland Trust — Chanterelle",
+      "url": "https://www.woodlandtrust.org.uk/trees-woods-and-wildlife/fungi-and-lichens/chanterelle/"
+    },
+    {
+      "id": "fn-tub",
+      "title": "First Nature — Craterellus tubaeformis, Trumpet Chanterelle",
+      "url": "https://www.first-nature.com/fungi/cantharellus-tubaeformis.php"
+    },
+    {
+      "id": "fn-dw",
+      "title": "First Nature — Cortinarius rubellus, Deadly Webcap",
+      "url": "https://www.first-nature.com/fungi/cortinarius-rubellus.php"
+    },
+    {
+      "id": "wf-dw",
+      "title": "Wild Food UK — Deadly Webcap",
+      "url": "https://www.wildfooduk.com/mushroom-guide/deadly-webcap-2/"
+    },
+    {
+      "id": "wp-dw",
+      "title": "Wikipedia — Cortinarius rubellus",
+      "url": "https://en.wikipedia.org/wiki/Cortinarius_rubellus"
+    },
+    {
+      "id": "fn-fc",
+      "title": "First Nature — Hygrophoropsis aurantiaca, False Chanterelle",
+      "url": "https://www.first-nature.com/fungi/hygrophoropsis-aurantiaca.php"
+    },
+    {
+      "id": "wf-fc",
+      "title": "Wild Food UK — False Chanterelle",
+      "url": "https://www.wildfooduk.com/mushroom-guide/false-chanterelle/"
+    },
+    {
+      "id": "wp-fc",
+      "title": "Wikipedia — Hygrophoropsis aurantiaca",
+      "url": "https://en.wikipedia.org/wiki/Hygrophoropsis_aurantiaca"
+    },
+    {
+      "id": "fn-jol",
+      "title": "First Nature — Omphalotus illudens, Jack O'Lantern",
+      "url": "https://www.first-nature.com/fungi/omphalotus-illudens.php"
+    },
+    {
+      "id": "wp-jol",
+      "title": "Wikipedia — Omphalotus illudens",
+      "url": "https://en.wikipedia.org/wiki/Omphalotus_illudens"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}

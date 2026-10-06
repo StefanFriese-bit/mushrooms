@@ -36,7 +36,7 @@ export function SpeciesPage({ slug }: { slug: string }) {
       <h2>Top points</h2>
       <ul>{s.topPoints.map((t) => <li key={t.value}>{t.value}<Refs rec={s} fact={t} /></li>)}</ul>
 
-      <h2>Dangerous lookalikes</h2>
+      <h2>{tagClass(s.edibility.value) === 'edible' ? 'Dangerous lookalikes' : 'Edible species it is mistaken for'}</h2>
       {s.noDangerousLookalike && <p>No dangerous lookalike in the UK<Refs rec={s} fact={s.noDangerousLookalike} /></p>}
       {s.lookalikes.map((l) => (
         <div class="card" key={l.scientific}>

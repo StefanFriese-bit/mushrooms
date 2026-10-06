@@ -1,0 +1,378 @@
+{
+  "slug": "horse-mushroom",
+  "inatId": 58699,
+  "scientific": "Agaricus arvensis",
+  "english": "Horse Mushroom",
+  "olderNames": [
+    "Psalliota arvensis",
+    "Agaricus amanitaeformis"
+  ],
+  "edibility": {
+    "value": "edible-cooked",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "edibilityNote": {
+    "value": "It can take up heavy metals such as cadmium from polluted ground, so eat it only now and then.",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "Big white cap, 8–20 cm across, yellowing with age and where it is bruised.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "Smells of aniseed or almond.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "Gills whitish only when very young, then pale pink-grey, then chocolate brown.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "Large double ring; under a closed cap it shows a cog-wheel pattern.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "Cut stem base turns only slowly and slightly yellow — never bright chrome yellow.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp-xan"
+      ]
+    },
+    {
+      "value": "No bag (volva) at the base of the stem.",
+      "sources": [
+        "wf",
+        "fn-dc"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "Grassland: meadows, pasture and verges, especially manured ground near stables; often in large rings, sometimes among nettles.",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "sporePrint": {
+    "value": "Dark purple-brown to chocolate brown",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "gills",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    "ring": {
+      "value": "yes",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "wf",
+        "fn-dc"
+      ]
+    },
+    "growsOn": {
+      "value": "ground",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "capCm": {
+      "value": [
+        8,
+        20
+      ],
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    "fleshChange": {
+      "value": "Slowly turns slightly yellow where bruised or cut",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    "smell": {
+      "value": "Aniseed or almond",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    }
+  },
+  "lookalikes": [
+    {
+      "scientific": "Amanita phalloides",
+      "english": "Deathcap",
+      "slug": "deathcap",
+      "kind": "deadly",
+      "tellApart": [
+        {
+          "feature": "Gills",
+          "thisOne": "Whitish only when very young, soon pink-grey, then chocolate brown",
+          "thatOne": "White, then cream (at most faintly pink) — never brown",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-dc",
+            "wf-dc"
+          ]
+        },
+        {
+          "feature": "Stem base",
+          "thisOne": "No bag",
+          "thatOne": "Swollen base in a white, bag-like volva — scrape away the soil and leaves to see it",
+          "sources": [
+            "wf",
+            "fn-dc",
+            "wf-dc",
+            "wp-dc"
+          ]
+        },
+        {
+          "feature": "Spore print",
+          "thisOne": "Dark purple-brown",
+          "thatOne": "White",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-dc",
+            "wf-dc"
+          ]
+        }
+      ]
+    },
+    {
+      "scientific": "Amanita virosa",
+      "english": "Destroying Angel",
+      "slug": "destroying-angel",
+      "kind": "deadly",
+      "tellApart": [
+        {
+          "feature": "Gills",
+          "thisOne": "Whitish only when very young, soon pink-grey, then chocolate brown",
+          "thatOne": "Pure white, staying white",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-da",
+            "wf-da"
+          ]
+        },
+        {
+          "feature": "Stem base",
+          "thisOne": "No bag",
+          "thatOne": "Bag-like volva, often buried deep in the soil — dig the base out to see it",
+          "sources": [
+            "wf",
+            "fn-dc",
+            "fn-da",
+            "wf-da"
+          ]
+        },
+        {
+          "feature": "Spore print",
+          "thisOne": "Dark purple-brown",
+          "thatOne": "White",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-da",
+            "wf-da"
+          ]
+        }
+      ]
+    },
+    {
+      "scientific": "Agaricus xanthodermus",
+      "english": "Yellow Stainer",
+      "slug": "yellow-stainer",
+      "kind": "poisonous",
+      "tellApart": [
+        {
+          "feature": "Cut stem base",
+          "thisOne": "Slowly and slightly yellow at most",
+          "thatOne": "Bright chrome yellow at once",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-xan",
+            "wp-xan"
+          ]
+        },
+        {
+          "feature": "Smell",
+          "thisOne": "Aniseed",
+          "thatOne": "Of ink, iodine or carbolic soap — strongest at the cut base",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-xan",
+            "wp-xan"
+          ]
+        }
+      ]
+    }
+  ],
+  "noDangerousLookalike": null,
+  "photos": [
+    {
+      "file": "photos/horse-mushroom/1.webp",
+      "view": "whole",
+      "credit": "(c) liradie, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/134864352"
+    },
+    {
+      "file": "photos/horse-mushroom/2.webp",
+      "view": "whole",
+      "credit": "(c) pfox2495, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/137438175"
+    },
+    {
+      "file": "photos/horse-mushroom/3.webp",
+      "view": "whole",
+      "credit": "Kian Hayles-Cotton, no rights reserved (CC0)",
+      "licence": "cc0",
+      "link": "https://www.inaturalist.org/observations/253225628"
+    },
+    {
+      "file": "photos/horse-mushroom/4.webp",
+      "view": "whole",
+      "credit": "(c) drzuz, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/164199457"
+    }
+  ],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Agaricus arvensis, Horse Mushroom",
+      "url": "https://www.first-nature.com/fungi/agaricus-arvensis.php"
+    },
+    {
+      "id": "wf",
+      "title": "Wild Food UK — Horse Mushroom",
+      "url": "https://www.wildfooduk.com/mushroom-guide/horse-mushroom-2/"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Agaricus arvensis",
+      "url": "https://en.wikipedia.org/wiki/Agaricus_arvensis"
+    },
+    {
+      "id": "fn-dc",
+      "title": "First Nature — Amanita phalloides, Deathcap",
+      "url": "https://www.first-nature.com/fungi/amanita-phalloides.php"
+    },
+    {
+      "id": "wf-dc",
+      "title": "Wild Food UK — Deathcap",
+      "url": "https://www.wildfooduk.com/mushroom-guide/deathcap/"
+    },
+    {
+      "id": "wp-dc",
+      "title": "Wikipedia — Amanita phalloides",
+      "url": "https://en.wikipedia.org/wiki/Amanita_phalloides"
+    },
+    {
+      "id": "fn-da",
+      "title": "First Nature — Amanita virosa, Destroying Angel",
+      "url": "https://www.first-nature.com/fungi/amanita-virosa.php"
+    },
+    {
+      "id": "wf-da",
+      "title": "Wild Food UK — Destroying Angel",
+      "url": "https://www.wildfooduk.com/mushroom-guide/destroying-angel/"
+    },
+    {
+      "id": "fn-xan",
+      "title": "First Nature — Agaricus xanthodermus, Yellow Stainer",
+      "url": "https://www.first-nature.com/fungi/agaricus-xanthodermus.php"
+    },
+    {
+      "id": "wp-xan",
+      "title": "Wikipedia — Agaricus xanthodermus",
+      "url": "https://en.wikipedia.org/wiki/Agaricus_xanthodermus"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}

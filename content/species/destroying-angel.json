@@ -1,0 +1,428 @@
+{
+  "slug": "destroying-angel",
+  "inatId": 58685,
+  "scientific": "Amanita virosa",
+  "english": "Destroying Angel",
+  "olderNames": [],
+  "edibility": {
+    "value": "deadly",
+    "sources": [
+      "fn",
+      "wp",
+      "wt-poison",
+      "wf-poison"
+    ]
+  },
+  "edibilityNote": {
+    "value": "Contains the same deadly poisons as the Deathcap. Do not taste it.",
+    "sources": [
+      "fn",
+      "wp",
+      "wf-poison",
+      "wf"
+    ]
+  },
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "Pure white all over: cap, gills, stem and ring.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp",
+        "wt-poison"
+      ]
+    },
+    {
+      "value": "Gills stay white — they never turn pink or brown.",
+      "sources": [
+        "fn",
+        "wf",
+        "wt-poison"
+      ]
+    },
+    {
+      "value": "The stem rises from a bag (volva), often buried deep — dig out the whole base to see it.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp",
+        "wf-poison"
+      ]
+    },
+    {
+      "value": "A thin, fragile ring high on the stem, often torn or missing.",
+      "sources": [
+        "fn",
+        "wf",
+        "wf-poison"
+      ]
+    },
+    {
+      "value": "Young ones look like a white button mushroom from the shop.",
+      "sources": [
+        "fn",
+        "wt-poison"
+      ]
+    },
+    {
+      "value": "White spore print.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp",
+        "wf-poison"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "Broadleaved and mixed woodland — beech, birch, chestnut — often at the edge of the wood; prefers acid soil.",
+    "sources": [
+      "fn",
+      "wf",
+      "wp",
+      "wt-poison",
+      "wf-poison"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "sources": [
+      "fn",
+      "wf",
+      "wp",
+      "wt-poison",
+      "wf-poison"
+    ]
+  },
+  "sporePrint": {
+    "value": "White",
+    "sources": [
+      "fn",
+      "wf",
+      "wp",
+      "wf-poison"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "gills",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    "ring": {
+      "value": "sometimes",
+      "sources": [
+        "fn",
+        "wf",
+        "wf-poison"
+      ]
+    },
+    "bagAtBase": {
+      "value": "yes",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    "growsOn": {
+      "value": "ground",
+      "sources": [
+        "fn",
+        "wt-poison"
+      ]
+    },
+    "capCm": {
+      "value": [
+        4,
+        12
+      ],
+      "sources": [
+        "fn",
+        "wf",
+        "wp",
+        "wt-poison"
+      ]
+    },
+    "fleshChange": {
+      "value": "White; no colour change when cut is described",
+      "sources": [
+        "wf",
+        "wp"
+      ]
+    },
+    "smell": {
+      "value": "Faint: like radish when young, sickly-sweet when old",
+      "sources": [
+        "fn",
+        "wp",
+        "wf-poison"
+      ]
+    }
+  },
+  "lookalikes": [
+    {
+      "scientific": "Agaricus campestris",
+      "english": "Field Mushroom",
+      "slug": "field-mushroom",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Gills",
+          "thisOne": "Pure white, staying white",
+          "thatOne": "Pink from the start, then chocolate brown",
+          "sources": [
+            "fn",
+            "wt-poison",
+            "fn-camp",
+            "wf-camp"
+          ]
+        },
+        {
+          "feature": "Stem base",
+          "thisOne": "Bag-like volva, often buried deep in the soil",
+          "thatOne": "No bag",
+          "sources": [
+            "fn",
+            "wf",
+            "wp-camp",
+            "fn-dc"
+          ]
+        },
+        {
+          "feature": "Spore print",
+          "thisOne": "White",
+          "thatOne": "Chocolate brown",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-camp",
+            "wf-camp"
+          ]
+        }
+      ]
+    },
+    {
+      "scientific": "Agaricus arvensis",
+      "english": "Horse Mushroom",
+      "slug": "horse-mushroom",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Gills",
+          "thisOne": "Pure white, staying white",
+          "thatOne": "Whitish only when very young, soon pink-grey, then chocolate brown",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-arv",
+            "wf-arv"
+          ]
+        },
+        {
+          "feature": "Stem base",
+          "thisOne": "Bag-like volva, often buried deep in the soil",
+          "thatOne": "No bag",
+          "sources": [
+            "fn",
+            "wf",
+            "wf-arv",
+            "fn-dc"
+          ]
+        },
+        {
+          "feature": "Spore print",
+          "thisOne": "White",
+          "thatOne": "Dark purple-brown",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-arv",
+            "wf-arv"
+          ]
+        }
+      ]
+    },
+    {
+      "scientific": "Agaricus sylvicola",
+      "english": "Wood Mushroom",
+      "slug": null,
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Gills",
+          "thisOne": "Pure white, staying white",
+          "thatOne": "White only at first, soon greyish-pink, then chocolate brown",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-syl",
+            "wf-syl"
+          ]
+        },
+        {
+          "feature": "Stem base",
+          "thisOne": "Bag-like volva, often buried deep in the soil",
+          "thatOne": "A small bulb, no bag",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-syl",
+            "wf-syl",
+            "fn-dc",
+            "wp-camp"
+          ]
+        },
+        {
+          "feature": "Smell",
+          "thisOne": "Faint: radish when young, sickly-sweet when old",
+          "thatOne": "Aniseed",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-syl",
+            "wf-syl",
+            "wf-poison"
+          ]
+        },
+        {
+          "feature": "Spore print",
+          "thisOne": "White",
+          "thatOne": "Chocolate to purple-brown",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-syl",
+            "wf-syl"
+          ]
+        }
+      ]
+    }
+  ],
+  "noDangerousLookalike": null,
+  "photos": [
+    {
+      "file": "photos/destroying-angel/1.webp",
+      "view": "whole",
+      "credit": "(c) ele_de_nu, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/135176394"
+    },
+    {
+      "file": "photos/destroying-angel/2.webp",
+      "view": "whole",
+      "credit": "(c) jordan-hill, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/221819157"
+    },
+    {
+      "file": "photos/destroying-angel/3.webp",
+      "view": "whole",
+      "credit": "(c) Matt, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/142321391"
+    },
+    {
+      "file": "photos/destroying-angel/4.webp",
+      "view": "whole",
+      "credit": "(c) Stuart Fisher, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/243278828"
+    }
+  ],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Amanita virosa, Destroying Angel",
+      "url": "https://www.first-nature.com/fungi/amanita-virosa.php"
+    },
+    {
+      "id": "wf",
+      "title": "Wild Food UK — Destroying Angel",
+      "url": "https://www.wildfooduk.com/mushroom-guide/destroying-angel/"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Amanita virosa",
+      "url": "https://en.wikipedia.org/wiki/Amanita_virosa"
+    },
+    {
+      "id": "wt-poison",
+      "title": "Woodland Trust — Poisonous mushrooms: 8 most dangerous UK mushrooms",
+      "url": "https://www.woodlandtrust.org.uk/blog/2025/02/poisonous-mushrooms/"
+    },
+    {
+      "id": "wf-poison",
+      "title": "Wild Food UK — The most poisonous UK fungi, part 1",
+      "url": "https://www.wildfooduk.com/articles/the-most-poisonous-uk-fungi-part-1/"
+    },
+    {
+      "id": "fn-camp",
+      "title": "First Nature — Agaricus campestris, Field Mushroom",
+      "url": "https://www.first-nature.com/fungi/agaricus-campestris.php"
+    },
+    {
+      "id": "wf-camp",
+      "title": "Wild Food UK — Field Mushroom",
+      "url": "https://www.wildfooduk.com/mushroom-guide/field-mushroom/"
+    },
+    {
+      "id": "wp-camp",
+      "title": "Wikipedia — Agaricus campestris",
+      "url": "https://en.wikipedia.org/wiki/Agaricus_campestris"
+    },
+    {
+      "id": "fn-arv",
+      "title": "First Nature — Agaricus arvensis, Horse Mushroom",
+      "url": "https://www.first-nature.com/fungi/agaricus-arvensis.php"
+    },
+    {
+      "id": "wf-arv",
+      "title": "Wild Food UK — Horse Mushroom",
+      "url": "https://www.wildfooduk.com/mushroom-guide/horse-mushroom-2/"
+    },
+    {
+      "id": "fn-syl",
+      "title": "First Nature — Agaricus sylvicola, Wood Mushroom",
+      "url": "https://www.first-nature.com/fungi/agaricus-sylvicola.php"
+    },
+    {
+      "id": "wf-syl",
+      "title": "Wild Food UK — Wood Mushroom",
+      "url": "https://www.wildfooduk.com/mushroom-guide/wood-mushroom/"
+    },
+    {
+      "id": "fn-dc",
+      "title": "First Nature — Amanita phalloides, Deathcap",
+      "url": "https://www.first-nature.com/fungi/amanita-phalloides.php"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}

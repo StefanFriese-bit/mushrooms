@@ -1,0 +1,435 @@
+{
+  "slug": "deathcap",
+  "inatId": 52135,
+  "scientific": "Amanita phalloides",
+  "english": "Deathcap",
+  "olderNames": [
+    "Agaricus phalloides",
+    "Amanita dunensis"
+  ],
+  "edibility": {
+    "value": "deadly",
+    "sources": [
+      "fn",
+      "wp",
+      "wt",
+      "wt-poison",
+      "wf-poison"
+    ]
+  },
+  "edibilityNote": {
+    "value": "The cause of most deaths from mushroom poisoning: half a cap can kill, and cooking or freezing does not destroy the poison. Do not taste it.",
+    "sources": [
+      "fn",
+      "wp",
+      "wt",
+      "wf"
+    ]
+  },
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "Cap usually olive-green, yellowish or bronze, with fine darker streaks — but young caps and a white form are white.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp",
+        "wt",
+        "wf-poison"
+      ]
+    },
+    {
+      "value": "Gills white, later cream (at most faintly pink) — never brown.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp",
+        "wt"
+      ]
+    },
+    {
+      "value": "Swollen stem base in a white, bag-like volva — scrape away the soil and leaves to see it.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp",
+        "wt"
+      ]
+    },
+    {
+      "value": "A floppy white ring hanging from the upper stem.",
+      "sources": [
+        "fn",
+        "wp",
+        "wt"
+      ]
+    },
+    {
+      "value": "Grows under broadleaved trees, especially oak and beech.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp",
+        "wt"
+      ]
+    },
+    {
+      "value": "White spore print.",
+      "sources": [
+        "fn",
+        "wf",
+        "wt",
+        "wf-poison"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "Broadleaved woodland, especially under oak, also beech and other trees; occasionally with conifers.",
+    "sources": [
+      "fn",
+      "wf",
+      "wp",
+      "wt",
+      "wf-poison"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "sources": [
+      "fn",
+      "wf",
+      "wt-poison",
+      "wf-poison"
+    ]
+  },
+  "sporePrint": {
+    "value": "White",
+    "sources": [
+      "fn",
+      "wf",
+      "wt",
+      "wf-poison"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "gills",
+      "sources": [
+        "fn",
+        "wf",
+        "wp",
+        "wt"
+      ]
+    },
+    "ring": {
+      "value": "yes",
+      "sources": [
+        "fn",
+        "wp",
+        "wt"
+      ]
+    },
+    "bagAtBase": {
+      "value": "yes",
+      "sources": [
+        "fn",
+        "wf",
+        "wp",
+        "wt"
+      ]
+    },
+    "growsOn": {
+      "value": "ground",
+      "sources": [
+        "fn",
+        "wt-poison"
+      ]
+    },
+    "capCm": {
+      "value": [
+        5,
+        15
+      ],
+      "sources": [
+        "fn",
+        "wf",
+        "wp",
+        "wt"
+      ]
+    },
+    "fleshChange": {
+      "value": "White; no colour change when cut is described",
+      "sources": [
+        "wf",
+        "wf-poison"
+      ]
+    },
+    "smell": {
+      "value": "None to faint when young; sickly-sweet when old",
+      "sources": [
+        "fn",
+        "wp",
+        "wt"
+      ]
+    }
+  },
+  "lookalikes": [
+    {
+      "scientific": "Agaricus campestris",
+      "english": "Field Mushroom",
+      "slug": "field-mushroom",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Gills",
+          "thisOne": "White, then cream (at most faintly pink) — never brown",
+          "thatOne": "Pink from the start, then chocolate brown",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-camp",
+            "wf-camp"
+          ]
+        },
+        {
+          "feature": "Stem base",
+          "thisOne": "Swollen base in a white, bag-like volva",
+          "thatOne": "No bag",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "wp-camp"
+          ]
+        },
+        {
+          "feature": "Cap colour",
+          "thisOne": "Usually olive-green, yellowish or bronze — but young caps and a white form are white",
+          "thatOne": "White",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-camp",
+            "wf-camp"
+          ]
+        },
+        {
+          "feature": "Spore print",
+          "thisOne": "White",
+          "thatOne": "Chocolate brown",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-camp",
+            "wf-camp"
+          ]
+        }
+      ]
+    },
+    {
+      "scientific": "Agaricus arvensis",
+      "english": "Horse Mushroom",
+      "slug": "horse-mushroom",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Gills",
+          "thisOne": "White, then cream (at most faintly pink) — never brown",
+          "thatOne": "Whitish only when very young, soon pink-grey, then chocolate brown",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-arv",
+            "wf-arv"
+          ]
+        },
+        {
+          "feature": "Stem base",
+          "thisOne": "Swollen base in a white, bag-like volva",
+          "thatOne": "No bag",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "wf-arv"
+          ]
+        },
+        {
+          "feature": "Spore print",
+          "thisOne": "White",
+          "thatOne": "Dark purple-brown",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-arv",
+            "wf-arv"
+          ]
+        }
+      ]
+    },
+    {
+      "scientific": "Agaricus sylvicola",
+      "english": "Wood Mushroom",
+      "slug": null,
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Gills",
+          "thisOne": "White, then cream (at most faintly pink) — never brown",
+          "thatOne": "White only at first, soon greyish-pink, then chocolate brown",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-syl",
+            "wf-syl"
+          ]
+        },
+        {
+          "feature": "Stem base",
+          "thisOne": "Swollen base in a white, bag-like volva",
+          "thatOne": "A small bulb, no bag",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-syl",
+            "wf-syl",
+            "wp-camp"
+          ]
+        },
+        {
+          "feature": "Spore print",
+          "thisOne": "White",
+          "thatOne": "Chocolate to purple-brown",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-syl",
+            "wf-syl"
+          ]
+        }
+      ]
+    }
+  ],
+  "noDangerousLookalike": null,
+  "photos": [
+    {
+      "file": "photos/deathcap/1.webp",
+      "view": "whole",
+      "credit": "(c) elinorc, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/246167113"
+    },
+    {
+      "file": "photos/deathcap/2.webp",
+      "view": "whole",
+      "credit": "(c) phlambler, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/62879846"
+    },
+    {
+      "file": "photos/deathcap/3.webp",
+      "view": "whole",
+      "credit": "(c) Myles McSweeney, some rights reserved (CC BY)",
+      "licence": "cc-by",
+      "link": "https://www.inaturalist.org/observations/136465579"
+    },
+    {
+      "file": "photos/deathcap/4.webp",
+      "view": "whole",
+      "credit": "(c) rgoatley, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/186570255"
+    }
+  ],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Amanita phalloides, Deathcap",
+      "url": "https://www.first-nature.com/fungi/amanita-phalloides.php"
+    },
+    {
+      "id": "wf",
+      "title": "Wild Food UK — Deathcap",
+      "url": "https://www.wildfooduk.com/mushroom-guide/deathcap/"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Amanita phalloides",
+      "url": "https://en.wikipedia.org/wiki/Amanita_phalloides"
+    },
+    {
+      "id": "wt",
+      "title": "Woodland Trust — Deathcap",
+      "url": "https://www.woodlandtrust.org.uk/trees-woods-and-wildlife/fungi-and-lichens/deathcap/"
+    },
+    {
+      "id": "wt-poison",
+      "title": "Woodland Trust — Poisonous mushrooms: 8 most dangerous UK mushrooms",
+      "url": "https://www.woodlandtrust.org.uk/blog/2025/02/poisonous-mushrooms/"
+    },
+    {
+      "id": "wf-poison",
+      "title": "Wild Food UK — The most poisonous UK fungi, part 1",
+      "url": "https://www.wildfooduk.com/articles/the-most-poisonous-uk-fungi-part-1/"
+    },
+    {
+      "id": "fn-camp",
+      "title": "First Nature — Agaricus campestris, Field Mushroom",
+      "url": "https://www.first-nature.com/fungi/agaricus-campestris.php"
+    },
+    {
+      "id": "wf-camp",
+      "title": "Wild Food UK — Field Mushroom",
+      "url": "https://www.wildfooduk.com/mushroom-guide/field-mushroom/"
+    },
+    {
+      "id": "wp-camp",
+      "title": "Wikipedia — Agaricus campestris",
+      "url": "https://en.wikipedia.org/wiki/Agaricus_campestris"
+    },
+    {
+      "id": "fn-arv",
+      "title": "First Nature — Agaricus arvensis, Horse Mushroom",
+      "url": "https://www.first-nature.com/fungi/agaricus-arvensis.php"
+    },
+    {
+      "id": "wf-arv",
+      "title": "Wild Food UK — Horse Mushroom",
+      "url": "https://www.wildfooduk.com/mushroom-guide/horse-mushroom-2/"
+    },
+    {
+      "id": "fn-syl",
+      "title": "First Nature — Agaricus sylvicola, Wood Mushroom",
+      "url": "https://www.first-nature.com/fungi/agaricus-sylvicola.php"
+    },
+    {
+      "id": "wf-syl",
+      "title": "Wild Food UK — Wood Mushroom",
+      "url": "https://www.wildfooduk.com/mushroom-guide/wood-mushroom/"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}
