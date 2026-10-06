@@ -1,0 +1,245 @@
+{
+  "slug": "yellowing-curtain-crust",
+  "inatId": 155081,
+  "scientific": "Stereum subtomentosum",
+  "english": "Yellowing Curtain Crust",
+  "olderNames": [],
+  "edibility": {
+    "value": "not-edible",
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "edibilityNote": {
+    "value": "Tough, leathery and tasteless.",
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "Thin fan-shaped brackets, 3–7 cm, with wavy edges, often in overlapping tiers.",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    {
+      "value": "Upper side zoned, velvety to smooth, reddish-orange fading to greyish ochre, often green with algae.",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    {
+      "value": "Underside smooth — no pores — and it stains yellow when scratched or cut.",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    {
+      "value": "On dead beech and other broadleaved wood, all year.",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "Dead trunks and fallen branches of broadleaved trees, especially beech and sycamore.",
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "sporePrint": {
+    "value": "White or very pale brown",
+    "sources": [
+      "fn"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "smooth",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "ring": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "growsOn": {
+      "value": "wood",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "capCm": {
+      "value": [
+        3,
+        7
+      ],
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "fleshChange": {
+      "value": "Very thin and tough; the underside stains yellow when cut",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "smell": {
+      "value": "No noticeable smell",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    }
+  },
+  "lookalikes": [
+    {
+      "scientific": "Stereum hirsutum",
+      "english": "Hairy Curtain Crust",
+      "slug": "hairy-curtain-crust",
+      "kind": "not-edible",
+      "tellApart": [
+        {
+          "feature": "Upper side",
+          "thisOne": "Velvety to smooth, with reddish tones",
+          "thatOne": "Clearly hairy, with no red",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-hc",
+            "wf-hc"
+          ]
+        },
+        {
+          "feature": "Cut or scratch the underside",
+          "thisOne": "It stains yellow",
+          "thatOne": "No yellow staining",
+          "sources": [
+            "fn",
+            "wf",
+            "wf-hc"
+          ]
+        }
+      ]
+    },
+    {
+      "scientific": "Trametes versicolor",
+      "english": "Turkeytail",
+      "slug": "turkeytail",
+      "kind": "not-edible",
+      "tellApart": [
+        {
+          "feature": "Underneath",
+          "thisOne": "Smooth, with no pores",
+          "thatOne": "Tiny pores",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-tt",
+            "wp-tt"
+          ]
+        }
+      ]
+    }
+  ],
+  "noDangerousLookalike": null,
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Stereum subtomentosum, Yellowing Curtain Crust",
+      "url": "https://www.first-nature.com/fungi/stereum-subtomentosum.php"
+    },
+    {
+      "id": "wf",
+      "title": "Wild Food UK — Yellowing Curtain Crust",
+      "url": "https://www.wildfooduk.com/mushroom-guide/yellowing-curtain-crust/"
+    },
+    {
+      "id": "fn-hc",
+      "title": "First Nature — Stereum hirsutum, Hairy Curtain Crust",
+      "url": "https://www.first-nature.com/fungi/stereum-hirsutum.php"
+    },
+    {
+      "id": "wf-hc",
+      "title": "Wild Food UK — Hairy Curtain Crust",
+      "url": "https://www.wildfooduk.com/mushroom-guide/hairy-curtain-crust/"
+    },
+    {
+      "id": "wp-hc",
+      "title": "Wikipedia — Stereum hirsutum",
+      "url": "https://en.wikipedia.org/wiki/Stereum_hirsutum"
+    },
+    {
+      "id": "fn-tt",
+      "title": "First Nature — Trametes versicolor, Turkeytail",
+      "url": "https://www.first-nature.com/fungi/trametes-versicolor.php"
+    },
+    {
+      "id": "wp-tt",
+      "title": "Wikipedia — Trametes versicolor",
+      "url": "https://en.wikipedia.org/wiki/Trametes_versicolor"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}

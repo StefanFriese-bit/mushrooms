@@ -178,6 +178,25 @@
           ]
         }
       ]
+    },
+    {
+      "scientific": "Russula ochroleuca",
+      "english": "Ochre Brittlegill",
+      "slug": "ochre-brittlegill",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Cap colour",
+          "thisOne": "Bright scarlet red",
+          "thatOne": "Ochre-yellow",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-ob",
+            "wp-ob"
+          ]
+        }
+      ]
     }
   ],
   "noDangerousLookalike": null,
@@ -246,6 +265,16 @@
       "id": "wt-cb",
       "title": "Woodland Trust — Charcoal Burner",
       "url": "https://www.woodlandtrust.org.uk/trees-woods-and-wildlife/fungi-and-lichens/charcoal-burner/"
+    },
+    {
+      "id": "fn-ob",
+      "title": "First Nature — Russula ochroleuca, Ochre Brittlegill",
+      "url": "https://www.first-nature.com/fungi/russula-ochroleuca.php"
+    },
+    {
+      "id": "wp-ob",
+      "title": "Wikipedia — Russula ochroleuca",
+      "url": "https://en.wikipedia.org/wiki/Russula_ochroleuca"
     },
     {
       "id": "wf-prot",

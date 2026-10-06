@@ -1,0 +1,214 @@
+{
+  "slug": "crested-coral",
+  "inatId": 63260,
+  "scientific": "Clavulina coralloides",
+  "english": "Crested Coral",
+  "olderNames": [
+    "Clavulina cristata",
+    "Clavaria cristata"
+  ],
+  "edibility": {
+    "value": "edible-cooked",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "edibilityNote": {
+    "value": "Reported edible, but insubstantial, tough and insipid — not usually collected.",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "A white to cream coral, up to 7–8 cm tall, its branches ending in frilly, crested tips.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    {
+      "value": "A few flattened branches rise from a short base; the tips brown with age.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    {
+      "value": "On the ground under broadleaved trees and conifers, often beside paths.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "On the ground in broadleaved and conifer woods, often beside paths; sometimes on rotten wood.",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "sources": [
+      "fn"
+    ]
+  },
+  "sporePrint": {
+    "value": "White",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "other",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "ring": {
+      "value": "no",
+      "sources": [
+        "wp",
+        "fn"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "wp",
+        "fn"
+      ]
+    },
+    "growsOn": {
+      "value": "ground",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "capCm": {
+      "value": [
+        0,
+        7
+      ],
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "fleshChange": {
+      "value": "White; no colour change when cut is described",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "smell": {
+      "value": "Not distinctive",
+      "sources": [
+        "fn"
+      ]
+    }
+  },
+  "lookalikes": [
+    {
+      "scientific": "Ramaria stricta",
+      "english": "Upright Coral",
+      "slug": "upright-coral",
+      "kind": "not-edible",
+      "tellApart": [
+        {
+          "feature": "Branches",
+          "thisOne": "Few, ending in frilly, crested tips",
+          "thatOne": "Many, slender, upright and parallel, with sharp tips",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-uc",
+            "wp-uc"
+          ]
+        },
+        {
+          "feature": "Colour",
+          "thisOne": "White to cream",
+          "thatOne": "Cream-buff to yellow-brown",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-uc",
+            "wp-uc"
+          ]
+        },
+        {
+          "feature": "Grows on",
+          "thisOne": "The ground",
+          "thatOne": "Wood, often buried",
+          "sources": [
+            "wp",
+            "fn-uc"
+          ]
+        }
+      ]
+    }
+  ],
+  "noDangerousLookalike": {
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Clavulina coralloides, Crested Coral",
+      "url": "https://www.first-nature.com/fungi/clavulina-coralloides.php"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Clavulina coralloides",
+      "url": "https://en.wikipedia.org/wiki/Clavulina_coralloides"
+    },
+    {
+      "id": "fn-uc",
+      "title": "First Nature — Ramaria stricta, Upright Coral",
+      "url": "https://www.first-nature.com/fungi/ramaria-stricta.php"
+    },
+    {
+      "id": "wp-uc",
+      "title": "Wikipedia — Ramaria stricta",
+      "url": "https://en.wikipedia.org/wiki/Ramaria_stricta"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}

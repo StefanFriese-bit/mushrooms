@@ -133,7 +133,37 @@
       ]
     }
   },
-  "lookalikes": [],
+  "lookalikes": [
+    {
+      "scientific": "Stereum subtomentosum",
+      "english": "Yellowing Curtain Crust",
+      "slug": "yellowing-curtain-crust",
+      "kind": "not-edible",
+      "tellApart": [
+        {
+          "feature": "Upper side",
+          "thisOne": "Clearly hairy, with no red",
+          "thatOne": "Velvety to smooth, with reddish tones",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-yc",
+            "wf-yc"
+          ]
+        },
+        {
+          "feature": "Cut or scratch the underside",
+          "thisOne": "No yellow staining",
+          "thatOne": "It stains yellow",
+          "sources": [
+            "wf",
+            "fn-yc",
+            "wf-yc"
+          ]
+        }
+      ]
+    }
+  ],
   "noDangerousLookalike": null,
   "photos": [],
   "sources": [
@@ -151,6 +181,16 @@
       "id": "wp",
       "title": "Wikipedia — Stereum hirsutum",
       "url": "https://en.wikipedia.org/wiki/Stereum_hirsutum"
+    },
+    {
+      "id": "fn-yc",
+      "title": "First Nature — Stereum subtomentosum, Yellowing Curtain Crust",
+      "url": "https://www.first-nature.com/fungi/stereum-subtomentosum.php"
+    },
+    {
+      "id": "wf-yc",
+      "title": "Wild Food UK — Yellowing Curtain Crust",
+      "url": "https://www.wildfooduk.com/mushroom-guide/yellowing-curtain-crust/"
     },
     {
       "id": "wf-prot",

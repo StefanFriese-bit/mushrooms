@@ -1,0 +1,216 @@
+{
+  "slug": "upright-coral",
+  "inatId": 54228,
+  "scientific": "Ramaria stricta",
+  "english": "Upright Coral",
+  "olderNames": [
+    "Clavaria stricta"
+  ],
+  "edibility": {
+    "value": "not-edible",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "edibilityNote": {
+    "value": "Bitter and tough. First Nature adds that some similar-looking coral fungi are poisonous.",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "A tough, rubbery coral, 4–10 cm tall, with many slender, upright, parallel branches ending in sharp tips.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    {
+      "value": "Pale cream to buff or yellow-brown, bruising reddish-brown.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    {
+      "value": "A faint smell of aniseed when mature.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    {
+      "value": "On stumps, logs and buried wood, often under beech; also on woodchip in flowerbeds.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "Stumps, logs and buried wood of broadleaved and conifer trees, often under beech; also woodchip mulch.",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "sources": [
+      "fn"
+    ]
+  },
+  "sporePrint": {
+    "value": "Ochre to yellow",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "other",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "ring": {
+      "value": "no",
+      "sources": [
+        "wp",
+        "fn"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "wp",
+        "fn"
+      ]
+    },
+    "growsOn": {
+      "value": "wood",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "capCm": {
+      "value": [
+        4,
+        10
+      ],
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "fleshChange": {
+      "value": "Tough and rubbery; bruises reddish-brown",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "smell": {
+      "value": "Faint aniseed when mature",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    }
+  },
+  "lookalikes": [
+    {
+      "scientific": "Clavulina coralloides",
+      "english": "Crested Coral",
+      "slug": "crested-coral",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Branches",
+          "thisOne": "Many, slender, upright and parallel, with sharp tips",
+          "thatOne": "Few, ending in frilly, crested tips",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-cc",
+            "wp-cc"
+          ]
+        },
+        {
+          "feature": "Colour",
+          "thisOne": "Cream-buff to yellow-brown",
+          "thatOne": "White to cream",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-cc",
+            "wp-cc"
+          ]
+        },
+        {
+          "feature": "Grows on",
+          "thisOne": "Wood, often buried",
+          "thatOne": "The ground",
+          "sources": [
+            "fn",
+            "wp-cc"
+          ]
+        }
+      ]
+    }
+  ],
+  "noDangerousLookalike": null,
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Ramaria stricta, Upright Coral",
+      "url": "https://www.first-nature.com/fungi/ramaria-stricta.php"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Ramaria stricta",
+      "url": "https://en.wikipedia.org/wiki/Ramaria_stricta"
+    },
+    {
+      "id": "fn-cc",
+      "title": "First Nature — Clavulina coralloides, Crested Coral",
+      "url": "https://www.first-nature.com/fungi/clavulina-coralloides.php"
+    },
+    {
+      "id": "wp-cc",
+      "title": "Wikipedia — Clavulina coralloides",
+      "url": "https://en.wikipedia.org/wiki/Clavulina_coralloides"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}

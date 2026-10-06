@@ -175,6 +175,25 @@
           ]
         }
       ]
+    },
+    {
+      "scientific": "Stereum subtomentosum",
+      "english": "Yellowing Curtain Crust",
+      "slug": "yellowing-curtain-crust",
+      "kind": "not-edible",
+      "tellApart": [
+        {
+          "feature": "Underneath",
+          "thisOne": "Tiny pores",
+          "thatOne": "Smooth, with no pores",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-yc",
+            "wf-yc"
+          ]
+        }
+      ]
     }
   ],
   "noDangerousLookalike": null,
@@ -209,6 +228,16 @@
       "id": "wp-pp",
       "title": "Wikipedia — Trichaptum abietinum",
       "url": "https://en.wikipedia.org/wiki/Trichaptum_abietinum"
+    },
+    {
+      "id": "fn-yc",
+      "title": "First Nature — Stereum subtomentosum, Yellowing Curtain Crust",
+      "url": "https://www.first-nature.com/fungi/stereum-subtomentosum.php"
+    },
+    {
+      "id": "wf-yc",
+      "title": "Wild Food UK — Yellowing Curtain Crust",
+      "url": "https://www.wildfooduk.com/mushroom-guide/yellowing-curtain-crust/"
     },
     {
       "id": "wf-prot",
