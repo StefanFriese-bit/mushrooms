@@ -2,7 +2,7 @@ import { readFileSync, readdirSync, writeFileSync } from 'node:fs';
 import type { ClassInfo, Thresholds } from '../src/scan/rules.ts';
 import type { CoreLists } from './lib/core-lists.ts';
 import {
-  PASS_MARK, checkingHalf, chooseNotSure, chooseSafety, measure, tuningHalf, type Case, type Measures,
+  PASS_MARK, checkingHalf, chooseGroup, chooseNotSure, chooseSafety, measure, tuningHalf, type Case, type Measures,
 } from './lib/scan-metrics.ts';
 
 // The scan test (spec 6.3): every candidate's scores (cache/scores/) put through the app's own rules, the two
@@ -63,7 +63,9 @@ const pct = (n: number, d: number) => (d === 0 ? '–' : `${((100 * n) / d).toFi
 const share = (n: number, d: number) => (d === 0 ? 0 : n / d);
 const scoreFiles = readdirSync(new URL('cache/scores/', ROOT)).filter((f) => f.endsWith('.json')).map((f) => f.slice(0, -5)).sort();
 const isSample = (name: string) => /\.sample\d+$/.test(name);
-const quickMeasure = (cases: Case[]) => measure(cases, classes, danger, lookalikes, { safety: 1, notSure: 0, offSeason: 1 }, 1);
+/** A group line no scan reaches: no headline. */
+const NO_GROUP = 2;
+const quickMeasure = (cases: Case[]) => measure(cases, classes, danger, lookalikes, { safety: 1, notSure: 0, offSeason: 1, group: NO_GROUP }, 1);
 const fitOf = (m: ScoreMeta) => m.fit ?? 'squash';
 const prepared = (m: ScoreMeta) => `${fitOf(m)}, ${m.norm === 'half' ? '0.5/0.5' : 'ImageNet'} colours`;
 
@@ -86,12 +88,13 @@ for (const name of scoreFiles.filter((n) => !isSample(n))) {
   let offSeason = 1;
   let best = -1;
   for (const f of [1, 0.7, 0.5, 0.3]) {
-    const m = measure(tuning, classes, danger, lookalikes, { safety: 1, notSure: 0, offSeason: f }, 3);
+    const m = measure(tuning, classes, danger, lookalikes, { safety: 1, notSure: 0, offSeason: f, group: NO_GROUP }, 3);
     if (m.rightFirst > best) { best = m.rightFirst; offSeason = f; }
   }
-  const safety = chooseSafety(tuning, classes, danger, lookalikes, { safety: 1, notSure: 0, offSeason });
-  const notSure = chooseNotSure(tuning, classes, danger, lookalikes, { safety: safety ?? 1, notSure: 0, offSeason });
-  const t: Thresholds = { safety: safety ?? 0, notSure, offSeason };
+  const safety = chooseSafety(tuning, classes, danger, lookalikes, { safety: 1, notSure: 0, offSeason, group: NO_GROUP });
+  const notSure = chooseNotSure(tuning, classes, danger, lookalikes, { safety: safety ?? 1, notSure: 0, offSeason, group: NO_GROUP });
+  const group = chooseGroup(tuning, classes, danger, lookalikes, { safety: safety ?? 1, notSure, offSeason, group: NO_GROUP });
+  const t: Thresholds = { safety: safety ?? 0, notSure, offSeason, group: group ?? NO_GROUP };
   const one = measure(checking, classes, danger, lookalikes, t, 1);
   const three = measure(checking, classes, danger, lookalikes, t, 3);
   const perDanger = [...danger.keys()].map((sp) => {
@@ -157,9 +160,12 @@ for (const r of results) {
     `${pct(r.three.falseAlarms, r.three.safeCases)} | ${pct(r.three.cases - r.three.sure, r.three.cases)} | ${r.passed ? 'yes' : 'no'} |`);
 }
 lines.push('', 'Thresholds per model (from the tuning half): safety = the highest score at which a dangerous species is still added; ' +
-  '"not sure" = the lowest top score above which the first answer is right 90 times in 100; off-season = the mark-down factor.', '');
+  '"not sure" = the lowest top score above which the first answer is right 90 times in 100; off-season = the mark-down factor; ' +
+  'group = the lowest score of a genus\'s species added up above which the group headline ("most likely a brittlegill") is right ' +
+  '90 times in 100, with one photo and with three.', '');
 for (const r of results) {
-  lines.push(`- ${label(r)}: safety ${r.safetyFound ? r.t.safety : 'none reaches the pass mark'}, not sure ${r.t.notSure}, off-season ×${r.t.offSeason}` +
+  lines.push(`- ${label(r)}: safety ${r.safetyFound ? r.t.safety : 'none reaches the pass mark'}, not sure ${r.t.notSure}, off-season ×${r.t.offSeason}, ` +
+    `group ${r.t.group === NO_GROUP ? 'none reaches 90 in 100' : r.t.group}` +
     (r.loss === null ? '' : `; against the same model in PyTorch ${r.loss <= 0 ? 'no "right first" lost' : `${(r.loss * 100).toFixed(1)} points of "right first" lost`}`));
 }
 lines.push('', '## What the model knows', '');
@@ -172,6 +178,14 @@ lines.push(`${viaOlder.length} of its species carry an older name of one of ours
   (viaOlder.some((c) => c.name === 'Amanita gemmata') ? 'One of them looks different: the Jewelled Amanita (*Amanita gemmata*) counts as the ' +
     'Fly Agaric, because iNaturalist files it there; on a scan it shows as the Fly Agaric, a poisonous Amanita.' : ''), '');
 const show = chosen ?? fullOnly ?? [...results].sort(byRightFirst)[0];
+if (show) {
+  lines.push(`## The group headline and "not sure" (${label(show)})`, '');
+  lines.push('| | 1 photo | up to 3 photos |', '|---|---|---|');
+  lines.push(`| Group headline shown | ${pct(show.one.groupShown, show.one.groupKnown)} | ${pct(show.three.groupShown, show.three.groupKnown)} |`);
+  lines.push(`| …right when shown | ${pct(show.one.groupRight, show.one.groupShown)} | ${pct(show.three.groupRight, show.three.groupShown)} |`);
+  lines.push(`| "Not sure" shown | ${pct(show.one.notSureKnown, show.one.known)} | ${pct(show.three.notSureKnown, show.three.known)} |`);
+  lines.push(`| …right species still on the list | ${pct(show.one.onListNotSure, show.one.notSureKnown)} | ${pct(show.three.onListNotSure, show.three.notSureKnown)} |`, '');
+}
 if (show) {
   lines.push(`## Dangerous species, one by one (${label(show)}, up to three photos)`, '');
   lines.push('| Species | Danger | On the shortlist | Caught by Check (the model does not know it) |', '|---|---|---|---|');
@@ -194,7 +208,9 @@ writeFileSync(new URL('content/model/scan-settings.json', ROOT), JSON.stringify(
   passed: true, model: chosen.meta.model, file: (chosen.meta.onnx as string).replace(/^public\//, ''),
   size: chosen.meta.size, norm: chosen.meta.norm, fit: fitOf(chosen.meta), thresholds: chosen.t,
   record: { rightFirst: share(chosen.three.rightFirst, chosen.three.known), onList: share(chosen.three.onList, chosen.three.known),
-    dangerOnList: share(chosen.three.dangerOnList, chosen.three.dangerKnown), observations: chosen.three.cases },
+    dangerOnList: share(chosen.three.dangerOnList, chosen.three.dangerKnown), observations: chosen.three.cases,
+    groupRight: share(chosen.three.groupRight, chosen.three.groupShown),
+    onListNotSure: share(chosen.three.onListNotSure, chosen.three.notSureKnown) },
   tested,
 } : { passed: false, reason: fullOnly ? 'no phone file has passed yet' : 'no phone-sized model passes', tested }, null, 2) + '\n');
 console.log(`reports/scan-test.md and content/model/scan-settings.json written${chosen ? ` (${label(chosen)} chosen)` : ''}`);

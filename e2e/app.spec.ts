@@ -240,7 +240,44 @@ test('the scan runs the model on the phone: the Deathcap\'s photo puts the Death
   await expect(result).toBeVisible({ timeout: 120_000 });
   await expect(result.locator('[data-test=scan-row]').filter({ hasText: 'Deathcap' })).toHaveCount(1);
   await expect(result.getByText('A dangerous species is on this list')).toBeVisible();
+  await expect(result.locator('[data-test=scan-group]')).toContainText('Most likely an Amanita');
   expect(await page.locator('main').innerText()).not.toMatch(/Edible, cooked|Edible, but some people react|Not edible|\bsafe\b/i);
   await page.reload(); // the record page is shown once
   await expect(page.getByRole('heading', { name: 'Scan', exact: true })).toBeVisible();
+});
+
+test('the scan names the group, and gives English names to species the guide does not cover', async ({ page }) => {
+  test.setTimeout(150_000);
+  await page.goto(`${site.url}#/scan`);
+  await page.getByRole('button', { name: /switch the scan on/ }).click();
+  await page.getByLabel('Top of the cap photo').setInputFiles(fileURLToPath(new URL('../public/photos/sickener/1.webp', import.meta.url)));
+  await page.getByRole('button', { name: 'Scan', exact: true }).click();
+  const result = page.locator('[data-test=scan-result]');
+  await expect(result).toBeVisible({ timeout: 120_000 });
+  const group = result.locator('[data-test=scan-group]');
+  await expect(group).toContainText('Most likely one of the brittlegills (Russula)');
+  await expect(group.getByRole('link', { name: 'Sickener' })).toBeVisible(); // the guide's brittlegills, linked
+  await expect(result.locator('[data-test=scan-row]').filter({ hasText: 'Crab Brittlegill' })).toContainText('Not in the guide');
+  expect(await page.locator('main').innerText()).not.toMatch(/Edible, cooked|Edible, but some people react|Not edible|\bsafe\b/i);
+});
+
+test('when the scan is not certain it says how often the right species is still on the list', async ({ page }) => {
+  test.setTimeout(150_000);
+  await page.goto(`${site.url}#/scan`);
+  await page.getByRole('button', { name: /switch the scan on/ }).click();
+  await page.getByLabel('Top of the cap photo').setInputFiles(fileURLToPath(new URL('../public/photos/charcoal-burner/1.webp', import.meta.url)));
+  await page.getByRole('button', { name: 'Scan', exact: true }).click();
+  const notSure = page.locator('[data-test=not-sure]');
+  await expect(notSure).toBeVisible({ timeout: 120_000 });
+  await expect(notSure).toContainText(/still on this list \d+(\.\d)?% of the time/);
+  await expect(page.getByText('the scan can\'t tell from these photos')).toHaveCount(0); // the old wording, read as "no result"
+});
+
+test('search finds a species by another name, even misspelt, and its page lists the other names', async ({ page }) => {
+  await page.goto(`${site.url}#/guide?q=porchini`);
+  const rows = page.locator('[data-test=species-row]');
+  await expect(rows).toHaveCount(1);
+  await expect(rows.first()).toContainText('Penny Bun');
+  await rows.first().click();
+  await expect(page.locator('[data-test=other-names]')).toContainText('Porcini');
 });

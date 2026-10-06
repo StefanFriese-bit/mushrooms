@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { checkingHalf, chooseNotSure, chooseSafety, measure, tuningHalf, type Case } from '../tools/lib/scan-metrics.ts';
+import { checkingHalf, chooseGroup, chooseNotSure, chooseSafety, measure, tuningHalf, type Case } from '../tools/lib/scan-metrics.ts';
 import type { ClassInfo } from '../src/scan/rules.ts';
 
 const ALL_YEAR = Array(12).fill(5);
@@ -10,7 +10,7 @@ const classes: ClassInfo[] = [
 ];
 const danger = new Map<string, 'deadly' | 'poisonous'>([['D', 'deadly'], ['U', 'deadly']]);
 const lookalikes = new Map<string, string[]>([['A', ['D', 'U']], ['D', ['A']], ['U', ['A']]]);
-const T = { safety: 0.05, notSure: 0.05, offSeason: 0.5 };
+const T = { safety: 0.05, notSure: 0.05, offSeason: 0.5, group: 2 };
 /** Scores over the nine classes from a {name: score} map. */
 const sc = (m: Record<string, number>) => [...names, 'Elsewhere'].map((n) => m[n] ?? 0);
 const kase = (obsId: number, species: string, m: Record<string, number>): Case => ({ obsId, species, month: 10, photos: [sc(m)] });
@@ -55,5 +55,27 @@ describe('the thresholds', () => {
     const all = [rightA, kase(3, 'A', { A: 1 })];
     expect(tuningHalf(all).map((c) => c.obsId)).toEqual([2]);
     expect(checkingHalf(all).map((c) => c.obsId)).toEqual([3]);
+  });
+});
+
+describe('the group headline and "not sure"', () => {
+  const g = (id: number, name: string, ours: string | null): ClassInfo => ({ id, name, ours, danger: null, uk: true, months: ALL_YEAR });
+  const gClasses = [g(0, 'Russula a', 'Russula a'), g(1, 'Russula b', null), g(2, 'Lactarius c', 'Lactarius c')];
+  const none = new Map<string, never>();
+  const gk = (obsId: number, species: string, s: number[]): Case => ({ obsId, species, month: 10, photos: [s] });
+  const right = gk(2, 'Russula a', [0.4, 0.4, 0.1]); // Russula 0.8: the right genus
+  const wrong = gk(4, 'Lactarius c', [0, 0.5, 0.3]); // Russula 0.5: the wrong genus
+  it('counts how often the headline is shown and right, over species the model knows', () => {
+    const m = measure([right, wrong], gClasses, none, none, { ...T, group: 0.5 }, 1);
+    expect(m).toMatchObject({ groupKnown: 2, groupShown: 2, groupRight: 1 });
+    expect(measure([right, wrong], gClasses, none, none, { ...T, group: 0.6 }, 1)).toMatchObject({ groupShown: 1, groupRight: 1 });
+  });
+  it('takes the lowest group line above which the headline is right 90 in 100', () => {
+    expect(chooseGroup([right, wrong], gClasses, none, none, T)).toBe(0.6);
+    expect(chooseGroup([wrong], gClasses, none, none, T)).toBeNull();
+  });
+  it('counts how often the right species is still on the list when the scan is not sure', () => {
+    const m = measure([rightA, wrongB], classes, danger, lookalikes, { ...T, notSure: 0.5 }, 1);
+    expect(m).toMatchObject({ notSureKnown: 1, onListNotSure: 1 }); // wrongB: top 0.3 is under 0.5, B is on the list
   });
 });

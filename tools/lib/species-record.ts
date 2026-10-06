@@ -43,6 +43,11 @@ export function checkRecord(r: SpeciesRecord, allowedHosts: string[]): string[] 
   verdict('edibility', r.edibility.sources);
   if (r.edibilityNote) verdict('edibilityNote', r.edibilityNote.sources);
   sourced('protectedInUk', r.protectedInUk.sources);
+  // Other names only help search and recognition — one website is enough, but each must be a real, different name.
+  if (r.otherNames) {
+    sourcedOnce('otherNames', r.otherNames.sources);
+    if (r.otherNames.value.length === 0 || r.otherNames.value.some((n) => !n.trim() || n === r.english)) say('otherNames needs real names other than its own');
+  }
   if (r.topPoints.length < 3 || r.topPoints.length > 6) say(`needs 3 to 6 top points (has ${r.topPoints.length})`);
   r.topPoints.forEach((t, i) => sourced(`top point ${i + 1}`, t.sources));
   sourced('habitat', r.habitat.sources);

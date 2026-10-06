@@ -26,6 +26,7 @@ export function SpeciesPage({ slug }: { slug: string }) {
       </div>
       <h1>{s.english}</h1>
       <p class="sci">{s.scientific}{s.olderNames.length ? ` (formerly ${s.olderNames.join(', ')})` : ''}</p>
+      {s.otherNames && <p class="muted" data-test="other-names">Also called: {s.otherNames.value.join(', ')}<Refs rec={s} fact={s.otherNames} /></p>}
       <p>
         <span class={`tag ${tagClass(s.edibility.value)}`}>{EDIBILITY_WORDS[s.edibility.value]}</span>
         <Refs rec={s} fact={s.edibility} />

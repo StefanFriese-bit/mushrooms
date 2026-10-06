@@ -209,5 +209,13 @@
       "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
     }
   ],
-  "checked": "2026-10-06"
+  "checked": "2026-10-06",
+  "otherNames": {
+    "value": [
+      "Artist's Fungus"
+    ],
+    "sources": [
+      "fn"
+    ]
+  }
 }

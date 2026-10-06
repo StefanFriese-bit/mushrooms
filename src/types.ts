@@ -40,6 +40,8 @@ export type SpeciesRecord = {
   scientific: string;
   english: string;
   olderNames: string[];
+  /** Other English names the species goes by, as its sources list them ("Porcini" for the Penny Bun). */
+  otherNames?: Sourced<string[]>;
   edibility: Sourced<Edibility>;
   edibilityNote: Sourced<string> | null;
   protectedInUk: Sourced<boolean>;

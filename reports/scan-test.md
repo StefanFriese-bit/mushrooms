@@ -55,17 +55,17 @@ squash = the whole photo scaled to a square; square = the centre square; timm = 
 | EfficientNet-B3 (8-bit) | 13.2 M | timm, 0.5/0.5 colours | 32.5% | 37.5% | 62.6% | 75.5% (336/445) | 27.6% | 82.6% | no |
 | ViT-Base (ceiling only) | 87 M | timm, 0.5/0.5 colours | 76.8% | 80.6% | 96.3% | 99.1% (441/445) | 30.5% | 42.4% | yes |
 
-Thresholds per model (from the tuning half): safety = the highest score at which a dangerous species is still added; "not sure" = the lowest top score above which the first answer is right 90 times in 100; off-season = the mark-down factor.
+Thresholds per model (from the tuning half): safety = the highest score at which a dangerous species is still added; "not sure" = the lowest top score above which the first answer is right 90 times in 100; off-season = the mark-down factor; group = the lowest score of a genus's species added up above which the group headline ("most likely a brittlegill") is right 90 times in 100, with one photo and with three.
 
-- MobileNetV2: safety 0.0001, not sure 0.9, off-season ×0.3
-- MobileNetV2 (8-bit): safety none reaches the pass mark, not sure 0.9, off-season ×0.3; against the same model in PyTorch 1.4 points of "right first" lost
-- MobileNetV2 (phone file): safety 0.0001, not sure 0.9, off-season ×0.3; against the same model in PyTorch no "right first" lost
-- ResNet-18: safety 0.0005, not sure 0.8, off-season ×0.3
-- EfficientNet-B0: safety 0.00005, not sure 0.9, off-season ×0.3
-- EfficientNet-B0 (8-bit): safety none reaches the pass mark, not sure 0.9, off-season ×0.3; against the same model in PyTorch 20.6 points of "right first" lost
-- EfficientNet-B3: safety 0.0001, not sure 0.9, off-season ×0.3
-- EfficientNet-B3 (8-bit): safety none reaches the pass mark, not sure 0.9, off-season ×0.3; against the same model in PyTorch 43.1 points of "right first" lost
-- ViT-Base (ceiling only): safety 0.00002, not sure 0.8, off-season ×0.3
+- MobileNetV2: safety 0.0001, not sure 0.9, off-season ×0.3, group 0.7
+- MobileNetV2 (8-bit): safety none reaches the pass mark, not sure 0.9, off-season ×0.3, group 0.7; against the same model in PyTorch 1.4 points of "right first" lost
+- MobileNetV2 (phone file): safety 0.0001, not sure 0.9, off-season ×0.3, group 0.7; against the same model in PyTorch no "right first" lost
+- ResNet-18: safety 0.0005, not sure 0.8, off-season ×0.3, group 0.7
+- EfficientNet-B0: safety 0.00005, not sure 0.9, off-season ×0.3, group 0.7
+- EfficientNet-B0 (8-bit): safety none reaches the pass mark, not sure 0.9, off-season ×0.3, group 0.75; against the same model in PyTorch 20.6 points of "right first" lost
+- EfficientNet-B3: safety 0.0001, not sure 0.9, off-season ×0.3, group 0.6
+- EfficientNet-B3 (8-bit): safety none reaches the pass mark, not sure 0.9, off-season ×0.3, group none reaches 90 in 100; against the same model in PyTorch 43.1 points of "right first" lost
+- ViT-Base (ceiling only): safety 0.00002, not sure 0.8, off-season ×0.3, group 0.6
 
 ## What the model knows
 
@@ -74,6 +74,15 @@ Thresholds per model (from the tuning half): safety = the highest score at which
 Fool's Webcap (*Cortinarius orellanus*) — **deadly** · Deadly Fibrecap (*Inosperma erubescens*) — **deadly** · Ivory Funnel (*Collybia dealbata*) — **deadly** · Wrinkled Conecap (*Pholiotina rugosa*) — **deadly** · Jack O'Lantern (*Omphalotus illudens*) — **poisonous** · Stump Puffball (*Apioperdon pyriforme*) · Wrinkled Peach (*Rhodotus palmatus*) · Orange Pore Fungus (*Favolaschia claudopus*) · Rhodocollybia asema (*Rhodocollybia asema*) · Smoky Spindles (*Clavaria fumosa*) · Poplar Fieldcap (*Cyclocybe cylindracea*) · Hazel Gloves (*Hypocreopsis rhododendri*) · Golden Spindles (*Clavulinopsis fusiformis*) · Cobalt Crust (*Terana coerulea*) · Phaeotremella frondosa (*Phaeotremella frondosa*) · Flame Shield (*Pluteus aurantiorugosus*) · Holly Parachute (*Marasmius hudsonii*) · Jubilee Waxcap (*Gliophorus reginae*) · Lilac Pinkgill (*Entoloma porphyrophaeum*) · Red Cage (*Clathrus ruber*) · Blackening Wax-cap (*Hygrocybe nigrescens*) · Blueleg Brownie (*Psilocybe cyanescens*) · Plantpot Dapperling (*Leucocoprinus birnbaumii*) · Haw Goblet (*Monilinia johnsonii*) · Glue Crust (*Hydnoporia corrugata*) · Pale Stagshorn (*Calocera pallidospathulata*) · Dung-loving Deconica (*Deconica coprophila*)
 
 31 of its species carry an older name of one of ours (as iNaturalist files them), e.g. *Amanita gemmata* = Fly Agaric, *Armillaria lutea* = Bulbous Honey Fungus, *Clitocybe odora* = Aniseed Funnel. One of them looks different: the Jewelled Amanita (*Amanita gemmata*) counts as the Fly Agaric, because iNaturalist files it there; on a scan it shows as the Fly Agaric, a poisonous Amanita.
+
+## The group headline and "not sure" (MobileNetV2 (phone file))
+
+| | 1 photo | up to 3 photos |
+|---|---|---|
+| Group headline shown | 77.1% | 65.0% |
+| …right when shown | 91.3% | 95.5% |
+| "Not sure" shown | 44.8% | 59.4% |
+| …right species still on the list | 83.7% | 90.7% |
 
 ## Dangerous species, one by one (MobileNetV2 (phone file), up to three photos)
 

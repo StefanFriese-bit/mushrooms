@@ -1,8 +1,9 @@
 import type { ScanResult } from './rules';
 import type { Edibility } from '../types';
 
-// What the Scan screen shows for each species on the shortlist (spec 6.2): the English name (or the scientific name
-// when it has none), its page in the guide when there is one, its danger — the higher of the approved list's level
+// What the Scan screen shows for each species on the shortlist (spec 6.2): the English name — ours, or for a species
+// the guide does not cover the British Mycological Society's or iNaturalist's (content/model/df20-names.json) — or the
+// scientific name when it has none, its page in the guide when there is one, its danger — the higher of the approved list's level
 // and its page's edibility — and why it is there. No percentages and no word about eating.
 export type Danger = 'deadly' | 'poisonous' | null;
 export type ScanRow = {
@@ -19,14 +20,18 @@ const worse = (a: Danger, b: Danger): Danger => (a === 'deadly' || b === 'deadly
 const fromPage = (e: Edibility | undefined): Danger => (e === 'deadly' ? 'deadly' : e === 'poisonous' ? 'poisonous' : null);
 
 export function scanRows(r: ScanResult, english: Map<string, string>, pages: Map<string, Page>): ScanRow[] {
-  return r.items.map((i) => {
-    if (!i.ours) return { english: i.name, scientific: i.name, slug: null, inList: false, danger: null, forSafety: i.forSafety };
+  const rows = r.items.map((i) => {
+    if (!i.ours) return { english: english.get(i.name) ?? i.name, scientific: i.name, slug: null, inList: false, danger: null, forSafety: i.forSafety };
     const page = pages.get(i.ours);
     return {
       english: english.get(i.ours) ?? i.ours, scientific: i.ours, slug: page?.slug ?? null, inList: true,
       danger: worse(i.danger, fromPage(page?.edibility)), forSafety: i.forSafety,
     };
   });
+  // iNaturalist files a few of the model's species as one (both Russula undulata and R. depallens are its Purple
+  // Brittlegill): a species the guide does not cover is listed once under its English name.
+  const seen = new Set<string>();
+  return rows.filter((row) => row.inList || row.english === row.scientific || !seen.has(row.english) && !!seen.add(row.english));
 }
 
 /** The measured record, in words (rule 7), from the settings the test wrote — never typed by hand. */

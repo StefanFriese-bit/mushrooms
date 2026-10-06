@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from 'preact/hooks';
 import { ALL_SPECIES } from '../content';
 import { hrefFor } from '../router';
 import { bySlug } from '../species';
-import { combine, shortlist, type ClassInfo, type ScanResult } from '../scan/rules';
+import { combine, genusOf, shortlist, type ClassInfo, type ScanResult } from '../scan/rules';
 import { decode, loadEngine } from '../scan/engine';
 import { recordWords, scanRows, type ScanRow } from '../scan/rows';
 import { REPORT_URL, SETTINGS } from '../scan/settings';
@@ -17,6 +17,25 @@ const SLOTS = ['Top of the cap', 'Underneath', 'Base of the stem'] as const;
 const SEEN = 'scan-record-seen';
 const DANGER_WORDS = { deadly: 'Deadly', poisonous: 'Poisonous' } as const;
 const seen = () => { try { return localStorage.getItem(SEEN); } catch { return null; } };
+
+const pc = (x: number) => `${Math.round(x * 1000) / 10}%`;
+
+/** The group headline ("most likely one of the brittlegills") and the guide's species in that group. */
+function GroupLine({ genus, label, classes }: { genus: string; label?: string; classes: ClassInfo[] }) {
+  const named = new Set(classes.filter((c) => c.ours && genusOf(c.name) === genus).map((c) => c.ours as string));
+  const withClass = new Set(classes.filter((c) => c.ours).map((c) => c.ours as string));
+  const pages = ALL_SPECIES.filter((s) => named.has(s.scientific) || (!withClass.has(s.scientific) && genusOf(s.scientific) === genus));
+  const article = /^[AEIOU]/.test(genus) ? 'an' : 'a';
+  return (
+    <div class="card" data-test="scan-group">
+      <p><strong>{label ? `Most likely one of the ${label.toLowerCase()}` : `Most likely ${article} ${genus}`}</strong>
+        {label && <> (<i>{genus}</i>)</>}. In its test, the group named here was right {pc(SETTINGS.passed ? SETTINGS.record.groupRight : 0)} of the time.</p>
+      {pages.length > 0 ? (
+        <p>In the guide:{' '}{pages.map((s, i) => <span key={s.slug}>{i > 0 && ' · '}<a href={hrefFor({ name: 'species', slug: s.slug })}>{s.english}</a></span>)}</p>
+      ) : <p>None of this group is in the guide.</p>}
+    </div>
+  );
+}
 
 function Row({ r, first }: { r: ScanRow; first: boolean }) {
   const page = r.slug ? bySlug(ALL_SPECIES, r.slug) : undefined;
@@ -46,6 +65,8 @@ export function Scan() {
   const [result, setResult] = useState<ScanResult | null>(null);
   const [problem, setProblem] = useState<string | null>(null);
   const [english, setEnglish] = useState(new Map<string, string>());
+  const [groupNames, setGroupNames] = useState<Record<string, string>>({});
+  const [classes, setClasses] = useState<ClassInfo[]>([]);
   const [unknownDanger, setUnknownDanger] = useState<string[] | null>(null);
   const previews = useMemo(() => files.map((f) => (f ? URL.createObjectURL(f) : null)), [files]);
   // Is the model already stored on this phone (by the service worker), so the scan works with no signal?
@@ -55,7 +76,13 @@ export function Scan() {
     caches.match(`${import.meta.env.BASE_URL}${S.file}`, { ignoreSearch: true }).then((r) => setStored(!!r), () => setStored(null));
   }, []);
   useEffect(() => () => previews.forEach((u) => u && URL.revokeObjectURL(u)), [previews]);
-  useEffect(() => { speciesNames().then((n) => setEnglish(new Map(n.map((x) => [x.name, x.english])))); }, []);
+  // English names: the guide's own for its 300, the BMS's or iNaturalist's for every other species the model knows.
+  useEffect(() => {
+    Promise.all([speciesNames(), import('../../content/model/df20-names.json')]).then(([n, d]) => {
+      setEnglish(new Map([...Object.entries(d.default.classes as Record<string, string>), ...n.map((x) => [x.name, x.english] as const)]));
+      setGroupNames(d.default.groups as Record<string, string>);
+    });
+  }, []);
   useEffect(() => {
     if (ok || !S.passed) return;
     Promise.all([import('../../content/model/df20-classes.json'), import('../../content/species-list.json')]).then(([c, l]) => {
@@ -107,8 +134,9 @@ export function Scan() {
         const p = await decode(f);
         try { scores.push(await engine.score(p)); } finally { URL.revokeObjectURL(p.url); }
       }
-      const classes = (await import('../../content/model/df20-classes.json')).default.classes as ClassInfo[];
-      setResult(shortlist(combine(scores), classes, new Date().getMonth() + 1, S.thresholds));
+      const all = (await import('../../content/model/df20-classes.json')).default.classes as ClassInfo[];
+      setClasses(all);
+      setResult(shortlist(combine(scores), all, new Date().getMonth() + 1, S.thresholds));
     } catch {
       setProblem('The photo scan isn\'t available right now. Open the app once with a signal so it can store the scan, or use Identify.');
     } finally {
@@ -155,10 +183,12 @@ export function Scan() {
           {result.dangerous && (
             <p class="card verdict red" role="alert">A dangerous species is on this list. Do the checks before anything else.</p>
           )}
+          {result.group && <GroupLine genus={result.group.genus} label={groupNames[result.group.genus]} classes={classes} />}
           {result.notSure && (
-            <div class="card">
-              <p><strong>Not sure:</strong> the scan can't tell from these photos.</p>
-              <p><a href={hrefFor({ name: 'identify', query: '' })}>Identify it by questions instead</a></p>
+            <div class="card" data-test="not-sure">
+              <p><strong>Not certain which species.</strong> When it isn't certain, the right one is still on this list
+                {' '}{pc(S.record.onListNotSure)} of the time (in its test): compare yours with each, then use Check.</p>
+              <p><a href={hrefFor({ name: 'identify', query: '' })}>Or identify it by questions instead</a></p>
             </div>
           )}
           <h2>The shortlist</h2>

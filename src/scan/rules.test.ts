@@ -5,7 +5,7 @@ const ALL_YEAR = Array(12).fill(5);
 const JUL_DEC = [0, 0, 0, 0, 0, 0, 16, 71, 86, 207, 43, 4];
 const cls = (id: number, ours: string | null, danger: ClassInfo['danger'] = null, uk = true, months = ALL_YEAR): ClassInfo =>
   ({ id, name: ours ?? `other ${id}`, ours, danger, uk, months });
-const T = { safety: 0.05, notSure: 0.3, offSeason: 0.5 };
+const T = { safety: 0.05, notSure: 0.3, offSeason: 0.5, group: 0.6 };
 
 describe('combine', () => {
   it('averages the scores of up to three photos', () => {
@@ -64,5 +64,26 @@ describe('shortlist', () => {
   });
   it('refuses scores that do not fit the class list', () => {
     expect(() => shortlist([0.5], classes, 10, T)).toThrow();
+  });
+});
+
+describe('the group (genus) headline', () => {
+  const g = (id: number, name: string, ours: string | null = null, uk = true, months = ALL_YEAR): ClassInfo =>
+    ({ id, name, ours, danger: null, uk, months });
+  const classes = [g(0, 'Russula fellea'), g(1, 'Russula emetica', 'Russula emetica'), g(2, 'Russula fragilis'),
+    g(3, 'Lactarius blennius', 'Lactarius blennius'), g(4, 'Russula gone', null, false), g(5, 'Russula late', null, true, JUL_DEC)];
+  it('names the genus whose species together score highest, when at or above the group line', () => {
+    const r = shortlist([0.3, 0.2, 0.15, 0.3, 0, 0], classes, 10, T);
+    expect(r.group?.genus).toBe('Russula');
+    expect(r.group?.score).toBeCloseTo(0.65);
+    expect(r.items.slice(0, 2).map((i) => i.name)).toEqual(['Russula fellea', 'Lactarius blennius']); // the list is unchanged
+  });
+  it('gives no headline below the line', () => {
+    expect(shortlist([0.2, 0.2, 0.1, 0.3, 0, 0], classes, 10, T).group).toBeNull();
+  });
+  it('counts a genus only over UK species, with the season mark-down', () => {
+    expect(shortlist([0.2, 0.2, 0, 0.1, 0.9, 0], classes, 10, T).group).toBeNull(); // the non-UK class is not counted
+    expect(shortlist([0.15, 0.2, 0, 0, 0, 0.4], classes, 3, T).group).toBeNull(); // out of season: 0.4 counts as 0.2
+    expect(shortlist([0.15, 0.2, 0, 0, 0, 0.4], classes, 10, T).group?.genus).toBe('Russula');
   });
 });
