@@ -1,0 +1,170 @@
+{
+  "slug": "artist-s-bracket",
+  "inatId": 48473,
+  "scientific": "Ganoderma applanatum",
+  "english": "Artist's Bracket",
+  "olderNames": [
+    "Fomes applanatus",
+    "Polyporus applanatus",
+    "Ganoderma lipsiense"
+  ],
+  "edibility": {
+    "value": "not-edible",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "edibilityNote": null,
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "A large, flat, hard bracket, 3–50 cm, brown and lumpy on top, with a thin white edge while growing.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "Underneath: creamy-white pores that turn brown when scratched — people draw on them, hence the name.",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    {
+      "value": "On dying and dead broadleaved trunks and stumps, especially beech and oak.",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "Dying and dead standing or fallen trunks and stumps of broadleaved trees, especially beech and oak; rarely conifers.",
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "sporePrint": {
+    "value": "Brown",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "pores",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    "ring": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "growsOn": {
+      "value": "wood",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "capCm": {
+      "value": [
+        3,
+        50
+      ],
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "fleshChange": {
+      "value": "Tough, cinnamon to dark brown",
+      "sources": [
+        "wf"
+      ]
+    },
+    "smell": {
+      "value": "Mushroomy, or somewhat sweet",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    }
+  },
+  "lookalikes": [],
+  "noDangerousLookalike": null,
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Ganoderma applanatum, Artist's Bracket",
+      "url": "https://www.first-nature.com/fungi/ganoderma-applanatum.php"
+    },
+    {
+      "id": "wf",
+      "title": "Wild Food UK — Artist's Bracket",
+      "url": "https://www.wildfooduk.com/mushroom-guide/artists-bracket/"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Ganoderma applanatum",
+      "url": "https://en.wikipedia.org/wiki/Ganoderma_applanatum"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}

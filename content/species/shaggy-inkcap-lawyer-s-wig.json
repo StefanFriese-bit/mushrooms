@@ -186,6 +186,37 @@
           ]
         }
       ]
+    },
+    {
+      "scientific": "Coprinopsis atramentaria",
+      "english": "Common Inkcap",
+      "slug": "common-inkcap",
+      "kind": "poisonous",
+      "tellApart": [
+        {
+          "feature": "Cap",
+          "thisOne": "White, covered in shaggy white to pale brown scales; tall, like a lawyer's wig",
+          "thatOne": "Smooth, grey to grey-brown; bell-shaped and furrowed",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "fn-ci",
+            "wf-ci",
+            "wp-ci"
+          ]
+        },
+        {
+          "feature": "With alcohol",
+          "thisOne": "No reaction with alcohol",
+          "thatOne": "Poisonous with alcohol",
+          "sources": [
+            "wp",
+            "fn-ci",
+            "wp-ci"
+          ]
+        }
+      ]
     }
   ],
   "noDangerousLookalike": null,
@@ -249,6 +280,21 @@
       "id": "wp-mi",
       "title": "Wikipedia — Coprinopsis picacea",
       "url": "https://en.wikipedia.org/wiki/Coprinopsis_picacea"
+    },
+    {
+      "id": "fn-ci",
+      "title": "First Nature — Coprinopsis atramentaria, Common Inkcap",
+      "url": "https://www.first-nature.com/fungi/coprinopsis-atramentaria.php"
+    },
+    {
+      "id": "wf-ci",
+      "title": "Wild Food UK — Common Inkcap",
+      "url": "https://www.wildfooduk.com/mushroom-guide/common-inkcap/"
+    },
+    {
+      "id": "wp-ci",
+      "title": "Wikipedia — Coprinopsis atramentaria",
+      "url": "https://en.wikipedia.org/wiki/Coprinopsis_atramentaria"
     },
     {
       "id": "wf-prot",

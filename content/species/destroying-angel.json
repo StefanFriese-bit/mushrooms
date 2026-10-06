@@ -374,6 +374,48 @@
           ]
         }
       ]
+    },
+    {
+      "scientific": "Volvopluteus gloiocephalus",
+      "english": "Stubble Rosegill",
+      "slug": "stubble-rosegill",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Ring",
+          "thisOne": "A fragile ring, often lost",
+          "thatOne": "None",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-sr",
+            "wf-sr"
+          ]
+        },
+        {
+          "feature": "Spore print",
+          "thisOne": "White",
+          "thatOne": "Pink",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-sr",
+            "wf-sr",
+            "wp-sr"
+          ]
+        },
+        {
+          "feature": "Gills",
+          "thisOne": "Pure white, staying white",
+          "thatOne": "White, turning pink",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-sr",
+            "wf-sr"
+          ]
+        }
+      ]
     }
   ],
   "noDangerousLookalike": null,
@@ -492,6 +534,21 @@
       "id": "wf-fd",
       "title": "Wild Food UK — False Death-cap",
       "url": "https://www.wildfooduk.com/mushroom-guide/false-death-cap/"
+    },
+    {
+      "id": "fn-sr",
+      "title": "First Nature — Volvopluteus gloiocephalus, Stubble Rosegill",
+      "url": "https://www.first-nature.com/fungi/volvopluteus-gloiocephalus.php"
+    },
+    {
+      "id": "wf-sr",
+      "title": "Wild Food UK — Stubble Rosegill",
+      "url": "https://www.wildfooduk.com/mushroom-guide/stubble-rosegill/"
+    },
+    {
+      "id": "wp-sr",
+      "title": "Wikipedia — Volvopluteus gloiocephalus",
+      "url": "https://en.wikipedia.org/wiki/Volvopluteus_gloiocephalus"
     },
     {
       "id": "wf-prot",

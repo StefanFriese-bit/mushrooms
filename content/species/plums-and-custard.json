@@ -1,0 +1,176 @@
+{
+  "slug": "plums-and-custard",
+  "inatId": 63387,
+  "scientific": "Tricholomopsis rutilans",
+  "english": "Plums and Custard",
+  "olderNames": [
+    "Tricholoma rutilans"
+  ],
+  "edibility": {
+    "value": "not-edible",
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "edibilityNote": {
+    "value": "Bitter; Wikipedia notes that older books call it edible after boiling, but poor.",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "Egg-yolk yellow cap, 4–12 cm, covered in tiny purple-red scales.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "Gills egg-yolk yellow and crowded; white spore print.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "Stem yellow, covered in purple-red scales.",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    {
+      "value": "On rotting conifer stumps and fallen trunks.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "On rotting conifer stumps, roots and fallen trunks, especially pine and spruce; rarely broadleaved stumps.",
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "sporePrint": {
+    "value": "White",
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "gills",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    "ring": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "growsOn": {
+      "value": "wood",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "capCm": {
+      "value": [
+        4,
+        12
+      ],
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "fleshChange": {
+      "value": "Pale yellow",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "smell": {
+      "value": "Of rotting pinewood",
+      "sources": [
+        "fn"
+      ]
+    }
+  },
+  "lookalikes": [],
+  "noDangerousLookalike": null,
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Tricholomopsis rutilans, Plums and Custard",
+      "url": "https://www.first-nature.com/fungi/tricholomopsis-rutilans.php"
+    },
+    {
+      "id": "wf",
+      "title": "Wild Food UK — Plums and Custard",
+      "url": "https://www.wildfooduk.com/mushroom-guide/plums-and-custard/"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Tricholomopsis rutilans",
+      "url": "https://en.wikipedia.org/wiki/Tricholomopsis_rutilans"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}

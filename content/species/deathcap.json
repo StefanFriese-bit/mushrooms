@@ -414,6 +414,37 @@
           ]
         }
       ]
+    },
+    {
+      "scientific": "Volvopluteus gloiocephalus",
+      "english": "Stubble Rosegill",
+      "slug": "stubble-rosegill",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Spore print",
+          "thisOne": "White",
+          "thatOne": "Pink",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-sr",
+            "wf-sr",
+            "wp-sr"
+          ]
+        },
+        {
+          "feature": "Gills",
+          "thisOne": "White, then cream (at most faintly pink) — never brown",
+          "thatOne": "White, turning pink",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-sr",
+            "wf-sr"
+          ]
+        }
+      ]
     }
   ],
   "noDangerousLookalike": null,
@@ -557,6 +588,21 @@
       "id": "wf-sp",
       "title": "Wild Food UK — Stump Puffball",
       "url": "https://www.wildfooduk.com/mushroom-guide/stump-puffball/"
+    },
+    {
+      "id": "fn-sr",
+      "title": "First Nature — Volvopluteus gloiocephalus, Stubble Rosegill",
+      "url": "https://www.first-nature.com/fungi/volvopluteus-gloiocephalus.php"
+    },
+    {
+      "id": "wf-sr",
+      "title": "Wild Food UK — Stubble Rosegill",
+      "url": "https://www.wildfooduk.com/mushroom-guide/stubble-rosegill/"
+    },
+    {
+      "id": "wp-sr",
+      "title": "Wikipedia — Volvopluteus gloiocephalus",
+      "url": "https://en.wikipedia.org/wiki/Volvopluteus_gloiocephalus"
     },
     {
       "id": "wf-prot",
