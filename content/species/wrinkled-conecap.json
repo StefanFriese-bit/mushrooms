@@ -1,0 +1,178 @@
+{
+  "slug": "wrinkled-conecap",
+  "inatId": 877494,
+  "scientific": "Pholiotina rugosa",
+  "english": "Wrinkled Conecap",
+  "olderNames": [
+    "Conocybe rugosa",
+    "Conocybe filaris"
+  ],
+  "edibility": {
+    "value": "deadly",
+    "sources": [
+      "wp",
+      "wf-poison"
+    ]
+  },
+  "edibilityNote": {
+    "value": "Contains amatoxins (alpha-amanitin), the Deathcap's poison, which destroys the liver.",
+    "sources": [
+      "wp",
+      "wf-poison"
+    ]
+  },
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "Small tawny to caramel-brown cap, 1–3 cm, conical then bell-shaped, fading to buff when dry.",
+      "sources": [
+        "fn",
+        "wf-poison",
+        "wp"
+      ]
+    },
+    {
+      "value": "A clear white ring on a thin, fragile stem; the ring is often dusted rusty brown with spores.",
+      "sources": [
+        "fn",
+        "wf-poison",
+        "wp"
+      ]
+    },
+    {
+      "value": "Gills pale buff turning rusty brown; rusty-brown spore print.",
+      "sources": [
+        "fn",
+        "wf-poison",
+        "wp"
+      ]
+    },
+    {
+      "value": "On woodchip, compost, sawdust and leaf litter — often in gardens and flowerbeds.",
+      "sources": [
+        "fn",
+        "wf-poison",
+        "wp"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "On woodchip mulch, garden compost, sawdust, flowerbeds and leaf litter; also mossy woodland floors.",
+    "sources": [
+      "fn",
+      "wf-poison",
+      "wp"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      7,
+      8,
+      9,
+      10
+    ],
+    "sources": [
+      "fn",
+      "wf-poison"
+    ]
+  },
+  "sporePrint": {
+    "value": "Rusty to yellow-brown",
+    "sources": [
+      "fn",
+      "wf-poison",
+      "wp"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "gills",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "ring": {
+      "value": "yes",
+      "sources": [
+        "fn",
+        "wp",
+        "wf-poison"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wf-poison"
+      ]
+    },
+    "growsOn": {
+      "value": "ground",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "capCm": {
+      "value": [
+        1,
+        3
+      ],
+      "sources": [
+        "fn",
+        "wp",
+        "wf-poison"
+      ]
+    },
+    "fleshChange": {
+      "value": "Thin; no colour change when cut is described",
+      "sources": [
+        "wf-poison"
+      ]
+    },
+    "smell": {
+      "value": "Not distinctive",
+      "sources": [
+        "fn"
+      ]
+    }
+  },
+  "lookalikes": [],
+  "noDangerousLookalike": null,
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Pholiotina rugosa, Wrinkled Conecap",
+      "url": "https://www.first-nature.com/fungi/conocybe-rugosa.php"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Pholiotina rugosa",
+      "url": "https://en.wikipedia.org/wiki/Pholiotina_rugosa"
+    },
+    {
+      "id": "wf-poison",
+      "title": "Wild Food UK — The most poisonous UK fungi, part 1",
+      "url": "https://www.wildfooduk.com/articles/the-most-poisonous-uk-fungi-part-1/"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}
