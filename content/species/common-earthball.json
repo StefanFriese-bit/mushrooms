@@ -212,6 +212,25 @@
           ]
         }
       ]
+    },
+    {
+      "scientific": "Phallus impudicus",
+      "english": "Stinkhorn",
+      "slug": "stinkhorn",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Inside (cut it in half)",
+          "thisOne": "Firm, purple-black with white veins",
+          "thatOne": "Jelly, with the white stem and dark cap forming in it",
+          "sources": [
+            "fn",
+            "wf",
+            "wf-sh",
+            "wp-sh"
+          ]
+        }
+      ]
     }
   ],
   "noDangerousLookalike": null,
@@ -280,6 +299,16 @@
       "id": "wp-cp",
       "title": "Wikipedia — Lycoperdon perlatum",
       "url": "https://en.wikipedia.org/wiki/Lycoperdon_perlatum"
+    },
+    {
+      "id": "wf-sh",
+      "title": "Wild Food UK — Stinkhorn",
+      "url": "https://www.wildfooduk.com/mushroom-guide/stinkhorn/"
+    },
+    {
+      "id": "wp-sh",
+      "title": "Wikipedia — Phallus impudicus",
+      "url": "https://en.wikipedia.org/wiki/Phallus_impudicus"
     },
     {
       "id": "wf-prot",

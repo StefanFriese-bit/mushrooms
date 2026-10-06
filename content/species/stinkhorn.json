@@ -1,0 +1,305 @@
+{
+  "slug": "stinkhorn",
+  "inatId": 54594,
+  "scientific": "Phallus impudicus",
+  "english": "Stinkhorn",
+  "olderNames": [],
+  "edibility": {
+    "value": "edible-cooked",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "edibilityNote": {
+    "value": "Only the young 'egg' is eaten; the grown fungus stinks. An egg can be mistaken for a deadly Amanita's egg or a poisonous earthball: cut it in half.",
+    "sources": [
+      "wf",
+      "wp",
+      "fn"
+    ]
+  },
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "A tall white spongy stem, 15–25 cm, topped by a honeycombed cap coated in olive-black slime.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp",
+        "wt"
+      ]
+    },
+    {
+      "value": "A strong, foul smell that carries a long way; flies eat the slime.",
+      "sources": [
+        "fn",
+        "wf",
+        "wt"
+      ]
+    },
+    {
+      "value": "It starts as a white 'egg', 4–8 cm across, half buried, full of jelly.",
+      "sources": [
+        "fn",
+        "wp",
+        "wf"
+      ]
+    },
+    {
+      "value": "Near rotting stumps and wood, in all kinds of woodland.",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "Woodland of all kinds, especially conifers, always near rotting wood.",
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "sporePrint": {
+    "value": "Pale yellow spores, held in the olive slime (no print can be made)",
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "other",
+      "sources": [
+        "wf",
+        "wp"
+      ]
+    },
+    "ring": {
+      "value": "no",
+      "sources": [
+        "wp",
+        "fn"
+      ]
+    },
+    "bagAtBase": {
+      "value": "yes",
+      "sources": [
+        "wp",
+        "fn"
+      ]
+    },
+    "growsOn": {
+      "value": "ground",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "capCm": {
+      "value": [
+        2.5,
+        8
+      ],
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "fleshChange": {
+      "value": "Stem like white polystyrene; jelly inside the egg",
+      "sources": [
+        "wf",
+        "fn"
+      ]
+    },
+    "smell": {
+      "value": "Foul and strong once grown",
+      "sources": [
+        "fn",
+        "wf",
+        "wt"
+      ]
+    }
+  },
+  "lookalikes": [
+    {
+      "scientific": "Amanita phalloides",
+      "english": "Deathcap",
+      "slug": "deathcap",
+      "kind": "deadly",
+      "tellApart": [
+        {
+          "feature": "Inside the egg (cut it in half)",
+          "thisOne": "A layer of clear jelly around the folded shape of the stem and cap",
+          "thatOne": "A small mushroom shape — cap, gills and stem — with no jelly round it",
+          "sources": [
+            "wf",
+            "wp",
+            "fn-dc"
+          ]
+        }
+      ]
+    },
+    {
+      "scientific": "Scleroderma citrinum",
+      "english": "Common Earthball",
+      "slug": "common-earthball",
+      "kind": "poisonous",
+      "tellApart": [
+        {
+          "feature": "Inside (cut it in half)",
+          "thisOne": "Jelly, with the white stem and dark cap forming in it",
+          "thatOne": "Firm, purple-black with white veins",
+          "sources": [
+            "wf",
+            "wp",
+            "fn-ce",
+            "wf-ce"
+          ]
+        }
+      ]
+    },
+    {
+      "scientific": "Gyromitra esculenta",
+      "english": "False Morel",
+      "slug": "false-morel",
+      "kind": "deadly",
+      "tellApart": [
+        {
+          "feature": "Smell",
+          "thisOne": "Foul and strong once grown",
+          "thatOne": "Not distinctive, or slightly sweet",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-fm",
+            "wf-fm"
+          ]
+        },
+        {
+          "feature": "Cap",
+          "thisOne": "Honeycombed, coated in olive slime, on a white spongy stem",
+          "thatOne": "Brain-like folds, reddish-brown",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-fm",
+            "wf-fm"
+          ]
+        }
+      ]
+    }
+  ],
+  "noDangerousLookalike": null,
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Phallus impudicus, Stinkhorn",
+      "url": "https://www.first-nature.com/fungi/phallus-impudicus.php"
+    },
+    {
+      "id": "wf",
+      "title": "Wild Food UK — Stinkhorn",
+      "url": "https://www.wildfooduk.com/mushroom-guide/stinkhorn/"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Phallus impudicus",
+      "url": "https://en.wikipedia.org/wiki/Phallus_impudicus"
+    },
+    {
+      "id": "wt",
+      "title": "Woodland Trust — Stinkhorn",
+      "url": "https://www.woodlandtrust.org.uk/trees-woods-and-wildlife/fungi-and-lichens/stinkhorn/"
+    },
+    {
+      "id": "fn-dc",
+      "title": "First Nature — Amanita phalloides, Deathcap",
+      "url": "https://www.first-nature.com/fungi/amanita-phalloides.php"
+    },
+    {
+      "id": "wf-dc",
+      "title": "Wild Food UK — Deathcap",
+      "url": "https://www.wildfooduk.com/mushroom-guide/deathcap/"
+    },
+    {
+      "id": "wp-dc",
+      "title": "Wikipedia — Amanita phalloides",
+      "url": "https://en.wikipedia.org/wiki/Amanita_phalloides"
+    },
+    {
+      "id": "wt-dc",
+      "title": "Woodland Trust — Deathcap",
+      "url": "https://www.woodlandtrust.org.uk/trees-woods-and-wildlife/fungi-and-lichens/deathcap/"
+    },
+    {
+      "id": "fn-ce",
+      "title": "First Nature — Scleroderma citrinum, Common Earthball",
+      "url": "https://www.first-nature.com/fungi/scleroderma-citrinum.php"
+    },
+    {
+      "id": "wf-ce",
+      "title": "Wild Food UK — Common Earthball",
+      "url": "https://www.wildfooduk.com/mushroom-guide/common-earth-ball/"
+    },
+    {
+      "id": "wp-ce",
+      "title": "Wikipedia — Scleroderma citrinum",
+      "url": "https://en.wikipedia.org/wiki/Scleroderma_citrinum"
+    },
+    {
+      "id": "wt-ce",
+      "title": "Woodland Trust — Common Earthball",
+      "url": "https://www.woodlandtrust.org.uk/trees-woods-and-wildlife/fungi-and-lichens/common-earthball/"
+    },
+    {
+      "id": "fn-fm",
+      "title": "First Nature — Gyromitra esculenta, False Morel",
+      "url": "https://www.first-nature.com/fungi/gyromitra-esculenta.php"
+    },
+    {
+      "id": "wf-fm",
+      "title": "Wild Food UK — False Morel",
+      "url": "https://www.wildfooduk.com/mushroom-guide/false-morel/"
+    },
+    {
+      "id": "wp-fm",
+      "title": "Wikipedia — Gyromitra esculenta",
+      "url": "https://en.wikipedia.org/wiki/Gyromitra_esculenta"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}

@@ -349,6 +349,53 @@
           ]
         }
       ]
+    },
+    {
+      "scientific": "Phallus impudicus",
+      "english": "Stinkhorn",
+      "slug": "stinkhorn",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Inside the egg (cut it in half)",
+          "thisOne": "A small mushroom shape — cap, gills and stem — with no jelly round it",
+          "thatOne": "A layer of clear jelly around the folded shape of the stem and cap",
+          "sources": [
+            "fn",
+            "wf-sh",
+            "wp-sh"
+          ]
+        }
+      ]
+    },
+    {
+      "scientific": "Amanita citrina",
+      "english": "False Death-cap",
+      "slug": "false-death-cap",
+      "kind": "poisonous",
+      "tellApart": [
+        {
+          "feature": "Stem base",
+          "thisOne": "Swollen base in a white, bag-like volva",
+          "thatOne": "A big round bulb; the bag clings to it, leaving a sharp rim",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-fd"
+          ]
+        },
+        {
+          "feature": "Smell",
+          "thisOne": "None to faint when young; sickly-sweet when old",
+          "thatOne": "Of raw potato",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-fd",
+            "wf-fd"
+          ]
+        }
+      ]
     }
   ],
   "noDangerousLookalike": null,
@@ -462,6 +509,26 @@
       "id": "wp-cp",
       "title": "Wikipedia — Lycoperdon perlatum",
       "url": "https://en.wikipedia.org/wiki/Lycoperdon_perlatum"
+    },
+    {
+      "id": "wf-sh",
+      "title": "Wild Food UK — Stinkhorn",
+      "url": "https://www.wildfooduk.com/mushroom-guide/stinkhorn/"
+    },
+    {
+      "id": "wp-sh",
+      "title": "Wikipedia — Phallus impudicus",
+      "url": "https://en.wikipedia.org/wiki/Phallus_impudicus"
+    },
+    {
+      "id": "fn-fd",
+      "title": "First Nature — Amanita citrina, False Death-cap",
+      "url": "https://www.first-nature.com/fungi/amanita-citrina.php"
+    },
+    {
+      "id": "wf-fd",
+      "title": "Wild Food UK — False Death-cap",
+      "url": "https://www.wildfooduk.com/mushroom-guide/false-death-cap/"
     },
     {
       "id": "wf-prot",

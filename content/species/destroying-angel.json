@@ -355,6 +355,25 @@
           ]
         }
       ]
+    },
+    {
+      "scientific": "Amanita citrina",
+      "english": "False Death-cap",
+      "slug": "false-death-cap",
+      "kind": "poisonous",
+      "tellApart": [
+        {
+          "feature": "Smell",
+          "thisOne": "Faint: radish when young, sickly-sweet when old",
+          "thatOne": "Of raw potato",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-fd",
+            "wf-fd"
+          ]
+        }
+      ]
     }
   ],
   "noDangerousLookalike": null,
@@ -463,6 +482,16 @@
       "id": "wp-sw",
       "title": "Wikipedia — Cuphophyllus virgineus",
       "url": "https://en.wikipedia.org/wiki/Cuphophyllus_virgineus"
+    },
+    {
+      "id": "fn-fd",
+      "title": "First Nature — Amanita citrina, False Death-cap",
+      "url": "https://www.first-nature.com/fungi/amanita-citrina.php"
+    },
+    {
+      "id": "wf-fd",
+      "title": "Wild Food UK — False Death-cap",
+      "url": "https://www.wildfooduk.com/mushroom-guide/false-death-cap/"
     },
     {
       "id": "wf-prot",

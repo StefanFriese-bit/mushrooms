@@ -1,0 +1,263 @@
+{
+  "slug": "false-death-cap",
+  "inatId": 63271,
+  "scientific": "Amanita citrina",
+  "english": "False Death-cap",
+  "olderNames": [],
+  "edibility": {
+    "value": "poisonous",
+    "sources": [
+      "wp",
+      "fn"
+    ]
+  },
+  "edibilityNote": {
+    "value": "It contains a little of the Deathcap's toxin and tastes vile; its real danger is that it looks like the Deathcap and Destroying Angel.",
+    "sources": [
+      "fn",
+      "wp",
+      "wf"
+    ]
+  },
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "Pale lemon-yellow or white cap, 4–12 cm, with white patches of veil.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "Gills white, free and crowded; white spore print.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "A large hanging ring, and a big round bulb at the base with a sharp rim.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "Smells of raw potato.",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "Broadleaved and mixed woods, especially under beech; also conifers.",
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "sporePrint": {
+    "value": "White",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "gills",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    "ring": {
+      "value": "yes",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    "bagAtBase": {
+      "value": "yes",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    "growsOn": {
+      "value": "ground",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "capCm": {
+      "value": [
+        4,
+        12
+      ],
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "fleshChange": {
+      "value": "White; no colour change when cut is described",
+      "sources": [
+        "wf"
+      ]
+    },
+    "smell": {
+      "value": "Of raw potato",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    }
+  },
+  "lookalikes": [
+    {
+      "scientific": "Amanita phalloides",
+      "english": "Deathcap",
+      "slug": "deathcap",
+      "kind": "deadly",
+      "tellApart": [
+        {
+          "feature": "Stem base",
+          "thisOne": "A big round bulb; the bag clings to it, leaving a sharp rim",
+          "thatOne": "Swollen base in a white, bag-like volva",
+          "sources": [
+            "fn",
+            "fn-dc",
+            "wf-dc"
+          ]
+        },
+        {
+          "feature": "Smell",
+          "thisOne": "Of raw potato",
+          "thatOne": "None to faint when young; sickly-sweet when old",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-dc",
+            "wf-dc"
+          ]
+        }
+      ]
+    },
+    {
+      "scientific": "Amanita virosa",
+      "english": "Destroying Angel",
+      "slug": "destroying-angel",
+      "kind": "deadly",
+      "tellApart": [
+        {
+          "feature": "Smell",
+          "thisOne": "Of raw potato",
+          "thatOne": "Faint: radish when young, sickly-sweet when old",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-da",
+            "wp-da"
+          ]
+        }
+      ]
+    }
+  ],
+  "noDangerousLookalike": null,
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Amanita citrina, False Death-cap",
+      "url": "https://www.first-nature.com/fungi/amanita-citrina.php"
+    },
+    {
+      "id": "wf",
+      "title": "Wild Food UK — False Death-cap",
+      "url": "https://www.wildfooduk.com/mushroom-guide/false-death-cap/"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Amanita citrina",
+      "url": "https://en.wikipedia.org/wiki/Amanita_citrina"
+    },
+    {
+      "id": "fn-dc",
+      "title": "First Nature — Amanita phalloides, Deathcap",
+      "url": "https://www.first-nature.com/fungi/amanita-phalloides.php"
+    },
+    {
+      "id": "wf-dc",
+      "title": "Wild Food UK — Deathcap",
+      "url": "https://www.wildfooduk.com/mushroom-guide/deathcap/"
+    },
+    {
+      "id": "wp-dc",
+      "title": "Wikipedia — Amanita phalloides",
+      "url": "https://en.wikipedia.org/wiki/Amanita_phalloides"
+    },
+    {
+      "id": "wt-dc",
+      "title": "Woodland Trust — Deathcap",
+      "url": "https://www.woodlandtrust.org.uk/trees-woods-and-wildlife/fungi-and-lichens/deathcap/"
+    },
+    {
+      "id": "fn-da",
+      "title": "First Nature — Amanita virosa, Destroying Angel",
+      "url": "https://www.first-nature.com/fungi/amanita-virosa.php"
+    },
+    {
+      "id": "wf-da",
+      "title": "Wild Food UK — Destroying Angel",
+      "url": "https://www.wildfooduk.com/mushroom-guide/destroying-angel/"
+    },
+    {
+      "id": "wp-da",
+      "title": "Wikipedia — Amanita virosa",
+      "url": "https://en.wikipedia.org/wiki/Amanita_virosa"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}

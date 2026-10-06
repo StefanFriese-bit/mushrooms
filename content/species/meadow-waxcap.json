@@ -1,0 +1,171 @@
+{
+  "slug": "meadow-waxcap",
+  "inatId": 361641,
+  "scientific": "Cuphophyllus pratensis",
+  "english": "Meadow Waxcap",
+  "olderNames": [
+    "Hygrophorus pratensis",
+    "Hygrocybe pratensis",
+    "Camarophyllus pratensis"
+  ],
+  "edibility": {
+    "value": "edible-cooked",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "edibilityNote": {
+    "value": "Edible and sold in some countries, but most mycologists would rather waxcaps were left alone: their grasslands are declining.",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "Pale apricot to orange-buff cap, 2–7 cm, dry and smooth, often with a broad hump.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    {
+      "value": "Thick, widely spaced gills running far down the stem.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    {
+      "value": "Stout stem, pale at first, later the colour of the cap; no ring.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    {
+      "value": "In old, unfertilised grassland and sheep-grazed pasture.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "Old, unfertilised short grassland, lawns and sheep-grazed pastures.",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "sources": [
+      "fn"
+    ]
+  },
+  "sporePrint": {
+    "value": "White",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "gills",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "ring": {
+      "value": "no",
+      "sources": [
+        "wp",
+        "fn"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "growsOn": {
+      "value": "ground",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "capCm": {
+      "value": [
+        2,
+        6
+      ],
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "fleshChange": {
+      "value": "White, turning pinkish buff with age",
+      "sources": [
+        "fn"
+      ]
+    },
+    "smell": {
+      "value": "Not distinctive",
+      "sources": [
+        "fn"
+      ]
+    }
+  },
+  "lookalikes": [],
+  "noDangerousLookalike": {
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Cuphophyllus pratensis, Meadow Waxcap",
+      "url": "https://www.first-nature.com/fungi/cuphophyllus-pratensis.php"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Cuphophyllus pratensis",
+      "url": "https://en.wikipedia.org/wiki/Cuphophyllus_pratensis"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}
