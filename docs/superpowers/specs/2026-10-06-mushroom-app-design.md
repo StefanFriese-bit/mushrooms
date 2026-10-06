@@ -318,6 +318,11 @@ weekly allowance, so he is asked first.
 - **Stage 2:** that the model runs in Safari on his iPhone in about 3 seconds per scan; that persistent storage is
   granted on his phone; that viewed map areas show offline; what deleting the home-screen icon does to the data;
   that the share sheet hands photos to the iNaturalist app.
+  *Proven 06/10/2026 (the test version, stage 2a):* published at stefanfriese-bit.github.io/mushrooms only after
+  every check passed on GitHub (type check, 80 tests, content check, build, browser tests in Safari's engine at
+  iPhone size and in Chromium). On Stefan's iPhone it installs from Safari's Add to Home Screen and opens and works
+  with Airplane Mode on. Not read yet: whether persistent storage is granted (About shows it; it matters once
+  finds are kept). Not tested yet, on purpose: deleting the icon (only once he has nothing to lose).
 - **Stage 3:** which of the 300 the model knows; whether any candidate passes the pass mark.
 
 ## 15. Not in this design
