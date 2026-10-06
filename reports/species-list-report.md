@@ -1,13 +1,13 @@
 # Species list: build report
 
-Generated: 2026-10-06T10:57:45.531Z · Target: 300 · Picked: 300
+Generated: 2026-10-06T11:14:49.436Z · Target: 300 · Picked: 300
 
 ## Where they come from
-- Deadly: 19
-- Dangerous lookalikes: 9
-- Edible: 33
+- Deadly: 17
+- Dangerous lookalikes: 11
+- Edible: 38
 - Added by Stefan: 0
-- Most recorded in the UK: 239
+- Most recorded in the UK: 234
 
 ## Groups
 - Agaricomycetes (class, iNaturalist 50814): 1481 UK species, 1480 kept

@@ -239,6 +239,41 @@
         "https://www.wildfooduk.com/mushroom-guide/the-miller/",
         "https://en.wikipedia.org/wiki/Clitopilus_prunulus"
       ]
+    },
+    {
+      "name": "Chlorophyllum rhacodes",
+      "sources": [
+        "https://www.wildfooduk.com/mushroom-guide/shaggy-parasol/",
+        "https://www.woodlandtrust.org.uk/trees-woods-and-wildlife/fungi-and-lichens/shaggy-parasol/"
+      ]
+    },
+    {
+      "name": "Armillaria mellea",
+      "sources": [
+        "https://www.wildfooduk.com/mushroom-guide/honey-fungus/",
+        "https://en.wikipedia.org/wiki/Armillaria_mellea"
+      ]
+    },
+    {
+      "name": "Agaricus augustus",
+      "sources": [
+        "https://www.first-nature.com/fungi/agaricus-augustus.php",
+        "https://www.wildfooduk.com/mushroom-guide/prince/"
+      ]
+    },
+    {
+      "name": "Craterellus tubaeformis",
+      "sources": [
+        "https://www.first-nature.com/fungi/cantharellus-tubaeformis.php",
+        "https://www.wildfooduk.com/mushroom-guide/winter-chanterelle/"
+      ]
+    },
+    {
+      "name": "Russula cyanoxantha",
+      "sources": [
+        "https://www.first-nature.com/fungi/russula-cyanoxantha.php",
+        "https://www.wildfooduk.com/mushroom-guide/charcoal-burner-3/"
+      ]
     }
   ],
   "dangerous": [
@@ -256,14 +291,6 @@
       "sources": [
         "https://www.first-nature.com/fungi/amanita-virosa.php",
         "https://www.wildfooduk.com/mushroom-guide/destroying-angel/"
-      ]
-    },
-    {
-      "name": "Amanita pantherina",
-      "level": "deadly",
-      "sources": [
-        "https://www.first-nature.com/fungi/amanita-pantherina.php",
-        "https://www.wildfooduk.com/mushroom-guide/panther-cap/"
       ]
     },
     {
@@ -312,14 +339,6 @@
       "sources": [
         "https://www.first-nature.com/fungi/inocybe-erubescens.php",
         "https://www.wildfooduk.com/mushroom-guide/deadly-fibrecap/"
-      ]
-    },
-    {
-      "name": "Inocybe geophylla",
-      "level": "deadly",
-      "sources": [
-        "https://www.first-nature.com/fungi/inocybe-geophylla.php",
-        "https://www.wildfooduk.com/mushroom-guide/inocybe-geophylla/"
       ]
     },
     {
@@ -395,19 +414,19 @@
       ]
     },
     {
+      "name": "Amanita pantherina",
+      "level": "poisonous",
+      "sources": [
+        "https://www.first-nature.com/fungi/amanita-pantherina.php",
+        "https://www.wildfooduk.com/mushroom-guide/panther-cap/"
+      ]
+    },
+    {
       "name": "Lepiota cristata",
       "level": "poisonous",
       "sources": [
         "https://www.first-nature.com/fungi/lepiota-cristata.php",
         "https://www.wildfooduk.com/mushroom-guide/stinking-dapperling/"
-      ]
-    },
-    {
-      "name": "Chlorophyllum rhacodes",
-      "level": "poisonous",
-      "sources": [
-        "https://www.first-nature.com/fungi/chlorophyllum-rhacodes.php",
-        "https://www.wildfooduk.com/mushroom-guide/shaggy-parasol/"
       ]
     },
     {
@@ -465,6 +484,22 @@
         "https://www.first-nature.com/fungi/lactarius-torminosus.php",
         "https://www.wildfooduk.com/mushroom-guide/wooly-milk-cap/"
       ]
+    },
+    {
+      "name": "Agaricus moelleri",
+      "level": "poisonous",
+      "sources": [
+        "https://www.first-nature.com/fungi/agaricus-moelleri.php",
+        "https://www.wildfooduk.com/mushroom-guide/inky-mushroom/"
+      ]
+    },
+    {
+      "name": "Russula emetica",
+      "level": "poisonous",
+      "sources": [
+        "https://www.first-nature.com/fungi/russula-emetica.php",
+        "https://www.wildfooduk.com/mushroom-guide/sickener/"
+      ]
     }
   ],
   "pairs": [
@@ -506,14 +541,6 @@
       "sources": [
         "https://www.first-nature.com/fungi/agaricus-sylvicola.php",
         "https://www.wildfooduk.com/mushroom-guide/wood-mushroom/"
-      ]
-    },
-    {
-      "edible": "Macrolepiota procera",
-      "dangerous": "Chlorophyllum rhacodes",
-      "sources": [
-        "https://www.first-nature.com/fungi/macrolepiota-procera.php",
-        "https://www.wildfooduk.com/mushroom-guide/parasol/"
       ]
     },
     {
@@ -698,6 +725,62 @@
       "sources": [
         "https://www.wildfooduk.com/mushroom-guide/the-miller/",
         "https://en.wikipedia.org/wiki/Clitopilus_prunulus"
+      ]
+    },
+    {
+      "edible": "Chlorophyllum rhacodes",
+      "dangerous": "Lepiota brunneoincarnata",
+      "sources": [
+        "https://www.wildfooduk.com/mushroom-guide/shaggy-parasol/",
+        "https://www.first-nature.com/fungi/lepiota-brunneoincarnata.php"
+      ]
+    },
+    {
+      "edible": "Chlorophyllum rhacodes",
+      "dangerous": "Lepiota subincarnata",
+      "sources": [
+        "https://www.wildfooduk.com/mushroom-guide/shaggy-parasol/",
+        "https://www.first-nature.com/fungi/lepiota-subincarnata.php"
+      ]
+    },
+    {
+      "edible": "Chlorophyllum rhacodes",
+      "dangerous": "Lepiota cristata",
+      "sources": [
+        "https://www.wildfooduk.com/mushroom-guide/shaggy-parasol/",
+        "https://www.first-nature.com/fungi/lepiota-cristata.php"
+      ]
+    },
+    {
+      "edible": "Armillaria mellea",
+      "dangerous": "Galerina marginata",
+      "sources": [
+        "https://www.wildfooduk.com/mushroom-guide/honey-fungus/",
+        "https://en.wikipedia.org/wiki/Galerina_marginata"
+      ]
+    },
+    {
+      "edible": "Agaricus augustus",
+      "dangerous": "Agaricus moelleri",
+      "sources": [
+        "https://www.wildfooduk.com/mushroom-guide/prince/",
+        "https://en.wikipedia.org/wiki/Agaricus_augustus"
+      ]
+    },
+    {
+      "edible": "Craterellus tubaeformis",
+      "dangerous": "Cortinarius rubellus",
+      "sources": [
+        "https://www.first-nature.com/fungi/omphalotus-illudens.php",
+        "https://en.wikipedia.org/wiki/Cortinarius_rubellus"
+      ]
+    },
+    {
+      "edible": "Russula cyanoxantha",
+      "dangerous": "Russula emetica",
+      "sources": [
+        "https://www.wildfooduk.com/mushroom-guide/charcoal-burner-3/",
+        "https://en.wikipedia.org/wiki/Russula_cyanoxantha"
       ]
     }
   ],

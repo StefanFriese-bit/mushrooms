@@ -1,5 +1,8 @@
 # Core lists: what the source check changed (06/10/2026)
 
+> **Updated by the cross-check of 06/10/2026** (`reports/cross-check.md`): five species came back as edible, two
+> lookalikes were added, and two levels changed. The tables below record the two-source check that came first.
+
 The starting lists were general knowledge. This check is what made them true. Every species and every pair below now
 rests on two different websites. Sources used: First Nature (first-nature.com), Wild Food UK (wildfooduk.com), and,
 where one of those had no page, Wikipedia. Everything here is in our own words. Only the article text of each page

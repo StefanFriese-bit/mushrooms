@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-06T10:57:45.531Z",
+  "generated": "2026-10-06T11:14:49.436Z",
   "placeId": 6857,
   "target": 300,
   "species": [
@@ -400,6 +400,66 @@
       "dangerLevel": null
     },
     {
+      "inatId": 56535,
+      "name": "Chlorophyllum rhacodes",
+      "english": "Shaggy Parasol",
+      "englishSource": "bms-2005",
+      "englishVia": "Macrolepiota rhacodes",
+      "ukRecords": 592,
+      "reasons": [
+        "edible"
+      ],
+      "dangerLevel": null
+    },
+    {
+      "inatId": 55950,
+      "name": "Armillaria mellea",
+      "english": "Honey Fungus",
+      "englishSource": "bms-2005",
+      "englishVia": null,
+      "ukRecords": 1046,
+      "reasons": [
+        "edible"
+      ],
+      "dangerLevel": null
+    },
+    {
+      "inatId": 49547,
+      "name": "Agaricus augustus",
+      "english": "The Prince",
+      "englishSource": "bms-2005",
+      "englishVia": null,
+      "ukRecords": 324,
+      "reasons": [
+        "edible"
+      ],
+      "dangerLevel": null
+    },
+    {
+      "inatId": 350511,
+      "name": "Craterellus tubaeformis",
+      "english": "Trumpet Chanterelle",
+      "englishSource": "bms-2005",
+      "englishVia": "Cantharellus tubaeformis",
+      "ukRecords": 281,
+      "reasons": [
+        "edible"
+      ],
+      "dangerLevel": null
+    },
+    {
+      "inatId": 194437,
+      "name": "Russula cyanoxantha",
+      "english": "Charcoal Burner",
+      "englishSource": "bms-2005",
+      "englishVia": null,
+      "ukRecords": 115,
+      "reasons": [
+        "edible"
+      ],
+      "dangerLevel": null
+    },
+    {
       "inatId": 52135,
       "name": "Amanita phalloides",
       "english": "Deathcap",
@@ -419,19 +479,6 @@
       "englishSource": "bms-2005",
       "englishVia": null,
       "ukRecords": 36,
-      "reasons": [
-        "dangerous-lookalike",
-        "deadly"
-      ],
-      "dangerLevel": "deadly"
-    },
-    {
-      "inatId": 48418,
-      "name": "Amanita pantherina",
-      "english": "Panthercap",
-      "englishSource": "bms-2005",
-      "englishVia": null,
-      "ukRecords": 336,
       "reasons": [
         "dangerous-lookalike",
         "deadly"
@@ -511,18 +558,6 @@
       "ukRecords": 5,
       "reasons": [
         "dangerous-lookalike",
-        "deadly"
-      ],
-      "dangerLevel": "deadly"
-    },
-    {
-      "inatId": 118336,
-      "name": "Inocybe geophylla",
-      "english": "White Fibrecap",
-      "englishSource": "bms-2005",
-      "englishVia": null,
-      "ukRecords": 43,
-      "reasons": [
         "deadly"
       ],
       "dangerLevel": "deadly"
@@ -642,24 +677,24 @@
       "dangerLevel": "deadly"
     },
     {
-      "inatId": 58694,
-      "name": "Lepiota cristata",
-      "english": "Stinking Dapperling",
+      "inatId": 48418,
+      "name": "Amanita pantherina",
+      "english": "Panthercap",
       "englishSource": "bms-2005",
       "englishVia": null,
-      "ukRecords": 137,
+      "ukRecords": 336,
       "reasons": [
         "dangerous-lookalike"
       ],
       "dangerLevel": "poisonous"
     },
     {
-      "inatId": 56535,
-      "name": "Chlorophyllum rhacodes",
-      "english": "Shaggy Parasol",
+      "inatId": 58694,
+      "name": "Lepiota cristata",
+      "english": "Stinking Dapperling",
       "englishSource": "bms-2005",
-      "englishVia": "Macrolepiota rhacodes",
-      "ukRecords": 592,
+      "englishVia": null,
+      "ukRecords": 137,
       "reasons": [
         "dangerous-lookalike"
       ],
@@ -744,6 +779,30 @@
       "englishSource": "bms-2005",
       "englishVia": null,
       "ukRecords": 171,
+      "reasons": [
+        "dangerous-lookalike"
+      ],
+      "dangerLevel": "poisonous"
+    },
+    {
+      "inatId": 118382,
+      "name": "Agaricus moelleri",
+      "english": "Inky Mushroom",
+      "englishSource": "bms-2005",
+      "englishVia": null,
+      "ukRecords": 58,
+      "reasons": [
+        "dangerous-lookalike"
+      ],
+      "dangerLevel": "poisonous"
+    },
+    {
+      "inatId": 49449,
+      "name": "Russula emetica",
+      "english": "Sickener",
+      "englishSource": "bms-2005",
+      "englishVia": null,
+      "ukRecords": 40,
       "reasons": [
         "dangerous-lookalike"
       ],
@@ -1200,18 +1259,6 @@
       "englishSource": "bms-2005",
       "englishVia": null,
       "ukRecords": 1073,
-      "reasons": [
-        "most-recorded"
-      ],
-      "dangerLevel": null
-    },
-    {
-      "inatId": 55950,
-      "name": "Armillaria mellea",
-      "english": "Honey Fungus",
-      "englishSource": "bms-2005",
-      "englishVia": null,
-      "ukRecords": 1046,
       "reasons": [
         "most-recorded"
       ],
@@ -1811,7 +1858,7 @@
       "english": "Earthy Powdercap",
       "englishSource": "bms-2005",
       "englishVia": null,
-      "ukRecords": 424,
+      "ukRecords": 425,
       "reasons": [
         "most-recorded"
       ],
@@ -2070,18 +2117,6 @@
       "dangerLevel": null
     },
     {
-      "inatId": 49547,
-      "name": "Agaricus augustus",
-      "english": "The Prince",
-      "englishSource": "bms-2005",
-      "englishVia": null,
-      "ukRecords": 324,
-      "reasons": [
-        "most-recorded"
-      ],
-      "dangerLevel": null
-    },
-    {
       "inatId": 518289,
       "name": "Exidiopsis effusa",
       "english": "Hair Ice",
@@ -2184,18 +2219,6 @@
       "englishSource": "bms-2005",
       "englishVia": "Coprinus plicatilis",
       "ukRecords": 285,
-      "reasons": [
-        "most-recorded"
-      ],
-      "dangerLevel": null
-    },
-    {
-      "inatId": 350511,
-      "name": "Craterellus tubaeformis",
-      "english": "Trumpet Chanterelle",
-      "englishSource": "bms-2005",
-      "englishVia": "Cantharellus tubaeformis",
-      "ukRecords": 281,
       "reasons": [
         "most-recorded"
       ],
@@ -2699,7 +2722,7 @@
       "english": "Hare's Ear",
       "englishSource": "bms-2005",
       "englishVia": null,
-      "ukRecords": 181,
+      "ukRecords": 182,
       "reasons": [
         "most-recorded"
       ],
@@ -2795,7 +2818,7 @@
       "english": "Mosaic Puffball",
       "englishSource": "bms-2005",
       "englishVia": "Handkea utriformis",
-      "ukRecords": 168,
+      "ukRecords": 169,
       "reasons": [
         "most-recorded"
       ],
@@ -3330,18 +3353,6 @@
       "dangerLevel": null
     },
     {
-      "inatId": 194437,
-      "name": "Russula cyanoxantha",
-      "english": "Charcoal Burner",
-      "englishSource": "bms-2005",
-      "englishVia": null,
-      "ukRecords": 115,
-      "reasons": [
-        "most-recorded"
-      ],
-      "dangerLevel": null
-    },
-    {
       "inatId": 339410,
       "name": "Stereum rugosum",
       "english": "Bleeding Broadleaf Crust",
@@ -3599,18 +3610,6 @@
       "english": "Golden Bootleg",
       "englishSource": "bms-2005",
       "englishVia": "Phaeolepiota aurea",
-      "ukRecords": 96,
-      "reasons": [
-        "most-recorded"
-      ],
-      "dangerLevel": null
-    },
-    {
-      "inatId": 542957,
-      "name": "Dermoloma cuneifolium",
-      "english": "Crazed Cap",
-      "englishSource": "bms-2005",
-      "englishVia": null,
       "ukRecords": 96,
       "reasons": [
         "most-recorded"
