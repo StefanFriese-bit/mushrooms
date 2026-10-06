@@ -13,6 +13,13 @@ export type Find = {
 };
 export type StoredPhoto = { id: string; findId: string; type: string; bytes: ArrayBuffer };
 
+/** A random id (crypto.randomUUID only arrived in iOS 15.4; getRandomValues works on older iPhones too). */
+function newId(): string {
+  if (typeof crypto.randomUUID === 'function') return crypto.randomUUID();
+  const b = crypto.getRandomValues(new Uint8Array(16));
+  return [...b].map((x) => x.toString(16).padStart(2, '0')).join('');
+}
+
 const DB_NAME = 'mushroom-finds';
 const VERSION = 1;
 let opening: Promise<IDBDatabase> | null = null;
@@ -63,9 +70,9 @@ export async function getFind(id: string): Promise<Find | undefined> {
 
 /** Saves a new find with its photos in one go. */
 export async function addFind(f: Omit<Find, 'id' | 'photoIds'>, photos: Blob[]): Promise<Find> {
-  const id = crypto.randomUUID();
+  const id = newId();
   const stored: StoredPhoto[] = [];
-  for (const p of photos) stored.push({ id: crypto.randomUUID(), findId: id, type: p.type || 'image/jpeg', bytes: await p.arrayBuffer() });
+  for (const p of photos) stored.push({ id: newId(), findId: id, type: p.type || 'image/jpeg', bytes: await p.arrayBuffer() });
   const find: Find = { ...f, id, photoIds: stored.map((p) => p.id) };
   await inTx(['finds', 'photos'], 'readwrite', (tx) => {
     tx.objectStore('finds').add(find);

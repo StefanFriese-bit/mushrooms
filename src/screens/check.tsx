@@ -22,7 +22,7 @@ function Name({ c }: { c: Column }) {
 
 const names = (cols: Column[]) => {
   const n = [...new Set(cols.map((c) => c.english))];
-  return n.length > 1 ? `${n.slice(0, -1).join(', ')} or ${n.at(-1)}` : n[0];
+  return n.length > 1 ? `${n.slice(0, -1).join(', ')} or ${n[n.length - 1]}` : n[0];
 };
 
 export function Check({ slug }: { slug: string }) {

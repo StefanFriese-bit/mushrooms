@@ -47,6 +47,9 @@ const OFFLINE_SCAN = SCAN.passed && SCAN.file ? [SCAN.file, 'ort/ort-wasm-simd-t
 
 export default defineConfig({
   base: '/mushrooms/',
+  // Older iPhones too: newer JavaScript is rewritten for Safari 14 (iOS 14). A pattern Safari 14 cannot read (look-behind)
+  // is refused by tests/old-safari.test.ts.
+  build: { target: ['es2020', 'safari14'] },
   define: { __BUILD_DATE__: JSON.stringify(new Date().toISOString().slice(0, 10)) },
   plugins: [
     preact(),
