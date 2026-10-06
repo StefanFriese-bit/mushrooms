@@ -41,6 +41,8 @@ async function main() {
   }
   const classes = df20Classes(parseCsv(readFileSync(at(CSV), 'utf8')) as unknown as Df20Row[]);
   console.log(`DF20: ${classes.length} classes, ${classes.reduce((n, c) => n + c.photos, 0)} training photos`);
+  // The model's output number i is class i: the list must run 0, 1, 2 … with no gap, or every name is wrong.
+  if (classes.some((c, i) => c.id !== i)) throw new Error('DF20 class numbers are not 0 … n-1: the names would not line up with the model');
 
   const inat = createInatClient();
   const ours = (JSON.parse(readFileSync(new URL('content/species-list.json', ROOT), 'utf8')) as { species: Ours[] }).species;
