@@ -1,20 +1,25 @@
 {
-  "slug": "egghead-mottlegill",
-  "inatId": 124539,
-  "scientific": "Panaeolus semiovatus",
-  "english": "Egghead Mottlegill",
+  "slug": "petticoat-mottlegill",
+  "inatId": 118263,
+  "scientific": "Panaeolus papilionaceus",
+  "english": "Petticoat Mottlegill",
   "olderNames": [
-    "Anellaria semiovata"
+    "Panaeolus sphinctrinus"
   ],
   "edibility": {
     "value": "not-edible",
     "sources": [
       "fn",
-      "wf",
       "wp"
     ]
   },
-  "edibilityNote": null,
+  "edibilityNote": {
+    "value": "Tiny and grows on dung. First Nature warns that it is easily confused with other mottlegills that contain the hallucinogen psilocybin; Wikipedia says this one does not contain it.",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
   "protectedInUk": {
     "value": false,
     "sources": [
@@ -24,70 +29,58 @@
   },
   "topPoints": [
     {
-      "value": "A cream to clay-coloured cap like half an egg, 2–9 cm, shiny and often wrinkled.",
+      "value": "Small grey-brown cap, 1–5 cm, bell-shaped and never flat, with white tooth-like fringes hanging from the rim.",
       "sources": [
         "fn",
-        "wf",
         "wp"
       ]
     },
     {
-      "value": "Gills mottled, turning black; black spore print.",
+      "value": "Grey-brown gills that become mottled, then black; black spore print.",
       "sources": [
         "fn",
-        "wf",
         "wp"
       ]
     },
     {
-      "value": "Tall, thin stem with a small ring that soon blackens.",
+      "value": "A tall, thin stem, 6–12 cm, finely powdered white; no ring.",
       "sources": [
-        "wf",
+        "fn",
         "wp"
       ]
     },
     {
-      "value": "On or beside dung, especially horse dung, in grazed fields.",
+      "value": "On dung and in manured pasture.",
       "sources": [
         "fn",
-        "wf",
         "wp"
       ]
     }
   ],
   "habitat": {
-    "value": "On or beside dung, especially horse dung, in meadows and grazed land.",
+    "value": "On dung or well-manured soil, in pastures and grazed commons.",
     "sources": [
       "fn",
-      "wf",
       "wp"
     ]
   },
   "seasonMonths": {
     "value": [
-      1,
-      2,
-      3,
-      4,
-      5,
       6,
       7,
       8,
       9,
       10,
-      11,
-      12
+      11
     ],
     "sources": [
-      "fn",
-      "wf"
+      "fn"
     ]
   },
   "sporePrint": {
     "value": "Black",
     "sources": [
       "fn",
-      "wf",
       "wp"
     ]
   },
@@ -96,14 +89,13 @@
       "value": "gills",
       "sources": [
         "fn",
-        "wf",
         "wp"
       ]
     },
     "ring": {
-      "value": "sometimes",
+      "value": "no",
       "sources": [
-        "wf",
+        "fn",
         "wp"
       ]
     },
@@ -111,21 +103,20 @@
       "value": "no",
       "sources": [
         "fn",
-        "wf"
+        "wp"
       ]
     },
     "growsOn": {
       "value": "dung",
       "sources": [
         "fn",
-        "wf",
         "wp"
       ]
     },
     "capCm": {
       "value": [
-        2,
-        9
+        1,
+        5
       ],
       "sources": [
         "fn",
@@ -133,9 +124,10 @@
       ]
     },
     "fleshChange": {
-      "value": "Pale, darker towards the base",
+      "value": "Thin; no colour change when cut is described",
       "sources": [
-        "wf"
+        "fn",
+        "wp"
       ]
     },
     "smell": {
@@ -153,34 +145,24 @@
       "kind": "poisonous",
       "tellApart": [
         {
-          "feature": "Spore print",
-          "thisOne": "Black",
-          "thatOne": "Purple-brown",
+          "feature": "Ring",
+          "thisOne": "None",
+          "thatOne": "A fragile ring, soon gone or only a dark zone",
           "sources": [
             "fn",
-            "wf",
             "wp",
             "fn-dr",
             "wp-dr"
           ]
         },
         {
-          "feature": "Ring",
-          "thisOne": "A ring that stays (it soon blackens)",
-          "thatOne": "Fragile, soon gone",
-          "sources": [
-            "wf",
-            "wp",
-            "fn-dr"
-          ]
-        },
-        {
-          "feature": "Cap shape",
-          "thisOne": "Taller, like half an egg",
-          "thatOne": "A rounder dome",
+          "feature": "Spore print",
+          "thisOne": "Black",
+          "thatOne": "Purple-brown",
           "sources": [
             "fn",
-            "wf"
+            "wp",
+            "fn-dr"
           ]
         }
       ]
@@ -191,18 +173,13 @@
   "sources": [
     {
       "id": "fn",
-      "title": "First Nature — Panaeolus semiovatus, Egghead Mottlegill",
-      "url": "https://www.first-nature.com/fungi/panaeolus-semiovatus.php"
-    },
-    {
-      "id": "wf",
-      "title": "Wild Food UK — Egghead Mottlegill",
-      "url": "https://www.wildfooduk.com/mushroom-guide/egghead-mottlegill/"
+      "title": "First Nature — Panaeolus papilionaceus, Petticoat Mottlegill",
+      "url": "https://www.first-nature.com/fungi/panaeolus-papilionaceus.php"
     },
     {
       "id": "wp",
-      "title": "Wikipedia — Panaeolus semiovatus",
-      "url": "https://en.wikipedia.org/wiki/Panaeolus_semiovatus"
+      "title": "Wikipedia — Panaeolus papilionaceus",
+      "url": "https://en.wikipedia.org/wiki/Panaeolus_papilionaceus"
     },
     {
       "id": "fn-dr",

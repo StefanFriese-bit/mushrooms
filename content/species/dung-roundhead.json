@@ -1,0 +1,271 @@
+{
+  "slug": "dung-roundhead",
+  "inatId": 499652,
+  "scientific": "Protostropharia semiglobata",
+  "english": "Dung Roundhead",
+  "olderNames": [
+    "Stropharia semiglobata",
+    "Psilocybe semiglobata"
+  ],
+  "edibility": {
+    "value": "poisonous",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "edibilityNote": {
+    "value": "Some guides call it edible and others poisonous; First Nature recommends treating it as a toxic toadstool, as some of its relatives are poisonous. It grows on dung.",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "A small, sticky, pale yellow to buff cap, 1–4 cm, shaped like half a ball.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    {
+      "value": "Grey gills turning dark purple-brown; dark purple-brown spore print.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    {
+      "value": "A tall, thin stem, 5–12 cm, with a fragile ring that soon darkens or disappears.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    {
+      "value": "On dung and freshly manured grass.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "On animal dung, manured soil, lawns and grazed grassland.",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "sources": [
+      "fn"
+    ]
+  },
+  "sporePrint": {
+    "value": "Purple-brown to purple-black",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "gills",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "ring": {
+      "value": "sometimes",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "growsOn": {
+      "value": "dung",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "capCm": {
+      "value": [
+        1,
+        4.5
+      ],
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "fleshChange": {
+      "value": "Thin and very pale; no colour change when cut is described",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "smell": {
+      "value": "Not distinctive",
+      "sources": [
+        "fn"
+      ]
+    }
+  },
+  "lookalikes": [
+    {
+      "scientific": "Panaeolus semiovatus",
+      "english": "Egghead Mottlegill",
+      "slug": "egghead-mottlegill",
+      "kind": "not-edible",
+      "tellApart": [
+        {
+          "feature": "Spore print",
+          "thisOne": "Purple-brown",
+          "thatOne": "Black",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-em",
+            "wf-em",
+            "wp-em"
+          ]
+        },
+        {
+          "feature": "Ring",
+          "thisOne": "Fragile, soon gone",
+          "thatOne": "A ring that stays (it soon blackens)",
+          "sources": [
+            "fn",
+            "wf-em",
+            "wp-em"
+          ]
+        },
+        {
+          "feature": "Cap shape",
+          "thisOne": "A rounder dome",
+          "thatOne": "Taller, like half an egg",
+          "sources": [
+            "fn-em",
+            "wf-em"
+          ]
+        }
+      ]
+    },
+    {
+      "scientific": "Panaeolus papilionaceus",
+      "english": "Petticoat Mottlegill",
+      "slug": "petticoat-mottlegill",
+      "kind": "not-edible",
+      "tellApart": [
+        {
+          "feature": "Ring",
+          "thisOne": "A fragile ring, soon gone or only a dark zone",
+          "thatOne": "None",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-pm",
+            "wp-pm"
+          ]
+        },
+        {
+          "feature": "Spore print",
+          "thisOne": "Purple-brown",
+          "thatOne": "Black",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-pm",
+            "wp-pm"
+          ]
+        },
+        {
+          "feature": "Cap rim",
+          "thisOne": "Smooth",
+          "thatOne": "White tooth-like fringes hanging from it",
+          "sources": [
+            "fn-pm",
+            "wp-pm"
+          ]
+        }
+      ]
+    }
+  ],
+  "noDangerousLookalike": null,
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Protostropharia semiglobata, Dung Roundhead",
+      "url": "https://www.first-nature.com/fungi/stropharia-semiglobata.php"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Protostropharia semiglobata",
+      "url": "https://en.wikipedia.org/wiki/Protostropharia_semiglobata"
+    },
+    {
+      "id": "fn-em",
+      "title": "First Nature — Panaeolus semiovatus, Egghead Mottlegill",
+      "url": "https://www.first-nature.com/fungi/panaeolus-semiovatus.php"
+    },
+    {
+      "id": "wf-em",
+      "title": "Wild Food UK — Egghead Mottlegill",
+      "url": "https://www.wildfooduk.com/mushroom-guide/egghead-mottlegill/"
+    },
+    {
+      "id": "wp-em",
+      "title": "Wikipedia — Panaeolus semiovatus",
+      "url": "https://en.wikipedia.org/wiki/Panaeolus_semiovatus"
+    },
+    {
+      "id": "fn-pm",
+      "title": "First Nature — Panaeolus papilionaceus, Petticoat Mottlegill",
+      "url": "https://www.first-nature.com/fungi/panaeolus-papilionaceus.php"
+    },
+    {
+      "id": "wp-pm",
+      "title": "Wikipedia — Panaeolus papilionaceus",
+      "url": "https://en.wikipedia.org/wiki/Panaeolus_papilionaceus"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}
