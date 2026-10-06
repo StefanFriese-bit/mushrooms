@@ -1,5 +1,5 @@
 // A polite client for iNaturalist's public API: one request at a time, at least minGapMs apart, retries only
-// on 429 and 5xx. iNaturalist asks for <= 60 requests a minute and < 10,000 a day.
+// on 429 and 5xx, and on a dropped connection. iNaturalist asks for <= 60 requests a minute and < 10,000 a day.
 export const API = 'https://api.inaturalist.org/v1';
 export const USER_AGENT =
   'mushrooms content builder (personal, non-commercial; https://github.com/StefanFriese-bit/mushrooms)';
@@ -43,7 +43,15 @@ export function createInatClient(opts: InatClientOptions = {}) {
       const wait = lastStart + minGapMs - now();
       if (wait > 0) await sleep(wait);
       lastStart = now();
-      const res = await doFetch(url, { headers: { 'User-Agent': USER_AGENT, Accept: 'application/json' } });
+      let res: HttpResponse;
+      try {
+        res = await doFetch(url, { headers: { 'User-Agent': USER_AGENT, Accept: 'application/json' } });
+      } catch (err) {
+        // No answer at all (a dropped connection): retried like a busy answer, then reported with the address.
+        if (attempt >= maxTries) throw new Error(`iNaturalist gave no answer for ${url} (attempt ${attempt} of ${maxTries}): ${String(err)}`);
+        await sleep(minGapMs * 4 * 2 ** (attempt - 1));
+        continue;
+      }
       if (res.ok) return res.json();
       const retryable = res.status === 429 || res.status >= 500;
       if (!retryable || attempt >= maxTries) {

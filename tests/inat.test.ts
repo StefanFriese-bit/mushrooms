@@ -46,6 +46,26 @@ describe('inat client', () => {
     expect(clock.sleeps).toEqual([4400]);
   });
 
+  it('retries a dropped connection like a busy answer, then succeeds', async () => {
+    let n = 0;
+    const fetch = async (): Promise<HttpResponse> => {
+      n++;
+      if (n < 3) throw new TypeError('fetch failed');
+      return { ok: true, status: 200, json: async () => ({ fine: true }) };
+    };
+    const clock = fakeClock();
+    const client = createInatClient({ fetch, now: clock.now, sleep: clock.sleep, minGapMs: 1100 });
+    await expect(client.getJson('/a')).resolves.toEqual({ fine: true });
+    expect(n).toBe(3);
+  });
+
+  it('gives up on a connection that keeps dropping, naming the address', async () => {
+    const fetch = async (): Promise<HttpResponse> => { throw new TypeError('fetch failed'); };
+    const clock = fakeClock();
+    const client = createInatClient({ fetch, now: clock.now, sleep: clock.sleep, maxTries: 3 });
+    await expect(client.getJson('/taxa/1')).rejects.toThrow(/no answer.*\/taxa\/1.*attempt 3 of 3/);
+  });
+
   it('does not retry a 404', async () => {
     const http = fakeHttp([{ status: 404 }]);
     const clock = fakeClock();
