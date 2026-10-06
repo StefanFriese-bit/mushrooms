@@ -1,0 +1,258 @@
+{
+  "slug": "lilac-fibrecap",
+  "inatId": 1288764,
+  "scientific": "Inocybe lilacina",
+  "english": "Lilac Fibrecap",
+  "olderNames": [
+    "Inocybe geophylla var. lilacina"
+  ],
+  "edibility": {
+    "value": "deadly",
+    "sources": [
+      "fn",
+      "wf-ad"
+    ]
+  },
+  "edibilityNote": {
+    "value": "Contains muscarine: sweating, drooling and tears within half an hour, then stomach pains, sickness and blurred vision.",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "Small lilac cap, 1–4 cm, silky, with a pointed hump that turns ochre-brown.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    {
+      "value": "Gills crowded, creamy grey turning clay brown — not purple; dull brown spore print.",
+      "sources": [
+        "fn",
+        "wp",
+        "wf-ad"
+      ]
+    },
+    {
+      "value": "Stem lilac, thin, smooth and silky; no ring.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    {
+      "value": "Smells mealy or earthy.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "Beside paths and on roadside verges under broadleaved trees, and in mixed woods; less often under conifers.",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "sporePrint": {
+    "value": "Dull brown",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "gills",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "ring": {
+      "value": "no",
+      "sources": [
+        "wp",
+        "fn"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "growsOn": {
+      "value": "ground",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "capCm": {
+      "value": [
+        1,
+        4
+      ],
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "fleshChange": {
+      "value": "Does not change colour when cut or bruised",
+      "sources": [
+        "wp"
+      ]
+    },
+    "smell": {
+      "value": "Mealy or earthy",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    }
+  },
+  "lookalikes": [
+    {
+      "scientific": "Laccaria amethystina",
+      "english": "Amethyst Deceiver",
+      "slug": "amethyst-deceiver",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Gill colour",
+          "thisOne": "Creamy grey, then clay brown — not purple like the cap",
+          "thatOne": "Purple like the cap, fading with it",
+          "sources": [
+            "fn",
+            "fn-ad",
+            "wf-ad"
+          ]
+        },
+        {
+          "feature": "Gill spacing",
+          "thisOne": "Crowded",
+          "thatOne": "Thick and widely spaced",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-ad",
+            "wf-ad"
+          ]
+        },
+        {
+          "feature": "Spore print",
+          "thisOne": "Dull brown",
+          "thatOne": "White",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-ad",
+            "wf-ad",
+            "wp-ad"
+          ]
+        },
+        {
+          "feature": "Cap centre",
+          "thisOne": "A pointed hump that turns ochre-brown",
+          "thatOne": "No pointed hump; flat or slightly sunken",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-ad",
+            "wf-ad"
+          ]
+        },
+        {
+          "feature": "Stem",
+          "thisOne": "Smooth and silky",
+          "thatOne": "Tough, fibrous, often twisted",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-ad",
+            "wf-ad"
+          ]
+        },
+        {
+          "feature": "Smell",
+          "thisOne": "Mealy or earthy",
+          "thatOne": "Not distinctive",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-ad",
+            "wp-ad"
+          ]
+        }
+      ]
+    }
+  ],
+  "noDangerousLookalike": null,
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Inocybe lilacina, Lilac Fibrecap",
+      "url": "https://www.first-nature.com/fungi/inocybe-geophylla-lilacina.php"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Inocybe geophylla (its lilac variety, lilacina)",
+      "url": "https://en.wikipedia.org/wiki/Inocybe_geophylla"
+    },
+    {
+      "id": "fn-ad",
+      "title": "First Nature — Laccaria amethystina, Amethyst Deceiver",
+      "url": "https://www.first-nature.com/fungi/laccaria-amethystina.php"
+    },
+    {
+      "id": "wf-ad",
+      "title": "Wild Food UK — Amethyst Deceiver",
+      "url": "https://www.wildfooduk.com/mushroom-guide/amethyst-deceiver-3/"
+    },
+    {
+      "id": "wp-ad",
+      "title": "Wikipedia — Laccaria amethystina",
+      "url": "https://en.wikipedia.org/wiki/Laccaria_amethystina"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}
