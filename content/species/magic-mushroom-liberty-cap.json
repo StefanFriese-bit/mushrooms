@@ -1,0 +1,174 @@
+{
+  "slug": "magic-mushroom-liberty-cap",
+  "inatId": 54025,
+  "scientific": "Psilocybe semilanceata",
+  "english": "Magic Mushroom / Liberty Cap",
+  "olderNames": [],
+  "edibility": {
+    "value": "poisonous",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "edibilityNote": {
+    "value": "Hallucinogenic: some people have needed hospital treatment. Since 2005 it has been a Class A drug in the UK, illegal to pick, keep or sell.",
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "A small, pointed cap, 0.5–2.5 cm, often with a sharp nipple on top; brown when wet, drying pale buff.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "Gills grey, turning purple-black; dark purple-brown spore print.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "Thin, wavy, pale stem, sometimes blue at the base.",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    {
+      "value": "In grazed grassland, upland pasture, lawns and parks — never on dung.",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "Grazed grassland, upland pasture and moors, also lawns and parks; it does not grow on dung.",
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "sporePrint": {
+    "value": "Dark purple-brown",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "gills",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    "ring": {
+      "value": "no",
+      "sources": [
+        "wp",
+        "fn"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "growsOn": {
+      "value": "ground",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "capCm": {
+      "value": [
+        0.5,
+        2.5
+      ],
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "fleshChange": {
+      "value": "Very thin",
+      "sources": [
+        "wf"
+      ]
+    },
+    "smell": {
+      "value": "Musty",
+      "sources": [
+        "fn"
+      ]
+    }
+  },
+  "lookalikes": [],
+  "noDangerousLookalike": null,
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Psilocybe semilanceata, Magic Mushroom / Liberty Cap",
+      "url": "https://www.first-nature.com/fungi/psilocybe-semilanceata.php"
+    },
+    {
+      "id": "wf",
+      "title": "Wild Food UK — Magic Mushroom / Liberty Cap",
+      "url": "https://www.wildfooduk.com/mushroom-guide/liberty-caps/"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Psilocybe semilanceata",
+      "url": "https://en.wikipedia.org/wiki/Psilocybe_semilanceata"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}

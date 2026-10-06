@@ -1,0 +1,213 @@
+{
+  "slug": "wood-blewit",
+  "inatId": 1525548,
+  "scientific": "Collybia nuda",
+  "english": "Wood Blewit",
+  "olderNames": [
+    "Clitocybe nuda",
+    "Lepista nuda",
+    "Tricholoma nudum"
+  ],
+  "edibility": {
+    "value": "edible-cooked",
+    "sources": [
+      "fn",
+      "wf",
+      "wp",
+      "wt"
+    ]
+  },
+  "edibilityNote": {
+    "value": "Cook it well. First Nature advises trying a small portion first: it disagrees with some people.",
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "Stocky mushroom with a lilac-tinged cap, 6–15 cm, fading to tan with age.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp",
+        "wt"
+      ]
+    },
+    {
+      "value": "Gills crowded, lilac to violet when young, turning buff.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "Stout, violet-tinged stem, often swollen at the base; no ring.",
+      "sources": [
+        "fn",
+        "wf",
+        "wt"
+      ]
+    },
+    {
+      "value": "Pale pinkish-buff spore print — purple webcaps print rusty brown.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "Leaf litter in mixed woodland, often in rings; also hedgerows, gardens and compost heaps.",
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      10,
+      11,
+      12
+    ],
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "sporePrint": {
+    "value": "Pale pinkish-buff",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "gills",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    "ring": {
+      "value": "no",
+      "sources": [
+        "wp",
+        "fn"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "growsOn": {
+      "value": "ground",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "capCm": {
+      "value": [
+        6,
+        15
+      ],
+      "sources": [
+        "fn",
+        "wt"
+      ]
+    },
+    "fleshChange": {
+      "value": "Lilac to purple, paler inside; no colour change when cut is described",
+      "sources": [
+        "wf"
+      ]
+    },
+    "smell": {
+      "value": "Faint aniseed, or slightly perfumed",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    }
+  },
+  "lookalikes": [
+    {
+      "scientific": "Cortinarius (purple species)",
+      "english": "Purple webcaps",
+      "slug": null,
+      "kind": "poisonous",
+      "tellApart": [
+        {
+          "feature": "Spore print",
+          "thisOne": "Pale pinkish-buff",
+          "thatOne": "Rusty brown",
+          "sources": [
+            "fn",
+            "wf",
+            "wp"
+          ]
+        },
+        {
+          "feature": "Smell",
+          "thisOne": "Faint aniseed, or slightly perfumed",
+          "thatOne": "Often unpleasant",
+          "sources": [
+            "fn",
+            "wf"
+          ]
+        }
+      ]
+    }
+  ],
+  "noDangerousLookalike": null,
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Collybia nuda, Wood Blewit",
+      "url": "https://www.first-nature.com/fungi/lepista-nuda.php"
+    },
+    {
+      "id": "wf",
+      "title": "Wild Food UK — Wood Blewit",
+      "url": "https://www.wildfooduk.com/mushroom-guide/wood-blewit/"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Collybia nuda",
+      "url": "https://en.wikipedia.org/wiki/Collybia_nuda"
+    },
+    {
+      "id": "wt",
+      "title": "Woodland Trust — Wood Blewit",
+      "url": "https://www.woodlandtrust.org.uk/trees-woods-and-wildlife/fungi-and-lichens/wood-blewit/"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}

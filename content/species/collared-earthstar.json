@@ -1,0 +1,148 @@
+{
+  "slug": "collared-earthstar",
+  "inatId": 1085916,
+  "scientific": "Geastrum michelianum",
+  "english": "Collared Earthstar",
+  "olderNames": [],
+  "edibility": {
+    "value": "not-edible",
+    "sources": [
+      "wf",
+      "wp"
+    ]
+  },
+  "edibilityNote": null,
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "A round, greyish-brown spore sac sitting in a saucer-like collar, on a star of thick, fleshy rays.",
+      "sources": [
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "Brown spores puff out of a raised, pointed opening at the top of the sac.",
+      "sources": [
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "In leaf litter under broadleaved and conifer trees, often in groups.",
+      "sources": [
+        "wf",
+        "wp"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "Rich soil and leaf litter under broadleaved and conifer trees, often on slopes; usually in groups.",
+    "sources": [
+      "wf",
+      "wp"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "sources": [
+      "wf"
+    ]
+  },
+  "sporePrint": {
+    "value": "Brown",
+    "sources": [
+      "wf",
+      "wp"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "other",
+      "sources": [
+        "wf",
+        "wp"
+      ]
+    },
+    "ring": {
+      "value": "no",
+      "sources": [
+        "wf",
+        "wp"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "wf",
+        "wp"
+      ]
+    },
+    "growsOn": {
+      "value": "ground",
+      "sources": [
+        "wf",
+        "wp"
+      ]
+    },
+    "capCm": {
+      "value": [
+        2,
+        4
+      ],
+      "sources": [
+        "wf"
+      ]
+    },
+    "fleshChange": {
+      "value": "Creamy and solid inside when young, later brown powder",
+      "sources": [
+        "wf"
+      ]
+    },
+    "smell": {
+      "value": "Not distinctive",
+      "sources": [
+        "wf"
+      ]
+    }
+  },
+  "lookalikes": [],
+  "noDangerousLookalike": null,
+  "photos": [],
+  "sources": [
+    {
+      "id": "wf",
+      "title": "Wild Food UK — Collared Earthstar",
+      "url": "https://www.wildfooduk.com/mushroom-guide/collared-earthstar/"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Geastrum triplex (the Collared Earthstar)",
+      "url": "https://en.wikipedia.org/wiki/Geastrum_michelianum"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}

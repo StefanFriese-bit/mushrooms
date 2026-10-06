@@ -172,6 +172,36 @@
           ]
         }
       ]
+    },
+    {
+      "scientific": "Hygrocybe chlorophana",
+      "english": "Golden Waxcap",
+      "slug": "golden-waxcap",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Blackening",
+          "thisOne": "Turns black where touched, and all over with age",
+          "thatOne": "Does not turn black",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-gw",
+            "wf-gw"
+          ]
+        },
+        {
+          "feature": "Cap shape",
+          "thisOne": "Pointed and conical",
+          "thatOne": "Domed, then flat — never conical",
+          "sources": [
+            "fn",
+            "wp",
+            "wp-gw",
+            "fn-gw"
+          ]
+        }
+      ]
     }
   ],
   "noDangerousLookalike": null,
@@ -201,6 +231,21 @@
       "id": "wp-sc",
       "title": "Wikipedia — Hygrocybe coccinea",
       "url": "https://en.wikipedia.org/wiki/Hygrocybe_coccinea"
+    },
+    {
+      "id": "fn-gw",
+      "title": "First Nature — Hygrocybe chlorophana, Golden Waxcap",
+      "url": "https://www.first-nature.com/fungi/hygrocybe-chlorophana.php"
+    },
+    {
+      "id": "wf-gw",
+      "title": "Wild Food UK — Golden Waxcap",
+      "url": "https://www.wildfooduk.com/mushroom-guide/golden-waxcap-2/"
+    },
+    {
+      "id": "wp-gw",
+      "title": "Wikipedia — Hygrocybe chlorophana",
+      "url": "https://en.wikipedia.org/wiki/Hygrocybe_chlorophana"
     },
     {
       "id": "wf-prot",
