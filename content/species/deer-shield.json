@@ -1,0 +1,186 @@
+{
+  "slug": "deer-shield",
+  "inatId": 60782,
+  "scientific": "Pluteus cervinus",
+  "english": "Deer Shield",
+  "olderNames": [
+    "Pluteus atricapillus"
+  ],
+  "edibility": {
+    "value": "not-edible",
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "edibilityNote": {
+    "value": "Many guides call it edible but poor (Wikipedia), but some people have been ill after eating it: First Nature advises against gathering it, and Wild Food UK calls it inedible.",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "Brown cap, 3–14 cm, streaked with darker fibres, bell-shaped then flat.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "Crowded gills, free of the stem, white turning pink; pink spore print.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "White stem streaked with dark fibres; no ring.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "On rotting stumps, logs, woodchip and sawdust of broadleaved trees.",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "Stumps, fallen branches and woody debris of broadleaved trees, rarely conifers; also woodchip and sawdust heaps.",
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "sporePrint": {
+    "value": "Pale pink to salmon",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "gills",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    "ring": {
+      "value": "no",
+      "sources": [
+        "wp",
+        "fn",
+        "wf"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "wp",
+        "fn",
+        "wf"
+      ]
+    },
+    "growsOn": {
+      "value": "wood",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "capCm": {
+      "value": [
+        3,
+        14
+      ],
+      "sources": [
+        "wf",
+        "wp"
+      ]
+    },
+    "fleshChange": {
+      "value": "White and firm; no colour change when cut is described",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "smell": {
+      "value": "Faint; like radish (Wild Food UK)",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    }
+  },
+  "lookalikes": [],
+  "noDangerousLookalike": null,
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Pluteus cervinus, Deer Shield",
+      "url": "https://www.first-nature.com/fungi/pluteus-cervinus.php"
+    },
+    {
+      "id": "wf",
+      "title": "Wild Food UK — Deer Shield",
+      "url": "https://www.wildfooduk.com/mushroom-guide/deer-shield/"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Pluteus cervinus",
+      "url": "https://en.wikipedia.org/wiki/Pluteus_cervinus"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}

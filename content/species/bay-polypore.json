@@ -1,0 +1,166 @@
+{
+  "slug": "bay-polypore",
+  "inatId": 510852,
+  "scientific": "Picipes badius",
+  "english": "Bay Polypore",
+  "olderNames": [
+    "Polyporus badius",
+    "Royoporus badius"
+  ],
+  "edibility": {
+    "value": "not-edible",
+    "sources": [
+      "wf",
+      "wp"
+    ]
+  },
+  "edibilityNote": {
+    "value": "Too tough to eat.",
+    "sources": [
+      "wf",
+      "wp"
+    ]
+  },
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "A smooth, shiny chestnut-brown cap, 4–25 cm, often funnel-shaped in the middle with a thin, wavy edge.",
+      "sources": [
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "Underneath: tiny white to cream pores, running down the stem.",
+      "sources": [
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "A short stem, often off-centre, black at the base.",
+      "sources": [
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "On fallen dead wood of broadleaved trees.",
+      "sources": [
+        "wf",
+        "wp"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "Fallen dead wood of many broadleaved trees — elm, beech, alder, birch, oak, willow; rarely conifers.",
+    "sources": [
+      "wf",
+      "wp"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "sources": [
+      "wf"
+    ]
+  },
+  "sporePrint": {
+    "value": "White",
+    "sources": [
+      "wp"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "pores",
+      "sources": [
+        "wf",
+        "wp"
+      ]
+    },
+    "ring": {
+      "value": "no",
+      "sources": [
+        "wp",
+        "wf"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "wp",
+        "wf"
+      ]
+    },
+    "growsOn": {
+      "value": "wood",
+      "sources": [
+        "wf",
+        "wp"
+      ]
+    },
+    "capCm": {
+      "value": [
+        4,
+        25
+      ],
+      "sources": [
+        "wf",
+        "wp"
+      ]
+    },
+    "fleshChange": {
+      "value": "Thin, corky, off-white to pale buff",
+      "sources": [
+        "wf"
+      ]
+    },
+    "smell": {
+      "value": "Not distinctive, or somewhat sweet",
+      "sources": [
+        "wf"
+      ]
+    }
+  },
+  "lookalikes": [],
+  "noDangerousLookalike": null,
+  "photos": [],
+  "sources": [
+    {
+      "id": "wf",
+      "title": "Wild Food UK — Bay Polypore",
+      "url": "https://www.wildfooduk.com/mushroom-guide/bay-polypore/"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Picipes badius",
+      "url": "https://en.wikipedia.org/wiki/Picipes_badius"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}

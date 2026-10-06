@@ -514,6 +514,49 @@
           ]
         }
       ]
+    },
+    {
+      "scientific": "Leucocoprinus leucothites",
+      "english": "White Dapperling",
+      "slug": "white-dapperling",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Stem base",
+          "thisOne": "In a white, bag-like volva",
+          "thatOne": "Slightly swollen, with no bag",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "fn-wd",
+            "wf-wd"
+          ]
+        },
+        {
+          "feature": "Where it grows",
+          "thisOne": "Broadleaved woodland, especially oak",
+          "thatOne": "Pastures, gardens, parks",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "fn-wd",
+            "wf-wd"
+          ]
+        },
+        {
+          "feature": "Cap",
+          "thisOne": "Usually olive-green or yellowish — but a white form exists",
+          "thatOne": "White, flushed cream",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-wd",
+            "wf-wd"
+          ]
+        }
+      ]
     }
   ],
   "noDangerousLookalike": null,
@@ -707,6 +750,16 @@
       "id": "wp-sy",
       "title": "Wikipedia — Volvariella bombycina",
       "url": "https://en.wikipedia.org/wiki/Volvariella_bombycina"
+    },
+    {
+      "id": "fn-wd",
+      "title": "First Nature — Leucocoprinus leucothites, White Dapperling",
+      "url": "https://www.first-nature.com/fungi/leucoagaricus-leucothites.php"
+    },
+    {
+      "id": "wf-wd",
+      "title": "Wild Food UK — White Dapperling",
+      "url": "https://www.wildfooduk.com/mushroom-guide/white-dapperling/"
     },
     {
       "id": "wf-prot",

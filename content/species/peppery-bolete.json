@@ -1,0 +1,231 @@
+{
+  "slug": "peppery-bolete",
+  "inatId": 147354,
+  "scientific": "Chalciporus piperatus",
+  "english": "Peppery Bolete",
+  "olderNames": [
+    "Boletus piperatus",
+    "Suillus piperatus"
+  ],
+  "edibility": {
+    "value": "edible-cooked",
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "edibilityNote": {
+    "value": "Very hot and peppery: dried and ground as a spice, or cooked by people who like chillies. Wikipedia says it contains toxins and is usually considered inedible; cook it well to lower the risk of a stomach upset.",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "A small bolete: yellow-orange to cinnamon-brown cap, 2–8 cm, shiny when dry.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "Underneath: rusty-orange to cinnamon pores that do not change colour when bruised.",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    {
+      "value": "A thin stem, bright chrome-yellow at the very base.",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    {
+      "value": "Under birch and pine, often where Fly Agarics grow.",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "Mixed woodland, mostly with birch and pine, often where Fly Agarics grow.",
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      8,
+      9,
+      10
+    ],
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "sporePrint": {
+    "value": "Cinnamon",
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "pores",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    "ring": {
+      "value": "no",
+      "sources": [
+        "wp",
+        "fn",
+        "wf"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "wp",
+        "fn",
+        "wf"
+      ]
+    },
+    "growsOn": {
+      "value": "ground",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "capCm": {
+      "value": [
+        2,
+        8
+      ],
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    "fleshChange": {
+      "value": "Yellow, chrome-yellow at the stem base; it does not turn blue",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "smell": {
+      "value": "Not distinctive",
+      "sources": [
+        "fn"
+      ]
+    }
+  },
+  "lookalikes": [
+    {
+      "scientific": "Rubroboletus satanas",
+      "english": "Devil's Bolete",
+      "slug": null,
+      "kind": "poisonous",
+      "tellApart": [
+        {
+          "feature": "Cap",
+          "thisOne": "Yellow-orange to cinnamon-brown, small",
+          "thatOne": "Chalky white to pale grey, much larger",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-lb",
+            "wf-lb",
+            "wp-lb"
+          ]
+        },
+        {
+          "feature": "Pores",
+          "thisOne": "Rusty-orange to cinnamon",
+          "thatOne": "Orange to red",
+          "sources": [
+            "fn",
+            "wf"
+          ]
+        },
+        {
+          "feature": "Cut it",
+          "thisOne": "The flesh does not turn blue",
+          "thatOne": "The flesh turns pale blue",
+          "sources": [
+            "fn",
+            "wf",
+            "wf-lb"
+          ]
+        }
+      ]
+    }
+  ],
+  "noDangerousLookalike": null,
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Chalciporus piperatus, Peppery Bolete",
+      "url": "https://www.first-nature.com/fungi/chalciporus-piperatus.php"
+    },
+    {
+      "id": "wf",
+      "title": "Wild Food UK — Peppery Bolete",
+      "url": "https://www.wildfooduk.com/mushroom-guide/peppery-bolete/"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Chalciporus piperatus",
+      "url": "https://en.wikipedia.org/wiki/Chalciporus_piperatus"
+    },
+    {
+      "id": "fn-lb",
+      "title": "First Nature — Suillellus luridus, Lurid Bolete",
+      "url": "https://www.first-nature.com/fungi/suillellus-luridus.php"
+    },
+    {
+      "id": "wf-lb",
+      "title": "Wild Food UK — Lurid Bolete",
+      "url": "https://www.wildfooduk.com/mushroom-guide/lurid-bolete/"
+    },
+    {
+      "id": "wp-lb",
+      "title": "Wikipedia — Suillellus luridus",
+      "url": "https://en.wikipedia.org/wiki/Suillellus_luridus"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}

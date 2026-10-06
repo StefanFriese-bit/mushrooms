@@ -1,10 +1,11 @@
 {
-  "slug": "crystal-brain",
-  "inatId": 742831,
-  "scientific": "Myxarium nucleatum",
-  "english": "Crystal Brain",
+  "slug": "white-brain",
+  "inatId": 1696743,
+  "scientific": "Descidia thuretiana",
+  "english": "White Brain",
   "olderNames": [
-    "Exidia nucleata"
+    "Exidia thuretiana",
+    "Tremella albida"
   ],
   "edibility": {
     "value": "not-edible",
@@ -22,21 +23,21 @@
   },
   "topPoints": [
     {
-      "value": "Clear to whitish jelly blobs, up to 1–2 cm, often merging into brain-like patches up to 6 cm.",
+      "value": "Clear to pure white jelly cushions, each up to 2 cm, merging into masses along dead branches.",
       "sources": [
         "fn",
         "wp"
       ]
     },
     {
-      "value": "Small hard white grains inside, like frog spawn with white 'eggs'.",
+      "value": "Becomes folded like a brain with age; almost invisible once dried.",
       "sources": [
         "fn",
         "wp"
       ]
     },
     {
-      "value": "On dead branches of broadleaved trees, especially sycamore, beech and ash.",
+      "value": "On dead branches of broadleaved trees, especially beech and ash.",
       "sources": [
         "fn",
         "wp"
@@ -44,7 +45,7 @@
     }
   ],
   "habitat": {
-    "value": "Dead attached or fallen branches of broadleaved trees, especially sycamore, beech and ash.",
+    "value": "Dead attached or fallen branches of broadleaved trees, especially beech and ash; also oak and hazel.",
     "sources": [
       "fn",
       "wp"
@@ -52,18 +53,10 @@
   },
   "seasonMonths": {
     "value": [
-      1,
-      2,
-      3,
-      4,
-      5,
-      6,
-      7,
-      8,
-      9,
       10,
       11,
-      12
+      12,
+      1
     ],
     "sources": [
       "fn"
@@ -72,8 +65,7 @@
   "sporePrint": {
     "value": "White",
     "sources": [
-      "fn",
-      "wp"
+      "fn"
     ]
   },
   "features": {
@@ -108,7 +100,7 @@
     "capCm": {
       "value": [
         0.2,
-        6
+        30
       ],
       "sources": [
         "fn",
@@ -116,7 +108,7 @@
       ]
     },
     "fleshChange": {
-      "value": "Watery jelly with hard white grains",
+      "value": "Soft white jelly; dries to a thin film",
       "sources": [
         "fn",
         "wp"
@@ -131,28 +123,28 @@
   },
   "lookalikes": [
     {
-      "scientific": "Descidia thuretiana",
-      "english": "White Brain",
-      "slug": "white-brain",
+      "scientific": "Myxarium nucleatum",
+      "english": "Crystal Brain",
+      "slug": "crystal-brain",
       "kind": "not-edible",
       "tellApart": [
         {
           "feature": "Inside",
-          "thisOne": "Hard white grains",
-          "thatOne": "No hard grains",
+          "thisOne": "No hard grains",
+          "thatOne": "Hard white grains",
           "sources": [
-            "fn",
-            "wp-wb"
+            "wp",
+            "fn-cb"
           ]
         },
         {
           "feature": "Shape",
-          "thisOne": "Blobs and pimples",
-          "thatOne": "Cushions, folding like a brain",
+          "thisOne": "Cushions, folding like a brain",
+          "thatOne": "Blobs and pimples",
           "sources": [
-            "fn",
             "wp",
-            "wp-wb"
+            "fn-cb",
+            "wp-cb"
           ]
         }
       ]
@@ -163,18 +155,23 @@
   "sources": [
     {
       "id": "fn",
+      "title": "First Nature — Descidia thuretiana, White Brain",
+      "url": "https://www.first-nature.com/fungi/exidia-thuretiana.php"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Descidia thuretiana",
+      "url": "https://en.wikipedia.org/wiki/Descidia_thuretiana"
+    },
+    {
+      "id": "fn-cb",
       "title": "First Nature — Myxarium nucleatum, Crystal Brain",
       "url": "https://www.first-nature.com/fungi/exidia-nucleata.php"
     },
     {
-      "id": "wp",
+      "id": "wp-cb",
       "title": "Wikipedia — Myxarium nucleatum",
       "url": "https://en.wikipedia.org/wiki/Myxarium_nucleatum"
-    },
-    {
-      "id": "wp-wb",
-      "title": "Wikipedia — Descidia thuretiana",
-      "url": "https://en.wikipedia.org/wiki/Descidia_thuretiana"
     },
     {
       "id": "wf-prot",
