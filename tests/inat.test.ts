@@ -103,4 +103,27 @@ describe('inat client', () => {
     await expect(client.resolveTaxon('A b', 'species')).rejects.toThrow(/found 0/);
     await expect(client.resolveTaxon('A b', 'species')).rejects.toThrow(/found 2/);
   });
+
+  it("lists a taxon's other scientific names (older names), not its own", async () => {
+    const http = fakeHttp([
+      ok({
+        results: [
+          {
+            id: 7,
+            name: 'Collybia nuda',
+            names: [
+              { name: 'Collybia nuda', lexicon: 'scientific-names', is_valid: true },
+              { name: 'Lepista nuda', lexicon: 'scientific-names', is_valid: false },
+              { name: 'Wood Blewit', lexicon: 'english', is_valid: true },
+            ],
+          },
+        ],
+      }),
+    ]);
+    const clock = fakeClock();
+    const client = createInatClient({ fetch: http.fetch, now: clock.now, sleep: clock.sleep });
+    await expect(client.olderNames(7)).resolves.toEqual(['Lepista nuda']);
+    expect(http.calls[0]).toContain('/taxa/7?all_names=true');
+  });
 });
+

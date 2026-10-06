@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { englishName, parseBmsLatinToEnglish } from '../tools/lib/bms-names.ts';
+import { englishName, nameClashes, parseBmsLatinToEnglish, tidyEnglish } from '../tools/lib/bms-names.ts';
 
 const SAMPLE = [
   'List of Recommended English',
@@ -41,6 +41,23 @@ describe('parseBmsLatinToEnglish', () => {
     expect(paged.unparsed).toEqual(['2']);
   });
 
+  it('joins a double name that wraps onto the next line, and nothing else', () => {
+    const wrapped = parseBmsLatinToEnglish(
+      [
+        'Current Scientific Latin name Recommended English',
+        'Coprinus comatus',
+        "Shaggy Inkcap / Lawyer's",
+        'Wig',
+        'Camarophyllopsis atropuncta Dotted Fanvault',
+        'Camarophyllopsis',
+        'English to Latin names',
+      ].join('\n'),
+    );
+    expect(wrapped.names.get('Coprinus comatus')).toBe("Shaggy Inkcap / Lawyer's Wig");
+    expect(wrapped.names.get('Camarophyllopsis atropuncta')).toBe('Dotted Fanvault');
+    expect(wrapped.unparsed).toEqual(['Camarophyllopsis']);
+  });
+
   it('joins a Latin name and its English name split over two lines', () => {
     expect(names.get('Astraeus hygrometricus')).toBe('Barometer Earthstar');
   });
@@ -56,12 +73,43 @@ describe('parseBmsLatinToEnglish', () => {
 });
 
 describe('englishName', () => {
-  const bms = new Map([['Agaricus arvensis', 'Horse Mushroom']]);
+  const bms = new Map([
+    ['Agaricus arvensis', 'Horse Mushroom'],
+    ['Lepista nuda', 'Wood Blewit'],
+  ]);
   it('prefers the BMS name', () => {
-    expect(englishName('Agaricus arvensis', bms, 'horse mushroom')).toEqual({ english: 'Horse Mushroom', source: 'bms-2005' });
+    expect(englishName('Agaricus arvensis', bms, 'horse mushroom')).toEqual({ english: 'Horse Mushroom', source: 'bms-2005', via: null });
   });
-  it("falls back to iNaturalist's name, then to none", () => {
-    expect(englishName('Boletus edulis', bms, 'Penny Bun')).toEqual({ english: 'Penny Bun', source: 'inaturalist' });
-    expect(englishName('Boletus edulis', bms, null)).toEqual({ english: null, source: null });
+  it('finds the BMS name under an older scientific name', () => {
+    expect(englishName('Collybia nuda', bms, 'Blewit', ['Lepista nuda'])).toEqual({ english: 'Wood Blewit', source: 'bms-2005', via: 'Lepista nuda' });
+  });
+  it("falls back to iNaturalist's name, tidied, then to none", () => {
+    expect(englishName('Boletus edulis', bms, 'penny bun')).toEqual({ english: 'Penny Bun', source: 'inaturalist', via: null });
+    expect(englishName('Boletus edulis', bms, null)).toEqual({ english: null, source: null, via: null });
+  });
+});
+
+describe('tidyEnglish', () => {
+  it('capitalises words but keeps the small ones small', () => {
+    expect(tidyEnglish('chicken of the woods')).toBe('Chicken of the Woods');
+    expect(tidyEnglish("hare's foot inkcap")).toBe("Hare's Foot Inkcap");
+    expect(tidyEnglish('dung-loving Deconica')).toBe('Dung-loving Deconica');
+  });
+});
+
+describe('nameClashes', () => {
+  it('finds an English name given to two species, and one that the BMS list gives to another species', () => {
+    const bms = new Map([['Conocybe tenera', 'Common Conecap']]);
+    const rows = [
+      { name: 'Pholiotina rugosa', english: 'Common Conecap' },
+      { name: 'Aaa bbb', english: 'Same Name' },
+      { name: 'Ccc ddd', english: 'same name' },
+      { name: 'Conocybe tenera', english: 'Common Conecap' },
+    ];
+    expect(nameClashes(rows, bms)).toEqual([
+      '"Common Conecap" is used for Pholiotina rugosa and Conocybe tenera',
+      '"Same Name" is used for Aaa bbb and Ccc ddd',
+      '"Common Conecap" (Pholiotina rugosa) is the BMS name of Conocybe tenera',
+    ]);
   });
 });

@@ -1,6 +1,6 @@
 # Species list: build report
 
-Generated: 2026-10-06T10:44:04.804Z · Target: 300 · Picked: 300
+Generated: 2026-10-06T10:49:57.799Z · Target: 300 · Picked: 300
 
 ## Where they come from
 - Deadly: 18
@@ -27,10 +27,18 @@ Generated: 2026-10-06T10:44:04.804Z · Target: 300 · Picked: 300
 - Left out: Trochila (genus, iNaturalist 339413) — speckles on fallen holly leaves
 
 ## English names
-- From the BMS list (2005): 196 of 300
-- From iNaturalist: 101
+- From the BMS list (2005): 269 of 300 (73 of them found under an older scientific name)
+- Set by hand, with a source (tools/config/english-names.json): 1
+- From iNaturalist: 27
 - None: 3
-- BMS list lines not understood: 68
+- BMS list lines not understood: 64
+
+## English names that clash
+- "Lilac Fibrecap" (Inocybe lilacina) is the BMS name of Inocybe geophylla var. lilacina
+- "Collared Earthstar" (Geastrum michelianum) is the BMS name of Geastrum triplex
+- "Persistent Waxcap" (Hygrocybe acutoconica) is the BMS name of Hygrocybe persistens
+- "Bay Polypore" (Picipes badius) is the BMS name of Polyporus durus
+- "Milky Conecap" (Conocybe apala) is the BMS name of Conocybe albipes
 
 ## Notes
 - Cortinarius orellanus has no UK research-grade records on iNaturalist; it is in for safety.

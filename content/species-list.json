@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-06T10:44:04.804Z",
+  "generated": "2026-10-06T10:49:57.799Z",
   "placeId": 6857,
   "target": 300,
   "species": [
@@ -8,6 +8,7 @@
       "name": "Agaricus campestris",
       "english": "Field Mushroom",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 266,
       "reasons": [
         "edible"
@@ -19,6 +20,7 @@
       "name": "Agaricus arvensis",
       "english": "Horse Mushroom",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 85,
       "reasons": [
         "edible"
@@ -29,7 +31,8 @@
       "inatId": 154291,
       "name": "Agaricus sylvicola",
       "english": "Wood Mushroom",
-      "englishSource": "inaturalist",
+      "englishSource": "bms-2005",
+      "englishVia": "Agaricus silvicola",
       "ukRecords": 8,
       "reasons": [
         "edible"
@@ -41,6 +44,7 @@
       "name": "Macrolepiota procera",
       "english": "Parasol",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 2541,
       "reasons": [
         "edible"
@@ -50,8 +54,9 @@
     {
       "inatId": 47392,
       "name": "Coprinus comatus",
-      "english": "Shaggy Inkcap / Lawyer's",
+      "english": "Shaggy Inkcap / Lawyer's Wig",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 8040,
       "reasons": [
         "edible"
@@ -63,6 +68,7 @@
       "name": "Calvatia gigantea",
       "english": "Giant Puffball",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 707,
       "reasons": [
         "edible"
@@ -74,6 +80,7 @@
       "name": "Lycoperdon perlatum",
       "english": "Common Puffball",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 2045,
       "reasons": [
         "edible"
@@ -85,6 +92,7 @@
       "name": "Cantharellus cibarius",
       "english": "Chanterelle",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 1009,
       "reasons": [
         "edible"
@@ -96,6 +104,7 @@
       "name": "Craterellus cornucopioides",
       "english": "Horn of Plenty",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 125,
       "reasons": [
         "edible"
@@ -107,6 +116,7 @@
       "name": "Hydnum repandum",
       "english": "Wood Hedgehog",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 285,
       "reasons": [
         "edible"
@@ -118,6 +128,7 @@
       "name": "Hydnum rufescens",
       "english": "Terracotta Hedgehog",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 44,
       "reasons": [
         "edible"
@@ -129,6 +140,7 @@
       "name": "Boletus edulis",
       "english": "Penny Bun / Cep",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 2031,
       "reasons": [
         "edible"
@@ -139,7 +151,8 @@
       "inatId": 510854,
       "name": "Imleria badia",
       "english": "Bay Bolete",
-      "englishSource": "inaturalist",
+      "englishSource": "bms-2005",
+      "englishVia": "Boletus badius",
       "ukRecords": 1462,
       "reasons": [
         "edible"
@@ -151,6 +164,7 @@
       "name": "Leccinum scabrum",
       "english": "Brown Birch Bolete",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 790,
       "reasons": [
         "edible"
@@ -162,6 +176,7 @@
       "name": "Leccinum versipelle",
       "english": "Orange Birch Bolete",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 295,
       "reasons": [
         "edible"
@@ -173,6 +188,7 @@
       "name": "Suillus luteus",
       "english": "Slippery Jack",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 319,
       "reasons": [
         "edible"
@@ -184,6 +200,7 @@
       "name": "Laetiporus sulphureus",
       "english": "Chicken of the Woods",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 7864,
       "reasons": [
         "edible"
@@ -195,6 +212,7 @@
       "name": "Fistulina hepatica",
       "english": "Beefsteak Fungus",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 3302,
       "reasons": [
         "edible"
@@ -206,6 +224,7 @@
       "name": "Grifola frondosa",
       "english": "Hen of the Woods",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 448,
       "reasons": [
         "edible"
@@ -217,6 +236,7 @@
       "name": "Sparassis crispa",
       "english": "Wood Cauliflower",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 744,
       "reasons": [
         "edible"
@@ -228,6 +248,7 @@
       "name": "Pleurotus ostreatus",
       "english": "Oyster Mushroom",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 1288,
       "reasons": [
         "edible"
@@ -239,6 +260,7 @@
       "name": "Pleurotus pulmonarius",
       "english": "Pale Oyster",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 230,
       "reasons": [
         "edible"
@@ -250,6 +272,7 @@
       "name": "Flammulina velutipes",
       "english": "Velvet Shank",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 32,
       "reasons": [
         "edible"
@@ -261,6 +284,7 @@
       "name": "Calocybe gambosa",
       "english": "St. George's Mushroom",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 750,
       "reasons": [
         "edible"
@@ -272,6 +296,7 @@
       "name": "Marasmius oreades",
       "english": "Fairy Ring Champignon",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 1206,
       "reasons": [
         "edible"
@@ -283,6 +308,7 @@
       "name": "Laccaria amethystina",
       "english": "Amethyst Deceiver",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 3981,
       "reasons": [
         "edible"
@@ -294,6 +320,7 @@
       "name": "Auricularia auricula-judae",
       "english": "Jelly Ear",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 12160,
       "reasons": [
         "edible"
@@ -305,6 +332,7 @@
       "name": "Morchella esculenta",
       "english": "Morel",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 79,
       "reasons": [
         "edible"
@@ -316,6 +344,7 @@
       "name": "Lactarius deliciosus",
       "english": "Saffron Milkcap",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 160,
       "reasons": [
         "edible"
@@ -327,6 +356,7 @@
       "name": "Amanita rubescens",
       "english": "Blusher",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 5361,
       "reasons": [
         "edible"
@@ -337,7 +367,8 @@
       "inatId": 940028,
       "name": "Cerioporus squamosus",
       "english": "Dryad's Saddle",
-      "englishSource": "inaturalist",
+      "englishSource": "bms-2005",
+      "englishVia": "Polyporus squamosus",
       "ukRecords": 7184,
       "reasons": [
         "edible"
@@ -349,6 +380,7 @@
       "name": "Kuehneromyces mutabilis",
       "english": "Sheathed Woodtuft",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 1084,
       "reasons": [
         "edible"
@@ -360,6 +392,7 @@
       "name": "Clitopilus prunulus",
       "english": "The Miller",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 124,
       "reasons": [
         "edible"
@@ -371,6 +404,7 @@
       "name": "Amanita phalloides",
       "english": "Deathcap",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 427,
       "reasons": [
         "dangerous-lookalike",
@@ -383,6 +417,7 @@
       "name": "Amanita virosa",
       "english": "Destroying Angel",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 36,
       "reasons": [
         "dangerous-lookalike",
@@ -395,6 +430,7 @@
       "name": "Amanita pantherina",
       "english": "Panthercap",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 336,
       "reasons": [
         "dangerous-lookalike",
@@ -407,6 +443,7 @@
       "name": "Galerina marginata",
       "english": "Funeral Bell",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 163,
       "reasons": [
         "dangerous-lookalike",
@@ -419,6 +456,7 @@
       "name": "Lepiota brunneoincarnata",
       "english": "Deadly Dapperling",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 3,
       "reasons": [
         "dangerous-lookalike",
@@ -431,6 +469,7 @@
       "name": "Lepiota subincarnata",
       "english": "Fatal Dapperling",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 21,
       "reasons": [
         "dangerous-lookalike",
@@ -443,6 +482,7 @@
       "name": "Cortinarius rubellus",
       "english": "Deadly Webcap",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 78,
       "reasons": [
         "dangerous-lookalike",
@@ -455,6 +495,7 @@
       "name": "Cortinarius orellanus",
       "english": "Fool's Webcap",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 0,
       "reasons": [
         "deadly"
@@ -464,8 +505,9 @@
     {
       "inatId": 1112491,
       "name": "Inosperma erubescens",
-      "english": "deadly fibrecap",
-      "englishSource": "inaturalist",
+      "english": "Deadly Fibrecap",
+      "englishSource": "bms-2005",
+      "englishVia": "Inocybe erubescens",
       "ukRecords": 5,
       "reasons": [
         "dangerous-lookalike",
@@ -478,6 +520,7 @@
       "name": "Inocybe geophylla",
       "english": "White Fibrecap",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 43,
       "reasons": [
         "deadly"
@@ -489,6 +532,7 @@
       "name": "Inocybe lilacina",
       "english": "Lilac Fibrecap",
       "englishSource": "inaturalist",
+      "englishVia": null,
       "ukRecords": 8,
       "reasons": [
         "dangerous-lookalike",
@@ -500,7 +544,8 @@
       "inatId": 1525557,
       "name": "Collybia rivulosa",
       "english": "Fool's Funnel",
-      "englishSource": "inaturalist",
+      "englishSource": "bms-2005",
+      "englishVia": "Clitocybe rivulosa",
       "ukRecords": 20,
       "reasons": [
         "dangerous-lookalike",
@@ -512,7 +557,8 @@
       "inatId": 1525535,
       "name": "Collybia dealbata",
       "english": "Ivory Funnel",
-      "englishSource": "inaturalist",
+      "englishSource": "bms-2005",
+      "englishVia": "Clitocybe dealbata",
       "ukRecords": 0,
       "reasons": [
         "dangerous-lookalike",
@@ -525,6 +571,7 @@
       "name": "Gyromitra esculenta",
       "english": "False Morel",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 155,
       "reasons": [
         "dangerous-lookalike",
@@ -537,6 +584,7 @@
       "name": "Paxillus involutus",
       "english": "Brown Rollrim",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 769,
       "reasons": [
         "dangerous-lookalike",
@@ -547,8 +595,9 @@
     {
       "inatId": 877494,
       "name": "Pholiotina rugosa",
-      "english": "Common Conecap",
-      "englishSource": "inaturalist",
+      "english": "Wrinkled Conecap",
+      "englishSource": "hand-set",
+      "englishVia": null,
       "ukRecords": 23,
       "reasons": [
         "deadly"
@@ -560,6 +609,7 @@
       "name": "Pleurocybella porrigens",
       "english": "Angel's Wings",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 351,
       "reasons": [
         "dangerous-lookalike",
@@ -572,6 +622,7 @@
       "name": "Tricholoma terreum",
       "english": "Grey Knight",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 54,
       "reasons": [
         "deadly"
@@ -583,6 +634,7 @@
       "name": "Lepiota cristata",
       "english": "Stinking Dapperling",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 137,
       "reasons": [
         "dangerous-lookalike"
@@ -593,7 +645,8 @@
       "inatId": 56535,
       "name": "Chlorophyllum rhacodes",
       "english": "Shaggy Parasol",
-      "englishSource": "inaturalist",
+      "englishSource": "bms-2005",
+      "englishVia": "Macrolepiota rhacodes",
       "ukRecords": 592,
       "reasons": [
         "dangerous-lookalike"
@@ -605,6 +658,7 @@
       "name": "Agaricus xanthodermus",
       "english": "Yellow Stainer",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 361,
       "reasons": [
         "dangerous-lookalike"
@@ -616,6 +670,7 @@
       "name": "Entoloma sinuatum",
       "english": "Livid Pinkgill",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 2,
       "reasons": [
         "dangerous-lookalike"
@@ -627,6 +682,7 @@
       "name": "Omphalotus illudens",
       "english": "Jack O'Lantern",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 8,
       "reasons": [
         "dangerous-lookalike"
@@ -638,6 +694,7 @@
       "name": "Hygrophoropsis aurantiaca",
       "english": "False Chanterelle",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 1161,
       "reasons": [
         "dangerous-lookalike"
@@ -649,6 +706,7 @@
       "name": "Scleroderma citrinum",
       "english": "Common Earthball",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 2007,
       "reasons": [
         "dangerous-lookalike"
@@ -659,7 +717,8 @@
       "inatId": 63224,
       "name": "Coprinopsis picacea",
       "english": "Magpie Inkcap",
-      "englishSource": "inaturalist",
+      "englishSource": "bms-2005",
+      "englishVia": "Coprinus picaceus",
       "ukRecords": 1424,
       "reasons": [
         "dangerous-lookalike"
@@ -671,6 +730,7 @@
       "name": "Lactarius torminosus",
       "english": "Woolly Milkcap",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 171,
       "reasons": [
         "dangerous-lookalike"
@@ -682,6 +742,7 @@
       "name": "Amanita muscaria",
       "english": "Fly Agaric",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 13838,
       "reasons": [
         "most-recorded"
@@ -691,8 +752,9 @@
     {
       "inatId": 775410,
       "name": "Fomitopsis betulina",
-      "english": "birch polypore",
-      "englishSource": "inaturalist",
+      "english": "Birch Polypore / Razorstrop Fungus",
+      "englishSource": "bms-2005",
+      "englishVia": "Piptoporus betulinus",
       "ukRecords": 10296,
       "reasons": [
         "most-recorded"
@@ -704,6 +766,7 @@
       "name": "Xylaria hypoxylon",
       "english": "Candlesnuff Fungus",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 7976,
       "reasons": [
         "most-recorded"
@@ -715,6 +778,7 @@
       "name": "Trametes versicolor",
       "english": "Turkeytail",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 7835,
       "reasons": [
         "most-recorded"
@@ -726,6 +790,7 @@
       "name": "Hypholoma fasciculare",
       "english": "Sulphur Tuft",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 5678,
       "reasons": [
         "most-recorded"
@@ -735,8 +800,9 @@
     {
       "inatId": 121714,
       "name": "Daldinia concentrica",
-      "english": "King Alfred's Cakes / Cramp",
+      "english": "King Alfred's Cakes / Cramp Balls",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 5326,
       "reasons": [
         "most-recorded"
@@ -748,6 +814,7 @@
       "name": "Meripilus giganteus",
       "english": "Giant Polypore",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 3760,
       "reasons": [
         "most-recorded"
@@ -759,6 +826,7 @@
       "name": "Stereum hirsutum",
       "english": "Hairy Curtain Crust",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 3741,
       "reasons": [
         "most-recorded"
@@ -770,6 +838,7 @@
       "name": "Clitocybe nebularis",
       "english": "Clouded Funnel",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 3580,
       "reasons": [
         "most-recorded"
@@ -781,6 +850,7 @@
       "name": "Tremella mesenterica",
       "english": "Yellow Brain",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 3567,
       "reasons": [
         "most-recorded"
@@ -792,6 +862,7 @@
       "name": "Calocera viscosa",
       "english": "Yellow Stagshorn",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 3287,
       "reasons": [
         "most-recorded"
@@ -801,8 +872,9 @@
     {
       "inatId": 348711,
       "name": "Gliophorus psittacinus",
-      "english": "Parrot Mushroom",
-      "englishSource": "inaturalist",
+      "english": "Parrot Waxcap",
+      "englishSource": "bms-2005",
+      "englishVia": "Hygrocybe psittacina",
       "ukRecords": 3165,
       "reasons": [
         "most-recorded"
@@ -812,8 +884,9 @@
     {
       "inatId": 55474,
       "name": "Bolbitius titubans",
-      "english": "yellow fieldcap",
-      "englishSource": "inaturalist",
+      "english": "Yellow Fieldcap",
+      "englishSource": "bms-2005",
+      "englishVia": "Bolbitius vitellinus",
       "ukRecords": 3014,
       "reasons": [
         "most-recorded"
@@ -825,6 +898,7 @@
       "name": "Oudemansiella mucida",
       "english": "Porcelain Fungus",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 2810,
       "reasons": [
         "most-recorded"
@@ -835,7 +909,8 @@
       "inatId": 486380,
       "name": "Cuphophyllus virgineus",
       "english": "Snowy Waxcap",
-      "englishSource": "inaturalist",
+      "englishSource": "bms-2005",
+      "englishVia": "Hygrocybe virginea",
       "ukRecords": 2805,
       "reasons": [
         "most-recorded"
@@ -846,7 +921,8 @@
       "inatId": 361641,
       "name": "Cuphophyllus pratensis",
       "english": "Meadow Waxcap",
-      "englishSource": "inaturalist",
+      "englishSource": "bms-2005",
+      "englishVia": "Hygrocybe pratensis",
       "ukRecords": 2339,
       "reasons": [
         "most-recorded"
@@ -858,6 +934,7 @@
       "name": "Phallus impudicus",
       "english": "Stinkhorn",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 2322,
       "reasons": [
         "most-recorded"
@@ -869,6 +946,7 @@
       "name": "Daedaleopsis confragosa",
       "english": "Blushing Bracket",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 2293,
       "reasons": [
         "most-recorded"
@@ -880,6 +958,7 @@
       "name": "Fomes fomentarius",
       "english": "Hoof Fungus / Tinder Bracket",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 2136,
       "reasons": [
         "most-recorded"
@@ -889,8 +968,9 @@
     {
       "inatId": 56314,
       "name": "Coprinellus disseminatus",
-      "english": "Trooping Crumble Cap",
-      "englishSource": "inaturalist",
+      "english": "Fairy Inkcap",
+      "englishSource": "bms-2005",
+      "englishVia": "Coprinus disseminatus",
       "ukRecords": 2070,
       "reasons": [
         "most-recorded"
@@ -902,6 +982,7 @@
       "name": "Amanita citrina",
       "english": "False Death-cap",
       "englishSource": "inaturalist",
+      "englishVia": null,
       "ukRecords": 1931,
       "reasons": [
         "most-recorded"
@@ -913,6 +994,7 @@
       "name": "Hygrocybe coccinea",
       "english": "Scarlet Waxcap",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 1878,
       "reasons": [
         "most-recorded"
@@ -924,6 +1006,7 @@
       "name": "Helvella crispa",
       "english": "White Saddle",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 1877,
       "reasons": [
         "most-recorded"
@@ -933,8 +1016,9 @@
     {
       "inatId": 972793,
       "name": "Apioperdon pyriforme",
-      "english": "Pear-shaped Puffball",
-      "englishSource": "inaturalist",
+      "english": "Stump Puffball",
+      "englishSource": "bms-2005",
+      "englishVia": "Lycoperdon pyriforme",
       "ukRecords": 1841,
       "reasons": [
         "most-recorded"
@@ -946,6 +1030,7 @@
       "name": "Hygrocybe conica",
       "english": "Blackening Waxcap",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 1650,
       "reasons": [
         "most-recorded"
@@ -957,6 +1042,7 @@
       "name": "Phaeolus schweinitzii",
       "english": "Dyer's Mazegill",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 1524,
       "reasons": [
         "most-recorded"
@@ -966,8 +1052,9 @@
     {
       "inatId": 56318,
       "name": "Coprinellus micaceus",
-      "english": "mica cap",
-      "englishSource": "inaturalist",
+      "english": "Glistening Inkcap",
+      "englishSource": "bms-2005",
+      "englishVia": "Coprinus micaceus",
       "ukRecords": 1343,
       "reasons": [
         "most-recorded"
@@ -979,6 +1066,7 @@
       "name": "Bulgaria inquinans",
       "english": "Black Bulgar",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 1338,
       "reasons": [
         "most-recorded"
@@ -990,6 +1078,7 @@
       "name": "Chondrostereum purpureum",
       "english": "Silverleaf Fungus",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 1334,
       "reasons": [
         "most-recorded"
@@ -1001,6 +1090,7 @@
       "name": "Pholiota squarrosa",
       "english": "Shaggy Scalycap",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 1256,
       "reasons": [
         "most-recorded"
@@ -1012,6 +1102,7 @@
       "name": "Trametes gibbosa",
       "english": "Lumpy Bracket",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 1234,
       "reasons": [
         "most-recorded"
@@ -1023,6 +1114,7 @@
       "name": "Aleuria aurantia",
       "english": "Orange Peel Fungus",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 1172,
       "reasons": [
         "most-recorded"
@@ -1033,7 +1125,8 @@
       "inatId": 451026,
       "name": "Infundibulicybe geotropa",
       "english": "Trooping Funnel",
-      "englishSource": "inaturalist",
+      "englishSource": "bms-2005",
+      "englishVia": "Clitocybe geotropa",
       "ukRecords": 1129,
       "reasons": [
         "most-recorded"
@@ -1045,6 +1138,7 @@
       "name": "Mycena rosea",
       "english": "Rosy Bonnet",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 1099,
       "reasons": [
         "most-recorded"
@@ -1054,8 +1148,9 @@
     {
       "inatId": 1503458,
       "name": "Plicatura crispa",
-      "english": "crimped gill",
+      "english": "Crimped Gill",
       "englishSource": "inaturalist",
+      "englishVia": null,
       "ukRecords": 1090,
       "reasons": [
         "most-recorded"
@@ -1067,6 +1162,7 @@
       "name": "Hygrocybe ceracea",
       "english": "Butter Waxcap",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 1086,
       "reasons": [
         "most-recorded"
@@ -1076,8 +1172,9 @@
     {
       "inatId": 121217,
       "name": "Leratiomyces ceres",
-      "english": "Chip Cherries",
-      "englishSource": "inaturalist",
+      "english": "Redlead Roundhead",
+      "englishSource": "bms-2005",
+      "englishVia": "Stropharia aurantiaca",
       "ukRecords": 1085,
       "reasons": [
         "most-recorded"
@@ -1089,6 +1186,7 @@
       "name": "Suillus grevillei",
       "english": "Larch Bolete",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 1073,
       "reasons": [
         "most-recorded"
@@ -1100,6 +1198,7 @@
       "name": "Armillaria mellea",
       "english": "Honey Fungus",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 1046,
       "reasons": [
         "most-recorded"
@@ -1111,6 +1210,7 @@
       "name": "Ascocoryne sarcoides",
       "english": "Purple Jellydisc",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 1027,
       "reasons": [
         "most-recorded"
@@ -1120,8 +1220,9 @@
     {
       "inatId": 55605,
       "name": "Coprinopsis lagopus",
-      "english": "hare's foot inkcap",
-      "englishSource": "inaturalist",
+      "english": "Hare'sfoot Inkcap",
+      "englishSource": "bms-2005",
+      "englishVia": "Coprinus lagopus",
       "ukRecords": 1026,
       "reasons": [
         "most-recorded"
@@ -1133,6 +1234,7 @@
       "name": "Bjerkandera adusta",
       "english": "Smoky Bracket",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 990,
       "reasons": [
         "most-recorded"
@@ -1142,8 +1244,9 @@
     {
       "inatId": 54025,
       "name": "Psilocybe semilanceata",
-      "english": "Magic Mushroom / Liberty",
+      "english": "Magic Mushroom / Liberty Cap",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 971,
       "reasons": [
         "most-recorded"
@@ -1155,6 +1258,7 @@
       "name": "Hygrocybe chlorophana",
       "english": "Golden Waxcap",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 957,
       "reasons": [
         "most-recorded"
@@ -1166,6 +1270,7 @@
       "name": "Hygrocybe punicea",
       "english": "Crimson Waxcap",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 868,
       "reasons": [
         "most-recorded"
@@ -1177,6 +1282,7 @@
       "name": "Geastrum michelianum",
       "english": "Collared Earthstar",
       "englishSource": "inaturalist",
+      "englishVia": null,
       "ukRecords": 867,
       "reasons": [
         "most-recorded"
@@ -1187,7 +1293,8 @@
       "inatId": 1061811,
       "name": "Porpolomopsis calyptriformis",
       "english": "Pink Waxcap",
-      "englishSource": "inaturalist",
+      "englishSource": "bms-2005",
+      "englishVia": "Hygrocybe calyptriformis",
       "ukRecords": 856,
       "reasons": [
         "most-recorded"
@@ -1199,6 +1306,7 @@
       "name": "Schizophyllum commune",
       "english": "Common Porecrust",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 830,
       "reasons": [
         "most-recorded"
@@ -1210,6 +1318,7 @@
       "name": "Auricularia mesenterica",
       "english": "Tripe Fungus",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 826,
       "reasons": [
         "most-recorded"
@@ -1219,8 +1328,9 @@
     {
       "inatId": 742831,
       "name": "Myxarium nucleatum",
-      "english": "Crystal Brain Fungus",
-      "englishSource": "inaturalist",
+      "english": "Crystal Brain",
+      "englishSource": "bms-2005",
+      "englishVia": "Exidia nucleata",
       "ukRecords": 824,
       "reasons": [
         "most-recorded"
@@ -1230,8 +1340,9 @@
     {
       "inatId": 1525548,
       "name": "Collybia nuda",
-      "english": "Blewit",
-      "englishSource": "inaturalist",
+      "english": "Wood Blewit",
+      "englishSource": "bms-2005",
+      "englishVia": "Lepista nuda",
       "ukRecords": 800,
       "reasons": [
         "most-recorded"
@@ -1243,6 +1354,7 @@
       "name": "Tricholomopsis rutilans",
       "english": "Plums and Custard",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 788,
       "reasons": [
         "most-recorded"
@@ -1252,8 +1364,9 @@
     {
       "inatId": 48521,
       "name": "Coprinopsis atramentaria",
-      "english": "Common Ink Cap",
-      "englishSource": "inaturalist",
+      "english": "Common Inkcap",
+      "englishSource": "bms-2005",
+      "englishVia": "Coprinus atramentarius",
       "ukRecords": 774,
       "reasons": [
         "most-recorded"
@@ -1265,6 +1378,7 @@
       "name": "Exidia glandulosa",
       "english": "Witches' Butter",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 772,
       "reasons": [
         "most-recorded"
@@ -1276,6 +1390,7 @@
       "name": "Clavulinopsis helvola",
       "english": "Yellow Club",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 744,
       "reasons": [
         "most-recorded"
@@ -1287,6 +1402,7 @@
       "name": "Calocera cornea",
       "english": "Small Stagshorn",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 724,
       "reasons": [
         "most-recorded"
@@ -1298,6 +1414,7 @@
       "name": "Clavulinopsis corniculata",
       "english": "Meadow Coral",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 721,
       "reasons": [
         "most-recorded"
@@ -1309,6 +1426,7 @@
       "name": "Rhodotus palmatus",
       "english": "Wrinkled Peach",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 681,
       "reasons": [
         "most-recorded"
@@ -1319,7 +1437,8 @@
       "inatId": 499663,
       "name": "Gliophorus irrigatus",
       "english": "Slimy Waxcap",
-      "englishSource": "inaturalist",
+      "englishSource": "bms-2005",
+      "englishVia": "Hygrocybe irrigata",
       "ukRecords": 680,
       "reasons": [
         "most-recorded"
@@ -1331,6 +1450,7 @@
       "name": "Ganoderma applanatum",
       "english": "Artist's Bracket",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 664,
       "reasons": [
         "most-recorded"
@@ -1341,7 +1461,8 @@
       "inatId": 348720,
       "name": "Volvopluteus gloiocephalus",
       "english": "Stubble Rosegill",
-      "englishSource": "inaturalist",
+      "englishSource": "bms-2005",
+      "englishVia": "Volvariella gloiocephala",
       "ukRecords": 640,
       "reasons": [
         "most-recorded"
@@ -1353,6 +1474,7 @@
       "name": "Hygrocybe reidii",
       "english": "Honey Waxcap",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 632,
       "reasons": [
         "most-recorded"
@@ -1364,6 +1486,7 @@
       "name": "Inonotus hispidus",
       "english": "Shaggy Bracket",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 631,
       "reasons": [
         "most-recorded"
@@ -1375,6 +1498,7 @@
       "name": "Laccaria laccata",
       "english": "Deceiver",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 616,
       "reasons": [
         "most-recorded"
@@ -1386,6 +1510,7 @@
       "name": "Amanita fulva",
       "english": "Tawny Grisette",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 605,
       "reasons": [
         "most-recorded"
@@ -1397,6 +1522,7 @@
       "name": "Leotia lubrica",
       "english": "Jellybaby",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 604,
       "reasons": [
         "most-recorded"
@@ -1408,6 +1534,7 @@
       "name": "Lacrymaria lacrymabunda",
       "english": "Weeping Widow",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 580,
       "reasons": [
         "most-recorded"
@@ -1418,7 +1545,8 @@
       "inatId": 524919,
       "name": "Gliophorus laetus",
       "english": "Heath Waxcap",
-      "englishSource": "inaturalist",
+      "englishSource": "bms-2005",
+      "englishVia": "Hygrocybe laeta",
       "ukRecords": 576,
       "reasons": [
         "most-recorded"
@@ -1430,6 +1558,7 @@
       "name": "Cordyceps militaris",
       "english": "Scarlet Caterpillarclub",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 570,
       "reasons": [
         "most-recorded"
@@ -1439,8 +1568,9 @@
     {
       "inatId": 383374,
       "name": "Oudemansiella radicata",
-      "english": "rooting shank",
-      "englishSource": "inaturalist",
+      "english": "Rooting Shank",
+      "englishSource": "bms-2005",
+      "englishVia": "Xerula radicata",
       "ukRecords": 559,
       "reasons": [
         "most-recorded"
@@ -1450,8 +1580,9 @@
     {
       "inatId": 1367786,
       "name": "Favolaschia claudopus",
-      "english": "orange pore fungus",
+      "english": "Orange Pore Fungus",
       "englishSource": "inaturalist",
+      "englishVia": null,
       "ukRecords": 526,
       "reasons": [
         "most-recorded"
@@ -1461,8 +1592,9 @@
     {
       "inatId": 179113,
       "name": "Merulius tremellosus",
-      "english": "Trembling Crust",
-      "englishSource": "inaturalist",
+      "english": "Jelly Rot",
+      "englishSource": "bms-2005",
+      "englishVia": "Phlebia tremellosa",
       "ukRecords": 516,
       "reasons": [
         "most-recorded"
@@ -1472,8 +1604,9 @@
     {
       "inatId": 553907,
       "name": "Neoboletus erythropus",
-      "english": "Dotted Stem Bolete",
-      "englishSource": "inaturalist",
+      "english": "Scarletina Bolete",
+      "englishSource": "bms-2005",
+      "englishVia": "Boletus luridiformis",
       "ukRecords": 516,
       "reasons": [
         "most-recorded"
@@ -1483,8 +1616,9 @@
     {
       "inatId": 787944,
       "name": "Pseudoinonotus dryadeus",
-      "english": "oak bracket",
-      "englishSource": "inaturalist",
+      "english": "Oak Bracket",
+      "englishSource": "bms-2005",
+      "englishVia": "Inonotus dryadeus",
       "ukRecords": 515,
       "reasons": [
         "most-recorded"
@@ -1496,6 +1630,7 @@
       "name": "Panellus stipticus",
       "english": "Bitter Oysterling",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 500,
       "reasons": [
         "most-recorded"
@@ -1507,6 +1642,7 @@
       "name": "Hygrocybe quieta",
       "english": "Oily Waxcap",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 495,
       "reasons": [
         "most-recorded"
@@ -1518,6 +1654,7 @@
       "name": "Xylaria polymorpha",
       "english": "Dead Man's Fingers",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 486,
       "reasons": [
         "most-recorded"
@@ -1529,6 +1666,7 @@
       "name": "Phlebia radiata",
       "english": "Wrinkled Crust",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 470,
       "reasons": [
         "most-recorded"
@@ -1540,6 +1678,7 @@
       "name": "Dacrymyces stillatus",
       "english": "Common Jellyspot",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 459,
       "reasons": [
         "most-recorded"
@@ -1549,8 +1688,9 @@
     {
       "inatId": 438013,
       "name": "Xerocomellus chrysenteron",
-      "english": "Red-cracking Bolete",
-      "englishSource": "inaturalist",
+      "english": "Red Cracking Bolete",
+      "englishSource": "bms-2005",
+      "englishVia": "Boletus chrysenteron",
       "ukRecords": 457,
       "reasons": [
         "most-recorded"
@@ -1562,6 +1702,7 @@
       "name": "Panaeolus papilionaceus",
       "english": "Petticoat Mottlegill",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 452,
       "reasons": [
         "most-recorded"
@@ -1573,6 +1714,7 @@
       "name": "Chlorociboria aeruginascens",
       "english": "Green Elfcup",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 449,
       "reasons": [
         "most-recorded"
@@ -1582,8 +1724,9 @@
     {
       "inatId": 1536892,
       "name": "Fomitopsis quercina",
-      "english": "Oak mazegill",
-      "englishSource": "inaturalist",
+      "english": "Oak Mazegill",
+      "englishSource": "bms-2005",
+      "englishVia": "Daedalea quercina",
       "ukRecords": 442,
       "reasons": [
         "most-recorded"
@@ -1594,7 +1737,8 @@
       "inatId": 499652,
       "name": "Protostropharia semiglobata",
       "english": "Dung Roundhead",
-      "englishSource": "inaturalist",
+      "englishSource": "bms-2005",
+      "englishVia": "Stropharia semiglobata",
       "ukRecords": 440,
       "reasons": [
         "most-recorded"
@@ -1606,6 +1750,7 @@
       "name": "Mycena haematopus",
       "english": "Burgundydrop Bonnet",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 436,
       "reasons": [
         "most-recorded"
@@ -1617,6 +1762,7 @@
       "name": "Byssomerulius corium",
       "english": "Netted Crust",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 435,
       "reasons": [
         "most-recorded"
@@ -1627,7 +1773,8 @@
       "inatId": 1179954,
       "name": "Candolleomyces candolleanus",
       "english": "Pale Brittlestem",
-      "englishSource": "inaturalist",
+      "englishSource": "bms-2005",
+      "englishVia": "Psathyrella candolleana",
       "ukRecords": 431,
       "reasons": [
         "most-recorded"
@@ -1639,6 +1786,7 @@
       "name": "Clavaria fragilis",
       "english": "White Spindles",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 427,
       "reasons": [
         "most-recorded"
@@ -1650,6 +1798,7 @@
       "name": "Cystoderma amianthinum",
       "english": "Earthy Powdercap",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 424,
       "reasons": [
         "most-recorded"
@@ -1661,6 +1810,7 @@
       "name": "Kretzschmaria deusta",
       "english": "Brittle Cinder",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 422,
       "reasons": [
         "most-recorded"
@@ -1672,6 +1822,7 @@
       "name": "Mitrula paludosa",
       "english": "Bog Beacon",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 422,
       "reasons": [
         "most-recorded"
@@ -1683,6 +1834,7 @@
       "name": "Hygrocybe acutoconica",
       "english": "Persistent Waxcap",
       "englishSource": "inaturalist",
+      "englishVia": null,
       "ukRecords": 421,
       "reasons": [
         "most-recorded"
@@ -1694,6 +1846,7 @@
       "name": "Mycena galericulata",
       "english": "Common Bonnet",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 412,
       "reasons": [
         "most-recorded"
@@ -1705,6 +1858,7 @@
       "name": "Gymnopilus junonius",
       "english": "Spectacular Rustgill",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 408,
       "reasons": [
         "most-recorded"
@@ -1716,6 +1870,7 @@
       "name": "Amanita excelsa",
       "english": "European False Blusher",
       "englishSource": "inaturalist",
+      "englishVia": null,
       "ukRecords": 400,
       "reasons": [
         "most-recorded"
@@ -1727,6 +1882,7 @@
       "name": "Clathrus archeri",
       "english": "Devil's Fingers",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 399,
       "reasons": [
         "most-recorded"
@@ -1738,6 +1894,7 @@
       "name": "Abortiporus biennis",
       "english": "Blushing Rosette",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 398,
       "reasons": [
         "most-recorded"
@@ -1748,7 +1905,8 @@
       "inatId": 154675,
       "name": "Lycoperdon excipuliforme",
       "english": "Pestle Puffball",
-      "englishSource": "inaturalist",
+      "englishSource": "bms-2005",
+      "englishVia": "Handkea excipuliformis",
       "ukRecords": 398,
       "reasons": [
         "most-recorded"
@@ -1760,6 +1918,7 @@
       "name": "Cyathus striatus",
       "english": "Fluted Bird's Nest",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 395,
       "reasons": [
         "most-recorded"
@@ -1771,6 +1930,7 @@
       "name": "Phellinus pomaceus",
       "english": "Cushion Bracket",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 386,
       "reasons": [
         "most-recorded"
@@ -1780,8 +1940,9 @@
     {
       "inatId": 902551,
       "name": "Panaeolus foenisecii",
-      "english": "Mower's Mushroom",
-      "englishSource": "inaturalist",
+      "english": "Brown Mottlegill",
+      "englishSource": "bms-2005",
+      "englishVia": "Panaeolina foenisecii",
       "ukRecords": 378,
       "reasons": [
         "most-recorded"
@@ -1793,6 +1954,7 @@
       "name": "Panaeolus semiovatus",
       "english": "Egghead Mottlegill",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 361,
       "reasons": [
         "most-recorded"
@@ -1804,6 +1966,7 @@
       "name": "Rhodocollybia asema",
       "english": null,
       "englishSource": null,
+      "englishVia": null,
       "ukRecords": 357,
       "reasons": [
         "most-recorded"
@@ -1815,6 +1978,7 @@
       "name": "Polyporus tuberaster",
       "english": "Tuberous Polypore",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 356,
       "reasons": [
         "most-recorded"
@@ -1826,6 +1990,7 @@
       "name": "Amanita crocea",
       "english": "Orange Grisette",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 351,
       "reasons": [
         "most-recorded"
@@ -1837,6 +2002,7 @@
       "name": "Tricholoma sulphureum",
       "english": "Sulphur Knight",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 351,
       "reasons": [
         "most-recorded"
@@ -1847,7 +2013,8 @@
       "inatId": 1525546,
       "name": "Collybia odora",
       "english": "Aniseed Funnel",
-      "englishSource": "inaturalist",
+      "englishSource": "bms-2005",
+      "englishVia": "Clitocybe odora",
       "ukRecords": 348,
       "reasons": [
         "most-recorded"
@@ -1858,7 +2025,8 @@
       "inatId": 895016,
       "name": "Jackrogersella multiformis",
       "english": "Birch Woodwart",
-      "englishSource": "inaturalist",
+      "englishSource": "bms-2005",
+      "englishVia": "Hypoxylon multiforme",
       "ukRecords": 345,
       "reasons": [
         "most-recorded"
@@ -1868,8 +2036,9 @@
     {
       "inatId": 841424,
       "name": "Paralepista flaccida",
-      "english": "tawny funnel cap",
-      "englishSource": "inaturalist",
+      "english": "Tawny Funnel",
+      "englishSource": "bms-2005",
+      "englishVia": "Lepista flaccida",
       "ukRecords": 335,
       "reasons": [
         "most-recorded"
@@ -1881,6 +2050,7 @@
       "name": "Hygrocybe insipida",
       "english": "Spangle Waxcap",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 333,
       "reasons": [
         "most-recorded"
@@ -1892,6 +2062,7 @@
       "name": "Agaricus augustus",
       "english": "The Prince",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 324,
       "reasons": [
         "most-recorded"
@@ -1903,6 +2074,7 @@
       "name": "Exidiopsis effusa",
       "english": "Hair Ice",
       "englishSource": "inaturalist",
+      "englishVia": null,
       "ukRecords": 323,
       "reasons": [
         "most-recorded"
@@ -1914,6 +2086,7 @@
       "name": "Gloeophyllum sepiarium",
       "english": "Conifer Mazegill",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 323,
       "reasons": [
         "most-recorded"
@@ -1923,8 +2096,9 @@
     {
       "inatId": 157994,
       "name": "Gymnopus fusipes",
-      "english": "Spindleshank",
-      "englishSource": "inaturalist",
+      "english": "Spindle Toughshank",
+      "englishSource": "bms-2005",
+      "englishVia": "Collybia fusipes",
       "ukRecords": 321,
       "reasons": [
         "most-recorded"
@@ -1934,8 +2108,9 @@
     {
       "inatId": 118166,
       "name": "Rhodocollybia butyracea",
-      "english": "Buttery Collybia",
-      "englishSource": "inaturalist",
+      "english": "Butter Cap",
+      "englishSource": "bms-2005",
+      "englishVia": "Collybia butyracea",
       "ukRecords": 315,
       "reasons": [
         "most-recorded"
@@ -1947,6 +2122,7 @@
       "name": "Ganoderma resinaceum",
       "english": null,
       "englishSource": null,
+      "englishVia": null,
       "ukRecords": 312,
       "reasons": [
         "most-recorded"
@@ -1958,6 +2134,7 @@
       "name": "Lactarius turpis",
       "english": "Ugly Milkcap",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 307,
       "reasons": [
         "most-recorded"
@@ -1969,6 +2146,7 @@
       "name": "Xylaria longipes",
       "english": "Dead Moll's Fingers",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 291,
       "reasons": [
         "most-recorded"
@@ -1980,6 +2158,7 @@
       "name": "Rickenella fibula",
       "english": "Orange Mosscap",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 288,
       "reasons": [
         "most-recorded"
@@ -1989,8 +2168,9 @@
     {
       "inatId": 63583,
       "name": "Parasola plicatilis",
-      "english": "pleated inkcap",
-      "englishSource": "inaturalist",
+      "english": "Pleated Inkcap",
+      "englishSource": "bms-2005",
+      "englishVia": "Coprinus plicatilis",
       "ukRecords": 285,
       "reasons": [
         "most-recorded"
@@ -2000,8 +2180,9 @@
     {
       "inatId": 350511,
       "name": "Craterellus tubaeformis",
-      "english": "Yellowfoot",
-      "englishSource": "inaturalist",
+      "english": "Trumpet Chanterelle",
+      "englishSource": "bms-2005",
+      "englishVia": "Cantharellus tubaeformis",
       "ukRecords": 281,
       "reasons": [
         "most-recorded"
@@ -2013,6 +2194,7 @@
       "name": "Fomitopsis pinicola",
       "english": "Red-banded Polypore",
       "englishSource": "inaturalist",
+      "englishVia": null,
       "ukRecords": 281,
       "reasons": [
         "most-recorded"
@@ -2023,7 +2205,8 @@
       "inatId": 1525550,
       "name": "Collybia personata",
       "english": "Field Blewit",
-      "englishSource": "inaturalist",
+      "englishSource": "bms-2005",
+      "englishVia": "Lepista saeva",
       "ukRecords": 277,
       "reasons": [
         "most-recorded"
@@ -2035,6 +2218,7 @@
       "name": "Marasmius rotula",
       "english": "Collared Parachute",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 277,
       "reasons": [
         "most-recorded"
@@ -2046,6 +2230,7 @@
       "name": "Entoloma conferendum",
       "english": "Star Pinkgill",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 275,
       "reasons": [
         "most-recorded"
@@ -2057,6 +2242,7 @@
       "name": "Crucibulum laeve",
       "english": "Common Bird's Nest",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 268,
       "reasons": [
         "most-recorded"
@@ -2068,6 +2254,7 @@
       "name": "Volvariella bombycina",
       "english": "Silky Rosegill",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 268,
       "reasons": [
         "most-recorded"
@@ -2078,7 +2265,8 @@
       "inatId": 507493,
       "name": "Caloboletus radicans",
       "english": "Rooting Bolete",
-      "englishSource": "inaturalist",
+      "englishSource": "bms-2005",
+      "englishVia": "Boletus radicans",
       "ukRecords": 264,
       "reasons": [
         "most-recorded"
@@ -2088,8 +2276,9 @@
     {
       "inatId": 63585,
       "name": "Sarcomyxa serotina",
-      "english": "Late Oyster",
-      "englishSource": "inaturalist",
+      "english": "Olive Oysterling",
+      "englishSource": "bms-2005",
+      "englishVia": "Panellus serotinus",
       "ukRecords": 260,
       "reasons": [
         "most-recorded"
@@ -2101,6 +2290,7 @@
       "name": "Clavaria fumosa",
       "english": "Smoky Spindles",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 256,
       "reasons": [
         "most-recorded"
@@ -2112,6 +2302,7 @@
       "name": "Helvella lacunosa",
       "english": "Elfin Saddle",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 253,
       "reasons": [
         "most-recorded"
@@ -2122,7 +2313,8 @@
       "inatId": 824777,
       "name": "Suillellus luridus",
       "english": "Lurid Bolete",
-      "englishSource": "inaturalist",
+      "englishSource": "bms-2005",
+      "englishVia": "Boletus luridus",
       "ukRecords": 253,
       "reasons": [
         "most-recorded"
@@ -2134,6 +2326,7 @@
       "name": "Mutinus caninus",
       "english": "Dog Stinkhorn",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 251,
       "reasons": [
         "most-recorded"
@@ -2144,7 +2337,8 @@
       "inatId": 578456,
       "name": "Cyclocybe cylindracea",
       "english": "Poplar Fieldcap",
-      "englishSource": "inaturalist",
+      "englishSource": "bms-2005",
+      "englishVia": "Agrocybe cylindracea",
       "ukRecords": 249,
       "reasons": [
         "most-recorded"
@@ -2156,6 +2350,7 @@
       "name": "Hypocreopsis rhododendri",
       "english": "Hazel Gloves",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 247,
       "reasons": [
         "most-recorded"
@@ -2165,8 +2360,9 @@
     {
       "inatId": 712384,
       "name": "Agrocybe rivulosa",
-      "english": "wrinkled fieldcap",
+      "english": "Wrinkled Fieldcap",
       "englishSource": "inaturalist",
+      "englishVia": null,
       "ukRecords": 246,
       "reasons": [
         "most-recorded"
@@ -2178,6 +2374,7 @@
       "name": "Lycoperdon nigrescens",
       "english": "Dusky Puffball",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 242,
       "reasons": [
         "most-recorded"
@@ -2189,6 +2386,7 @@
       "name": "Clavulina rugosa",
       "english": "Wrinkled Club",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 239,
       "reasons": [
         "most-recorded"
@@ -2200,6 +2398,7 @@
       "name": "Hypoxylon fragiforme",
       "english": "Beech Woodwart",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 238,
       "reasons": [
         "most-recorded"
@@ -2211,6 +2410,7 @@
       "name": "Neobulgaria pura",
       "english": "Beech Jellydisc",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 236,
       "reasons": [
         "most-recorded"
@@ -2222,6 +2422,7 @@
       "name": "Clavulinopsis fusiformis",
       "english": "Golden Spindles",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 230,
       "reasons": [
         "most-recorded"
@@ -2232,7 +2433,8 @@
       "inatId": 1159218,
       "name": "Terana coerulea",
       "english": "Cobalt Crust",
-      "englishSource": "inaturalist",
+      "englishSource": "bms-2005",
+      "englishVia": "Pulcherricium caeruleum",
       "ukRecords": 230,
       "reasons": [
         "most-recorded"
@@ -2244,6 +2446,7 @@
       "name": "Phaeotremella frondosa",
       "english": null,
       "englishSource": null,
+      "englishVia": null,
       "ukRecords": 229,
       "reasons": [
         "most-recorded"
@@ -2255,6 +2458,7 @@
       "name": "Trichaptum abietinum",
       "english": "Purplepore Bracket",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 225,
       "reasons": [
         "most-recorded"
@@ -2266,6 +2470,7 @@
       "name": "Hygrocybe glutinipes",
       "english": "Glutinous Waxcap",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 223,
       "reasons": [
         "most-recorded"
@@ -2276,7 +2481,8 @@
       "inatId": 1696743,
       "name": "Descidia thuretiana",
       "english": "White Brain",
-      "englishSource": "inaturalist",
+      "englishSource": "bms-2005",
+      "englishVia": "Exidia thuretiana",
       "ukRecords": 222,
       "reasons": [
         "most-recorded"
@@ -2288,6 +2494,7 @@
       "name": "Hypoxylon fuscum",
       "english": "Hazel Woodwart",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 222,
       "reasons": [
         "most-recorded"
@@ -2299,6 +2506,7 @@
       "name": "Hymenochaete rubiginosa",
       "english": "Oak Curtain Crust",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 221,
       "reasons": [
         "most-recorded"
@@ -2310,6 +2518,7 @@
       "name": "Pluteus cervinus",
       "english": "Deer Shield",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 217,
       "reasons": [
         "most-recorded"
@@ -2321,6 +2530,7 @@
       "name": "Picipes badius",
       "english": "Bay Polypore",
       "englishSource": "inaturalist",
+      "englishVia": null,
       "ukRecords": 216,
       "reasons": [
         "most-recorded"
@@ -2331,7 +2541,8 @@
       "inatId": 1558279,
       "name": "Leucocoprinus leucothites",
       "english": "White Dapperling",
-      "englishSource": "inaturalist",
+      "englishSource": "bms-2005",
+      "englishVia": "Leucoagaricus leucothites",
       "ukRecords": 213,
       "reasons": [
         "most-recorded"
@@ -2343,6 +2554,7 @@
       "name": "Chalciporus piperatus",
       "english": "Peppery Bolete",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 212,
       "reasons": [
         "most-recorded"
@@ -2354,6 +2566,7 @@
       "name": "Stereum subtomentosum",
       "english": "Yellowing Curtain Crust",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 209,
       "reasons": [
         "most-recorded"
@@ -2365,6 +2578,7 @@
       "name": "Russula ochroleuca",
       "english": "Ochre Brittlegill",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 207,
       "reasons": [
         "most-recorded"
@@ -2374,8 +2588,9 @@
     {
       "inatId": 1657824,
       "name": "Pruinomycena acicula",
-      "english": "orange bonnet",
-      "englishSource": "inaturalist",
+      "english": "Orange Bonnet",
+      "englishSource": "bms-2005",
+      "englishVia": "Mycena acicula",
       "ukRecords": 205,
       "reasons": [
         "most-recorded"
@@ -2387,6 +2602,7 @@
       "name": "Mycena crocata",
       "english": "Saffrondrop Bonnet",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 199,
       "reasons": [
         "most-recorded"
@@ -2398,6 +2614,7 @@
       "name": "Ramaria stricta",
       "english": "Upright Coral",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 198,
       "reasons": [
         "most-recorded"
@@ -2409,6 +2626,7 @@
       "name": "Clavulina coralloides",
       "english": "Crested Coral",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 195,
       "reasons": [
         "most-recorded"
@@ -2418,8 +2636,9 @@
     {
       "inatId": 351886,
       "name": "Pluteus aurantiorugosus",
-      "english": "flame shield",
+      "english": "Flame Shield",
       "englishSource": "inaturalist",
+      "englishVia": null,
       "ukRecords": 193,
       "reasons": [
         "most-recorded"
@@ -2431,6 +2650,7 @@
       "name": "Armillaria gallica",
       "english": "Bulbous Honey Fungus",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 191,
       "reasons": [
         "most-recorded"
@@ -2442,6 +2662,7 @@
       "name": "Tubaria furfuracea",
       "english": "Scurfy Twiglet",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 186,
       "reasons": [
         "most-recorded"
@@ -2452,7 +2673,8 @@
       "inatId": 118145,
       "name": "Lycoperdon pratense",
       "english": "Meadow Puffball",
-      "englishSource": "inaturalist",
+      "englishSource": "bms-2005",
+      "englishVia": "Vascellum pratense",
       "ukRecords": 182,
       "reasons": [
         "most-recorded"
@@ -2464,6 +2686,7 @@
       "name": "Otidea onotica",
       "english": "Hare's Ear",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 181,
       "reasons": [
         "most-recorded"
@@ -2474,7 +2697,8 @@
       "inatId": 701434,
       "name": "Caloboletus calopus",
       "english": "Bitter Beech Bolete",
-      "englishSource": "inaturalist",
+      "englishSource": "bms-2005",
+      "englishVia": "Boletus calopus",
       "ukRecords": 177,
       "reasons": [
         "most-recorded"
@@ -2486,6 +2710,7 @@
       "name": "Marasmius hudsonii",
       "english": "Holly Parachute",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 176,
       "reasons": [
         "most-recorded"
@@ -2495,8 +2720,9 @@
     {
       "inatId": 509069,
       "name": "Gliophorus reginae",
-      "english": "jubilee waxcap",
+      "english": "Jubilee Waxcap",
       "englishSource": "inaturalist",
+      "englishVia": null,
       "ukRecords": 175,
       "reasons": [
         "most-recorded"
@@ -2508,6 +2734,7 @@
       "name": "Tapinella atrotomentosa",
       "english": "Velvet Rollrim",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 175,
       "reasons": [
         "most-recorded"
@@ -2519,6 +2746,7 @@
       "name": "Entoloma porphyrophaeum",
       "english": "Lilac Pinkgill",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 172,
       "reasons": [
         "most-recorded"
@@ -2530,6 +2758,7 @@
       "name": "Pseudoboletus parasiticus",
       "english": "Parasitic Bolete",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 172,
       "reasons": [
         "most-recorded"
@@ -2539,8 +2768,9 @@
     {
       "inatId": 129027,
       "name": "Exidia recisa",
-      "english": "amber jelly fungus",
+      "english": "Amber Jelly Fungus",
       "englishSource": "inaturalist",
+      "englishVia": null,
       "ukRecords": 169,
       "reasons": [
         "most-recorded"
@@ -2550,8 +2780,9 @@
     {
       "inatId": 180365,
       "name": "Lycoperdon utriforme",
-      "english": "Mosaic puffball",
-      "englishSource": "inaturalist",
+      "english": "Mosaic Puffball",
+      "englishSource": "bms-2005",
+      "englishVia": "Handkea utriformis",
       "ukRecords": 168,
       "reasons": [
         "most-recorded"
@@ -2563,6 +2794,7 @@
       "name": "Panaeolus acuminatus",
       "english": "Dewdrop Mottlegill",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 168,
       "reasons": [
         "most-recorded"
@@ -2574,6 +2806,7 @@
       "name": "Russula nigricans",
       "english": "Blackening Brittlegill",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 167,
       "reasons": [
         "most-recorded"
@@ -2585,6 +2818,7 @@
       "name": "Mycena inclinata",
       "english": "Clustered Bonnet",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 164,
       "reasons": [
         "most-recorded"
@@ -2596,6 +2830,7 @@
       "name": "Suillus bovinus",
       "english": "Bovine Bolete",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 162,
       "reasons": [
         "most-recorded"
@@ -2607,6 +2842,7 @@
       "name": "Gymnopilus penetrans",
       "english": "Common Rustgill",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 161,
       "reasons": [
         "most-recorded"
@@ -2616,8 +2852,9 @@
     {
       "inatId": 830766,
       "name": "Parasola conopilea",
-      "english": "conical brittlestem",
-      "englishSource": "inaturalist",
+      "english": "Conical Brittlestem",
+      "englishSource": "bms-2005",
+      "englishVia": "Psathyrella conopilus",
       "ukRecords": 159,
       "reasons": [
         "most-recorded"
@@ -2629,6 +2866,7 @@
       "name": "Cortinarius violaceus",
       "english": "Violet Webcap",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 158,
       "reasons": [
         "most-recorded"
@@ -2640,6 +2878,7 @@
       "name": "Pleurotus dryinus",
       "english": "Veiled Oyster",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 157,
       "reasons": [
         "most-recorded"
@@ -2651,6 +2890,7 @@
       "name": "Ptychogaster albus",
       "english": "Powderpuff Bracket",
       "englishSource": "inaturalist",
+      "englishVia": null,
       "ukRecords": 156,
       "reasons": [
         "most-recorded"
@@ -2662,6 +2902,7 @@
       "name": "Xylaria carpophila",
       "english": "Beechmast Candlesnuff",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 155,
       "reasons": [
         "most-recorded"
@@ -2673,6 +2914,7 @@
       "name": "Mycena pseudocorticola",
       "english": "Steely Bonnet",
       "englishSource": "inaturalist",
+      "englishVia": null,
       "ukRecords": 153,
       "reasons": [
         "most-recorded"
@@ -2683,7 +2925,8 @@
       "inatId": 559111,
       "name": "Mensularia radiata",
       "english": "Alder Bracket",
-      "englishSource": "inaturalist",
+      "englishSource": "bms-2005",
+      "englishVia": "Inonotus radiatus",
       "ukRecords": 150,
       "reasons": [
         "most-recorded"
@@ -2695,6 +2938,7 @@
       "name": "Stropharia caerulea",
       "english": "Blue Roundhead",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 150,
       "reasons": [
         "most-recorded"
@@ -2704,8 +2948,9 @@
     {
       "inatId": 955949,
       "name": "Calycina citrina",
-      "english": "Yellow Fairy Cups",
-      "englishSource": "inaturalist",
+      "english": "Lemon Disco",
+      "englishSource": "bms-2005",
+      "englishVia": "Bisporella citrina",
       "ukRecords": 149,
       "reasons": [
         "most-recorded"
@@ -2717,6 +2962,7 @@
       "name": "Peniophora quercina",
       "english": "Oak Crust",
       "englishSource": "inaturalist",
+      "englishVia": null,
       "ukRecords": 146,
       "reasons": [
         "most-recorded"
@@ -2728,6 +2974,7 @@
       "name": "Amanita ceciliae",
       "english": "Snakeskin Grisette",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 144,
       "reasons": [
         "most-recorded"
@@ -2739,6 +2986,7 @@
       "name": "Clathrus ruber",
       "english": "Red Cage",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 143,
       "reasons": [
         "most-recorded"
@@ -2750,6 +2998,7 @@
       "name": "Lactarius blennius",
       "english": "Beech Milkcap",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 143,
       "reasons": [
         "most-recorded"
@@ -2759,8 +3008,9 @@
     {
       "inatId": 1135493,
       "name": "Hygrocybe nigrescens",
-      "english": "blackening wax-cap",
+      "english": "Blackening Wax-cap",
       "englishSource": "inaturalist",
+      "englishVia": null,
       "ukRecords": 142,
       "reasons": [
         "most-recorded"
@@ -2772,6 +3022,7 @@
       "name": "Psilocybe cyanescens",
       "english": "Blueleg Brownie",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 141,
       "reasons": [
         "most-recorded"
@@ -2783,6 +3034,7 @@
       "name": "Hypomyces chrysospermus",
       "english": "Bolete Mould",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 140,
       "reasons": [
         "most-recorded"
@@ -2793,7 +3045,8 @@
       "inatId": 833474,
       "name": "Hortiboletus rubellus",
       "english": "Ruby Bolete",
-      "englishSource": "inaturalist",
+      "englishSource": "bms-2005",
+      "englishVia": "Boletus rubellus",
       "ukRecords": 138,
       "reasons": [
         "most-recorded"
@@ -2804,7 +3057,8 @@
       "inatId": 499704,
       "name": "Atheniella flavoalba",
       "english": "Ivory Bonnet",
-      "englishSource": "inaturalist",
+      "englishSource": "bms-2005",
+      "englishVia": "Mycena flavoalba",
       "ukRecords": 137,
       "reasons": [
         "most-recorded"
@@ -2816,6 +3070,7 @@
       "name": "Megacollybia platyphylla",
       "english": "Whitelaced Shank",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 137,
       "reasons": [
         "most-recorded"
@@ -2825,8 +3080,9 @@
     {
       "inatId": 118168,
       "name": "Rhodocollybia maculata",
-      "english": "Spotted Collybia",
-      "englishSource": "inaturalist",
+      "english": "Spotted Toughshank",
+      "englishSource": "bms-2005",
+      "englishVia": "Collybia maculata",
       "ukRecords": 137,
       "reasons": [
         "most-recorded"
@@ -2838,6 +3094,7 @@
       "name": "Pseudohydnum gelatinosum",
       "english": "Jelly Tooth",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 136,
       "reasons": [
         "most-recorded"
@@ -2849,6 +3106,7 @@
       "name": "Verpa conica",
       "english": "Thimble Morel",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 135,
       "reasons": [
         "most-recorded"
@@ -2860,6 +3118,7 @@
       "name": "Armillaria ostoyae",
       "english": "Dark Honey Fungus",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 134,
       "reasons": [
         "most-recorded"
@@ -2871,6 +3130,7 @@
       "name": "Hygrocybe intermedia",
       "english": "Fibrous Waxcap",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 132,
       "reasons": [
         "most-recorded"
@@ -2882,6 +3142,7 @@
       "name": "Leucocoprinus birnbaumii",
       "english": "Plantpot Dapperling",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 131,
       "reasons": [
         "most-recorded"
@@ -2893,6 +3154,7 @@
       "name": "Auriscalpium vulgare",
       "english": "Earpick Fungus",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 130,
       "reasons": [
         "most-recorded"
@@ -2902,8 +3164,9 @@
     {
       "inatId": 1135359,
       "name": "Cuphophyllus flavipes",
-      "english": "Yellow-foot Waxcap",
-      "englishSource": "inaturalist",
+      "english": "Yellow Foot Waxcap",
+      "englishSource": "bms-2005",
+      "englishVia": "Hygrocybe flavipes",
       "ukRecords": 129,
       "reasons": [
         "most-recorded"
@@ -2913,8 +3176,9 @@
     {
       "inatId": 117227,
       "name": "Conocybe apala",
-      "english": "milky conecap",
+      "english": "Milky Conecap",
       "englishSource": "inaturalist",
+      "englishVia": null,
       "ukRecords": 125,
       "reasons": [
         "most-recorded"
@@ -2926,6 +3190,7 @@
       "name": "Thelephora terrestris",
       "english": "Earthfan",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 125,
       "reasons": [
         "most-recorded"
@@ -2935,8 +3200,9 @@
     {
       "inatId": 1275338,
       "name": "Collybiopsis confluens",
-      "english": "clustered toughshank",
-      "englishSource": "inaturalist",
+      "english": "Clustered Toughshank",
+      "englishSource": "bms-2005",
+      "englishVia": "Collybia confluens",
       "ukRecords": 122,
       "reasons": [
         "most-recorded"
@@ -2946,8 +3212,9 @@
     {
       "inatId": 947949,
       "name": "Lentinus brumalis",
-      "english": "Winter polypore",
-      "englishSource": "inaturalist",
+      "english": "Winter Polypore",
+      "englishSource": "bms-2005",
+      "englishVia": "Polyporus brumalis",
       "ukRecords": 121,
       "reasons": [
         "most-recorded"
@@ -2957,8 +3224,9 @@
     {
       "inatId": 1497645,
       "name": "Lichenomphalia ericetorum",
-      "english": "Lichen Agaric",
-      "englishSource": "inaturalist",
+      "english": "Heath Navel",
+      "englishSource": "bms-2005",
+      "englishVia": "Omphalina ericetorum",
       "ukRecords": 121,
       "reasons": [
         "most-recorded"
@@ -2970,6 +3238,7 @@
       "name": "Cortinarius bolaris",
       "english": "Dappled Webcap",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 119,
       "reasons": [
         "most-recorded"
@@ -2979,8 +3248,9 @@
     {
       "inatId": 1525549,
       "name": "Collybia sordida",
-      "english": "sordid blewit",
+      "english": "Sordid Blewit",
       "englishSource": "inaturalist",
+      "englishVia": null,
       "ukRecords": 118,
       "reasons": [
         "most-recorded"
@@ -2992,6 +3262,7 @@
       "name": "Exidia nigricans",
       "english": "Warlock's Butter",
       "englishSource": "inaturalist",
+      "englishVia": null,
       "ukRecords": 116,
       "reasons": [
         "most-recorded"
@@ -3003,6 +3274,7 @@
       "name": "Mycena epipterygia",
       "english": "Yellowleg Bonnet",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 116,
       "reasons": [
         "most-recorded"
@@ -3014,6 +3286,7 @@
       "name": "Pseudoclitocybe cyathiformis",
       "english": "Goblet",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 116,
       "reasons": [
         "most-recorded"
@@ -3024,7 +3297,8 @@
       "inatId": 1280949,
       "name": "Echinoderma asperum",
       "english": "Freckled Dapperling",
-      "englishSource": "inaturalist",
+      "englishSource": "bms-2005",
+      "englishVia": "Lepiota aspera",
       "ukRecords": 115,
       "reasons": [
         "most-recorded"
@@ -3036,6 +3310,7 @@
       "name": "Macrotyphula fistulosa",
       "english": "Pipe Club",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 115,
       "reasons": [
         "most-recorded"
@@ -3047,6 +3322,7 @@
       "name": "Russula cyanoxantha",
       "english": "Charcoal Burner",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 115,
       "reasons": [
         "most-recorded"
@@ -3058,6 +3334,7 @@
       "name": "Stereum rugosum",
       "english": "Bleeding Broadleaf Crust",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 115,
       "reasons": [
         "most-recorded"
@@ -3067,8 +3344,9 @@
     {
       "inatId": 474502,
       "name": "Xerocomellus pruinatus",
-      "english": "Matte Bolete",
-      "englishSource": "inaturalist",
+      "english": "Matt Bolete",
+      "englishSource": "bms-2005",
+      "englishVia": "Boletus pruinatus",
       "ukRecords": 115,
       "reasons": [
         "most-recorded"
@@ -3080,6 +3358,7 @@
       "name": "Chlorophyllum olivieri",
       "english": "Olive Shaggy Parasol",
       "englishSource": "inaturalist",
+      "englishVia": null,
       "ukRecords": 113,
       "reasons": [
         "most-recorded"
@@ -3089,8 +3368,9 @@
     {
       "inatId": 1179764,
       "name": "Britzelmayria multipedata",
-      "english": "clustered brittlestem",
-      "englishSource": "inaturalist",
+      "english": "Clustered Brittlestem",
+      "englishSource": "bms-2005",
+      "englishVia": "Psathyrella multipedata",
       "ukRecords": 112,
       "reasons": [
         "most-recorded"
@@ -3100,8 +3380,9 @@
     {
       "inatId": 959237,
       "name": "Cyanosporus caesius",
-      "english": "Blue Cheese Polypore",
-      "englishSource": "inaturalist",
+      "english": "Conifer Blueing Bracket",
+      "englishSource": "bms-2005",
+      "englishVia": "Postia caesia",
       "ukRecords": 112,
       "reasons": [
         "most-recorded"
@@ -3113,6 +3394,7 @@
       "name": "Lyophyllum decastes",
       "english": "Clustered Domecap",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 112,
       "reasons": [
         "most-recorded"
@@ -3124,6 +3406,7 @@
       "name": "Trametes ochracea",
       "english": "Ochre Bracket",
       "englishSource": "inaturalist",
+      "englishVia": null,
       "ukRecords": 112,
       "reasons": [
         "most-recorded"
@@ -3135,6 +3418,7 @@
       "name": "Stropharia aeruginosa",
       "english": "Verdigris Agaric",
       "englishSource": "inaturalist",
+      "englishVia": null,
       "ukRecords": 110,
       "reasons": [
         "most-recorded"
@@ -3144,8 +3428,9 @@
     {
       "inatId": 629135,
       "name": "Monilinia johnsonii",
-      "english": "haw goblet",
+      "english": "Haw Goblet",
       "englishSource": "inaturalist",
+      "englishVia": null,
       "ukRecords": 109,
       "reasons": [
         "most-recorded"
@@ -3157,6 +3442,7 @@
       "name": "Suillus variegatus",
       "english": "Velvet Bolete",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 109,
       "reasons": [
         "most-recorded"
@@ -3166,8 +3452,9 @@
     {
       "inatId": 153330,
       "name": "Hygrocybe helobia",
-      "english": "garlic waxcap",
+      "english": "Garlic Waxcap",
       "englishSource": "inaturalist",
+      "englishVia": null,
       "ukRecords": 107,
       "reasons": [
         "most-recorded"
@@ -3177,8 +3464,9 @@
     {
       "inatId": 1038660,
       "name": "Hydnoporia corrugata",
-      "english": "glue crust fungus",
-      "englishSource": "inaturalist",
+      "english": "Glue Crust",
+      "englishSource": "bms-2005",
+      "englishVia": "Hymenochaete corrugata",
       "ukRecords": 105,
       "reasons": [
         "most-recorded"
@@ -3190,6 +3478,7 @@
       "name": "Pluteus salicinus",
       "english": "Willow Shield",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 105,
       "reasons": [
         "most-recorded"
@@ -3201,6 +3490,7 @@
       "name": "Calocera pallidospathulata",
       "english": "Pale Stagshorn",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 104,
       "reasons": [
         "most-recorded"
@@ -3210,8 +3500,9 @@
     {
       "inatId": 1275360,
       "name": "Collybiopsis peronata",
-      "english": "Wood Woolly-foot",
-      "englishSource": "inaturalist",
+      "english": "Wood Woollyfoot",
+      "englishSource": "bms-2005",
+      "englishVia": "Collybia peronata",
       "ukRecords": 104,
       "reasons": [
         "most-recorded"
@@ -3221,8 +3512,9 @@
     {
       "inatId": 528643,
       "name": "Deconica coprophila",
-      "english": "dung-loving Deconica",
+      "english": "Dung-loving Deconica",
       "englishSource": "inaturalist",
+      "englishVia": null,
       "ukRecords": 103,
       "reasons": [
         "most-recorded"
@@ -3234,6 +3526,7 @@
       "name": "Macrolepiota mastoidea",
       "english": "Slender Parasol",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 103,
       "reasons": [
         "most-recorded"
@@ -3245,6 +3538,7 @@
       "name": "Cyathus olla",
       "english": "Field Bird's Nest",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 98,
       "reasons": [
         "most-recorded"
@@ -3255,7 +3549,8 @@
       "inatId": 485130,
       "name": "Cuphophyllus russocoriaceus",
       "english": "Cedarwood Waxcap",
-      "englishSource": "inaturalist",
+      "englishSource": "bms-2005",
+      "englishVia": "Hygrocybe russocoriacea",
       "ukRecords": 97,
       "reasons": [
         "most-recorded"
@@ -3267,6 +3562,7 @@
       "name": "Mycena pura",
       "english": "Lilac Bonnet",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 97,
       "reasons": [
         "most-recorded"
@@ -3278,6 +3574,7 @@
       "name": "Panus conchatus",
       "english": "Lilac Oysterling",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 97,
       "reasons": [
         "most-recorded"
@@ -3287,8 +3584,9 @@
     {
       "inatId": 790781,
       "name": "Cystoderma aureum",
-      "english": "Golden Cap",
-      "englishSource": "inaturalist",
+      "english": "Golden Bootleg",
+      "englishSource": "bms-2005",
+      "englishVia": "Phaeolepiota aurea",
       "ukRecords": 96,
       "reasons": [
         "most-recorded"
@@ -3300,6 +3598,7 @@
       "name": "Dermoloma cuneifolium",
       "english": "Crazed Cap",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 96,
       "reasons": [
         "most-recorded"
@@ -3311,6 +3610,7 @@
       "name": "Psathyrella ammophila",
       "english": "Dune Brittlestem",
       "englishSource": "bms-2005",
+      "englishVia": null,
       "ukRecords": 96,
       "reasons": [
         "most-recorded"

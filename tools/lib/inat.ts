@@ -85,5 +85,15 @@ export function createInatClient(opts: InatClientOptions = {}) {
     return exact[0];
   }
 
-  return { getJson, speciesCounts, resolveTaxon };
+  /** The taxon's other scientific names (older names and synonyms), e.g. Lepista nuda for Collybia nuda. */
+  async function olderNames(taxonId: number): Promise<string[]> {
+    const body = await getJson(`/taxa/${taxonId}?all_names=true`);
+    const t = (body.results ?? [])[0];
+    if (!t) return [];
+    return (t.names ?? [])
+      .filter((n: { name: string; lexicon: string }) => n.lexicon === 'scientific-names' && n.name !== t.name)
+      .map((n: { name: string }) => n.name);
+  }
+
+  return { getJson, speciesCounts, resolveTaxon, olderNames };
 }

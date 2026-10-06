@@ -5,7 +5,7 @@ import { createInatClient, type InatTaxon } from './lib/inat.ts';
 import { makeGroupFilter, resolveGroups, type GroupsConfig } from './lib/groups.ts';
 import { validateCoreLists, type CoreLists } from './lib/core-lists.ts';
 import { selectSpecies, type Candidate } from './lib/select.ts';
-import { englishName, parseBmsLatinToEnglish } from './lib/bms-names.ts';
+import { englishName, nameClashes, parseBmsLatinToEnglish } from './lib/bms-names.ts';
 import { renderReviewPage, sectionOf, type ReviewRow } from './lib/review-page.ts';
 
 const ROOT = new URL('../', import.meta.url);
@@ -99,10 +99,20 @@ async function main() {
   });
 
   const bms = await loadBmsNames();
-  const rows: ReviewRow[] = picked.map((p) => {
-    const n = englishName(p.name, bms.names, p.inatEnglish);
-    return { ...p, english: n.english, englishSource: n.source };
-  });
+  const handNamed = readJson<Record<string, { english: string; source: string; why: string }>>('tools/config/english-names.json');
+  type BuiltRow = ReviewRow & { englishVia: string | null };
+  const rows: BuiltRow[] = [];
+  for (const p of picked) {
+    const hand = handNamed[p.name];
+    if (hand) {
+      rows.push({ ...p, english: hand.english, englishSource: 'hand-set', englishVia: null });
+      continue;
+    }
+    const older = bms.names.has(p.name) ? [] : await inat.olderNames(p.inatId);
+    const n = englishName(p.name, bms.names, p.inatEnglish, older);
+    rows.push({ ...p, english: n.english, englishSource: n.source, englishVia: n.via });
+  }
+  const clashes = nameClashes(rows.map((r) => ({ name: r.name, english: r.english, via: r.englishVia })), bms.names);
 
   const generated = new Date().toISOString();
   writeText(
@@ -117,6 +127,7 @@ async function main() {
           name: r.name,
           english: r.english,
           englishSource: r.englishSource,
+          englishVia: r.englishVia,
           ukRecords: r.ukRecords,
           reasons: r.reasons,
           dangerLevel: r.dangerLevel,
@@ -129,7 +140,9 @@ async function main() {
 
   const count = (title: string) => rows.filter((r) => sectionOf(r) === title).length;
   const fromBms = rows.filter((r) => r.englishSource === 'bms-2005').length;
+  const viaOlder = rows.filter((r) => r.englishSource === 'bms-2005' && r.englishVia).length;
   const fromInat = rows.filter((r) => r.englishSource === 'inaturalist').length;
+  const byHand = rows.filter((r) => r.englishSource === 'hand-set').length;
   writeText(
     'reports/species-list-report.md',
     [
@@ -148,10 +161,14 @@ async function main() {
       ...groupLines,
       '',
       '## English names',
-      `- From the BMS list (2005): ${fromBms} of ${rows.length}`,
+      `- From the BMS list (2005): ${fromBms} of ${rows.length} (${viaOlder} of them found under an older scientific name)`,
+      `- Set by hand, with a source (tools/config/english-names.json): ${byHand}`,
       `- From iNaturalist: ${fromInat}`,
-      `- None: ${rows.length - fromBms - fromInat}`,
+      `- None: ${rows.length - fromBms - fromInat - byHand}`,
       `- BMS list lines not understood: ${bms.unparsed}`,
+      '',
+      '## English names that clash',
+      ...(clashes.length ? clashes.map((c) => `- ${c}`) : ['- none']),
       '',
       '## Notes',
       ...(notes.length ? notes.map((n) => `- ${n}`) : ['- none']),
@@ -160,7 +177,7 @@ async function main() {
   );
 
   writeText('review/species-list.html', renderReviewPage(rows, { generated: generated.slice(0, 10), target: TARGET, notes }));
-  console.log(`Picked ${rows.length} species; English names from BMS ${fromBms}, iNaturalist ${fromInat}.`);
+  console.log(`Picked ${rows.length} species; English names from BMS ${fromBms} (${viaOlder} via older names), by hand ${byHand}, iNaturalist ${fromInat}; clashes ${clashes.length}.`);
 }
 
 main().catch((err) => {
