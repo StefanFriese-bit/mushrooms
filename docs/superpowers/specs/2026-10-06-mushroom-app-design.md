@@ -1,6 +1,6 @@
 # Mushroom app for Stefan — design
 
-Date: 06/10/2026 · Status: agreed with Stefan part by part on 06/10/2026; this write-up awaits his read-through.
+Date: 06/10/2026 · Status: approved by Stefan on 06/10/2026 (agreed part by part, then the write-up as a whole).
 
 Working name: "Mushroom app" (the final name is his to choose).
 
