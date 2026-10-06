@@ -1,0 +1,247 @@
+{
+  "slug": "brown-rollrim",
+  "inatId": 55941,
+  "scientific": "Paxillus involutus",
+  "english": "Brown Rollrim",
+  "olderNames": [],
+  "edibility": {
+    "value": "deadly",
+    "sources": [
+      "fn",
+      "wp",
+      "wt"
+    ]
+  },
+  "edibilityNote": {
+    "value": "Some people eat it for months or years without harm, then suddenly suffer a fatal reaction in which the body attacks its own blood.",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "Cap ochre to rusty brown, with the edge strongly rolled under.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp",
+        "wt"
+      ]
+    },
+    {
+      "value": "Gills pale yellow-brown, running down the stem; they bruise dark brown at once.",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    {
+      "value": "No milk when the gills are cut — unlike a milkcap.",
+      "sources": [
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "Under birch and other broadleaved trees; also heaths, grassland and lawns.",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "Under birch and other broadleaved trees, on acid soil; also heaths, grassland and lawns.",
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "sporePrint": {
+    "value": "Rusty to sienna brown",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "gills",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    "ring": {
+      "value": "no",
+      "sources": [
+        "wp",
+        "fn"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "wp",
+        "fn"
+      ]
+    },
+    "growsOn": {
+      "value": "ground",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "capCm": {
+      "value": [
+        4,
+        20
+      ],
+      "sources": [
+        "wp",
+        "wf"
+      ]
+    },
+    "fleshChange": {
+      "value": "Pale yellow-brown, darkening when cut or bruised",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "smell": {
+      "value": "Not distinctive",
+      "sources": [
+        "fn"
+      ]
+    }
+  },
+  "lookalikes": [
+    {
+      "scientific": "Lactarius deliciosus",
+      "english": "Saffron Milkcap",
+      "slug": "saffron-milkcap",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Milk from the cut gills",
+          "thisOne": "None",
+          "thatOne": "Bright carrot-orange",
+          "sources": [
+            "wf",
+            "wp",
+            "fn-sm",
+            "wf-sm"
+          ]
+        },
+        {
+          "feature": "Colour",
+          "thisOne": "Ochre to rusty brown; bruises dark brown",
+          "thatOne": "Orange with darker rings; bruises green",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-sm",
+            "wf-sm"
+          ]
+        },
+        {
+          "feature": "Cap edge",
+          "thisOne": "Strongly rolled under",
+          "thatOne": "Smooth",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "fn-sm"
+          ]
+        },
+        {
+          "feature": "Trees",
+          "thisOne": "Under birch and other broadleaved trees; also heaths and lawns",
+          "thatOne": "Under pines",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-sm",
+            "wf-sm"
+          ]
+        }
+      ]
+    }
+  ],
+  "noDangerousLookalike": null,
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Paxillus involutus, Brown Rollrim",
+      "url": "https://www.first-nature.com/fungi/paxillus-involutus.php"
+    },
+    {
+      "id": "wf",
+      "title": "Wild Food UK — Brown Rollrim",
+      "url": "https://www.wildfooduk.com/mushroom-guide/brown-roll-rim/"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Paxillus involutus",
+      "url": "https://en.wikipedia.org/wiki/Paxillus_involutus"
+    },
+    {
+      "id": "wt",
+      "title": "Woodland Trust — Brown Rollrim",
+      "url": "https://www.woodlandtrust.org.uk/trees-woods-and-wildlife/fungi-and-lichens/brown-roll-rim/"
+    },
+    {
+      "id": "fn-sm",
+      "title": "First Nature — Lactarius deliciosus, Saffron Milkcap",
+      "url": "https://www.first-nature.com/fungi/lactarius-deliciosus.php"
+    },
+    {
+      "id": "wf-sm",
+      "title": "Wild Food UK — Saffron Milkcap",
+      "url": "https://www.wildfooduk.com/mushroom-guide/saffron-milk-cap/"
+    },
+    {
+      "id": "wp-sm",
+      "title": "Wikipedia — Lactarius deliciosus",
+      "url": "https://en.wikipedia.org/wiki/Lactarius_deliciosus"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}

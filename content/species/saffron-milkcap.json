@@ -1,0 +1,293 @@
+{
+  "slug": "saffron-milkcap",
+  "inatId": 155197,
+  "scientific": "Lactarius deliciosus",
+  "english": "Saffron Milkcap",
+  "olderNames": [],
+  "edibility": {
+    "value": "edible-cooked",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "edibilityNote": null,
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "Cut the gills: they ooze bright carrot-orange milk.",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    {
+      "value": "Cap orange with darker rings, bruising and ageing green.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "Stem orange with darker pits, hollow.",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    {
+      "value": "Only under pines.",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "Under pines in coniferous woods.",
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      8,
+      9,
+      10
+    ],
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "sporePrint": {
+    "value": "Pale pinkish-buff to pale salmon",
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "gills",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    "ring": {
+      "value": "no",
+      "sources": [
+        "wp",
+        "fn"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "wp",
+        "fn"
+      ]
+    },
+    "growsOn": {
+      "value": "ground",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "capCm": {
+      "value": [
+        6,
+        20
+      ],
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "fleshChange": {
+      "value": "Oozes carrot-orange milk; bruises green",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "smell": {
+      "value": "Fruity",
+      "sources": [
+        "fn"
+      ]
+    }
+  },
+  "lookalikes": [
+    {
+      "scientific": "Lactarius torminosus",
+      "english": "Woolly Milkcap",
+      "slug": "woolly-milkcap",
+      "kind": "poisonous",
+      "tellApart": [
+        {
+          "feature": "Milk from the cut gills",
+          "thisOne": "Bright carrot-orange",
+          "thatOne": "White, and it stays white",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-wm"
+          ]
+        },
+        {
+          "feature": "Cap edge",
+          "thisOne": "Smooth",
+          "thatOne": "Shaggy and woolly, rolled under",
+          "sources": [
+            "fn",
+            "fn-wm",
+            "wf-wm",
+            "wp-wm"
+          ]
+        },
+        {
+          "feature": "Trees",
+          "thisOne": "Under pines",
+          "thatOne": "Under birch",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-wm",
+            "wf-wm",
+            "wp-wm"
+          ]
+        }
+      ]
+    },
+    {
+      "scientific": "Paxillus involutus",
+      "english": "Brown Rollrim",
+      "slug": "brown-rollrim",
+      "kind": "deadly",
+      "tellApart": [
+        {
+          "feature": "Milk from the cut gills",
+          "thisOne": "Bright carrot-orange",
+          "thatOne": "None",
+          "sources": [
+            "fn",
+            "wf",
+            "wf-br",
+            "wp-br"
+          ]
+        },
+        {
+          "feature": "Colour",
+          "thisOne": "Orange with darker rings; bruises green",
+          "thatOne": "Ochre to rusty brown; bruises dark brown",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-br",
+            "wf-br"
+          ]
+        },
+        {
+          "feature": "Cap edge",
+          "thisOne": "Smooth",
+          "thatOne": "Strongly rolled under",
+          "sources": [
+            "fn",
+            "fn-br",
+            "wf-br",
+            "wp-br"
+          ]
+        },
+        {
+          "feature": "Trees",
+          "thisOne": "Under pines",
+          "thatOne": "Under birch and other broadleaved trees; also heaths and lawns",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-br",
+            "wf-br"
+          ]
+        }
+      ]
+    }
+  ],
+  "noDangerousLookalike": null,
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Lactarius deliciosus, Saffron Milkcap",
+      "url": "https://www.first-nature.com/fungi/lactarius-deliciosus.php"
+    },
+    {
+      "id": "wf",
+      "title": "Wild Food UK — Saffron Milkcap",
+      "url": "https://www.wildfooduk.com/mushroom-guide/saffron-milk-cap/"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Lactarius deliciosus",
+      "url": "https://en.wikipedia.org/wiki/Lactarius_deliciosus"
+    },
+    {
+      "id": "fn-wm",
+      "title": "First Nature — Lactarius torminosus, Woolly Milkcap",
+      "url": "https://www.first-nature.com/fungi/lactarius-torminosus.php"
+    },
+    {
+      "id": "wf-wm",
+      "title": "Wild Food UK — Woolly Milkcap",
+      "url": "https://www.wildfooduk.com/mushroom-guide/wooly-milk-cap/"
+    },
+    {
+      "id": "wp-wm",
+      "title": "Wikipedia — Lactarius torminosus",
+      "url": "https://en.wikipedia.org/wiki/Lactarius_torminosus"
+    },
+    {
+      "id": "fn-br",
+      "title": "First Nature — Paxillus involutus, Brown Rollrim",
+      "url": "https://www.first-nature.com/fungi/paxillus-involutus.php"
+    },
+    {
+      "id": "wf-br",
+      "title": "Wild Food UK — Brown Rollrim",
+      "url": "https://www.wildfooduk.com/mushroom-guide/brown-roll-rim/"
+    },
+    {
+      "id": "wp-br",
+      "title": "Wikipedia — Paxillus involutus",
+      "url": "https://en.wikipedia.org/wiki/Paxillus_involutus"
+    },
+    {
+      "id": "wt-br",
+      "title": "Woodland Trust — Brown Rollrim",
+      "url": "https://www.woodlandtrust.org.uk/trees-woods-and-wildlife/fungi-and-lichens/brown-roll-rim/"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}

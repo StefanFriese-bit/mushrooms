@@ -1,0 +1,222 @@
+{
+  "slug": "woolly-milkcap",
+  "inatId": 351313,
+  "scientific": "Lactarius torminosus",
+  "english": "Woolly Milkcap",
+  "olderNames": [],
+  "edibility": {
+    "value": "poisonous",
+    "sources": [
+      "wf",
+      "wp"
+    ]
+  },
+  "edibilityNote": {
+    "value": "Its white milk is fiercely hot and peppery; it causes severe stomach upsets.",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "Cap pinkish with darker rings and a shaggy, woolly edge that rolls under.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "Cut the gills: white milk that stays white.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    {
+      "value": "Under birch, often in damp places.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "Under birch, in woods and on heaths, often in damp places.",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      8,
+      9,
+      10
+    ],
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "sporePrint": {
+    "value": "Pale cream to pale yellow or salmon",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "gills",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    "ring": {
+      "value": "no",
+      "sources": [
+        "wp",
+        "fn"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "wp",
+        "fn"
+      ]
+    },
+    "growsOn": {
+      "value": "ground",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "capCm": {
+      "value": [
+        2,
+        15
+      ],
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "fleshChange": {
+      "value": "White; white milk that does not change colour",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "smell": {
+      "value": "Slightly of turpentine",
+      "sources": [
+        "fn"
+      ]
+    }
+  },
+  "lookalikes": [
+    {
+      "scientific": "Lactarius deliciosus",
+      "english": "Saffron Milkcap",
+      "slug": "saffron-milkcap",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Milk from the cut gills",
+          "thisOne": "White, and it stays white",
+          "thatOne": "Bright carrot-orange",
+          "sources": [
+            "fn",
+            "fn-sm",
+            "wf-sm"
+          ]
+        },
+        {
+          "feature": "Cap edge",
+          "thisOne": "Shaggy and woolly, rolled under",
+          "thatOne": "Smooth",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "fn-sm"
+          ]
+        },
+        {
+          "feature": "Trees",
+          "thisOne": "Under birch",
+          "thatOne": "Under pines",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "fn-sm",
+            "wf-sm"
+          ]
+        }
+      ]
+    }
+  ],
+  "noDangerousLookalike": null,
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Lactarius torminosus, Woolly Milkcap",
+      "url": "https://www.first-nature.com/fungi/lactarius-torminosus.php"
+    },
+    {
+      "id": "wf",
+      "title": "Wild Food UK — Woolly Milkcap",
+      "url": "https://www.wildfooduk.com/mushroom-guide/wooly-milk-cap/"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Lactarius torminosus",
+      "url": "https://en.wikipedia.org/wiki/Lactarius_torminosus"
+    },
+    {
+      "id": "fn-sm",
+      "title": "First Nature — Lactarius deliciosus, Saffron Milkcap",
+      "url": "https://www.first-nature.com/fungi/lactarius-deliciosus.php"
+    },
+    {
+      "id": "wf-sm",
+      "title": "Wild Food UK — Saffron Milkcap",
+      "url": "https://www.wildfooduk.com/mushroom-guide/saffron-milk-cap/"
+    },
+    {
+      "id": "wp-sm",
+      "title": "Wikipedia — Lactarius deliciosus",
+      "url": "https://en.wikipedia.org/wiki/Lactarius_deliciosus"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}
