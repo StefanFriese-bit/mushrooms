@@ -1,0 +1,223 @@
+{
+  "slug": "snowy-waxcap",
+  "inatId": 486380,
+  "scientific": "Cuphophyllus virgineus",
+  "english": "Snowy Waxcap",
+  "olderNames": [
+    "Camarophyllus virgineus",
+    "Hygrocybe virginea",
+    "Hygrophorus virgineus",
+    "Hygrocybe nivea"
+  ],
+  "edibility": {
+    "value": "edible-cooked",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "edibilityNote": {
+    "value": "Some guides call it good to eat, but First Nature warns that deadly white mushrooms such as the Destroying Angel exist: be certain before eating any white-gilled mushroom.",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "Ivory-white cap, 2–7.5 cm, waxy and slightly greasy, often with a small hump.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    {
+      "value": "Gills thick, waxy and very widely spaced, running down the stem.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    {
+      "value": "Slender white stem, often wavy or curved; no ring.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    {
+      "value": "In old, unfertilised grassland, lawns and churchyards, in autumn.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "Old, unfertilised grassland — pastures, lawns, churchyards, parkland — and sometimes woodland clearings.",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      8,
+      9,
+      10,
+      11
+    ],
+    "sources": [
+      "fn"
+    ]
+  },
+  "sporePrint": {
+    "value": "White",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "gills",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "ring": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "growsOn": {
+      "value": "ground",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "capCm": {
+      "value": [
+        2,
+        7.5
+      ],
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "fleshChange": {
+      "value": "Almost pure white; no colour change when cut is described",
+      "sources": [
+        "fn"
+      ]
+    },
+    "smell": {
+      "value": "Not distinctive",
+      "sources": [
+        "fn"
+      ]
+    }
+  },
+  "lookalikes": [
+    {
+      "scientific": "Amanita virosa",
+      "english": "Destroying Angel",
+      "slug": "destroying-angel",
+      "kind": "deadly",
+      "tellApart": [
+        {
+          "feature": "Gills",
+          "thisOne": "Thick, waxy and very widely spaced, running down the stem",
+          "thatOne": "Pure white, staying white",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-da",
+            "wf-da"
+          ]
+        },
+        {
+          "feature": "Stem base",
+          "thisOne": "No bag; a slender stem, often wavy",
+          "thatOne": "Bag-like volva, often buried deep in the soil",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-da",
+            "wf-da"
+          ]
+        },
+        {
+          "feature": "Ring",
+          "thisOne": "None",
+          "thatOne": "A fragile ring, often lost",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-da",
+            "wf-da"
+          ]
+        }
+      ]
+    }
+  ],
+  "noDangerousLookalike": null,
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Cuphophyllus virgineus, Snowy Waxcap",
+      "url": "https://www.first-nature.com/fungi/cuphophyllus-virgineus.php"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Cuphophyllus virgineus",
+      "url": "https://en.wikipedia.org/wiki/Cuphophyllus_virgineus"
+    },
+    {
+      "id": "fn-da",
+      "title": "First Nature — Amanita virosa, Destroying Angel",
+      "url": "https://www.first-nature.com/fungi/amanita-virosa.php"
+    },
+    {
+      "id": "wf-da",
+      "title": "Wild Food UK — Destroying Angel",
+      "url": "https://www.wildfooduk.com/mushroom-guide/destroying-angel/"
+    },
+    {
+      "id": "wp-da",
+      "title": "Wikipedia — Amanita virosa",
+      "url": "https://en.wikipedia.org/wiki/Amanita_virosa"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}

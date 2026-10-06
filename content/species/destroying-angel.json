@@ -314,6 +314,47 @@
           ]
         }
       ]
+    },
+    {
+      "scientific": "Cuphophyllus virgineus",
+      "english": "Snowy Waxcap",
+      "slug": "snowy-waxcap",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Gills",
+          "thisOne": "Pure white, staying white",
+          "thatOne": "Thick, waxy and very widely spaced, running down the stem",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-sw",
+            "wp-sw"
+          ]
+        },
+        {
+          "feature": "Stem base",
+          "thisOne": "Bag-like volva, often buried deep in the soil",
+          "thatOne": "No bag; a slender stem, often wavy",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-sw",
+            "wp-sw"
+          ]
+        },
+        {
+          "feature": "Ring",
+          "thisOne": "A fragile ring, often lost",
+          "thatOne": "None",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-sw",
+            "wp-sw"
+          ]
+        }
+      ]
     }
   ],
   "noDangerousLookalike": null,
@@ -412,6 +453,16 @@
       "id": "fn-dc",
       "title": "First Nature — Amanita phalloides, Deathcap",
       "url": "https://www.first-nature.com/fungi/amanita-phalloides.php"
+    },
+    {
+      "id": "fn-sw",
+      "title": "First Nature — Cuphophyllus virgineus, Snowy Waxcap",
+      "url": "https://www.first-nature.com/fungi/cuphophyllus-virgineus.php"
+    },
+    {
+      "id": "wp-sw",
+      "title": "Wikipedia — Cuphophyllus virgineus",
+      "url": "https://en.wikipedia.org/wiki/Cuphophyllus_virgineus"
     },
     {
       "id": "wf-prot",

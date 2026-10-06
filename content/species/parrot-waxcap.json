@@ -1,0 +1,175 @@
+{
+  "slug": "parrot-waxcap",
+  "inatId": 348711,
+  "scientific": "Gliophorus psittacinus",
+  "english": "Parrot Waxcap",
+  "olderNames": [
+    "Hygrocybe psittacina"
+  ],
+  "edibility": {
+    "value": "not-edible",
+    "sources": [
+      "wf",
+      "fn"
+    ]
+  },
+  "edibilityNote": {
+    "value": "Wikipedia calls it edible but not worth it; waxcap grasslands are declining, and First Nature asks that waxcaps are left alone.",
+    "sources": [
+      "wp",
+      "fn"
+    ]
+  },
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "Slimy cap, 1–6 cm, green when young, turning yellow, orange or pinkish as the green slime washes off.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "Thick, waxy, widely spaced gills, with green near the stem.",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    {
+      "value": "Slimy stem, green to yellow.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "In old, unfertilised grassland: pastures, lawns and churchyards.",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "Old, unfertilised grassland — pastures, lawns, churchyards — and sometimes open, damp woodland.",
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "sporePrint": {
+    "value": "White",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "gills",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    "ring": {
+      "value": "no",
+      "sources": [
+        "wp",
+        "fn"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "growsOn": {
+      "value": "ground",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "capCm": {
+      "value": [
+        1,
+        6
+      ],
+      "sources": [
+        "wf",
+        "fn"
+      ]
+    },
+    "fleshChange": {
+      "value": "Pale, the colour of the outside; hollow in the stem",
+      "sources": [
+        "wf"
+      ]
+    },
+    "smell": {
+      "value": "Not distinctive",
+      "sources": [
+        "fn"
+      ]
+    }
+  },
+  "lookalikes": [],
+  "noDangerousLookalike": null,
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Gliophorus psittacinus, Parrot Waxcap",
+      "url": "https://www.first-nature.com/fungi/gliophorus-psittacinus.php"
+    },
+    {
+      "id": "wf",
+      "title": "Wild Food UK — Parrot Waxcap",
+      "url": "https://www.wildfooduk.com/mushroom-guide/parrot-waxcap/"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Gliophorus psittacinus",
+      "url": "https://en.wikipedia.org/wiki/Gliophorus_psittacinus"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}

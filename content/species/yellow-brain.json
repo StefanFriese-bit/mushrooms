@@ -1,0 +1,180 @@
+{
+  "slug": "yellow-brain",
+  "inatId": 48529,
+  "scientific": "Tremella mesenterica",
+  "english": "Yellow Brain",
+  "olderNames": [
+    "Tremella lutescens"
+  ],
+  "edibility": {
+    "value": "not-edible",
+    "sources": [
+      "wf",
+      "fn"
+    ]
+  },
+  "edibilityNote": {
+    "value": "Some guides and Wikipedia call it edible, but it is insubstantial jelly; Wild Food UK calls it inedible.",
+    "sources": [
+      "wp",
+      "fn",
+      "wf"
+    ]
+  },
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "Bright golden-yellow jelly, 2–9 cm, lobed and folded like a brain.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp",
+        "wt"
+      ]
+    },
+    {
+      "value": "Shrivels and turns orange in dry weather, and swells again after rain.",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    {
+      "value": "On dead branches of broadleaved trees — often birch, hazel and gorse.",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "Dead branches and twigs of broadleaved trees, often birch, hazel and gorse; it lives on crust fungi in the wood.",
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "sporePrint": {
+    "value": "White",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "other",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "ring": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "growsOn": {
+      "value": "wood",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "capCm": {
+      "value": [
+        2,
+        9
+      ],
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "fleshChange": {
+      "value": "Soft and jelly-like; dries hard",
+      "sources": [
+        "wf",
+        "wp"
+      ]
+    },
+    "smell": {
+      "value": "Not distinctive",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    }
+  },
+  "lookalikes": [],
+  "noDangerousLookalike": null,
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Tremella mesenterica, Yellow Brain",
+      "url": "https://www.first-nature.com/fungi/tremella-mesenterica.php"
+    },
+    {
+      "id": "wf",
+      "title": "Wild Food UK — Yellow Brain",
+      "url": "https://www.wildfooduk.com/mushroom-guide/yellow-brain/"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Tremella mesenterica",
+      "url": "https://en.wikipedia.org/wiki/Tremella_mesenterica"
+    },
+    {
+      "id": "wt",
+      "title": "Woodland Trust — Yellow Brain",
+      "url": "https://www.woodlandtrust.org.uk/trees-woods-and-wildlife/fungi-and-lichens/yellow-brain/"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}
