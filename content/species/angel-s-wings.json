@@ -1,0 +1,273 @@
+{
+  "slug": "angel-s-wings",
+  "inatId": 48509,
+  "scientific": "Pleurocybella porrigens",
+  "english": "Angel's Wings",
+  "olderNames": [
+    "Pleurotus porrigens"
+  ],
+  "edibility": {
+    "value": "deadly",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "edibilityNote": {
+    "value": "Once thought edible; linked to deaths from brain damage in Japan, mostly in people with kidney disease.",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "Pure white, thin, fan- or tongue-shaped caps with no stem, or barely one.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    {
+      "value": "Flesh very thin — much thinner than an oyster mushroom's.",
+      "sources": [
+        "fn",
+        "wf-po"
+      ]
+    },
+    {
+      "value": "On rotting conifer stumps and logs, often covered in moss.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    {
+      "value": "Gills white and crowded.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "On well-rotted conifer stumps and fallen trunks, usually moss-covered, in damp shade.",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      8,
+      9,
+      10,
+      11
+    ],
+    "sources": [
+      "fn"
+    ]
+  },
+  "sporePrint": {
+    "value": "White",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "gills",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "ring": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "growsOn": {
+      "value": "wood",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "capCm": {
+      "value": [
+        2,
+        10
+      ],
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "fleshChange": {
+      "value": "Thin and white",
+      "sources": [
+        "fn"
+      ]
+    },
+    "smell": {
+      "value": "Slight and pleasant",
+      "sources": [
+        "fn"
+      ]
+    }
+  },
+  "lookalikes": [
+    {
+      "scientific": "Pleurotus ostreatus",
+      "english": "Oyster Mushroom",
+      "slug": "oyster-mushroom",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Where it grows",
+          "thisOne": "On rotting conifer stumps and logs, often moss-covered",
+          "thatOne": "On broadleaved trees, especially beech",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-oy",
+            "wf-oy"
+          ]
+        },
+        {
+          "feature": "Flesh",
+          "thisOne": "Very thin",
+          "thatOne": "Firm and fairly thick",
+          "sources": [
+            "fn",
+            "wf-oy",
+            "wp-oy"
+          ]
+        },
+        {
+          "feature": "Colour",
+          "thisOne": "Pure white, yellowing with age",
+          "thatOne": "Grey, brownish or blue-grey",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-oy",
+            "wf-oy"
+          ]
+        },
+        {
+          "feature": "Spore print",
+          "thisOne": "White",
+          "thatOne": "Often pale lilac-grey",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-oy",
+            "wf-oy"
+          ]
+        }
+      ]
+    },
+    {
+      "scientific": "Pleurotus pulmonarius",
+      "english": "Pale Oyster",
+      "slug": "pale-oyster",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Where it grows",
+          "thisOne": "On rotting conifer stumps and logs, often moss-covered",
+          "thatOne": "On broadleaved wood, especially beech",
+          "sources": [
+            "fn",
+            "wp",
+            "wf-po",
+            "wp-po"
+          ]
+        },
+        {
+          "feature": "Flesh",
+          "thisOne": "Very thin",
+          "thatOne": "Firm and meaty",
+          "sources": [
+            "fn",
+            "wf-po"
+          ]
+        }
+      ]
+    }
+  ],
+  "noDangerousLookalike": null,
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Pleurocybella porrigens, Angel's Wings",
+      "url": "https://www.first-nature.com/fungi/pleurocybella-porrigens.php"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Pleurocybella porrigens",
+      "url": "https://en.wikipedia.org/wiki/Pleurocybella_porrigens"
+    },
+    {
+      "id": "fn-oy",
+      "title": "First Nature — Pleurotus ostreatus, Oyster Mushroom",
+      "url": "https://www.first-nature.com/fungi/pleurotus-ostreatus.php"
+    },
+    {
+      "id": "wf-oy",
+      "title": "Wild Food UK — Oyster Mushroom",
+      "url": "https://www.wildfooduk.com/mushroom-guide/oyster-mushroom/"
+    },
+    {
+      "id": "wp-oy",
+      "title": "Wikipedia — Pleurotus ostreatus",
+      "url": "https://en.wikipedia.org/wiki/Pleurotus_ostreatus"
+    },
+    {
+      "id": "wt-oy",
+      "title": "Woodland Trust — Oyster Mushroom",
+      "url": "https://www.woodlandtrust.org.uk/trees-woods-and-wildlife/fungi-and-lichens/oyster-mushroom/"
+    },
+    {
+      "id": "wf-po",
+      "title": "Wild Food UK — Pale Oyster",
+      "url": "https://www.wildfooduk.com/mushroom-guide/pale-oyster-mushroom/"
+    },
+    {
+      "id": "wp-po",
+      "title": "Wikipedia — Pleurotus pulmonarius",
+      "url": "https://en.wikipedia.org/wiki/Pleurotus_pulmonarius"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}
