@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'preact/hooks';
+import { useLayoutEffect, useState } from 'preact/hooks';
 import { parseHash, hrefFor, type Route } from './router';
 import { Guide } from './screens/guide';
 import { SpeciesPage } from './screens/species-page';
@@ -29,9 +29,13 @@ function screen(route: Route) {
 
 export function App() {
   const [route, setRoute] = useState<Route>(() => parseHash(location.hash));
-  useEffect(() => {
+  // Listen from the first render (a layout effect runs before the browser can deliver an event), and catch up on a
+  // change of address made before the listener existed: under load the Safari engine delivered one in that gap.
+  useLayoutEffect(() => {
     const onHash = () => { setRoute(parseHash(location.hash)); window.scrollTo(0, 0); };
     addEventListener('hashchange', onHash);
+    const now = parseHash(location.hash);
+    setRoute((r) => (JSON.stringify(r) === JSON.stringify(now) ? r : now));
     return () => removeEventListener('hashchange', onHash);
   }, []);
   const active = route.name === 'species' ? 'guide' : route.name;
