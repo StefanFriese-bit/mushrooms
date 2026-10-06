@@ -61,12 +61,14 @@ describe('checkRecord', () => {
     expect(checkRecord(r, HOSTS)).toContain('field-mushroom: edibility needs sources from two different websites (has 1)');
   });
   it('takes a "not edible" verdict from one website; edible, poisonous and deadly need two', () => {
-    const r = rec({ edibility: { value: 'not-edible', sources: ['wf'] }, lookalikes: [] });
+    const r = rec({ edibility: { value: 'not-edible', sources: ['wf'] }, edibilityNote: { value: 'Bitter.', sources: ['wf'] },
+      lookalikes: [] });
     expect(checkRecord(r, HOSTS)).toEqual([]);
     for (const value of ['edible-cooked', 'edible-some-react', 'poisonous', 'deadly'] as const) {
       r.edibility = { value, sources: ['wf'] };
       r.noDangerousLookalike = value.startsWith('edible') ? { sources: two } : null;
       expect(checkRecord(r, HOSTS)).toContain('field-mushroom: edibility needs sources from two different websites (has 1)');
+      expect(checkRecord(r, HOSTS)).toContain('field-mushroom: edibilityNote needs sources from two different websites (has 1)');
     }
     r.edibility = { value: 'not-edible', sources: [] };
     r.noDangerousLookalike = null;

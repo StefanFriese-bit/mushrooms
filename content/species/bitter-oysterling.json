@@ -1,9 +1,12 @@
 {
-  "slug": "common-porecrust",
-  "inatId": 54573,
-  "scientific": "Schizophyllum commune",
-  "english": "Common Porecrust",
-  "olderNames": [],
+  "slug": "bitter-oysterling",
+  "inatId": 68309,
+  "scientific": "Panellus stipticus",
+  "english": "Bitter Oysterling",
+  "olderNames": [
+    "Panellus stypticus",
+    "Panus stipticus"
+  ],
   "edibility": {
     "value": "not-edible",
     "sources": [
@@ -12,7 +15,7 @@
     ]
   },
   "edibilityNote": {
-    "value": "Tougher than the wood it grows on (First Nature). Wikipedia says it is eaten young in parts of Asia, and that it can, rarely, infect people’s lungs.",
+    "value": "Very bitter and too small to eat; First Nature reports that in some parts of the world it has caused vomiting.",
     "sources": [
       "fn",
       "wp"
@@ -27,21 +30,21 @@
   },
   "topPoints": [
     {
-      "value": "Small fan-shaped brackets, 1–4 cm across, white to grey and hairy on top, often in tiers.",
+      "value": "Small kidney- or shell-shaped caps, 0.5–3 cm, tan to orange-brown, on a short stub of a stem at the side.",
       "sources": [
         "fn",
         "wp"
       ]
     },
     {
-      "value": "Underneath: pinkish-grey 'gills' that are split down the middle — hence its other name, Split Gill.",
+      "value": "Crowded pale tan gills, joined by cross-veins into a mesh.",
       "sources": [
         "fn",
         "wp"
       ]
     },
     {
-      "value": "On damaged bark and dead branches; seen all year.",
+      "value": "In tufts and overlapping clusters on dead broadleaved wood, especially oak.",
       "sources": [
         "fn",
         "wp"
@@ -49,7 +52,7 @@
     }
   ],
   "habitat": {
-    "value": "Dead and dying wood — damaged bark of sickly trees, dead branches, rotting logs.",
+    "value": "Fallen trunks, large branches and stumps of broadleaved trees, especially oak, beech and birch.",
     "sources": [
       "fn",
       "wp"
@@ -57,14 +60,6 @@
   },
   "seasonMonths": {
     "value": [
-      1,
-      2,
-      3,
-      4,
-      5,
-      6,
-      7,
-      8,
       9,
       10,
       11,
@@ -112,8 +107,8 @@
     },
     "capCm": {
       "value": [
-        1,
-        4
+        0.5,
+        3
       ],
       "sources": [
         "fn",
@@ -121,9 +116,10 @@
       ]
     },
     "fleshChange": {
-      "value": "Very tough",
+      "value": "No colour change when cut is described",
       "sources": [
-        "fn"
+        "fn",
+        "wp"
       ]
     },
     "smell": {
@@ -135,30 +131,30 @@
   },
   "lookalikes": [
     {
-      "scientific": "Panellus stipticus",
-      "english": "Bitter Oysterling",
-      "slug": "bitter-oysterling",
+      "scientific": "Schizophyllum commune",
+      "english": "Common Porecrust",
+      "slug": "common-porecrust",
       "kind": "not-edible",
       "tellApart": [
         {
           "feature": "Gills",
-          "thisOne": "Split down the middle",
-          "thatOne": "Crowded, joined by cross-veins",
+          "thisOne": "Crowded, joined by cross-veins",
+          "thatOne": "Split down the middle",
           "sources": [
             "fn",
-            "wp",
-            "fn-bo"
+            "fn-cp",
+            "wp-cp"
           ]
         },
         {
           "feature": "Cap",
-          "thisOne": "White to grey and hairy, with no stem",
-          "thatOne": "Tan to orange-brown, on a short side stem",
+          "thisOne": "Tan to orange-brown, on a short side stem",
+          "thatOne": "White to grey and hairy, with no stem",
           "sources": [
             "fn",
             "wp",
-            "fn-bo",
-            "wp-bo"
+            "fn-cp",
+            "wp-cp"
           ]
         }
       ]
@@ -169,23 +165,23 @@
   "sources": [
     {
       "id": "fn",
-      "title": "First Nature — Schizophyllum commune, Common Porecrust",
-      "url": "https://www.first-nature.com/fungi/schizophyllum-commune.php"
-    },
-    {
-      "id": "wp",
-      "title": "Wikipedia — Schizophyllum commune",
-      "url": "https://en.wikipedia.org/wiki/Schizophyllum_commune"
-    },
-    {
-      "id": "fn-bo",
       "title": "First Nature — Panellus stipticus, Bitter Oysterling",
       "url": "https://www.first-nature.com/fungi/panellus-stipticus.php"
     },
     {
-      "id": "wp-bo",
+      "id": "wp",
       "title": "Wikipedia — Panellus stipticus",
       "url": "https://en.wikipedia.org/wiki/Panellus_stipticus"
+    },
+    {
+      "id": "fn-cp",
+      "title": "First Nature — Schizophyllum commune, Common Porecrust",
+      "url": "https://www.first-nature.com/fungi/schizophyllum-commune.php"
+    },
+    {
+      "id": "wp-cp",
+      "title": "Wikipedia — Schizophyllum commune",
+      "url": "https://en.wikipedia.org/wiki/Schizophyllum_commune"
     },
     {
       "id": "wf-prot",

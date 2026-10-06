@@ -1,18 +1,21 @@
 {
-  "slug": "common-porecrust",
-  "inatId": 54573,
-  "scientific": "Schizophyllum commune",
-  "english": "Common Porecrust",
-  "olderNames": [],
+  "slug": "meadow-coral",
+  "inatId": 179221,
+  "scientific": "Clavulinopsis corniculata",
+  "english": "Meadow Coral",
+  "olderNames": [
+    "Clavaria corniculata",
+    "Ramariopsis corniculata"
+  ],
   "edibility": {
-    "value": "not-edible",
+    "value": "edible-cooked",
     "sources": [
       "fn",
       "wp"
     ]
   },
   "edibilityNote": {
-    "value": "Tougher than the wood it grows on (First Nature). Wikipedia says it is eaten young in parts of Asia, and that it can, rarely, infect people’s lungs.",
+    "value": "Reported edible, but so small and scarce that neither site thinks it worth picking; Wikipedia says it is bitter unless cooked.",
     "sources": [
       "fn",
       "wp"
@@ -27,21 +30,21 @@
   },
   "topPoints": [
     {
-      "value": "Small fan-shaped brackets, 1–4 cm across, white to grey and hairy on top, often in tiers.",
+      "value": "A small yellow coral, 4–8 cm tall, branching in pairs into blunt, forked tips.",
       "sources": [
         "fn",
         "wp"
       ]
     },
     {
-      "value": "Underneath: pinkish-grey 'gills' that are split down the middle — hence its other name, Split Gill.",
+      "value": "Yellow, turning ochre to tan with age; the base is paler.",
       "sources": [
         "fn",
         "wp"
       ]
     },
     {
-      "value": "On damaged bark and dead branches; seen all year.",
+      "value": "On the ground in old, unfertilised grassland.",
       "sources": [
         "fn",
         "wp"
@@ -49,7 +52,7 @@
     }
   ],
   "habitat": {
-    "value": "Dead and dying wood — damaged bark of sickly trees, dead branches, rotting logs.",
+    "value": "On soil in old, unfertilised grassland — pastures and lawns; very occasionally in woodland.",
     "sources": [
       "fn",
       "wp"
@@ -57,21 +60,15 @@
   },
   "seasonMonths": {
     "value": [
-      1,
-      2,
-      3,
-      4,
-      5,
-      6,
       7,
       8,
       9,
       10,
-      11,
-      12
+      11
     ],
     "sources": [
-      "fn"
+      "fn",
+      "wp"
     ]
   },
   "sporePrint": {
@@ -83,7 +80,7 @@
   },
   "features": {
     "underside": {
-      "value": "gills",
+      "value": "other",
       "sources": [
         "fn",
         "wp"
@@ -92,19 +89,19 @@
     "ring": {
       "value": "no",
       "sources": [
-        "fn",
-        "wp"
+        "wp",
+        "fn"
       ]
     },
     "bagAtBase": {
       "value": "no",
       "sources": [
-        "fn",
-        "wp"
+        "wp",
+        "fn"
       ]
     },
     "growsOn": {
-      "value": "wood",
+      "value": "ground",
       "sources": [
         "fn",
         "wp"
@@ -112,8 +109,8 @@
     },
     "capCm": {
       "value": [
-        1,
-        4
+        4,
+        8
       ],
       "sources": [
         "fn",
@@ -121,9 +118,10 @@
       ]
     },
     "fleshChange": {
-      "value": "Very tough",
+      "value": "No colour change when cut is described",
       "sources": [
-        "fn"
+        "fn",
+        "wp"
       ]
     },
     "smell": {
@@ -135,30 +133,29 @@
   },
   "lookalikes": [
     {
-      "scientific": "Panellus stipticus",
-      "english": "Bitter Oysterling",
-      "slug": "bitter-oysterling",
-      "kind": "not-edible",
+      "scientific": "Ramaria species",
+      "english": "Yellow coral fungi (Ramaria)",
+      "slug": null,
+      "kind": "poisonous",
       "tellApart": [
         {
-          "feature": "Gills",
-          "thisOne": "Split down the middle",
-          "thatOne": "Crowded, joined by cross-veins",
+          "feature": "Where it grows",
+          "thisOne": "Open grassland",
+          "thatOne": "Usually woodland, often from wood",
           "sources": [
             "fn",
             "wp",
-            "fn-bo"
+            "fn-uc"
           ]
         },
         {
-          "feature": "Cap",
-          "thisOne": "White to grey and hairy, with no stem",
-          "thatOne": "Tan to orange-brown, on a short side stem",
+          "feature": "Spore print",
+          "thisOne": "White",
+          "thatOne": "Ochre",
           "sources": [
             "fn",
             "wp",
-            "fn-bo",
-            "wp-bo"
+            "fn-uc"
           ]
         }
       ]
@@ -169,23 +166,23 @@
   "sources": [
     {
       "id": "fn",
-      "title": "First Nature — Schizophyllum commune, Common Porecrust",
-      "url": "https://www.first-nature.com/fungi/schizophyllum-commune.php"
+      "title": "First Nature — Clavulinopsis corniculata, Meadow Coral",
+      "url": "https://www.first-nature.com/fungi/clavulinopsis-corniculata.php"
     },
     {
       "id": "wp",
-      "title": "Wikipedia — Schizophyllum commune",
-      "url": "https://en.wikipedia.org/wiki/Schizophyllum_commune"
+      "title": "Wikipedia — Clavulinopsis corniculata",
+      "url": "https://en.wikipedia.org/wiki/Clavulinopsis_corniculata"
     },
     {
-      "id": "fn-bo",
-      "title": "First Nature — Panellus stipticus, Bitter Oysterling",
-      "url": "https://www.first-nature.com/fungi/panellus-stipticus.php"
+      "id": "fn-uc",
+      "title": "First Nature — Ramaria stricta, Upright Coral",
+      "url": "https://www.first-nature.com/fungi/ramaria-stricta.php"
     },
     {
-      "id": "wp-bo",
-      "title": "Wikipedia — Panellus stipticus",
-      "url": "https://en.wikipedia.org/wiki/Panellus_stipticus"
+      "id": "wp-uc",
+      "title": "Wikipedia — Ramaria stricta",
+      "url": "https://en.wikipedia.org/wiki/Ramaria_stricta"
     },
     {
       "id": "wf-prot",

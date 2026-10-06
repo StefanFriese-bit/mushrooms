@@ -38,8 +38,10 @@ export function checkRecord(r: SpeciesRecord, allowedHosts: string[]): string[] 
   if (!EDIBILITY.includes(r.edibility.value)) say(`edibility "${r.edibility.value}" is not one of ${EDIBILITY.join(', ')}`);
   // "Not edible" is the cautious verdict — the page tells no one to eat it — and for many crusts and tiny wood fungi
   // only one trusted site says anything about eating them. Edible, poisonous and deadly still need two websites.
-  (r.edibility.value === 'not-edible' ? sourcedOnce : sourced)('edibility', r.edibility.sources);
-  if (r.edibilityNote) sourced('edibilityNote', r.edibilityNote.sources);
+  // The note under a "not edible" verdict explains it, so it may rest on that one website too.
+  const verdict = r.edibility.value === 'not-edible' ? sourcedOnce : sourced;
+  verdict('edibility', r.edibility.sources);
+  if (r.edibilityNote) verdict('edibilityNote', r.edibilityNote.sources);
   sourced('protectedInUk', r.protectedInUk.sources);
   if (r.topPoints.length < 3 || r.topPoints.length > 6) say(`needs 3 to 6 top points (has ${r.topPoints.length})`);
   r.topPoints.forEach((t, i) => sourced(`top point ${i + 1}`, t.sources));
