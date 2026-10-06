@@ -1,1 +1,93 @@
-[]
+[
+  {
+    "title": "Before you pick anything",
+    "points": [
+      "Be 100% sure of what it is before you eat it — 99% is not enough. If in doubt, leave it out.",
+      "Check every feature, not just the picture. If one feature does not match, it is not that species.",
+      "Never eat a mushroom on the word of a photo, a website or an app alone.",
+      "Dig out the whole stem base instead of cutting the stem: a deadly Amanita's bag (volva) is often hidden in the soil or the leaves.",
+      "Leave small 'button' mushrooms: young ones do not show all their features, and young deadly Amanitas look like button mushrooms.",
+      "Keep anything you are not sure of away from mushrooms for eating, each kind in its own paper bag."
+    ],
+    "sources": [
+      { "title": "Wild Food UK — Foraging code", "url": "https://www.wildfooduk.com/foraging-code/" },
+      { "title": "Wild Food UK — The most poisonous UK fungi, part 1", "url": "https://www.wildfooduk.com/articles/the-most-poisonous-uk-fungi-part-1/" },
+      { "title": "First Nature — Planning and managing a fungus foray", "url": "https://www.first-nature.com/fungi/~forays.php" },
+      { "title": "First Nature — Amanita virosa, Destroying Angel", "url": "https://www.first-nature.com/fungi/amanita-virosa.php" },
+      { "title": "Woodland Trust — Responsible foraging guidelines", "url": "https://www.woodlandtrust.org.uk/visiting-woods/things-to-do/foraging/foraging-guidelines/" },
+      { "title": "Woodland Trust — Poisonous mushrooms: 8 most dangerous UK mushrooms", "url": "https://www.woodlandtrust.org.uk/blog/2025/02/poisonous-mushrooms/" },
+      { "title": "Wikipedia — Amanita phalloides", "url": "https://en.wikipedia.org/wiki/Amanita_phalloides" }
+    ]
+  },
+  {
+    "title": "How to take a spore print",
+    "points": [
+      "Cut off the stem and lay the cap gills-down on paper that is half white and half black, so any colour shows.",
+      "Cover it with a glass or a jar so it does not dry out.",
+      "Leave it for a few hours, or overnight, then lift the cap gently.",
+      "The colour points to the family: Amanitas print white, webcaps rust-brown, and Agaricus mushrooms (field and horse mushrooms) chocolate to purple-brown.",
+      "A white print from what you hoped was a field or horse mushroom is a warning: the deadly Amanitas print white.",
+      "A spore print alone cannot name a mushroom — it is one feature among many."
+    ],
+    "sources": [
+      { "title": "First Nature — How to make a spore print", "url": "https://www.first-nature.com/fungi/~sporeprint.php" },
+      { "title": "First Nature — Chlorophyllum rhacodes, Shaggy Parasol", "url": "https://www.first-nature.com/fungi/chlorophyllum-rhacodes.php" },
+      { "title": "Wikipedia — Spore print", "url": "https://en.wikipedia.org/wiki/Spore_print" },
+      { "title": "Wikipedia — Agaricus campestris", "url": "https://en.wikipedia.org/wiki/Agaricus_campestris" }
+    ]
+  },
+  {
+    "title": "The deadly families to know in the UK",
+    "points": [
+      "Amanitas — the Deathcap and the Destroying Angel: white gills, a ring, and a bag (volva) at the stem base. They cause most deaths from mushroom poisoning.",
+      "Small dapperlings (Lepiota): several carry the Deathcap's poison, and they are very hard to tell apart — eat none.",
+      "Webcaps (Cortinarius): the Deadly Webcap and the Fool's Webcap destroy the kidneys.",
+      "Fibrecaps (Inocybe): the Deadly Fibrecap has killed people.",
+      "Small white funnels (Clitocybe), such as the Fool's Funnel: they grow in lawns and fairy rings, where people pick the Fairy Ring Champignon.",
+      "The Funeral Bell: a small brown mushroom on dead wood, with the Deathcap's poison. It is mistaken for the Velvet Shank and the Sheathed Woodtuft.",
+      "Conecaps (Conocybe): small brown mushrooms with a ring, in gardens, leaf litter and woodchip, with the Deathcap's poison."
+    ],
+    "sources": [
+      { "title": "Wild Food UK — The most poisonous UK fungi, part 1", "url": "https://www.wildfooduk.com/articles/the-most-poisonous-uk-fungi-part-1/" },
+      { "title": "Woodland Trust — Poisonous mushrooms: 8 most dangerous UK mushrooms", "url": "https://www.woodlandtrust.org.uk/blog/2025/02/poisonous-mushrooms/" },
+      { "title": "First Nature — Amanita phalloides, Deathcap", "url": "https://www.first-nature.com/fungi/amanita-phalloides.php" },
+      { "title": "First Nature — Lepiota brunneoincarnata, Deadly Dapperling", "url": "https://www.first-nature.com/fungi/lepiota-brunneoincarnata.php" },
+      { "title": "First Nature — Cortinarius rubellus, Deadly Webcap", "url": "https://www.first-nature.com/fungi/cortinarius-rubellus.php" },
+      { "title": "First Nature — Inocybe erubescens, Deadly Fibrecap", "url": "https://www.first-nature.com/fungi/inocybe-erubescens.php" },
+      { "title": "First Nature — Clitocybe rivulosa, Fool's Funnel", "url": "https://www.first-nature.com/fungi/clitocybe-rivulosa.php" },
+      { "title": "First Nature — Galerina marginata, Funeral Bell", "url": "https://www.first-nature.com/fungi/galerina-marginata.php" },
+      { "title": "Wikipedia — Cortinarius rubellus", "url": "https://en.wikipedia.org/wiki/Cortinarius_rubellus" }
+    ]
+  },
+  {
+    "title": "The rules in the UK",
+    "points": [
+      "Ask the landowner first: taking fungi from land without the owner's permission can be against the law.",
+      "Some fungi are protected by law (Schedule 8 of the Wildlife and Countryside Act 1981) and must not be picked at all — the Bearded Tooth (Lion's Mane) is one.",
+      "Check for local byelaws and codes: some places, such as the New Forest, have their own rules on picking fungi.",
+      "Take only a little, for your own use — never more than half of what you find — and leave the rest for wildlife.",
+      "Pick only opened caps, which have already shed their spores."
+    ],
+    "sources": [
+      { "title": "Woodland Trust — Responsible foraging guidelines", "url": "https://www.woodlandtrust.org.uk/visiting-woods/things-to-do/foraging/foraging-guidelines/" },
+      { "title": "Wild Food UK — Foraging code", "url": "https://www.wildfooduk.com/foraging-code/" },
+      { "title": "Wild Food UK — Lion's Mane (Bearded Tooth)", "url": "https://www.wildfooduk.com/mushroom-guide/lions-mane/" },
+      { "title": "First Nature — Planning and managing a fungus foray", "url": "https://www.first-nature.com/fungi/~forays.php" }
+    ]
+  },
+  {
+    "title": "If someone has eaten a mushroom you are not sure of",
+    "points": [
+      "Get medical help at once, even if they feel well — early treatment saves lives. Wild Food UK advises calling NHS 111 and taking any leftover mushroom, or photos of it.",
+      "The deadliest poisons give no early warning: the Deathcap's causes no symptoms for 6–12 hours, the webcaps' for days, sometimes two weeks.",
+      "After a Deathcap, the first sickness can pass for a day or two before the liver and kidneys fail — feeling better does not mean it is over."
+    ],
+    "sources": [
+      { "title": "Wild Food UK — The most poisonous UK fungi, part 1", "url": "https://www.wildfooduk.com/articles/the-most-poisonous-uk-fungi-part-1/" },
+      { "title": "First Nature — Amanita phalloides, Deathcap", "url": "https://www.first-nature.com/fungi/amanita-phalloides.php" },
+      { "title": "Wikipedia — Mushroom poisoning", "url": "https://en.wikipedia.org/wiki/Mushroom_poisoning" },
+      { "title": "Wikipedia — Orellanine", "url": "https://en.wikipedia.org/wiki/Orellanine" },
+      { "title": "Wikipedia — Amanita phalloides", "url": "https://en.wikipedia.org/wiki/Amanita_phalloides" }
+    ]
+  }
+]
