@@ -47,7 +47,9 @@ export function checkRecord(r: SpeciesRecord, allowedHosts: string[]): string[] 
   r.topPoints.forEach((t, i) => sourced(`top point ${i + 1}`, t.sources));
   sourced('habitat', r.habitat.sources);
   sourcedOnce('seasonMonths', r.seasonMonths.sources);
-  sourced('sporePrint', r.sporePrint.sources);
+  // The spore print of a species that is neither edible nor dangerous only decides where it appears in Identify (as
+  // its cap size does, below), and for many small fungi only one trusted site gives one.
+  (r.edibility.value === 'not-edible' ? sourcedOnce : sourced)('sporePrint', r.sporePrint.sources);
   if (sporeGroups(r.sporePrint.value).length === 0) say(`sporePrint "${r.sporePrint.value}" names no colour group Identify can ask about`);
   // The structural features the Check screen compares need two websites; how the flesh changes and how it smells
   // are descriptions (their safety use is in the "tell them apart" rows, which need two). The cap size of a species

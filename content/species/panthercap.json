@@ -251,6 +251,43 @@
           ]
         }
       ]
+    },
+    {
+      "scientific": "Amanita excelsa",
+      "english": "European False Blusher",
+      "slug": "european-false-blusher",
+      "kind": "not-edible",
+      "tellApart": [
+        {
+          "feature": "Cap patches",
+          "thisOne": "Pure white",
+          "thatOne": "Grey, washing off easily",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-efb"
+          ]
+        },
+        {
+          "feature": "Ring",
+          "thisOne": "Smooth, with no grooves",
+          "thatOne": "Grooved on its upper side",
+          "sources": [
+            "wf",
+            "fn-efb"
+          ]
+        },
+        {
+          "feature": "Stem base",
+          "thisOne": "A bulb with a rim, or narrow hoops just above it",
+          "thatOne": "Swollen, with no clear rim",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-efb"
+          ]
+        }
+      ]
     }
   ],
   "noDangerousLookalike": null,
@@ -324,6 +361,11 @@
       "id": "wp-tg",
       "title": "Wikipedia — Amanita fulva",
       "url": "https://en.wikipedia.org/wiki/Amanita_fulva"
+    },
+    {
+      "id": "fn-efb",
+      "title": "First Nature — Amanita excelsa, European False Blusher",
+      "url": "https://www.first-nature.com/fungi/amanita-excelsa.php"
     },
     {
       "id": "wf-prot",

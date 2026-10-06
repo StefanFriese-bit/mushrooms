@@ -1,15 +1,15 @@
 {
-  "slug": "dead-man-s-fingers",
-  "inatId": 58698,
-  "scientific": "Xylaria polymorpha",
-  "english": "Dead Man's Fingers",
+  "slug": "dead-moll-s-fingers",
+  "inatId": 352912,
+  "scientific": "Xylaria longipes",
+  "english": "Dead Moll's Fingers",
   "olderNames": [
-    "Xylosphaera polymorpha"
+    "Xylosphaera longipes"
   ],
   "edibility": {
     "value": "not-edible",
     "sources": [
-      "wf",
+      "fn",
       "wp"
     ]
   },
@@ -23,33 +23,32 @@
   },
   "topPoints": [
     {
-      "value": "Black, knobbly, finger-like clubs, 3–10 cm tall, often in bunches like an arthritic hand.",
+      "value": "Small black clubs, 2.5–6.5 cm tall, each on a long, narrow stalk.",
       "sources": [
         "fn",
-        "wf",
-        "wt"
+        "wp"
       ]
     },
     {
-      "value": "Cut open: tough white flesh inside a black crust.",
+      "value": "Grey or brown when young, turning black; white inside.",
       "sources": [
         "fn",
-        "wf"
+        "wp"
       ]
     },
     {
-      "value": "At the base of stumps of beech and other broadleaved trees.",
+      "value": "In tufts on dead wood of broadleaved trees, especially sycamore and beech.",
       "sources": [
         "fn",
-        "wf"
+        "wp"
       ]
     }
   ],
   "habitat": {
-    "value": "On or beside stumps and buried wood of beech and other broadleaved trees.",
+    "value": "Dead branches and stumps of broadleaved trees, especially sycamore and beech.",
     "sources": [
       "fn",
-      "wf"
+      "wp"
     ]
   },
   "seasonMonths": {
@@ -68,8 +67,7 @@
       12
     ],
     "sources": [
-      "fn",
-      "wf"
+      "fn"
     ]
   },
   "sporePrint": {
@@ -105,51 +103,48 @@
       "value": "wood",
       "sources": [
         "fn",
-        "wf"
+        "wp"
       ]
     },
     "capCm": {
       "value": [
-        1,
-        4
+        0.5,
+        2
       ],
       "sources": [
         "fn",
-        "wf",
-        "wt"
+        "wp"
       ]
     },
     "fleshChange": {
-      "value": "White and tough",
+      "value": "White inside a black crust",
       "sources": [
-        "wf",
         "fn"
       ]
     },
     "smell": {
       "value": "Not distinctive",
       "sources": [
-        "fn",
-        "wf"
+        "fn"
       ]
     }
   },
   "lookalikes": [
     {
-      "scientific": "Xylaria longipes",
-      "english": "Dead Moll's Fingers",
-      "slug": "dead-moll-s-fingers",
+      "scientific": "Xylaria polymorpha",
+      "english": "Dead Man's Fingers",
+      "slug": "dead-man-s-fingers",
       "kind": "not-edible",
       "tellApart": [
         {
           "feature": "Shape",
-          "thisOne": "Larger and thicker, usually with no clear stalk",
-          "thatOne": "Smaller, each club on a long, narrow stalk",
+          "thisOne": "Smaller, each club on a long, narrow stalk",
+          "thatOne": "Larger and thicker, usually with no clear stalk",
           "sources": [
             "fn",
-            "wf",
-            "fn-dmo",
-            "wp-dmo"
+            "wp",
+            "fn-dmf",
+            "wf-dmf"
           ]
         }
       ]
@@ -160,33 +155,33 @@
   "sources": [
     {
       "id": "fn",
-      "title": "First Nature — Xylaria polymorpha, Dead Man's Fingers",
-      "url": "https://www.first-nature.com/fungi/xylaria-polymorpha.php"
-    },
-    {
-      "id": "wf",
-      "title": "Wild Food UK — Dead Man's Fingers",
-      "url": "https://www.wildfooduk.com/mushroom-guide/dead-mans-fingers/"
-    },
-    {
-      "id": "wp",
-      "title": "Wikipedia — Xylaria polymorpha",
-      "url": "https://en.wikipedia.org/wiki/Xylaria_polymorpha"
-    },
-    {
-      "id": "wt",
-      "title": "Woodland Trust — Dead Man's Fingers",
-      "url": "https://www.woodlandtrust.org.uk/trees-woods-and-wildlife/fungi-and-lichens/dead-mans-fingers/"
-    },
-    {
-      "id": "fn-dmo",
       "title": "First Nature — Xylaria longipes, Dead Moll's Fingers",
       "url": "https://www.first-nature.com/fungi/xylaria-longipes.php"
     },
     {
-      "id": "wp-dmo",
+      "id": "wp",
       "title": "Wikipedia — Xylaria longipes",
       "url": "https://en.wikipedia.org/wiki/Xylaria_longipes"
+    },
+    {
+      "id": "fn-dmf",
+      "title": "First Nature — Xylaria polymorpha, Dead Man's Fingers",
+      "url": "https://www.first-nature.com/fungi/xylaria-polymorpha.php"
+    },
+    {
+      "id": "wf-dmf",
+      "title": "Wild Food UK — Dead Man's Fingers",
+      "url": "https://www.wildfooduk.com/mushroom-guide/dead-mans-fingers/"
+    },
+    {
+      "id": "wp-dmf",
+      "title": "Wikipedia — Xylaria polymorpha",
+      "url": "https://en.wikipedia.org/wiki/Xylaria_polymorpha"
+    },
+    {
+      "id": "wt-dmf",
+      "title": "Woodland Trust — Dead Man's Fingers",
+      "url": "https://www.woodlandtrust.org.uk/trees-woods-and-wildlife/fungi-and-lichens/dead-mans-fingers/"
     },
     {
       "id": "wf-prot",
