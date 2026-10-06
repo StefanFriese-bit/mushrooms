@@ -44,6 +44,7 @@ Working name: "Mushroom app" (the final name is his to choose).
 | Where his finds live | His phone only, with a backup file in iCloud Drive. Offered instead: sync to iPad/Mac through an online service |
 | Where the app lives | A personal GitHub account of his own (created 06/10/2026: `StefanFriese-bit`). Offered instead: the company's GitHub account |
 | When it first goes on his phone | Early: a TEST version with sample species once the app works. Offered instead: after the first batch |
+| Extra cross-check (added 06/10/2026) | Once a list or a batch of pages is filled in, its safety facts are also checked against two or three more large sources. Where they disagree, the majority decides, a tie takes the cautious answer, and every disagreement is listed for Stefan. His words: "cross-reference it against two or three other large online sources of information to determine which items or which data is accurate" |
 
 ## 3. Facts this design stands on (checked 06/10/2026)
 
@@ -152,6 +153,10 @@ Working name: "Mushroom app" (the final name is his to choose).
   from iNaturalist's open-data copy, under CC0, CC BY or CC BY-NC only, with the photographer credited on the photo.
   The aim is 6 to 8 per species, covering the top, the underneath and the base.
 - The words "safe" and "safe to eat" never appear.
+- **Cross-check (Stefan, 06/10/2026):** after a list or a batch of pages is filled in, every safety fact (edibility,
+  danger level, each dangerous lookalike) is also checked against two or three further large sources — for now
+  Wikipedia, MushroomExpert and, for the UK species it covers, the Woodland Trust. The majority decides; a tie takes
+  the cautious answer; every disagreement is listed in a report for Stefan, with what was decided.
 
 ### 5.4 Checks on every change (an update is not published if any fails)
 
