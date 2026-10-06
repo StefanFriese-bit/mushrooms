@@ -1,0 +1,238 @@
+{
+  "slug": "jack-o-lantern",
+  "inatId": 126831,
+  "scientific": "Omphalotus illudens",
+  "english": "Jack O'Lantern",
+  "olderNames": [
+    "Clitocybe illudens"
+  ],
+  "edibility": {
+    "value": "poisonous",
+    "sources": [
+      "fn",
+      "wp",
+      "wf-ch"
+    ]
+  },
+  "edibilityNote": {
+    "value": "Raw or cooked, it causes vomiting, cramps and diarrhoea that can last for several days.",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "Large bright orange caps, 7–20 cm, in dense clusters on wood — buried roots or stumps of broadleaved trees, especially oak.",
+      "sources": [
+        "fn",
+        "wp",
+        "wf-ch"
+      ]
+    },
+    {
+      "value": "True gills, orange like the cap, running down the stem — they do not fork.",
+      "sources": [
+        "fn",
+        "wp",
+        "wf-ch"
+      ]
+    },
+    {
+      "value": "Flesh orange right through — a Chanterelle's is white inside.",
+      "sources": [
+        "wp",
+        "wf-ch"
+      ]
+    },
+    {
+      "value": "Creamy white spore print. Very rare in Britain.",
+      "sources": [
+        "fn",
+        "wp",
+        "wf-ch"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "On buried roots of broadleaved trees — especially oak and sweet chestnut — often in lawns and parkland near trees; sometimes on stumps.",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      7,
+      8,
+      9,
+      10
+    ],
+    "sources": [
+      "fn"
+    ]
+  },
+  "sporePrint": {
+    "value": "Creamy white",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "gills",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "ring": {
+      "value": "no",
+      "sources": [
+        "wp",
+        "fn"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "growsOn": {
+      "value": "wood",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "capCm": {
+      "value": [
+        7,
+        20
+      ],
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "fleshChange": {
+      "value": "Orange right through; no colour change when cut is described",
+      "sources": [
+        "wp"
+      ]
+    },
+    "smell": {
+      "value": "Quite strong but pleasant",
+      "sources": [
+        "fn"
+      ]
+    }
+  },
+  "lookalikes": [
+    {
+      "scientific": "Cantharellus cibarius",
+      "english": "Chanterelle",
+      "slug": "chanterelle",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Where it grows",
+          "thisOne": "In dense clusters on wood or on buried roots of broadleaved trees",
+          "thatOne": "From the ground",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-ch",
+            "wf-ch"
+          ]
+        },
+        {
+          "feature": "Underneath",
+          "thisOne": "True gills that do not fork",
+          "thatOne": "Blunt, forked ridges",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-ch",
+            "wf-ch"
+          ]
+        },
+        {
+          "feature": "Colour",
+          "thisOne": "Orange, deeper than a chanterelle",
+          "thatOne": "Egg-yolk yellow",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-ch",
+            "wf-ch"
+          ]
+        },
+        {
+          "feature": "Flesh",
+          "thisOne": "Orange right through",
+          "thatOne": "White inside",
+          "sources": [
+            "wp",
+            "wf-ch"
+          ]
+        }
+      ]
+    }
+  ],
+  "noDangerousLookalike": null,
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Omphalotus illudens, Jack O'Lantern",
+      "url": "https://www.first-nature.com/fungi/omphalotus-illudens.php"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Omphalotus illudens",
+      "url": "https://en.wikipedia.org/wiki/Omphalotus_illudens"
+    },
+    {
+      "id": "fn-ch",
+      "title": "First Nature — Cantharellus cibarius, Chanterelle",
+      "url": "https://www.first-nature.com/fungi/cantharellus-cibarius.php"
+    },
+    {
+      "id": "wf-ch",
+      "title": "Wild Food UK — Chanterelle",
+      "url": "https://www.wildfooduk.com/mushroom-guide/chanterelle-3/"
+    },
+    {
+      "id": "wp-ch",
+      "title": "Wikipedia — Cantharellus cibarius",
+      "url": "https://en.wikipedia.org/wiki/Cantharellus_cibarius"
+    },
+    {
+      "id": "wt-ch",
+      "title": "Woodland Trust — Chanterelle",
+      "url": "https://www.woodlandtrust.org.uk/trees-woods-and-wildlife/fungi-and-lichens/chanterelle/"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}

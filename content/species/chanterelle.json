@@ -263,7 +263,7 @@
     {
       "scientific": "Omphalotus illudens",
       "english": "Jack O'Lantern",
-      "slug": null,
+      "slug": "jack-o-lantern",
       "kind": "poisonous",
       "tellApart": [
         {
@@ -295,6 +295,15 @@
             "fn",
             "wf",
             "fn-jol",
+            "wp-jol"
+          ]
+        },
+        {
+          "feature": "Flesh",
+          "thisOne": "White inside",
+          "thatOne": "Orange right through",
+          "sources": [
+            "wf",
             "wp-jol"
           ]
         }
