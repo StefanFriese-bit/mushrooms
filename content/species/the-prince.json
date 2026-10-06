@@ -188,6 +188,36 @@
           ]
         }
       ]
+    },
+    {
+      "scientific": "Echinoderma asperum",
+      "english": "Freckled Dapperling",
+      "slug": "freckled-dapperling",
+      "kind": "poisonous",
+      "tellApart": [
+        {
+          "feature": "Cap",
+          "thisOne": "Flat chestnut-brown scales on cream",
+          "thatOne": "Pointed brown warts on a tan cap",
+          "sources": [
+            "fn",
+            "wf",
+            "wf-fd",
+            "wp-fd"
+          ]
+        },
+        {
+          "feature": "Gills",
+          "thisOne": "Pink at first, then chocolate brown",
+          "thatOne": "White",
+          "sources": [
+            "fn",
+            "wf",
+            "wf-fd",
+            "wp-fd"
+          ]
+        }
+      ]
     }
   ],
   "noDangerousLookalike": null,
@@ -251,6 +281,16 @@
       "id": "wp-im",
       "title": "Wikipedia — Agaricus moelleri",
       "url": "https://en.wikipedia.org/wiki/Agaricus_moelleri"
+    },
+    {
+      "id": "wf-fd",
+      "title": "Wild Food UK — Freckled Dapperling",
+      "url": "https://www.wildfooduk.com/mushroom-guide/freckled-dapperling/"
+    },
+    {
+      "id": "wp-fd",
+      "title": "Wikipedia — Echinoderma asperum",
+      "url": "https://en.wikipedia.org/wiki/Echinoderma_asperum"
     },
     {
       "id": "wf-prot",

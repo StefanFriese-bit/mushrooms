@@ -16,7 +16,8 @@ HELD = {'Chlorociboria aeruginascens',  # Green Elfcup: no edibility on any trus
         'Russula nigricans',  # Blackening Brittlegill: edible; only Wild Food UK gives its spore print (Wikipedia mixes two species)
         'Verpa conica',  # Thimble Morel: edible, but neither site gives a spore print (no First Nature page)
         'Armillaria ostoyae',  # Dark Honey Fungus: edible, but only First Nature gives a cap size
-        'Collybia sordida'}  # Sordid Blewit: edible; only First Nature gives the spore print that tells it from webcaps
+        'Collybia sordida',  # Sordid Blewit: edible; only First Nature gives the spore print that tells it from webcaps
+        'Xerocomellus pruinatus'}  # Matt Bolete: edible per First Nature only; Wikipedia's article is a stub
 rows = []
 for s in lst:
     if s in b1 or s['name'] in have or s['name'] in HELD:

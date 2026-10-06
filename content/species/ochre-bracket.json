@@ -1,0 +1,195 @@
+{
+  "slug": "ochre-bracket",
+  "inatId": 118111,
+  "scientific": "Trametes ochracea",
+  "english": "Ochre Bracket",
+  "olderNames": [
+    "Trametes zonata",
+    "Coriolus zonatus"
+  ],
+  "edibility": {
+    "value": "not-edible",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "edibilityNote": {
+    "value": "Far too tough and leathery to eat.",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "Thin, shell-shaped brackets up to 10 cm, finely hairy, zoned in ochre, brown and orange.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    {
+      "value": "Underneath: creamy-ochre with small round pores.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    {
+      "value": "On dead broadleaved wood, especially beech and oak, all year.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "Dead broadleaved wood, fallen or standing, especially beech and oak.",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "sources": [
+      "fn"
+    ]
+  },
+  "sporePrint": {
+    "value": "White",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "pores",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "ring": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "growsOn": {
+      "value": "wood",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "capCm": {
+      "value": [
+        0,
+        10
+      ],
+      "sources": [
+        "wp"
+      ]
+    },
+    "fleshChange": {
+      "value": "Thin and leathery",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "smell": {
+      "value": "Not distinctive",
+      "sources": [
+        "fn"
+      ]
+    }
+  },
+  "lookalikes": [
+    {
+      "scientific": "Trametes versicolor",
+      "english": "Turkeytail",
+      "slug": "turkeytail",
+      "kind": "not-edible",
+      "tellApart": [
+        {
+          "feature": "Colours",
+          "thisOne": "Paler — ochre, brown and orange zones",
+          "thatOne": "Usually darker, with bolder bands of many colours",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-tt",
+            "wp-tt"
+          ]
+        }
+      ]
+    }
+  ],
+  "noDangerousLookalike": null,
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Trametes ochracea, Ochre Bracket",
+      "url": "https://www.first-nature.com/fungi/trametes-ochracea.php"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Trametes ochracea",
+      "url": "https://en.wikipedia.org/wiki/Trametes_ochracea"
+    },
+    {
+      "id": "fn-tt",
+      "title": "First Nature — Trametes versicolor, Turkeytail",
+      "url": "https://www.first-nature.com/fungi/trametes-versicolor.php"
+    },
+    {
+      "id": "wp-tt",
+      "title": "Wikipedia — Trametes versicolor",
+      "url": "https://en.wikipedia.org/wiki/Trametes_versicolor"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}

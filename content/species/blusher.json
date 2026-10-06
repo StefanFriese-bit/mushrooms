@@ -251,6 +251,36 @@
           ]
         }
       ]
+    },
+    {
+      "scientific": "Echinoderma asperum",
+      "english": "Freckled Dapperling",
+      "slug": "freckled-dapperling",
+      "kind": "poisonous",
+      "tellApart": [
+        {
+          "feature": "Flesh when cut",
+          "thisOne": "Slowly turns pink",
+          "thatOne": "White, not changing",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "wf-fd"
+          ]
+        },
+        {
+          "feature": "Cap",
+          "thisOne": "Pinkish-brown with soft warts",
+          "thatOne": "Tan with pointed dark brown scales",
+          "sources": [
+            "fn",
+            "wf",
+            "wf-fd",
+            "wp-fd"
+          ]
+        }
+      ]
     }
   ],
   "noDangerousLookalike": null,
@@ -329,6 +359,16 @@
       "id": "wp-fa",
       "title": "Wikipedia — Amanita muscaria",
       "url": "https://en.wikipedia.org/wiki/Amanita_muscaria"
+    },
+    {
+      "id": "wf-fd",
+      "title": "Wild Food UK — Freckled Dapperling",
+      "url": "https://www.wildfooduk.com/mushroom-guide/freckled-dapperling/"
+    },
+    {
+      "id": "wp-fd",
+      "title": "Wikipedia — Echinoderma asperum",
+      "url": "https://en.wikipedia.org/wiki/Echinoderma_asperum"
     },
     {
       "id": "wf-prot",

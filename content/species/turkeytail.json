@@ -194,6 +194,25 @@
           ]
         }
       ]
+    },
+    {
+      "scientific": "Trametes ochracea",
+      "english": "Ochre Bracket",
+      "slug": "ochre-bracket",
+      "kind": "not-edible",
+      "tellApart": [
+        {
+          "feature": "Colours",
+          "thisOne": "Usually darker, with bolder bands of many colours",
+          "thatOne": "Paler — ochre, brown and orange zones",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-ob",
+            "wp-ob"
+          ]
+        }
+      ]
     }
   ],
   "noDangerousLookalike": null,
@@ -238,6 +257,16 @@
       "id": "wf-yc",
       "title": "Wild Food UK — Yellowing Curtain Crust",
       "url": "https://www.wildfooduk.com/mushroom-guide/yellowing-curtain-crust/"
+    },
+    {
+      "id": "fn-ob",
+      "title": "First Nature — Trametes ochracea, Ochre Bracket",
+      "url": "https://www.first-nature.com/fungi/trametes-ochracea.php"
+    },
+    {
+      "id": "wp-ob",
+      "title": "Wikipedia — Trametes ochracea",
+      "url": "https://en.wikipedia.org/wiki/Trametes_ochracea"
     },
     {
       "id": "wf-prot",

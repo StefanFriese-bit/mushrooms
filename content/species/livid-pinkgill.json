@@ -287,6 +287,36 @@
           ]
         }
       ]
+    },
+    {
+      "scientific": "Lyophyllum decastes",
+      "english": "Clustered Domecap",
+      "slug": "clustered-domecap",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Spore print",
+          "thisOne": "Pink",
+          "thatOne": "White",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-cd",
+            "wp-cd"
+          ]
+        },
+        {
+          "feature": "Gills",
+          "thisOne": "Yellowish, then pink",
+          "thatOne": "White to very pale grey",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-cd",
+            "wf-cd"
+          ]
+        }
+      ]
     }
   ],
   "noDangerousLookalike": null,
@@ -380,6 +410,21 @@
       "id": "wp-lc",
       "title": "Wikipedia — Entoloma porphyrophaeum",
       "url": "https://en.wikipedia.org/wiki/Entoloma_porphyrophaeum"
+    },
+    {
+      "id": "fn-cd",
+      "title": "First Nature — Lyophyllum decastes, Clustered Domecap",
+      "url": "https://www.first-nature.com/fungi/lyophyllum-decastes.php"
+    },
+    {
+      "id": "wf-cd",
+      "title": "Wild Food UK — Clustered Domecap",
+      "url": "https://www.wildfooduk.com/mushroom-guide/clustered-domecap/"
+    },
+    {
+      "id": "wp-cd",
+      "title": "Wikipedia — Lyophyllum decastes",
+      "url": "https://en.wikipedia.org/wiki/Lyophyllum_decastes"
     },
     {
       "id": "wf-prot",

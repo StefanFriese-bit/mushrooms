@@ -1,0 +1,235 @@
+{
+  "slug": "clustered-domecap",
+  "inatId": 118243,
+  "scientific": "Lyophyllum decastes",
+  "english": "Clustered Domecap",
+  "olderNames": [
+    "Lyophyllum aggregatum"
+  ],
+  "edibility": {
+    "value": "edible-some-react",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "edibilityNote": {
+    "value": "A good edible mushroom, but it upsets some people: eat only a little the first time. Several poisonous species look like it — its tight clusters are the key.",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "Dense clusters of grey-brown caps, 4–10 cm, smooth and shiny, often misshapen.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "Stems joined together at the base; no ring.",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    {
+      "value": "Crowded white to very pale grey gills; white spore print.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "From the ground, not wood — grassy woodland edges, paths, gravel drives.",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "On disturbed soil rich in leaf litter — grassy woodland edges, paths, roadsides and gravel drives.",
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      8,
+      9,
+      10,
+      11
+    ],
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "sporePrint": {
+    "value": "White",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "gills",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    "ring": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "growsOn": {
+      "value": "ground",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "capCm": {
+      "value": [
+        4,
+        10
+      ],
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    "fleshChange": {
+      "value": "White and firm",
+      "sources": [
+        "wf",
+        "fn"
+      ]
+    },
+    "smell": {
+      "value": "Not significant; mushroomy",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    }
+  },
+  "lookalikes": [
+    {
+      "scientific": "Entoloma sinuatum",
+      "english": "Livid Pinkgill",
+      "slug": "livid-pinkgill",
+      "kind": "deadly",
+      "tellApart": [
+        {
+          "feature": "Spore print",
+          "thisOne": "White",
+          "thatOne": "Pink",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-lp",
+            "wp-lp"
+          ]
+        },
+        {
+          "feature": "Gills",
+          "thisOne": "White to very pale grey",
+          "thatOne": "Yellowish, then pink",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-lp",
+            "wp-lp"
+          ]
+        }
+      ]
+    },
+    {
+      "scientific": "Macrocystidia cucumis",
+      "english": "Cucumber Cap",
+      "slug": null,
+      "kind": "poisonous",
+      "tellApart": [
+        {
+          "feature": "Smell",
+          "thisOne": "Not distinctive",
+          "thatOne": "Of cucumber",
+          "sources": [
+            "fn",
+            "wf"
+          ]
+        }
+      ]
+    }
+  ],
+  "noDangerousLookalike": null,
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Lyophyllum decastes, Clustered Domecap",
+      "url": "https://www.first-nature.com/fungi/lyophyllum-decastes.php"
+    },
+    {
+      "id": "wf",
+      "title": "Wild Food UK — Clustered Domecap",
+      "url": "https://www.wildfooduk.com/mushroom-guide/clustered-domecap/"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Lyophyllum decastes",
+      "url": "https://en.wikipedia.org/wiki/Lyophyllum_decastes"
+    },
+    {
+      "id": "fn-lp",
+      "title": "First Nature — Entoloma sinuatum, Livid Pinkgill",
+      "url": "https://www.first-nature.com/fungi/entoloma-sinuatum.php"
+    },
+    {
+      "id": "wp-lp",
+      "title": "Wikipedia — Entoloma sinuatum",
+      "url": "https://en.wikipedia.org/wiki/Entoloma_sinuatum"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}

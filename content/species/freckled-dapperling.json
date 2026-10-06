@@ -1,0 +1,257 @@
+{
+  "slug": "freckled-dapperling",
+  "inatId": 1280949,
+  "scientific": "Echinoderma asperum",
+  "english": "Freckled Dapperling",
+  "olderNames": [
+    "Lepiota aspera",
+    "Cystolepiota aspera",
+    "Lepiota acutesquamosa"
+  ],
+  "edibility": {
+    "value": "poisonous",
+    "sources": [
+      "wf",
+      "wp"
+    ]
+  },
+  "edibilityNote": {
+    "value": "It causes a reaction with alcohol, like the Common Inkcap, and may be poisonous (Wikipedia); Wild Food UK lists it as poisonous.",
+    "sources": [
+      "wf",
+      "wp"
+    ]
+  },
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "A tan to pale brown cap, 6–18 cm, covered in dark brown pointed (pyramid) scales, densest in the middle.",
+      "sources": [
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "Crowded white gills, free of the stem.",
+      "sources": [
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "A ring, cottony on top with brown scales underneath; brown scales on the stem below.",
+      "sources": [
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "In broadleaved woods and on woodchip in parks and gardens.",
+      "sources": [
+        "wf",
+        "wp"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "Broadleaved woods, and woodchip mulch in parks and gardens; commoner in southern Britain.",
+    "sources": [
+      "wf",
+      "wp"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      8,
+      9,
+      10,
+      11
+    ],
+    "sources": [
+      "wf",
+      "wp"
+    ]
+  },
+  "sporePrint": {
+    "value": "White",
+    "sources": [
+      "wf",
+      "wp"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "gills",
+      "sources": [
+        "wf",
+        "wp"
+      ]
+    },
+    "ring": {
+      "value": "yes",
+      "sources": [
+        "wf",
+        "wp"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "wf",
+        "wp"
+      ]
+    },
+    "growsOn": {
+      "value": "ground",
+      "sources": [
+        "wf",
+        "wp"
+      ]
+    },
+    "capCm": {
+      "value": [
+        0,
+        18
+      ],
+      "sources": [
+        "wf",
+        "wp"
+      ]
+    },
+    "fleshChange": {
+      "value": "White",
+      "sources": [
+        "wf",
+        "wp"
+      ]
+    },
+    "smell": {
+      "value": "Said to smell of rubber or of earthballs",
+      "sources": [
+        "wp"
+      ]
+    }
+  },
+  "lookalikes": [
+    {
+      "scientific": "Agaricus augustus",
+      "english": "The Prince",
+      "slug": "the-prince",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Cap",
+          "thisOne": "Pointed brown warts on a tan cap",
+          "thatOne": "Flat chestnut-brown scales on cream",
+          "sources": [
+            "wf-tp",
+            "fn-tp",
+            "wp"
+          ]
+        },
+        {
+          "feature": "Gills",
+          "thisOne": "White",
+          "thatOne": "Pink at first, then chocolate brown",
+          "sources": [
+            "wf",
+            "wp",
+            "wf-tp",
+            "fn-tp"
+          ]
+        }
+      ]
+    },
+    {
+      "scientific": "Amanita rubescens",
+      "english": "Blusher",
+      "slug": "blusher",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Gills",
+          "thisOne": "White, staying white",
+          "thatOne": "White, often with pink or rusty spots",
+          "sources": [
+            "wf",
+            "wp",
+            "fn-bl",
+            "wf-bl"
+          ]
+        },
+        {
+          "feature": "Flesh when cut",
+          "thisOne": "White, not changing",
+          "thatOne": "Slowly turns pink",
+          "sources": [
+            "wf",
+            "fn-bl",
+            "wf-bl",
+            "wp-bl"
+          ]
+        }
+      ]
+    }
+  ],
+  "noDangerousLookalike": null,
+  "photos": [],
+  "sources": [
+    {
+      "id": "wf",
+      "title": "Wild Food UK — Freckled Dapperling",
+      "url": "https://www.wildfooduk.com/mushroom-guide/freckled-dapperling/"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Echinoderma asperum",
+      "url": "https://en.wikipedia.org/wiki/Echinoderma_asperum"
+    },
+    {
+      "id": "fn-tp",
+      "title": "First Nature — Agaricus augustus, The Prince",
+      "url": "https://www.first-nature.com/fungi/agaricus-augustus.php"
+    },
+    {
+      "id": "wf-tp",
+      "title": "Wild Food UK — The Prince",
+      "url": "https://www.wildfooduk.com/mushroom-guide/prince/"
+    },
+    {
+      "id": "wp-tp",
+      "title": "Wikipedia — Agaricus augustus",
+      "url": "https://en.wikipedia.org/wiki/Agaricus_augustus"
+    },
+    {
+      "id": "fn-bl",
+      "title": "First Nature — Amanita rubescens, Blusher",
+      "url": "https://www.first-nature.com/fungi/amanita-rubescens.php"
+    },
+    {
+      "id": "wf-bl",
+      "title": "Wild Food UK — Blusher",
+      "url": "https://www.wildfooduk.com/mushroom-guide/blusher/"
+    },
+    {
+      "id": "wp-bl",
+      "title": "Wikipedia — Amanita rubescens",
+      "url": "https://en.wikipedia.org/wiki/Amanita_rubescens"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}

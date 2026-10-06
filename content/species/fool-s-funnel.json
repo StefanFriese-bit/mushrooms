@@ -245,6 +245,38 @@
           ]
         }
       ]
+    },
+    {
+      "scientific": "Pseudoclitocybe cyathiformis",
+      "english": "Goblet",
+      "slug": "goblet",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Cap",
+          "thisOne": "White, chalky or floury",
+          "thatOne": "Dark grey-brown",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "fn-gb",
+            "wf-gb",
+            "wp-gb"
+          ]
+        },
+        {
+          "feature": "Gills",
+          "thisOne": "Crowded, white to cream, not forked",
+          "thatOne": "Forked, pale grey to beige",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-gb",
+            "wf-gb"
+          ]
+        }
+      ]
     }
   ],
   "noDangerousLookalike": null,
@@ -333,6 +365,21 @@
       "id": "wp-tf",
       "title": "Wikipedia — Infundibulicybe geotropa",
       "url": "https://en.wikipedia.org/wiki/Infundibulicybe_geotropa"
+    },
+    {
+      "id": "fn-gb",
+      "title": "First Nature — Pseudoclitocybe cyathiformis, Goblet",
+      "url": "https://www.first-nature.com/fungi/pseudoclitocybe-cyathiformis.php"
+    },
+    {
+      "id": "wf-gb",
+      "title": "Wild Food UK — Goblet",
+      "url": "https://www.wildfooduk.com/mushroom-guide/goblet/"
+    },
+    {
+      "id": "wp-gb",
+      "title": "Wikipedia — Pseudoclitocybe cyathiformis",
+      "url": "https://en.wikipedia.org/wiki/Pseudoclitocybe_cyathiformis"
     },
     {
       "id": "wf-prot",

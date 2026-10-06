@@ -1,0 +1,222 @@
+{
+  "slug": "goblet",
+  "inatId": 339415,
+  "scientific": "Pseudoclitocybe cyathiformis",
+  "english": "Goblet",
+  "olderNames": [
+    "Clitocybe cyathiformis"
+  ],
+  "edibility": {
+    "value": "edible-some-react",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "edibilityNote": {
+    "value": "Edible when thoroughly cooked, but it upsets a small number of people: try a little first (Wild Food UK). Take great care not to gather poisonous funnels such as the deadly Fool’s Funnel (First Nature).",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "A dark grey-brown, deeply funnel-shaped cap, 4–8 cm, with an inrolled edge; it fades with age.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "Gills running down the stem, pale grey to beige — and forked, the key feature.",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    {
+      "value": "A long, grey, fibrous stem; no ring.",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    {
+      "value": "In woodland, on soil or rotten stumps; also pastures. Late in the year.",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "Mixed woodland, on soil or well-rotted stumps; also pastures and fields.",
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      10,
+      11,
+      12
+    ],
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "sporePrint": {
+    "value": "Creamy white to pale grey",
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "gills",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    "ring": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "growsOn": {
+      "value": "ground",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "capCm": {
+      "value": [
+        4,
+        8
+      ],
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "fleshChange": {
+      "value": "No colour change when cut is described",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "smell": {
+      "value": "Not distinctive, or mushroomy",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    }
+  },
+  "lookalikes": [
+    {
+      "scientific": "Clitocybe rivulosa",
+      "english": "Fool's Funnel",
+      "slug": "fool-s-funnel",
+      "kind": "deadly",
+      "tellApart": [
+        {
+          "feature": "Cap",
+          "thisOne": "Dark grey-brown",
+          "thatOne": "White, chalky or floury",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "fn-ff",
+            "wf-ff",
+            "wp-ff"
+          ]
+        },
+        {
+          "feature": "Gills",
+          "thisOne": "Forked, pale grey to beige",
+          "thatOne": "Crowded, white to cream, not forked",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-ff",
+            "wf-ff"
+          ]
+        }
+      ]
+    }
+  ],
+  "noDangerousLookalike": null,
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Pseudoclitocybe cyathiformis, Goblet",
+      "url": "https://www.first-nature.com/fungi/pseudoclitocybe-cyathiformis.php"
+    },
+    {
+      "id": "wf",
+      "title": "Wild Food UK — Goblet",
+      "url": "https://www.wildfooduk.com/mushroom-guide/goblet/"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Pseudoclitocybe cyathiformis",
+      "url": "https://en.wikipedia.org/wiki/Pseudoclitocybe_cyathiformis"
+    },
+    {
+      "id": "fn-ff",
+      "title": "First Nature — Collybia rivulosa, Fool's Funnel",
+      "url": "https://www.first-nature.com/fungi/clitocybe-rivulosa.php"
+    },
+    {
+      "id": "wf-ff",
+      "title": "Wild Food UK — Fool's Funnel",
+      "url": "https://www.wildfooduk.com/mushroom-guide/clitocybe-rivulosa-2/"
+    },
+    {
+      "id": "wp-ff",
+      "title": "Wikipedia — Collybia rivulosa",
+      "url": "https://en.wikipedia.org/wiki/Clitocybe_rivulosa"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}
