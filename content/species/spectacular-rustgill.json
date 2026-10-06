@@ -1,0 +1,179 @@
+{
+  "slug": "spectacular-rustgill",
+  "inatId": 83196,
+  "scientific": "Gymnopilus junonius",
+  "english": "Spectacular Rustgill",
+  "olderNames": [
+    "Gymnopilus spectabilis"
+  ],
+  "edibility": {
+    "value": "not-edible",
+    "sources": [
+      "wf",
+      "wp"
+    ]
+  },
+  "edibilityNote": {
+    "value": "Bitter. First Nature reports that specimens from some parts of the world contain hallucinogens and calls it toxic.",
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "Large golden-orange cap, 4–30 cm, fibrous and finely scaly.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "Gills yellow, turning rusty orange-brown; rusty-brown spore print.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "Stout stem with a ring that turns rusty with spores.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "In clusters at the base of living trees and on stumps, mostly broadleaved.",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "In clusters at the base of living trees and on stumps and logs, mostly broadleaved; sometimes conifers.",
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "sporePrint": {
+    "value": "Rusty brown",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "gills",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    "ring": {
+      "value": "yes",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "growsOn": {
+      "value": "wood",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "capCm": {
+      "value": [
+        4,
+        30
+      ],
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "fleshChange": {
+      "value": "Off-white to pale yellow",
+      "sources": [
+        "wf"
+      ]
+    },
+    "smell": {
+      "value": "Faintly fruity",
+      "sources": [
+        "fn"
+      ]
+    }
+  },
+  "lookalikes": [],
+  "noDangerousLookalike": null,
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Gymnopilus junonius, Spectacular Rustgill",
+      "url": "https://www.first-nature.com/fungi/gymnopilus-junonius.php"
+    },
+    {
+      "id": "wf",
+      "title": "Wild Food UK — Spectacular Rustgill",
+      "url": "https://www.wildfooduk.com/mushroom-guide/spectacular-rustgill/"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Gymnopilus junonius",
+      "url": "https://en.wikipedia.org/wiki/Gymnopilus_junonius"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}

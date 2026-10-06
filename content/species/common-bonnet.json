@@ -1,0 +1,172 @@
+{
+  "slug": "common-bonnet",
+  "inatId": 63446,
+  "scientific": "Mycena galericulata",
+  "english": "Common Bonnet",
+  "olderNames": [],
+  "edibility": {
+    "value": "not-edible",
+    "sources": [
+      "wp",
+      "fn"
+    ]
+  },
+  "edibilityNote": {
+    "value": "Wild Food UK lists it as edible; First Nature says it is not worth collecting; Wikipedia gives it as inedible and warns it may resemble questionable species.",
+    "sources": [
+      "wf",
+      "fn",
+      "wp"
+    ]
+  },
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "Grey-brown to pinkish bell-shaped cap, 2.5–6 cm, with fine lines towards a paler edge.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "Gills white to pinkish-grey, joined by cross-veins like ladder rungs.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "Tough, thin, often twisted stem, pale at the top; no ring.",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    {
+      "value": "In clusters on stumps and dead wood of broadleaved trees.",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "Stumps, trunks and dead wood of broadleaved trees, occasionally conifers, including buried wood.",
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "sources": [
+      "fn"
+    ]
+  },
+  "sporePrint": {
+    "value": "White",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "gills",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    "ring": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "growsOn": {
+      "value": "wood",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "capCm": {
+      "value": [
+        2.5,
+        6
+      ],
+      "sources": [
+        "fn"
+      ]
+    },
+    "fleshChange": {
+      "value": "Thin and white",
+      "sources": [
+        "wf"
+      ]
+    },
+    "smell": {
+      "value": "Not distinctive",
+      "sources": [
+        "fn"
+      ]
+    }
+  },
+  "lookalikes": [],
+  "noDangerousLookalike": null,
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Mycena galericulata, Common Bonnet",
+      "url": "https://www.first-nature.com/fungi/mycena-galericulata.php"
+    },
+    {
+      "id": "wf",
+      "title": "Wild Food UK — Common Bonnet",
+      "url": "https://www.wildfooduk.com/mushroom-guide/common-bonnet/"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Mycena galericulata",
+      "url": "https://en.wikipedia.org/wiki/Mycena_galericulata"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}

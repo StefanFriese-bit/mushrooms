@@ -1,0 +1,165 @@
+{
+  "slug": "netted-crust",
+  "inatId": 118073,
+  "scientific": "Byssomerulius corium",
+  "english": "Netted Crust",
+  "olderNames": [
+    "Merulius corium",
+    "Meruliopsis corium"
+  ],
+  "edibility": {
+    "value": "not-edible",
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "edibilityNote": null,
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "Thin, whitish crusts and small brackets, spreading in patches, often on the undersides of fallen branches.",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    {
+      "value": "The lower surface is covered in a net of wrinkles and ridges, white turning ochre.",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    {
+      "value": "Top of the little brackets finely hairy, white to greyish.",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "Dead fallen broadleaved branches and twigs, mostly on the undersides; commonly ash.",
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "sporePrint": {
+    "value": "White",
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "other",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "ring": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "growsOn": {
+      "value": "wood",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "capCm": {
+      "value": [
+        0,
+        3
+      ],
+      "sources": [
+        "wf"
+      ]
+    },
+    "fleshChange": {
+      "value": "Very thin, leathery and tough",
+      "sources": [
+        "wf"
+      ]
+    },
+    "smell": {
+      "value": "Not distinctive",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    }
+  },
+  "lookalikes": [],
+  "noDangerousLookalike": null,
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Byssomerulius corium, Netted Crust",
+      "url": "https://www.first-nature.com/fungi/byssomerulius-corium.php"
+    },
+    {
+      "id": "wf",
+      "title": "Wild Food UK — Netted Crust",
+      "url": "https://www.wildfooduk.com/mushroom-guide/netted-crust/"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Byssomerulius corium",
+      "url": "https://en.wikipedia.org/wiki/Byssomerulius_corium"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}

@@ -1,0 +1,170 @@
+{
+  "slug": "pale-brittlestem",
+  "inatId": 1179954,
+  "scientific": "Candolleomyces candolleanus",
+  "english": "Pale Brittlestem",
+  "olderNames": [
+    "Psathyrella candolleana"
+  ],
+  "edibility": {
+    "value": "edible-cooked",
+    "sources": [
+      "wf",
+      "wp"
+    ]
+  },
+  "edibilityNote": {
+    "value": "Edible, but thin, poor and hard to tell from other small brown mushrooms — Wikipedia does not recommend it.",
+    "sources": [
+      "wp",
+      "wf"
+    ]
+  },
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "Thin, fragile cap, 1.5–8 cm, honey-brown when young, quickly fading to whitish, often with white veil fragments on the edge.",
+      "sources": [
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "Gills white, then grey-lilac, then dark brown; purple-brown spore print.",
+      "sources": [
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "Very fragile, hollow white stem.",
+      "sources": [
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "In small groups on soil, wood and grass debris in woods, parks and gardens.",
+      "sources": [
+        "wf",
+        "wp"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "In small groups on soil, buried wood and grass debris in woods, parks, gardens and lawns.",
+    "sources": [
+      "wf",
+      "wp"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "sources": [
+      "wf"
+    ]
+  },
+  "sporePrint": {
+    "value": "Purple-brown",
+    "sources": [
+      "wp",
+      "wf"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "gills",
+      "sources": [
+        "wf",
+        "wp"
+      ]
+    },
+    "ring": {
+      "value": "sometimes",
+      "sources": [
+        "wp",
+        "wf"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "wf",
+        "wp"
+      ]
+    },
+    "growsOn": {
+      "value": "ground",
+      "sources": [
+        "wf",
+        "wp"
+      ]
+    },
+    "capCm": {
+      "value": [
+        1.5,
+        6
+      ],
+      "sources": [
+        "wf",
+        "wp"
+      ]
+    },
+    "fleshChange": {
+      "value": "Thin, white and very fragile",
+      "sources": [
+        "wf"
+      ]
+    },
+    "smell": {
+      "value": "Weak and mushroomy, or not distinctive",
+      "sources": [
+        "wf"
+      ]
+    }
+  },
+  "lookalikes": [],
+  "noDangerousLookalike": {
+    "sources": [
+      "wf",
+      "wp"
+    ]
+  },
+  "photos": [],
+  "sources": [
+    {
+      "id": "wf",
+      "title": "Wild Food UK — Pale Brittlestem",
+      "url": "https://www.wildfooduk.com/mushroom-guide/pale-brittlestem/"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Candolleomyces candolleanus",
+      "url": "https://en.wikipedia.org/wiki/Candolleomyces_candolleanus"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}

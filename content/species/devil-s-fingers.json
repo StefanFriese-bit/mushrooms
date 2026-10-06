@@ -1,0 +1,159 @@
+{
+  "slug": "devil-s-fingers",
+  "inatId": 51135,
+  "scientific": "Clathrus archeri",
+  "english": "Devil's Fingers",
+  "olderNames": [
+    "Anthurus archeri",
+    "Lysurus archeri"
+  ],
+  "edibility": {
+    "value": "not-edible",
+    "sources": [
+      "wf",
+      "wp"
+    ]
+  },
+  "edibilityNote": null,
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "Four to six bright red, tentacle-like arms bursting from a white egg 2–4 cm across.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    {
+      "value": "The arms carry patches of dark olive slime that smell of rotting meat.",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    {
+      "value": "In leaf litter, mulch and woodchip, in parks and gardens; rare, mostly in the south.",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "Leaf litter under trees and shrubs, and bark mulch and woodchip in parks, gardens and cemeteries.",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      6,
+      7,
+      8,
+      9
+    ],
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "sporePrint": {
+    "value": "Olive-brown spore slime",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "other",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "ring": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "bagAtBase": {
+      "value": "yes",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "growsOn": {
+      "value": "ground",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "capCm": {
+      "value": [
+        2,
+        4
+      ],
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "fleshChange": {
+      "value": "Spongy arms; jelly inside the egg",
+      "sources": [
+        "fn"
+      ]
+    },
+    "smell": {
+      "value": "Of rotting meat",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    }
+  },
+  "lookalikes": [],
+  "noDangerousLookalike": null,
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Clathrus archeri, Devil's Fingers",
+      "url": "https://www.first-nature.com/fungi/clathrus-archeri.php"
+    },
+    {
+      "id": "wf",
+      "title": "Wild Food UK — Devil's Fingers",
+      "url": "https://www.wildfooduk.com/mushroom-guide/devils-fingers/"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Clathrus archeri",
+      "url": "https://en.wikipedia.org/wiki/Clathrus_archeri"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}

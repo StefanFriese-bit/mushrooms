@@ -1,0 +1,179 @@
+{
+  "slug": "oak-mazegill",
+  "inatId": 1536892,
+  "scientific": "Fomitopsis quercina",
+  "english": "Oak Mazegill",
+  "olderNames": [
+    "Daedalea quercina",
+    "Lenzites quercina"
+  ],
+  "edibility": {
+    "value": "not-edible",
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "edibilityNote": null,
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "A thick, corky bracket, 3–20 cm, greyish to ochre-brown and lumpy on top.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp",
+        "wt-bracket"
+      ]
+    },
+    {
+      "value": "Underneath: a maze of wide, thick-walled slots instead of pores.",
+      "sources": [
+        "fn",
+        "wf",
+        "wt-bracket"
+      ]
+    },
+    {
+      "value": "On dead oak — standing or fallen — and occasionally sweet chestnut.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "Dead standing and fallen oak wood; less often sweet chestnut; alone or in tiers.",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "sporePrint": {
+    "value": "White",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "pores",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    "ring": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "growsOn": {
+      "value": "wood",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "capCm": {
+      "value": [
+        3,
+        20
+      ],
+      "sources": [
+        "fn",
+        "wp",
+        "wt-bracket"
+      ]
+    },
+    "fleshChange": {
+      "value": "Tough and corky",
+      "sources": [
+        "wf",
+        "fn"
+      ]
+    },
+    "smell": {
+      "value": "Slightly acrid, or mushroomy",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    }
+  },
+  "lookalikes": [],
+  "noDangerousLookalike": null,
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Fomitopsis quercina, Oak Mazegill",
+      "url": "https://www.first-nature.com/fungi/daedalea-quercina.php"
+    },
+    {
+      "id": "wf",
+      "title": "Wild Food UK — Oak Mazegill",
+      "url": "https://www.wildfooduk.com/mushroom-guide/oak-mazegill/"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Fomitopsis quercina",
+      "url": "https://en.wikipedia.org/wiki/Fomitopsis_quercina"
+    },
+    {
+      "id": "wt-bracket",
+      "title": "Woodland Trust — Bracket fungi ID: common UK species",
+      "url": "https://www.woodlandtrust.org.uk/blog/2021/10/bracket-fungi-identification/"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}
