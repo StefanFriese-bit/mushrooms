@@ -36,6 +36,8 @@ def main():
         found = set()
         for i in cap['sources']:
             found |= numbers(texts.get(url.get(i, ''), ''))
+        if cap['value'] is None:  # a crust with no set size: nothing to find
+            continue
         lo, hi = cap['value']
         missing = [v for v in (lo, hi) if v != 0 and round(float(v), 2) not in found]
         if missing:

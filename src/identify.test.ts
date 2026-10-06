@@ -6,7 +6,7 @@ const src = { sources: ['a', 'b'] };
 function rec(english: string, f: Partial<Record<keyof Features, unknown>>, edibility: Edibility = 'edible-cooked',
   lookalikes: Array<Pick<Lookalike, 'english' | 'kind' | 'slug'>> = [], spore = 'White'): SpeciesRecord {
   const slug = english.toLowerCase().replace(/\s+/g, '-');
-  const feature = <T,>(k: keyof Features, d: T) => ({ value: (f[k] ?? d) as T, ...src });
+  const feature = <T,>(k: keyof Features, d: T) => ({ value: (k in f ? f[k] : d) as T, ...src });
   return {
     slug, inatId: 1, scientific: `Genus ${slug}`, english, olderNames: [],
     edibility: { value: edibility, ...src }, edibilityNote: null, protectedInUk: { value: false, ...src },
@@ -52,6 +52,10 @@ describe('fits', () => {
     expect(fits(deathcap, 'cap', 'small')).toBe(true); // 5–15 touches "under 5" at 5
     expect(fits(chanterelle, 'cap', 'large')).toBe(true); // 3–10 touches "over 10" at 10
     expect(fits(bracket, 'cap', 'small')).toBe(false);
+  });
+  it('keeps a crust with no set size under every size answer', () => {
+    const crust = rec('Crust', { underside: 'other', growsOn: 'wood', capCm: null }, 'not-edible', [], 'White');
+    for (const band of ['small', 'medium', 'large']) expect(fits(crust, 'cap', band)).toBe(true);
   });
   it('a spore colour keeps the species whose text names it', () => {
     expect(fits(field, 'spore', 'dark')).toBe(true);

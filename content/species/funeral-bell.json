@@ -336,6 +336,49 @@
           ]
         }
       ]
+    },
+    {
+      "scientific": "Cyclocybe cylindracea",
+      "english": "Poplar Fieldcap",
+      "slug": "poplar-fieldcap",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Ring",
+          "thisOne": "A small, fragile ring that can fall away",
+          "thatOne": "A large, lasting, hanging ring",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "fn-pf",
+            "wp-pf"
+          ]
+        },
+        {
+          "feature": "Wood",
+          "thisOne": "Rotting wood, mostly conifer stumps",
+          "thatOne": "Poplar and willow — stumps, logs and standing trees",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-pf",
+            "wp-pf"
+          ]
+        },
+        {
+          "feature": "Cap",
+          "thisOne": "Honey-yellow to rusty brown, drying paler from the edge",
+          "thatOne": "Pale buff, browner in the centre",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "fn-pf",
+            "wp-pf"
+          ]
+        }
+      ]
     }
   ],
   "noDangerousLookalike": null,
@@ -449,6 +492,16 @@
       "id": "wp-de",
       "title": "Wikipedia — Laccaria laccata",
       "url": "https://en.wikipedia.org/wiki/Laccaria_laccata"
+    },
+    {
+      "id": "fn-pf",
+      "title": "First Nature — Cyclocybe cylindracea, Poplar Fieldcap",
+      "url": "https://www.first-nature.com/fungi/cyclocybe-cylindracea.php"
+    },
+    {
+      "id": "wp-pf",
+      "title": "Wikipedia — Cyclocybe cylindracea",
+      "url": "https://en.wikipedia.org/wiki/Cyclocybe_cylindracea"
     },
     {
       "id": "wf-prot",

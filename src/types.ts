@@ -28,7 +28,8 @@ export type Features = {
   ring: Sourced<'yes' | 'no' | 'sometimes'>;
   bagAtBase: Sourced<'yes' | 'no'>;
   growsOn: Sourced<'ground' | 'wood' | 'other-fungi' | 'dung'>;
-  capCm: Sourced<[number, number]>;
+  /** Cap width in cm; null for a crust or patch with no set size, which Identify keeps under every size answer. */
+  capCm: Sourced<[number, number] | null>;
   fleshChange: Sourced<string>;
   smell: Sourced<string>;
 };

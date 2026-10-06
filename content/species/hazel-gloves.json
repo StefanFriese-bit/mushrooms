@@ -1,0 +1,176 @@
+{
+  "slug": "hazel-gloves",
+  "inatId": 782300,
+  "scientific": "Hypocreopsis rhododendri",
+  "english": "Hazel Gloves",
+  "olderNames": [],
+  "edibility": {
+    "value": "not-edible",
+    "sources": [
+      "fn"
+    ]
+  },
+  "edibilityNote": {
+    "value": "Of no culinary interest — and protected: it must not be collected (First Nature). A globally rare fungus of Atlantic rainforest (Woodland Trust).",
+    "sources": [
+      "fn",
+      "wt"
+    ]
+  },
+  "protectedInUk": {
+    "value": true,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "Orange-brown to tan lobes like the fingers of a fawn kid glove, 8–20 cm across, wrapped round hazel stems.",
+      "sources": [
+        "fn",
+        "wp",
+        "wt"
+      ]
+    },
+    {
+      "value": "Tiny dark dots on the surface — the openings that release the spores.",
+      "sources": [
+        "fn",
+        "wt"
+      ]
+    },
+    {
+      "value": "Only on old hazel in ancient, damp western woods (Atlantic rainforest).",
+      "sources": [
+        "fn",
+        "wp",
+        "wt"
+      ]
+    },
+    {
+      "value": "Protected and very rare: never pick it.",
+      "sources": [
+        "fn",
+        "wt"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "Old hazel stems in ancient, damp Atlantic woodland, where it grows over the Glue Crust fungus.",
+    "sources": [
+      "fn",
+      "wp",
+      "wt"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "sources": [
+      "fn"
+    ]
+  },
+  "sporePrint": {
+    "value": "White",
+    "sources": [
+      "fn"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "other",
+      "sources": [
+        "fn",
+        "wt"
+      ]
+    },
+    "ring": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wt"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wt"
+      ]
+    },
+    "growsOn": {
+      "value": "wood",
+      "sources": [
+        "fn",
+        "wp",
+        "wt"
+      ]
+    },
+    "capCm": {
+      "value": [
+        1,
+        20
+      ],
+      "sources": [
+        "fn",
+        "wt"
+      ]
+    },
+    "fleshChange": {
+      "value": "No colour change when cut is described",
+      "sources": [
+        "fn"
+      ]
+    },
+    "smell": {
+      "value": "Not distinctive",
+      "sources": [
+        "fn"
+      ]
+    }
+  },
+  "lookalikes": [],
+  "noDangerousLookalike": null,
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Hypocreopsis rhododendri, Hazel Gloves",
+      "url": "https://www.first-nature.com/fungi/hypocreopsis-rhododendri.php"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Hypocreopsis rhododendri",
+      "url": "https://en.wikipedia.org/wiki/Hypocreopsis_rhododendri"
+    },
+    {
+      "id": "wt",
+      "title": "Woodland Trust — Hazel Gloves",
+      "url": "https://www.woodlandtrust.org.uk/trees-woods-and-wildlife/fungi-and-lichens/hazel-gloves-fungus/"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}

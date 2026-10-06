@@ -10,7 +10,8 @@ b1 = [s for s in lst if 'edible' in (s.get('reasons') or []) or s.get('dangerLev
 slug = lambda n: re.sub(r'[^a-z0-9]+', '-', n.lower()).strip('-')
 # Held back: no trusted site gives what a page must have (each one is named in the batch report).
 HELD = {'Chlorociboria aeruginascens',  # Green Elfcup: no edibility on any trusted site
-        'Kretzschmaria deusta'}  # Brittle Cinder: no size on any trusted site
+        'Agrocybe rivulosa',  # Wrinkled Fieldcap: Wikipedia's article is a stub; gills, ring, habitat on one site only
+        'Clavulina rugosa'}  # Wrinkled Club: edible, but only First Nature gives its spore print (edible pages need two)
 rows = []
 for s in lst:
     if s in b1 or s['name'] in have or s['name'] in HELD:

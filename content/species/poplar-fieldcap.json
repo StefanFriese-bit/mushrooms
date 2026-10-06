@@ -1,0 +1,224 @@
+{
+  "slug": "poplar-fieldcap",
+  "inatId": 578456,
+  "scientific": "Cyclocybe cylindracea",
+  "english": "Poplar Fieldcap",
+  "olderNames": [
+    "Agrocybe cylindracea",
+    "Agrocybe aegerita"
+  ],
+  "edibility": {
+    "value": "edible-cooked",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "edibilityNote": {
+    "value": "Edible and grown for food in some countries, but Wikipedia warns that it resembles some deadly species: compare it with the deadly Funeral Bell below.",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "Pale buff caps, browner in the centre, 4–10 cm, often cracking in dry weather.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    {
+      "value": "Gills cream, turning grey-brown, then brown; tobacco-brown spore print.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    {
+      "value": "A large, lasting ring hanging from the stem.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    {
+      "value": "In tufts on poplar and willow — on stumps, logs and holes in standing trees.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "In tufts on poplar and willow — stumps, standing dead or dying trees; other broadleaved trees; also woodchip mulch.",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      7,
+      8,
+      9,
+      10
+    ],
+    "sources": [
+      "fn"
+    ]
+  },
+  "sporePrint": {
+    "value": "Tobacco-brown",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "gills",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "ring": {
+      "value": "yes",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "growsOn": {
+      "value": "wood",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "capCm": {
+      "value": [
+        4,
+        10
+      ],
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "fleshChange": {
+      "value": "No colour change when cut is described",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "smell": {
+      "value": "Pleasant",
+      "sources": [
+        "fn"
+      ]
+    }
+  },
+  "lookalikes": [
+    {
+      "scientific": "Galerina marginata",
+      "english": "Funeral Bell",
+      "slug": "funeral-bell",
+      "kind": "deadly",
+      "tellApart": [
+        {
+          "feature": "Ring",
+          "thisOne": "A large, lasting, hanging ring",
+          "thatOne": "A small, fragile ring that can fall away",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-fb",
+            "wf-fb",
+            "wp-fb"
+          ]
+        },
+        {
+          "feature": "Wood",
+          "thisOne": "Poplar and willow — stumps, logs and standing trees",
+          "thatOne": "Rotting wood, mostly conifer stumps",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-fb",
+            "wf-fb"
+          ]
+        },
+        {
+          "feature": "Cap",
+          "thisOne": "Pale buff, browner in the centre",
+          "thatOne": "Honey-yellow to rusty brown, drying paler from the edge",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-fb",
+            "wf-fb",
+            "wp-fb"
+          ]
+        }
+      ]
+    }
+  ],
+  "noDangerousLookalike": null,
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Cyclocybe cylindracea, Poplar Fieldcap",
+      "url": "https://www.first-nature.com/fungi/cyclocybe-cylindracea.php"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Cyclocybe cylindracea",
+      "url": "https://en.wikipedia.org/wiki/Cyclocybe_cylindracea"
+    },
+    {
+      "id": "fn-fb",
+      "title": "First Nature — Galerina marginata, Funeral Bell",
+      "url": "https://www.first-nature.com/fungi/galerina-marginata.php"
+    },
+    {
+      "id": "wf-fb",
+      "title": "Wild Food UK — Funeral Bell",
+      "url": "https://www.wildfooduk.com/mushroom-guide/funeral-bell/"
+    },
+    {
+      "id": "wp-fb",
+      "title": "Wikipedia — Galerina marginata",
+      "url": "https://en.wikipedia.org/wiki/Galerina_marginata"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}

@@ -88,6 +88,7 @@ export function fits(s: SpeciesRecord, q: QuestionId, answer: string | undefined
     case 'ring': return f.ring.value === answer || f.ring.value === 'sometimes';
     case 'bag': return f.bagAtBase.value === answer;
     case 'cap': {
+      if (!f.capCm.value) return true; // a crust with no set size fits any size
       const [lo, hi] = BANDS[answer] ?? [0, Infinity];
       const [a, b] = f.capCm.value;
       return a <= hi && b >= lo;
