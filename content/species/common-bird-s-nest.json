@@ -1,0 +1,168 @@
+{
+  "slug": "common-bird-s-nest",
+  "inatId": 120030,
+  "scientific": "Crucibulum laeve",
+  "english": "Common Bird's Nest",
+  "olderNames": [
+    "Crucibulum vulgare"
+  ],
+  "edibility": {
+    "value": "not-edible",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "edibilityNote": null,
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "Tiny felty cups, 4–10 mm across, holding several white \"eggs\" — like a bird's nest.",
+      "sources": [
+        "fn",
+        "wt",
+        "wp"
+      ]
+    },
+    {
+      "value": "Young cups are sealed with a velvety, cinnamon-yellow lid, which splits away to show the eggs.",
+      "sources": [
+        "fn",
+        "wt",
+        "wf"
+      ]
+    },
+    {
+      "value": "In clusters on dead twigs, rotting wood and woodchip.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "In clusters on fallen twigs, rotting wood, woodchip and decaying plant matter.",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "sporePrint": {
+    "value": "White",
+    "sources": [
+      "wt",
+      "wf"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "other",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "ring": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "growsOn": {
+      "value": "wood",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "capCm": {
+      "value": [
+        0.4,
+        1
+      ],
+      "sources": [
+        "fn",
+        "wt"
+      ]
+    },
+    "fleshChange": {
+      "value": "Very thin; papery with age",
+      "sources": [
+        "wf"
+      ]
+    },
+    "smell": {
+      "value": "Not distinctive",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    }
+  },
+  "lookalikes": [],
+  "noDangerousLookalike": null,
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Crucibulum laeve, Common Bird's Nest",
+      "url": "https://www.first-nature.com/fungi/crucibulum-laeve.php"
+    },
+    {
+      "id": "wf",
+      "title": "Wild Food UK — Common Bird's Nest",
+      "url": "https://www.wildfooduk.com/mushroom-guide/common-birds-nest-fungus/"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Crucibulum laeve",
+      "url": "https://en.wikipedia.org/wiki/Crucibulum_laeve"
+    },
+    {
+      "id": "wt",
+      "title": "Woodland Trust — Common Bird's Nest",
+      "url": "https://www.woodlandtrust.org.uk/trees-woods-and-wildlife/fungi-and-lichens/common-birds-nest-fungus/"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}

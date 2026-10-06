@@ -1,0 +1,181 @@
+{
+  "slug": "butter-cap",
+  "inatId": 118166,
+  "scientific": "Rhodocollybia butyracea",
+  "english": "Butter Cap",
+  "olderNames": [
+    "Collybia butyracea"
+  ],
+  "edibility": {
+    "value": "edible-cooked",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "edibilityNote": {
+    "value": "Edible but poor and insubstantial, and it can be confused with inedible species.",
+    "sources": [
+      "wf",
+      "wp",
+      "fn"
+    ]
+  },
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "Greasy, buttery-feeling cap, 2–10 cm, reddish-brown to grey-brown, paler as it dries, with a darker hump.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "Gills white to very pale cream, crowded; cream-buff spore print.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "Stem widening towards a club-shaped base; no ring.",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    {
+      "value": "In leaf litter and conifer needles, mainly under conifers.",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "Leaf litter and conifer needles in woods, mainly under conifers.",
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "sporePrint": {
+    "value": "Cream-buff",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "gills",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    "ring": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "growsOn": {
+      "value": "ground",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "capCm": {
+      "value": [
+        2,
+        10
+      ],
+      "sources": [
+        "wp",
+        "fn"
+      ]
+    },
+    "fleshChange": {
+      "value": "Thin and mainly white",
+      "sources": [
+        "wf"
+      ]
+    },
+    "smell": {
+      "value": "Not distinctive",
+      "sources": [
+        "fn"
+      ]
+    }
+  },
+  "lookalikes": [],
+  "noDangerousLookalike": {
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Rhodocollybia butyracea, Butter Cap",
+      "url": "https://www.first-nature.com/fungi/rhodocollybia-butyracea.php"
+    },
+    {
+      "id": "wf",
+      "title": "Wild Food UK — Butter Cap",
+      "url": "https://www.wildfooduk.com/mushroom-guide/butter-cap/"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Rhodocollybia butyracea",
+      "url": "https://en.wikipedia.org/wiki/Rhodocollybia_butyracea"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}

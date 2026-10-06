@@ -1,0 +1,291 @@
+{
+  "slug": "silky-rosegill",
+  "inatId": 128074,
+  "scientific": "Volvariella bombycina",
+  "english": "Silky Rosegill",
+  "olderNames": [
+    "Volvaria bombycina"
+  ],
+  "edibility": {
+    "value": "edible-cooked",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "edibilityNote": {
+    "value": "It grows from a bag like the deadly Amanitas: check for pink gills, a pink spore print and no ring, and that it is growing on wood. Wild Food UK leaves it alone because it is uncommon.",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "Silky, hairy white cap, 5–20 cm, egg-shaped then bell-shaped.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "Gills free, white turning pink; pink spore print.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "A white stem with no ring, growing from a large bag (volva).",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "On wood: dead or damaged trunks of elm, maple, beech and other broadleaved trees.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "On dead trunks and large branches, or knots and wounds of living broadleaved trees — elm, maple, beech, oak.",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "sporePrint": {
+    "value": "Pink",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "gills",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    "ring": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "bagAtBase": {
+      "value": "yes",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    "growsOn": {
+      "value": "wood",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    "capCm": {
+      "value": [
+        5,
+        20
+      ],
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "fleshChange": {
+      "value": "White; no colour change when cut is described",
+      "sources": [
+        "fn"
+      ]
+    },
+    "smell": {
+      "value": "Faint, pleasant, or of radish",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    }
+  },
+  "lookalikes": [
+    {
+      "scientific": "Amanita virosa",
+      "english": "Destroying Angel",
+      "slug": "destroying-angel",
+      "kind": "deadly",
+      "tellApart": [
+        {
+          "feature": "Ring",
+          "thisOne": "None",
+          "thatOne": "A fragile ring, often lost",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-da",
+            "wf-da"
+          ]
+        },
+        {
+          "feature": "Spore print",
+          "thisOne": "Pink",
+          "thatOne": "White",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "fn-da",
+            "wf-da"
+          ]
+        },
+        {
+          "feature": "Where it grows",
+          "thisOne": "On wood: dead or damaged broadleaved trees",
+          "thatOne": "On the ground in woods",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-da",
+            "wf-da"
+          ]
+        }
+      ]
+    },
+    {
+      "scientific": "Amanita phalloides",
+      "english": "Deathcap",
+      "slug": "deathcap",
+      "kind": "deadly",
+      "tellApart": [
+        {
+          "feature": "Spore print",
+          "thisOne": "Pink",
+          "thatOne": "White",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "fn-dc",
+            "wf-dc"
+          ]
+        },
+        {
+          "feature": "Where it grows",
+          "thisOne": "On wood: dead or damaged broadleaved trees",
+          "thatOne": "On the ground in woods",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-dc",
+            "wf-dc"
+          ]
+        }
+      ]
+    }
+  ],
+  "noDangerousLookalike": null,
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Volvariella bombycina, Silky Rosegill",
+      "url": "https://www.first-nature.com/fungi/volvariella-bombycina.php"
+    },
+    {
+      "id": "wf",
+      "title": "Wild Food UK — Silky Rosegill",
+      "url": "https://www.wildfooduk.com/mushroom-guide/silky-rosegill/"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Volvariella bombycina",
+      "url": "https://en.wikipedia.org/wiki/Volvariella_bombycina"
+    },
+    {
+      "id": "fn-da",
+      "title": "First Nature — Amanita virosa, Destroying Angel",
+      "url": "https://www.first-nature.com/fungi/amanita-virosa.php"
+    },
+    {
+      "id": "wf-da",
+      "title": "Wild Food UK — Destroying Angel",
+      "url": "https://www.wildfooduk.com/mushroom-guide/destroying-angel/"
+    },
+    {
+      "id": "wp-da",
+      "title": "Wikipedia — Amanita virosa",
+      "url": "https://en.wikipedia.org/wiki/Amanita_virosa"
+    },
+    {
+      "id": "fn-dc",
+      "title": "First Nature — Amanita phalloides, Deathcap",
+      "url": "https://www.first-nature.com/fungi/amanita-phalloides.php"
+    },
+    {
+      "id": "wf-dc",
+      "title": "Wild Food UK — Deathcap",
+      "url": "https://www.wildfooduk.com/mushroom-guide/deathcap/"
+    },
+    {
+      "id": "wp-dc",
+      "title": "Wikipedia — Amanita phalloides",
+      "url": "https://en.wikipedia.org/wiki/Amanita_phalloides"
+    },
+    {
+      "id": "wt-dc",
+      "title": "Woodland Trust — Deathcap",
+      "url": "https://www.woodlandtrust.org.uk/trees-woods-and-wildlife/fungi-and-lichens/deathcap/"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}

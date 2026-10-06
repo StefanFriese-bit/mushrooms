@@ -1,0 +1,223 @@
+{
+  "slug": "field-blewit",
+  "inatId": 1525550,
+  "scientific": "Collybia personata",
+  "english": "Field Blewit",
+  "olderNames": [
+    "Lepista personata",
+    "Lepista saeva",
+    "Clitocybe saeva"
+  ],
+  "edibility": {
+    "value": "edible-cooked",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "edibilityNote": {
+    "value": "Cook it well. It upsets some people's stomachs, so First Nature advises trying only a little at first.",
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "Smooth, pale buff to grey-brown cap, up to 12–15 cm, with an inrolled edge.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "A short, stout stem streaked with violet-blue fibres; no ring.",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    {
+      "value": "Gills white to pinkish-buff, crowded; pale pinkish-buff spore print.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "In grassland and pasture, especially on chalk, often in rings — late in the year.",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "Grassland and pasture, especially on chalk or limestone, often in rings; sometimes woods on limy soil.",
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      9,
+      10,
+      11,
+      12,
+      1
+    ],
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "sporePrint": {
+    "value": "Pale pinkish-buff",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "gills",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    "ring": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "growsOn": {
+      "value": "ground",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "capCm": {
+      "value": [
+        6,
+        12
+      ],
+      "sources": [
+        "wp",
+        "fn"
+      ]
+    },
+    "fleshChange": {
+      "value": "Thick, white to off-white",
+      "sources": [
+        "wf"
+      ]
+    },
+    "smell": {
+      "value": "Strongly perfumed",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    }
+  },
+  "lookalikes": [
+    {
+      "scientific": "Cortinarius (purple species)",
+      "english": "Purple webcaps",
+      "slug": null,
+      "kind": "poisonous",
+      "tellApart": [
+        {
+          "feature": "Spore print",
+          "thisOne": "Pale pinkish-buff",
+          "thatOne": "Rusty brown",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "fn-wb",
+            "wf-wb"
+          ]
+        },
+        {
+          "feature": "Where it grows",
+          "thisOne": "Open grassland, often in rings",
+          "thatOne": "Woodland",
+          "sources": [
+            "fn",
+            "wf"
+          ]
+        }
+      ]
+    }
+  ],
+  "noDangerousLookalike": null,
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Collybia personata, Field Blewit",
+      "url": "https://www.first-nature.com/fungi/lepista-saeva.php"
+    },
+    {
+      "id": "wf",
+      "title": "Wild Food UK — Field Blewit",
+      "url": "https://www.wildfooduk.com/mushroom-guide/field-blewit/"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Collybia personata",
+      "url": "https://en.wikipedia.org/wiki/Collybia_personata"
+    },
+    {
+      "id": "fn-wb",
+      "title": "First Nature — Collybia nuda, Wood Blewit",
+      "url": "https://www.first-nature.com/fungi/lepista-nuda.php"
+    },
+    {
+      "id": "wf-wb",
+      "title": "Wild Food UK — Wood Blewit",
+      "url": "https://www.wildfooduk.com/mushroom-guide/wood-blewit/"
+    },
+    {
+      "id": "wp-wb",
+      "title": "Wikipedia — Collybia nuda",
+      "url": "https://en.wikipedia.org/wiki/Collybia_nuda"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}

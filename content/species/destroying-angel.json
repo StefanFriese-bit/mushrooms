@@ -416,6 +416,48 @@
           ]
         }
       ]
+    },
+    {
+      "scientific": "Volvariella bombycina",
+      "english": "Silky Rosegill",
+      "slug": "silky-rosegill",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Ring",
+          "thisOne": "A fragile ring, often lost",
+          "thatOne": "None",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-sy",
+            "wf-sy"
+          ]
+        },
+        {
+          "feature": "Spore print",
+          "thisOne": "White",
+          "thatOne": "Pink",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-sy",
+            "wf-sy",
+            "wp-sy"
+          ]
+        },
+        {
+          "feature": "Where it grows",
+          "thisOne": "On the ground in woods",
+          "thatOne": "On wood: dead or damaged broadleaved trees",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-sy",
+            "wf-sy"
+          ]
+        }
+      ]
     }
   ],
   "noDangerousLookalike": null,
@@ -549,6 +591,21 @@
       "id": "wp-sr",
       "title": "Wikipedia — Volvopluteus gloiocephalus",
       "url": "https://en.wikipedia.org/wiki/Volvopluteus_gloiocephalus"
+    },
+    {
+      "id": "fn-sy",
+      "title": "First Nature — Volvariella bombycina, Silky Rosegill",
+      "url": "https://www.first-nature.com/fungi/volvariella-bombycina.php"
+    },
+    {
+      "id": "wf-sy",
+      "title": "Wild Food UK — Silky Rosegill",
+      "url": "https://www.wildfooduk.com/mushroom-guide/silky-rosegill/"
+    },
+    {
+      "id": "wp-sy",
+      "title": "Wikipedia — Volvariella bombycina",
+      "url": "https://en.wikipedia.org/wiki/Volvariella_bombycina"
     },
     {
       "id": "wf-prot",
