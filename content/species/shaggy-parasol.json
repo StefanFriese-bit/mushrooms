@@ -1,16 +1,16 @@
 {
-  "slug": "parasol",
-  "inatId": 63401,
-  "scientific": "Macrolepiota procera",
-  "english": "Parasol",
+  "slug": "shaggy-parasol",
+  "inatId": 56535,
+  "scientific": "Chlorophyllum rhacodes",
+  "english": "Shaggy Parasol",
   "olderNames": [
-    "Lepiota procera",
-    "Macrolepiota fuliginosa",
-    "Lepiota permixta",
-    "Macrolepiota permixta"
+    "Macrolepiota rhacodes",
+    "Lepiota rhacodes",
+    "Macrolepiota rachodes",
+    "Chlorophyllum rachodes"
   ],
   "edibility": {
-    "value": "edible-cooked",
+    "value": "edible-some-react",
     "sources": [
       "fn",
       "wf",
@@ -18,12 +18,11 @@
     ]
   },
   "edibilityNote": {
-    "value": "Pick only large, opened caps: a cap under 10–12 cm across may be one of the small, deadly dapperlings, and young closed ones can look like deadly Amanitas.",
+    "value": "Cook it well. It upsets some people's stomachs and some react strongly to it; First Nature advises not eating it at all.",
     "sources": [
       "fn",
       "wf",
-      "wp",
-      "fn-dd"
+      "wp"
     ]
   },
   "protectedInUk": {
@@ -35,7 +34,16 @@
   },
   "topPoints": [
     {
-      "value": "Very large: cap 10–25 cm across, on a tall stem of up to 30 cm or more.",
+      "value": "Large cap, 5–20 cm, with thick shaggy brown scales on a cream background.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp",
+        "wt"
+      ]
+    },
+    {
+      "value": "Cut it: the flesh and gills turn orange-red.",
       "sources": [
         "fn",
         "wf",
@@ -43,7 +51,7 @@
       ]
     },
     {
-      "value": "A brown snakeskin pattern of bands on the stem.",
+      "value": "Stem plain — no snakeskin bands — with a very bulbous base and a thick double ring that slides.",
       "sources": [
         "fn",
         "wf",
@@ -51,43 +59,18 @@
       ]
     },
     {
-      "value": "A thick double ring that slides up and down the stem.",
+      "value": "In woods, especially under conifers, and in shady gardens; often in troops or rings.",
       "sources": [
         "fn",
-        "wf",
-        "wp"
-      ]
-    },
-    {
-      "value": "Cap pale with darker brown scales and a smooth, dark bump in the middle.",
-      "sources": [
-        "fn",
-        "wf",
-        "wp"
-      ]
-    },
-    {
-      "value": "Flesh white, not reddening when cut.",
-      "sources": [
-        "fn",
-        "wp"
-      ]
-    },
-    {
-      "value": "White gills, free of the stem.",
-      "sources": [
-        "fn",
-        "wf",
-        "wp"
+        "wf"
       ]
     }
   ],
   "habitat": {
-    "value": "Grassy places beside woods, woodland clearings, pasture and verges; alone, in groups or in rings.",
+    "value": "All kinds of woodland, especially conifers, and shady places with rich, disturbed soil such as gardens; often in troops or rings.",
     "sources": [
       "fn",
-      "wf",
-      "wp"
+      "wf"
     ]
   },
   "seasonMonths": {
@@ -95,8 +78,7 @@
       7,
       8,
       9,
-      10,
-      11
+      10
     ],
     "sources": [
       "fn",
@@ -131,8 +113,8 @@
     "bagAtBase": {
       "value": "no",
       "sources": [
-        "fn",
-        "wp"
+        "wf",
+        "fn"
       ]
     },
     "growsOn": {
@@ -144,24 +126,25 @@
     },
     "capCm": {
       "value": [
-        10,
-        25
+        5,
+        20
       ],
+      "sources": [
+        "fn",
+        "wp",
+        "wt"
+      ]
+    },
+    "fleshChange": {
+      "value": "White, turning orange-red when cut",
       "sources": [
         "fn",
         "wf",
         "wp"
       ]
     },
-    "fleshChange": {
-      "value": "White; does not change when cut",
-      "sources": [
-        "fn",
-        "wp"
-      ]
-    },
     "smell": {
-      "value": "Not distinctive, or pleasantly nutty",
+      "value": "Pleasant; can turn pungent when cut",
       "sources": [
         "fn",
         "wp"
@@ -177,33 +160,24 @@
       "tellApart": [
         {
           "feature": "Size",
-          "thisOne": "Cap 10–25 cm when open",
+          "thisOne": "Cap 5–20 cm",
           "thatOne": "Cap only 2.5–6 cm",
           "sources": [
             "fn",
-            "wp",
-            "fn-dd",
-            "wp-dd"
-          ]
-        },
-        {
-          "feature": "Stem",
-          "thisOne": "Tall, with a brown snakeskin pattern",
-          "thatOne": "Short (2–5 cm), with dark brown scales on the lower half",
-          "sources": [
-            "fn",
             "wf",
+            "wt",
             "fn-dd",
             "wp-dd"
           ]
         },
         {
-          "feature": "Ring",
-          "thisOne": "Thick and double, sliding on the stem",
+          "feature": "Ring and base",
+          "thisOne": "Thick double ring that slides, and a very bulbous base",
           "thatOne": "Only a vague ring zone",
           "sources": [
             "fn",
             "wf",
+            "wt",
             "fn-dd",
             "wp-dd"
           ]
@@ -218,24 +192,23 @@
       "tellApart": [
         {
           "feature": "Size",
-          "thisOne": "Cap 10–25 cm when open",
+          "thisOne": "Cap 5–20 cm",
           "thatOne": "Small: cap 2–3.5 cm",
           "sources": [
             "fn",
-            "wp",
-            "fn-fd",
-            "wf"
+            "wf",
+            "wt",
+            "fn-fd"
           ]
         },
         {
-          "feature": "Cap",
-          "thisOne": "Pale with darker brown scales",
-          "thatOne": "Pinkish to red-brown scales in rings on a cream background",
+          "feature": "Ring",
+          "thisOne": "Thick double ring that slides",
+          "thatOne": "Only an indistinct ring zone",
           "sources": [
             "fn",
-            "wp",
-            "fn-fd",
-            "wp-fd"
+            "wf",
+            "fn-fd"
           ]
         }
       ]
@@ -248,29 +221,29 @@
       "tellApart": [
         {
           "feature": "Size",
-          "thisOne": "Cap 10–25 cm when open",
+          "thisOne": "Cap 5–20 cm",
           "thatOne": "Small: cap 1–6 cm",
           "sources": [
             "fn",
-            "wp",
+            "wf",
             "fn-sd",
             "wp-sd"
           ]
         },
         {
           "feature": "Smell",
-          "thisOne": "Not distinctive, or pleasantly nutty",
+          "thisOne": "Pleasant",
           "thatOne": "Unpleasant — rubbery, or like coal gas",
           "sources": [
             "fn",
-            "wp",
             "fn-sd",
-            "wf-sd"
+            "wf-sd",
+            "wp-sd"
           ]
         },
         {
           "feature": "Ring",
-          "thisOne": "Thick and double, sliding on the stem",
+          "thisOne": "Thick double ring that slides",
           "thatOne": "Small and fragile, soon lost",
           "sources": [
             "fn",
@@ -284,51 +257,27 @@
     }
   ],
   "noDangerousLookalike": null,
-  "photos": [
-    {
-      "file": "photos/parasol/3.webp",
-      "view": "whole",
-      "credit": "Jonathan Hughes, no rights reserved (CC0)",
-      "licence": "cc0",
-      "link": "https://www.inaturalist.org/observations/98191067"
-    },
-    {
-      "file": "photos/parasol/4.webp",
-      "view": "whole",
-      "credit": "(c) Barry Stewart, some rights reserved (CC BY)",
-      "licence": "cc-by",
-      "link": "https://www.inaturalist.org/observations/386688419"
-    },
-    {
-      "file": "photos/parasol/2.webp",
-      "view": "whole",
-      "credit": "(c) Simeon Cathcart, some rights reserved (CC BY-NC)",
-      "licence": "cc-by-nc",
-      "link": "https://www.inaturalist.org/observations/314159389"
-    },
-    {
-      "file": "photos/parasol/1.webp",
-      "view": "whole",
-      "credit": "(c) kayholford, some rights reserved (CC BY-NC)",
-      "licence": "cc-by-nc",
-      "link": "https://www.inaturalist.org/observations/141720980"
-    }
-  ],
+  "photos": [],
   "sources": [
     {
       "id": "fn",
-      "title": "First Nature — Macrolepiota procera, Parasol",
-      "url": "https://www.first-nature.com/fungi/macrolepiota-procera.php"
+      "title": "First Nature — Chlorophyllum rhacodes, Shaggy Parasol",
+      "url": "https://www.first-nature.com/fungi/chlorophyllum-rhacodes.php"
     },
     {
       "id": "wf",
-      "title": "Wild Food UK — Parasol",
-      "url": "https://www.wildfooduk.com/mushroom-guide/parasol/"
+      "title": "Wild Food UK — Shaggy Parasol",
+      "url": "https://www.wildfooduk.com/mushroom-guide/shaggy-parasol/"
     },
     {
       "id": "wp",
-      "title": "Wikipedia — Macrolepiota procera",
-      "url": "https://en.wikipedia.org/wiki/Macrolepiota_procera"
+      "title": "Wikipedia — Chlorophyllum rhacodes",
+      "url": "https://en.wikipedia.org/wiki/Chlorophyllum_rhacodes"
+    },
+    {
+      "id": "wt",
+      "title": "Woodland Trust — Shaggy Parasol",
+      "url": "https://www.woodlandtrust.org.uk/trees-woods-and-wildlife/fungi-and-lichens/shaggy-parasol/"
     },
     {
       "id": "fn-dd",

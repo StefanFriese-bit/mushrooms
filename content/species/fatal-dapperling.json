@@ -1,10 +1,10 @@
 {
-  "slug": "deadly-dapperling",
-  "inatId": 515954,
-  "scientific": "Lepiota brunneoincarnata",
-  "english": "Deadly Dapperling",
+  "slug": "fatal-dapperling",
+  "inatId": 382931,
+  "scientific": "Lepiota subincarnata",
+  "english": "Fatal Dapperling",
   "olderNames": [
-    "Lepiota patouillardi"
+    "Lepiota josserandii"
   ],
   "edibility": {
     "value": "deadly",
@@ -15,7 +15,7 @@
     ]
   },
   "edibilityNote": {
-    "value": "Contains the same poison as the Deathcap. Small dapperlings are very hard to tell apart and several are deadly — never eat one.",
+    "value": "Contains alpha-amanitin, the Deathcap's poison: eating it can kill.",
     "sources": [
       "fn",
       "wp",
@@ -31,42 +31,28 @@
   },
   "topPoints": [
     {
-      "value": "Small: cap 2.5–6 cm across.",
+      "value": "Small cap, 2–3.5 cm, covered in fine pinkish-brown scales in rings, paler towards the cream edge.",
       "sources": [
         "fn",
         "wp"
       ]
     },
     {
-      "value": "Cap pinkish-brown, with darker scales in rough rings, darkest in the centre.",
+      "value": "Gills white to cream, free of the stem; white spore print.",
       "sources": [
         "fn",
         "wp"
       ]
     },
     {
-      "value": "Stem pinkish above, with dark brown scales below a vague ring zone.",
+      "value": "Stem short and cream, with patches of the cap's colour below a faint ring zone.",
       "sources": [
         "fn",
         "wp"
       ]
     },
     {
-      "value": "White gills, free of the stem; white spore print.",
-      "sources": [
-        "fn",
-        "wp"
-      ]
-    },
-    {
-      "value": "Grows in grassy places, including gardens and dunes, and in broadleaved woods.",
-      "sources": [
-        "fn",
-        "wp"
-      ]
-    },
-    {
-      "value": "Rare in Britain.",
+      "value": "In broadleaved and mixed woods, and in parks and lawns with rich soil.",
       "sources": [
         "fn",
         "wp"
@@ -74,7 +60,7 @@
     }
   ],
   "habitat": {
-    "value": "Grassy places (gardens, dunes) and broadleaved or mixed woods; a rare find in Britain.",
+    "value": "Broadleaved and mixed woods, alone or in small groups; also lawns and parks with rich soil.",
     "sources": [
       "fn",
       "wp"
@@ -130,23 +116,23 @@
     },
     "capCm": {
       "value": [
-        2.5,
-        6
+        2,
+        3.5
       ],
       "sources": [
         "fn",
-        "wp"
+        "wf-poison"
       ]
     },
     "fleshChange": {
-      "value": "White; Wikipedia says it reddens when bruised or cut",
+      "value": "White, pinkish near the top; no colour change when cut is described",
       "sources": [
         "fn",
         "wp"
       ]
     },
     "smell": {
-      "value": "Faint, fruity",
+      "value": "Faintly sweet or fruity",
       "sources": [
         "fn",
         "wp"
@@ -162,35 +148,24 @@
       "tellApart": [
         {
           "feature": "Size",
-          "thisOne": "Cap only 2.5–6 cm",
+          "thisOne": "Small: cap 2–3.5 cm",
           "thatOne": "Cap 10–25 cm when open",
+          "sources": [
+            "fn",
+            "fn-pa",
+            "wp-pa",
+            "wf-pa"
+          ]
+        },
+        {
+          "feature": "Cap",
+          "thisOne": "Pinkish to red-brown scales in rings on a cream background",
+          "thatOne": "Pale with darker brown scales",
           "sources": [
             "fn",
             "wp",
             "fn-pa",
             "wp-pa"
-          ]
-        },
-        {
-          "feature": "Stem",
-          "thisOne": "Short (2–5 cm), with dark brown scales on the lower half",
-          "thatOne": "Tall, with a brown snakeskin pattern",
-          "sources": [
-            "fn",
-            "wp",
-            "fn-pa",
-            "wf-pa"
-          ]
-        },
-        {
-          "feature": "Ring",
-          "thisOne": "Only a vague ring zone",
-          "thatOne": "Thick and double, sliding on the stem",
-          "sources": [
-            "fn",
-            "wp",
-            "fn-pa",
-            "wf-pa"
           ]
         }
       ]
@@ -203,70 +178,40 @@
       "tellApart": [
         {
           "feature": "Size",
-          "thisOne": "Cap only 2.5–6 cm",
+          "thisOne": "Small: cap 2–3.5 cm",
           "thatOne": "Cap 5–20 cm",
           "sources": [
             "fn",
-            "wp",
             "fn-sp",
             "wf-sp",
-            "wt-sp"
+            "wp-sp"
           ]
         },
         {
-          "feature": "Ring and base",
-          "thisOne": "Only a vague ring zone",
-          "thatOne": "Thick double ring that slides, and a very bulbous base",
+          "feature": "Ring",
+          "thisOne": "Only an indistinct ring zone",
+          "thatOne": "Thick double ring that slides",
           "sources": [
             "fn",
-            "wp",
             "fn-sp",
-            "wf-sp",
-            "wt-sp"
+            "wf-sp"
           ]
         }
       ]
     }
   ],
   "noDangerousLookalike": null,
-  "photos": [
-    {
-      "file": "photos/deadly-dapperling/1.webp",
-      "view": "whole",
-      "credit": "(c) vuikaan, some rights reserved (CC BY)",
-      "licence": "cc-by",
-      "link": "https://www.inaturalist.org/observations/181183977"
-    },
-    {
-      "file": "photos/deadly-dapperling/2.webp",
-      "view": "whole",
-      "credit": "(c) pmacbride53, some rights reserved (CC BY-NC)",
-      "licence": "cc-by-nc",
-      "link": "https://www.inaturalist.org/observations/324603569"
-    },
-    {
-      "file": "photos/deadly-dapperling/3.webp",
-      "view": "whole",
-      "credit": "(c) ionafraser, some rights reserved (CC BY)",
-      "licence": "cc-by",
-      "link": "https://www.inaturalist.org/observations/245857796"
-    }
-  ],
+  "photos": [],
   "sources": [
     {
       "id": "fn",
-      "title": "First Nature — Lepiota brunneoincarnata, Deadly Dapperling",
-      "url": "https://www.first-nature.com/fungi/lepiota-brunneoincarnata.php"
+      "title": "First Nature — Lepiota subincarnata, Fatal Dapperling",
+      "url": "https://www.first-nature.com/fungi/lepiota-subincarnata.php"
     },
     {
       "id": "wp",
-      "title": "Wikipedia — Lepiota brunneoincarnata",
-      "url": "https://en.wikipedia.org/wiki/Lepiota_brunneoincarnata"
-    },
-    {
-      "id": "wf-poison",
-      "title": "Wild Food UK — The most poisonous UK fungi, part 1",
-      "url": "https://www.wildfooduk.com/articles/the-most-poisonous-uk-fungi-part-1/"
+      "title": "Wikipedia — Lepiota subincarnata",
+      "url": "https://en.wikipedia.org/wiki/Lepiota_subincarnata"
     },
     {
       "id": "fn-pa",
@@ -294,9 +239,19 @@
       "url": "https://www.wildfooduk.com/mushroom-guide/shaggy-parasol/"
     },
     {
+      "id": "wp-sp",
+      "title": "Wikipedia — Chlorophyllum rhacodes",
+      "url": "https://en.wikipedia.org/wiki/Chlorophyllum_rhacodes"
+    },
+    {
       "id": "wt-sp",
-      "title": "Woodland Trust — Shaggy parasol",
+      "title": "Woodland Trust — Shaggy Parasol",
       "url": "https://www.woodlandtrust.org.uk/trees-woods-and-wildlife/fungi-and-lichens/shaggy-parasol/"
+    },
+    {
+      "id": "wf-poison",
+      "title": "Wild Food UK — The most poisonous UK fungi, part 1",
+      "url": "https://www.wildfooduk.com/articles/the-most-poisonous-uk-fungi-part-1/"
     },
     {
       "id": "wf-prot",
