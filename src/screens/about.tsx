@@ -1,12 +1,10 @@
 import { useEffect, useState } from 'preact/hooks';
 import { ALL_SPECIES } from '../content';
+import { keepData } from '../storage';
 
 export function About() {
   const [kept, setKept] = useState<string>('checking…');
-  useEffect(() => {
-    if (!navigator.storage?.persisted) { setKept('not supported in this browser'); return; }
-    navigator.storage.persisted().then((p) => setKept(p ? 'yes' : 'not yet'));
-  }, []);
+  useEffect(() => { keepData().then(setKept); }, []);
   return (
     <>
       <h1>About</h1>

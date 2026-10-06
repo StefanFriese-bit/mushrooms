@@ -51,3 +51,8 @@ test('works with the server switched off once it has been opened', async ({ page
   await page.goto(`${site.url}#/species/deathcap`);
   await expect(page.getByRole('heading', { name: 'Deathcap' })).toBeVisible();
 });
+
+test('About says whether the phone keeps the data (the app asks at start)', async ({ page }) => {
+  await page.goto(`${site.url}#/about`);
+  await expect(page.getByText(/Storage kept by the phone: (yes|not yet|not supported in this browser)$/)).toBeVisible();
+});
