@@ -53,10 +53,14 @@ else:
                 print(f'{i + len(x)}/{len(files)}', flush=True)
 
 name = (a.model.split('/')[-1] + ('' if a.norm == 'half' else '.imagenet') + ('' if a.fit == 'squash' else f'.{a.fit}')
-        + ('.int8' if a.onnx else '') + (f'.sample{a.sample}' if a.sample else ''))
+        + (('.int8' if 'int8' in a.onnx else '.phone') if a.onnx else '') + (f'.sample{a.sample}' if a.sample else ''))
 dst = ROOT / 'cache/scores'
 dst.mkdir(parents=True, exist_ok=True)
 out.tofile(dst / f'{name}.f32')
 (dst / f'{name}.json').write_text(json.dumps({'model': a.model, 'size': a.size, 'norm': a.norm, 'fit': a.fit,
                                               'onnx': a.onnx, 'classes': int(classes), 'files': files}))
-print('wrote', dst / f'{name}.f32')
+print('wrote', dst / f'{name}.f32', flush=True)
+# Leave at once: onnxruntime 1.30's telemetry can crash while Python shuts down (a race between its exit-time
+# destructor and its upload thread), which macOS reports as "Python quit unexpectedly". Everything is written.
+import os, sys
+sys.stdout.flush(); sys.stderr.flush(); os._exit(0)

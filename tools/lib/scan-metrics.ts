@@ -6,7 +6,10 @@ export type Measures = {
   dangerKnown: number; dangerOnList: number; dangerUnknown: number; dangerCaughtByCheck: number;
   safeCases: number; falseAlarms: number; sure: number; rightWhenSure: number;
 };
-export const SAFETY_GRID = [0.5, 0.3, 0.2, 0.1, 0.05, 0.03, 0.02, 0.01, 0.005, 0.002, 0.001, 0.0005, 0.0002, 0.0001, 0];
+/** Safety thresholds tried, highest first. Never 0: a line of 0 adds every dangerous species to every scan — a red
+ * banner on every photo, which teaches him to ignore it. A model that needs 0 to reach the pass mark does not pass. */
+export const SAFETY_GRID = [0.5, 0.3, 0.2, 0.1, 0.05, 0.03, 0.02, 0.01, 0.005, 0.002, 0.001, 0.0005, 0.0002, 0.0001,
+  0.00005, 0.00002, 0.00001, 0.000005, 0.000002, 0.000001];
 export const NOT_SURE_GRID = [0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9];
 export const PASS_MARK = 0.98;
 export const SURE_TARGET = 0.9;

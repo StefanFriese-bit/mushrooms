@@ -57,7 +57,8 @@ print(f'{fp32.name}: {fp32.stat().st_size / 1e6:.1f} MB, largest difference from
 if worst > 1e-4:
     raise SystemExit('the exported model does not match PyTorch')
 if a.skip_int8:
-    raise SystemExit(0)
+    import os, sys
+    sys.stdout.flush(); os._exit(0)  # see the end of this file
 
 from onnxruntime.quantization import CalibrationDataReader, QuantFormat, QuantType, quantize_static
 from onnxruntime.quantization.shape_inference import quant_pre_process
@@ -86,3 +87,7 @@ int8.parent.mkdir(parents=True, exist_ok=True)
 quantize_static(str(pre), str(int8), Photos(), quant_format=QuantFormat.QDQ, per_channel=True,
                 activation_type=QuantType.QUInt8, weight_type=QuantType.QInt8)
 print(f'{int8.name}: {int8.stat().st_size / 1e6:.1f} MB (8-bit, calibrated on {len(calib)} tuning photos)')
+# Leave at once: onnxruntime 1.30's telemetry can crash while Python shuts down, which macOS shows as "Python quit
+# unexpectedly". Everything is written by now.
+import os, sys
+sys.stdout.flush(); sys.stderr.flush(); os._exit(0)

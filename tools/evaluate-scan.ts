@@ -22,8 +22,9 @@ const CANDIDATES: Record<string, { label: string; millions: number; phone: boole
   'BVRA/tf_efficientnet_b3.in1k_ft_df20_299': { label: 'EfficientNet-B3', millions: 13.2, phone: true },
   'BVRA/vit_base_patch16_224.ft_df20_224': { label: 'ViT-Base (ceiling only)', millions: 87, phone: false },
 };
-/** The most "right first" an 8-bit file may lose against its full-size model (plan 2d-1, task 7). */
-const MAX_8BIT_LOSS = 0.01;
+/** The most "right first" the file the phone runs (8-bit or full size, scored through the file itself) may lose against
+ * the same model run in PyTorch (plan 2d-1, task 7). */
+const MAX_FILE_LOSS = 0.01;
 
 type Entry = { species: string; inatId: number; obsId: number; month: number; files: string[] };
 type Ours = { name: string; english: string | null; dangerLevel: 'deadly' | 'poisonous' | null };
@@ -101,19 +102,20 @@ for (const name of scoreFiles.filter((n) => !isSample(n))) {
   const meetsMark = safety !== null && three.dangerKnown > 0 && three.dangerOnList / three.dangerKnown >= PASS_MARK;
   results.push({ name, meta, t, safetyFound: safety !== null, one, three, meetsMark, loss: null, passed: meetsMark, perDanger });
 }
-// An 8-bit file must also keep its full-size model's record: at most one point of "right first" lost.
+// A file the phone runs must also keep its model's record: at most one point of "right first" lost.
 for (const r of results.filter((x) => x.meta.onnx)) {
   const full = results.find((x) => !x.meta.onnx && x.meta.model === r.meta.model && x.meta.norm === r.meta.norm && fitOf(x.meta) === fitOf(r.meta));
   if (!full) continue;
   r.loss = share(full.three.rightFirst, full.three.known) - share(r.three.rightFirst, r.three.known);
-  r.passed = r.meetsMark && r.loss <= MAX_8BIT_LOSS;
+  r.passed = r.meetsMark && r.loss <= MAX_FILE_LOSS;
 }
 for (const r of results) {
   console.log(`${r.name}: right first ${pct(r.three.rightFirst, r.three.known)}, dangerous on the list ` +
     `${pct(r.three.dangerOnList, r.three.dangerKnown)}, ${r.passed ? 'PASSES' : 'does not pass'}`);
 }
 
-const label = (r: Result) => `${CANDIDATES[r.meta.model]?.label ?? r.meta.model}${r.meta.onnx ? ' (8-bit)' : ''}`;
+const fileKind = (m: ScoreMeta) => (m.onnx ? (m.onnx.includes('int8') ? ' (8-bit)' : ' (phone file)') : '');
+const label = (r: Result) => `${CANDIDATES[r.meta.model]?.label ?? r.meta.model}${fileKind(r.meta)}`;
 const byRightFirst = (a: Result, b: Result) => share(b.three.rightFirst, b.three.known) - share(a.three.rightFirst, a.three.known);
 const phonePassing = results.filter((r) => r.passed && CANDIDATES[r.meta.model]?.phone).sort(byRightFirst);
 const chosen = phonePassing.find((r) => r.meta.onnx);
@@ -126,7 +128,7 @@ lines.push(`Built ${new Date().toISOString().slice(0, 10)} by \`tools/evaluate-s
   'Every choice (how photos are prepared, the thresholds) was made on half the observations (even numbers); every ' +
   'figure below is measured on the other half.', '');
 lines.push(`**Pass mark (spec 6.3):** dangerous species on the shortlist at least ${PASS_MARK * 100} times in 100 when they are the answer. ` +
-  `An 8-bit file (what the phone runs) must also lose at most ${MAX_8BIT_LOSS * 100} point of "right first" against its full-size model.`, '');
+  `The file the phone runs (8-bit, or full size as a phone file) is scored through that file itself and must also lose at most ${MAX_FILE_LOSS * 100} point of "right first" against the same model run in PyTorch.`, '');
 lines.push(`**Dangerous** here means the ${danger.size} species on the approved list's safety list (Deadly, or a dangerous lookalike of ` +
   'an edible). Other poisonous species among the 300 (the Fly Agaric, for one) count once their pages are written, and the ' +
   'test is run again then.', '');
@@ -139,7 +141,7 @@ if (samples.length > 0) {
   for (const name of samples) {
     const { meta, cases } = casesFor(name);
     const m = quickMeasure(cases);
-    lines.push(`| ${CANDIDATES[meta.model]?.label ?? meta.model}${meta.onnx ? ' (8-bit)' : ''} | ${prepared(meta)} | ${m.known} | ${pct(m.rightFirst, m.known)} |`);
+    lines.push(`| ${CANDIDATES[meta.model]?.label ?? meta.model}${fileKind(meta)} | ${prepared(meta)} | ${m.known} | ${pct(m.rightFirst, m.known)} |`);
   }
   lines.push('', 'squash = the whole photo scaled to a square; square = the centre square; timm = the centre 87.5% square (the models\' own evaluation crop).', '');
 }
@@ -158,7 +160,7 @@ lines.push('', 'Thresholds per model (from the tuning half): safety = the highes
   '"not sure" = the lowest top score above which the first answer is right 90 times in 100; off-season = the mark-down factor.', '');
 for (const r of results) {
   lines.push(`- ${label(r)}: safety ${r.safetyFound ? r.t.safety : 'none reaches the pass mark'}, not sure ${r.t.notSure}, off-season ×${r.t.offSeason}` +
-    (r.loss === null ? '' : `; against the full-size model ${r.loss <= 0 ? 'no "right first" lost' : `${(r.loss * 100).toFixed(1)} points of "right first" lost`}`));
+    (r.loss === null ? '' : `; against the same model in PyTorch ${r.loss <= 0 ? 'no "right first" lost' : `${(r.loss * 100).toFixed(1)} points of "right first" lost`}`));
 }
 lines.push('', '## What the model knows', '');
 lines.push(`${known.size} of our ${ours.length} species are among its 1,604 classes. The ${ours.length - known.size} it cannot recognise ` +
@@ -183,7 +185,7 @@ lines.push(chosen
   ? `**${label(chosen)}** passes and is the best phone-sized model. Its speed on Stefan's iPhone decides (spec 6.1): ` +
     'a three-photo scan in about 3 seconds.'
   : fullOnly
-    ? `**${label(fullOnly)}** passes at full size. It must now pass again as the 8-bit file the phone will run.`
+    ? `**${label(fullOnly)}** passes in PyTorch. It must now pass again as the file the phone will run.`
     : '**No phone-sized model passes.** The scan stays switched off (spec 6.3); everything else works.', '');
 writeFileSync(new URL('reports/scan-test.md', ROOT), lines.join('\n') + '\n');
 
@@ -194,5 +196,5 @@ writeFileSync(new URL('content/model/scan-settings.json', ROOT), JSON.stringify(
   record: { rightFirst: share(chosen.three.rightFirst, chosen.three.known), onList: share(chosen.three.onList, chosen.three.known),
     dangerOnList: share(chosen.three.dangerOnList, chosen.three.dangerKnown), observations: chosen.three.cases },
   tested,
-} : { passed: false, reason: fullOnly ? 'no 8-bit file has passed yet' : 'no phone-sized model passes', tested }, null, 2) + '\n');
+} : { passed: false, reason: fullOnly ? 'no phone file has passed yet' : 'no phone-sized model passes', tested }, null, 2) + '\n');
 console.log(`reports/scan-test.md and content/model/scan-settings.json written${chosen ? ` (${label(chosen)} chosen)` : ''}`);

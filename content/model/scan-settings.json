@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "model": "BVRA/mobilenetv2_100.in1k_ft_df20_299",
+  "file": "models/mobilenetv2-df20-299.fp32.onnx",
+  "size": 299,
+  "norm": "imagenet",
+  "fit": "square",
+  "thresholds": {
+    "safety": 0.0001,
+    "notSure": 0.9,
+    "offSeason": 0.3
+  },
+  "record": {
+    "rightFirst": 0.7601778994184057,
+    "onList": 0.9408142319534725,
+    "dangerOnList": 0.9887640449438202,
+    "observations": 3178
+  },
+  "tested": "2026-10-06"
+}

@@ -44,6 +44,10 @@ describe('the thresholds', () => {
     expect(chooseSafety([deadlyLow], classes, danger, lookalikes, T)).toBe(0.03);
     expect(chooseSafety([kase(12, 'D', { A: 0.9 })], classes, danger, lookalikes, T)).toBeNull();
   });
+  it('never passes a model by adding every dangerous species to every scan (a safety line of 0)', () => {
+    const buried = kase(14, 'D', { A: 0.5, B: 0.2, C: 0.1, E: 0.1, F: 0.05, G: 0.04, D: 1e-9 }); // D 7th, far below any line
+    expect(chooseSafety([buried], classes, danger, lookalikes, T)).toBeNull();
+  });
   it('takes the lowest not-sure threshold above which the first answer is right 90 in 100', () => {
     expect(chooseNotSure([rightA, wrongB], classes, danger, lookalikes, T)).toBe(0.35);
   });
