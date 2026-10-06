@@ -1,0 +1,213 @@
+{
+  "slug": "crimson-waxcap",
+  "inatId": 51869,
+  "scientific": "Hygrocybe punicea",
+  "english": "Crimson Waxcap",
+  "olderNames": [
+    "Hygrophorus puniceus"
+  ],
+  "edibility": {
+    "value": "poisonous",
+    "sources": [
+      "wp",
+      "fn"
+    ]
+  },
+  "edibilityNote": {
+    "value": "Some guides call it edible, but First Nature reports people in the USA with very unpleasant stomach upsets after eating it, and Wikipedia says the cadmium it builds up causes poisoning. It is also a threatened species of declining grasslands.",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "A large waxcap: blood-red cap 3–10 cm (up to 15), greasy when wet, fading to yellowish buff in patches.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    {
+      "value": "Waxy gills, yellow at first, turning red with age.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    {
+      "value": "Thick stem streaked with fibres, yellow to red above, white at the base; no ring.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    {
+      "value": "In old grassland that has never been fertilised — lawns, pasture, churchyards.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "Old grassland, grazed or mown short and never fertilised — lawns, pasture, churchyards.",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      8,
+      9,
+      10,
+      11
+    ],
+    "sources": [
+      "fn"
+    ]
+  },
+  "sporePrint": {
+    "value": "White",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "gills",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "ring": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "growsOn": {
+      "value": "ground",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "capCm": {
+      "value": [
+        3,
+        15
+      ],
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "fleshChange": {
+      "value": "No colour change when cut is described",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "smell": {
+      "value": "Not distinctive",
+      "sources": [
+        "fn"
+      ]
+    }
+  },
+  "lookalikes": [
+    {
+      "scientific": "Hygrocybe coccinea",
+      "english": "Scarlet Waxcap",
+      "slug": "scarlet-waxcap",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Size",
+          "thisOne": "Larger: cap 3–10 cm, up to 15",
+          "thatOne": "Smaller: cap 2–5 cm",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-sw",
+            "wp-sw"
+          ]
+        },
+        {
+          "feature": "Stem",
+          "thisOne": "Streaked with coarse fibres, white at the base",
+          "thatOne": "Smooth, not fibrous",
+          "sources": [
+            "fn",
+            "wp"
+          ]
+        },
+        {
+          "feature": "Cap colour",
+          "thisOne": "Darker blood-red, fading to buff in patches",
+          "thatOne": "Brighter scarlet",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-sw"
+          ]
+        }
+      ]
+    }
+  ],
+  "noDangerousLookalike": null,
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Hygrocybe punicea, Crimson Waxcap",
+      "url": "https://www.first-nature.com/fungi/hygrocybe-punicea.php"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Hygrocybe punicea",
+      "url": "https://en.wikipedia.org/wiki/Hygrocybe_punicea"
+    },
+    {
+      "id": "fn-sw",
+      "title": "First Nature — Hygrocybe coccinea, Scarlet Waxcap",
+      "url": "https://www.first-nature.com/fungi/hygrocybe-coccinea.php"
+    },
+    {
+      "id": "wp-sw",
+      "title": "Wikipedia — Hygrocybe coccinea",
+      "url": "https://en.wikipedia.org/wiki/Hygrocybe_coccinea"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}

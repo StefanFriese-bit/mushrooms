@@ -1,0 +1,168 @@
+{
+  "slug": "pink-waxcap",
+  "inatId": 1061811,
+  "scientific": "Porpolomopsis calyptriformis",
+  "english": "Pink Waxcap",
+  "olderNames": [
+    "Hygrocybe calyptriformis",
+    "Hygrophorus calyptriformis"
+  ],
+  "edibility": {
+    "value": "edible-cooked",
+    "sources": [
+      "wp",
+      "fn"
+    ]
+  },
+  "edibilityNote": {
+    "value": "Reported edible, but rare and declining: it is listed as vulnerable worldwide, and First Nature says it would be unforgivable to pick it for eating.",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "Pale pink to lilac cap, 2.5–6 cm, narrowly pointed at first, then splitting at the edge and flaring like a ballet skirt.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    {
+      "value": "Waxy gills, pink or paler.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    {
+      "value": "White stem, sometimes flushed pink near the top, that splits easily; no ring.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    {
+      "value": "In old grassland that has never been fertilised — sheep-grazed hills, lawns, churchyards.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "Old grassland, grazed or mown short and never fertilised — sheep-grazed hills, lawns, churchyards.",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      9,
+      10,
+      11
+    ],
+    "sources": [
+      "fn"
+    ]
+  },
+  "sporePrint": {
+    "value": "White",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "gills",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "ring": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "growsOn": {
+      "value": "ground",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "capCm": {
+      "value": [
+        2.5,
+        6
+      ],
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "fleshChange": {
+      "value": "White, tinged pink just under the cap skin",
+      "sources": [
+        "fn"
+      ]
+    },
+    "smell": {
+      "value": "Not distinctive",
+      "sources": [
+        "fn"
+      ]
+    }
+  },
+  "lookalikes": [],
+  "noDangerousLookalike": {
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Porpolomopsis calyptriformis, Pink Waxcap",
+      "url": "https://www.first-nature.com/fungi/porpolomopsis-calyptriformis.php"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Porpolomopsis calyptriformis",
+      "url": "https://en.wikipedia.org/wiki/Porpolomopsis_calyptriformis"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}

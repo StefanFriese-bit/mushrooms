@@ -162,6 +162,44 @@
           ]
         }
       ]
+    },
+    {
+      "scientific": "Hygrocybe punicea",
+      "english": "Crimson Waxcap",
+      "slug": "crimson-waxcap",
+      "kind": "poisonous",
+      "tellApart": [
+        {
+          "feature": "Size",
+          "thisOne": "Small: cap 2–5 cm",
+          "thatOne": "Larger: cap 3–10 cm, up to 15",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-cw",
+            "wp-cw"
+          ]
+        },
+        {
+          "feature": "Stem",
+          "thisOne": "Smooth, not fibrous",
+          "thatOne": "Streaked with coarse fibres, white at the base",
+          "sources": [
+            "fn-cw",
+            "wp-cw"
+          ]
+        },
+        {
+          "feature": "Cap colour",
+          "thisOne": "Bright scarlet",
+          "thatOne": "Darker blood-red, fading to buff in patches",
+          "sources": [
+            "fn",
+            "fn-cw",
+            "wp-cw"
+          ]
+        }
+      ]
     }
   ],
   "noDangerousLookalike": null,
@@ -191,6 +229,16 @@
       "id": "wp-bw",
       "title": "Wikipedia — Hygrocybe conica",
       "url": "https://en.wikipedia.org/wiki/Hygrocybe_conica"
+    },
+    {
+      "id": "fn-cw",
+      "title": "First Nature — Hygrocybe punicea, Crimson Waxcap",
+      "url": "https://www.first-nature.com/fungi/hygrocybe-punicea.php"
+    },
+    {
+      "id": "wp-cw",
+      "title": "Wikipedia — Hygrocybe punicea",
+      "url": "https://en.wikipedia.org/wiki/Hygrocybe_punicea"
     },
     {
       "id": "wf-prot",

@@ -132,7 +132,37 @@
       ]
     }
   },
-  "lookalikes": [],
+  "lookalikes": [
+    {
+      "scientific": "Calocera cornea",
+      "english": "Small Stagshorn",
+      "slug": "small-stagshorn",
+      "kind": "not-edible",
+      "tellApart": [
+        {
+          "feature": "Size and shape",
+          "thisOne": "Up to 10 cm, branched like antlers",
+          "thatOne": "Tiny single horns, up to 2 cm, rarely forked",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-ss",
+            "wp-ss"
+          ]
+        },
+        {
+          "feature": "Wood",
+          "thisOne": "Conifers",
+          "thatOne": "Broadleaved trees",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-ss"
+          ]
+        }
+      ]
+    }
+  ],
   "noDangerousLookalike": null,
   "photos": [],
   "sources": [
@@ -150,6 +180,16 @@
       "id": "wp",
       "title": "Wikipedia — Calocera viscosa",
       "url": "https://en.wikipedia.org/wiki/Calocera_viscosa"
+    },
+    {
+      "id": "fn-ss",
+      "title": "First Nature — Calocera cornea, Small Stagshorn",
+      "url": "https://www.first-nature.com/fungi/calocera-cornea.php"
+    },
+    {
+      "id": "wp-ss",
+      "title": "Wikipedia — Calocera cornea",
+      "url": "https://en.wikipedia.org/wiki/Calocera_cornea"
     },
     {
       "id": "wf-prot",

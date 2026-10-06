@@ -1,17 +1,25 @@
 {
-  "slug": "black-bulgar",
-  "inatId": 83419,
-  "scientific": "Bulgaria inquinans",
-  "english": "Black Bulgar",
-  "olderNames": [],
+  "slug": "witches-butter",
+  "inatId": 55568,
+  "scientific": "Exidia glandulosa",
+  "english": "Witches' Butter",
+  "olderNames": [
+    "Tremella intumescens"
+  ],
   "edibility": {
     "value": "not-edible",
     "sources": [
-      "wf",
+      "fn",
       "wp"
     ]
   },
-  "edibilityNote": null,
+  "edibilityNote": {
+    "value": "Not known to be poisonous, but too insubstantial to be worth eating.",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
   "protectedInUk": {
     "value": false,
     "sources": [
@@ -21,52 +29,62 @@
   },
   "topPoints": [
     {
-      "value": "Small black rubbery discs or shallow cups, 0.5–4 cm, shiny on top, brown and scurfy on the outside.",
+      "value": "Black, rubbery jelly in top-shaped blobs 1–2 cm across (up to 5), which can merge into masses up to 10 cm.",
       "sources": [
         "fn",
-        "wf",
         "wp"
       ]
     },
     {
-      "value": "In groups on the bark of recently fallen oak; also sweet chestnut and beech.",
+      "value": "Shiny, dark brown to black; firmer than most jelly fungi.",
       "sources": [
         "fn",
-        "wf"
+        "wp"
       ]
     },
     {
-      "value": "Firm and rubbery — the similar Witches' Butter is much softer jelly.",
+      "value": "Dries to a thin black crust, and swells again after rain.",
       "sources": [
         "fn",
-        "wf"
+        "wp"
+      ]
+    },
+    {
+      "value": "On dead branches of broadleaved trees, especially oak; also hazel and beech.",
+      "sources": [
+        "fn",
+        "wp"
       ]
     }
   ],
   "habitat": {
-    "value": "On the bark of recently fallen oak trunks and branches; also sweet chestnut, beech and ash.",
+    "value": "Dead attached and fallen branches of broadleaved trees, especially oak; also hazel, beech and alder.",
     "sources": [
       "fn",
-      "wf"
+      "wp"
     ]
   },
   "seasonMonths": {
     "value": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
       9,
       10,
       11,
-      12,
-      1,
-      2,
-      3
+      12
     ],
     "sources": [
-      "fn",
-      "wf"
+      "fn"
     ]
   },
   "sporePrint": {
-    "value": "Very dark brown to black",
+    "value": "White",
     "sources": [
       "fn",
       "wp"
@@ -98,58 +116,58 @@
       "value": "wood",
       "sources": [
         "fn",
-        "wf"
+        "wp"
       ]
     },
     "capCm": {
       "value": [
-        0.5,
-        4
+        1,
+        10
       ],
       "sources": [
+        "fn",
         "wp"
       ]
     },
     "fleshChange": {
-      "value": "Dark brown, rubbery and jelly-like",
+      "value": "Firm, rubbery jelly; shrivels to a crust when dry",
       "sources": [
-        "wf"
+        "fn",
+        "wp"
       ]
     },
     "smell": {
       "value": "Not distinctive",
       "sources": [
-        "fn",
-        "wf"
+        "fn"
       ]
     }
   },
   "lookalikes": [
     {
-      "scientific": "Exidia glandulosa",
-      "english": "Witches' Butter",
-      "slug": "witches-butter",
+      "scientific": "Bulgaria inquinans",
+      "english": "Black Bulgar",
+      "slug": "black-bulgar",
       "kind": "not-edible",
       "tellApart": [
         {
           "feature": "Feel",
-          "thisOne": "Firm and rubbery",
-          "thatOne": "Much softer jelly",
+          "thisOne": "Softer jelly",
+          "thatOne": "Firm and rubbery",
           "sources": [
-            "fn",
-            "wf"
+            "fn-bb",
+            "wf-bb"
           ]
         },
         {
           "feature": "Spore print",
-          "thisOne": "Very dark brown to black",
-          "thatOne": "White",
+          "thisOne": "White",
+          "thatOne": "Very dark brown to black",
           "sources": [
             "fn",
-            "wp",
-            "wf",
-            "fn-wb",
-            "wp-wb"
+            "wf-bb",
+            "fn-bb",
+            "wp-bb"
           ]
         }
       ]
@@ -160,28 +178,28 @@
   "sources": [
     {
       "id": "fn",
-      "title": "First Nature — Bulgaria inquinans, Black Bulgar",
-      "url": "https://www.first-nature.com/fungi/bulgaria-inquinans.php"
-    },
-    {
-      "id": "wf",
-      "title": "Wild Food UK — Black Bulgar",
-      "url": "https://www.wildfooduk.com/mushroom-guide/black-bulgar-bulgaria-inquinans/"
-    },
-    {
-      "id": "wp",
-      "title": "Wikipedia — Bulgaria inquinans",
-      "url": "https://en.wikipedia.org/wiki/Bulgaria_inquinans"
-    },
-    {
-      "id": "fn-wb",
       "title": "First Nature — Exidia glandulosa, Witches' Butter",
       "url": "https://www.first-nature.com/fungi/exidia-glandulosa.php"
     },
     {
-      "id": "wp-wb",
+      "id": "wp",
       "title": "Wikipedia — Exidia glandulosa",
       "url": "https://en.wikipedia.org/wiki/Exidia_glandulosa"
+    },
+    {
+      "id": "fn-bb",
+      "title": "First Nature — Bulgaria inquinans, Black Bulgar",
+      "url": "https://www.first-nature.com/fungi/bulgaria-inquinans.php"
+    },
+    {
+      "id": "wf-bb",
+      "title": "Wild Food UK — Black Bulgar",
+      "url": "https://www.wildfooduk.com/mushroom-guide/black-bulgar-bulgaria-inquinans/"
+    },
+    {
+      "id": "wp-bb",
+      "title": "Wikipedia — Bulgaria inquinans",
+      "url": "https://en.wikipedia.org/wiki/Bulgaria_inquinans"
     },
     {
       "id": "wf-prot",

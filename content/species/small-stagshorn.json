@@ -1,13 +1,13 @@
 {
-  "slug": "black-bulgar",
-  "inatId": 83419,
-  "scientific": "Bulgaria inquinans",
-  "english": "Black Bulgar",
+  "slug": "small-stagshorn",
+  "inatId": 118027,
+  "scientific": "Calocera cornea",
+  "english": "Small Stagshorn",
   "olderNames": [],
   "edibility": {
     "value": "not-edible",
     "sources": [
-      "wf",
+      "fn",
       "wp"
     ]
   },
@@ -21,52 +21,55 @@
   },
   "topPoints": [
     {
-      "value": "Small black rubbery discs or shallow cups, 0.5–4 cm, shiny on top, brown and scurfy on the outside.",
+      "value": "Tiny yellow to orange horns, 2–12 mm tall (up to 2 cm), rarely forked.",
       "sources": [
         "fn",
-        "wf",
         "wp"
       ]
     },
     {
-      "value": "In groups on the bark of recently fallen oak; also sweet chestnut and beech.",
+      "value": "Greasy and rubbery, like stiff jelly.",
       "sources": [
         "fn",
-        "wf"
+        "wp"
       ]
     },
     {
-      "value": "Firm and rubbery — the similar Witches' Butter is much softer jelly.",
+      "value": "In small groups on dead broadleaved wood.",
       "sources": [
         "fn",
-        "wf"
+        "wp"
       ]
     }
   ],
   "habitat": {
-    "value": "On the bark of recently fallen oak trunks and branches; also sweet chestnut, beech and ash.",
+    "value": "Rotting trunks, stumps and fallen branches of broadleaved trees; very occasionally conifers.",
     "sources": [
       "fn",
-      "wf"
+      "wp"
     ]
   },
   "seasonMonths": {
     "value": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
       9,
       10,
       11,
-      12,
-      1,
-      2,
-      3
+      12
     ],
     "sources": [
-      "fn",
-      "wf"
+      "fn"
     ]
   },
   "sporePrint": {
-    "value": "Very dark brown to black",
+    "value": "White or very pale yellow",
     "sources": [
       "fn",
       "wp"
@@ -83,73 +86,74 @@
     "ring": {
       "value": "no",
       "sources": [
-        "fn",
-        "wp"
+        "wp",
+        "fn"
       ]
     },
     "bagAtBase": {
       "value": "no",
       "sources": [
-        "fn",
-        "wp"
+        "wp",
+        "fn"
       ]
     },
     "growsOn": {
       "value": "wood",
       "sources": [
         "fn",
-        "wf"
+        "wp"
       ]
     },
     "capCm": {
       "value": [
-        0.5,
-        4
+        0.2,
+        2
       ],
       "sources": [
+        "fn",
         "wp"
       ]
     },
     "fleshChange": {
-      "value": "Dark brown, rubbery and jelly-like",
+      "value": "Rubbery jelly",
       "sources": [
-        "wf"
+        "fn",
+        "wp"
       ]
     },
     "smell": {
       "value": "Not distinctive",
       "sources": [
-        "fn",
-        "wf"
+        "fn"
       ]
     }
   },
   "lookalikes": [
     {
-      "scientific": "Exidia glandulosa",
-      "english": "Witches' Butter",
-      "slug": "witches-butter",
+      "scientific": "Calocera viscosa",
+      "english": "Yellow Stagshorn",
+      "slug": "yellow-stagshorn",
       "kind": "not-edible",
       "tellApart": [
         {
-          "feature": "Feel",
-          "thisOne": "Firm and rubbery",
-          "thatOne": "Much softer jelly",
-          "sources": [
-            "fn",
-            "wf"
-          ]
-        },
-        {
-          "feature": "Spore print",
-          "thisOne": "Very dark brown to black",
-          "thatOne": "White",
+          "feature": "Size and shape",
+          "thisOne": "Tiny single horns, up to 2 cm, rarely forked",
+          "thatOne": "Larger, up to 10 cm, branched like antlers",
           "sources": [
             "fn",
             "wp",
-            "wf",
-            "fn-wb",
-            "wp-wb"
+            "fn-ys",
+            "wf-ys"
+          ]
+        },
+        {
+          "feature": "Wood",
+          "thisOne": "Broadleaved trees",
+          "thatOne": "Conifers",
+          "sources": [
+            "fn",
+            "fn-ys",
+            "wf-ys"
           ]
         }
       ]
@@ -160,28 +164,28 @@
   "sources": [
     {
       "id": "fn",
-      "title": "First Nature — Bulgaria inquinans, Black Bulgar",
-      "url": "https://www.first-nature.com/fungi/bulgaria-inquinans.php"
-    },
-    {
-      "id": "wf",
-      "title": "Wild Food UK — Black Bulgar",
-      "url": "https://www.wildfooduk.com/mushroom-guide/black-bulgar-bulgaria-inquinans/"
+      "title": "First Nature — Calocera cornea, Small Stagshorn",
+      "url": "https://www.first-nature.com/fungi/calocera-cornea.php"
     },
     {
       "id": "wp",
-      "title": "Wikipedia — Bulgaria inquinans",
-      "url": "https://en.wikipedia.org/wiki/Bulgaria_inquinans"
+      "title": "Wikipedia — Calocera cornea",
+      "url": "https://en.wikipedia.org/wiki/Calocera_cornea"
     },
     {
-      "id": "fn-wb",
-      "title": "First Nature — Exidia glandulosa, Witches' Butter",
-      "url": "https://www.first-nature.com/fungi/exidia-glandulosa.php"
+      "id": "fn-ys",
+      "title": "First Nature — Calocera viscosa, Yellow Stagshorn",
+      "url": "https://www.first-nature.com/fungi/calocera-viscosa.php"
     },
     {
-      "id": "wp-wb",
-      "title": "Wikipedia — Exidia glandulosa",
-      "url": "https://en.wikipedia.org/wiki/Exidia_glandulosa"
+      "id": "wf-ys",
+      "title": "Wild Food UK — Yellow Stagshorn",
+      "url": "https://www.wildfooduk.com/mushroom-guide/yellow-stagshorn/"
+    },
+    {
+      "id": "wp-ys",
+      "title": "Wikipedia — Calocera viscosa",
+      "url": "https://en.wikipedia.org/wiki/Calocera_viscosa"
     },
     {
       "id": "wf-prot",
