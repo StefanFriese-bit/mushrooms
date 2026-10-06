@@ -103,7 +103,7 @@
     "capCm": {
       "value": [
         0.5,
-        2
+        1.5
       ],
       "sources": [
         "fn",
