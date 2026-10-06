@@ -109,8 +109,10 @@ def gather(sp, older, wt_index):
     names = [name] + [o for o in older.get(name, []) if re.match(r'^[A-Z][a-z]+ [a-z-]+$', o)][:4]
     out = [f'######## {english} — {name} (older names: {", ".join(names[1:]) or "none"})', f'iNat {sp["inatId"]}, '
            f'danger level on the approved list: {sp.get("dangerLevel") or "none"}, reasons: {", ".join(sp.get("reasons") or [])}']
-    fn_tries = ([FN_PAGE[name]] if name in FN_PAGE else []) + core_urls(name, 'first-nature.com/fungi/') + \
-        [f'https://www.first-nature.com/fungi/{slugify(n)}.php' for n in names]
+    # The species' own address first; the approved lists' addresses after. A list entry about a DANGEROUS species can
+    # cite its edible lookalike's page (the Funeral Bell's cites the Velvet Shank's), which is not this species' page.
+    fn_tries = ([FN_PAGE[name]] if name in FN_PAGE else []) + \
+        [f'https://www.first-nature.com/fungi/{slugify(n)}.php' for n in names] + core_urls(name, 'first-nature.com/fungi/')
     for url in list(dict.fromkeys(fn_tries)):  # First Nature: the first address it files the species under
         code, page, _ = fetch(url)
         if code == 200 and len(page) > 3000:
@@ -122,7 +124,7 @@ def gather(sp, older, wt_index):
         out.append('[fn] no page under any name')
     wf_done = False
     parts = [slugify(re.sub(r"['.’]", '', x)) for x in re.split(r'\s*/\s*', english)] if sp['english'] else []
-    tries = core_urls(name) + [f'https://www.wildfooduk.com/mushroom-guide/{p}{v}/' for p in parts for v in ('', '-2', '-3')]
+    tries = [f'https://www.wildfooduk.com/mushroom-guide/{p}{v}/' for p in parts for v in ('', '-2', '-3')] + core_urls(name)
     for url in list(dict.fromkeys(tries)):
         code, page, final = fetch(url)
         if code == 200 and '/mushroom-guide/' in final:

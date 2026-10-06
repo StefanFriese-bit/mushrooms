@@ -1,0 +1,245 @@
+{
+  "slug": "velvet-shank",
+  "inatId": 67594,
+  "scientific": "Flammulina velutipes",
+  "english": "Velvet Shank",
+  "olderNames": [
+    "Collybia velutipes"
+  ],
+  "edibility": {
+    "value": "edible-cooked",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "edibilityNote": {
+    "value": "Always cook it, and use only the caps (the stems are tough). Check that no stem has a ring — the deadly Funeral Bell has one.",
+    "sources": [
+      "fn",
+      "wf",
+      "wt"
+    ]
+  },
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "Bright orange caps, darker in the centre and slimy when wet, in clusters on dead broadleaved wood.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp",
+        "wt"
+      ]
+    },
+    {
+      "value": "Stem velvety, pale at the top and dark brown to black lower down; no ring.",
+      "sources": [
+        "fn",
+        "wf",
+        "wt"
+      ]
+    },
+    {
+      "value": "Gills white to pale yellow; white spore print.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "Fruits from late autumn to early spring, when few other mushrooms do.",
+      "sources": [
+        "fn",
+        "wt"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "Stumps and trunks of dead broadleaved trees — elm, beech and others — and sometimes sick living trees; in dense clusters and tiers.",
+    "sources": [
+      "fn",
+      "wf",
+      "wt"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      11,
+      12,
+      1,
+      2,
+      3
+    ],
+    "sources": [
+      "fn",
+      "wf",
+      "wt"
+    ]
+  },
+  "sporePrint": {
+    "value": "White",
+    "sources": [
+      "fn",
+      "wp",
+      "wf"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "gills",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    "ring": {
+      "value": "no",
+      "sources": [
+        "wp",
+        "wt"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "growsOn": {
+      "value": "wood",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "capCm": {
+      "value": [
+        2,
+        10
+      ],
+      "sources": [
+        "fn",
+        "wt"
+      ]
+    },
+    "fleshChange": {
+      "value": "Thin; yellowish in the cap, brown in the stem; no colour change when cut is described",
+      "sources": [
+        "wf",
+        "wp"
+      ]
+    },
+    "smell": {
+      "value": "Not distinctive; pleasant",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    }
+  },
+  "lookalikes": [
+    {
+      "scientific": "Galerina marginata",
+      "english": "Funeral Bell",
+      "slug": "funeral-bell",
+      "kind": "deadly",
+      "tellApart": [
+        {
+          "feature": "Ring",
+          "thisOne": "None",
+          "thatOne": "A small, fragile ring (it can fall away)",
+          "sources": [
+            "wf",
+            "wt",
+            "fn-fb",
+            "wf-fb",
+            "wp-fb"
+          ]
+        },
+        {
+          "feature": "Stem",
+          "thisOne": "Velvety; dark brown to black lower down",
+          "thatOne": "Silvery fibres below the ring; not velvety",
+          "sources": [
+            "fn",
+            "wf",
+            "wf-fb"
+          ]
+        },
+        {
+          "feature": "Spore print",
+          "thisOne": "White",
+          "thatOne": "Rusty brown (snuff brown)",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-fb",
+            "wf-fb",
+            "wp-fb"
+          ]
+        }
+      ]
+    }
+  ],
+  "noDangerousLookalike": null,
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Flammulina velutipes, Velvet Shank",
+      "url": "https://www.first-nature.com/fungi/flammulina-velutipes.php"
+    },
+    {
+      "id": "wf",
+      "title": "Wild Food UK — Velvet Shank",
+      "url": "https://www.wildfooduk.com/mushroom-guide/velvet-shank/"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Flammulina velutipes",
+      "url": "https://en.wikipedia.org/wiki/Flammulina_velutipes"
+    },
+    {
+      "id": "wt",
+      "title": "Woodland Trust — Velvet Shank",
+      "url": "https://www.woodlandtrust.org.uk/trees-woods-and-wildlife/fungi-and-lichens/velvet-shank/"
+    },
+    {
+      "id": "fn-fb",
+      "title": "First Nature — Galerina marginata, Funeral Bell",
+      "url": "https://www.first-nature.com/fungi/galerina-marginata.php"
+    },
+    {
+      "id": "wf-fb",
+      "title": "Wild Food UK — Funeral Bell",
+      "url": "https://www.wildfooduk.com/mushroom-guide/funeral-bell/"
+    },
+    {
+      "id": "wp-fb",
+      "title": "Wikipedia — Galerina marginata",
+      "url": "https://en.wikipedia.org/wiki/Galerina_marginata"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}

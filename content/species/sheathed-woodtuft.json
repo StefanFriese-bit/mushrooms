@@ -1,0 +1,256 @@
+{
+  "slug": "sheathed-woodtuft",
+  "inatId": 153033,
+  "scientific": "Kuehneromyces mutabilis",
+  "english": "Sheathed Woodtuft",
+  "olderNames": [
+    "Pholiota mutabilis"
+  ],
+  "edibility": {
+    "value": "edible-cooked",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "edibilityNote": {
+    "value": "Every source warns it is very easily mistaken for the deadly Funeral Bell — sometimes only a microscope tells them apart. First Nature advises looking, not cooking.",
+    "sources": [
+      "fn",
+      "wp",
+      "wf-fb"
+    ]
+  },
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "Clusters of orange-tan caps; each cap dries paler from the centre out, so the edge stays darker (two-toned).",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "Stem pale and smooth above a small ragged ring, dark and shaggy with scales below it.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "Gills pale ochre turning cinnamon; rusty-brown spore print.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "On dead broadleaved wood, especially birch, all year round.",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "On stumps, logs and felled trunks of broadleaved trees, especially birch, in large clusters.",
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "sporePrint": {
+    "value": "Rusty to cinnamon brown",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "gills",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    "ring": {
+      "value": "sometimes",
+      "sources": [
+        "wf",
+        "fn"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "growsOn": {
+      "value": "wood",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "capCm": {
+      "value": [
+        3,
+        8
+      ],
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "fleshChange": {
+      "value": "Thin and pale tan, browner in the stem; no colour change when cut is described",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "smell": {
+      "value": "Not distinctive; pleasant",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    }
+  },
+  "lookalikes": [
+    {
+      "scientific": "Galerina marginata",
+      "english": "Funeral Bell",
+      "slug": "funeral-bell",
+      "kind": "deadly",
+      "tellApart": [
+        {
+          "feature": "Cap drying",
+          "thisOne": "Dries paler from the centre out — the edge stays darker",
+          "thatOne": "Dries paler from the edge inwards — the centre stays darker",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-fb",
+            "wf-fb"
+          ]
+        },
+        {
+          "feature": "Stem below the ring",
+          "thisOne": "Dark and shaggy with scales",
+          "thatOne": "Silvery-white fibres — but it can have scales too, so this alone is not enough",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "fn-fb",
+            "wf-fb"
+          ]
+        },
+        {
+          "feature": "What it grows on",
+          "thisOne": "Broadleaved wood, mostly birch; big clusters",
+          "thatOne": "Mostly conifer wood, sometimes broadleaved; small clusters",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "fn-fb",
+            "wf-fb"
+          ]
+        },
+        {
+          "feature": "Smell",
+          "thisOne": "Pleasant and mushroomy",
+          "thatOne": "Mealy, like flour (faint to strong)",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "fn-fb",
+            "wp-fb"
+          ]
+        }
+      ]
+    }
+  ],
+  "noDangerousLookalike": null,
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Kuehneromyces mutabilis, Sheathed Woodtuft",
+      "url": "https://www.first-nature.com/fungi/kuehneromyces-mutabilis.php"
+    },
+    {
+      "id": "wf",
+      "title": "Wild Food UK — Sheathed Woodtuft",
+      "url": "https://www.wildfooduk.com/mushroom-guide/sheathed-woodtuft/"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Kuehneromyces mutabilis",
+      "url": "https://en.wikipedia.org/wiki/Kuehneromyces_mutabilis"
+    },
+    {
+      "id": "fn-fb",
+      "title": "First Nature — Galerina marginata, Funeral Bell",
+      "url": "https://www.first-nature.com/fungi/galerina-marginata.php"
+    },
+    {
+      "id": "wf-fb",
+      "title": "Wild Food UK — Funeral Bell",
+      "url": "https://www.wildfooduk.com/mushroom-guide/funeral-bell/"
+    },
+    {
+      "id": "wp-fb",
+      "title": "Wikipedia — Galerina marginata",
+      "url": "https://en.wikipedia.org/wiki/Galerina_marginata"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}
