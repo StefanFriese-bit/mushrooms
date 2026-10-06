@@ -257,6 +257,36 @@
           ]
         }
       ]
+    },
+    {
+      "scientific": "Entoloma porphyrophaeum",
+      "english": "Lilac Pinkgill",
+      "slug": "lilac-pinkgill",
+      "kind": "not-edible",
+      "tellApart": [
+        {
+          "feature": "Cap",
+          "thisOne": "Ivory-white to pale grey-brown, smooth",
+          "thatOne": "Lilac to purple-brown, finely fibrous",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-lc",
+            "wp-lc"
+          ]
+        },
+        {
+          "feature": "Where it grows",
+          "thisOne": "Broadleaved woods, under oak and beech",
+          "thatOne": "Grassland",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-lc",
+            "wp-lc"
+          ]
+        }
+      ]
     }
   ],
   "noDangerousLookalike": null,
@@ -340,6 +370,16 @@
       "id": "wp-tf",
       "title": "Wikipedia — Infundibulicybe geotropa",
       "url": "https://en.wikipedia.org/wiki/Infundibulicybe_geotropa"
+    },
+    {
+      "id": "fn-lc",
+      "title": "First Nature — Entoloma porphyrophaeum, Lilac Pinkgill",
+      "url": "https://www.first-nature.com/fungi/entoloma-porphyrophaeum.php"
+    },
+    {
+      "id": "wp-lc",
+      "title": "Wikipedia — Entoloma porphyrophaeum",
+      "url": "https://en.wikipedia.org/wiki/Entoloma_porphyrophaeum"
     },
     {
       "id": "wf-prot",

@@ -557,6 +557,24 @@
           ]
         }
       ]
+    },
+    {
+      "scientific": "Lycoperdon utriforme",
+      "english": "Mosaic Puffball",
+      "slug": "mosaic-puffball",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Cut top to bottom (a young one)",
+          "thisOne": "The outline of a cap, gills and stem",
+          "thatOne": "Pure white and even inside",
+          "sources": [
+            "fn",
+            "fn-mp",
+            "wf-mp"
+          ]
+        }
+      ]
     }
   ],
   "noDangerousLookalike": null,
@@ -760,6 +778,16 @@
       "id": "wf-wd",
       "title": "Wild Food UK — White Dapperling",
       "url": "https://www.wildfooduk.com/mushroom-guide/white-dapperling/"
+    },
+    {
+      "id": "fn-mp",
+      "title": "First Nature — Lycoperdon utriforme, Mosaic Puffball",
+      "url": "https://www.first-nature.com/fungi/lycoperdon-utriforme.php"
+    },
+    {
+      "id": "wf-mp",
+      "title": "Wild Food UK — Mosaic Puffball",
+      "url": "https://www.wildfooduk.com/mushroom-guide/mosaic-puffball/"
     },
     {
       "id": "wf-prot",

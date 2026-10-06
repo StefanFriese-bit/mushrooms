@@ -1,0 +1,205 @@
+{
+  "slug": "lilac-pinkgill",
+  "inatId": 499723,
+  "scientific": "Entoloma porphyrophaeum",
+  "english": "Lilac Pinkgill",
+  "olderNames": [
+    "Trichopilus porphyrophaeus"
+  ],
+  "edibility": {
+    "value": "not-edible",
+    "sources": [
+      "fn"
+    ]
+  },
+  "edibilityNote": {
+    "value": "Reported edible, but thin and insubstantial — and easily confused with deadly pinkgills such as the Livid Pinkgill (First Nature). It is also vulnerable worldwide (Wikipedia).",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "A lilac to purple-brown cap, 5–14 cm, with a central bump and fine radiating fibres.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    {
+      "value": "Gills white, turning pink; pale pink spore print.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    {
+      "value": "A fibrous stem the colour of the cap or paler; no ring.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    {
+      "value": "In moist, old grassland, often in the uplands.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "Moist, old unfertilised grassland, upland and lowland.",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "sources": [
+      "fn"
+    ]
+  },
+  "sporePrint": {
+    "value": "Pale pink",
+    "sources": [
+      "fn"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "gills",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "ring": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "growsOn": {
+      "value": "ground",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "capCm": {
+      "value": [
+        5,
+        14.5
+      ],
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "fleshChange": {
+      "value": "No colour change when cut is described",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "smell": {
+      "value": "Not distinctive",
+      "sources": [
+        "fn"
+      ]
+    }
+  },
+  "lookalikes": [
+    {
+      "scientific": "Entoloma sinuatum",
+      "english": "Livid Pinkgill",
+      "slug": "livid-pinkgill",
+      "kind": "deadly",
+      "tellApart": [
+        {
+          "feature": "Cap",
+          "thisOne": "Lilac to purple-brown, finely fibrous",
+          "thatOne": "Ivory-white to pale grey-brown, smooth",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-lp",
+            "wp-lp"
+          ]
+        },
+        {
+          "feature": "Where it grows",
+          "thisOne": "Grassland",
+          "thatOne": "Broadleaved woods, under oak and beech",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-lp",
+            "wp-lp"
+          ]
+        }
+      ]
+    }
+  ],
+  "noDangerousLookalike": null,
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Entoloma porphyrophaeum, Lilac Pinkgill",
+      "url": "https://www.first-nature.com/fungi/entoloma-porphyrophaeum.php"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Entoloma porphyrophaeum",
+      "url": "https://en.wikipedia.org/wiki/Entoloma_porphyrophaeum"
+    },
+    {
+      "id": "fn-lp",
+      "title": "First Nature — Entoloma sinuatum, Livid Pinkgill",
+      "url": "https://www.first-nature.com/fungi/entoloma-sinuatum.php"
+    },
+    {
+      "id": "wp-lp",
+      "title": "Wikipedia — Entoloma sinuatum",
+      "url": "https://en.wikipedia.org/wiki/Entoloma_sinuatum"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}

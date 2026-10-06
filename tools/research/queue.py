@@ -12,7 +12,8 @@ slug = lambda n: re.sub(r'[^a-z0-9]+', '-', n.lower()).strip('-')
 HELD = {'Chlorociboria aeruginascens',  # Green Elfcup: no edibility on any trusted site
         'Agrocybe rivulosa',  # Wrinkled Fieldcap: Wikipedia's article is a stub; gills, ring, habitat on one site only
         'Clavulina rugosa',  # Wrinkled Club: edible, but only First Nature gives its spore print (edible pages need two)
-        'Lycoperdon pratense'}  # Meadow Puffball: edible, but Wikipedia's article is a stub (no spore colour, no stem)
+        'Lycoperdon pratense',  # Meadow Puffball: edible, but Wikipedia's article is a stub (no spore colour, no stem)
+        'Russula nigricans'}  # Blackening Brittlegill: edible; only Wild Food UK gives its spore print (Wikipedia mixes two species)
 rows = []
 for s in lst:
     if s in b1 or s['name'] in have or s['name'] in HELD:

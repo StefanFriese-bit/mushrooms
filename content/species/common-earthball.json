@@ -260,6 +260,36 @@
           ]
         }
       ]
+    },
+    {
+      "scientific": "Lycoperdon utriforme",
+      "english": "Mosaic Puffball",
+      "slug": "mosaic-puffball",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Inside",
+          "thisOne": "Firm, purple-black with white veins",
+          "thatOne": "Pure white and spongy when young",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-mp",
+            "wf-mp"
+          ]
+        },
+        {
+          "feature": "Skin",
+          "thisOne": "Thick, tough and warty",
+          "thatOne": "Thin, breaking into flakes like crazy paving",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-mp",
+            "wp-mp"
+          ]
+        }
+      ]
     }
   ],
   "noDangerousLookalike": null,
@@ -348,6 +378,21 @@
       "id": "wf-sp",
       "title": "Wild Food UK — Stump Puffball",
       "url": "https://www.wildfooduk.com/mushroom-guide/stump-puffball/"
+    },
+    {
+      "id": "fn-mp",
+      "title": "First Nature — Lycoperdon utriforme, Mosaic Puffball",
+      "url": "https://www.first-nature.com/fungi/lycoperdon-utriforme.php"
+    },
+    {
+      "id": "wf-mp",
+      "title": "Wild Food UK — Mosaic Puffball",
+      "url": "https://www.wildfooduk.com/mushroom-guide/mosaic-puffball/"
+    },
+    {
+      "id": "wp-mp",
+      "title": "Wikipedia — Lycoperdon utriforme",
+      "url": "https://en.wikipedia.org/wiki/Calvatia_utriformis"
     },
     {
       "id": "wf-prot",

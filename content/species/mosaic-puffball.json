@@ -1,0 +1,263 @@
+{
+  "slug": "mosaic-puffball",
+  "inatId": 180365,
+  "scientific": "Lycoperdon utriforme",
+  "english": "Mosaic Puffball",
+  "olderNames": [
+    "Calvatia utriformis",
+    "Handkea utriformis"
+  ],
+  "edibility": {
+    "value": "edible-cooked",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "edibilityNote": {
+    "value": "Edible only while young and pure white all through. First Nature warns that earthballs, some of them seriously poisonous, and young poisonous gilled mushrooms can look like it: cut each one top to bottom.",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "A large, rounded to pear-shaped puffball, 6–15 cm across.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    {
+      "value": "White at first; its skin breaks into flakes like crazy paving.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    {
+      "value": "Inside: pure white and spongy when young, then yellow, then brown spore powder.",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    {
+      "value": "In old grassland — pastures and sheep-grazed hillsides.",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "Old grassland — permanent pasture, sheep-grazed hillsides, meadows and woodland edges.",
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      7,
+      8,
+      9,
+      10
+    ],
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "sporePrint": {
+    "value": "Brown",
+    "sources": [
+      "wf",
+      "wp"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "other",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    "ring": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "growsOn": {
+      "value": "ground",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "capCm": {
+      "value": [
+        6,
+        12
+      ],
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "fleshChange": {
+      "value": "Pure white and spongy, turning yellow, then brown",
+      "sources": [
+        "wf",
+        "fn"
+      ]
+    },
+    "smell": {
+      "value": "Not distinctive",
+      "sources": [
+        "fn"
+      ]
+    }
+  },
+  "lookalikes": [
+    {
+      "scientific": "Scleroderma citrinum",
+      "english": "Common Earthball",
+      "slug": "common-earthball",
+      "kind": "poisonous",
+      "tellApart": [
+        {
+          "feature": "Inside",
+          "thisOne": "Pure white and spongy when young",
+          "thatOne": "Firm, purple-black with white veins",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-ce",
+            "wf-ce"
+          ]
+        },
+        {
+          "feature": "Skin",
+          "thisOne": "Thin, breaking into flakes like crazy paving",
+          "thatOne": "Thick, tough and warty",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-ce",
+            "wf-ce"
+          ]
+        }
+      ]
+    },
+    {
+      "scientific": "Amanita phalloides",
+      "english": "Deathcap",
+      "slug": "deathcap",
+      "kind": "deadly",
+      "tellApart": [
+        {
+          "feature": "Cut top to bottom (a young one)",
+          "thisOne": "Pure white and even inside",
+          "thatOne": "The outline of a cap, gills and stem",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-dc"
+          ]
+        }
+      ]
+    }
+  ],
+  "noDangerousLookalike": null,
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Lycoperdon utriforme, Mosaic Puffball",
+      "url": "https://www.first-nature.com/fungi/lycoperdon-utriforme.php"
+    },
+    {
+      "id": "wf",
+      "title": "Wild Food UK — Mosaic Puffball",
+      "url": "https://www.wildfooduk.com/mushroom-guide/mosaic-puffball/"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Lycoperdon utriforme",
+      "url": "https://en.wikipedia.org/wiki/Calvatia_utriformis"
+    },
+    {
+      "id": "fn-ce",
+      "title": "First Nature — Scleroderma citrinum, Common Earthball",
+      "url": "https://www.first-nature.com/fungi/scleroderma-citrinum.php"
+    },
+    {
+      "id": "wf-ce",
+      "title": "Wild Food UK — Common Earthball",
+      "url": "https://www.wildfooduk.com/mushroom-guide/common-earth-ball/"
+    },
+    {
+      "id": "wp-ce",
+      "title": "Wikipedia — Scleroderma citrinum",
+      "url": "https://en.wikipedia.org/wiki/Scleroderma_citrinum"
+    },
+    {
+      "id": "wt-ce",
+      "title": "Woodland Trust — Common Earthball",
+      "url": "https://www.woodlandtrust.org.uk/trees-woods-and-wildlife/fungi-and-lichens/common-earthball/"
+    },
+    {
+      "id": "fn-dc",
+      "title": "First Nature — Amanita phalloides, Deathcap",
+      "url": "https://www.first-nature.com/fungi/amanita-phalloides.php"
+    },
+    {
+      "id": "wf-dc",
+      "title": "Wild Food UK — Deathcap",
+      "url": "https://www.wildfooduk.com/mushroom-guide/deathcap/"
+    },
+    {
+      "id": "wp-dc",
+      "title": "Wikipedia — Amanita phalloides",
+      "url": "https://en.wikipedia.org/wiki/Amanita_phalloides"
+    },
+    {
+      "id": "wt-dc",
+      "title": "Woodland Trust — Deathcap",
+      "url": "https://www.woodlandtrust.org.uk/trees-woods-and-wildlife/fungi-and-lichens/deathcap/"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}

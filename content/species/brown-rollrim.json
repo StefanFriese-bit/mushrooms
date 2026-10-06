@@ -192,6 +192,44 @@
           ]
         }
       ]
+    },
+    {
+      "scientific": "Tapinella atrotomentosa",
+      "english": "Velvet Rollrim",
+      "slug": "velvet-rollrim",
+      "kind": "poisonous",
+      "tellApart": [
+        {
+          "feature": "Stem",
+          "thisOne": "Thinner and fibrous, not velvety",
+          "thatOne": "Thick, covered in dark brown to black velvet",
+          "sources": [
+            "fn-vr",
+            "wp-vr"
+          ]
+        },
+        {
+          "feature": "Gills when bruised",
+          "thisOne": "Bruise dark brown at once",
+          "thatOne": "Little change described",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-vr"
+          ]
+        },
+        {
+          "feature": "Where it grows",
+          "thisOne": "On the ground, under birch and other trees",
+          "thatOne": "On conifer stumps and roots",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-vr",
+            "wp-vr"
+          ]
+        }
+      ]
     }
   ],
   "noDangerousLookalike": null,
@@ -260,6 +298,16 @@
       "id": "wp-sm",
       "title": "Wikipedia — Lactarius deliciosus",
       "url": "https://en.wikipedia.org/wiki/Lactarius_deliciosus"
+    },
+    {
+      "id": "fn-vr",
+      "title": "First Nature — Tapinella atrotomentosa, Velvet Rollrim",
+      "url": "https://www.first-nature.com/fungi/tapinella-atrotomentosa.php"
+    },
+    {
+      "id": "wp-vr",
+      "title": "Wikipedia — Tapinella atrotomentosa",
+      "url": "https://en.wikipedia.org/wiki/Tapinella_atrotomentosa"
     },
     {
       "id": "wf-prot",
