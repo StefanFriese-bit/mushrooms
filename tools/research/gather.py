@@ -103,6 +103,20 @@ def keep_full(slug, site, page):
     (d / f'{slug}.{site}.txt').write_text(text_of(body))
 
 
+def wild_food(name, names, parts, slug):
+    """Wild Food UK's page for the species: tried under the English name, then the scientific names (it files some
+    species that way, e.g. mycena-rosea), then the approved lists' address."""
+    tries = [f'https://www.wildfooduk.com/mushroom-guide/{p}{v}/' for p in parts for v in ('', '-2', '-3')] + \
+        [f'https://www.wildfooduk.com/mushroom-guide/{slugify(n)}/' for n in names] + core_urls(name)
+    for url in list(dict.fromkeys(tries)):
+        code, page, final = fetch(url)
+        if code == 200 and '/mushroom-guide/' in final:
+            keep_full(slug, 'wf', page)
+            label = re.search(r'(?s)>\s*(Edible|Poisonous|Deadly|Inedible|Not Edible)\s*<', page)
+            return [f'[wf] {final}  label={label.group(1) if label else "?"}'] + keep(sections(page), WANT['wf'], 600)
+    return ['[wf] no page']
+
+
 def gather(sp, older, wt_index):
     name, english = sp['name'], sp['english'] or sp['name']
     slug = slugify(english)
@@ -122,20 +136,8 @@ def gather(sp, older, wt_index):
             break
     else:
         out.append('[fn] no page under any name')
-    wf_done = False
     parts = [slugify(re.sub(r"['.’]", '', x)) for x in re.split(r'\s*/\s*', english)] if sp['english'] else []
-    tries = [f'https://www.wildfooduk.com/mushroom-guide/{p}{v}/' for p in parts for v in ('', '-2', '-3')] + core_urls(name)
-    for url in list(dict.fromkeys(tries)):
-        code, page, final = fetch(url)
-        if code == 200 and '/mushroom-guide/' in final:
-            keep_full(slug, 'wf', page)
-            label = re.search(r'(?s)>\s*(Edible|Poisonous|Deadly|Inedible|Not Edible)\s*<', page)
-            out.append(f'[wf] {final}  label={label.group(1) if label else "?"}')
-            out += keep(sections(page), WANT['wf'], 600)
-            wf_done = True
-            break
-    if not wf_done:
-        out.append('[wf] no page')
+    out += wild_food(name, names, parts, slug)
     for n in names:  # Wikipedia follows its own redirects from older names
         url = f'https://en.wikipedia.org/wiki/{quote(n.replace(" ", "_"))}'
         code, page, final = fetch(url)
@@ -165,6 +167,20 @@ def main():
     older = json.loads((ROOT / 'cache/df20/older-names.json').read_text()) if (ROOT / 'cache/df20/older-names.json').exists() else {}
     have = {json.loads(p.read_text())['scientific'] for p in (ROOT / 'content/species').glob('*.json')}
     args = sys.argv[1:]
+    if args[:1] == ['--wf-retry']:  # extracts that found no Wild Food UK page: try the scientific-name addresses
+        for sp in lst:
+            stem = slugify(sp['english'] or sp['name'])
+            ex = OUT / f'{stem}.txt'
+            if not ex.exists() or not re.search(r'^\[wf\] no page', ex.read_text(), re.M):
+                continue
+            names = [sp['name']] + [o for o in older.get(sp['name'], []) if re.match(r'^[A-Z][a-z]+ [a-z-]+$', o)][:4]
+            parts = [slugify(re.sub(r"['.’]", '', x)) for x in re.split(r'\s*/\s*', sp['english'])] if sp['english'] else []
+            got = wild_food(sp['name'], names, parts, stem)
+            if got[0] != '[wf] no page':
+                text = re.sub(r'^\[wf\] no page[^\n]*\n', '\n'.join(got) + '\n', ex.read_text(), flags=re.M)
+                ex.write_text(text)
+                print('found', stem, got[0], flush=True)
+        return
     if args[:1] == ['--batch']:
         edible_or_danger = [s for s in lst if 'edible' in (s.get('reasons') or []) or s.get('dangerLevel')]
         chosen = edible_or_danger if args[1] == '1' else [s for s in lst if s not in edible_or_danger]

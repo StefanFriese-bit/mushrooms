@@ -1,0 +1,158 @@
+{
+  "slug": "redlead-roundhead",
+  "inatId": 121217,
+  "scientific": "Leratiomyces ceres",
+  "english": "Redlead Roundhead",
+  "olderNames": [
+    "Stropharia aurantiaca"
+  ],
+  "edibility": {
+    "value": "not-edible",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "edibilityNote": {
+    "value": "First Nature says it is likely to upset the stomach; Wikipedia gives its edibility as unknown.",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "Bright orange-red cap, 1.5–6 cm, often with white flecks of veil on the edge.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    {
+      "value": "Gills cream to olive, then purplish-brown; purple-brown spore print.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    {
+      "value": "Usually in groups on woodchip mulch.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "On woodchip mulch, often in groups; also sandy soil rich in rotting pine needles and twigs.",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "sources": [
+      "fn"
+    ]
+  },
+  "sporePrint": {
+    "value": "Purple-brown",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "gills",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "ring": {
+      "value": "sometimes",
+      "sources": [
+        "wp",
+        "fn"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "growsOn": {
+      "value": "wood",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "capCm": {
+      "value": [
+        1.5,
+        6
+      ],
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "fleshChange": {
+      "value": "Thin; no colour change when cut is described",
+      "sources": [
+        "wp"
+      ]
+    },
+    "smell": {
+      "value": "Not distinctive",
+      "sources": [
+        "fn"
+      ]
+    }
+  },
+  "lookalikes": [],
+  "noDangerousLookalike": null,
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Leratiomyces ceres, Redlead Roundhead",
+      "url": "https://www.first-nature.com/fungi/leratiomyces-ceres.php"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Leratiomyces ceres",
+      "url": "https://en.wikipedia.org/wiki/Leratiomyces_ceres"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}
