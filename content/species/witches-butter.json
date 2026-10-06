@@ -171,6 +171,25 @@
           ]
         }
       ]
+    },
+    {
+      "scientific": "Exidia nigricans",
+      "english": "Warlock's Butter",
+      "slug": "warlock-s-butter",
+      "kind": "not-edible",
+      "tellApart": [
+        {
+          "feature": "Shape",
+          "thisOne": "Separate top-shaped blobs",
+          "thatOne": "Flat, spreading, merging masses",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-wl",
+            "wp-wl"
+          ]
+        }
+      ]
     }
   ],
   "noDangerousLookalike": null,
@@ -200,6 +219,16 @@
       "id": "wp-bb",
       "title": "Wikipedia — Bulgaria inquinans",
       "url": "https://en.wikipedia.org/wiki/Bulgaria_inquinans"
+    },
+    {
+      "id": "fn-wl",
+      "title": "First Nature — Exidia nigricans, Warlock's Butter",
+      "url": "https://www.first-nature.com/fungi/exidia-nigricans.php"
+    },
+    {
+      "id": "wp-wl",
+      "title": "Wikipedia — Exidia nigricans",
+      "url": "https://en.wikipedia.org/wiki/Exidia_nigricans"
     },
     {
       "id": "wf-prot",
