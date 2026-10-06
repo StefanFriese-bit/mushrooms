@@ -1,19 +1,26 @@
 {
-  "slug": "yellow-fieldcap",
-  "inatId": 55474,
-  "scientific": "Bolbitius titubans",
-  "english": "Yellow Fieldcap",
+  "slug": "plantpot-dapperling",
+  "inatId": 85398,
+  "scientific": "Leucocoprinus birnbaumii",
+  "english": "Plantpot Dapperling",
   "olderNames": [
-    "Bolbitius vitellinus"
+    "Lepiota lutea",
+    "Leucoagaricus birnbaumii"
   ],
   "edibility": {
-    "value": "not-edible",
+    "value": "poisonous",
     "sources": [
       "fn",
       "wp"
     ]
   },
-  "edibilityNote": null,
+  "edibilityNote": {
+    "value": "Toxic: eating it causes a very unpleasant stomach upset.",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
   "protectedInUk": {
     "value": false,
     "sources": [
@@ -23,28 +30,21 @@
   },
   "topPoints": [
     {
-      "value": "Small cap, 1–7 cm, egg-shaped and chrome yellow at first, then flat, fading to grey from the edge.",
+      "value": "A bright yellow cap, 2–6 cm, egg-shaped then flatter, dotted with tiny flakes.",
       "sources": [
         "fn",
         "wp"
       ]
     },
     {
-      "value": "Gills pale yellow, turning cinnamon; rusty-brown spore print.",
+      "value": "Yellow gills and a yellow stem with a fragile ring.",
       "sources": [
         "fn",
         "wp"
       ]
     },
     {
-      "value": "Fragile, hollow, pale stem with no ring.",
-      "sources": [
-        "fn",
-        "wp"
-      ]
-    },
-    {
-      "value": "On manured grass, straw, dung and woodchip; each lasts only a day or so.",
+      "value": "In flowerpots, greenhouses and compost, in warm, damp places indoors.",
       "sources": [
         "fn",
         "wp"
@@ -52,7 +52,7 @@
     }
   ],
   "habitat": {
-    "value": "Manured grassland, rotting straw, dung, compost and woodchip.",
+    "value": "Potting compost and rich soil in flowerpots and greenhouses — warm, damp places.",
     "sources": [
       "fn",
       "wp"
@@ -60,18 +60,25 @@
   },
   "seasonMonths": {
     "value": [
+      1,
+      2,
+      3,
+      4,
+      5,
       6,
       7,
       8,
       9,
-      10
+      10,
+      11,
+      12
     ],
     "sources": [
       "fn"
     ]
   },
   "sporePrint": {
-    "value": "Cinnamon to rust brown",
+    "value": "White",
     "sources": [
       "fn",
       "wp"
@@ -86,7 +93,7 @@
       ]
     },
     "ring": {
-      "value": "no",
+      "value": "sometimes",
       "sources": [
         "fn",
         "wp"
@@ -108,8 +115,8 @@
     },
     "capCm": {
       "value": [
-        1,
-        7
+        2,
+        6
       ],
       "sources": [
         "fn",
@@ -117,13 +124,14 @@
       ]
     },
     "fleshChange": {
-      "value": "Very thin; splits easily",
+      "value": "No colour change when cut is described",
       "sources": [
-        "fn"
+        "fn",
+        "wp"
       ]
     },
     "smell": {
-      "value": "Not distinctive",
+      "value": "Not significant",
       "sources": [
         "fn"
       ]
@@ -131,59 +139,41 @@
   },
   "lookalikes": [
     {
-      "scientific": "Leucocoprinus birnbaumii",
-      "english": "Plantpot Dapperling",
-      "slug": "plantpot-dapperling",
-      "kind": "poisonous",
+      "scientific": "Bolbitius titubans",
+      "english": "Yellow Fieldcap",
+      "slug": "yellow-fieldcap",
+      "kind": "not-edible",
       "tellApart": [
         {
           "feature": "Ring",
-          "thisOne": "None",
-          "thatOne": "A fragile ring",
+          "thisOne": "A fragile ring",
+          "thatOne": "None",
           "sources": [
             "fn",
             "wp",
-            "fn-pd",
-            "wp-pd"
+            "fn-yf",
+            "wp-yf"
           ]
         },
         {
           "feature": "Gills with age",
-          "thisOne": "Turn cinnamon",
-          "thatOne": "Stay yellow",
+          "thisOne": "Stay yellow",
+          "thatOne": "Turn cinnamon",
           "sources": [
             "fn",
-            "wp",
-            "fn-pd"
+            "fn-yf",
+            "wp-yf"
           ]
         },
         {
           "feature": "Where it grows",
-          "thisOne": "Grassland, dung and straw",
-          "thatOne": "Plant pots and greenhouses",
+          "thisOne": "Plant pots and greenhouses",
+          "thatOne": "Grassland, dung and straw",
           "sources": [
             "fn",
             "wp",
-            "fn-pd",
-            "wp-pd"
-          ]
-        }
-      ]
-    },
-    {
-      "scientific": "Conocybe apala",
-      "english": "Milky Conecap",
-      "slug": "milky-conecap",
-      "kind": "poisonous",
-      "tellApart": [
-        {
-          "feature": "Cap",
-          "thisOne": "Bright yellow and slimy when young, fading pale buff",
-          "thatOne": "Milk-white and dry",
-          "sources": [
-            "fn",
-            "wp",
-            "fn-mc"
+            "fn-yf",
+            "wp-yf"
           ]
         }
       ]
@@ -194,28 +184,23 @@
   "sources": [
     {
       "id": "fn",
-      "title": "First Nature — Bolbitius titubans, Yellow Fieldcap",
-      "url": "https://www.first-nature.com/fungi/bolbitius-titubans.php"
-    },
-    {
-      "id": "wp",
-      "title": "Wikipedia — Bolbitius titubans",
-      "url": "https://en.wikipedia.org/wiki/Bolbitius_titubans"
-    },
-    {
-      "id": "fn-pd",
       "title": "First Nature — Leucocoprinus birnbaumii, Plantpot Dapperling",
       "url": "https://www.first-nature.com/fungi/leucocoprinus-birnbaumii.php"
     },
     {
-      "id": "wp-pd",
+      "id": "wp",
       "title": "Wikipedia — Leucocoprinus birnbaumii",
       "url": "https://en.wikipedia.org/wiki/Leucocoprinus_birnbaumii"
     },
     {
-      "id": "fn-mc",
-      "title": "First Nature — Conocybe apala, Milky Conecap",
-      "url": "https://www.first-nature.com/fungi/conocybe-apala.php"
+      "id": "fn-yf",
+      "title": "First Nature — Bolbitius titubans, Yellow Fieldcap",
+      "url": "https://www.first-nature.com/fungi/bolbitius-titubans.php"
+    },
+    {
+      "id": "wp-yf",
+      "title": "Wikipedia — Bolbitius titubans",
+      "url": "https://en.wikipedia.org/wiki/Bolbitius_titubans"
     },
     {
       "id": "wf-prot",

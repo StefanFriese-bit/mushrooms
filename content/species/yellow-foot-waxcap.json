@@ -1,20 +1,26 @@
 {
-  "slug": "slimy-waxcap",
-  "inatId": 499663,
-  "scientific": "Gliophorus irrigatus",
-  "english": "Slimy Waxcap",
+  "slug": "yellow-foot-waxcap",
+  "inatId": 1135359,
+  "scientific": "Cuphophyllus flavipes",
+  "english": "Yellow Foot Waxcap",
   "olderNames": [
-    "Hygrocybe irrigata",
-    "Hygrocybe unguinosa"
+    "Hygrocybe flavipes"
   ],
   "edibility": {
     "value": "not-edible",
     "sources": [
-      "wf",
-      "fn"
+      "fn",
+      "wf"
     ]
   },
-  "edibilityNote": null,
+  "edibilityNote": {
+    "value": "Wild Food UK lists it as edible but not choice, and leaves waxcaps alone as their grasslands decline; First Nature: not one to collect. It is vulnerable worldwide (Wikipedia).",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
   "protectedInUk": {
     "value": false,
     "sources": [
@@ -24,7 +30,7 @@
   },
   "topPoints": [
     {
-      "value": "Very slimy grey-brown cap, 1–5 cm, bell-shaped then flatter with a broad hump.",
+      "value": "A grey to grey-brown cap, 1–4 cm, greasy when wet, often with a broad low bump.",
       "sources": [
         "fn",
         "wf",
@@ -32,21 +38,22 @@
       ]
     },
     {
-      "value": "Thick, waxy, widely spaced white to grey gills.",
+      "value": "Widely spaced grey gills, running down the stem, with veins between them.",
       "sources": [
         "fn",
         "wf"
       ]
     },
     {
-      "value": "Slimy stem, the colour of the cap; no ring.",
+      "value": "A pale stem that turns yellow at the base — the key feature.",
       "sources": [
         "fn",
-        "wf"
+        "wf",
+        "wp"
       ]
     },
     {
-      "value": "In old grassland and pasture, churchyards and lawns.",
+      "value": "In old, unfertilised grassland — lawns, churchyards, moors.",
       "sources": [
         "fn",
         "wf"
@@ -54,7 +61,7 @@
     }
   ],
   "habitat": {
-    "value": "Old grazed pasture, fields, churchyards and mown grass; sometimes open woodland.",
+    "value": "Old, unfertilised grassland — lawns, churchyards and acid moorland.",
     "sources": [
       "fn",
       "wf"
@@ -62,23 +69,19 @@
   },
   "seasonMonths": {
     "value": [
-      7,
       8,
       9,
       10,
-      11,
-      12
+      11
     ],
     "sources": [
-      "fn",
-      "wf"
+      "fn"
     ]
   },
   "sporePrint": {
     "value": "White",
     "sources": [
-      "fn",
-      "wf"
+      "fn"
     ]
   },
   "features": {
@@ -93,7 +96,7 @@
       "value": "no",
       "sources": [
         "fn",
-        "wp"
+        "wf"
       ]
     },
     "bagAtBase": {
@@ -113,15 +116,16 @@
     "capCm": {
       "value": [
         1,
-        5
+        4
       ],
       "sources": [
+        "fn",
         "wf",
         "wp"
       ]
     },
     "fleshChange": {
-      "value": "Grey to off-white; hollow in the stem",
+      "value": "Off-white, yellow towards the stem base",
       "sources": [
         "wf"
       ]
@@ -135,20 +139,20 @@
   },
   "lookalikes": [
     {
-      "scientific": "Cuphophyllus flavipes",
-      "english": "Yellow Foot Waxcap",
-      "slug": "yellow-foot-waxcap",
+      "scientific": "Gliophorus irrigatus",
+      "english": "Slimy Waxcap",
+      "slug": "slimy-waxcap",
       "kind": "not-edible",
       "tellApart": [
         {
           "feature": "Cap and stem",
-          "thisOne": "Very slimy all over, no yellow base",
-          "thatOne": "Greasy, with a yellow stem base",
+          "thisOne": "Greasy, with a yellow stem base",
+          "thatOne": "Very slimy all over, no yellow base",
           "sources": [
             "fn",
             "wf",
-            "fn-yw",
-            "wf-yw"
+            "fn-sw",
+            "wf-sw"
           ]
         }
       ]
@@ -159,28 +163,33 @@
   "sources": [
     {
       "id": "fn",
-      "title": "First Nature — Gliophorus irrigatus, Slimy Waxcap",
-      "url": "https://www.first-nature.com/fungi/gliophorus-irrigatus.php"
-    },
-    {
-      "id": "wf",
-      "title": "Wild Food UK — Slimy Waxcap",
-      "url": "https://www.wildfooduk.com/mushroom-guide/slimy-waxcap/"
-    },
-    {
-      "id": "wp",
-      "title": "Wikipedia — Gliophorus irrigatus",
-      "url": "https://en.wikipedia.org/wiki/Gliophorus_irrigatus"
-    },
-    {
-      "id": "fn-yw",
       "title": "First Nature — Cuphophyllus flavipes, Yellow Foot Waxcap",
       "url": "https://www.first-nature.com/fungi/cuphophyllus-flavipes.php"
     },
     {
-      "id": "wf-yw",
+      "id": "wf",
       "title": "Wild Food UK — Yellow Foot Waxcap",
       "url": "https://www.wildfooduk.com/mushroom-guide/yellow-foot-waxcap/"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Cuphophyllus flavipes",
+      "url": "https://en.wikipedia.org/wiki/Cuphophyllus_flavipes"
+    },
+    {
+      "id": "fn-sw",
+      "title": "First Nature — Gliophorus irrigatus, Slimy Waxcap",
+      "url": "https://www.first-nature.com/fungi/gliophorus-irrigatus.php"
+    },
+    {
+      "id": "wf-sw",
+      "title": "Wild Food UK — Slimy Waxcap",
+      "url": "https://www.wildfooduk.com/mushroom-guide/slimy-waxcap/"
+    },
+    {
+      "id": "wp-sw",
+      "title": "Wikipedia — Gliophorus irrigatus",
+      "url": "https://en.wikipedia.org/wiki/Gliophorus_irrigatus"
     },
     {
       "id": "wf-prot",

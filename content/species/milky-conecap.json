@@ -1,0 +1,188 @@
+{
+  "slug": "milky-conecap",
+  "inatId": 117227,
+  "scientific": "Conocybe apala",
+  "english": "Milky Conecap",
+  "olderNames": [
+    "Conocybe lactea",
+    "Bolbitius lacteus"
+  ],
+  "edibility": {
+    "value": "poisonous",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "edibilityNote": {
+    "value": "Treat it as suspect: some conecaps contain the Deathcap’s deadly toxins (First Nature), and one study found phalloidin, a toxin of the Deathcap’s family, in its caps (Wikipedia).",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "A tiny milk-white to pale beige cone-shaped cap, 1–3.5 cm, on a very thin, fragile white stem.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    {
+      "value": "Gills pale ochre, soon rusty; rust-brown spore print.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    {
+      "value": "On lawns and short grass after rain; it collapses within a day.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "Lawns, parks, playing fields and other short grass; sometimes woodchip and manured straw.",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "sources": [
+      "fn"
+    ]
+  },
+  "sporePrint": {
+    "value": "Rust-brown",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "gills",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "ring": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "growsOn": {
+      "value": "ground",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "capCm": {
+      "value": [
+        0.8,
+        3.5
+      ],
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "fleshChange": {
+      "value": "Very thin and fragile; no colour change when cut is described",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "smell": {
+      "value": "Not distinctive",
+      "sources": [
+        "fn"
+      ]
+    }
+  },
+  "lookalikes": [
+    {
+      "scientific": "Bolbitius titubans",
+      "english": "Yellow Fieldcap",
+      "slug": "yellow-fieldcap",
+      "kind": "not-edible",
+      "tellApart": [
+        {
+          "feature": "Cap",
+          "thisOne": "Milk-white and dry",
+          "thatOne": "Bright yellow and slimy when young, fading pale buff",
+          "sources": [
+            "fn",
+            "fn-yf",
+            "wp-yf"
+          ]
+        }
+      ]
+    }
+  ],
+  "noDangerousLookalike": null,
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Conocybe apala, Milky Conecap",
+      "url": "https://www.first-nature.com/fungi/conocybe-apala.php"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Conocybe apala",
+      "url": "https://en.wikipedia.org/wiki/Conocybe_apala"
+    },
+    {
+      "id": "fn-yf",
+      "title": "First Nature — Bolbitius titubans, Yellow Fieldcap",
+      "url": "https://www.first-nature.com/fungi/bolbitius-titubans.php"
+    },
+    {
+      "id": "wp-yf",
+      "title": "Wikipedia — Bolbitius titubans",
+      "url": "https://en.wikipedia.org/wiki/Bolbitius_titubans"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}
