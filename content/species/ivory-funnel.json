@@ -213,6 +213,26 @@
           ]
         }
       ]
+    },
+    {
+      "scientific": "Infundibulicybe geotropa",
+      "english": "Trooping Funnel",
+      "slug": "trooping-funnel",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Size",
+          "thisOne": "Small: cap 1–6 cm",
+          "thatOne": "Large: cap 10–20 cm, stem up to 20 cm",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-tf",
+            "wf-tf",
+            "wp-tf"
+          ]
+        }
+      ]
     }
   ],
   "noDangerousLookalike": null,
@@ -281,6 +301,21 @@
       "id": "wp-mi",
       "title": "Wikipedia — Clitopilus prunulus",
       "url": "https://en.wikipedia.org/wiki/Clitopilus_prunulus"
+    },
+    {
+      "id": "fn-tf",
+      "title": "First Nature — Infundibulicybe geotropa, Trooping Funnel",
+      "url": "https://www.first-nature.com/fungi/clitocybe-geotropa.php"
+    },
+    {
+      "id": "wf-tf",
+      "title": "Wild Food UK — Trooping Funnel",
+      "url": "https://www.wildfooduk.com/mushroom-guide/trooping-funnel/"
+    },
+    {
+      "id": "wp-tf",
+      "title": "Wikipedia — Infundibulicybe geotropa",
+      "url": "https://en.wikipedia.org/wiki/Infundibulicybe_geotropa"
     },
     {
       "id": "wf-prot",

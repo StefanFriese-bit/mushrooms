@@ -225,6 +225,38 @@
           ]
         }
       ]
+    },
+    {
+      "scientific": "Infundibulicybe geotropa",
+      "english": "Trooping Funnel",
+      "slug": "trooping-funnel",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Gills",
+          "thisOne": "Notched where they meet the stem; yellowish, turning pink",
+          "thatOne": "Crowded, running down the stem",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-tf",
+            "wf-tf",
+            "wp-tf"
+          ]
+        },
+        {
+          "feature": "Spore print",
+          "thisOne": "Pink",
+          "thatOne": "White",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-tf",
+            "wf-tf",
+            "wp-tf"
+          ]
+        }
+      ]
     }
   ],
   "noDangerousLookalike": null,
@@ -293,6 +325,21 @@
       "id": "wp-cf",
       "title": "Wikipedia — Clitocybe nebularis",
       "url": "https://en.wikipedia.org/wiki/Clitocybe_nebularis"
+    },
+    {
+      "id": "fn-tf",
+      "title": "First Nature — Infundibulicybe geotropa, Trooping Funnel",
+      "url": "https://www.first-nature.com/fungi/clitocybe-geotropa.php"
+    },
+    {
+      "id": "wf-tf",
+      "title": "Wild Food UK — Trooping Funnel",
+      "url": "https://www.wildfooduk.com/mushroom-guide/trooping-funnel/"
+    },
+    {
+      "id": "wp-tf",
+      "title": "Wikipedia — Infundibulicybe geotropa",
+      "url": "https://en.wikipedia.org/wiki/Infundibulicybe_geotropa"
     },
     {
       "id": "wf-prot",

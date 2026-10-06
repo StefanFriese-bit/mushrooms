@@ -1,0 +1,288 @@
+{
+  "slug": "trooping-funnel",
+  "inatId": 451026,
+  "scientific": "Infundibulicybe geotropa",
+  "english": "Trooping Funnel",
+  "olderNames": [
+    "Clitocybe geotropa",
+    "Clitocybe maxima"
+  ],
+  "edibility": {
+    "value": "edible-cooked",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "edibilityNote": {
+    "value": "Pick only big ones: the deadly Fool's and Ivory Funnels look alike but never grow anywhere near as large. Cook it; the tough stems are usually discarded.",
+    "sources": [
+      "wf",
+      "wp",
+      "fn"
+    ]
+  },
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "Large creamy-buff cap, 10–20 cm, funnel-shaped with a raised centre and an inrolled edge.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "Gills crowded, the colour of the cap, running far down the stem.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "Tall, tough stem, thickening towards the base; no ring.",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    {
+      "value": "In troops or rings in woodland clearings, parks and verges, late in the year.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "In troops or rings in broadleaved woodland clearings, parkland and on verges beside hedges.",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      9,
+      10,
+      11,
+      12
+    ],
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "sporePrint": {
+    "value": "White",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "gills",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    "ring": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "growsOn": {
+      "value": "ground",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "capCm": {
+      "value": [
+        10,
+        20
+      ],
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    "fleshChange": {
+      "value": "White, firm and thick",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "smell": {
+      "value": "Faintly of bitter almonds",
+      "sources": [
+        "fn"
+      ]
+    }
+  },
+  "lookalikes": [
+    {
+      "scientific": "Entoloma sinuatum",
+      "english": "Livid Pinkgill",
+      "slug": "livid-pinkgill",
+      "kind": "deadly",
+      "tellApart": [
+        {
+          "feature": "Gills",
+          "thisOne": "Crowded, running down the stem",
+          "thatOne": "Notched where they meet the stem; yellowish, turning pink",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "fn-lp",
+            "wp-lp"
+          ]
+        },
+        {
+          "feature": "Spore print",
+          "thisOne": "White",
+          "thatOne": "Pink",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "fn-lp",
+            "wp-lp"
+          ]
+        }
+      ]
+    },
+    {
+      "scientific": "Collybia rivulosa",
+      "english": "Fool's Funnel",
+      "slug": "fool-s-funnel",
+      "kind": "deadly",
+      "tellApart": [
+        {
+          "feature": "Size",
+          "thisOne": "Large: cap 10–20 cm, stem up to 20 cm",
+          "thatOne": "Small: cap 1–6 cm",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "fn-ff",
+            "wf-ff"
+          ]
+        }
+      ]
+    },
+    {
+      "scientific": "Collybia dealbata",
+      "english": "Ivory Funnel",
+      "slug": "ivory-funnel",
+      "kind": "deadly",
+      "tellApart": [
+        {
+          "feature": "Size",
+          "thisOne": "Large: cap 10–20 cm, stem up to 20 cm",
+          "thatOne": "Small: cap 1–6 cm",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "fn-if",
+            "wp-if"
+          ]
+        }
+      ]
+    }
+  ],
+  "noDangerousLookalike": null,
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Infundibulicybe geotropa, Trooping Funnel",
+      "url": "https://www.first-nature.com/fungi/clitocybe-geotropa.php"
+    },
+    {
+      "id": "wf",
+      "title": "Wild Food UK — Trooping Funnel",
+      "url": "https://www.wildfooduk.com/mushroom-guide/trooping-funnel/"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Infundibulicybe geotropa",
+      "url": "https://en.wikipedia.org/wiki/Infundibulicybe_geotropa"
+    },
+    {
+      "id": "fn-lp",
+      "title": "First Nature — Entoloma sinuatum, Livid Pinkgill",
+      "url": "https://www.first-nature.com/fungi/entoloma-sinuatum.php"
+    },
+    {
+      "id": "wp-lp",
+      "title": "Wikipedia — Entoloma sinuatum",
+      "url": "https://en.wikipedia.org/wiki/Entoloma_sinuatum"
+    },
+    {
+      "id": "fn-ff",
+      "title": "First Nature — Collybia rivulosa, Fool's Funnel",
+      "url": "https://www.first-nature.com/fungi/clitocybe-rivulosa.php"
+    },
+    {
+      "id": "wf-ff",
+      "title": "Wild Food UK — Fool's Funnel",
+      "url": "https://www.wildfooduk.com/mushroom-guide/clitocybe-rivulosa-2/"
+    },
+    {
+      "id": "wp-ff",
+      "title": "Wikipedia — Collybia rivulosa",
+      "url": "https://en.wikipedia.org/wiki/Clitocybe_rivulosa"
+    },
+    {
+      "id": "fn-if",
+      "title": "First Nature — Collybia dealbata, Ivory Funnel",
+      "url": "https://www.first-nature.com/fungi/clitocybe-rivulosa.php"
+    },
+    {
+      "id": "wp-if",
+      "title": "Wikipedia — Collybia dealbata",
+      "url": "https://en.wikipedia.org/wiki/Clitocybe_dealbata"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}

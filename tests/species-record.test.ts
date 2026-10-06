@@ -73,6 +73,19 @@ describe('checkRecord', () => {
     r.features.bagAtBase = { value: 'no', sources: ['fn'] };
     expect(checkRecord(r, HOSTS)).toContain('field-mushroom: feature bagAtBase needs sources from two different websites (has 1)');
   });
+  it('takes the cap size of a species that is neither edible nor dangerous from one source; of the others, two websites', () => {
+    const r = rec();
+    r.features.capCm = { value: [1, 20], sources: ['wf'] };
+    expect(checkRecord(r, HOSTS)).toContain('field-mushroom: feature capCm needs sources from two different websites (has 1)');
+    r.edibility = { value: 'not-edible', sources: two };
+    r.lookalikes = [];
+    expect(checkRecord(r, HOSTS)).toEqual([]);
+    for (const value of ['poisonous', 'deadly', 'edible-some-react'] as const) {
+      r.edibility = { value, sources: two };
+      r.noDangerousLookalike = value === 'edible-some-react' ? { sources: two } : null;
+      expect(checkRecord(r, HOSTS)).toContain('field-mushroom: feature capCm needs sources from two different websites (has 1)');
+    }
+  });
   it('refuses a source id the record does not declare', () => {
     const r = rec({ sporePrint: { value: 'Dark brown', sources: ['fn', 'zz'] } });
     expect(checkRecord(r, HOSTS)).toContain('field-mushroom: sporePrint names an undeclared source "zz"');

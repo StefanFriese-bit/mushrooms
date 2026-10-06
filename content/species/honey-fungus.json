@@ -190,6 +190,37 @@
           ]
         }
       ]
+    },
+    {
+      "scientific": "Pholiota squarrosa",
+      "english": "Shaggy Scalycap",
+      "slug": "shaggy-scalycap",
+      "kind": "poisonous",
+      "tellApart": [
+        {
+          "feature": "Spore print",
+          "thisOne": "White to pale cream",
+          "thatOne": "Rusty brown",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "fn-ss",
+            "wp-ss"
+          ]
+        },
+        {
+          "feature": "Scales",
+          "thisOne": "At most a few small dark scales, mostly near the cap centre",
+          "thatOne": "Thick, upturned brown scales all over the cap, and on the stem below the ring",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-ss",
+            "wp-ss"
+          ]
+        }
+      ]
     }
   ],
   "noDangerousLookalike": null,
@@ -253,6 +284,16 @@
       "id": "wp-fb",
       "title": "Wikipedia — Galerina marginata",
       "url": "https://en.wikipedia.org/wiki/Galerina_marginata"
+    },
+    {
+      "id": "fn-ss",
+      "title": "First Nature — Pholiota squarrosa, Shaggy Scalycap",
+      "url": "https://www.first-nature.com/fungi/pholiota-squarrosa.php"
+    },
+    {
+      "id": "wp-ss",
+      "title": "Wikipedia — Pholiota squarrosa",
+      "url": "https://en.wikipedia.org/wiki/Pholiota_squarrosa"
     },
     {
       "id": "wf-prot",

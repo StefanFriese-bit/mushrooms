@@ -1,0 +1,208 @@
+{
+  "slug": "shaggy-scalycap",
+  "inatId": 153445,
+  "scientific": "Pholiota squarrosa",
+  "english": "Shaggy Scalycap",
+  "olderNames": [],
+  "edibility": {
+    "value": "poisonous",
+    "sources": [
+      "wp",
+      "fn"
+    ]
+  },
+  "edibilityNote": {
+    "value": "Not edible (First Nature); eaten with alcohol it has caused several poisonings, with vomiting and diarrhoea about ten hours later (Wikipedia).",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "Straw-yellow cap, 3–12 cm, covered in upturned brown scales.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    {
+      "value": "Scaly stem below a ragged ring, smooth above it.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    {
+      "value": "Gills pale yellow, turning cinnamon; rusty-brown spore print.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    {
+      "value": "In clusters at the base of broadleaved trees and stumps, especially beech.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "In clusters at the base of living or dead broadleaved trees and stumps, especially beech; rarely conifers.",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      8,
+      9,
+      10,
+      11
+    ],
+    "sources": [
+      "fn"
+    ]
+  },
+  "sporePrint": {
+    "value": "Rusty brown",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "gills",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "ring": {
+      "value": "yes",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "growsOn": {
+      "value": "wood",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "capCm": {
+      "value": [
+        3,
+        12
+      ],
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "fleshChange": {
+      "value": "Pale yellow; no colour change when cut is described",
+      "sources": [
+        "fn"
+      ]
+    },
+    "smell": {
+      "value": "Of radish",
+      "sources": [
+        "fn"
+      ]
+    }
+  },
+  "lookalikes": [
+    {
+      "scientific": "Armillaria mellea",
+      "english": "Honey Fungus",
+      "slug": "honey-fungus",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Spore print",
+          "thisOne": "Rusty brown",
+          "thatOne": "White to pale cream",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-hf",
+            "wf-hf",
+            "wp-hf"
+          ]
+        },
+        {
+          "feature": "Scales",
+          "thisOne": "Thick, upturned brown scales all over the cap, and on the stem below the ring",
+          "thatOne": "At most a few small dark scales, mostly near the cap centre",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-hf",
+            "wf-hf"
+          ]
+        }
+      ]
+    }
+  ],
+  "noDangerousLookalike": null,
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Pholiota squarrosa, Shaggy Scalycap",
+      "url": "https://www.first-nature.com/fungi/pholiota-squarrosa.php"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Pholiota squarrosa",
+      "url": "https://en.wikipedia.org/wiki/Pholiota_squarrosa"
+    },
+    {
+      "id": "fn-hf",
+      "title": "First Nature — Armillaria mellea, Honey Fungus",
+      "url": "https://www.first-nature.com/fungi/armillaria-mellea.php"
+    },
+    {
+      "id": "wf-hf",
+      "title": "Wild Food UK — Honey Fungus",
+      "url": "https://www.wildfooduk.com/mushroom-guide/honey-fungus/"
+    },
+    {
+      "id": "wp-hf",
+      "title": "Wikipedia — Armillaria mellea",
+      "url": "https://en.wikipedia.org/wiki/Armillaria_mellea"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}
