@@ -36,7 +36,9 @@ export function checkRecord(r: SpeciesRecord, allowedHosts: string[]): string[] 
 
   if (!/^[a-z0-9-]+$/.test(r.slug)) say('slug must be lower-case letters, digits and hyphens');
   if (!EDIBILITY.includes(r.edibility.value)) say(`edibility "${r.edibility.value}" is not one of ${EDIBILITY.join(', ')}`);
-  sourced('edibility', r.edibility.sources);
+  // "Not edible" is the cautious verdict — the page tells no one to eat it — and for many crusts and tiny wood fungi
+  // only one trusted site says anything about eating them. Edible, poisonous and deadly still need two websites.
+  (r.edibility.value === 'not-edible' ? sourcedOnce : sourced)('edibility', r.edibility.sources);
   if (r.edibilityNote) sourced('edibilityNote', r.edibilityNote.sources);
   sourced('protectedInUk', r.protectedInUk.sources);
   if (r.topPoints.length < 3 || r.topPoints.length > 6) say(`needs 3 to 6 top points (has ${r.topPoints.length})`);

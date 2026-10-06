@@ -1,0 +1,284 @@
+{
+  "slug": "lurid-bolete",
+  "inatId": 824777,
+  "scientific": "Suillellus luridus",
+  "english": "Lurid Bolete",
+  "olderNames": [
+    "Boletus luridus"
+  ],
+  "edibility": {
+    "value": "edible-cooked",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "edibilityNote": {
+    "value": "Only after thorough cooking, and only when you are certain: poisonous red-pored boletes such as the Devil's Bolete look very like it. Wikipedia adds that raw or undercooked it upsets the stomach, and that it is suspected of a reaction with alcohol.",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "Cap 8–14 cm, sometimes up to 20: velvety pale yellow when young, then yellow-brown to olive-brown.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "Underneath: yellow pores that soon turn orange-red; they bruise dark blue to black.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "Yellow stem covered in a red net (mesh), except at the very top.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "Cut it in half: the flesh turns blue-black at once, usually with a wine-red line just above the pores.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "On the ground under beech and oak, mostly on chalky soil.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "On the ground in broadleaved woods, mostly under beech and oak on chalky soil.",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      7,
+      8,
+      9,
+      10
+    ],
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "sporePrint": {
+    "value": "Olive-brown",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "pores",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    "ring": {
+      "value": "no",
+      "sources": [
+        "wp",
+        "fn",
+        "wf"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "wp",
+        "fn",
+        "wf"
+      ]
+    },
+    "growsOn": {
+      "value": "ground",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    "capCm": {
+      "value": [
+        7,
+        20
+      ],
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    "fleshChange": {
+      "value": "Yellow, turning blue-black at once when cut; a wine-red line above the pores",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "smell": {
+      "value": "Not distinctive; mild, like a Penny Bun",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    }
+  },
+  "lookalikes": [
+    {
+      "scientific": "Rubroboletus satanas",
+      "english": "Devil's Bolete",
+      "slug": null,
+      "kind": "poisonous",
+      "tellApart": [
+        {
+          "feature": "Cap",
+          "thisOne": "Yellow-brown to olive-brown",
+          "thatOne": "Chalky white to pale grey, lumpy",
+          "sources": [
+            "fn",
+            "wf",
+            "wp"
+          ]
+        },
+        {
+          "feature": "Build",
+          "thisOne": "Less stout",
+          "thatOne": "Larger and stouter, with a very swollen stem",
+          "sources": [
+            "fn",
+            "wp"
+          ]
+        },
+        {
+          "feature": "Cut in half",
+          "thisOne": "Usually a wine-red line between the pores and the cap flesh",
+          "thatOne": "No red line",
+          "sources": [
+            "fn",
+            "wf"
+          ]
+        }
+      ]
+    },
+    {
+      "scientific": "Imperator rhodopurpureus, Rubroboletus legaliae, R. rhodoxanthus",
+      "english": "Oldrose, Bilious and Ruddy Boletes",
+      "slug": null,
+      "kind": "poisonous",
+      "tellApart": [
+        {
+          "feature": "Cut in half",
+          "thisOne": "Usually a wine-red line between the pores and the cap flesh",
+          "thatOne": "No red line",
+          "sources": [
+            "fn",
+            "wf"
+          ]
+        }
+      ]
+    },
+    {
+      "scientific": "Neoboletus luridiformis",
+      "english": "Scarletina Bolete",
+      "slug": "scarletina-bolete",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Stem",
+          "thisOne": "A red net (mesh) on yellow",
+          "thatOne": "Fine red dots, no net",
+          "sources": [
+            "fn",
+            "wf",
+            "wp"
+          ]
+        },
+        {
+          "feature": "Cap",
+          "thisOne": "Yellow-brown to olive-brown",
+          "thatOne": "Dark brown",
+          "sources": [
+            "wp",
+            "wf-sb",
+            "wp-sb"
+          ]
+        }
+      ]
+    }
+  ],
+  "noDangerousLookalike": null,
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Suillellus luridus, Lurid Bolete",
+      "url": "https://www.first-nature.com/fungi/suillellus-luridus.php"
+    },
+    {
+      "id": "wf",
+      "title": "Wild Food UK — Lurid Bolete",
+      "url": "https://www.wildfooduk.com/mushroom-guide/lurid-bolete/"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Suillellus luridus",
+      "url": "https://en.wikipedia.org/wiki/Suillellus_luridus"
+    },
+    {
+      "id": "wf-sb",
+      "title": "Wild Food UK — Scarletina Bolete",
+      "url": "https://www.wildfooduk.com/mushroom-guide/scarletina-bolete/"
+    },
+    {
+      "id": "wp-sb",
+      "title": "Wikipedia — Neoboletus erythropus",
+      "url": "https://en.wikipedia.org/wiki/Boletus_erythropus"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}

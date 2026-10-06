@@ -60,6 +60,18 @@ describe('checkRecord', () => {
     const r = rec({ edibility: { value: 'edible-cooked', sources: ['fn'] } });
     expect(checkRecord(r, HOSTS)).toContain('field-mushroom: edibility needs sources from two different websites (has 1)');
   });
+  it('takes a "not edible" verdict from one website; edible, poisonous and deadly need two', () => {
+    const r = rec({ edibility: { value: 'not-edible', sources: ['wf'] }, lookalikes: [] });
+    expect(checkRecord(r, HOSTS)).toEqual([]);
+    for (const value of ['edible-cooked', 'edible-some-react', 'poisonous', 'deadly'] as const) {
+      r.edibility = { value, sources: ['wf'] };
+      r.noDangerousLookalike = value.startsWith('edible') ? { sources: two } : null;
+      expect(checkRecord(r, HOSTS)).toContain('field-mushroom: edibility needs sources from two different websites (has 1)');
+    }
+    r.edibility = { value: 'not-edible', sources: [] };
+    r.noDangerousLookalike = null;
+    expect(checkRecord(r, HOSTS)).toContain('field-mushroom: edibility needs at least one source');
+  });
   it('takes the season from one source (it is not a safety fact), but not from none', () => {
     expect(checkRecord(rec({ seasonMonths: { value: [7, 8, 9, 10, 11], sources: ['fn'] } }), HOSTS)).toEqual([]);
     expect(checkRecord(rec({ seasonMonths: { value: [7, 8], sources: [] } }), HOSTS))

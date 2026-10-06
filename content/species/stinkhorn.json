@@ -210,6 +210,43 @@
           ]
         }
       ]
+    },
+    {
+      "scientific": "Mutinus caninus",
+      "english": "Dog Stinkhorn",
+      "slug": "dog-stinkhorn",
+      "kind": "not-edible",
+      "tellApart": [
+        {
+          "feature": "Size",
+          "thisOne": "15–25 cm tall and stout",
+          "thatOne": "Small: 8–15 cm tall, about 1 cm thick",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-ds",
+            "wf-ds"
+          ]
+        },
+        {
+          "feature": "Under the slime",
+          "thisOne": "A white, honeycombed cap",
+          "thatOne": "An orange tip",
+          "sources": [
+            "fn-ds",
+            "wp-ds"
+          ]
+        },
+        {
+          "feature": "Smell",
+          "thisOne": "Strong and foul, carrying a long way",
+          "thatOne": "Unpleasant but weak",
+          "sources": [
+            "fn-ds",
+            "wp-ds"
+          ]
+        }
+      ]
     }
   ],
   "noDangerousLookalike": null,
@@ -289,6 +326,21 @@
       "id": "wp-fm",
       "title": "Wikipedia — Gyromitra esculenta",
       "url": "https://en.wikipedia.org/wiki/Gyromitra_esculenta"
+    },
+    {
+      "id": "fn-ds",
+      "title": "First Nature — Mutinus caninus, Dog Stinkhorn",
+      "url": "https://www.first-nature.com/fungi/mutinus-caninus.php"
+    },
+    {
+      "id": "wf-ds",
+      "title": "Wild Food UK — Dog Stinkhorn",
+      "url": "https://www.wildfooduk.com/mushroom-guide/dog-stinkhorn/"
+    },
+    {
+      "id": "wp-ds",
+      "title": "Wikipedia — Mutinus caninus",
+      "url": "https://en.wikipedia.org/wiki/Mutinus_caninus"
     },
     {
       "id": "wf-prot",

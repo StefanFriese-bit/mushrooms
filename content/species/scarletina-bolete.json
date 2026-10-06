@@ -161,6 +161,37 @@
           ]
         }
       ]
+    },
+    {
+      "scientific": "Suillellus luridus",
+      "english": "Lurid Bolete",
+      "slug": "lurid-bolete",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Stem",
+          "thisOne": "Fine red dots, no net",
+          "thatOne": "A red net (mesh) on yellow",
+          "sources": [
+            "wf",
+            "wp",
+            "fn-lb",
+            "wf-lb",
+            "wp-lb"
+          ]
+        },
+        {
+          "feature": "Cap",
+          "thisOne": "Dark brown",
+          "thatOne": "Yellow-brown to olive-brown",
+          "sources": [
+            "wf",
+            "wp",
+            "fn-lb",
+            "wp-lb"
+          ]
+        }
+      ]
     }
   ],
   "noDangerousLookalike": null,
@@ -175,6 +206,21 @@
       "id": "wp",
       "title": "Wikipedia — Neoboletus erythropus",
       "url": "https://en.wikipedia.org/wiki/Boletus_erythropus"
+    },
+    {
+      "id": "fn-lb",
+      "title": "First Nature — Suillellus luridus, Lurid Bolete",
+      "url": "https://www.first-nature.com/fungi/suillellus-luridus.php"
+    },
+    {
+      "id": "wf-lb",
+      "title": "Wild Food UK — Lurid Bolete",
+      "url": "https://www.wildfooduk.com/mushroom-guide/lurid-bolete/"
+    },
+    {
+      "id": "wp-lb",
+      "title": "Wikipedia — Suillellus luridus",
+      "url": "https://en.wikipedia.org/wiki/Suillellus_luridus"
     },
     {
       "id": "wf-prot",

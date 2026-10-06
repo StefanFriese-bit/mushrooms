@@ -235,6 +235,38 @@
           ]
         }
       ]
+    },
+    {
+      "scientific": "Lycoperdon nigrescens",
+      "english": "Dusky Puffball",
+      "slug": "dusky-puffball",
+      "kind": "not-edible",
+      "tellApart": [
+        {
+          "feature": "Surface",
+          "thisOne": "White, covered in small pearl-like warts",
+          "thatOne": "Dark brown to almost black spines, dark between them",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-dp",
+            "wf-dp",
+            "wp-dp"
+          ]
+        },
+        {
+          "feature": "Base",
+          "thisOne": "A clear stem-like base",
+          "thatOne": "Hardly any stem",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "wf-dp",
+            "wp-dp"
+          ]
+        }
+      ]
     }
   ],
   "noDangerousLookalike": null,
@@ -323,6 +355,21 @@
       "id": "wt-dc",
       "title": "Woodland Trust — Deathcap",
       "url": "https://www.woodlandtrust.org.uk/trees-woods-and-wildlife/fungi-and-lichens/deathcap/"
+    },
+    {
+      "id": "fn-dp",
+      "title": "First Nature — Lycoperdon nigrescens, Dusky Puffball",
+      "url": "https://www.first-nature.com/fungi/lycoperdon-nigrescens.php"
+    },
+    {
+      "id": "wf-dp",
+      "title": "Wild Food UK — Dusky Puffball",
+      "url": "https://www.wildfooduk.com/mushroom-guide/dusky-puffball/"
+    },
+    {
+      "id": "wp-dp",
+      "title": "Wikipedia — Lycoperdon nigrescens",
+      "url": "https://en.wikipedia.org/wiki/Lycoperdon_nigrescens"
     },
     {
       "id": "wf-prot",

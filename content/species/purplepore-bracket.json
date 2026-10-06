@@ -1,17 +1,17 @@
 {
-  "slug": "turkeytail",
-  "inatId": 54134,
-  "scientific": "Trametes versicolor",
-  "english": "Turkeytail",
+  "slug": "purplepore-bracket",
+  "inatId": 118115,
+  "scientific": "Trichaptum abietinum",
+  "english": "Purplepore Bracket",
   "olderNames": [
-    "Coriolus versicolor",
-    "Polyporus versicolor",
-    "Polystictus versicolor"
+    "Hirschioporus abietinus",
+    "Polyporus abietinus"
   ],
   "edibility": {
     "value": "not-edible",
     "sources": [
       "fn",
+      "wf",
       "wp"
     ]
   },
@@ -25,42 +25,43 @@
   },
   "topPoints": [
     {
-      "value": "Thin, leathery, fan-shaped brackets up to 10 cm, usually in overlapping tiers.",
+      "value": "Small thin brackets, 1–6 cm across, often in tiers or fused rows on dead conifer wood.",
       "sources": [
         "fn",
-        "wp",
-        "wt-bracket"
+        "wf",
+        "wp"
       ]
     },
     {
-      "value": "Top banded in many colours — browns, greys, blues, greens — finely hairy, with a wavy cream edge.",
+      "value": "Upper surface whitish to grey, hairy and zoned, often stained green by algae.",
       "sources": [
         "fn",
-        "wp",
-        "wt-bracket"
+        "wf",
+        "wp"
       ]
     },
     {
-      "value": "Underneath: white to cream, covered in tiny pores (not smooth).",
+      "value": "Underneath: bright purple to violet pores, fading to brown with age; the purple stays longest at the edge.",
       "sources": [
         "fn",
-        "wp",
-        "wt-bracket"
+        "wf"
       ]
     },
     {
-      "value": "On dead and living wood of broadleaved trees, all year round.",
+      "value": "On dead conifer logs and stumps while the bark is still on; all year.",
       "sources": [
         "fn",
-        "wt-bracket"
+        "wf",
+        "wp"
       ]
     }
   ],
   "habitat": {
-    "value": "Dead wood of broadleaved trees, fallen or standing, especially beech and oak; sometimes on living trees.",
+    "value": "Dead conifer wood — logs, trunks and stumps with the bark still on, mostly fir, spruce, larch and pine; very rarely broadleaved wood.",
     "sources": [
       "fn",
-      "wt-bracket"
+      "wf",
+      "wp"
     ]
   },
   "seasonMonths": {
@@ -79,7 +80,8 @@
       12
     ],
     "sources": [
-      "fn"
+      "fn",
+      "wf"
     ]
   },
   "sporePrint": {
@@ -94,14 +96,15 @@
       "value": "pores",
       "sources": [
         "fn",
-        "wp",
-        "wt-bracket"
+        "wf",
+        "wp"
       ]
     },
     "ring": {
       "value": "no",
       "sources": [
         "fn",
+        "wf",
         "wp"
       ]
     },
@@ -109,6 +112,7 @@
       "value": "no",
       "sources": [
         "fn",
+        "wf",
         "wp"
       ]
     },
@@ -116,62 +120,62 @@
       "value": "wood",
       "sources": [
         "fn",
-        "wt-bracket"
+        "wf",
+        "wp"
       ]
     },
     "capCm": {
       "value": [
-        0,
+        1,
         10
       ],
       "sources": [
         "fn",
-        "wp",
-        "wt-bracket"
+        "wf",
+        "wp"
       ]
     },
     "fleshChange": {
-      "value": "Thin and tough; the pores do not stain when bruised",
+      "value": "Thin, white to buff and leathery",
       "sources": [
-        "fn",
+        "wf",
         "wp"
       ]
     },
     "smell": {
       "value": "Not distinctive",
       "sources": [
-        "fn"
+        "fn",
+        "wf"
       ]
     }
   },
   "lookalikes": [
     {
-      "scientific": "Trichaptum abietinum",
-      "english": "Purplepore Bracket",
-      "slug": "purplepore-bracket",
+      "scientific": "Trametes versicolor",
+      "english": "Turkeytail",
+      "slug": "turkeytail",
       "kind": "not-edible",
       "tellApart": [
         {
           "feature": "Underneath",
-          "thisOne": "White to cream pores",
-          "thatOne": "Purple to violet pores, fading to brown",
+          "thisOne": "Purple to violet pores, fading to brown",
+          "thatOne": "White to cream pores",
           "sources": [
             "fn",
-            "wp",
-            "fn-pp",
-            "wf-pp"
+            "wf",
+            "fn-tt",
+            "wp-tt"
           ]
         },
         {
           "feature": "Wood",
-          "thisOne": "Broadleaved trees",
-          "thatOne": "Dead conifers",
+          "thisOne": "Dead conifers",
+          "thatOne": "Broadleaved trees",
           "sources": [
             "fn",
-            "wt-bracket",
-            "fn-pp",
-            "wf-pp",
-            "wp-pp"
+            "wf",
+            "fn-tt"
           ]
         }
       ]
@@ -182,33 +186,28 @@
   "sources": [
     {
       "id": "fn",
-      "title": "First Nature — Trametes versicolor, Turkeytail",
-      "url": "https://www.first-nature.com/fungi/trametes-versicolor.php"
-    },
-    {
-      "id": "wp",
-      "title": "Wikipedia — Trametes versicolor",
-      "url": "https://en.wikipedia.org/wiki/Trametes_versicolor"
-    },
-    {
-      "id": "wt-bracket",
-      "title": "Woodland Trust — Bracket fungi ID: common UK species",
-      "url": "https://www.woodlandtrust.org.uk/blog/2021/10/bracket-fungi-identification/"
-    },
-    {
-      "id": "fn-pp",
       "title": "First Nature — Trichaptum abietinum, Purplepore Bracket",
       "url": "https://www.first-nature.com/fungi/trichaptum-abietinum.php"
     },
     {
-      "id": "wf-pp",
+      "id": "wf",
       "title": "Wild Food UK — Purplepore Bracket",
       "url": "https://www.wildfooduk.com/mushroom-guide/purplepore-bracket/"
     },
     {
-      "id": "wp-pp",
+      "id": "wp",
       "title": "Wikipedia — Trichaptum abietinum",
       "url": "https://en.wikipedia.org/wiki/Trichaptum_abietinum"
+    },
+    {
+      "id": "fn-tt",
+      "title": "First Nature — Trametes versicolor, Turkeytail",
+      "url": "https://www.first-nature.com/fungi/trametes-versicolor.php"
+    },
+    {
+      "id": "wp-tt",
+      "title": "Wikipedia — Trametes versicolor",
+      "url": "https://en.wikipedia.org/wiki/Trametes_versicolor"
     },
     {
       "id": "wf-prot",

@@ -103,11 +103,11 @@ def keep_full(slug, site, page):
     (d / f'{slug}.{site}.txt').write_text(text_of(body))
 
 
-def wild_food(name, names, parts, slug):
+def wild_food(name, names, parts, slug, core=True):
     """Wild Food UK's page for the species: tried under the English name, then the scientific names (it files some
     species that way, e.g. mycena-rosea), then the approved lists' address."""
     tries = [f'https://www.wildfooduk.com/mushroom-guide/{p}{v}/' for p in parts for v in ('', '-2', '-3')] + \
-        [f'https://www.wildfooduk.com/mushroom-guide/{slugify(n)}/' for n in names] + core_urls(name)
+        [f'https://www.wildfooduk.com/mushroom-guide/{slugify(n)}/' for n in names] + (core_urls(name) if core else [])
     for url in list(dict.fromkeys(tries)):
         code, page, final = fetch(url)
         if code == 200 and '/mushroom-guide/' in final:
@@ -175,7 +175,7 @@ def main():
                 continue
             names = [sp['name']] + [o for o in older.get(sp['name'], []) if re.match(r'^[A-Z][a-z]+ [a-z-]+$', o)][:4]
             parts = [slugify(re.sub(r"['.’]", '', x)) for x in re.split(r'\s*/\s*', sp['english'])] if sp['english'] else []
-            got = wild_food(sp['name'], names, parts, stem)
+            got = wild_food(sp['name'], names, parts, stem, core=False)  # a list address can be a lookalike's page
             if got[0] != '[wf] no page':
                 text = re.sub(r'^\[wf\] no page[^\n]*\n', '\n'.join(got) + '\n', ex.read_text(), flags=re.M)
                 ex.write_text(text)

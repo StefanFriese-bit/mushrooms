@@ -1,0 +1,221 @@
+{
+  "slug": "beech-woodwart",
+  "inatId": 351126,
+  "scientific": "Hypoxylon fragiforme",
+  "english": "Beech Woodwart",
+  "olderNames": [],
+  "edibility": {
+    "value": "not-edible",
+    "sources": [
+      "wf"
+    ]
+  },
+  "edibilityNote": null,
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "Small round lumps, 2–9 mm across (up to 15 mm), crowded on dead beech wood.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "Pinkish to brick-red when young, then rusty brown and finally black; the surface is pimply, like a strawberry.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "Inside: hard and black.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "On fallen branches and rotting stumps, mostly beech; seen all year.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "Dead broadleaved wood — fallen branches and rotting stumps, mostly beech.",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "sporePrint": {
+    "value": "Very dark brown",
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "other",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "ring": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    "growsOn": {
+      "value": "wood",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    "capCm": {
+      "value": [
+        0.2,
+        1.5
+      ],
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    "fleshChange": {
+      "value": "Hard and black",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    "smell": {
+      "value": "Not distinctive",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    }
+  },
+  "lookalikes": [
+    {
+      "scientific": "Hypoxylon fuscum",
+      "english": "Hazel Woodwart",
+      "slug": "hazel-woodwart",
+      "kind": "not-edible",
+      "tellApart": [
+        {
+          "feature": "Wood",
+          "thisOne": "Mostly beech",
+          "thatOne": "Hazel, sometimes alder",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-hw",
+            "wf-hw"
+          ]
+        },
+        {
+          "feature": "Size and colour",
+          "thisOne": "2–9 mm, brick-red to rusty brown",
+          "thatOne": "Smaller, 2–5 mm, dark purplish-brown",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-hw",
+            "wf-hw"
+          ]
+        }
+      ]
+    }
+  ],
+  "noDangerousLookalike": null,
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Hypoxylon fragiforme, Beech Woodwart",
+      "url": "https://www.first-nature.com/fungi/hypoxylon-fragiforme.php"
+    },
+    {
+      "id": "wf",
+      "title": "Wild Food UK — Beech Woodwart",
+      "url": "https://www.wildfooduk.com/mushroom-guide/beech-woodwart-hypoxylon-fragiforme/"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Hypoxylon fragiforme",
+      "url": "https://en.wikipedia.org/wiki/Hypoxylon_fragiforme"
+    },
+    {
+      "id": "fn-hw",
+      "title": "First Nature — Hypoxylon fuscum, Hazel Woodwart",
+      "url": "https://www.first-nature.com/fungi/hypoxylon-fuscum.php"
+    },
+    {
+      "id": "wf-hw",
+      "title": "Wild Food UK — Hazel Woodwart",
+      "url": "https://www.wildfooduk.com/mushroom-guide/hazel-woodwart/"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}

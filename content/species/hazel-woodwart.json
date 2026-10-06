@@ -1,0 +1,203 @@
+{
+  "slug": "hazel-woodwart",
+  "inatId": 351128,
+  "scientific": "Hypoxylon fuscum",
+  "english": "Hazel Woodwart",
+  "olderNames": [],
+  "edibility": {
+    "value": "not-edible",
+    "sources": [
+      "wf"
+    ]
+  },
+  "edibilityNote": null,
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "Tiny flattened lumps, 2–5 mm across, often merging into crusts, on dead hazel.",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    {
+      "value": "Pale or rusty brown at first, darkening to purplish-brown and then black with age.",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    {
+      "value": "On dead hazel branches, standing or fallen; sometimes alder.",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "Dead hazel — standing or fallen branches; occasionally alder and other broadleaved trees.",
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "sporePrint": {
+    "value": "Brown to very dark brown",
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "other",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "ring": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "growsOn": {
+      "value": "wood",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "capCm": {
+      "value": [
+        0.2,
+        0.5
+      ],
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "fleshChange": {
+      "value": "Tough and black",
+      "sources": [
+        "wf"
+      ]
+    },
+    "smell": {
+      "value": "Not distinctive",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    }
+  },
+  "lookalikes": [
+    {
+      "scientific": "Hypoxylon fragiforme",
+      "english": "Beech Woodwart",
+      "slug": "beech-woodwart",
+      "kind": "not-edible",
+      "tellApart": [
+        {
+          "feature": "Wood",
+          "thisOne": "Hazel, sometimes alder",
+          "thatOne": "Mostly beech",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-bw",
+            "wf-bw"
+          ]
+        },
+        {
+          "feature": "Size and colour",
+          "thisOne": "Smaller, 2–5 mm, dark purplish-brown",
+          "thatOne": "2–9 mm, brick-red to rusty brown",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-bw",
+            "wf-bw"
+          ]
+        }
+      ]
+    }
+  ],
+  "noDangerousLookalike": null,
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Hypoxylon fuscum, Hazel Woodwart",
+      "url": "https://www.first-nature.com/fungi/hypoxylon-fuscum.php"
+    },
+    {
+      "id": "wf",
+      "title": "Wild Food UK — Hazel Woodwart",
+      "url": "https://www.wildfooduk.com/mushroom-guide/hazel-woodwart/"
+    },
+    {
+      "id": "fn-bw",
+      "title": "First Nature — Hypoxylon fragiforme, Beech Woodwart",
+      "url": "https://www.first-nature.com/fungi/hypoxylon-fragiforme.php"
+    },
+    {
+      "id": "wf-bw",
+      "title": "Wild Food UK — Beech Woodwart",
+      "url": "https://www.wildfooduk.com/mushroom-guide/beech-woodwart-hypoxylon-fragiforme/"
+    },
+    {
+      "id": "wp-bw",
+      "title": "Wikipedia — Hypoxylon fragiforme",
+      "url": "https://en.wikipedia.org/wiki/Hypoxylon_fragiforme"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}

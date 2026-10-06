@@ -1,0 +1,267 @@
+{
+  "slug": "dusky-puffball",
+  "inatId": 194080,
+  "scientific": "Lycoperdon nigrescens",
+  "english": "Dusky Puffball",
+  "olderNames": [
+    "Lycoperdon foetidum"
+  ],
+  "edibility": {
+    "value": "not-edible",
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "edibilityNote": {
+    "value": "Reported inedible; First Nature calls it possibly suspect. Wild Food UK warns that breathing in the spores of old puffballs can harm the lungs.",
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "A small puffball, 2–4 cm across, pear- or club-shaped, covered in dark brown to almost black spines.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "Darker than most puffballs and blackening with age; old ones lose their spines and look smooth and mottled.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "Inside: white and spongy at first, then brown and powdery.",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    {
+      "value": "Mainly under conifers on acid soil; also in grass on heaths.",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "Mainly under conifers on acid soil; sometimes in grass on heaths and sand dunes.",
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      6,
+      7,
+      8,
+      9
+    ],
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "sporePrint": {
+    "value": "Olive (Wikipedia); the spore mass turns yellowish-brown, then dark brown (First Nature)",
+    "sources": [
+      "wp",
+      "fn"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "other",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    "ring": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    "growsOn": {
+      "value": "ground",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "capCm": {
+      "value": [
+        2,
+        4
+      ],
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "fleshChange": {
+      "value": "Pure white and spongy, turning yellowish-brown, then dark brown and powdery",
+      "sources": [
+        "wf",
+        "fn"
+      ]
+    },
+    "smell": {
+      "value": "Faint, unpleasant and gassy when cut",
+      "sources": [
+        "fn"
+      ]
+    }
+  },
+  "lookalikes": [
+    {
+      "scientific": "Lycoperdon perlatum",
+      "english": "Common Puffball",
+      "slug": "common-puffball",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Surface",
+          "thisOne": "Dark brown to almost black spines, dark between them",
+          "thatOne": "Paler, covered in small warts",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "fn-cp",
+            "wp-cp"
+          ]
+        },
+        {
+          "feature": "Base",
+          "thisOne": "Hardly any stem",
+          "thatOne": "A clear stem-like base, longer in old ones",
+          "sources": [
+            "wf",
+            "wp",
+            "fn-cp",
+            "wf-cp"
+          ]
+        }
+      ]
+    },
+    {
+      "scientific": "Apioperdon pyriforme",
+      "english": "Stump Puffball",
+      "slug": "stump-puffball",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Where it grows",
+          "thisOne": "On the ground, mostly under conifers",
+          "thatOne": "In clusters on rotting stumps and buried wood",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-sp",
+            "wf-sp"
+          ]
+        },
+        {
+          "feature": "Surface",
+          "thisOne": "Dark brown to almost black spines",
+          "thatOne": "Paler, tan, with tiny warts",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-sp",
+            "wp-sp"
+          ]
+        }
+      ]
+    }
+  ],
+  "noDangerousLookalike": null,
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Lycoperdon nigrescens, Dusky Puffball",
+      "url": "https://www.first-nature.com/fungi/lycoperdon-nigrescens.php"
+    },
+    {
+      "id": "wf",
+      "title": "Wild Food UK — Dusky Puffball",
+      "url": "https://www.wildfooduk.com/mushroom-guide/dusky-puffball/"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Lycoperdon nigrescens",
+      "url": "https://en.wikipedia.org/wiki/Lycoperdon_nigrescens"
+    },
+    {
+      "id": "fn-cp",
+      "title": "First Nature — Lycoperdon perlatum, Common Puffball",
+      "url": "https://www.first-nature.com/fungi/lycoperdon-perlatum.php"
+    },
+    {
+      "id": "wf-cp",
+      "title": "Wild Food UK — Common Puffball",
+      "url": "https://www.wildfooduk.com/mushroom-guide/common-puffball/"
+    },
+    {
+      "id": "wp-cp",
+      "title": "Wikipedia — Lycoperdon perlatum",
+      "url": "https://en.wikipedia.org/wiki/Lycoperdon_perlatum"
+    },
+    {
+      "id": "fn-sp",
+      "title": "First Nature — Apioperdon pyriforme, Stump Puffball",
+      "url": "https://www.first-nature.com/fungi/lycoperdon-pyriforme.php"
+    },
+    {
+      "id": "wf-sp",
+      "title": "Wild Food UK — Stump Puffball",
+      "url": "https://www.wildfooduk.com/mushroom-guide/stump-puffball/"
+    },
+    {
+      "id": "wp-sp",
+      "title": "Wikipedia — Apioperdon pyriforme",
+      "url": "https://en.wikipedia.org/wiki/Apioperdon_pyriforme"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}
