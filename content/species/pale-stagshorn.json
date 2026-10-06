@@ -1,0 +1,200 @@
+{
+  "slug": "pale-stagshorn",
+  "inatId": 518100,
+  "scientific": "Calocera pallidospathulata",
+  "english": "Pale Stagshorn",
+  "olderNames": [],
+  "edibility": {
+    "value": "not-edible",
+    "sources": [
+      "fn"
+    ]
+  },
+  "edibilityNote": {
+    "value": "Not known to be poisonous, but tiny, uncommon and of no use.",
+    "sources": [
+      "fn"
+    ]
+  },
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "Tiny pale, translucent yellowish jelly clubs, up to 1 cm tall, with flattened, spoon-shaped tips.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    {
+      "value": "In groups on well-rotted logs and stumps of conifers and broadleaved trees.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    {
+      "value": "Greasy and slightly sticky.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "Well-rotted trunks, stumps and fallen branches of conifers and broadleaved trees.",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "sources": [
+      "fn"
+    ]
+  },
+  "sporePrint": {
+    "value": "White",
+    "sources": [
+      "fn"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "other",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "ring": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "growsOn": {
+      "value": "wood",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "capCm": {
+      "value": [
+        0.2,
+        1
+      ],
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "fleshChange": {
+      "value": "Jelly-like",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "smell": {
+      "value": "Not distinctive",
+      "sources": [
+        "fn"
+      ]
+    }
+  },
+  "lookalikes": [
+    {
+      "scientific": "Calocera cornea",
+      "english": "Small Stagshorn",
+      "slug": "small-stagshorn",
+      "kind": "not-edible",
+      "tellApart": [
+        {
+          "feature": "Colour",
+          "thisOne": "Pale, whitish-yellow and translucent",
+          "thatOne": "Bright yellow to orange",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-ss",
+            "wp-ss"
+          ]
+        },
+        {
+          "feature": "Tips",
+          "thisOne": "Flattened, spoon-shaped",
+          "thatOne": "Pointed or blunt horns",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-ss"
+          ]
+        }
+      ]
+    }
+  ],
+  "noDangerousLookalike": null,
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Calocera pallidospathulata, Pale Stagshorn",
+      "url": "https://www.first-nature.com/fungi/calocera-pallidospathulata.php"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Calocera pallidospathulata",
+      "url": "https://en.wikipedia.org/wiki/Calocera_pallidospathulata"
+    },
+    {
+      "id": "fn-ss",
+      "title": "First Nature — Calocera cornea, Small Stagshorn",
+      "url": "https://www.first-nature.com/fungi/calocera-cornea.php"
+    },
+    {
+      "id": "wp-ss",
+      "title": "Wikipedia — Calocera cornea",
+      "url": "https://en.wikipedia.org/wiki/Calocera_cornea"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}

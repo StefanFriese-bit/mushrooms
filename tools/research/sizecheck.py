@@ -15,6 +15,8 @@ def numbers(text):
     """Every length the text gives, in cm."""
     out = set()
     t = re.sub(r'\s+', ' ', text).replace('–', '-').replace('−', '-').replace('—', '-')
+    # "2 - 5(8) cm": an occasional largest size in brackets after the usual range.
+    t = re.sub(r'(\d+(?:\.\d+)?)\s*\((\d+(?:\.\d+)?)\)\s*(cm|mm)', r'\1 \3 \2 \3', t)
     for m in re.finditer(r'(\d+(?:\.\d+)?)(?:\s*(?:-|to|and)\s*(\d+(?:\.\d+)?))?\s*\+?\s*(cm|centimet|mm|millimet)', t):
         k = 0.1 if m.group(3).startswith('m') else 1.0
         for g in (m.group(1), m.group(2)):

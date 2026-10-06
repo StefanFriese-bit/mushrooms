@@ -157,6 +157,35 @@
           ]
         }
       ]
+    },
+    {
+      "scientific": "Calocera pallidospathulata",
+      "english": "Pale Stagshorn",
+      "slug": "pale-stagshorn",
+      "kind": "not-edible",
+      "tellApart": [
+        {
+          "feature": "Colour",
+          "thisOne": "Bright yellow to orange",
+          "thatOne": "Pale, whitish-yellow and translucent",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-ps",
+            "wp-ps"
+          ]
+        },
+        {
+          "feature": "Tips",
+          "thisOne": "Pointed or blunt horns",
+          "thatOne": "Flattened, spoon-shaped",
+          "sources": [
+            "fn",
+            "fn-ps",
+            "wp-ps"
+          ]
+        }
+      ]
     }
   ],
   "noDangerousLookalike": null,
@@ -186,6 +215,16 @@
       "id": "wp-ys",
       "title": "Wikipedia — Calocera viscosa",
       "url": "https://en.wikipedia.org/wiki/Calocera_viscosa"
+    },
+    {
+      "id": "fn-ps",
+      "title": "First Nature — Calocera pallidospathulata, Pale Stagshorn",
+      "url": "https://www.first-nature.com/fungi/calocera-pallidospathulata.php"
+    },
+    {
+      "id": "wp-ps",
+      "title": "Wikipedia — Calocera pallidospathulata",
+      "url": "https://en.wikipedia.org/wiki/Calocera_pallidospathulata"
     },
     {
       "id": "wf-prot",

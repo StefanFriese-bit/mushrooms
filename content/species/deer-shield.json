@@ -182,6 +182,25 @@
           ]
         }
       ]
+    },
+    {
+      "scientific": "Pluteus salicinus",
+      "english": "Willow Shield",
+      "slug": "willow-shield",
+      "kind": "poisonous",
+      "tellApart": [
+        {
+          "feature": "Cap colour",
+          "thisOne": "Brown, streaked with darker fibres",
+          "thatOne": "Grey, often with blue or green tints",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-wl",
+            "wp-wl"
+          ]
+        }
+      ]
     }
   ],
   "noDangerousLookalike": null,
@@ -211,6 +230,16 @@
       "id": "wf-ws",
       "title": "Wild Food UK — Whitelaced Shank",
       "url": "https://www.wildfooduk.com/mushroom-guide/whitelaced-shank/"
+    },
+    {
+      "id": "fn-wl",
+      "title": "First Nature — Pluteus salicinus, Willow Shield",
+      "url": "https://www.first-nature.com/fungi/pluteus-salicinus.php"
+    },
+    {
+      "id": "wp-wl",
+      "title": "Wikipedia — Pluteus salicinus",
+      "url": "https://en.wikipedia.org/wiki/Pluteus_salicinus"
     },
     {
       "id": "wf-prot",

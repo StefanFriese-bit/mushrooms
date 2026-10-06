@@ -1,0 +1,199 @@
+{
+  "slug": "willow-shield",
+  "inatId": 118281,
+  "scientific": "Pluteus salicinus",
+  "english": "Willow Shield",
+  "olderNames": [],
+  "edibility": {
+    "value": "poisonous",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "edibilityNote": {
+    "value": "Some sources list it as edible, but some forms contain psilocybin, a hallucinogen (First Nature; Wikipedia: psychoactive) — do not eat it.",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "A grey to grey-brown cap, 2–8 cm, often with blue or green tints and a darker centre.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    {
+      "value": "White gills, free of the stem, turning pink; pink spore print.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    {
+      "value": "A white stem; in some forms it bruises slightly blue-green.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    {
+      "value": "On rotting wood of willow, alder and other broadleaved trees.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "Stumps, fallen branches and woody debris of broadleaved trees, especially willow; also alder, beech and oak.",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "sporePrint": {
+    "value": "Pale pink",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "gills",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "ring": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "growsOn": {
+      "value": "wood",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "capCm": {
+      "value": [
+        2,
+        8
+      ],
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "fleshChange": {
+      "value": "White; the stem may bruise slightly blue-green",
+      "sources": [
+        "fn"
+      ]
+    },
+    "smell": {
+      "value": "Not distinctive",
+      "sources": [
+        "fn"
+      ]
+    }
+  },
+  "lookalikes": [
+    {
+      "scientific": "Pluteus cervinus",
+      "english": "Deer Shield",
+      "slug": "deer-shield",
+      "kind": "not-edible",
+      "tellApart": [
+        {
+          "feature": "Cap colour",
+          "thisOne": "Grey, often with blue or green tints",
+          "thatOne": "Brown, streaked with darker fibres",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-ds",
+            "wf-ds"
+          ]
+        }
+      ]
+    }
+  ],
+  "noDangerousLookalike": null,
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Pluteus salicinus, Willow Shield",
+      "url": "https://www.first-nature.com/fungi/pluteus-salicinus.php"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Pluteus salicinus",
+      "url": "https://en.wikipedia.org/wiki/Pluteus_salicinus"
+    },
+    {
+      "id": "fn-ds",
+      "title": "First Nature — Pluteus cervinus, Deer Shield",
+      "url": "https://www.first-nature.com/fungi/pluteus-cervinus.php"
+    },
+    {
+      "id": "wf-ds",
+      "title": "Wild Food UK — Deer Shield",
+      "url": "https://www.wildfooduk.com/mushroom-guide/deer-shield/"
+    },
+    {
+      "id": "wp-ds",
+      "title": "Wikipedia — Pluteus cervinus",
+      "url": "https://en.wikipedia.org/wiki/Pluteus_cervinus"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}

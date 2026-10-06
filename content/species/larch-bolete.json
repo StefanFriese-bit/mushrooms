@@ -177,6 +177,36 @@
           ]
         }
       ]
+    },
+    {
+      "scientific": "Suillus variegatus",
+      "english": "Velvet Bolete",
+      "slug": "velvet-bolete",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Ring",
+          "thisOne": "A ring zone on the stem",
+          "thatOne": "None",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-vb",
+            "wf-vb"
+          ]
+        },
+        {
+          "feature": "Tree",
+          "thisOne": "Only larch",
+          "thatOne": "Pines",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-vb",
+            "wf-vb"
+          ]
+        }
+      ]
     }
   ],
   "noDangerousLookalike": {
@@ -216,6 +246,16 @@
       "id": "wp-bv",
       "title": "Wikipedia — Suillus bovinus",
       "url": "https://en.wikipedia.org/wiki/Suillus_bovinus"
+    },
+    {
+      "id": "fn-vb",
+      "title": "First Nature — Suillus variegatus, Velvet Bolete",
+      "url": "https://www.first-nature.com/fungi/suillus-variegatus.php"
+    },
+    {
+      "id": "wf-vb",
+      "title": "Wild Food UK — Velvet Bolete",
+      "url": "https://www.wildfooduk.com/mushroom-guide/velvet-bolete/"
     },
     {
       "id": "wf-prot",

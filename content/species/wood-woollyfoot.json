@@ -1,0 +1,215 @@
+{
+  "slug": "wood-woollyfoot",
+  "inatId": 1275360,
+  "scientific": "Collybiopsis peronata",
+  "english": "Wood Woollyfoot",
+  "olderNames": [
+    "Gymnopus peronatus",
+    "Collybia peronata"
+  ],
+  "edibility": {
+    "value": "poisonous",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "edibilityNote": {
+    "value": "First Nature calls it poisonous; it tastes very hot and peppery. Wikipedia: inedible, and one study found it gives off hydrogen cyanide.",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "A pinkish-cream to yellow-brown cap, 2–6 cm, often with a small central bump; it shrivels with age.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    {
+      "value": "The lower stem is covered in pale woolly hairs — the key feature.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    {
+      "value": "Gills the colour of the cap, turning reddish-brown with age; white spore print.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    {
+      "value": "In clumps in leaf and needle litter in woods.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "Leaf and needle litter in broadleaved and conifer woods, hedgerows, and under bracken on heaths.",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "sporePrint": {
+    "value": "White",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "gills",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "ring": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "growsOn": {
+      "value": "ground",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "capCm": {
+      "value": [
+        2,
+        6
+      ],
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "fleshChange": {
+      "value": "No colour change when cut is described",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "smell": {
+      "value": "Little smell; of vinegar when bruised (Wikipedia)",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    }
+  },
+  "lookalikes": [
+    {
+      "scientific": "Laccaria laccata",
+      "english": "Deceiver",
+      "slug": "deceiver",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Stem base",
+          "thisOne": "Covered in pale woolly hairs",
+          "thatOne": "No woolly hairs",
+          "sources": [
+            "fn",
+            "wp"
+          ]
+        },
+        {
+          "feature": "Spore print",
+          "thisOne": "White",
+          "thatOne": "White too — so check the stem base",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-dv",
+            "wf-dv"
+          ]
+        }
+      ]
+    }
+  ],
+  "noDangerousLookalike": null,
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Collybiopsis peronata, Wood Woollyfoot",
+      "url": "https://www.first-nature.com/fungi/gymnopus-peronatus.php"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Collybiopsis peronata",
+      "url": "https://en.wikipedia.org/wiki/Collybiopsis_peronata"
+    },
+    {
+      "id": "fn-dv",
+      "title": "First Nature — Laccaria laccata, Deceiver",
+      "url": "https://www.first-nature.com/fungi/laccaria-laccata.php"
+    },
+    {
+      "id": "wf-dv",
+      "title": "Wild Food UK — Deceiver",
+      "url": "https://www.wildfooduk.com/mushroom-guide/deceiver/"
+    },
+    {
+      "id": "wp-dv",
+      "title": "Wikipedia — Laccaria laccata",
+      "url": "https://en.wikipedia.org/wiki/Laccaria_laccata"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}

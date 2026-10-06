@@ -186,6 +186,23 @@
           ]
         }
       ]
+    },
+    {
+      "scientific": "Collybiopsis peronata",
+      "english": "Wood Woollyfoot",
+      "slug": "wood-woollyfoot",
+      "kind": "poisonous",
+      "tellApart": [
+        {
+          "feature": "Stem base",
+          "thisOne": "No woolly hairs",
+          "thatOne": "Covered in pale woolly hairs",
+          "sources": [
+            "fn-wo",
+            "wp-wo"
+          ]
+        }
+      ]
     }
   ],
   "noDangerousLookalike": null,
@@ -220,6 +237,16 @@
       "id": "wp-fb",
       "title": "Wikipedia — Galerina marginata",
       "url": "https://en.wikipedia.org/wiki/Galerina_marginata"
+    },
+    {
+      "id": "fn-wo",
+      "title": "First Nature — Collybiopsis peronata, Wood Woollyfoot",
+      "url": "https://www.first-nature.com/fungi/gymnopus-peronatus.php"
+    },
+    {
+      "id": "wp-wo",
+      "title": "Wikipedia — Collybiopsis peronata",
+      "url": "https://en.wikipedia.org/wiki/Collybiopsis_peronata"
     },
     {
       "id": "wf-prot",
