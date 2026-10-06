@@ -14,6 +14,8 @@ describe('sporeGroups', () => {
     ['Salmon pink', ['pink']],
     ['Ochre to tobacco brown', ['brown']],
     ['Black', ['dark']],
+    ['Yellowish to buff', ['white']],
+    ['Yellow-brown', ['brown']],
   ])('%s → %j', (text, groups) => expect(sporeGroups(text)).toEqual(groups));
   it('plain "brown" counts as both brown groups, so it never wrongly excludes', () => {
     expect(sporeGroups('Brown')).toEqual(['brown', 'dark']);

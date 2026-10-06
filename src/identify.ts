@@ -68,7 +68,7 @@ export const QUESTIONS: Question[] = [
     hint: 'Leave the cap gills-down on white and dark paper for a few hours (see Learn).',
     unsureLabel: 'I have not made one',
     options: [
-      { value: 'white', label: 'White or cream', drawing: 'spore-white' },
+      { value: 'white', label: 'White, cream or pale yellow', drawing: 'spore-white' },
       { value: 'pink', label: 'Pink', drawing: 'spore-pink' },
       { value: 'brown', label: 'Brown (rusty, ochre)', drawing: 'spore-brown' },
       { value: 'dark', label: 'Dark (chocolate, purple-brown, black)', drawing: 'spore-dark' },

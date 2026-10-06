@@ -5,7 +5,7 @@ export type SporeGroup = 'white' | 'pink' | 'brown' | 'dark';
 export const SPORE_GROUPS: SporeGroup[] = ['white', 'pink', 'brown', 'dark'];
 
 const WORDS: Array<[RegExp, SporeGroup[]]> = [
-  [/\b(white|whitish|cream|creamy|pale yellow)\b/, ['white']],
+  [/\b(white|whitish|cream|creamy|buff|yellow(?:ish)?(?![- ]brown))\b/, ['white']], // pale prints; not "yellow-brown"
   [/\b(pink|pinkish|salmon)\b/, ['pink']],
   [/\b(rust|rusty|ochre|cinnamon|clay|tobacco|snuff|orange-brown|yellow-brown|yellowish-brown)\b/, ['brown']],
   [/\b(chocolate|purple|purplish|black|blackish|sepia|dark brown|purple-brown)\b/, ['dark']],
