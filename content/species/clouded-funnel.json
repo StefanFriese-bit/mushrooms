@@ -1,0 +1,206 @@
+{
+  "slug": "clouded-funnel",
+  "inatId": 63255,
+  "scientific": "Clitocybe nebularis",
+  "english": "Clouded Funnel",
+  "olderNames": [
+    "Agaricus nebularis",
+    "Lepista nebularis"
+  ],
+  "edibility": {
+    "value": "edible-some-react",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "edibilityNote": {
+    "value": "Even a small portion upsets some people; First Nature now treats it as suspect and best avoided.",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "Large grey to brownish-grey cap, 6–20 cm, often with a whitish bloom; it ends up flat or slightly funnel-shaped.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    {
+      "value": "Gills crowded, white to pale cream, running a little down the stem.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    {
+      "value": "Cream to pale buff spore print.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    {
+      "value": "Often in large rings in broadleaved and conifer woods and under hedges, in autumn.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "Broadleaved and conifer woods and under hedges, often in large rings.",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      10,
+      11
+    ],
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "sporePrint": {
+    "value": "Cream to pale buff",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "gills",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "ring": {
+      "value": "no",
+      "sources": [
+        "wp",
+        "fn"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "growsOn": {
+      "value": "ground",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "capCm": {
+      "value": [
+        6,
+        20
+      ],
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "fleshChange": {
+      "value": "No colour change when cut is described",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "smell": {
+      "value": "Sweet and fruity (First Nature) or unpleasant, even rancid (Wikipedia)",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    }
+  },
+  "lookalikes": [
+    {
+      "scientific": "Entoloma sinuatum",
+      "english": "Livid Pinkgill",
+      "slug": "livid-pinkgill",
+      "kind": "deadly",
+      "tellApart": [
+        {
+          "feature": "Gills",
+          "thisOne": "White to pale cream, running a little down the stem",
+          "thatOne": "Yellowish, turning pink as it ripens",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-lp",
+            "wp-lp"
+          ]
+        },
+        {
+          "feature": "Spore print",
+          "thisOne": "Cream to pale buff",
+          "thatOne": "Pink",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-lp",
+            "wp-lp"
+          ]
+        }
+      ]
+    }
+  ],
+  "noDangerousLookalike": null,
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Clitocybe nebularis, Clouded Funnel",
+      "url": "https://www.first-nature.com/fungi/clitocybe-nebularis.php"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Clitocybe nebularis",
+      "url": "https://en.wikipedia.org/wiki/Clitocybe_nebularis"
+    },
+    {
+      "id": "fn-lp",
+      "title": "First Nature — Entoloma sinuatum, Livid Pinkgill",
+      "url": "https://www.first-nature.com/fungi/entoloma-sinuatum.php"
+    },
+    {
+      "id": "wp-lp",
+      "title": "Wikipedia — Entoloma sinuatum",
+      "url": "https://en.wikipedia.org/wiki/Entoloma_sinuatum"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}

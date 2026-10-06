@@ -1,0 +1,166 @@
+{
+  "slug": "king-alfred-s-cakes-cramp-balls",
+  "inatId": 121714,
+  "scientific": "Daldinia concentrica",
+  "english": "King Alfred's Cakes / Cramp Balls",
+  "olderNames": [],
+  "edibility": {
+    "value": "not-edible",
+    "sources": [
+      "wf",
+      "wp"
+    ]
+  },
+  "edibilityNote": null,
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "Hard, rounded lumps 2–8 cm across on dead wood, brown at first, then shiny black like lumps of coal.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "Cut in half: rings of grey or purple-brown and black inside, like tree rings.",
+      "sources": [
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "Mostly on dead or dying ash.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "On dead or dying broadleaved wood, nearly always ash; sometimes beech.",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "sources": [
+      "fn"
+    ]
+  },
+  "sporePrint": {
+    "value": "Black",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "other",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "ring": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "growsOn": {
+      "value": "wood",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "capCm": {
+      "value": [
+        2,
+        8
+      ],
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "fleshChange": {
+      "value": "Tough and dry, in concentric rings",
+      "sources": [
+        "wf",
+        "wp"
+      ]
+    },
+    "smell": {
+      "value": "Not distinctive",
+      "sources": [
+        "fn"
+      ]
+    }
+  },
+  "lookalikes": [],
+  "noDangerousLookalike": null,
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Daldinia concentrica, King Alfred's Cakes / Cramp Balls",
+      "url": "https://www.first-nature.com/fungi/daldinia-concentrica.php"
+    },
+    {
+      "id": "wf",
+      "title": "Wild Food UK — King Alfred's Cakes / Cramp Balls",
+      "url": "https://www.wildfooduk.com/mushroom-guide/king-alfreds-cakes/"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Daldinia concentrica",
+      "url": "https://en.wikipedia.org/wiki/Daldinia_concentrica"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}

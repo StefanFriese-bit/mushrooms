@@ -195,6 +195,36 @@
           ]
         }
       ]
+    },
+    {
+      "scientific": "Clitocybe nebularis",
+      "english": "Clouded Funnel",
+      "slug": "clouded-funnel",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Gills",
+          "thisOne": "Yellowish, turning pink as it ripens",
+          "thatOne": "White to pale cream, running a little down the stem",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-cf",
+            "wp-cf"
+          ]
+        },
+        {
+          "feature": "Spore print",
+          "thisOne": "Pink",
+          "thatOne": "Cream to pale buff",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-cf",
+            "wp-cf"
+          ]
+        }
+      ]
     }
   ],
   "noDangerousLookalike": null,
@@ -253,6 +283,16 @@
       "id": "wp-sg",
       "title": "Wikipedia — Calocybe gambosa",
       "url": "https://en.wikipedia.org/wiki/Calocybe_gambosa"
+    },
+    {
+      "id": "fn-cf",
+      "title": "First Nature — Clitocybe nebularis, Clouded Funnel",
+      "url": "https://www.first-nature.com/fungi/clitocybe-nebularis.php"
+    },
+    {
+      "id": "wp-cf",
+      "title": "Wikipedia — Clitocybe nebularis",
+      "url": "https://en.wikipedia.org/wiki/Clitocybe_nebularis"
     },
     {
       "id": "wf-prot",

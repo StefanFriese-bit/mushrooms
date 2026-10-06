@@ -1,0 +1,178 @@
+{
+  "slug": "turkeytail",
+  "inatId": 54134,
+  "scientific": "Trametes versicolor",
+  "english": "Turkeytail",
+  "olderNames": [
+    "Coriolus versicolor",
+    "Polyporus versicolor",
+    "Polystictus versicolor"
+  ],
+  "edibility": {
+    "value": "not-edible",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "edibilityNote": null,
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "Thin, leathery, fan-shaped brackets up to 10 cm, usually in overlapping tiers.",
+      "sources": [
+        "fn",
+        "wp",
+        "wt-bracket"
+      ]
+    },
+    {
+      "value": "Top banded in many colours — browns, greys, blues, greens — finely hairy, with a wavy cream edge.",
+      "sources": [
+        "fn",
+        "wp",
+        "wt-bracket"
+      ]
+    },
+    {
+      "value": "Underneath: white to cream, covered in tiny pores (not smooth).",
+      "sources": [
+        "fn",
+        "wp",
+        "wt-bracket"
+      ]
+    },
+    {
+      "value": "On dead and living wood of broadleaved trees, all year round.",
+      "sources": [
+        "fn",
+        "wt-bracket"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "Dead wood of broadleaved trees, fallen or standing, especially beech and oak; sometimes on living trees.",
+    "sources": [
+      "fn",
+      "wt-bracket"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "sources": [
+      "fn"
+    ]
+  },
+  "sporePrint": {
+    "value": "White",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "pores",
+      "sources": [
+        "fn",
+        "wp",
+        "wt-bracket"
+      ]
+    },
+    "ring": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "growsOn": {
+      "value": "wood",
+      "sources": [
+        "fn",
+        "wt-bracket"
+      ]
+    },
+    "capCm": {
+      "value": [
+        0,
+        10
+      ],
+      "sources": [
+        "fn",
+        "wp",
+        "wt-bracket"
+      ]
+    },
+    "fleshChange": {
+      "value": "Thin and tough; the pores do not stain when bruised",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "smell": {
+      "value": "Not distinctive",
+      "sources": [
+        "fn"
+      ]
+    }
+  },
+  "lookalikes": [],
+  "noDangerousLookalike": null,
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Trametes versicolor, Turkeytail",
+      "url": "https://www.first-nature.com/fungi/trametes-versicolor.php"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Trametes versicolor",
+      "url": "https://en.wikipedia.org/wiki/Trametes_versicolor"
+    },
+    {
+      "id": "wt-bracket",
+      "title": "Woodland Trust — Bracket fungi ID: common UK species",
+      "url": "https://www.woodlandtrust.org.uk/blog/2021/10/bracket-fungi-identification/"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}

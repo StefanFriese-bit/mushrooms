@@ -1,0 +1,186 @@
+{
+  "slug": "sulphur-tuft",
+  "inatId": 48767,
+  "scientific": "Hypholoma fasciculare",
+  "english": "Sulphur Tuft",
+  "olderNames": [
+    "Naematoloma fasciculare",
+    "Nematoloma fasciculare",
+    "Psilocybe fascicularis"
+  ],
+  "edibility": {
+    "value": "poisonous",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "edibilityNote": {
+    "value": "It has caused severe poisoning, probably including a death; the symptoms can start 5–10 hours after eating.",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "Tufts of sulphur-yellow caps, 2–8 cm, often tan in the centre.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "Gills yellow at first, turning olive-green, then dark.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "Purple-brown spore print; dark threads of veil often hang from the cap edge.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "In dense clusters on stumps and dead wood, all year round.",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "In dense clusters on stumps, felled trunks and buried roots of broadleaved trees, less often conifers.",
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "sporePrint": {
+    "value": "Purple-brown",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "gills",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    "ring": {
+      "value": "sometimes",
+      "sources": [
+        "wp",
+        "fn"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "growsOn": {
+      "value": "wood",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "capCm": {
+      "value": [
+        2,
+        8
+      ],
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "fleshChange": {
+      "value": "Sulphur yellow and firm; no colour change when cut is described",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "smell": {
+      "value": "Mushroomy, not distinctive",
+      "sources": [
+        "fn"
+      ]
+    }
+  },
+  "lookalikes": [],
+  "noDangerousLookalike": null,
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Hypholoma fasciculare, Sulphur Tuft",
+      "url": "https://www.first-nature.com/fungi/hypholoma-fasciculare.php"
+    },
+    {
+      "id": "wf",
+      "title": "Wild Food UK — Sulphur Tuft",
+      "url": "https://www.wildfooduk.com/mushroom-guide/sulphur-tuft/"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Hypholoma fasciculare",
+      "url": "https://en.wikipedia.org/wiki/Hypholoma_fasciculare"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}

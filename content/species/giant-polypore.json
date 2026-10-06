@@ -1,0 +1,160 @@
+{
+  "slug": "giant-polypore",
+  "inatId": 157989,
+  "scientific": "Meripilus giganteus",
+  "english": "Giant Polypore",
+  "olderNames": [
+    "Polyporus giganteus"
+  ],
+  "edibility": {
+    "value": "edible-some-react",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "edibilityNote": {
+    "value": "Only young ones, cooked slowly, are eaten, and it upsets some people; First Nature advises leaving it alone.",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "A huge rosette of overlapping tan to brown fan-shaped caps, often 50 cm or more across, at the base of a tree or stump.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    {
+      "value": "Underneath: white pores that bruise dark brown to black.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    {
+      "value": "Mostly on beech, sometimes from buried roots a few metres from the trunk.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "At the base of beech, less often oak and other broadleaved trees, and on stumps; sometimes from buried roots away from the trunk.",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      9
+    ],
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "sporePrint": {
+    "value": "White",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "pores",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "ring": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "growsOn": {
+      "value": "wood",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "capCm": {
+      "value": [
+        10,
+        30
+      ],
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "fleshChange": {
+      "value": "Whitish; the pores bruise black",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "smell": {
+      "value": "Not distinctive",
+      "sources": [
+        "fn"
+      ]
+    }
+  },
+  "lookalikes": [],
+  "noDangerousLookalike": {
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Meripilus giganteus, Giant Polypore",
+      "url": "https://www.first-nature.com/fungi/meripilus-giganteus.php"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Meripilus giganteus",
+      "url": "https://en.wikipedia.org/wiki/Meripilus_giganteus"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}
