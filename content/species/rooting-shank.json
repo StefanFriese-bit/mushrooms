@@ -1,0 +1,185 @@
+{
+  "slug": "rooting-shank",
+  "inatId": 383374,
+  "scientific": "Oudemansiella radicata",
+  "english": "Rooting Shank",
+  "olderNames": [
+    "Collybia radicata",
+    "Xerula radicata",
+    "Hymenopellis radicata"
+  ],
+  "edibility": {
+    "value": "edible-cooked",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "edibilityNote": {
+    "value": "Edible but not worth it; Wild Food UK suggests removing the slimy cap skin.",
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "Grey-brown to olive-brown cap, 3–12 cm, slimy when wet and radially wrinkled, with a broad hump.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "Gills white to cream, widely spaced; white spore print.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "A tall, thin, grooved stem with a long root reaching down to buried wood; no ring.",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    {
+      "value": "Near beech and other broadleaved trees, alone or a few together.",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "Under or near broadleaved trees, especially beech, rooting into buried wood; alone or a few together.",
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "sporePrint": {
+    "value": "White",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "gills",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    "ring": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "growsOn": {
+      "value": "wood",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "capCm": {
+      "value": [
+        4,
+        12
+      ],
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    "fleshChange": {
+      "value": "Whitish; watery in the cap, tough in the stem",
+      "sources": [
+        "wf"
+      ]
+    },
+    "smell": {
+      "value": "Not distinctive, or slightly fruity",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    }
+  },
+  "lookalikes": [],
+  "noDangerousLookalike": {
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Oudemansiella radicata, Rooting Shank",
+      "url": "https://www.first-nature.com/fungi/hymenopellis-radicata.php"
+    },
+    {
+      "id": "wf",
+      "title": "Wild Food UK — Rooting Shank",
+      "url": "https://www.wildfooduk.com/mushroom-guide/rooting-shank/"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Oudemansiella radicata",
+      "url": "https://en.wikipedia.org/wiki/Oudemansiella_radicata"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}

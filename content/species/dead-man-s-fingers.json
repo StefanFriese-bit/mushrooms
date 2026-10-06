@@ -1,0 +1,173 @@
+{
+  "slug": "dead-man-s-fingers",
+  "inatId": 58698,
+  "scientific": "Xylaria polymorpha",
+  "english": "Dead Man's Fingers",
+  "olderNames": [
+    "Xylosphaera polymorpha"
+  ],
+  "edibility": {
+    "value": "not-edible",
+    "sources": [
+      "wf",
+      "wp"
+    ]
+  },
+  "edibilityNote": null,
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "Black, knobbly, finger-like clubs, 3–10 cm tall, often in bunches like an arthritic hand.",
+      "sources": [
+        "fn",
+        "wf",
+        "wt"
+      ]
+    },
+    {
+      "value": "Cut open: tough white flesh inside a black crust.",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    {
+      "value": "At the base of stumps of beech and other broadleaved trees.",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "On or beside stumps and buried wood of beech and other broadleaved trees.",
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "sporePrint": {
+    "value": "Black",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "other",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "ring": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "growsOn": {
+      "value": "wood",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "capCm": {
+      "value": [
+        1,
+        4
+      ],
+      "sources": [
+        "fn",
+        "wf",
+        "wt"
+      ]
+    },
+    "fleshChange": {
+      "value": "White and tough",
+      "sources": [
+        "wf",
+        "fn"
+      ]
+    },
+    "smell": {
+      "value": "Not distinctive",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    }
+  },
+  "lookalikes": [],
+  "noDangerousLookalike": null,
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Xylaria polymorpha, Dead Man's Fingers",
+      "url": "https://www.first-nature.com/fungi/xylaria-polymorpha.php"
+    },
+    {
+      "id": "wf",
+      "title": "Wild Food UK — Dead Man's Fingers",
+      "url": "https://www.wildfooduk.com/mushroom-guide/dead-mans-fingers/"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Xylaria polymorpha",
+      "url": "https://en.wikipedia.org/wiki/Xylaria_polymorpha"
+    },
+    {
+      "id": "wt",
+      "title": "Woodland Trust — Dead Man's Fingers",
+      "url": "https://www.woodlandtrust.org.uk/trees-woods-and-wildlife/fungi-and-lichens/dead-mans-fingers/"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}

@@ -1,0 +1,161 @@
+{
+  "slug": "jelly-rot",
+  "inatId": 179113,
+  "scientific": "Merulius tremellosus",
+  "english": "Jelly Rot",
+  "olderNames": [
+    "Phlebia tremellosa"
+  ],
+  "edibility": {
+    "value": "not-edible",
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "edibilityNote": null,
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "A flat, translucent, rubbery crust up to 10 cm, whose upper edge curls out into small hairy white brackets.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "The exposed surface is orange-pink and wrinkled into a net of folds.",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    {
+      "value": "On dead broadleaved trunks and branches, especially in autumn and winter.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "Dead trunks, stumps and fallen branches of broadleaved trees, especially oak, beech and birch; rarely conifers.",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      9,
+      10,
+      11,
+      12,
+      1,
+      2
+    ],
+    "sources": [
+      "fn"
+    ]
+  },
+  "sporePrint": {
+    "value": "White",
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "other",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "ring": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "growsOn": {
+      "value": "wood",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "capCm": {
+      "value": [
+        2,
+        10
+      ],
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "fleshChange": {
+      "value": "Thin, gelatinous and elastic; hardens when dry",
+      "sources": [
+        "wf"
+      ]
+    },
+    "smell": {
+      "value": "Not distinctive",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    }
+  },
+  "lookalikes": [],
+  "noDangerousLookalike": null,
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Merulius tremellosus, Jelly Rot",
+      "url": "https://www.first-nature.com/fungi/phlebia-tremellosa.php"
+    },
+    {
+      "id": "wf",
+      "title": "Wild Food UK — Jelly Rot",
+      "url": "https://www.wildfooduk.com/mushroom-guide/jelly-rot/"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Merulius tremellosus",
+      "url": "https://en.wikipedia.org/wiki/Merulius_tremellosus"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}

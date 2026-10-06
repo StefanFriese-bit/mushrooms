@@ -1,0 +1,191 @@
+{
+  "slug": "scarletina-bolete",
+  "inatId": 553907,
+  "scientific": "Neoboletus erythropus",
+  "english": "Scarletina Bolete",
+  "olderNames": [
+    "Boletus erythropus"
+  ],
+  "edibility": {
+    "value": "edible-some-react",
+    "sources": [
+      "wp",
+      "wf"
+    ]
+  },
+  "edibilityNote": {
+    "value": "Cook it well: it upsets some people. Its flesh turns blue-black at once when cut — normal for this one.",
+    "sources": [
+      "wp",
+      "wf"
+    ]
+  },
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "Dark brown, velvety cap, 7–20 cm.",
+      "sources": [
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "Underneath: orange-red pores that bruise dark blue at once.",
+      "sources": [
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "Yellow stem covered in fine red dots — not a net.",
+      "sources": [
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "The yellow flesh turns blue-black instantly when cut.",
+      "sources": [
+        "wf",
+        "wp"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "Broadleaved and conifer woods, mostly with beech and oak.",
+    "sources": [
+      "wf",
+      "wp"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      7,
+      8,
+      9,
+      10
+    ],
+    "sources": [
+      "wf"
+    ]
+  },
+  "sporePrint": {
+    "value": "Olive-brown",
+    "sources": [
+      "wf",
+      "wp"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "pores",
+      "sources": [
+        "wf",
+        "wp"
+      ]
+    },
+    "ring": {
+      "value": "no",
+      "sources": [
+        "wp",
+        "wf"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "wf",
+        "wp"
+      ]
+    },
+    "growsOn": {
+      "value": "ground",
+      "sources": [
+        "wf",
+        "wp"
+      ]
+    },
+    "capCm": {
+      "value": [
+        7,
+        11
+      ],
+      "sources": [
+        "wf",
+        "wp"
+      ]
+    },
+    "fleshChange": {
+      "value": "Yellow, turning blue-black at once when cut",
+      "sources": [
+        "wf",
+        "wp"
+      ]
+    },
+    "smell": {
+      "value": "Little smell",
+      "sources": [
+        "wp"
+      ]
+    }
+  },
+  "lookalikes": [
+    {
+      "scientific": "Rubroboletus satanas",
+      "english": "Devil's Bolete",
+      "slug": null,
+      "kind": "poisonous",
+      "tellApart": [
+        {
+          "feature": "Stem",
+          "thisOne": "Fine red dots on a yellow stem",
+          "thatOne": "A red net (mesh) on a swollen stem",
+          "sources": [
+            "wf",
+            "wp"
+          ]
+        },
+        {
+          "feature": "Cap",
+          "thisOne": "Dark brown",
+          "thatOne": "Chalky white",
+          "sources": [
+            "wf",
+            "wp"
+          ]
+        }
+      ]
+    }
+  ],
+  "noDangerousLookalike": null,
+  "photos": [],
+  "sources": [
+    {
+      "id": "wf",
+      "title": "Wild Food UK — Scarletina Bolete",
+      "url": "https://www.wildfooduk.com/mushroom-guide/scarletina-bolete/"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Neoboletus erythropus",
+      "url": "https://en.wikipedia.org/wiki/Boletus_erythropus"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}

@@ -1,0 +1,165 @@
+{
+  "slug": "scarlet-caterpillarclub",
+  "inatId": 119118,
+  "scientific": "Cordyceps militaris",
+  "english": "Scarlet Caterpillarclub",
+  "olderNames": [],
+  "edibility": {
+    "value": "not-edible",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "edibilityNote": {
+    "value": "Wild Food UK lists it as edible and it is used in Chinese medicine, but First Nature gives it no culinary value and Wikipedia records both views.",
+    "sources": [
+      "wf",
+      "fn",
+      "wp"
+    ]
+  },
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "A small, bright orange club, 1–8 cm tall, with a pimply surface.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "Dig it up: its pale stem grows from a buried, dead moth pupa or caterpillar.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "In grassland and mossy woodland edges, usually one at a time.",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "Grassland and mossy woodland edges, always growing from a buried moth pupa or caterpillar.",
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "sporePrint": {
+    "value": "White",
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "other",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "ring": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "growsOn": {
+      "value": "ground",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "capCm": {
+      "value": [
+        0.2,
+        0.5
+      ],
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "fleshChange": {
+      "value": "No colour change when cut is described",
+      "sources": [
+        "fn"
+      ]
+    },
+    "smell": {
+      "value": "Earthy",
+      "sources": [
+        "wf"
+      ]
+    }
+  },
+  "lookalikes": [],
+  "noDangerousLookalike": null,
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Cordyceps militaris, Scarlet Caterpillarclub",
+      "url": "https://www.first-nature.com/fungi/cordyceps-militaris.php"
+    },
+    {
+      "id": "wf",
+      "title": "Wild Food UK — Scarlet Caterpillarclub",
+      "url": "https://www.wildfooduk.com/mushroom-guide/scarlet-caterpillarclub/"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Cordyceps militaris",
+      "url": "https://en.wikipedia.org/wiki/Cordyceps_militaris"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}
