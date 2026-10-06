@@ -4,6 +4,7 @@ import { defineConfig, type Plugin } from 'vite';
 import preact from '@preact/preset-vite';
 import { VitePWA } from 'vite-plugin-pwa';
 import brand from './src/brand.json' with { type: 'json' };
+import scanSettings from './content/model/scan-settings.json' with { type: 'json' };
 
 // Files from packages that must sit beside the app at a fixed address, served by the dev server and written into the
 // build: the model runner's engines (onnxruntime-web WebAssembly, /ort/…) and the map's worker (MapLibre's worker
@@ -39,6 +40,11 @@ const vendored: Plugin = {
   },
 };
 
+// The scan's model file and its engine are stored when the app is first opened (spec 4.3), so the scan works in a wood
+// with no signal — only the model the test chose; the other models (speed test only) are fetched when asked for.
+const SCAN = scanSettings as { passed: boolean; file?: string };
+const OFFLINE_SCAN = SCAN.passed && SCAN.file ? [SCAN.file, 'ort/ort-wasm-simd-threaded.wasm'] : [];
+
 export default defineConfig({
   base: '/mushrooms/',
   define: { __BUILD_DATE__: JSON.stringify(new Date().toISOString().slice(0, 10)) },
@@ -68,8 +74,8 @@ export default defineConfig({
         ],
       },
       workbox: {
-        globPatterns: ['**/*.{js,css,html,webp,png,svg,ico,webmanifest}'],
-        maximumFileSizeToCacheInBytes: 5 * 1024 * 1024,
+        globPatterns: ['**/*.{js,css,html,webp,png,svg,ico,webmanifest}', ...OFFLINE_SCAN],
+        maximumFileSizeToCacheInBytes: 30 * 1024 * 1024,
         // Map areas he has looked at stay on the phone (spec 7): OpenFreeMap's style, tiles, fonts and icons, kept
         // after the first view, up to a limit; never fetched in bulk.
         runtimeCaching: [{

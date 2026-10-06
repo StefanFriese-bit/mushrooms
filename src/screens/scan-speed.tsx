@@ -19,7 +19,8 @@ async function photo(url: string) {
 
 async function measure(model: ModelFile, engine: Engine): Promise<Run> {
   const ort = engine === 'webgpu' ? await import('onnxruntime-web/webgpu') : await import('onnxruntime-web/wasm');
-  ort.env.wasm.wasmPaths = `${import.meta.env.BASE_URL}ort/`;
+  const engineFile = engine === 'webgpu' ? 'ort-wasm-simd-threaded.asyncify.wasm' : 'ort-wasm-simd-threaded.wasm';
+  ort.env.wasm.wasmPaths = { wasm: new URL(`${import.meta.env.BASE_URL}ort/${engineFile}`, location.href).href };
   ort.env.wasm.numThreads = 1; // GitHub Pages cannot send the headers that threads need
   const started = performance.now();
   const bytes = await (await fetch(`${import.meta.env.BASE_URL}${model.file}`)).arrayBuffer();

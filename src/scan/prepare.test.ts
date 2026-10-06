@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { cropRect, toPlanes } from './prepare';
+import { cropRect, testSize, toPlanes } from './prepare';
 
 describe('cropRect', () => {
   it('squash keeps the whole photo', () => {
@@ -26,4 +26,12 @@ describe('toPlanes', () => {
   it('refuses bytes of the wrong size', () => {
     expect(() => toPlanes([1, 2, 3, 4], 2)).toThrow(/2 × 2/);
   });
+});
+
+describe('testSize', () => {
+  it('scales a phone photo to 500 px on its longer side, as the test photos were', () => {
+    expect(testSize(4032, 3024)).toEqual({ width: 500, height: 375 });
+    expect(testSize(3024, 4032)).toEqual({ width: 375, height: 500 });
+  });
+  it('never enlarges a small photo', () => expect(testSize(400, 300)).toEqual({ width: 400, height: 300 }));
 });

@@ -202,3 +202,20 @@ test.describe('Finds without location', () => {
     await expect(page.getByText('placed by hand')).toBeVisible();
   });
 });
+
+test('the scan runs the model on the phone: the Deathcap\'s photo puts the Deathcap on the shortlist under the red banner', async ({ page }) => {
+  test.setTimeout(150_000);
+  await page.goto(`${site.url}#/scan`);
+  await expect(page.getByRole('heading', { name: 'Scan: its test first' })).toBeVisible();
+  await expect(page.getByText(/Tested on [\d,]+ UK finds it had never seen/)).toBeVisible();
+  await page.getByRole('button', { name: /switch the scan on/ }).click();
+  await page.getByLabel('Top of the cap photo').setInputFiles(fileURLToPath(new URL('../public/photos/deathcap/1.webp', import.meta.url)));
+  await page.getByRole('button', { name: 'Scan', exact: true }).click();
+  const result = page.locator('[data-test=scan-result]');
+  await expect(result).toBeVisible({ timeout: 120_000 });
+  await expect(result.locator('[data-test=scan-row]').filter({ hasText: 'Deathcap' })).toHaveCount(1);
+  await expect(result.getByText('A dangerous species is on this list')).toBeVisible();
+  expect(await page.locator('main').innerText()).not.toMatch(/Edible, cooked|Edible, but some people react|Not edible|\bsafe\b/i);
+  await page.reload(); // the record page is shown once
+  await expect(page.getByRole('heading', { name: 'Scan', exact: true })).toBeVisible();
+});

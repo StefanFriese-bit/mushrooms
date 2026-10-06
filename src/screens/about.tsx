@@ -18,7 +18,8 @@ export function About() {
       <h2>Credits</h2>
       <p>Photos from iNaturalist observers, each credited on its species page (CC0, CC BY or CC BY-NC). Facts from First
         Nature, Wild Food UK, Wikipedia and the Woodland Trust, listed on each page. The scan models: BVRA, trained on
-        the Danish Fungi 2020 photos (CC BY-NC 4.0, non-commercial use).</p>
+        the Danish Fungi 2020 photos (CC BY-NC 4.0, non-commercial use). Maps: OpenFreeMap, with map data © OpenStreetMap
+        contributors. Your finds are kept on this phone only.</p>
     </>
   );
 }

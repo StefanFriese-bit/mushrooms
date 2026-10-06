@@ -31,8 +31,34 @@ export function toPlanes(rgba: ArrayLike<number>, size: number): Float32Array {
   return out;
 }
 
+export type Photo = { source: CanvasImageSource; width: number; height: number };
+/** The test photos were 500 px on their longer side (iNaturalist's medium size); a phone's photo is scaled to that
+ * first, so it reaches the model the way the test photos did. */
+export const TEST_PHOTO_SIDE = 500;
+
+/** The size a w × h photo is scaled to before it is cut: at most 500 px on the longer side, never enlarged. */
+export function testSize(w: number, h: number): { width: number; height: number } {
+  const k = Math.min(1, TEST_PHOTO_SIDE / Math.max(w, h));
+  return { width: Math.round(w * k), height: Math.round(h * k) };
+}
+
+function asTestPhoto(photo: Photo): Photo {
+  const t = testSize(photo.width, photo.height);
+  if (t.width === photo.width && t.height === photo.height) return photo;
+  const c = document.createElement('canvas');
+  c.width = t.width;
+  c.height = t.height;
+  const g = c.getContext('2d');
+  if (!g) throw new Error('this browser cannot draw the photo');
+  g.imageSmoothingEnabled = true;
+  g.imageSmoothingQuality = 'high';
+  g.drawImage(photo.source, 0, 0, t.width, t.height);
+  return { source: c, width: t.width, height: t.height };
+}
+
 /** A decoded photo (upright, as the browser shows it) → the model's input. */
-export function pixels(photo: { source: CanvasImageSource; width: number; height: number }, size: number, fit: Fit): Float32Array {
+export function pixels(original: Photo, size: number, fit: Fit): Float32Array {
+  const photo = asTestPhoto(original);
   const r = cropRect(photo.width, photo.height, fit);
   const canvas = document.createElement('canvas');
   canvas.width = size;
