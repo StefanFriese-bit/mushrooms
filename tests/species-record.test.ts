@@ -99,6 +99,10 @@ describe('checkRecord', () => {
     (r.photos[0] as { licence: string }).licence = 'all-rights-reserved';
     expect(checkRecord(r, HOSTS)).toContain('field-mushroom: photo 1 has a licence that is not allowed (all-rights-reserved)');
   });
+  it('needs a spore print colour that Identify can ask about', () => {
+    const p = checkRecord(rec({ sporePrint: { value: 'Varies', sources: two } }), HOSTS);
+    expect(p).toContain('field-mushroom: sporePrint "Varies" names no colour group Identify can ask about');
+  });
   it('never says "safe"', () => {
     const r = rec({ topPoints: [...rec().topPoints, { value: 'Safe to eat when cooked.', sources: two }] });
     expect(checkRecord(r, HOSTS)).toContain('field-mushroom: uses the word "safe"');

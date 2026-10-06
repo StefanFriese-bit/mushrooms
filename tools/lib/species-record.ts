@@ -1,5 +1,6 @@
 import type { SpeciesRecord } from '../../src/types.ts';
 import { hostOf } from './core-lists.ts';
+import { sporeGroups } from '../../src/spore.ts';
 
 const EDIBILITY = ['edible-cooked', 'edible-some-react', 'not-edible', 'poisonous', 'deadly'];
 const KINDS = ['deadly', 'poisonous', 'edible', 'not-edible'];
@@ -43,6 +44,7 @@ export function checkRecord(r: SpeciesRecord, allowedHosts: string[]): string[] 
   sourced('habitat', r.habitat.sources);
   sourcedOnce('seasonMonths', r.seasonMonths.sources);
   sourced('sporePrint', r.sporePrint.sources);
+  if (sporeGroups(r.sporePrint.value).length === 0) say(`sporePrint "${r.sporePrint.value}" names no colour group Identify can ask about`);
   // The structural features the Check screen compares need two websites; how the flesh changes and how it smells
   // are descriptions (their safety use is in the "tell them apart" rows, which need two).
   const DESCRIPTIVE = new Set(['fleshChange', 'smell']);
