@@ -1,11 +1,11 @@
 {
-  "slug": "oak-bracket",
-  "inatId": 787944,
-  "scientific": "Pseudoinonotus dryadeus",
-  "english": "Oak Bracket",
+  "slug": "alder-bracket",
+  "inatId": 559111,
+  "scientific": "Mensularia radiata",
+  "english": "Alder Bracket",
   "olderNames": [
-    "Inonotus dryadeus",
-    "Polyporus dryadeus"
+    "Inonotus radiatus",
+    "Xanthoporia radiata"
   ],
   "edibility": {
     "value": "not-edible",
@@ -14,7 +14,13 @@
       "wf"
     ]
   },
-  "edibilityNote": null,
+  "edibilityNote": {
+    "value": "Tough, bitter and inedible.",
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
   "protectedInUk": {
     "value": false,
     "sources": [
@@ -24,22 +30,21 @@
   },
   "topPoints": [
     {
-      "value": "A big, lumpy, cushion-shaped bracket, 5–40 cm or more, at the foot of an oak.",
+      "value": "Semicircular brackets up to 10 cm, in tiers that merge; apricot to rusty-brown, ageing almost black.",
       "sources": [
         "fn",
-        "wp",
-        "wt"
+        "wf"
       ]
     },
     {
-      "value": "When young it weeps drops of amber liquid, as if dripping honey.",
+      "value": "Underneath: silvery-cream pores, turning buff, then brown.",
       "sources": [
         "fn",
-        "wt"
+        "wf"
       ]
     },
     {
-      "value": "Underneath: buff to greyish pores, darkening to brown.",
+      "value": "Almost always on dying or dead alder; rarely birch or beech.",
       "sources": [
         "fn",
         "wf"
@@ -47,15 +52,21 @@
     }
   ],
   "habitat": {
-    "value": "At or near the base of living and dead broadleaved trees, nearly always oak.",
+    "value": "Dying or dead alder, rarely birch, beech or other broadleaved trees.",
     "sources": [
       "fn",
-      "wf",
-      "wp"
+      "wf"
     ]
   },
   "seasonMonths": {
     "value": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
       8,
       9,
       10,
@@ -68,10 +79,9 @@
     ]
   },
   "sporePrint": {
-    "value": "White to yellowish-brown",
+    "value": "Pale yellowish-brown",
     "sources": [
-      "fn",
-      "wf"
+      "fn"
     ]
   },
   "features": {
@@ -79,22 +89,21 @@
       "value": "pores",
       "sources": [
         "fn",
-        "wf",
-        "wp"
+        "wf"
       ]
     },
     "ring": {
       "value": "no",
       "sources": [
         "fn",
-        "wp"
+        "wf"
       ]
     },
     "bagAtBase": {
       "value": "no",
       "sources": [
         "fn",
-        "wp"
+        "wf"
       ]
     },
     "growsOn": {
@@ -106,23 +115,22 @@
     },
     "capCm": {
       "value": [
-        5,
-        65
+        0,
+        10
       ],
       "sources": [
-        "fn",
-        "wp",
-        "wt"
+        "fn"
       ]
     },
     "fleshChange": {
-      "value": "Fibrous, yellowish-brown to reddish-brown",
+      "value": "Rusty brown and very tough",
       "sources": [
+        "fn",
         "wf"
       ]
     },
     "smell": {
-      "value": "Strongly unpleasant when old",
+      "value": "Not distinctive",
       "sources": [
         "fn",
         "wf"
@@ -131,30 +139,30 @@
   },
   "lookalikes": [
     {
-      "scientific": "Mensularia radiata",
-      "english": "Alder Bracket",
-      "slug": "alder-bracket",
+      "scientific": "Pseudoinonotus dryadeus",
+      "english": "Oak Bracket",
+      "slug": "oak-bracket",
       "kind": "not-edible",
       "tellApart": [
         {
           "feature": "Where it grows",
-          "thisOne": "At the foot of oak, on the roots",
-          "thatOne": "Up the trunk of alder",
+          "thisOne": "Up the trunk of alder",
+          "thatOne": "At the foot of oak, on the roots",
           "sources": [
             "fn",
             "wf",
-            "fn-ab",
-            "wf-ab"
+            "fn-ob",
+            "wf-ob"
           ]
         },
         {
           "feature": "Shape",
-          "thisOne": "One big, lumpy cushion that weeps amber drops",
-          "thatOne": "Smaller brackets in tiers",
+          "thisOne": "Smaller brackets in tiers",
+          "thatOne": "One big, lumpy cushion that weeps amber drops",
           "sources": [
             "fn",
-            "wt",
-            "fn-ab"
+            "fn-ob",
+            "wt-ob"
           ]
         }
       ]
@@ -165,33 +173,33 @@
   "sources": [
     {
       "id": "fn",
-      "title": "First Nature — Pseudoinonotus dryadeus, Oak Bracket",
-      "url": "https://www.first-nature.com/fungi/pseudoinonotus-dryadeus.php"
-    },
-    {
-      "id": "wf",
-      "title": "Wild Food UK — Oak Bracket",
-      "url": "https://www.wildfooduk.com/mushroom-guide/oak-bracket/"
-    },
-    {
-      "id": "wp",
-      "title": "Wikipedia — Pseudoinonotus dryadeus",
-      "url": "https://en.wikipedia.org/wiki/Inonotus_dryadeus"
-    },
-    {
-      "id": "wt",
-      "title": "Woodland Trust — Oak Bracket",
-      "url": "https://www.woodlandtrust.org.uk/trees-woods-and-wildlife/fungi-and-lichens/oak-bracket/"
-    },
-    {
-      "id": "fn-ab",
       "title": "First Nature — Mensularia radiata, Alder Bracket",
       "url": "https://www.first-nature.com/fungi/inonotus-radiatus.php"
     },
     {
-      "id": "wf-ab",
+      "id": "wf",
       "title": "Wild Food UK — Alder Bracket",
       "url": "https://www.wildfooduk.com/mushroom-guide/alder-bracket/"
+    },
+    {
+      "id": "fn-ob",
+      "title": "First Nature — Pseudoinonotus dryadeus, Oak Bracket",
+      "url": "https://www.first-nature.com/fungi/pseudoinonotus-dryadeus.php"
+    },
+    {
+      "id": "wf-ob",
+      "title": "Wild Food UK — Oak Bracket",
+      "url": "https://www.wildfooduk.com/mushroom-guide/oak-bracket/"
+    },
+    {
+      "id": "wp-ob",
+      "title": "Wikipedia — Pseudoinonotus dryadeus",
+      "url": "https://en.wikipedia.org/wiki/Inonotus_dryadeus"
+    },
+    {
+      "id": "wt-ob",
+      "title": "Woodland Trust — Oak Bracket",
+      "url": "https://www.woodlandtrust.org.uk/trees-woods-and-wildlife/fungi-and-lichens/oak-bracket/"
     },
     {
       "id": "wf-prot",

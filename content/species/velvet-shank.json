@@ -190,6 +190,46 @@
           ]
         }
       ]
+    },
+    {
+      "scientific": "Gymnopilus penetrans",
+      "english": "Common Rustgill",
+      "slug": "common-rustgill",
+      "kind": "poisonous",
+      "tellApart": [
+        {
+          "feature": "Stem",
+          "thisOne": "Dark brown to black and velvety lower down",
+          "thatOne": "Yellowish to orange-brown, with fine white fibres",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-cr",
+            "wf-cr"
+          ]
+        },
+        {
+          "feature": "Spore print",
+          "thisOne": "White",
+          "thatOne": "Rusty orange-brown",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-cr",
+            "wf-cr"
+          ]
+        },
+        {
+          "feature": "Cap",
+          "thisOne": "Slimy when wet",
+          "thatOne": "Dry, silky or finely velvety",
+          "sources": [
+            "fn",
+            "wf",
+            "wf-cr"
+          ]
+        }
+      ]
     }
   ],
   "noDangerousLookalike": null,
@@ -258,6 +298,16 @@
       "id": "wp-fb",
       "title": "Wikipedia — Galerina marginata",
       "url": "https://en.wikipedia.org/wiki/Galerina_marginata"
+    },
+    {
+      "id": "fn-cr",
+      "title": "First Nature — Gymnopilus penetrans, Common Rustgill",
+      "url": "https://www.first-nature.com/fungi/gymnopilus-penetrans.php"
+    },
+    {
+      "id": "wf-cr",
+      "title": "Wild Food UK — Common Rustgill",
+      "url": "https://www.wildfooduk.com/mushroom-guide/common-rustgill/"
     },
     {
       "id": "wf-prot",

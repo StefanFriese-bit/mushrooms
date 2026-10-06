@@ -1,0 +1,163 @@
+{
+  "slug": "violet-webcap",
+  "inatId": 124344,
+  "scientific": "Cortinarius violaceus",
+  "english": "Violet Webcap",
+  "olderNames": [],
+  "edibility": {
+    "value": "not-edible",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "edibilityNote": {
+    "value": "Some call it edible, but webcaps include seriously poisonous and deadly species, and it is risky to eat (both sites); First Nature also asks that this rare mushroom be left where it grows.",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "Deep violet-purple all over — cap, gills, stem and flesh; cap 6–15 cm, finely scaly.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    {
+      "value": "Gills purple, turning rusty brown as the spores ripen; rusty-brown spore print.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    {
+      "value": "A thick purple stem, swollen at the base; a cobweb-like veil when young.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    {
+      "value": "Rare: in broadleaved woods on chalk or limestone, sometimes under conifers.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "Broadleaved woods and occasionally conifers, on chalky or limestone soil; rare in Britain.",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "sources": [
+      "fn"
+    ]
+  },
+  "sporePrint": {
+    "value": "Rusty brown",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "gills",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "ring": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "growsOn": {
+      "value": "ground",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "capCm": {
+      "value": [
+        3.5,
+        15
+      ],
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "fleshChange": {
+      "value": "Purple",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "smell": {
+      "value": "Slightly of cedarwood when cut",
+      "sources": [
+        "fn"
+      ]
+    }
+  },
+  "lookalikes": [],
+  "noDangerousLookalike": null,
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Cortinarius violaceus, Violet Webcap",
+      "url": "https://www.first-nature.com/fungi/cortinarius-violaceus.php"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Cortinarius violaceus",
+      "url": "https://en.wikipedia.org/wiki/Cortinarius_violaceus"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}

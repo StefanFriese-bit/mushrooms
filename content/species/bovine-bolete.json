@@ -1,12 +1,10 @@
 {
-  "slug": "larch-bolete",
-  "inatId": 147277,
-  "scientific": "Suillus grevillei",
-  "english": "Larch Bolete",
+  "slug": "bovine-bolete",
+  "inatId": 337850,
+  "scientific": "Suillus bovinus",
+  "english": "Bovine Bolete",
   "olderNames": [
-    "Suillus elegans",
-    "Boletus elegans",
-    "Boletus grevillei"
+    "Boletus bovinus"
   ],
   "edibility": {
     "value": "edible-cooked",
@@ -17,11 +15,11 @@
     ]
   },
   "edibilityNote": {
-    "value": "Peel off the slimy cap skin (the tubes are usually removed too) and cook it.",
+    "value": "Edible when cooked, but not highly rated; peel off the slimy cap skin first. Old ones turn rubbery.",
     "sources": [
       "fn",
-      "wp",
-      "wf"
+      "wf",
+      "wp"
     ]
   },
   "protectedInUk": {
@@ -33,7 +31,7 @@
   },
   "topPoints": [
     {
-      "value": "Slimy, bright yellow to rusty-orange cap, 4–12 cm, shiny even when dry.",
+      "value": "A pale orange-yellow to clay-brown cap, 3–10 cm, sticky when wet, with a paler wavy edge.",
       "sources": [
         "fn",
         "wf",
@@ -41,52 +39,48 @@
       ]
     },
     {
-      "value": "Underneath: lemon-yellow pores that bruise rusty brown.",
+      "value": "Underneath: large, angular yellow to olive pores, divided inside like a honeycomb.",
       "sources": [
         "fn",
         "wf"
       ]
     },
     {
-      "value": "A ring or ring zone on the stem, left by the veil that covered the young pores.",
+      "value": "No ring on the stem.",
       "sources": [
         "fn",
-        "wf",
         "wp"
       ]
     },
     {
-      "value": "Only under larch.",
+      "value": "Under Scots pine and other pines, often beside paths.",
       "sources": [
         "fn",
-        "wf",
-        "wp"
+        "wf"
       ]
     }
   ],
   "habitat": {
-    "value": "Only under larch trees.",
+    "value": "Under pines, especially Scots pine, and sometimes other conifers; often beside paths and in clearings.",
     "sources": [
       "fn",
-      "wf",
-      "wp"
+      "wf"
     ]
   },
   "seasonMonths": {
     "value": [
-      7,
       8,
       9,
       10,
       11
     ],
     "sources": [
-      "wf",
-      "wp"
+      "fn",
+      "wf"
     ]
   },
   "sporePrint": {
-    "value": "Ochre to sienna brown",
+    "value": "Olive-brown",
     "sources": [
       "fn",
       "wf",
@@ -103,17 +97,17 @@
       ]
     },
     "ring": {
-      "value": "sometimes",
+      "value": "no",
       "sources": [
         "fn",
-        "wf"
+        "wp"
       ]
     },
     "bagAtBase": {
       "value": "no",
       "sources": [
         "fn",
-        "wf"
+        "wp"
       ]
     },
     "growsOn": {
@@ -126,22 +120,21 @@
     "capCm": {
       "value": [
         5,
-        10
+        9
       ],
-      "sources": [
-        "fn",
-        "wp"
-      ]
-    },
-    "fleshChange": {
-      "value": "Yellow; does not change colour when cut",
       "sources": [
         "fn",
         "wf"
       ]
     },
+    "fleshChange": {
+      "value": "White to off-white, buff towards the base",
+      "sources": [
+        "wf"
+      ]
+    },
     "smell": {
-      "value": "Not distinctive",
+      "value": "Slightly fruity",
       "sources": [
         "fn"
       ]
@@ -149,31 +142,31 @@
   },
   "lookalikes": [
     {
-      "scientific": "Suillus bovinus",
-      "english": "Bovine Bolete",
-      "slug": "bovine-bolete",
+      "scientific": "Suillus grevillei",
+      "english": "Larch Bolete",
+      "slug": "larch-bolete",
       "kind": "edible",
       "tellApart": [
         {
           "feature": "Ring",
-          "thisOne": "A ring or ring zone on the stem",
-          "thatOne": "None",
+          "thisOne": "None",
+          "thatOne": "A ring or ring zone on the stem",
           "sources": [
             "fn",
             "wf",
-            "fn-bv",
-            "wp-bv"
+            "fn-lb",
+            "wf-lb"
           ]
         },
         {
           "feature": "Tree",
-          "thisOne": "Only larch",
-          "thatOne": "Pines",
+          "thisOne": "Pines",
+          "thatOne": "Only larch",
           "sources": [
             "fn",
             "wf",
-            "fn-bv",
-            "wf-bv"
+            "fn-lb",
+            "wf-lb"
           ]
         }
       ]
@@ -181,41 +174,41 @@
   ],
   "noDangerousLookalike": {
     "sources": [
-      "wf",
-      "fn"
+      "fn",
+      "wf"
     ]
   },
   "photos": [],
   "sources": [
     {
       "id": "fn",
-      "title": "First Nature — Suillus grevillei, Larch Bolete",
-      "url": "https://www.first-nature.com/fungi/suillus-grevillei.php"
-    },
-    {
-      "id": "wf",
-      "title": "Wild Food UK — Larch Bolete",
-      "url": "https://www.wildfooduk.com/mushroom-guide/larch-bolete/"
-    },
-    {
-      "id": "wp",
-      "title": "Wikipedia — Suillus grevillei",
-      "url": "https://en.wikipedia.org/wiki/Suillus_grevillei"
-    },
-    {
-      "id": "fn-bv",
       "title": "First Nature — Suillus bovinus, Bovine Bolete",
       "url": "https://www.first-nature.com/fungi/suillus-bovinus.php"
     },
     {
-      "id": "wf-bv",
+      "id": "wf",
       "title": "Wild Food UK — Bovine Bolete",
       "url": "https://www.wildfooduk.com/mushroom-guide/bovine-bolete-jersey-cow-fungus/"
     },
     {
-      "id": "wp-bv",
+      "id": "wp",
       "title": "Wikipedia — Suillus bovinus",
       "url": "https://en.wikipedia.org/wiki/Suillus_bovinus"
+    },
+    {
+      "id": "fn-lb",
+      "title": "First Nature — Suillus grevillei, Larch Bolete",
+      "url": "https://www.first-nature.com/fungi/suillus-grevillei.php"
+    },
+    {
+      "id": "wf-lb",
+      "title": "Wild Food UK — Larch Bolete",
+      "url": "https://www.wildfooduk.com/mushroom-guide/larch-bolete/"
+    },
+    {
+      "id": "wp-lb",
+      "title": "Wikipedia — Suillus grevillei",
+      "url": "https://en.wikipedia.org/wiki/Suillus_grevillei"
     },
     {
       "id": "wf-prot",
