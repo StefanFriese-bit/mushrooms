@@ -127,6 +127,9 @@ lines.push(`Built ${new Date().toISOString().slice(0, 10)} by \`tools/evaluate-s
   'figure below is measured on the other half.', '');
 lines.push(`**Pass mark (spec 6.3):** dangerous species on the shortlist at least ${PASS_MARK * 100} times in 100 when they are the answer. ` +
   `An 8-bit file (what the phone runs) must also lose at most ${MAX_8BIT_LOSS * 100} point of "right first" against its full-size model.`, '');
+lines.push(`**Dangerous** here means the ${danger.size} species on the approved list's safety list (Deadly, or a dangerous lookalike of ` +
+  'an edible). Other poisonous species among the 300 (the Fly Agaric, for one) count once their pages are written, and the ' +
+  'test is run again then.', '');
 
 const samples = scoreFiles.filter(isSample);
 if (samples.length > 0) {
@@ -161,6 +164,11 @@ lines.push('', '## What the model knows', '');
 lines.push(`${known.size} of our ${ours.length} species are among its 1,604 classes. The ${ours.length - known.size} it cannot recognise ` +
   '(their pages will say so):', '');
 lines.push(ours.filter((s) => !known.has(s.name)).map((s) => `${english.get(s.name)} (*${s.name}*)${s.dangerLevel ? ` — **${s.dangerLevel}**` : ''}`).join(' · '), '');
+const viaOlder = classes.filter((c) => c.ours && c.ours !== c.name);
+lines.push(`${viaOlder.length} of its species carry an older name of one of ours (as iNaturalist files them), e.g. ` +
+  viaOlder.slice(0, 3).map((c) => `*${c.name}* = ${english.get(c.ours as string)}`).join(', ') + '. ' +
+  (viaOlder.some((c) => c.name === 'Amanita gemmata') ? 'One of them looks different: the Jewelled Amanita (*Amanita gemmata*) counts as the ' +
+    'Fly Agaric, because iNaturalist files it there; on a scan it shows as the Fly Agaric, a poisonous Amanita.' : ''), '');
 const show = chosen ?? fullOnly ?? [...results].sort(byRightFirst)[0];
 if (show) {
   lines.push(`## Dangerous species, one by one (${label(show)}, up to three photos)`, '');
