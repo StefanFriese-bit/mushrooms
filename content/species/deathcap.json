@@ -464,6 +464,25 @@
           ]
         }
       ]
+    },
+    {
+      "scientific": "Amanita crocea",
+      "english": "Orange Grisette",
+      "slug": "orange-grisette",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Ring",
+          "thisOne": "A ring on the stem",
+          "thatOne": "None",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-og",
+            "wp-og"
+          ]
+        }
+      ]
     }
   ],
   "noDangerousLookalike": null,
@@ -632,6 +651,16 @@
       "id": "wp-tg",
       "title": "Wikipedia — Amanita fulva",
       "url": "https://en.wikipedia.org/wiki/Amanita_fulva"
+    },
+    {
+      "id": "fn-og",
+      "title": "First Nature — Amanita crocea, Orange Grisette",
+      "url": "https://www.first-nature.com/fungi/amanita-crocea.php"
+    },
+    {
+      "id": "wp-og",
+      "title": "Wikipedia — Amanita crocea",
+      "url": "https://en.wikipedia.org/wiki/Amanita_crocea"
     },
     {
       "id": "wf-prot",

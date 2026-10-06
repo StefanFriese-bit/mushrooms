@@ -1,0 +1,162 @@
+{
+  "slug": "tawny-funnel",
+  "inatId": 841424,
+  "scientific": "Paralepista flaccida",
+  "english": "Tawny Funnel",
+  "olderNames": [
+    "Paralepista inversa"
+  ],
+  "edibility": {
+    "value": "edible-cooked",
+    "sources": [
+      "wf",
+      "wp"
+    ]
+  },
+  "edibilityNote": {
+    "value": "Edible but poor, with an acidic taste; Wikipedia does not recommend it.",
+    "sources": [
+      "wf",
+      "wp"
+    ]
+  },
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "Tawny orange-brown cap up to 10 cm, funnel-shaped with an inrolled, often wavy edge.",
+      "sources": [
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "Gills very crowded, paler than the cap, running far down the stem.",
+      "sources": [
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "In leaf litter and conifer needles, alone or in rings.",
+      "sources": [
+        "wf",
+        "wp"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "Leaf litter, humus-rich soil and conifer needles in woods, alone or in rings.",
+    "sources": [
+      "wf",
+      "wp"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "sources": [
+      "wf"
+    ]
+  },
+  "sporePrint": {
+    "value": "White to cream",
+    "sources": [
+      "wf",
+      "wp"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "gills",
+      "sources": [
+        "wf",
+        "wp"
+      ]
+    },
+    "ring": {
+      "value": "no",
+      "sources": [
+        "wp",
+        "wf"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "wf",
+        "wp"
+      ]
+    },
+    "growsOn": {
+      "value": "ground",
+      "sources": [
+        "wf",
+        "wp"
+      ]
+    },
+    "capCm": {
+      "value": [
+        0,
+        10
+      ],
+      "sources": [
+        "wf",
+        "wp"
+      ]
+    },
+    "fleshChange": {
+      "value": "Thin, pale cream-tan",
+      "sources": [
+        "wf"
+      ]
+    },
+    "smell": {
+      "value": "Not distinctive",
+      "sources": [
+        "wf"
+      ]
+    }
+  },
+  "lookalikes": [],
+  "noDangerousLookalike": {
+    "sources": [
+      "wf",
+      "wp"
+    ]
+  },
+  "photos": [],
+  "sources": [
+    {
+      "id": "wf",
+      "title": "Wild Food UK — Tawny Funnel",
+      "url": "https://www.wildfooduk.com/mushroom-guide/tawny-funnel/"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Paralepista flaccida",
+      "url": "https://en.wikipedia.org/wiki/Paralepista_flaccida"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}

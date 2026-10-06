@@ -1,0 +1,167 @@
+{
+  "slug": "conifer-mazegill",
+  "inatId": 67338,
+  "scientific": "Gloeophyllum sepiarium",
+  "english": "Conifer Mazegill",
+  "olderNames": [
+    "Lenzites sepiaria"
+  ],
+  "edibility": {
+    "value": "not-edible",
+    "sources": [
+      "wf",
+      "wp"
+    ]
+  },
+  "edibilityNote": null,
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "Thin, leathery brackets 2–12 cm, rusty brown with a bright yellow-orange edge while growing.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    {
+      "value": "Underneath: rusty-ochre slots and gill-like plates in a radiating maze.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "On dead conifer wood, including cut timber.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "Dead standing and fallen conifer wood, mainly spruce and pine, including cut timber.",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "sporePrint": {
+    "value": "White",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "pores",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "ring": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "growsOn": {
+      "value": "wood",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "capCm": {
+      "value": [
+        2,
+        12
+      ],
+      "sources": [
+        "fn"
+      ]
+    },
+    "fleshChange": {
+      "value": "Tough, amber to dark brown",
+      "sources": [
+        "wf"
+      ]
+    },
+    "smell": {
+      "value": "Not distinctive",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    }
+  },
+  "lookalikes": [],
+  "noDangerousLookalike": null,
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Gloeophyllum sepiarium, Conifer Mazegill",
+      "url": "https://www.first-nature.com/fungi/gloeophyllum-sepiarium.php"
+    },
+    {
+      "id": "wf",
+      "title": "Wild Food UK — Conifer Mazegill",
+      "url": "https://www.wildfooduk.com/mushroom-guide/conifer-mazegill/"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Gloeophyllum sepiarium",
+      "url": "https://en.wikipedia.org/wiki/Gloeophyllum_sepiarium"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}
