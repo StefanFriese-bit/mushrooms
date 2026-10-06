@@ -1,0 +1,176 @@
+{
+  "slug": "heath-waxcap",
+  "inatId": 524919,
+  "scientific": "Gliophorus laetus",
+  "english": "Heath Waxcap",
+  "olderNames": [
+    "Hygrocybe laeta"
+  ],
+  "edibility": {
+    "value": "edible-cooked",
+    "sources": [
+      "wf",
+      "wp"
+    ]
+  },
+  "edibilityNote": {
+    "value": "Edible but of little interest, and some authorities call it inedible.",
+    "sources": [
+      "wp",
+      "fn"
+    ]
+  },
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "Small, slimy orange-brown cap, 1.5–5 cm, with deep grooves towards a toothed edge.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "Gills pale grey, turning salmon pink, running a little down the stem.",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    {
+      "value": "Slimy orange stem; no ring.",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    {
+      "value": "On heaths and acid grassland, among short grass and moss.",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "Heaths and acid upland grassland among short grass and moss; sometimes lawns.",
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      8,
+      9,
+      10,
+      11
+    ],
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "sporePrint": {
+    "value": "White",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "gills",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "ring": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "growsOn": {
+      "value": "ground",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "capCm": {
+      "value": [
+        1.5,
+        3.5
+      ],
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "fleshChange": {
+      "value": "Thin, pale orange",
+      "sources": [
+        "wf"
+      ]
+    },
+    "smell": {
+      "value": "Can smell of burnt rubber",
+      "sources": [
+        "wf"
+      ]
+    }
+  },
+  "lookalikes": [],
+  "noDangerousLookalike": {
+    "sources": [
+      "wf",
+      "fn"
+    ]
+  },
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Gliophorus laetus, Heath Waxcap",
+      "url": "https://www.first-nature.com/fungi/gliophorus-laetus.php"
+    },
+    {
+      "id": "wf",
+      "title": "Wild Food UK — Heath Waxcap",
+      "url": "https://www.wildfooduk.com/mushroom-guide/heath-waxcap/"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Gliophorus laetus",
+      "url": "https://en.wikipedia.org/wiki/Gliophorus_laetus"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}

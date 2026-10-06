@@ -445,6 +445,25 @@
           ]
         }
       ]
+    },
+    {
+      "scientific": "Amanita fulva",
+      "english": "Tawny Grisette",
+      "slug": "tawny-grisette",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Ring",
+          "thisOne": "A ring on the stem",
+          "thatOne": "None",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-tg",
+            "wp-tg"
+          ]
+        }
+      ]
     }
   ],
   "noDangerousLookalike": null,
@@ -603,6 +622,16 @@
       "id": "wp-sr",
       "title": "Wikipedia — Volvopluteus gloiocephalus",
       "url": "https://en.wikipedia.org/wiki/Volvopluteus_gloiocephalus"
+    },
+    {
+      "id": "fn-tg",
+      "title": "First Nature — Amanita fulva, Tawny Grisette",
+      "url": "https://www.first-nature.com/fungi/amanita-fulva.php"
+    },
+    {
+      "id": "wp-tg",
+      "title": "Wikipedia — Amanita fulva",
+      "url": "https://en.wikipedia.org/wiki/Amanita_fulva"
     },
     {
       "id": "wf-prot",

@@ -1,0 +1,247 @@
+{
+  "slug": "tawny-grisette",
+  "inatId": 63027,
+  "scientific": "Amanita fulva",
+  "english": "Tawny Grisette",
+  "olderNames": [],
+  "edibility": {
+    "value": "edible-cooked",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "edibilityNote": {
+    "value": "Edible, but it is an Amanita — the family of the Deathcap — so First Nature and Wikipedia both advise against eating it unless you are expert.",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "Tawny orange-brown cap, 5–8 cm, with a grooved, paler edge and usually no white flecks.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    {
+      "value": "No ring on the stem.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    {
+      "value": "A large white bag (volva) at the base of the stem.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    {
+      "value": "Gills white, free and crowded; white spore print.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "Broadleaved and conifer woods, often with birch or oak and beside paths.",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      7,
+      8,
+      9,
+      10
+    ],
+    "sources": [
+      "fn"
+    ]
+  },
+  "sporePrint": {
+    "value": "White",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "gills",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "ring": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "bagAtBase": {
+      "value": "yes",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "growsOn": {
+      "value": "ground",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "capCm": {
+      "value": [
+        5,
+        8
+      ],
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "fleshChange": {
+      "value": "White; no colour change when cut is described",
+      "sources": [
+        "fn"
+      ]
+    },
+    "smell": {
+      "value": "Not distinctive",
+      "sources": [
+        "fn"
+      ]
+    }
+  },
+  "lookalikes": [
+    {
+      "scientific": "Amanita phalloides",
+      "english": "Deathcap",
+      "slug": "deathcap",
+      "kind": "deadly",
+      "tellApart": [
+        {
+          "feature": "Ring",
+          "thisOne": "None",
+          "thatOne": "A ring on the stem",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-dc",
+            "wf-dc"
+          ]
+        }
+      ]
+    },
+    {
+      "scientific": "Amanita pantherina",
+      "english": "Panthercap",
+      "slug": "panthercap",
+      "kind": "poisonous",
+      "tellApart": [
+        {
+          "feature": "Ring",
+          "thisOne": "None",
+          "thatOne": "A ring on the stem",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-pc",
+            "wf-pc"
+          ]
+        },
+        {
+          "feature": "Cap",
+          "thisOne": "Tawny orange-brown with a grooved edge, usually without white flecks",
+          "thatOne": "Brown to grey-brown, evenly dotted with pure white warts",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-pc",
+            "wf-pc",
+            "wp-pc"
+          ]
+        }
+      ]
+    }
+  ],
+  "noDangerousLookalike": null,
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Amanita fulva, Tawny Grisette",
+      "url": "https://www.first-nature.com/fungi/amanita-fulva.php"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Amanita fulva",
+      "url": "https://en.wikipedia.org/wiki/Amanita_fulva"
+    },
+    {
+      "id": "fn-dc",
+      "title": "First Nature — Amanita phalloides, Deathcap",
+      "url": "https://www.first-nature.com/fungi/amanita-phalloides.php"
+    },
+    {
+      "id": "wf-dc",
+      "title": "Wild Food UK — Deathcap",
+      "url": "https://www.wildfooduk.com/mushroom-guide/deathcap/"
+    },
+    {
+      "id": "wp-dc",
+      "title": "Wikipedia — Amanita phalloides",
+      "url": "https://en.wikipedia.org/wiki/Amanita_phalloides"
+    },
+    {
+      "id": "wt-dc",
+      "title": "Woodland Trust — Deathcap",
+      "url": "https://www.woodlandtrust.org.uk/trees-woods-and-wildlife/fungi-and-lichens/deathcap/"
+    },
+    {
+      "id": "fn-pc",
+      "title": "First Nature — Amanita pantherina, Panthercap",
+      "url": "https://www.first-nature.com/fungi/amanita-pantherina.php"
+    },
+    {
+      "id": "wf-pc",
+      "title": "Wild Food UK — Panthercap",
+      "url": "https://www.wildfooduk.com/mushroom-guide/panther-cap/"
+    },
+    {
+      "id": "wp-pc",
+      "title": "Wikipedia — Amanita pantherina",
+      "url": "https://en.wikipedia.org/wiki/Amanita_pantherina"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}

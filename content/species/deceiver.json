@@ -1,0 +1,236 @@
+{
+  "slug": "deceiver",
+  "inatId": 63236,
+  "scientific": "Laccaria laccata",
+  "english": "Deceiver",
+  "olderNames": [
+    "Clitocybe laccata"
+  ],
+  "edibility": {
+    "value": "edible-cooked",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "edibilityNote": {
+    "value": "Use only the caps; the stems are tough. Many small brown mushrooms are dangerous — the deadly Funeral Bell grows on wood and has a ring.",
+    "sources": [
+      "wf",
+      "wp",
+      "fn"
+    ]
+  },
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "Small cap, 1.5–7 cm, salmon-pink, orange or reddish-brown, fading to buff as it dries.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "Thick, widely spaced gills the colour of the cap; white spore print.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "Tough, fibrous, often twisted stem; no ring.",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    {
+      "value": "In leaf litter in woods and on heaths, often in large numbers.",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "Leaf litter in all kinds of woodland, on heaths, in parks and beside paths.",
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "sporePrint": {
+    "value": "White",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "gills",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    "ring": {
+      "value": "no",
+      "sources": [
+        "wp",
+        "fn"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "growsOn": {
+      "value": "ground",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "capCm": {
+      "value": [
+        2,
+        6
+      ],
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "fleshChange": {
+      "value": "Thin, reddish-brown to pale",
+      "sources": [
+        "wf"
+      ]
+    },
+    "smell": {
+      "value": "Not distinctive",
+      "sources": [
+        "fn"
+      ]
+    }
+  },
+  "lookalikes": [
+    {
+      "scientific": "Galerina marginata",
+      "english": "Funeral Bell",
+      "slug": "funeral-bell",
+      "kind": "deadly",
+      "tellApart": [
+        {
+          "feature": "Where it grows",
+          "thisOne": "On the ground, in leaf litter",
+          "thatOne": "On wood",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-fb",
+            "wf-fb"
+          ]
+        },
+        {
+          "feature": "Ring",
+          "thisOne": "None",
+          "thatOne": "A small, fragile ring (it can fall away)",
+          "sources": [
+            "wf",
+            "fn",
+            "fn-fb",
+            "wf-fb"
+          ]
+        },
+        {
+          "feature": "Spore print",
+          "thisOne": "White",
+          "thatOne": "Rusty brown (snuff brown)",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "fn-fb",
+            "wf-fb",
+            "wp-fb"
+          ]
+        }
+      ]
+    }
+  ],
+  "noDangerousLookalike": null,
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Laccaria laccata, Deceiver",
+      "url": "https://www.first-nature.com/fungi/laccaria-laccata.php"
+    },
+    {
+      "id": "wf",
+      "title": "Wild Food UK — Deceiver",
+      "url": "https://www.wildfooduk.com/mushroom-guide/deceiver/"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Laccaria laccata",
+      "url": "https://en.wikipedia.org/wiki/Laccaria_laccata"
+    },
+    {
+      "id": "fn-fb",
+      "title": "First Nature — Galerina marginata, Funeral Bell",
+      "url": "https://www.first-nature.com/fungi/galerina-marginata.php"
+    },
+    {
+      "id": "wf-fb",
+      "title": "Wild Food UK — Funeral Bell",
+      "url": "https://www.wildfooduk.com/mushroom-guide/funeral-bell/"
+    },
+    {
+      "id": "wp-fb",
+      "title": "Wikipedia — Galerina marginata",
+      "url": "https://en.wikipedia.org/wiki/Galerina_marginata"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}

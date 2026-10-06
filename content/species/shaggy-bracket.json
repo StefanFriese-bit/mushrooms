@@ -1,0 +1,161 @@
+{
+  "slug": "shaggy-bracket",
+  "inatId": 194483,
+  "scientific": "Inonotus hispidus",
+  "english": "Shaggy Bracket",
+  "olderNames": [
+    "Polyporus hispidus"
+  ],
+  "edibility": {
+    "value": "not-edible",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "edibilityNote": null,
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "A thick, soft bracket 10–20 cm or more, rusty orange-brown and shaggy-hairy on top, blackening with age.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "Underneath: yellowish pores, turning rusty brown, that weep droplets when young.",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    {
+      "value": "On living ash, apple, oak and other broadleaved trees, including garden and orchard trees.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "On living or dying broadleaved trees — mostly ash and apple, also oak, poplar and others — often high on the trunk.",
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "sources": [
+      "fn"
+    ]
+  },
+  "sporePrint": {
+    "value": "White (First Nature) or brown (Wikipedia)",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "pores",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    "ring": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "growsOn": {
+      "value": "wood",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "capCm": {
+      "value": [
+        10,
+        30
+      ],
+      "sources": [
+        "wp",
+        "wf"
+      ]
+    },
+    "fleshChange": {
+      "value": "Yellowish and spongy when young; dark brown and brittle when old",
+      "sources": [
+        "wf",
+        "wp"
+      ]
+    },
+    "smell": {
+      "value": "Not distinctive",
+      "sources": [
+        "fn"
+      ]
+    }
+  },
+  "lookalikes": [],
+  "noDangerousLookalike": null,
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Inonotus hispidus, Shaggy Bracket",
+      "url": "https://www.first-nature.com/fungi/inonotus-hispidus.php"
+    },
+    {
+      "id": "wf",
+      "title": "Wild Food UK — Shaggy Bracket",
+      "url": "https://www.wildfooduk.com/mushroom-guide/shaggy-bracket/"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Inonotus hispidus",
+      "url": "https://en.wikipedia.org/wiki/Inonotus_hispidus"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}

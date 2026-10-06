@@ -293,6 +293,49 @@
           ]
         }
       ]
+    },
+    {
+      "scientific": "Laccaria laccata",
+      "english": "Deceiver",
+      "slug": "deceiver",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Where it grows",
+          "thisOne": "On wood",
+          "thatOne": "On the ground, in leaf litter",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-de",
+            "wf-de"
+          ]
+        },
+        {
+          "feature": "Ring",
+          "thisOne": "A small, fragile ring (it can fall away)",
+          "thatOne": "None",
+          "sources": [
+            "fn",
+            "wf",
+            "wf-de",
+            "fn-de"
+          ]
+        },
+        {
+          "feature": "Spore print",
+          "thisOne": "Rusty brown (snuff brown)",
+          "thatOne": "White",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "fn-de",
+            "wf-de",
+            "wp-de"
+          ]
+        }
+      ]
     }
   ],
   "noDangerousLookalike": null,
@@ -391,6 +434,21 @@
       "id": "wt-vs",
       "title": "Woodland Trust — Velvet Shank",
       "url": "https://www.woodlandtrust.org.uk/trees-woods-and-wildlife/fungi-and-lichens/velvet-shank/"
+    },
+    {
+      "id": "fn-de",
+      "title": "First Nature — Laccaria laccata, Deceiver",
+      "url": "https://www.first-nature.com/fungi/laccaria-laccata.php"
+    },
+    {
+      "id": "wf-de",
+      "title": "Wild Food UK — Deceiver",
+      "url": "https://www.wildfooduk.com/mushroom-guide/deceiver/"
+    },
+    {
+      "id": "wp-de",
+      "title": "Wikipedia — Laccaria laccata",
+      "url": "https://en.wikipedia.org/wiki/Laccaria_laccata"
     },
     {
       "id": "wf-prot",
