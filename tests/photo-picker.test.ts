@@ -14,4 +14,13 @@ describe('pickPhotos', () => {
     expect(picked[0]).toMatchObject({ licence: 'cc-by-nc', link: 'https://www.inaturalist.org/observations/3' });
     expect(picked[0].largeUrl).toBe('https://inaturalist-open-data.s3.amazonaws.com/photos/30/large.jpg');
   });
+  it('names the observer on a CC0 photo, whose iNaturalist credit is only "no rights reserved"', () => {
+    const cc0 = (user: { login: string; name?: string | null }) => ({
+      id: 7, faves_count: 0, user,
+      photos: [{ id: 70, license_code: 'cc0', attribution: 'no rights reserved', url: 'https://x/photos/70/square.jpg' }],
+    });
+    expect(pickPhotos([cc0({ login: 'abc', name: 'Ann Bee' })], 1)[0].credit).toBe('Ann Bee, no rights reserved (CC0)');
+    expect(pickPhotos([cc0({ login: 'abc', name: null })], 1)[0].credit).toBe('abc, no rights reserved (CC0)');
+    expect(pickPhotos([obs(1, 'cc-by')], 1)[0].credit).toBe('(c) person 1, some rights reserved (CC BY)');
+  });
 });

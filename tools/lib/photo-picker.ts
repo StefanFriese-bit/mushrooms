@@ -1,8 +1,17 @@
 export type InatObservation = {
   id: number;
   faves_count?: number;
+  user?: InatUser;
   photos: Array<{ id: number; license_code: string | null; attribution: string; url: string }>;
 };
+
+export type InatUser = { login: string; name?: string | null };
+
+/** iNaturalist's own credit line; a CC0 photo's reads only "no rights reserved", so the observer's name is added. */
+export function creditFor(attribution: string, user?: InatUser): string {
+  if (/\(c\)|©/i.test(attribution) || !user) return attribution;
+  return `${user.name?.trim() || user.login}, no rights reserved (CC0)`;
+}
 
 export type PickedPhoto = {
   observationId: number;
@@ -26,7 +35,7 @@ export function pickPhotos(observations: InatObservation[], limit: number): Pick
         observationId: o.id,
         photoId: p.id,
         licence: p.license_code as PickedPhoto['licence'],
-        credit: p.attribution,
+        credit: creditFor(p.attribution, o.user),
         largeUrl: p.url.replace('/square.', '/large.'),
         link: `https://www.inaturalist.org/observations/${o.id}`,
       }];
