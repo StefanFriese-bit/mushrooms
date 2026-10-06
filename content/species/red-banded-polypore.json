@@ -1,20 +1,25 @@
 {
-  "slug": "hoof-fungus-tinder-bracket",
-  "inatId": 127510,
-  "scientific": "Fomes fomentarius",
-  "english": "Hoof Fungus / Tinder Bracket",
+  "slug": "red-banded-polypore",
+  "inatId": 1098280,
+  "scientific": "Fomitopsis pinicola",
+  "english": "Red-banded Polypore",
   "olderNames": [
-    "Polyporus fomentarius"
+    "Fomes pinicola"
   ],
   "edibility": {
     "value": "not-edible",
     "sources": [
       "fn",
-      "wf",
       "wp"
     ]
   },
-  "edibilityNote": null,
+  "edibilityNote": {
+    "value": "Far too tough and woody to eat.",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
   "protectedInUk": {
     "value": false,
     "sources": [
@@ -24,36 +29,32 @@
   },
   "topPoints": [
     {
-      "value": "A hard, hoof-shaped bracket, 5–45 cm across, grey to brown on top with growth ridges.",
+      "value": "A hard, hoof-shaped bracket, up to 30 cm across, with a red to orange band and a paler or orange edge.",
       "sources": [
         "fn",
-        "wp",
-        "wt-bracket"
+        "wp"
       ]
     },
     {
-      "value": "Underneath: pale grey-brown, with tiny round pores.",
+      "value": "Underneath: cream to pale yellow, with tiny round pores.",
       "sources": [
         "fn",
-        "wf",
-        "wt-bracket"
+        "wp"
       ]
     },
     {
-      "value": "Mostly on birch, living or dead; also beech and other broadleaved trees.",
+      "value": "On living or dead conifers, sometimes birch; it lasts for years.",
       "sources": [
         "fn",
-        "wf",
-        "wt-bracket"
+        "wp"
       ]
     }
   ],
   "habitat": {
-    "value": "Birch especially, also beech and other broadleaved trees; living and dead trunks.",
+    "value": "Living and dead conifers, sometimes birch. Rare in Britain and Ireland.",
     "sources": [
       "fn",
-      "wf",
-      "wt-bracket"
+      "wp"
     ]
   },
   "seasonMonths": {
@@ -72,15 +73,13 @@
       12
     ],
     "sources": [
-      "fn",
-      "wf"
+      "fn"
     ]
   },
   "sporePrint": {
-    "value": "White to very pale lemon",
+    "value": "Pale lemon yellow",
     "sources": [
       "fn",
-      "wf",
       "wp"
     ]
   },
@@ -89,7 +88,6 @@
       "value": "pores",
       "sources": [
         "fn",
-        "wf",
         "wp"
       ]
     },
@@ -111,59 +109,56 @@
       "value": "wood",
       "sources": [
         "fn",
-        "wf"
+        "wp"
       ]
     },
     "capCm": {
       "value": [
-        5,
-        45
+        0,
+        30
       ],
       "sources": [
-        "wp",
-        "wt-bracket"
+        "wp"
       ]
     },
     "fleshChange": {
-      "value": "Hard, corky and cinnamon brown",
+      "value": "Hard, pale brown",
       "sources": [
-        "wf",
-        "fn"
+        "fn",
+        "wp"
       ]
     },
     "smell": {
-      "value": "Faintly fruity",
+      "value": "Not significant",
       "sources": [
-        "fn",
-        "wf"
+        "fn"
       ]
     }
   },
   "lookalikes": [
     {
-      "scientific": "Fomitopsis pinicola",
-      "english": "Red-banded Polypore",
-      "slug": "red-banded-polypore",
+      "scientific": "Fomes fomentarius",
+      "english": "Hoof Fungus / Tinder Bracket",
+      "slug": "hoof-fungus-tinder-bracket",
       "kind": "not-edible",
       "tellApart": [
         {
           "feature": "Upper surface",
-          "thisOne": "Grey to brown, with no red band",
-          "thatOne": "A red to orange band",
+          "thisOne": "A red to orange band",
+          "thatOne": "Grey to brown, with no red band",
           "sources": [
             "fn",
-            "fn-rb",
-            "wp-rb"
+            "wp",
+            "fn-hf"
           ]
         },
         {
           "feature": "Tree",
-          "thisOne": "Mostly birch and beech",
-          "thatOne": "Mostly conifers, sometimes birch",
+          "thisOne": "Mostly conifers, sometimes birch",
+          "thatOne": "Mostly birch and beech",
           "sources": [
             "fn",
-            "wf",
-            "fn-rb"
+            "wf-hf"
           ]
         }
       ]
@@ -174,33 +169,28 @@
   "sources": [
     {
       "id": "fn",
-      "title": "First Nature — Fomes fomentarius, Hoof Fungus / Tinder Bracket",
-      "url": "https://www.first-nature.com/fungi/fomes-fomentarius.php"
-    },
-    {
-      "id": "wf",
-      "title": "Wild Food UK — Hoof Fungus / Tinder Bracket",
-      "url": "https://www.wildfooduk.com/mushroom-guide/hoof-fungus/"
-    },
-    {
-      "id": "wp",
-      "title": "Wikipedia — Fomes fomentarius",
-      "url": "https://en.wikipedia.org/wiki/Fomes_fomentarius"
-    },
-    {
-      "id": "wt-bracket",
-      "title": "Woodland Trust — Bracket fungi ID: common UK species",
-      "url": "https://www.woodlandtrust.org.uk/blog/2021/10/bracket-fungi-identification/"
-    },
-    {
-      "id": "fn-rb",
       "title": "First Nature — Fomitopsis pinicola, Red-banded Polypore",
       "url": "https://www.first-nature.com/fungi/fomitopsis-pinicola.php"
     },
     {
-      "id": "wp-rb",
+      "id": "wp",
       "title": "Wikipedia — Fomitopsis pinicola",
       "url": "https://en.wikipedia.org/wiki/Fomitopsis_pinicola"
+    },
+    {
+      "id": "fn-hf",
+      "title": "First Nature — Fomes fomentarius, Hoof Fungus / Tinder Bracket",
+      "url": "https://www.first-nature.com/fungi/fomes-fomentarius.php"
+    },
+    {
+      "id": "wf-hf",
+      "title": "Wild Food UK — Hoof Fungus / Tinder Bracket",
+      "url": "https://www.wildfooduk.com/mushroom-guide/hoof-fungus/"
+    },
+    {
+      "id": "wp-hf",
+      "title": "Wikipedia — Fomes fomentarius",
+      "url": "https://en.wikipedia.org/wiki/Fomes_fomentarius"
     },
     {
       "id": "wf-prot",

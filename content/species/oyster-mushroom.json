@@ -205,6 +205,36 @@
           ]
         }
       ]
+    },
+    {
+      "scientific": "Sarcomyxa serotina",
+      "english": "Olive Oysterling",
+      "slug": "olive-oysterling",
+      "kind": "not-edible",
+      "tellApart": [
+        {
+          "feature": "Gills",
+          "thisOne": "White when young",
+          "thatOne": "Yellow to orange-yellow",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-oo",
+            "wp-oo"
+          ]
+        },
+        {
+          "feature": "Cap",
+          "thisOne": "Grey, brownish or blue-grey",
+          "thatOne": "Olive-green, often tinged violet or brown",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-oo",
+            "wp-oo"
+          ]
+        }
+      ]
     }
   ],
   "noDangerousLookalike": null,
@@ -268,6 +298,16 @@
       "id": "wp-aw",
       "title": "Wikipedia — Pleurocybella porrigens",
       "url": "https://en.wikipedia.org/wiki/Pleurocybella_porrigens"
+    },
+    {
+      "id": "fn-oo",
+      "title": "First Nature — Sarcomyxa serotina, Olive Oysterling",
+      "url": "https://www.first-nature.com/fungi/sarcomyxa-serotina.php"
+    },
+    {
+      "id": "wp-oo",
+      "title": "Wikipedia — Sarcomyxa serotina",
+      "url": "https://en.wikipedia.org/wiki/Sarcomyxa_serotina"
     },
     {
       "id": "wf-prot",

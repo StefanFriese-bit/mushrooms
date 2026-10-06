@@ -1,0 +1,207 @@
+{
+  "slug": "olive-oysterling",
+  "inatId": 63585,
+  "scientific": "Sarcomyxa serotina",
+  "english": "Olive Oysterling",
+  "olderNames": [
+    "Panellus serotinus",
+    "Pleurotus serotinus"
+  ],
+  "edibility": {
+    "value": "not-edible",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "edibilityNote": {
+    "value": "Some guides call it edible but poor, others inedible or bitter (Wikipedia); First Nature reports that it may contain substances that cause cancer, and advises not even tasting it.",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "Olive-green, kidney- or oyster-shaped caps, 3–10 cm, often tinged violet or brown, slimy when wet.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    {
+      "value": "Crowded yellow to orange-yellow gills.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    {
+      "value": "A short, stout side stem, or none; in overlapping tiers on rotten wood.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    {
+      "value": "In autumn and winter, after the cold sets in.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "Rotten wood of broadleaved trees, sometimes conifers; alone or in overlapping tiers.",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      9,
+      10,
+      11,
+      12,
+      1,
+      2
+    ],
+    "sources": [
+      "fn"
+    ]
+  },
+  "sporePrint": {
+    "value": "White to yellowish",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "gills",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "ring": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "growsOn": {
+      "value": "wood",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "capCm": {
+      "value": [
+        3,
+        10
+      ],
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "fleshChange": {
+      "value": "No colour change when cut is described",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "smell": {
+      "value": "Not distinctive",
+      "sources": [
+        "fn"
+      ]
+    }
+  },
+  "lookalikes": [
+    {
+      "scientific": "Pleurotus ostreatus",
+      "english": "Oyster Mushroom",
+      "slug": "oyster-mushroom",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Gills",
+          "thisOne": "Yellow to orange-yellow",
+          "thatOne": "White when young",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-om",
+            "wf-om"
+          ]
+        }
+      ]
+    }
+  ],
+  "noDangerousLookalike": null,
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Sarcomyxa serotina, Olive Oysterling",
+      "url": "https://www.first-nature.com/fungi/sarcomyxa-serotina.php"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Sarcomyxa serotina",
+      "url": "https://en.wikipedia.org/wiki/Sarcomyxa_serotina"
+    },
+    {
+      "id": "fn-om",
+      "title": "First Nature — Pleurotus ostreatus, Oyster Mushroom",
+      "url": "https://www.first-nature.com/fungi/pleurotus-ostreatus.php"
+    },
+    {
+      "id": "wf-om",
+      "title": "Wild Food UK — Oyster Mushroom",
+      "url": "https://www.wildfooduk.com/mushroom-guide/oyster-mushroom/"
+    },
+    {
+      "id": "wp-om",
+      "title": "Wikipedia — Pleurotus ostreatus",
+      "url": "https://en.wikipedia.org/wiki/Pleurotus_ostreatus"
+    },
+    {
+      "id": "wt-om",
+      "title": "Woodland Trust — Oyster Mushroom",
+      "url": "https://www.woodlandtrust.org.uk/trees-woods-and-wildlife/fungi-and-lichens/oyster-mushroom/"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}
