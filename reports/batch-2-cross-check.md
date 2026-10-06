@@ -43,8 +43,9 @@ Verdicts on the 194 new pages: 113 not edible, 44 edible (cook first), 9 edible 
 5. **"Reported edible, but not worth picking" counts as edible** when both sites say it: Pink Waxcap (vulnerable
    worldwide — its note says never pick it), Meadow Coral, White and Smoky Spindles, Crested Coral, Yellowleg Bonnet,
    Jelly Tooth. You could make these "not edible" instead.
-6. **Photos: two per new species, not four.** Every photo is part of what the phone downloads for offline use. Four
-   for all 194 would add about 70 MB (on top of today's ~58 MB); two adds about half that. Say if you want four.
+6. **Photos: two per new species, not four.** Every photo is part of what the phone downloads for offline use. The
+   two each added 37 MB: the download is now about 95 MB (the live app today: about 36 MB; batch 1 alone took it to
+   58 MB). Four each would add roughly another 37 MB. Say if you want four.
 7. **The approved core list** (`tools/config/core-lists.json`) is unchanged. The new edible–dangerous pairs below live
    on both pages, which is what the app uses. Adding them to the approved list would also add the batch-2 species in
    them (Fly Agaric, Common Inkcap, Shaggy Scalycap…) to it — your list, so your call.
@@ -137,11 +138,13 @@ that name "quite inappropriate" and uses Split Gill, so the page says "hence its
 
 ## The 40 species without a page
 
-**Held — they have two sites, but one rule they need is met by only one** (11): Green Elfcup (no site gives an
-edibility); Wrinkled Fieldcap (Wikipedia's article is a stub); eight edible species where only one site gives the
-spore print or cap size an edible page needs — Wrinkled Club, Meadow Puffball, Blackening Brittlegill, Thimble Morel,
-Dark Honey Fungus, Sordid Blewit (its spore print is what tells it from the poisonous webcaps), Matt Bolete,
-*Phaeotremella frondosa*; plus the Field Bird's Nest (no site gives a spore colour).
+**Held — two trusted sites describe them, but a fact the page needs is on one site only, or on none** (11): Green
+Elfcup (no site says whether it is edible); Wrinkled Fieldcap (Wikipedia's article is a stub: gills, ring and habitat
+are on one site only); the Field Bird's Nest (no site gives a spore colour); and eight edible species, whose pages
+need two sites for every fact that guards against a dangerous lookalike — the spore print is on one site only for the
+Wrinkled Club, Meadow Puffball, Blackening Brittlegill, Sordid Blewit (its spore print is what tells it from the
+poisonous webcaps) and *Phaeotremella frondosa*, and on none for the Thimble Morel; the cap size is on one site only
+for the Dark Honey Fungus; and only First Nature calls the Matt Bolete edible (Wikipedia's article is a stub).
 
 **Only one trusted site, or none** (29): Butter, Persistent, Spangle and Glutinous Waxcaps; Common Jellyspot;
 *Rhodocollybia asema*; Birch Woodwart; Hair Ice; *Ganoderma resinaceum*; Orange Mosscap; Beech Jellydisc; Flame
