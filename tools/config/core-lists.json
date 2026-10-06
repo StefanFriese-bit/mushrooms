@@ -387,6 +387,14 @@
       ]
     },
     {
+      "name": "Collybia phyllophila",
+      "level": "deadly",
+      "sources": [
+        "https://www.first-nature.com/fungi/clitocybe-phyllophila.php",
+        "https://en.wikipedia.org/wiki/Collybia_phyllophila"
+      ]
+    },
+    {
       "name": "Lepiota cristata",
       "level": "poisonous",
       "sources": [

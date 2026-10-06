@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-06T10:49:57.799Z",
+  "generated": "2026-10-06T10:57:45.531Z",
   "placeId": 6857,
   "target": 300,
   "species": [
@@ -630,6 +630,18 @@
       "dangerLevel": "deadly"
     },
     {
+      "inatId": 1525529,
+      "name": "Collybia phyllophila",
+      "english": "Frosty Funnel",
+      "englishSource": "bms-2005",
+      "englishVia": "Clitocybe phyllophila",
+      "ukRecords": 5,
+      "reasons": [
+        "deadly"
+      ],
+      "dangerLevel": "deadly"
+    },
+    {
       "inatId": 58694,
       "name": "Lepiota cristata",
       "english": "Stinking Dapperling",
@@ -947,7 +959,7 @@
       "english": "Blushing Bracket",
       "englishSource": "bms-2005",
       "englishVia": null,
-      "ukRecords": 2293,
+      "ukRecords": 2296,
       "reasons": [
         "most-recorded"
       ],
@@ -2675,7 +2687,7 @@
       "english": "Meadow Puffball",
       "englishSource": "bms-2005",
       "englishVia": "Vascellum pratense",
-      "ukRecords": 182,
+      "ukRecords": 183,
       "reasons": [
         "most-recorded"
       ],
@@ -3597,18 +3609,6 @@
       "inatId": 542957,
       "name": "Dermoloma cuneifolium",
       "english": "Crazed Cap",
-      "englishSource": "bms-2005",
-      "englishVia": null,
-      "ukRecords": 96,
-      "reasons": [
-        "most-recorded"
-      ],
-      "dangerLevel": null
-    },
-    {
-      "inatId": 351954,
-      "name": "Psathyrella ammophila",
-      "english": "Dune Brittlestem",
       "englishSource": "bms-2005",
       "englishVia": null,
       "ukRecords": 96,

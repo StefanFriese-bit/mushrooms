@@ -1,13 +1,13 @@
 # Species list: build report
 
-Generated: 2026-10-06T10:49:57.799Z · Target: 300 · Picked: 300
+Generated: 2026-10-06T10:57:45.531Z · Target: 300 · Picked: 300
 
 ## Where they come from
-- Deadly: 18
+- Deadly: 19
 - Dangerous lookalikes: 9
 - Edible: 33
 - Added by Stefan: 0
-- Most recorded in the UK: 240
+- Most recorded in the UK: 239
 
 ## Groups
 - Agaricomycetes (class, iNaturalist 50814): 1481 UK species, 1480 kept
@@ -27,7 +27,7 @@ Generated: 2026-10-06T10:49:57.799Z · Target: 300 · Picked: 300
 - Left out: Trochila (genus, iNaturalist 339413) — speckles on fallen holly leaves
 
 ## English names
-- From the BMS list (2005): 269 of 300 (73 of them found under an older scientific name)
+- From the BMS list (2005): 269 of 300 (74 of them found under an older scientific name)
 - Set by hand, with a source (tools/config/english-names.json): 1
 - From iNaturalist: 27
 - None: 3

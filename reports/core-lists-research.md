@@ -80,6 +80,7 @@ These were the starting lists' guesses that two websites did not support:
 | Coprinopsis picacea (Magpie Inkcap), poisonous | The lookalike both sites name for the Shaggy Inkcap |
 | Lepiota cristata (Stinking Dapperling), poisonous | Mistakable for a small Parasol (First Nature; Wild Food UK warns of small Lepiotas) |
 | Inocybe lilacina (Lilac Fibrecap), deadly | Mistakable for the Amethyst Deceiver (both sites) |
+| Collybia phyllophila (Frosty Funnel), deadly | First Nature calls it deadly; Wikipedia (under its current name — first looked up under the old one, Clitocybe phyllophila, and wrongly reported as missing) calls it poisonous, containing muscarine. Cautious answer: deadly |
 | Tricholoma terreum (Grey Knight), deadly | Wild Food UK calls it deadly; First Nature reports toxins that can cause fatal kidney damage. Wikipedia disagrees and calls it edible in normal amounts, so the cautious answer is used |
 | New pairs | Horse Mushroom with the Destroying Angel and the Deathcap; Parasol with the Shaggy Parasol and three dapperlings; Chanterelle with the Deadly Webcap (people near Inverness mistook one for the other in 1979, Wikipedia); Saffron Milkcap with the Brown Rollrim; Velvet Shank with the Funeral Bell (Wild Food UK + Wikipedia) |
 
@@ -93,14 +94,11 @@ These were the starting lists' guesses that two websites did not support:
 
 ## Not added, for Stefan to decide
 
-- **Clitocybe phyllophila (Frosty Funnel, iNaturalist: Collybia phyllophila):** First Nature calls it deadly. No second
-  source was found: Wild Food UK has no page and Wikipedia has no article. It is left off the safety list until a
-  second source is found. It can be added to the guide by hand.
 - **Amanita gemmata (Jewelled Amanita):** Wild Food UK says it is "said to be deadly", while First Nature and Wikipedia
   say poisonous with deaths extremely rare. It is not anyone's lookalike in these sources, so it is not added.
 
 ## Totals
 
-Edible 33 · dangerous 27 (deadly 18, poisonous 9) · pairs 29 · edible with no dangerous lookalike 15.
+Edible 33 · dangerous 28 (deadly 19, poisonous 9) · pairs 29 · edible with no dangerous lookalike 15.
 Every entry has two sources from different websites, and every name is iNaturalist's current name (checked
-06/10/2026: 60 of 60).
+06/10/2026: 61 of 61).
