@@ -1,0 +1,234 @@
+{
+  "slug": "trumpet-chanterelle",
+  "inatId": 350511,
+  "scientific": "Craterellus tubaeformis",
+  "english": "Trumpet Chanterelle",
+  "olderNames": [
+    "Cantharellus infundibuliformis",
+    "Cantharellus tubaeformis"
+  ],
+  "edibility": {
+    "value": "edible-cooked",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "edibilityNote": null,
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "Small brown funnel-shaped cap, 2–5 cm, with a wavy edge; often a hole runs through the middle into the stem.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "Underneath: pale, blunt, forked folds running down the stem — not true gills.",
+      "sources": [
+        "wf",
+        "wp",
+        "fn"
+      ]
+    },
+    {
+      "value": "Stem yellow and hollow, often flattened or grooved.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "Among moss in damp conifer and beech woods, from late summer into winter.",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "Among moss and rotting wood in damp conifer and mixed woods, often with beech or among ivy.",
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      9,
+      10,
+      11
+    ],
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "sporePrint": {
+    "value": "White to pale cream",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "ridges",
+      "sources": [
+        "wf",
+        "wp"
+      ]
+    },
+    "ring": {
+      "value": "no",
+      "sources": [
+        "wp",
+        "fn"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "growsOn": {
+      "value": "ground",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "capCm": {
+      "value": [
+        2,
+        5
+      ],
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    "fleshChange": {
+      "value": "Thin, yellowish brown; no colour change when cut is described",
+      "sources": [
+        "wf",
+        "fn"
+      ]
+    },
+    "smell": {
+      "value": "Mild, not distinctive",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    }
+  },
+  "lookalikes": [
+    {
+      "scientific": "Cortinarius rubellus",
+      "english": "Deadly Webcap",
+      "slug": "deadly-webcap",
+      "kind": "deadly",
+      "tellApart": [
+        {
+          "feature": "Underneath",
+          "thisOne": "Shallow, forked folds running down the stem — not true gills",
+          "thatOne": "True gills, rusty brown when mature",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "fn-dw",
+            "wf-dw",
+            "wp-dw"
+          ]
+        },
+        {
+          "feature": "Cap",
+          "thisOne": "Funnel-shaped",
+          "thatOne": "A pointed bump in the middle",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "fn-dw",
+            "wf-dw",
+            "wp-dw"
+          ]
+        },
+        {
+          "feature": "Stem",
+          "thisOne": "Hollow and yellow",
+          "thatOne": "Yellowish zig-zag bands",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "fn-dw",
+            "wf-dw",
+            "wp-dw"
+          ]
+        }
+      ]
+    }
+  ],
+  "noDangerousLookalike": null,
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Craterellus tubaeformis, Trumpet Chanterelle",
+      "url": "https://www.first-nature.com/fungi/cantharellus-tubaeformis.php"
+    },
+    {
+      "id": "wf",
+      "title": "Wild Food UK — Trumpet Chanterelle",
+      "url": "https://www.wildfooduk.com/mushroom-guide/winter-chanterelle/"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Craterellus tubaeformis",
+      "url": "https://en.wikipedia.org/wiki/Craterellus_tubaeformis"
+    },
+    {
+      "id": "fn-dw",
+      "title": "First Nature — Cortinarius rubellus, Deadly Webcap",
+      "url": "https://www.first-nature.com/fungi/cortinarius-rubellus.php"
+    },
+    {
+      "id": "wf-dw",
+      "title": "Wild Food UK — Deadly Webcap",
+      "url": "https://www.wildfooduk.com/mushroom-guide/deadly-webcap-2/"
+    },
+    {
+      "id": "wp-dw",
+      "title": "Wikipedia — Cortinarius rubellus",
+      "url": "https://en.wikipedia.org/wiki/Cortinarius_rubellus"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}
