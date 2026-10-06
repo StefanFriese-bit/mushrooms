@@ -1,0 +1,197 @@
+{
+  "slug": "orange-birch-bolete",
+  "inatId": 343661,
+  "scientific": "Leccinum versipelle",
+  "english": "Orange Birch Bolete",
+  "olderNames": [
+    "Leccinum testaceoscabrum"
+  ],
+  "edibility": {
+    "value": "edible-cooked",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "edibilityNote": {
+    "value": "Mildly poisonous unless cooked well: fry or boil it for 15 to 20 minutes. Never eat it raw.",
+    "sources": [
+      "wf",
+      "wp"
+    ]
+  },
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "Cap orange to orange-brown, large and domed.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "Underneath: small pores, mouse-grey to pale — no gills.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "Stem whitish, covered in black woolly scales; it can be longer than the cap is wide.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "Cut flesh turns grey, blue-green and then almost black, especially at the base of the stem.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "Only under birch, often on heaths and at wood edges.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "Under birch, mainly on acid heathland, at wood edges and in scrub.",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "sporePrint": {
+    "value": "Ochre-brown",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "pores",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    "ring": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "growsOn": {
+      "value": "ground",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    "capCm": {
+      "value": [
+        8,
+        15
+      ],
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    "fleshChange": {
+      "value": "Turns grey, blue-green then almost black when cut",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    "smell": {
+      "value": "Not distinctive",
+      "sources": [
+        "fn"
+      ]
+    }
+  },
+  "lookalikes": [],
+  "noDangerousLookalike": {
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Leccinum versipelle, Orange Birch Bolete",
+      "url": "https://www.first-nature.com/fungi/leccinum-versipelle.php"
+    },
+    {
+      "id": "wf",
+      "title": "Wild Food UK — Orange Birch Bolete",
+      "url": "https://www.wildfooduk.com/mushroom-guide/orange-birch-bolete/"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Leccinum versipelle",
+      "url": "https://en.wikipedia.org/wiki/Leccinum_versipelle"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}

@@ -321,6 +321,34 @@
           ]
         }
       ]
+    },
+    {
+      "scientific": "Lycoperdon perlatum",
+      "english": "Common Puffball",
+      "slug": "common-puffball",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Cut top to bottom (a young button)",
+          "thisOne": "The outline of a cap, gills and stem, inside a white bag",
+          "thatOne": "Pure white and even all through, soft and spongy",
+          "sources": [
+            "fn",
+            "fn-cp",
+            "wf-cp"
+          ]
+        },
+        {
+          "feature": "Surface (a young button)",
+          "thisOne": "Smooth white skin (the veil that becomes the bag)",
+          "thatOne": "Covered in tiny pearl-like warts",
+          "sources": [
+            "wp",
+            "fn-cp",
+            "wp-cp"
+          ]
+        }
+      ]
     }
   ],
   "noDangerousLookalike": null,
@@ -419,6 +447,21 @@
       "id": "wf-syl",
       "title": "Wild Food UK — Wood Mushroom",
       "url": "https://www.wildfooduk.com/mushroom-guide/wood-mushroom/"
+    },
+    {
+      "id": "fn-cp",
+      "title": "First Nature — Lycoperdon perlatum, Common Puffball",
+      "url": "https://www.first-nature.com/fungi/lycoperdon-perlatum.php"
+    },
+    {
+      "id": "wf-cp",
+      "title": "Wild Food UK — Common Puffball",
+      "url": "https://www.wildfooduk.com/mushroom-guide/common-puffball/"
+    },
+    {
+      "id": "wp-cp",
+      "title": "Wikipedia — Lycoperdon perlatum",
+      "url": "https://en.wikipedia.org/wiki/Lycoperdon_perlatum"
     },
     {
       "id": "wf-prot",

@@ -1,0 +1,199 @@
+{
+  "slug": "chicken-of-the-woods",
+  "inatId": 53713,
+  "scientific": "Laetiporus sulphureus",
+  "english": "Chicken of the Woods",
+  "olderNames": [
+    "Polyporus sulphureus"
+  ],
+  "edibility": {
+    "value": "edible-some-react",
+    "sources": [
+      "fn",
+      "wp",
+      "wt"
+    ]
+  },
+  "edibilityNote": {
+    "value": "Avoid any growing on yew, and never eat it raw.",
+    "sources": [
+      "fn",
+      "wt",
+      "wp"
+    ]
+  },
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "A bracket growing straight out of a tree: fan-shaped shelves, often in overlapping tiers.",
+      "sources": [
+        "fn",
+        "wp",
+        "wt"
+      ]
+    },
+    {
+      "value": "Bright sulphur-yellow to orange when young, fading to cream and whitish with age.",
+      "sources": [
+        "fn",
+        "wp",
+        "wt"
+      ]
+    },
+    {
+      "value": "Underneath: tiny pores, white to pale yellow — no gills.",
+      "sources": [
+        "fn",
+        "wp",
+        "wt"
+      ]
+    },
+    {
+      "value": "Flesh soft, moist and crumbly when young.",
+      "sources": [
+        "fn",
+        "wt"
+      ]
+    },
+    {
+      "value": "Mainly on oak; also sweet chestnut, cherry, willow — and yew.",
+      "sources": [
+        "fn",
+        "wt"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "On the trunks of living and dead broadleaved trees — mainly oak, also sweet chestnut, beech, cherry and willow; sometimes on yew.",
+    "sources": [
+      "fn",
+      "wt"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "sources": [
+      "fn",
+      "wf",
+      "wt"
+    ]
+  },
+  "sporePrint": {
+    "value": "White",
+    "sources": [
+      "fn",
+      "wp",
+      "wt"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "pores",
+      "sources": [
+        "fn",
+        "wp",
+        "wt"
+      ]
+    },
+    "ring": {
+      "value": "no",
+      "sources": [
+        "wp",
+        "wt"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "wp",
+        "wt"
+      ]
+    },
+    "growsOn": {
+      "value": "wood",
+      "sources": [
+        "fn",
+        "wp",
+        "wt"
+      ]
+    },
+    "capCm": {
+      "value": [
+        10,
+        40
+      ],
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "fleshChange": {
+      "value": "Yellow-orange and moist, drying chalky; no colour change when cut",
+      "sources": [
+        "fn"
+      ]
+    },
+    "smell": {
+      "value": "Strongly mushroomy",
+      "sources": [
+        "fn",
+        "wt"
+      ]
+    }
+  },
+  "lookalikes": [],
+  "noDangerousLookalike": {
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Laetiporus sulphureus, Chicken of the Woods",
+      "url": "https://www.first-nature.com/fungi/laetiporus-sulphureus.php"
+    },
+    {
+      "id": "wf",
+      "title": "Wild Food UK — Chicken of the Woods",
+      "url": "https://www.wildfooduk.com/mushroom-guide/chicken-of-the-woods/"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Laetiporus sulphureus",
+      "url": "https://en.wikipedia.org/wiki/Laetiporus_sulphureus"
+    },
+    {
+      "id": "wt",
+      "title": "Woodland Trust — Chicken of the Woods",
+      "url": "https://www.woodlandtrust.org.uk/trees-woods-and-wildlife/fungi-and-lichens/chicken-of-the-woods/"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}

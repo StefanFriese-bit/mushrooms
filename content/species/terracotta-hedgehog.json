@@ -1,0 +1,167 @@
+{
+  "slug": "terracotta-hedgehog",
+  "inatId": 340866,
+  "scientific": "Hydnum rufescens",
+  "english": "Terracotta Hedgehog",
+  "olderNames": [],
+  "edibility": {
+    "value": "edible-cooked",
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "edibilityNote": null,
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "Underneath: soft, pale spines hanging down like stalactites — no gills or pores.",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    {
+      "value": "Cap orange-red to terracotta, 2 to 6 cm across, often off-centre on the stem.",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    {
+      "value": "The spines stop short of the stem — on the paler Wood Hedgehog they run down it.",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    {
+      "value": "Flesh whitish with pink tones, firm.",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "On the ground among moss and leaf litter, mostly under conifers, also under broadleaved trees; often in rings or arcs.",
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      9,
+      10,
+      11,
+      12
+    ],
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "sporePrint": {
+    "value": "White",
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "teeth",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "ring": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "growsOn": {
+      "value": "ground",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "capCm": {
+      "value": [
+        3,
+        6
+      ],
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "fleshChange": {
+      "value": "Whitish to pink; no marked change",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "smell": {
+      "value": "Not distinctive",
+      "sources": [
+        "fn"
+      ]
+    }
+  },
+  "lookalikes": [],
+  "noDangerousLookalike": {
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Hydnum rufescens, Terracotta Hedgehog",
+      "url": "https://www.first-nature.com/fungi/hydnum-rufescens.php"
+    },
+    {
+      "id": "wf",
+      "title": "Wild Food UK — Terracotta Hedgehog",
+      "url": "https://www.wildfooduk.com/mushroom-guide/terracotta-hedgehog/"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Hydnum rufescens",
+      "url": "https://en.wikipedia.org/wiki/Hydnum_rufescens"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}

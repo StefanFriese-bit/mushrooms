@@ -1,0 +1,189 @@
+{
+  "slug": "jelly-ear",
+  "inatId": 50813,
+  "scientific": "Auricularia auricula-judae",
+  "english": "Jelly Ear",
+  "olderNames": [
+    "Auricularia auricula",
+    "Hirneola auricula-judae"
+  ],
+  "edibility": {
+    "value": "edible-cooked",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "edibilityNote": null,
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "Rubbery, ear-shaped jelly, tan-brown, on dead or dying elder.",
+      "sources": [
+        "fn",
+        "wf",
+        "wt"
+      ]
+    },
+    {
+      "value": "Outside velvety with fine hairs; the inside smooth or wrinkled and shiny.",
+      "sources": [
+        "fn",
+        "wp",
+        "wt"
+      ]
+    },
+    {
+      "value": "Flesh thin, translucent and jelly-like.",
+      "sources": [
+        "wf",
+        "wt"
+      ]
+    },
+    {
+      "value": "Found all year round, most in late summer and autumn.",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "On dead and dying elder; sometimes on other broadleaved trees and shrubs such as sycamore, beech and ash.",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "sporePrint": {
+    "value": "White",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "smooth",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "ring": {
+      "value": "no",
+      "sources": [
+        "wt",
+        "fn"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "wt",
+        "fn"
+      ]
+    },
+    "growsOn": {
+      "value": "wood",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    "capCm": {
+      "value": [
+        3,
+        7
+      ],
+      "sources": [
+        "wf",
+        "wp"
+      ]
+    },
+    "fleshChange": {
+      "value": "Rubbery and jelly-like; no change when cut",
+      "sources": [
+        "wf",
+        "wt"
+      ]
+    },
+    "smell": {
+      "value": "Not distinctive",
+      "sources": [
+        "fn"
+      ]
+    }
+  },
+  "lookalikes": [],
+  "noDangerousLookalike": {
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Auricularia auricula-judae, Jelly Ear",
+      "url": "https://www.first-nature.com/fungi/auricularia-auricula-judae.php"
+    },
+    {
+      "id": "wf",
+      "title": "Wild Food UK — Jelly Ear",
+      "url": "https://www.wildfooduk.com/mushroom-guide/wood-ears-2/"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Auricularia auricula-judae",
+      "url": "https://en.wikipedia.org/wiki/Auricularia_auricula-judae"
+    },
+    {
+      "id": "wt",
+      "title": "Woodland Trust — Jelly Ear",
+      "url": "https://www.woodlandtrust.org.uk/trees-woods-and-wildlife/fungi-and-lichens/jelly-ear/"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}

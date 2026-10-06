@@ -1,0 +1,185 @@
+{
+  "slug": "beefsteak-fungus",
+  "inatId": 123897,
+  "scientific": "Fistulina hepatica",
+  "english": "Beefsteak Fungus",
+  "olderNames": [],
+  "edibility": {
+    "value": "edible-cooked",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "edibilityNote": {
+    "value": "Eat only young ones, slowly cooked; older ones are sour and their juice can upset the stomach.",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "A bracket shaped like a tongue or a slab of liver, red to reddish-brown, on a tree trunk.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp",
+        "wt"
+      ]
+    },
+    {
+      "value": "Cut it and it oozes a blood-red juice.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp",
+        "wt"
+      ]
+    },
+    {
+      "value": "Underneath: pale straw-yellow pores that turn reddish-brown with age — no gills.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    {
+      "value": "Low on the trunks of oak and sweet chestnut, often old or dead trees.",
+      "sources": [
+        "fn",
+        "wt"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "Low on the trunks or roots of oak and sweet chestnut, living or long dead.",
+    "sources": [
+      "fn",
+      "wt"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      8,
+      9,
+      10
+    ],
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "sporePrint": {
+    "value": "Pale pink",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "pores",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "ring": {
+      "value": "no",
+      "sources": [
+        "wp",
+        "wf"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "wp",
+        "wf"
+      ]
+    },
+    "growsOn": {
+      "value": "wood",
+      "sources": [
+        "fn",
+        "wp",
+        "wt"
+      ]
+    },
+    "capCm": {
+      "value": [
+        7,
+        25
+      ],
+      "sources": [
+        "fn",
+        "wf",
+        "wp",
+        "wt"
+      ]
+    },
+    "fleshChange": {
+      "value": "Red with pale veins, like raw meat; bleeds red juice when cut",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    "smell": {
+      "value": "Not distinctive",
+      "sources": [
+        "fn"
+      ]
+    }
+  },
+  "lookalikes": [],
+  "noDangerousLookalike": {
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Fistulina hepatica, Beefsteak Fungus",
+      "url": "https://www.first-nature.com/fungi/fistulina-hepatica.php"
+    },
+    {
+      "id": "wf",
+      "title": "Wild Food UK — Beefsteak Fungus",
+      "url": "https://www.wildfooduk.com/mushroom-guide/beefsteak-fungus-fistulina-hepatica/"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Fistulina hepatica",
+      "url": "https://en.wikipedia.org/wiki/Fistulina_hepatica"
+    },
+    {
+      "id": "wt",
+      "title": "Woodland Trust — Beefsteak Fungus",
+      "url": "https://www.woodlandtrust.org.uk/trees-woods-and-wildlife/fungi-and-lichens/beefsteak-fungus/"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}

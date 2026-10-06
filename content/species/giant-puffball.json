@@ -1,0 +1,186 @@
+{
+  "slug": "giant-puffball",
+  "inatId": 57692,
+  "scientific": "Calvatia gigantea",
+  "english": "Giant Puffball",
+  "olderNames": [
+    "Langermannia gigantea"
+  ],
+  "edibility": {
+    "value": "edible-cooked",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "edibilityNote": {
+    "value": "Only while it is fresh and pure white all through; once the inside turns yellowish, olive or brown it is past eating.",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "A huge white ball, often 20 to 35 cm across — like a football lying in the grass.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "No gills and no real stem; the skin is smooth or finely velvety.",
+      "sources": [
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "Cut it in half: a young one is pure white and firm all through.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "In grass and rough ground — field edges, roadsides, among nettles and brambles, and at wood edges.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "Fields, pasture, roadside verges, field edges among nettles and brambles; sometimes open woodland.",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "sporePrint": {
+    "value": "Olive-brown",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "other",
+      "sources": [
+        "wf",
+        "wp"
+      ]
+    },
+    "ring": {
+      "value": "no",
+      "sources": [
+        "wf",
+        "wp"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "wf",
+        "wp"
+      ]
+    },
+    "growsOn": {
+      "value": "ground",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    "capCm": {
+      "value": [
+        10,
+        80
+      ],
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "fleshChange": {
+      "value": "White, turning yellow then olive-brown as the spores ripen",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    "smell": {
+      "value": "Very faint and pleasant",
+      "sources": [
+        "fn"
+      ]
+    }
+  },
+  "lookalikes": [],
+  "noDangerousLookalike": {
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Calvatia gigantea, Giant Puffball",
+      "url": "https://www.first-nature.com/fungi/calvatia-gigantea.php"
+    },
+    {
+      "id": "wf",
+      "title": "Wild Food UK — Giant Puffball",
+      "url": "https://www.wildfooduk.com/mushroom-guide/giant-puffball/"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Calvatia gigantea",
+      "url": "https://en.wikipedia.org/wiki/Calvatia_gigantea"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}

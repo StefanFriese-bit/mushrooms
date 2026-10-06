@@ -1,0 +1,189 @@
+{
+  "slug": "dryad-s-saddle",
+  "inatId": 940028,
+  "scientific": "Cerioporus squamosus",
+  "english": "Dryad's Saddle",
+  "olderNames": [
+    "Polyporus squamosus"
+  ],
+  "edibility": {
+    "value": "edible-cooked",
+    "sources": [
+      "wf",
+      "fn"
+    ]
+  },
+  "edibilityNote": {
+    "value": "Eat only young, tender ones; they soon turn leathery and then corky.",
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "A large fan- or saddle-shaped bracket, ochre-yellow with rings of dark brown scales.",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    {
+      "value": "Underneath: large, angular, off-white pores that run down the stem — no gills.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "A short, thick stem at one side, darkening to black at the base.",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    {
+      "value": "Smells floury, or of watermelon rind when young.",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    {
+      "value": "On broadleaved trees and stumps, from spring.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "On living and dead broadleaved trees and stumps.",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      5,
+      6,
+      7,
+      8
+    ],
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "sporePrint": {
+    "value": "White",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "pores",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    "ring": {
+      "value": "no",
+      "sources": [
+        "wp",
+        "wf"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "wp",
+        "wf"
+      ]
+    },
+    "growsOn": {
+      "value": "wood",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    "capCm": {
+      "value": [
+        10,
+        40
+      ],
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    "fleshChange": {
+      "value": "White and thick; turns leathery then corky with age",
+      "sources": [
+        "wf"
+      ]
+    },
+    "smell": {
+      "value": "Floury, or like watermelon rind",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    }
+  },
+  "lookalikes": [],
+  "noDangerousLookalike": {
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Cerioporus squamosus, Dryad's Saddle",
+      "url": "https://www.first-nature.com/fungi/polyporus-squamosus.php"
+    },
+    {
+      "id": "wf",
+      "title": "Wild Food UK — Dryad's Saddle",
+      "url": "https://www.wildfooduk.com/mushroom-guide/dryads-saddle/"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Cerioporus squamosus",
+      "url": "https://en.wikipedia.org/wiki/Cerioporus_squamosus"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}

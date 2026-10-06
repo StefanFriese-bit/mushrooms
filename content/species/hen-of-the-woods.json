@@ -1,0 +1,178 @@
+{
+  "slug": "hen-of-the-woods",
+  "inatId": 53714,
+  "scientific": "Grifola frondosa",
+  "english": "Hen of the Woods",
+  "olderNames": [],
+  "edibility": {
+    "value": "edible-some-react",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "edibilityNote": {
+    "value": "Eat only young ones, cooked through: older ones turn tough and leathery.",
+    "sources": [
+      "fn",
+      "wp"
+    ]
+  },
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "A big rosette of many grey-brown, wavy-edged, spoon-shaped caps, 20 to 50 cm across.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "Underneath each cap: small white pores — no gills.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "At the base of old oak trees.",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    {
+      "value": "The Giant Polypore looks similar, but its fronds are thicker and browner and turn black where handled.",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "At the base of oak trees, sometimes other broadleaved trees.",
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      8,
+      9,
+      10,
+      11
+    ],
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "sporePrint": {
+    "value": "White",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "pores",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    "ring": {
+      "value": "no",
+      "sources": [
+        "wp",
+        "fn"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "wp",
+        "fn"
+      ]
+    },
+    "growsOn": {
+      "value": "wood",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    "capCm": {
+      "value": [
+        4,
+        10
+      ],
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "fleshChange": {
+      "value": "White and firm",
+      "sources": [
+        "wf"
+      ]
+    },
+    "smell": {
+      "value": "Pleasant and sweet when young",
+      "sources": [
+        "fn"
+      ]
+    }
+  },
+  "lookalikes": [],
+  "noDangerousLookalike": {
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Grifola frondosa, Hen of the Woods",
+      "url": "https://www.first-nature.com/fungi/grifola-frondosa.php"
+    },
+    {
+      "id": "wf",
+      "title": "Wild Food UK — Hen of the Woods",
+      "url": "https://www.wildfooduk.com/mushroom-guide/hen-of-the-woods/"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Grifola frondosa",
+      "url": "https://en.wikipedia.org/wiki/Grifola_frondosa"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}

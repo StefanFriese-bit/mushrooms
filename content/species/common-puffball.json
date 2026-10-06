@@ -1,0 +1,310 @@
+{
+  "slug": "common-puffball",
+  "inatId": 48443,
+  "scientific": "Lycoperdon perlatum",
+  "english": "Common Puffball",
+  "olderNames": [],
+  "edibility": {
+    "value": "edible-cooked",
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "edibilityNote": {
+    "value": "Only while it is pure white inside; peel off the tough skin before cooking.",
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "A small white pear-shaped puffball, 3 to 6 cm across, with a stem-like base.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "Covered in tiny pearl-like warts that rub off and leave faint scars.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    {
+      "value": "When ripe a hole opens on top and the brown spores puff out.",
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    {
+      "value": "Cut it top to bottom: it must be pure white and even inside. The outline of a cap and stem means a young Amanita, such as a Deathcap.",
+      "sources": [
+        "fn",
+        "wf",
+        "fn-dc"
+      ]
+    },
+    {
+      "value": "In woodland leaf litter, also pasture and heaths, usually in groups.",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "Woodland leaf litter; also pasture, commons and heaths. Usually in groups.",
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "sporePrint": {
+    "value": "Olive-brown",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "other",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "ring": {
+      "value": "no",
+      "sources": [
+        "wp",
+        "wf"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "wp",
+        "wf"
+      ]
+    },
+    "growsOn": {
+      "value": "ground",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    "capCm": {
+      "value": [
+        3,
+        6
+      ],
+      "sources": [
+        "fn",
+        "wp"
+      ]
+    },
+    "fleshChange": {
+      "value": "White, turning olive-brown and powdery as it ripens",
+      "sources": [
+        "fn",
+        "wf"
+      ]
+    },
+    "smell": {
+      "value": "Not distinctive",
+      "sources": [
+        "fn"
+      ]
+    }
+  },
+  "lookalikes": [
+    {
+      "scientific": "Amanita phalloides",
+      "english": "Deathcap",
+      "slug": "deathcap",
+      "kind": "deadly",
+      "tellApart": [
+        {
+          "feature": "Cut top to bottom",
+          "thisOne": "Pure white and even all through, soft and spongy",
+          "thatOne": "The outline of a cap, gills and stem, inside a white bag",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-dc"
+          ]
+        },
+        {
+          "feature": "Surface",
+          "thisOne": "Covered in tiny pearl-like warts",
+          "thatOne": "Smooth white skin (the veil that becomes the bag)",
+          "sources": [
+            "fn",
+            "wp",
+            "wp-dc"
+          ]
+        }
+      ]
+    },
+    {
+      "scientific": "Scleroderma citrinum",
+      "english": "Common Earthball",
+      "slug": "common-earthball",
+      "kind": "poisonous",
+      "tellApart": [
+        {
+          "feature": "Inside",
+          "thisOne": "White and soft, later olive-brown powder",
+          "thatOne": "Dark purple-brown to black with white veins — never pure white",
+          "sources": [
+            "wf",
+            "fn-ce",
+            "wf-ce"
+          ]
+        },
+        {
+          "feature": "Skin",
+          "thisOne": "Thin, with small pearl-like warts",
+          "thatOne": "Thick and tough, dirty yellow, cracked into coarse scales like a potato",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-ce",
+            "wt-ce"
+          ]
+        },
+        {
+          "feature": "Feel",
+          "thisOne": "Soft and spongy",
+          "thatOne": "Hard and firm",
+          "sources": [
+            "wf",
+            "fn-ce",
+            "wp-ce"
+          ]
+        },
+        {
+          "feature": "Smell",
+          "thisOne": "Not distinctive",
+          "thatOne": "Unpleasant, of gas or rubber",
+          "sources": [
+            "fn",
+            "fn-ce",
+            "wf-ce",
+            "wt-ce"
+          ]
+        },
+        {
+          "feature": "Shape",
+          "thisOne": "Pear-shaped, with a stem-like base",
+          "thatOne": "Round, with no stem — just root-like threads",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-ce",
+            "wt-ce"
+          ]
+        }
+      ]
+    }
+  ],
+  "noDangerousLookalike": null,
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Lycoperdon perlatum, Common Puffball",
+      "url": "https://www.first-nature.com/fungi/lycoperdon-perlatum.php"
+    },
+    {
+      "id": "wf",
+      "title": "Wild Food UK — Common Puffball",
+      "url": "https://www.wildfooduk.com/mushroom-guide/common-puffball/"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Lycoperdon perlatum",
+      "url": "https://en.wikipedia.org/wiki/Lycoperdon_perlatum"
+    },
+    {
+      "id": "fn-ce",
+      "title": "First Nature — Scleroderma citrinum, Common Earthball",
+      "url": "https://www.first-nature.com/fungi/scleroderma-citrinum.php"
+    },
+    {
+      "id": "wf-ce",
+      "title": "Wild Food UK — Common Earthball",
+      "url": "https://www.wildfooduk.com/mushroom-guide/common-earth-ball/"
+    },
+    {
+      "id": "wp-ce",
+      "title": "Wikipedia — Scleroderma citrinum",
+      "url": "https://en.wikipedia.org/wiki/Scleroderma_citrinum"
+    },
+    {
+      "id": "wt-ce",
+      "title": "Woodland Trust — Common Earthball",
+      "url": "https://www.woodlandtrust.org.uk/trees-woods-and-wildlife/fungi-and-lichens/common-earthball/"
+    },
+    {
+      "id": "fn-dc",
+      "title": "First Nature — Amanita phalloides, Deathcap",
+      "url": "https://www.first-nature.com/fungi/amanita-phalloides.php"
+    },
+    {
+      "id": "wf-dc",
+      "title": "Wild Food UK — Deathcap",
+      "url": "https://www.wildfooduk.com/mushroom-guide/deathcap/"
+    },
+    {
+      "id": "wp-dc",
+      "title": "Wikipedia — Amanita phalloides",
+      "url": "https://en.wikipedia.org/wiki/Amanita_phalloides"
+    },
+    {
+      "id": "wt-dc",
+      "title": "Woodland Trust — Deathcap",
+      "url": "https://www.woodlandtrust.org.uk/trees-woods-and-wildlife/fungi-and-lichens/deathcap/"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}

@@ -1,0 +1,267 @@
+{
+  "slug": "common-earthball",
+  "inatId": 55927,
+  "scientific": "Scleroderma citrinum",
+  "english": "Common Earthball",
+  "olderNames": [],
+  "edibility": {
+    "value": "poisonous",
+    "sources": [
+      "fn",
+      "wf",
+      "wp"
+    ]
+  },
+  "edibilityNote": null,
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "A hard, round ball with no stem, like a warty potato.",
+      "sources": [
+        "fn",
+        "wf",
+        "wt"
+      ]
+    },
+    {
+      "value": "Skin thick and tough, dirty yellow to ochre-brown, cracked into coarse scales.",
+      "sources": [
+        "fn",
+        "wp",
+        "wt"
+      ]
+    },
+    {
+      "value": "Cut open: purple-black inside with fine white veins — never pure white like a puffball.",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    {
+      "value": "Smells unpleasant, of gas or rubber.",
+      "sources": [
+        "fn",
+        "wf",
+        "wt"
+      ]
+    },
+    {
+      "value": "On sandy, peaty or mossy ground in woods and heaths, often by paths and ditches.",
+      "sources": [
+        "fn",
+        "wf",
+        "wt"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "Woods and heaths on sandy, peaty or mossy soil; often on banks, by forest tracks and ditches.",
+    "sources": [
+      "fn",
+      "wf",
+      "wt"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "sources": [
+      "fn",
+      "wf"
+    ]
+  },
+  "sporePrint": {
+    "value": "Brown to purple-black",
+    "sources": [
+      "wf",
+      "wp"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "other",
+      "sources": [
+        "fn",
+        "wt"
+      ]
+    },
+    "ring": {
+      "value": "no",
+      "sources": [
+        "wf",
+        "wp",
+        "wt"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "wf",
+        "wp",
+        "wt"
+      ]
+    },
+    "growsOn": {
+      "value": "ground",
+      "sources": [
+        "fn",
+        "wf",
+        "wt"
+      ]
+    },
+    "capCm": {
+      "value": [
+        4,
+        12
+      ],
+      "sources": [
+        "fn",
+        "wp",
+        "wt"
+      ]
+    },
+    "fleshChange": {
+      "value": "Purple-black inside with white veins",
+      "sources": [
+        "fn",
+        "wf",
+        "wp"
+      ]
+    },
+    "smell": {
+      "value": "Unpleasant, of gas or rubber",
+      "sources": [
+        "fn",
+        "wf",
+        "wt"
+      ]
+    }
+  },
+  "lookalikes": [
+    {
+      "scientific": "Lycoperdon perlatum",
+      "english": "Common Puffball",
+      "slug": "common-puffball",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Inside",
+          "thisOne": "Dark purple-brown to black with white veins — never pure white",
+          "thatOne": "White and soft, later olive-brown powder",
+          "sources": [
+            "fn",
+            "wf",
+            "wf-cp"
+          ]
+        },
+        {
+          "feature": "Skin",
+          "thisOne": "Thick and tough, dirty yellow, cracked into coarse scales like a potato",
+          "thatOne": "Thin, with small pearl-like warts",
+          "sources": [
+            "fn",
+            "wt",
+            "fn-cp",
+            "wp-cp"
+          ]
+        },
+        {
+          "feature": "Feel",
+          "thisOne": "Hard and firm",
+          "thatOne": "Soft and spongy",
+          "sources": [
+            "fn",
+            "wp",
+            "wf-cp"
+          ]
+        },
+        {
+          "feature": "Smell",
+          "thisOne": "Unpleasant, of gas or rubber",
+          "thatOne": "Not distinctive",
+          "sources": [
+            "fn",
+            "wf",
+            "wt",
+            "fn-cp"
+          ]
+        },
+        {
+          "feature": "Shape",
+          "thisOne": "Round, with no stem — just root-like threads",
+          "thatOne": "Pear-shaped, with a stem-like base",
+          "sources": [
+            "fn",
+            "wt",
+            "fn-cp",
+            "wf-cp"
+          ]
+        }
+      ]
+    }
+  ],
+  "noDangerousLookalike": null,
+  "photos": [],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Scleroderma citrinum, Common Earthball",
+      "url": "https://www.first-nature.com/fungi/scleroderma-citrinum.php"
+    },
+    {
+      "id": "wf",
+      "title": "Wild Food UK — Common Earthball",
+      "url": "https://www.wildfooduk.com/mushroom-guide/common-earth-ball/"
+    },
+    {
+      "id": "wp",
+      "title": "Wikipedia — Scleroderma citrinum",
+      "url": "https://en.wikipedia.org/wiki/Scleroderma_citrinum"
+    },
+    {
+      "id": "wt",
+      "title": "Woodland Trust — Common Earthball",
+      "url": "https://www.woodlandtrust.org.uk/trees-woods-and-wildlife/fungi-and-lichens/common-earthball/"
+    },
+    {
+      "id": "fn-cp",
+      "title": "First Nature — Lycoperdon perlatum, Common Puffball",
+      "url": "https://www.first-nature.com/fungi/lycoperdon-perlatum.php"
+    },
+    {
+      "id": "wf-cp",
+      "title": "Wild Food UK — Common Puffball",
+      "url": "https://www.wildfooduk.com/mushroom-guide/common-puffball/"
+    },
+    {
+      "id": "wp-cp",
+      "title": "Wikipedia — Lycoperdon perlatum",
+      "url": "https://en.wikipedia.org/wiki/Lycoperdon_perlatum"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-06"
+}
