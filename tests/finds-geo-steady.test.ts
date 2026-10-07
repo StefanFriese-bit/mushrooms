@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { bearingDeg, circleRing, compassWord, distanceM, isThere, steadySpot, type Fix } from '../src/finds/geo';
+import { bearingDeg, circleRing, compassWord, distanceM, gridLines, isThere, steadySpot, type Fix } from '../src/finds/geo';
 
 const at = (lat: number, lon: number, accuracy: number, t: number): Fix => ({ lat, lon, accuracy, at: t });
 
@@ -55,5 +55,19 @@ describe('the accuracy circle on the map', () => {
     const ring = circleRing(c, 12);
     expect(ring[0]).toEqual(ring.at(-1));
     for (const [lon, lat] of ring) expect(distanceM(c, { lat, lon })).toBeCloseTo(12, 0);
+  });
+});
+
+describe('the plain grid when there is no map', () => {
+  const wood = { west: -1.605, south: 50.868, east: -1.597, north: 50.873 };
+  it('draws lines about 70–110 m apart when looking at a wood, covering the view', () => {
+    const lines = gridLines(wood, 15.5);
+    const vertical = lines.filter((l) => l[0][0] === l[1][0]);
+    expect(vertical.length).toBeGreaterThan(5);
+    expect(distanceM({ lat: 50.87, lon: vertical[0][0][0] }, { lat: 50.87, lon: vertical[1][0][0] })).toBeCloseTo(70, -1);
+  });
+  it('draws closer lines further in, and none when far too many would show', () => {
+    expect(gridLines(wood, 18).length).toBeGreaterThan(gridLines(wood, 15.5).length);
+    expect(gridLines({ west: -10, south: 40, east: 10, north: 60 }, 15)).toEqual([]);
   });
 });

@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'preact/hooks';
 import type { Spot } from '../finds/store';
-import { circleRing, type LatLon } from '../finds/geo';
+import { circleRing, gridLines, type LatLon } from '../finds/geo';
 
 // The map (spec 7): OpenFreeMap's tiles (OpenStreetMap data, credited on the map), his finds as pins, his position,
 // and — when making a find — one pin he can move by tapping the map or dragging it. Areas he has looked at stay on
@@ -11,6 +11,20 @@ type MapObj = InstanceType<MapLib['Map']>;
 type MarkerObj = InstanceType<MapLib['Marker']>;
 
 export const MAP_STYLE = 'https://tiles.openfreemap.org/styles/liberty';
+/** When OpenFreeMap cannot be reached (spec 7): OpenStreetMap's own tiles, online only — its tile policy forbids
+ * keeping them for offline use, and the service worker never does — over a plain background, with the grid on top,
+ * so his finds and his position always show, with or without a signal. */
+const FALLBACK_STYLE = {
+  version: 8 as const,
+  sources: {
+    osm: { type: 'raster' as const, tiles: ['https://tile.openstreetmap.org/{z}/{x}/{y}.png'], tileSize: 256, maxzoom: 19,
+      attribution: '© OpenStreetMap contributors' },
+  },
+  layers: [
+    { id: 'plain', type: 'background' as const, paint: { 'background-color': '#eef2e6' } },
+    { id: 'osm', type: 'raster' as const, source: 'osm' },
+  ],
+};
 const UK: [number, number] = [-2.5, 54.3];
 
 /** `accuracy`: how exact its GPS spot is (metres), drawn as a circle round it; null = placed by hand. */
@@ -34,15 +48,26 @@ function drawRings(m: MapObj, rings: Ring[]) {
     type: 'FeatureCollection' as const,
     features: rings.map((r) => ({ type: 'Feature' as const, properties: { kind: r.kind }, geometry: { type: 'Polygon' as const, coordinates: [r.ring] } })),
   };
-  const draw = () => {
-    const src = m.getSource('accuracy') as { setData: (d: typeof data) => void } | undefined;
-    if (src) { src.setData(data); return; }
-    m.addSource('accuracy', { type: 'geojson', data });
-    const color = ['match', ['get', 'kind'], 'here', '#1a73e8', '#8a4b2a'] as unknown as string;
-    m.addLayer({ id: 'accuracy-fill', type: 'fill', source: 'accuracy', paint: { 'fill-color': color, 'fill-opacity': 0.12 } });
-    m.addLayer({ id: 'accuracy-line', type: 'line', source: 'accuracy', paint: { 'line-color': color, 'line-width': 1.5, 'line-opacity': 0.7 } });
+  const src = m.getSource('accuracy') as { setData: (d: typeof data) => void } | undefined;
+  if (src) { src.setData(data); return; }
+  m.addSource('accuracy', { type: 'geojson', data });
+  const color = ['match', ['get', 'kind'], 'here', '#1a73e8', '#8a4b2a'] as unknown as string;
+  m.addLayer({ id: 'accuracy-fill', type: 'fill', source: 'accuracy', paint: { 'fill-color': color, 'fill-opacity': 0.12 } });
+  m.addLayer({ id: 'accuracy-line', type: 'line', source: 'accuracy', paint: { 'line-color': color, 'line-width': 1.5, 'line-opacity': 0.7 } });
+}
+
+/** The plain grid over whatever the map shows (nothing, when there is no map for the area), redrawn as he moves. */
+function drawGrid(m: MapObj) {
+  const b = m.getBounds();
+  const data = {
+    type: 'FeatureCollection' as const,
+    features: gridLines({ west: b.getWest(), south: b.getSouth(), east: b.getEast(), north: b.getNorth() }, m.getZoom())
+      .map((line) => ({ type: 'Feature' as const, properties: {}, geometry: { type: 'LineString' as const, coordinates: line } })),
   };
-  if (m.isStyleLoaded()) draw(); else m.once('load', draw);
+  const src = m.getSource('grid') as { setData: (d: typeof data) => void } | undefined;
+  if (src) { src.setData(data); return; }
+  m.addSource('grid', { type: 'geojson', data });
+  m.addLayer({ id: 'grid-lines', type: 'line', source: 'grid', paint: { 'line-color': '#7f8c76', 'line-width': 1, 'line-opacity': 0.45 } });
 }
 
 export function FindsMap({ pins = [], locate = false, pick, here = null, tall = false }: Props) {
@@ -53,6 +78,9 @@ export function FindsMap({ pins = [], locate = false, pick, here = null, tall = 
   const pickMarker = useRef<MarkerObj | null>(null);
   const hereMarker = useRef<MarkerObj | null>(null);
   const framedHere = useRef(false);
+  const rings = useRef<Ring[]>([]);
+  const [mode, setMode] = useState<'normal' | 'fallback'>('normal');
+  const [grid, setGrid] = useState(false);
   const onPick = useRef(pick?.onPick);
   onPick.current = pick?.onPick;
   const framed = useRef(false);
@@ -72,15 +100,37 @@ export function FindsMap({ pins = [], locate = false, pick, here = null, tall = 
         made = new ml.Map({ container: box.current, style: MAP_STYLE, center: UK, zoom: 5, attributionControl: { compact: true } });
         map.current = made;
         made.addControl(new ml.NavigationControl({ showCompass: false }), 'top-right');
+        made.addControl(new ml.ScaleControl({ maxWidth: 100, unit: 'metric' }), 'bottom-left');
         if (locate) {
           const geo = new ml.GeolocateControl({ positionOptions: { enableHighAccuracy: true }, trackUserLocation: true });
           made.addControl(geo, 'top-right');
           made.once('load', () => { if (!pins.length) geo.trigger(); });
         }
         let styled = false;
-        made.once('load', () => { styled = true; setProblem(null); });
-        made.on('error', () => {
-          if (!styled) setProblem('The map needs a signal the first time an area is shown. Everything else works without one.');
+        let fellBack = false;
+        let gridOn = false;
+        const showGrid = (m: MapObj) => {
+          if (!gridOn) { gridOn = true; setGrid(true); m.on('moveend', () => drawGrid(m)); }
+          drawGrid(m);
+        };
+        made.once('load', () => { styled = true; if (!fellBack) setProblem(null); });
+        // After any style (the first, or the fallback): the accuracy circles again, and the grid when it is on.
+        made.on('style.load', () => {
+          drawRings(made!, rings.current);
+          if (gridOn) drawGrid(made!);
+        });
+        made.on('error', (event) => {
+          const e = event as unknown as { sourceId?: string };
+          if (!styled && !fellBack) {
+            // OpenFreeMap's style could not be had (no signal and never stored, or the service is down).
+            fellBack = true;
+            setMode('fallback');
+            setProblem('Back-up map: OpenStreetMap while there is a signal, a plain grid without one.');
+            made!.setStyle(FALLBACK_STYLE);
+            made!.once('style.load', () => showGrid(made!));
+          } else if (styled && e.sourceId && !gridOn) {
+            showGrid(made!); // the map has no tiles here (never looked at with a signal): the grid keeps a sense of distance
+          }
         });
         made.on('click', (e) => onPick.current?.(e.lngLat.lat, e.lngLat.lng));
         setReady(true);
@@ -128,9 +178,10 @@ export function FindsMap({ pins = [], locate = false, pick, here = null, tall = 
   useEffect(() => {
     const m = map.current;
     if (!ready || !m) return;
-    const rings: Ring[] = pins.filter((p) => p.accuracy).map((p) => ({ ring: circleRing(p, p.accuracy as number), kind: 'find' }));
-    if (here) rings.push({ ring: circleRing(here, here.accuracy), kind: 'here' });
-    drawRings(m, rings);
+    const next: Ring[] = pins.filter((p) => p.accuracy).map((p) => ({ ring: circleRing(p, p.accuracy as number), kind: 'find' }));
+    if (here) next.push({ ring: circleRing(here, here.accuracy), kind: 'here' });
+    rings.current = next;
+    if (m.isStyleLoaded()) drawRings(m, next); // otherwise the style's own load draws them
   }, [ready, pins, here?.lat, here?.lon, here?.accuracy]);
 
   // Where he is now: a dot; the first time it is known, the map frames him and the find(s) together.
@@ -176,7 +227,7 @@ export function FindsMap({ pins = [], locate = false, pick, here = null, tall = 
   }, [ready, pick?.spot?.lat, pick?.spot?.lon]);
 
   return (
-    <div class={`map-wrap${tall ? ' tall' : ''}`}>
+    <div class={`map-wrap${tall ? ' tall' : ''}`} data-map-mode={mode} data-grid={grid ? 'on' : 'off'}>
       <div class="map" ref={box} data-test="map" />
       {problem && <p class="map-problem" role="status">{problem}</p>}
     </div>

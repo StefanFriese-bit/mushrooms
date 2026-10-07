@@ -321,6 +321,25 @@ test.describe('Finds', () => {
   });
 });
 
+test.describe('Finds with no map service', () => {
+  test.use({ serviceWorkers: 'block', geolocation: { latitude: 51.6588, longitude: 0.0466, accuracy: 7 }, permissions: ['geolocation'] });
+  test('with no stored map and no signal, the finds and the position still show on a plain grid, with a scale', async ({ page }) => {
+    await page.route('https://tiles.openfreemap.org/**', (r) => r.abort());
+    await page.route('https://tile.openstreetmap.org/**', (r) => r.abort());
+    await page.goto(`${site.url}#/finds/new`);
+    await expect(page.locator('[data-test=where]')).toContainText('within 7 m', { timeout: 15000 });
+    await page.getByRole('button', { name: 'Save the find' }).click();
+    await expect(page.getByRole('heading', { name: 'Not identified yet' })).toBeVisible();
+    await page.goto(`${site.url}#/finds`);
+    const wrap = page.locator('.map-wrap');
+    await expect(wrap).toHaveAttribute('data-map-mode', 'fallback', { timeout: 15000 });
+    await expect(wrap).toHaveAttribute('data-grid', 'on');
+    await expect(page.locator('[data-test=map-pin]')).toHaveCount(1);
+    await expect(page.locator('.map-problem')).toContainText('plain grid');
+    await expect(page.locator('.maplibregl-ctrl-scale')).toBeVisible();
+  });
+});
+
 test.describe('Finds without location', () => {
   test.use({ serviceWorkers: 'block', permissions: [] });
   test('with location refused, the pin is placed by hand on the map', async ({ page }) => {

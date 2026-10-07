@@ -76,3 +76,18 @@ export function circleRing(c: LatLon, radiusM: number, points = 48): Array<[numb
   }
   return ring;
 }
+
+/** The grid drawn when there is no map: lines of longitude and latitude over the visible area, closer together the
+ * further he zooms in (about 20 m apart at street level, 100 m when looking at a wood); none if too many would show. */
+export function gridLines(b: { west: number; south: number; east: number; north: number }, zoom: number): Array<Array<[number, number]>> {
+  const step = zoom >= 17 ? 0.0002 : zoom >= 15 ? 0.001 : zoom >= 12 ? 0.01 : zoom >= 9 ? 0.1 : 1;
+  const x0 = Math.floor(b.west / step);
+  const x1 = Math.ceil(b.east / step);
+  const y0 = Math.floor(b.south / step);
+  const y1 = Math.ceil(b.north / step);
+  if (x1 - x0 > 400 || y1 - y0 > 400) return [];
+  const lines: Array<Array<[number, number]>> = [];
+  for (let i = x0; i <= x1; i++) lines.push([[i * step, b.south], [i * step, b.north]]);
+  for (let j = y0; j <= y1; j++) lines.push([[b.west, j * step], [b.east, j * step]]);
+  return lines;
+}
