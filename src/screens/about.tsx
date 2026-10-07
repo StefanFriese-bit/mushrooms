@@ -20,6 +20,10 @@ export function About() {
         Nature, Wild Food UK, Wikipedia and the Woodland Trust, listed on each page. The scan models: BVRA, trained on
         the Danish Fungi 2020 and FungiTastic photos (CC BY-NC 4.0, non-commercial use). Maps: OpenFreeMap, with map data © OpenStreetMap
         contributors. Your finds are kept on this phone only.</p>
+      <p class="muted small">OS grid references are worked out with geodesy, copyright (c) 2014 Chris Veness, MIT licence:
+        permission is granted, free of charge, to use, copy, modify and distribute it, provided this notice is kept; it is
+        provided "as is", without warranty of any kind. Plus Codes follow Google's open Open Location Code
+        (Apache License 2.0).</p>
     </>
   );
 }
