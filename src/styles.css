@@ -121,3 +121,9 @@ ol.answers li { margin: 2px 0; }
 /* Backup and restore of finds (src/screens/backup.tsx): the two buttons side by side, level. */
 .backup-actions { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
 .backup-actions .file-button { margin-top: 0; }
+/* Filters on Finds (src/screens/finds.tsx). */
+.find-filters { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; margin: 8px 0; }
+.find-filters .field { flex: 1 1 200px; margin: 0; }
+.find-filters .check { font-size: 15px; white-space: nowrap; }
+.find-filters p { flex-basis: 100%; margin: 0; }
+.link-button { font: inherit; background: none; border: 0; padding: 0; color: var(--accent); text-decoration: underline; cursor: pointer; }

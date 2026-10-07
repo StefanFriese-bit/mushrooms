@@ -3,7 +3,8 @@ import { fileURLToPath } from 'node:url';
 import { startServer } from './server';
 import brand from '../src/brand.json' with { type: 'json' };
 import { MODEL_FILES } from '../src/scan/model-files';
-import { readFileSync, readdirSync } from 'node:fs';
+import { readFileSync, readdirSync, writeFileSync } from 'node:fs';
+import { packBackup } from '../src/finds/backup';
 import { narrow, QUESTIONS, UNSURE, type Answers } from '../src/identify';
 import { searchSpecies } from '../src/species';
 import type { SpeciesRecord } from '../src/types';
@@ -270,6 +271,38 @@ test.describe('Finds', () => {
     await page.getByLabel('Backup file to restore').setInputFiles({ name: 'broken.zip', mimeType: 'application/zip', buffer: bytes.subarray(0, bytes.length - 60) });
     await expect(page.locator('[data-test=backup-said]')).toHaveText("That file can't be restored. Nothing was changed.");
     await expect(page.locator('[data-test=find-row]')).toHaveCount(1);
+  });
+
+  test('filters: by species, and this month in past years — the map and the list together', async ({ page }, info) => {
+    const now = new Date();
+    const on = (y: number, m: number) => new Date(now.getFullYear() - y, m, 5, 10).toISOString();
+    const other = (now.getMonth() + 6) % 12;
+    const f = (id: string, at: string, species: string | null) =>
+      ({ id, at, spot: { lat: 51.6588, lon: 0.0466 + Number(id.slice(1)) / 1000, accuracy: 8 }, species, notes: '', photoIds: [] });
+    const file = info.outputPath('old-finds.zip');
+    writeFileSync(file, packBackup([
+      f('f1', on(1, now.getMonth()), 'Cantharellus cibarius'), // this month, last year
+      f('f2', on(1, other), 'Cantharellus cibarius'), // another month, last year
+      f('f3', on(0, now.getMonth()), 'Boletus edulis'), // this month, this year
+      f('f4', on(2, now.getMonth()), null), // this month, two years ago, not identified
+    ], [], now));
+    await page.goto(`${site.url}#/finds`);
+    await page.getByLabel('Backup file to restore').setInputFiles(file);
+    await expect(page.locator('[data-test=find-row]')).toHaveCount(4);
+    const which = page.getByLabel('Which finds to show');
+    await which.selectOption('Cantharellus cibarius');
+    await expect(page.locator('[data-test=find-row]')).toHaveCount(2);
+    await expect(page.locator('[data-test=filter-count]')).toContainText('Showing 2 of 4');
+    await expect(page.locator('[data-test=map-pin]')).toHaveCount(2);
+    await page.getByLabel(/in past years/).check();
+    await expect(page.locator('[data-test=find-row]')).toHaveCount(1); // f1 only
+    await which.selectOption('all');
+    await expect(page.locator('[data-test=find-row]')).toHaveCount(2); // f1 and f4: not this year's, not another month's
+    await expect(page.locator('[data-test=map-pin]')).toHaveCount(2);
+    await which.selectOption('Boletus edulis');
+    await expect(page.locator('[data-test=filter-empty]')).toContainText('in earlier years for this species');
+    await page.getByRole('button', { name: 'Show all' }).click();
+    await expect(page.locator('[data-test=find-row]')).toHaveCount(4);
   });
 
   test('a find can be changed and deleted', async ({ page }) => {
