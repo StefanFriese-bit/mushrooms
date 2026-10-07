@@ -24,7 +24,13 @@ export function FindNew() {
   useEffect(() => () => previews.forEach((u) => URL.revokeObjectURL(u)), [previews]);
   useEffect(() => { speciesNames().then(setNames); }, []);
   useEffect(() => followSpot(
-    (s) => { if (!placed.current) { setSpot(s); setWhere(`Your position, ${sayAccuracy(s.accuracy)}`); } },
+    (s, readings) => {
+      if (placed.current) return;
+      setSpot(s);
+      // Readings taken while the form is open are averaged (src/finds/geo.ts steadySpot): standing still helps.
+      setWhere(`Your position, ${sayAccuracy(s.accuracy)}${readings > 1 ? `, steadied over ${readings} readings` : ''}` +
+        (s.accuracy !== null && s.accuracy > 15 ? '. Under trees, standing still for half a minute usually makes it more exact.' : ''));
+    },
     (message) => { if (!placed.current) setWhere(message); },
   ), []);
   const place = (lat: number, lon: number) => {

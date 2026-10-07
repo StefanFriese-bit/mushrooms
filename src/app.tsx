@@ -11,6 +11,7 @@ import { Scan } from './screens/scan';
 import { Finds } from './screens/finds';
 import { FindNew } from './screens/find-new';
 import { FindPage } from './screens/find-page';
+import { FindGo } from './screens/find-go';
 import { UpdateBar } from './screens/update-bar';
 import brand from './brand.json';
 
@@ -61,6 +62,7 @@ function screen(route: Route) {
     case 'finds': return <Finds />;
     case 'find-new': return <FindNew />;
     case 'find': return <FindPage id={route.id} key={route.id} />;
+    case 'find-go': return <FindGo id={route.id} key={route.id} />;
     default: return <><h1>Not found</h1><p><a href="#/guide">Open the guide</a></p></>;
   }
 }
@@ -76,7 +78,7 @@ export function App() {
     setRoute((r) => (JSON.stringify(r) === JSON.stringify(now) ? r : now));
     return () => removeEventListener('hashchange', onHash);
   }, []);
-  const active = route.name === 'species' ? 'guide' : route.name === 'find' || route.name === 'find-new' ? 'finds' : route.name;
+  const active = route.name === 'species' ? 'guide' : route.name === 'find' || route.name === 'find-new' || route.name === 'find-go' ? 'finds' : route.name;
   return (
     <div class="shell">
       <Header />

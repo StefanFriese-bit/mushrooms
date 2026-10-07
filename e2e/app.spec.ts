@@ -7,6 +7,8 @@ import { readFileSync, readdirSync } from 'node:fs';
 import { narrow, QUESTIONS, UNSURE, type Answers } from '../src/identify';
 import { searchSpecies } from '../src/species';
 import type { SpeciesRecord } from '../src/types';
+import { osGridRef, plusCode } from '../src/finds/codes';
+import { distanceM, sayDistance } from '../src/finds/geo';
 
 const DIST = fileURLToPath(new URL('../dist', import.meta.url));
 const TEST_WORDS = /test version|\(test\)/i; // the early test version's wording, gone since 06/10/2026
@@ -188,7 +190,7 @@ test.describe('Finds', () => {
     page.on('request', (r) => { const u = new URL(r.url()); if (/^https?:$/.test(u.protocol)) hosts.add(u.host); }); // blob: = in the phone's memory
     await page.goto(`${site.url}#/finds`);
     await page.getByRole('link', { name: 'Add a find here' }).click();
-    await expect(page.locator('[data-test=where]')).toHaveText('Your position, within 7 m', { timeout: 15000 });
+    await expect(page.locator('[data-test=where]')).toContainText('Your position, within 7 m', { timeout: 15000 });
     await page.locator('input[type=file]').setInputFiles(PHOTO);
     await expect(page.locator('.thumbs img')).toHaveCount(1);
     await page.getByLabel('What it is').selectOption('Cantharellus cibarius');
@@ -205,6 +207,30 @@ test.describe('Finds', () => {
     await expect(page.locator('[data-test=map-pin]')).toHaveCount(1);
     // Spec 9: his finds go nowhere — the only addresses are the app's own and the map's.
     expect([...hosts].filter((h) => h !== new URL(site.url).host && h !== 'tiles.openfreemap.org')).toEqual([]);
+  });
+
+  test('Find it again: how far and which way, then "you are there" with its photos; its grid reference and Plus Code', async ({ page, context }) => {
+    const spot = { lat: 51.6588, lon: 0.0466 };
+    await page.goto(`${site.url}#/finds/new`);
+    await expect(page.locator('[data-test=where]')).toContainText('within 7 m', { timeout: 15000 });
+    await page.locator('input[type=file]').setInputFiles(PHOTO);
+    await expect(page.locator('.thumbs img')).toHaveCount(1);
+    await page.getByRole('button', { name: 'Save the find' }).click();
+    await expect(page.locator('[data-test=os-grid]')).toHaveText(osGridRef(spot)!);
+    await expect(page.locator('[data-test=plus-code]')).toHaveText(plusCode(spot));
+    // He walks away: 40 m south of it.
+    const away = { lat: spot.lat - 0.00036, lon: spot.lon };
+    await context.setGeolocation({ latitude: away.lat, longitude: away.lon, accuracy: 5 });
+    await page.locator('[data-test=find-again]').click();
+    await expect(page.locator('[data-test=go-distance]')).toHaveText(sayDistance(distanceM(away, spot)), { timeout: 15000 });
+    await expect(page.getByText('Head north', { exact: true })).toBeVisible();
+    await expect(page.locator('[data-test=go-arrow]')).toHaveCount(1);
+    await expect(page.locator('[data-test=here-dot]')).toHaveCount(1);
+    // Back at the spot: as close as GPS can tell, and his own photos to recognise it by.
+    await context.setGeolocation({ latitude: spot.lat, longitude: spot.lon, accuracy: 5 });
+    await page.reload();
+    await expect(page.locator('[data-test=go-distance]')).toHaveText('You are there', { timeout: 15000 });
+    await expect(page.locator('[data-test=go-there] img')).toHaveCount(1);
   });
 
   test('a find can be changed and deleted', async ({ page }) => {

@@ -7,6 +7,7 @@ export type Route =
   | { name: 'finds' }
   | { name: 'find-new' }
   | { name: 'find'; id: string }
+  | { name: 'find-go'; id: string } // walking back to a find: arrow and distance
   | { name: 'learn' }
   | { name: 'about' }
   | { name: 'scan-speed' }
@@ -23,6 +24,7 @@ export function parseHash(hash: string): Route {
   if (parts[0] === 'check' && parts[1]) return { name: 'check', slug: decodeURIComponent(parts[1]) };
   if (parts[0] === 'finds' && parts[1] === 'new' && parts.length === 2) return { name: 'find-new' };
   if (parts[0] === 'finds' && parts[1] && parts.length === 2) return { name: 'find', id: decodeURIComponent(parts[1]) };
+  if (parts[0] === 'finds' && parts[1] && parts[2] === 'go' && parts.length === 3) return { name: 'find-go', id: decodeURIComponent(parts[1]) };
   if (parts[0] === 'identify' && parts.length === 1) return { name: 'identify', query: qs };
   const simple = SIMPLE.find((n) => n === parts[0]);
   if (simple && parts.length === 1) return { name: simple };
@@ -41,6 +43,8 @@ export function hrefFor(route: Route): string {
       return '#/finds/new';
     case 'find':
       return `#/finds/${encodeURIComponent(route.id)}`;
+    case 'find-go':
+      return `#/finds/${encodeURIComponent(route.id)}/go`;
     case 'identify':
       return route.query ? `#/identify?${route.query}` : '#/identify';
     case 'not-found':

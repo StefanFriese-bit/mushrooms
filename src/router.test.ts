@@ -29,6 +29,8 @@ describe('parseHash', () => {
     expect(parseHash('#/finds/2f1c')).toEqual({ name: 'find', id: '2f1c' });
     expect(hrefFor({ name: 'find', id: '2f1c' })).toBe('#/finds/2f1c');
     expect(hrefFor({ name: 'find-new' })).toBe('#/finds/new');
+    expect(parseHash('#/finds/2f1c/go')).toEqual({ name: 'find-go', id: '2f1c' }); // walking back to it
+    expect(hrefFor({ name: 'find-go', id: '2f1c' })).toBe('#/finds/2f1c/go');
   });
   it('reports an unknown address', () => {
     expect(parseHash('#/nowhere')).toEqual({ name: 'not-found', path: '/nowhere' });

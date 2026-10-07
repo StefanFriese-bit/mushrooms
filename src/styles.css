@@ -88,6 +88,8 @@ ol.answers li { margin: 2px 0; }
 .pin { width: 22px; height: 22px; border-radius: 50% 50% 50% 0; transform: rotate(-45deg); background: #8a4b2a;
   border: 2px solid #fff; box-shadow: 0 1px 3px rgba(0, 0, 0, .4); padding: 0; cursor: pointer; }
 .pin-new { background: var(--deadly); width: 26px; height: 26px; }
+/* Where he is now, walking back to a find (src/screens/find-go.tsx). */
+.here-dot { width: 16px; height: 16px; border-radius: 50%; background: #1a73e8; border: 3px solid #fff; box-shadow: 0 0 0 1px rgba(0,0,0,.25); }
 .maplibregl-popup-content { color: #1d1d1f; font-size: 14px; }
 .thumbs { display: flex; flex-wrap: wrap; gap: 8px; }
 .thumbs figure { margin: 0; width: 96px; text-align: center; }
@@ -104,3 +106,15 @@ ol.answers li { margin: 2px 0; }
 .slot-empty { display: flex; align-items: center; justify-content: center; font-size: 28px; color: var(--muted);
   border: 2px dashed var(--line); }
 .slot figcaption { margin: 4px 0; line-height: 1.2; }
+
+/* Back to a find (src/screens/find-go.tsx): the dial, the distance, the way to walk. */
+.go { text-align: center; }
+.go-dial { width: min(52vw, 210px); height: auto; display: block; margin: 4px auto 0; }
+.go-ring { fill: var(--card); stroke: var(--line); stroke-width: 2; }
+.go-north { font: 700 18px -apple-system, system-ui, sans-serif; fill: var(--deadly); text-anchor: middle; dominant-baseline: middle; }
+.go-arrow { fill: var(--accent); }
+.go-there { fill: var(--edible); opacity: .85; }
+.go-distance { font-size: 40px; font-weight: 700; margin: 4px 0 0; letter-spacing: -.5px; }
+.go-way { font-size: 18px; margin: 0 0 8px; }
+.refs p { margin: 4px 0; }
+.refs code { font-size: 15px; }
