@@ -118,3 +118,6 @@ ol.answers li { margin: 2px 0; }
 .go-way { font-size: 18px; margin: 0 0 8px; }
 .refs p { margin: 4px 0; }
 .refs code { font-size: 15px; }
+/* Backup and restore of finds (src/screens/backup.tsx): the two buttons side by side, level. */
+.backup-actions { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.backup-actions .file-button { margin-top: 0; }

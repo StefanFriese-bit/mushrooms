@@ -233,6 +233,45 @@ test.describe('Finds', () => {
     await expect(page.locator('[data-test=go-there] img')).toHaveCount(1);
   });
 
+  test('backup and restore: one file brings a deleted find back with its photo; a damaged file changes nothing', async ({ page }, info) => {
+    await page.addInitScript(() => { Object.defineProperty(navigator, 'canShare', { value: undefined }); }); // the download route
+    await page.goto(`${site.url}#/finds/new`);
+    await expect(page.locator('[data-test=where]')).toContainText('within 7 m', { timeout: 15000 });
+    await page.locator('input[type=file]').setInputFiles(PHOTO);
+    await expect(page.locator('.thumbs img')).toHaveCount(1);
+    await page.getByLabel('What it is').selectOption('Cantharellus cibarius');
+    await page.getByRole('button', { name: 'Save the find' }).click();
+    await expect(page.getByRole('heading', { name: 'Chanterelle', exact: true })).toBeVisible();
+    await page.goto(`${site.url}#/finds`);
+    await expect(page.locator('[data-test=backup-reminder]')).toContainText('1 find is not in a backup yet');
+    const [download] = await Promise.all([page.waitForEvent('download'), page.getByRole('button', { name: 'Back up 1 find' }).click()]);
+    expect(download.suggestedFilename()).toMatch(/^mushroom-finds-\d{4}-\d{2}-\d{2}\.zip$/);
+    const file = info.outputPath('backup.zip');
+    await download.saveAs(file);
+    await expect(page.locator('[data-test=backup-reminder]')).toHaveCount(0);
+    await expect(page.locator('[data-test=backup]')).toContainText('Last backup:');
+    // The find is deleted …
+    await page.locator('[data-test=find-row]').first().click();
+    page.once('dialog', (d) => d.accept());
+    await page.getByRole('button', { name: 'Delete this find' }).click();
+    await expect(page.locator('[data-test=find-row]')).toHaveCount(0);
+    // … and the file brings it back, photo and all.
+    await page.getByLabel('Backup file to restore').setInputFiles(file);
+    await expect(page.locator('[data-test=backup-said]')).toHaveText('Restored 1 find.');
+    await expect(page.locator('[data-test=find-row]')).toHaveCount(1);
+    await page.locator('[data-test=find-row]').first().click();
+    await expect(page.getByRole('heading', { name: 'Chanterelle', exact: true })).toBeVisible();
+    await expect(page.locator('.photos img')).toHaveCount(1);
+    // Restoring again adds nothing twice; a damaged file changes nothing.
+    await page.goto(`${site.url}#/finds`);
+    await page.getByLabel('Backup file to restore').setInputFiles(file);
+    await expect(page.locator('[data-test=backup-said]')).toHaveText('Restored 0 finds; 1 find was already on this phone and left as it was.');
+    const bytes = readFileSync(file);
+    await page.getByLabel('Backup file to restore').setInputFiles({ name: 'broken.zip', mimeType: 'application/zip', buffer: bytes.subarray(0, bytes.length - 60) });
+    await expect(page.locator('[data-test=backup-said]')).toHaveText("That file can't be restored. Nothing was changed.");
+    await expect(page.locator('[data-test=find-row]')).toHaveCount(1);
+  });
+
   test('a find can be changed and deleted', async ({ page }) => {
     await page.goto(`${site.url}#/finds/new`);
     await expect(page.locator('[data-test=where]')).toContainText('within 7 m', { timeout: 15000 });

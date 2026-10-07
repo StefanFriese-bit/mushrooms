@@ -4,6 +4,7 @@ import { listFinds, photosOf, photoAddress, type Find } from '../finds/store';
 import { sayAccuracy } from '../finds/geo';
 import { speciesNames } from '../species-names';
 import { FindsMap, type Pin } from './finds-map';
+import { BackupReminder, BackupSection, useBackup } from './backup';
 
 // Finds (spec 7): his own map — his finds as pins, his position — and the list, newest first. Everything here lives on
 // this phone only.
@@ -32,7 +33,9 @@ export function Finds() {
   const [finds, setFinds] = useState<Find[] | null>(null);
   const [problem, setProblem] = useState<string | null>(null);
   const names = useNames();
-  useEffect(() => { listFinds().then(setFinds, () => setProblem('The finds on this phone could not be read.')); }, []);
+  const load = () => listFinds().then(setFinds, () => setProblem('The finds on this phone could not be read.'));
+  useEffect(() => { void load(); }, []);
+  const backup = useBackup(finds ?? [], () => void load());
   const pins = useMemo<Pin[]>(() => (finds ?? []).filter((f) => f.spot).map((f) => ({
     id: f.id, lat: f.spot!.lat, lon: f.spot!.lon, label: `${findLabel(f, names)} · ${sayWhen(f.at)}`, href: hrefFor({ name: 'find', id: f.id }),
   })), [finds, names]);
@@ -40,6 +43,7 @@ export function Finds() {
     <>
       <h1>Finds</h1>
       <p><a class="big-button" href={hrefFor({ name: 'find-new' })}>Add a find here</a></p>
+      {finds && <BackupReminder b={backup} />}
       <FindsMap pins={pins} locate />
       <p class="muted small">Your finds stay on this phone only. The blue dot is you; areas you have looked at stay on the
         map without a signal.</p>
@@ -55,6 +59,7 @@ export function Finds() {
           </div>
         </a>
       ))}
+      {finds && <BackupSection b={backup} count={finds.length} />}
     </>
   );
 }

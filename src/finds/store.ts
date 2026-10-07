@@ -1,4 +1,5 @@
 import type { LatLon } from './geo';
+import { planRestore } from './backup';
 
 // His finds (spec 7), kept in this phone's own database (IndexedDB) and nowhere else. A find's photos are stored as
 // bytes beside it. Nothing here ever talks to the network.
@@ -107,3 +108,26 @@ export async function photosOf(f: Find): Promise<StoredPhoto[]> {
 
 /** A stored photo as an address an <img> can show (the caller revokes it when done). */
 export const photoAddress = (p: StoredPhoto) => URL.createObjectURL(new Blob([p.bytes], { type: p.type }));
+
+/** Every stored photo (for a backup). */
+export async function allPhotos(): Promise<StoredPhoto[]> {
+  const db = await open();
+  return ask(db.transaction('photos').objectStore('photos').getAll() as IDBRequest<StoredPhoto[]>);
+}
+
+/**
+ * Restores finds from a checked backup in one transaction: each find not already on the phone (by id) is added with
+ * its photos; finds already here are left exactly as they are. Either all of it is written or none of it.
+ */
+export async function restoreFinds(finds: Find[], photos: StoredPhoto[]): Promise<{ added: number; already: number }> {
+  const { add } = planRestore(new Set((await listFinds()).map((f) => f.id)), finds);
+  const byFind = new Map<string, StoredPhoto[]>();
+  for (const p of photos) byFind.set(p.findId, [...(byFind.get(p.findId) ?? []), p]);
+  await inTx(['finds', 'photos'], 'readwrite', (tx) => {
+    for (const f of add) {
+      tx.objectStore('finds').add(f);
+      for (const p of byFind.get(f.id) ?? []) tx.objectStore('photos').put(p);
+    }
+  });
+  return { added: add.length, already: finds.length - add.length };
+}
