@@ -23,7 +23,7 @@ def text_by_url():
         if (R / 'full' / f'{sid}.txt').exists():
             out[url] = (R / 'full' / f'{sid}.txt').read_text()
     for ex in R.glob('*.txt'):
-        for site, url in re.findall(r'^\[(fn|wf|wp|wt)\] (https?://\S+)', ex.read_text(), re.M):
+        for site, url in re.findall(r'^\[(fn|wf|wp|wt|ns)\] (https?://\S+)', ex.read_text(), re.M):
             f = R / 'full' / f'{ex.stem}.{site}.txt'
             if f.exists():
                 out[url] = f.read_text()

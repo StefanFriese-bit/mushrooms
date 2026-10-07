@@ -5,3 +5,4 @@ test-results/
 playwright-report/
 .DS_Store
 tools/scan-test/.venv/
+__pycache__/

@@ -1,0 +1,197 @@
+{
+  "slug": "orange-mosscap",
+  "inatId": 118170,
+  "scientific": "Rickenella fibula",
+  "english": "Orange Mosscap",
+  "olderNames": [
+    "Mycena fibula",
+    "Omphalia fibula"
+  ],
+  "edibility": {
+    "value": "not-edible",
+    "sources": [
+      "wp"
+    ]
+  },
+  "edibilityNote": {
+    "value": "Whether it can be eaten is not known.",
+    "sources": [
+      "wp"
+    ]
+  },
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "Tiny orange to yellow cap, usually less than 1 cm across.",
+      "sources": [
+        "wp",
+        "ns"
+      ]
+    },
+    {
+      "value": "Gills running down the stem.",
+      "sources": [
+        "wp",
+        "ns"
+      ]
+    },
+    {
+      "value": "Grows among moss.",
+      "sources": [
+        "wp",
+        "ns"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "Among moss.",
+    "sources": [
+      "wp",
+      "ns"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      9,
+      10,
+      11
+    ],
+    "sources": [
+      "ns"
+    ]
+  },
+  "sporePrint": {
+    "value": "White",
+    "sources": [
+      "wp",
+      "ns"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "gills",
+      "sources": [
+        "wp",
+        "ns"
+      ]
+    },
+    "ring": {
+      "value": "no",
+      "sources": [
+        "wp",
+        "ns"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "wp",
+        "ns"
+      ]
+    },
+    "growsOn": {
+      "value": "ground",
+      "sources": [
+        "wp",
+        "ns"
+      ]
+    },
+    "capCm": {
+      "value": [
+        1,
+        1
+      ],
+      "sources": [
+        "wp",
+        "ns"
+      ]
+    },
+    "fleshChange": {
+      "value": "No colour change described",
+      "sources": [
+        "wp"
+      ]
+    },
+    "smell": {
+      "value": "Little smell",
+      "sources": [
+        "wp"
+      ]
+    }
+  },
+  "lookalikes": [],
+  "noDangerousLookalike": null,
+  "photos": [
+    {
+      "file": "photos/orange-mosscap/1.webp",
+      "view": "whole",
+      "credit": "(c) Will Brantingham, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/318176746"
+    },
+    {
+      "file": "photos/orange-mosscap/2.webp",
+      "view": "whole",
+      "credit": "(c) rserridge, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/319608789"
+    },
+    {
+      "file": "photos/orange-mosscap/3.webp",
+      "view": "whole",
+      "credit": "(c) Will Brantingham, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/318176746"
+    },
+    {
+      "file": "photos/orange-mosscap/4.webp",
+      "view": "whole",
+      "credit": "(c) rserridge, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/319608789"
+    },
+    {
+      "file": "photos/orange-mosscap/5.webp",
+      "view": "whole",
+      "credit": "(c) Will Brantingham, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/318176746"
+    },
+    {
+      "file": "photos/orange-mosscap/6.webp",
+      "view": "whole",
+      "credit": "(c) rserridge, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/319608789"
+    }
+  ],
+  "sources": [
+    {
+      "id": "wp",
+      "title": "Wikipedia — Rickenella fibula",
+      "url": "https://en.wikipedia.org/wiki/Rickenella_fibula"
+    },
+    {
+      "id": "ns",
+      "title": "NatureSpot — Orange Mosscap",
+      "url": "https://www.naturespot.org/species/orange-mosscap"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-07"
+}

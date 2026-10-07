@@ -1,6 +1,7 @@
 """Write one species page from a compact description (used while writing the guide's batches): sources come from the
 gathered extracts (tools/research/sources.py), the record is written as content/species/<slug>.json."""
 import json, pathlib, subprocess, sys
+from datetime import date
 ROOT = pathlib.Path(__file__).resolve().parents[2]
 
 
@@ -33,7 +34,7 @@ def write(slug, *, extract, partners=(), extra=(), drop=(), titles=None, **field
            'protectedInUk': fields.get('protectedInUk', S(False, 'wf-prot', 'wp-s41')), 'topPoints': fields['topPoints'],
            'habitat': fields['habitat'], 'seasonMonths': fields['seasonMonths'], 'sporePrint': fields['sporePrint'],
            'features': fields['features'], 'lookalikes': fields.get('lookalikes', []),
-           'noDangerousLookalike': fields.get('noDangerousLookalike'), 'photos': [], 'sources': src, 'checked': '2026-10-06'}
+           'noDangerousLookalike': fields.get('noDangerousLookalike'), 'photos': [], 'sources': src, 'checked': fields.get('checked', date.today().isoformat())}
     old = ROOT / f'content/species/{slug}.json'
     if old.exists():
         rec['photos'] = json.loads(old.read_text()).get('photos', [])

@@ -2,7 +2,9 @@
 """Gather the identification facts the guide's pages are written from (spec 5.1, 5.3), one short extract per species.
 
 For each species: First Nature, Wild Food UK, Wikipedia (its text and its mycology fact box) and the Woodland Trust,
-under the current scientific name and the older ones (sites keep old names). Only the article's identification
+under the current scientific name and the older ones (sites keep old names). NatureSpot (approved by Stefan 07/10/2026
+for the species still without a page): `--naturespot <scientific name> ... | --naturespot-missing` adds its species
+account to an existing extract — the account only, never the recorders' photo captions or records. Only the article's identification
 sections are kept — never reader comments — and each is cut short. One polite request per site at a time.
 
 Usage: gather.py <scientific name> ... | --batch 1 | --batch 2      writes cache/research/<slug>.txt (never published)
@@ -117,6 +119,48 @@ def wild_food(name, names, parts, slug, core=True):
     return ['[wf] no page']
 
 
+NS_FIELDS = ['Description', 'Similar Species', 'Identification difficulty', 'Recording advice', 'Habitat', 'When to see it',
+             'UK Status']
+
+
+def naturespot(names, english, slug):
+    """NatureSpot's species account: tried under the English name, then the scientific names (it files some species under
+    an older name, e.g. parasola-conopilus). Only the labelled account fields are kept."""
+    tries = ([f'https://www.naturespot.org/species/{slugify(english)}'] if english else []) + \
+        [f'https://www.naturespot.org/species/{slugify(n)}' for n in names]
+    for url in list(dict.fromkeys(tries)):
+        code, page, final = fetch(url)
+        if code != 200 or '/species/' not in final:
+            continue
+        fields = {}
+        for label, body in re.findall(r'(?s)<div\s+class="col-md-3 field-label-inline">\s*([^<]+?)\s*</div>\s*<div\s+class="col-md-9">(.*?)</div>', page):
+            if label in NS_FIELDS and label not in fields:
+                fields[label] = text_of(body)
+        if not fields:
+            continue
+        d = OUT / 'full'
+        d.mkdir(parents=True, exist_ok=True)
+        (d / f'{slug}.ns.txt').write_text('\n'.join(f'{k}: {v}' for k, v in fields.items()))
+        sci = re.search(r'(?s)Scientific name\s*(?:<[^>]+>\s*)*([A-Z][a-z]+ [a-z-]+)', page)
+        return [f'[ns] {final}  filed as {sci.group(1) if sci else "?"}'] + [f'  - {k}: {v[:700]}' for k, v in fields.items()]
+    return ['[ns] no page']
+
+
+def add_naturespot(sp, older):
+    """Puts NatureSpot's block into the species' extract (replacing an earlier one)."""
+    name, english = sp['name'], sp['english']
+    stem = slugify(english or name)
+    ex = OUT / f'{stem}.txt'
+    if not ex.exists():
+        print('no extract for', name, '- gather it first', flush=True)
+        return
+    names = [name] + [o for o in older.get(name, []) if re.match(r'^[A-Z][a-z]+ [a-z-]+$', o)][:6]
+    block = naturespot(names, english, stem)
+    text = re.sub(r'(?ms)^\[ns\] .*?(?=^\[(?:fn|wf|wp|wt)\] |\Z)', '', ex.read_text()).rstrip('\n')
+    ex.write_text(text + '\n' + '\n'.join(block) + '\n')
+    print(stem, block[0], flush=True)
+
+
 def gather(sp, older, wt_index):
     name, english = sp['name'], sp['english'] or sp['name']
     slug = slugify(english)
@@ -167,6 +211,11 @@ def main():
     older = json.loads((ROOT / 'cache/df20/older-names.json').read_text()) if (ROOT / 'cache/df20/older-names.json').exists() else {}
     have = {json.loads(p.read_text())['scientific'] for p in (ROOT / 'content/species').glob('*.json')}
     args = sys.argv[1:]
+    if args[:1] in (['--naturespot'], ['--naturespot-missing']):
+        chosen = [s for s in lst if s['name'] not in have] if args[0] == '--naturespot-missing' else [s for s in lst if s['name'] in args[1:]]
+        for sp in chosen:
+            add_naturespot(sp, older)
+        return
     if args[:1] == ['--wf-retry']:  # extracts that found no Wild Food UK page: try the scientific-name addresses
         for sp in lst:
             stem = slugify(sp['english'] or sp['name'])

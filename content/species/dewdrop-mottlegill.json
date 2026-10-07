@@ -1,0 +1,202 @@
+{
+  "slug": "dewdrop-mottlegill",
+  "inatId": 348990,
+  "scientific": "Panaeolus acuminatus",
+  "english": "Dewdrop Mottlegill",
+  "olderNames": [
+    "Agaricus caliginosus",
+    "Panaeolus caliginosus"
+  ],
+  "edibility": {
+    "value": "not-edible",
+    "sources": [
+      "wp"
+    ]
+  },
+  "edibilityNote": {
+    "value": "Whether it can be eaten is not known.",
+    "sources": [
+      "wp"
+    ]
+  },
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "Small brown cap, bell-shaped or bluntly conical, drying paler.",
+      "sources": [
+        "wp",
+        "ns"
+      ]
+    },
+    {
+      "value": "Gills turn black as the black spores ripen.",
+      "sources": [
+        "wp",
+        "ns"
+      ]
+    },
+    {
+      "value": "In grassland and pasture.",
+      "sources": [
+        "wp",
+        "ns"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "Grassland and pasture.",
+    "sources": [
+      "wp",
+      "ns"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "sources": [
+      "ns"
+    ]
+  },
+  "sporePrint": {
+    "value": "Black",
+    "sources": [
+      "wp",
+      "ns"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "gills",
+      "sources": [
+        "wp",
+        "ns"
+      ]
+    },
+    "ring": {
+      "value": "no",
+      "sources": [
+        "wp",
+        "ns"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "wp",
+        "ns"
+      ]
+    },
+    "growsOn": {
+      "value": "ground",
+      "sources": [
+        "wp",
+        "ns"
+      ]
+    },
+    "capCm": {
+      "value": [
+        4,
+        4
+      ],
+      "sources": [
+        "wp"
+      ]
+    },
+    "fleshChange": {
+      "value": "No colour change described",
+      "sources": [
+        "wp"
+      ]
+    },
+    "smell": {
+      "value": "No smell described",
+      "sources": [
+        "wp"
+      ]
+    }
+  },
+  "lookalikes": [],
+  "noDangerousLookalike": null,
+  "photos": [
+    {
+      "file": "photos/dewdrop-mottlegill/1.webp",
+      "view": "whole",
+      "credit": "(c) Catherine McGuckin, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/250471652"
+    },
+    {
+      "file": "photos/dewdrop-mottlegill/2.webp",
+      "view": "whole",
+      "credit": "Phillip Neal, no rights reserved (CC0)",
+      "licence": "cc0",
+      "link": "https://www.inaturalist.org/observations/251304503"
+    },
+    {
+      "file": "photos/dewdrop-mottlegill/3.webp",
+      "view": "whole",
+      "credit": "(c) buffybeck, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/248371058"
+    },
+    {
+      "file": "photos/dewdrop-mottlegill/4.webp",
+      "view": "whole",
+      "credit": "James Clow, no rights reserved (CC0)",
+      "licence": "cc0",
+      "link": "https://www.inaturalist.org/observations/101465739"
+    },
+    {
+      "file": "photos/dewdrop-mottlegill/5.webp",
+      "view": "whole",
+      "credit": "(c) Catherine McGuckin, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/250471652"
+    },
+    {
+      "file": "photos/dewdrop-mottlegill/6.webp",
+      "view": "whole",
+      "credit": "(c) Catherine McGuckin, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/250471652"
+    }
+  ],
+  "sources": [
+    {
+      "id": "wp",
+      "title": "Wikipedia — Panaeolus acuminatus",
+      "url": "https://en.wikipedia.org/wiki/Panaeolus_acuminatus"
+    },
+    {
+      "id": "ns",
+      "title": "NatureSpot — Dewdrop Mottlegill",
+      "url": "https://www.naturespot.org/species/dewdrop-mottlegill"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-07"
+}

@@ -1,0 +1,203 @@
+{
+  "slug": "flame-shield",
+  "inatId": 351886,
+  "scientific": "Pluteus aurantiorugosus",
+  "english": "Flame Shield",
+  "olderNames": [],
+  "edibility": {
+    "value": "not-edible",
+    "sources": [
+      "fn"
+    ]
+  },
+  "edibilityNote": {
+    "value": "First Nature advises against eating it: it may contain psilocybin, a hallucinogen, and it is uncommon.",
+    "sources": [
+      "fn"
+    ]
+  },
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "Bright flame-orange cap, smooth or finely wrinkled.",
+      "sources": [
+        "fn",
+        "ns"
+      ]
+    },
+    {
+      "value": "Free gills, white at first, turning pinkish.",
+      "sources": [
+        "fn",
+        "ns"
+      ]
+    },
+    {
+      "value": "Stem paler above and more orange towards the base.",
+      "sources": [
+        "fn",
+        "ns"
+      ]
+    },
+    {
+      "value": "On rotting wood of broadleaved trees, especially elm.",
+      "sources": [
+        "fn",
+        "ns"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "Rotting stumps, fallen branches and buried wood of broadleaved trees, especially elm.",
+    "sources": [
+      "fn",
+      "ns"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "sources": [
+      "fn",
+      "ns"
+    ]
+  },
+  "sporePrint": {
+    "value": "Pale pink",
+    "sources": [
+      "fn"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "gills",
+      "sources": [
+        "fn",
+        "ns"
+      ]
+    },
+    "ring": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "ns"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "ns"
+      ]
+    },
+    "growsOn": {
+      "value": "wood",
+      "sources": [
+        "fn",
+        "ns"
+      ]
+    },
+    "capCm": {
+      "value": [
+        3,
+        7
+      ],
+      "sources": [
+        "fn"
+      ]
+    },
+    "fleshChange": {
+      "value": "White, firm cap flesh; no colour change described",
+      "sources": [
+        "fn"
+      ]
+    },
+    "smell": {
+      "value": "Not distinctive",
+      "sources": [
+        "fn"
+      ]
+    }
+  },
+  "lookalikes": [],
+  "noDangerousLookalike": null,
+  "photos": [
+    {
+      "file": "photos/flame-shield/1.webp",
+      "view": "whole",
+      "credit": "(c) Nicolas Schwab, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/244017010"
+    },
+    {
+      "file": "photos/flame-shield/2.webp",
+      "view": "whole",
+      "credit": "(c) Matthew Rose, some rights reserved (CC BY)",
+      "licence": "cc-by",
+      "link": "https://www.inaturalist.org/observations/251028354"
+    },
+    {
+      "file": "photos/flame-shield/3.webp",
+      "view": "whole",
+      "credit": "(c) jmpres, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/312227270"
+    },
+    {
+      "file": "photos/flame-shield/4.webp",
+      "view": "whole",
+      "credit": "(c) beckystarzz, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/314280083"
+    },
+    {
+      "file": "photos/flame-shield/5.webp",
+      "view": "whole",
+      "credit": "(c) jmpres, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/312227270"
+    },
+    {
+      "file": "photos/flame-shield/6.webp",
+      "view": "whole",
+      "credit": "(c) jmpres, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/312227270"
+    }
+  ],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Pluteus aurantiorugosus, Flame Shield",
+      "url": "https://www.first-nature.com/fungi/pluteus-aurantiorugosus.php"
+    },
+    {
+      "id": "ns",
+      "title": "NatureSpot — Flame Shield",
+      "url": "https://www.naturespot.org/species/flame-shield"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-07"
+}

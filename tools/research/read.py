@@ -4,7 +4,8 @@ Usage: read.py [-n 420] <extract> ..."""
 import pathlib, re, sys
 ROOT = pathlib.Path(__file__).resolve().parents[2]
 KEEP = re.compile(r'(?i)^(cap|caps|fruit|bracket|pores|tubes|gills|spines|teeth|stem|stipe|flesh|spore print|odou?r|smell|taste|habitat|'
-                  r'season|similar|culinary|toxic|edib|possible|description|identification|ring|skirt|volva|fact box|how to|what does|not to be)')
+                  r'season|similar|culinary|toxic|edib|possible|description|identification|ring|skirt|volva|fact box|how to|what does|not to be|'
+                  r'when to see|uk status)')
 args = sys.argv[1:]
 n = 420
 if args[:1] == ['-n']:

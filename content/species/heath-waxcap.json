@@ -137,7 +137,25 @@
       ]
     }
   },
-  "lookalikes": [],
+  "lookalikes": [
+    {
+      "scientific": "Hygrocybe glutinipes",
+      "english": "Glutinous Waxcap",
+      "slug": "glutinous-waxcap",
+      "kind": "not-edible",
+      "tellApart": [
+        {
+          "feature": "Gills",
+          "thisOne": "Greyish",
+          "thatOne": "Yellow to pale orange",
+          "sources": [
+            "fn-gl",
+            "ns-gl"
+          ]
+        }
+      ]
+    }
+  ],
   "noDangerousLookalike": {
     "sources": [
       "wf",
@@ -203,6 +221,16 @@
       "id": "wp",
       "title": "Wikipedia — Gliophorus laetus",
       "url": "https://en.wikipedia.org/wiki/Gliophorus_laetus"
+    },
+    {
+      "id": "fn-gl",
+      "title": "First Nature — Hygrocybe glutinipes, Glutinous Waxcap",
+      "url": "https://www.first-nature.com/fungi/hygrocybe-glutinipes.php"
+    },
+    {
+      "id": "ns-gl",
+      "title": "NatureSpot — Glutinous Waxcap",
+      "url": "https://www.naturespot.org/species/Glutinous-Waxcap"
     },
     {
       "id": "wf-prot",

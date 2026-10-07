@@ -1,0 +1,218 @@
+{
+  "slug": "persistent-waxcap",
+  "inatId": 367288,
+  "scientific": "Hygrocybe acutoconica",
+  "english": "Persistent Waxcap",
+  "olderNames": [],
+  "edibility": {
+    "value": "not-edible",
+    "sources": [
+      "fn"
+    ]
+  },
+  "edibilityNote": {
+    "value": "Some field guides call it edible, but it is not highly rated.",
+    "sources": [
+      "fn"
+    ]
+  },
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "Pointed, conical yellow cap, often orange or reddish at the centre, sticky when wet.",
+      "sources": [
+        "fn",
+        "ns"
+      ]
+    },
+    {
+      "value": "The cap edge is irregular and soon splits.",
+      "sources": [
+        "fn",
+        "ns"
+      ]
+    },
+    {
+      "value": "Gills free or only narrowly attached, pale yellow, turning orange.",
+      "sources": [
+        "fn",
+        "ns"
+      ]
+    },
+    {
+      "value": "Does not turn black when handled or old — unlike the Blackening Waxcap.",
+      "sources": [
+        "fn",
+        "ns"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "Grassland.",
+    "sources": [
+      "fn",
+      "ns"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      8,
+      9,
+      10,
+      11
+    ],
+    "sources": [
+      "fn"
+    ]
+  },
+  "sporePrint": {
+    "value": "White",
+    "sources": [
+      "fn"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "gills",
+      "sources": [
+        "fn",
+        "ns"
+      ]
+    },
+    "ring": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "ns"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "ns"
+      ]
+    },
+    "growsOn": {
+      "value": "ground",
+      "sources": [
+        "fn",
+        "ns"
+      ]
+    },
+    "capCm": {
+      "value": [
+        3,
+        6
+      ],
+      "sources": [
+        "fn"
+      ]
+    },
+    "fleshChange": {
+      "value": "Stem base turns greyish when bruised or cut, never black",
+      "sources": [
+        "ns"
+      ]
+    },
+    "smell": {
+      "value": "Not distinctive",
+      "sources": [
+        "fn"
+      ]
+    }
+  },
+  "lookalikes": [
+    {
+      "scientific": "Hygrocybe conica",
+      "english": "Blackening Waxcap",
+      "slug": "blackening-waxcap",
+      "kind": "poisonous",
+      "tellApart": [
+        {
+          "feature": "When handled or old",
+          "thisOne": "Stays yellow; the stem base only turns greyish",
+          "thatOne": "Turns black all over",
+          "sources": [
+            "fn",
+            "ns"
+          ]
+        }
+      ]
+    }
+  ],
+  "noDangerousLookalike": null,
+  "photos": [
+    {
+      "file": "photos/persistent-waxcap/1.webp",
+      "view": "whole",
+      "credit": "(c) James Cunningham, some rights reserved (CC BY)",
+      "licence": "cc-by",
+      "link": "https://www.inaturalist.org/observations/398062349"
+    },
+    {
+      "file": "photos/persistent-waxcap/2.webp",
+      "view": "whole",
+      "credit": "(c) Barry Walter, some rights reserved (CC BY)",
+      "licence": "cc-by",
+      "link": "https://www.inaturalist.org/observations/325865018"
+    },
+    {
+      "file": "photos/persistent-waxcap/3.webp",
+      "view": "whole",
+      "credit": "(c) wildwhippies, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/320384715"
+    },
+    {
+      "file": "photos/persistent-waxcap/4.webp",
+      "view": "whole",
+      "credit": "(c) nickyamos, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/240779396"
+    },
+    {
+      "file": "photos/persistent-waxcap/5.webp",
+      "view": "whole",
+      "credit": "(c) Barry Walter, some rights reserved (CC BY)",
+      "licence": "cc-by",
+      "link": "https://www.inaturalist.org/observations/325865018"
+    },
+    {
+      "file": "photos/persistent-waxcap/6.webp",
+      "view": "whole",
+      "credit": "(c) Barry Walter, some rights reserved (CC BY)",
+      "licence": "cc-by",
+      "link": "https://www.inaturalist.org/observations/325865018"
+    }
+  ],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Hygrocybe acutoconica, Persistent Waxcap",
+      "url": "https://www.first-nature.com/fungi/hygrocybe-acutoconica.php"
+    },
+    {
+      "id": "ns",
+      "title": "NatureSpot — Persistent Waxcap",
+      "url": "https://www.naturespot.org/species/hygrocybe-acutoconica"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-07"
+}

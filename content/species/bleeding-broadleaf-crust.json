@@ -1,0 +1,200 @@
+{
+  "slug": "bleeding-broadleaf-crust",
+  "inatId": 339410,
+  "scientific": "Stereum rugosum",
+  "english": "Bleeding Broadleaf Crust",
+  "olderNames": [],
+  "edibility": {
+    "value": "not-edible",
+    "sources": [
+      "fn"
+    ]
+  },
+  "edibilityNote": {
+    "value": "Tough, leathery and tasteless.",
+    "sources": [
+      "fn"
+    ]
+  },
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "A tough, leathery crust lying flat on dead wood of broadleaved trees, especially hazel.",
+      "sources": [
+        "fn",
+        "ns"
+      ]
+    },
+    {
+      "value": "Smooth surface, buff to pale pinkish-brown.",
+      "sources": [
+        "fn",
+        "ns"
+      ]
+    },
+    {
+      "value": "Turns red where it is scratched or bruised.",
+      "sources": [
+        "fn",
+        "ns"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "Dead trunks and fallen branches of broadleaved trees, especially hazel.",
+    "sources": [
+      "fn",
+      "ns"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "sources": [
+      "fn"
+    ]
+  },
+  "sporePrint": {
+    "value": "White",
+    "sources": [
+      "fn"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "smooth",
+      "sources": [
+        "fn",
+        "ns"
+      ]
+    },
+    "ring": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "ns"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "ns"
+      ]
+    },
+    "growsOn": {
+      "value": "wood",
+      "sources": [
+        "fn",
+        "ns"
+      ]
+    },
+    "capCm": {
+      "value": null,
+      "sources": [
+        "fn",
+        "ns"
+      ]
+    },
+    "fleshChange": {
+      "value": "Bleeds red where scratched or bruised",
+      "sources": [
+        "fn",
+        "ns"
+      ]
+    },
+    "smell": {
+      "value": "No noticeable smell",
+      "sources": [
+        "fn"
+      ]
+    }
+  },
+  "lookalikes": [],
+  "noDangerousLookalike": null,
+  "photos": [
+    {
+      "file": "photos/bleeding-broadleaf-crust/1.webp",
+      "view": "whole",
+      "credit": "(c) Elinor Scott-lester, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/235171420"
+    },
+    {
+      "file": "photos/bleeding-broadleaf-crust/2.webp",
+      "view": "whole",
+      "credit": "(c) Ade., some rights reserved (CC BY)",
+      "licence": "cc-by",
+      "link": "https://www.inaturalist.org/observations/336829009"
+    },
+    {
+      "file": "photos/bleeding-broadleaf-crust/3.webp",
+      "view": "whole",
+      "credit": "Ross Mounce, no rights reserved (CC0)",
+      "licence": "cc0",
+      "link": "https://www.inaturalist.org/observations/66827073"
+    },
+    {
+      "file": "photos/bleeding-broadleaf-crust/4.webp",
+      "view": "whole",
+      "credit": "(c) scribblyfloss, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/176127141"
+    },
+    {
+      "file": "photos/bleeding-broadleaf-crust/5.webp",
+      "view": "whole",
+      "credit": "(c) Andy Donegan, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/186694000"
+    },
+    {
+      "file": "photos/bleeding-broadleaf-crust/6.webp",
+      "view": "whole",
+      "credit": "(c) scribblyfloss, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/176127141"
+    }
+  ],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Stereum rugosum, Bleeding Broadleaf Crust",
+      "url": "https://www.first-nature.com/fungi/stereum-rugosum.php"
+    },
+    {
+      "id": "ns",
+      "title": "NatureSpot — Bleeding Broadleaf Crust",
+      "url": "https://www.naturespot.org/species/bleeding-broadleaf-crust"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-07"
+}

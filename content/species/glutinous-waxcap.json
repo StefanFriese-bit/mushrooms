@@ -1,0 +1,217 @@
+{
+  "slug": "glutinous-waxcap",
+  "inatId": 339414,
+  "scientific": "Hygrocybe glutinipes",
+  "english": "Glutinous Waxcap",
+  "olderNames": [],
+  "edibility": {
+    "value": "not-edible",
+    "sources": [
+      "fn"
+    ]
+  },
+  "edibilityNote": {
+    "value": "Too small, and too slimy, to be worth eating.",
+    "sources": [
+      "fn"
+    ]
+  },
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "Small, very slimy cap in yellow to orange shades.",
+      "sources": [
+        "fn",
+        "ns"
+      ]
+    },
+    {
+      "value": "The stem is very slimy too.",
+      "sources": [
+        "fn",
+        "ns"
+      ]
+    },
+    {
+      "value": "Yellow to pale orange gills, broadly attached or running slightly down the stem.",
+      "sources": [
+        "fn",
+        "ns"
+      ]
+    },
+    {
+      "value": "In short, unfertilised grassland such as lawns.",
+      "sources": [
+        "fn",
+        "ns"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "Short, unfertilised grassland, including lawns.",
+    "sources": [
+      "fn",
+      "ns"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      9,
+      10,
+      11
+    ],
+    "sources": [
+      "fn"
+    ]
+  },
+  "sporePrint": {
+    "value": "White",
+    "sources": [
+      "fn"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "gills",
+      "sources": [
+        "fn",
+        "ns"
+      ]
+    },
+    "ring": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "ns"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "ns"
+      ]
+    },
+    "growsOn": {
+      "value": "ground",
+      "sources": [
+        "fn",
+        "ns"
+      ]
+    },
+    "capCm": {
+      "value": [
+        0.5,
+        3
+      ],
+      "sources": [
+        "fn"
+      ]
+    },
+    "fleshChange": {
+      "value": "No colour change described",
+      "sources": [
+        "fn"
+      ]
+    },
+    "smell": {
+      "value": "Not distinctive",
+      "sources": [
+        "fn"
+      ]
+    }
+  },
+  "lookalikes": [
+    {
+      "scientific": "Gliophorus laetus",
+      "english": "Heath Waxcap",
+      "slug": "heath-waxcap",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Gills",
+          "thisOne": "Yellow to pale orange",
+          "thatOne": "Greyish",
+          "sources": [
+            "fn",
+            "ns"
+          ]
+        }
+      ]
+    }
+  ],
+  "noDangerousLookalike": null,
+  "photos": [
+    {
+      "file": "photos/glutinous-waxcap/1.webp",
+      "view": "whole",
+      "credit": "(c) Andy Donegan, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/245107952"
+    },
+    {
+      "file": "photos/glutinous-waxcap/2.webp",
+      "view": "whole",
+      "credit": "(c) hafren, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/246542129"
+    },
+    {
+      "file": "photos/glutinous-waxcap/3.webp",
+      "view": "whole",
+      "credit": "(c) benrl, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/240926835"
+    },
+    {
+      "file": "photos/glutinous-waxcap/4.webp",
+      "view": "whole",
+      "credit": "(c) hafren, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/246542129"
+    },
+    {
+      "file": "photos/glutinous-waxcap/5.webp",
+      "view": "whole",
+      "credit": "(c) benrl, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/240926835"
+    },
+    {
+      "file": "photos/glutinous-waxcap/6.webp",
+      "view": "whole",
+      "credit": "(c) hafren, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/246542129"
+    }
+  ],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Hygrocybe glutinipes, Glutinous Waxcap",
+      "url": "https://www.first-nature.com/fungi/hygrocybe-glutinipes.php"
+    },
+    {
+      "id": "ns",
+      "title": "NatureSpot — Glutinous Waxcap",
+      "url": "https://www.naturespot.org/species/Glutinous-Waxcap"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-07"
+}

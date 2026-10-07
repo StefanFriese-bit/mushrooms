@@ -1,0 +1,229 @@
+{
+  "slug": "butter-waxcap",
+  "inatId": 363606,
+  "scientific": "Hygrocybe ceracea",
+  "english": "Butter Waxcap",
+  "olderNames": [
+    "Hygrophorus ceraceus"
+  ],
+  "edibility": {
+    "value": "not-edible",
+    "sources": [
+      "fn"
+    ]
+  },
+  "edibilityNote": {
+    "value": "Too small to be worth eating; waxcaps are now scarce across Europe and best left to grow.",
+    "sources": [
+      "fn"
+    ]
+  },
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "Small yellow to orange-yellow cap, greasy to the touch, with fine lines at the edge.",
+      "sources": [
+        "fn",
+        "ns"
+      ]
+    },
+    {
+      "value": "Pale yellow gills, broadly attached and often running a little way down the stem.",
+      "sources": [
+        "fn",
+        "ns"
+      ]
+    },
+    {
+      "value": "Thin yellow stem, dry rather than sticky.",
+      "sources": [
+        "fn",
+        "ns"
+      ]
+    },
+    {
+      "value": "In short, old grassland such as lawns and churchyards.",
+      "sources": [
+        "fn",
+        "ns"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "Short, old grassland: lawns, churchyards and cemeteries.",
+    "sources": [
+      "fn",
+      "ns"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      8,
+      9,
+      10,
+      11
+    ],
+    "sources": [
+      "fn"
+    ]
+  },
+  "sporePrint": {
+    "value": "White",
+    "sources": [
+      "fn"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "gills",
+      "sources": [
+        "fn",
+        "ns"
+      ]
+    },
+    "ring": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "ns"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "ns"
+      ]
+    },
+    "growsOn": {
+      "value": "ground",
+      "sources": [
+        "fn",
+        "ns"
+      ]
+    },
+    "capCm": {
+      "value": [
+        0.5,
+        3.5
+      ],
+      "sources": [
+        "fn"
+      ]
+    },
+    "fleshChange": {
+      "value": "Orange cap flesh; no colour change described",
+      "sources": [
+        "fn"
+      ]
+    },
+    "smell": {
+      "value": "Not distinctive",
+      "sources": [
+        "fn"
+      ]
+    }
+  },
+  "lookalikes": [
+    {
+      "scientific": "Hygrocybe chlorophana",
+      "english": "Golden Waxcap",
+      "slug": "golden-waxcap",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Cap in wet weather",
+          "thisOne": "Greasy",
+          "thatOne": "Slimy and sticky",
+          "sources": [
+            "fn",
+            "ns"
+          ]
+        },
+        {
+          "feature": "Size",
+          "thisOne": "Small: cap up to about 3.5 cm",
+          "thatOne": "Usually larger and taller",
+          "sources": [
+            "fn",
+            "ns"
+          ]
+        }
+      ]
+    }
+  ],
+  "noDangerousLookalike": null,
+  "photos": [
+    {
+      "file": "photos/butter-waxcap/1.webp",
+      "view": "whole",
+      "credit": "(c) jsgtc, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/99469936"
+    },
+    {
+      "file": "photos/butter-waxcap/2.webp",
+      "view": "whole",
+      "credit": "(c) Will Brantingham, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/249004374"
+    },
+    {
+      "file": "photos/butter-waxcap/3.webp",
+      "view": "whole",
+      "credit": "empressmoth, no rights reserved (CC0)",
+      "licence": "cc0",
+      "link": "https://www.inaturalist.org/observations/249731625"
+    },
+    {
+      "file": "photos/butter-waxcap/4.webp",
+      "view": "whole",
+      "credit": "(c) waxycap, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/251700273"
+    },
+    {
+      "file": "photos/butter-waxcap/5.webp",
+      "view": "whole",
+      "credit": "(c) Will Brantingham, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/249004374"
+    },
+    {
+      "file": "photos/butter-waxcap/6.webp",
+      "view": "whole",
+      "credit": "(c) Will Brantingham, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/249004374"
+    }
+  ],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Hygrocybe ceracea, Butter Waxcap",
+      "url": "https://www.first-nature.com/fungi/hygrocybe-ceracea.php"
+    },
+    {
+      "id": "ns",
+      "title": "NatureSpot — Butter Waxcap",
+      "url": "https://www.naturespot.org/species/butter-waxcap"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-07"
+}

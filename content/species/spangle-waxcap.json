@@ -1,0 +1,201 @@
+{
+  "slug": "spangle-waxcap",
+  "inatId": 363621,
+  "scientific": "Hygrocybe insipida",
+  "english": "Spangle Waxcap",
+  "olderNames": [
+    "Hygrocybe subminutula"
+  ],
+  "edibility": {
+    "value": "not-edible",
+    "sources": [
+      "fn"
+    ]
+  },
+  "edibilityNote": {
+    "value": "Far too small to be worth eating.",
+    "sources": [
+      "fn"
+    ]
+  },
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "Small greasy cap, yellow-orange to orange-red, with fine lines at a paler edge.",
+      "sources": [
+        "fn",
+        "ns"
+      ]
+    },
+    {
+      "value": "Gills broadly attached, running down the stem.",
+      "sources": [
+        "fn",
+        "ns"
+      ]
+    },
+    {
+      "value": "Slender stem, red at the top and paler lower down.",
+      "sources": [
+        "fn",
+        "ns"
+      ]
+    },
+    {
+      "value": "In old, unfertilised grassland, in autumn.",
+      "sources": [
+        "fn",
+        "ns"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "Old, unfertilised grassland.",
+    "sources": [
+      "fn",
+      "ns"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      9,
+      10,
+      11
+    ],
+    "sources": [
+      "fn"
+    ]
+  },
+  "sporePrint": {
+    "value": "White",
+    "sources": [
+      "fn"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "gills",
+      "sources": [
+        "fn",
+        "ns"
+      ]
+    },
+    "ring": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "ns"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "ns"
+      ]
+    },
+    "growsOn": {
+      "value": "ground",
+      "sources": [
+        "fn",
+        "ns"
+      ]
+    },
+    "capCm": {
+      "value": [
+        0.5,
+        2.5
+      ],
+      "sources": [
+        "fn"
+      ]
+    },
+    "fleshChange": {
+      "value": "No colour change described",
+      "sources": [
+        "fn"
+      ]
+    },
+    "smell": {
+      "value": "Not distinctive",
+      "sources": [
+        "fn"
+      ]
+    }
+  },
+  "lookalikes": [],
+  "noDangerousLookalike": null,
+  "photos": [
+    {
+      "file": "photos/spangle-waxcap/1.webp",
+      "view": "whole",
+      "credit": "(c) Will Brantingham, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/241007913"
+    },
+    {
+      "file": "photos/spangle-waxcap/2.webp",
+      "view": "whole",
+      "credit": "(c) Peachysteve, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/141436243"
+    },
+    {
+      "file": "photos/spangle-waxcap/3.webp",
+      "view": "whole",
+      "credit": "(c) ingebeck, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/249178982"
+    },
+    {
+      "file": "photos/spangle-waxcap/4.webp",
+      "view": "whole",
+      "credit": "(c) Will Brantingham, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/241007913"
+    },
+    {
+      "file": "photos/spangle-waxcap/5.webp",
+      "view": "whole",
+      "credit": "(c) ingebeck, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/249178982"
+    },
+    {
+      "file": "photos/spangle-waxcap/6.webp",
+      "view": "whole",
+      "credit": "(c) Will Brantingham, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/241007913"
+    }
+  ],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Hygrocybe insipida, Spangle Waxcap",
+      "url": "https://www.first-nature.com/fungi/hygrocybe-insipida.php"
+    },
+    {
+      "id": "ns",
+      "title": "NatureSpot — Spangle Waxcap",
+      "url": "https://www.naturespot.org/species/Spangle-Waxcap"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-07"
+}

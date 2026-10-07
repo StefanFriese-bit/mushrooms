@@ -1,0 +1,199 @@
+{
+  "slug": "pipe-club",
+  "inatId": 118122,
+  "scientific": "Macrotyphula fistulosa",
+  "english": "Pipe Club",
+  "olderNames": [
+    "Clavariadelphus fistulosus",
+    "Typhula fistulosa"
+  ],
+  "edibility": {
+    "value": "not-edible",
+    "sources": [
+      "fn"
+    ]
+  },
+  "edibilityNote": {
+    "value": "Reported to be inedible.",
+    "sources": [
+      "fn"
+    ]
+  },
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "A tall, slender, unbranched club, pale brown to ochre.",
+      "sources": [
+        "fn",
+        "ns"
+      ]
+    },
+    {
+      "value": "Club-shaped: widening towards a blunt, rounded tip.",
+      "sources": [
+        "fn",
+        "ns"
+      ]
+    },
+    {
+      "value": "In broadleaved woods, rising from leaf litter or buried sticks.",
+      "sources": [
+        "fn",
+        "ns"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "Broadleaved woodland, from the leaf litter or from small buried branches and sticks.",
+    "sources": [
+      "fn",
+      "ns"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "sources": [
+      "fn",
+      "ns"
+    ]
+  },
+  "sporePrint": {
+    "value": "White",
+    "sources": [
+      "fn"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "other",
+      "sources": [
+        "fn",
+        "ns"
+      ]
+    },
+    "ring": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "ns"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "ns"
+      ]
+    },
+    "growsOn": {
+      "value": "ground",
+      "sources": [
+        "fn",
+        "ns"
+      ]
+    },
+    "capCm": {
+      "value": [
+        0.5,
+        1
+      ],
+      "sources": [
+        "fn"
+      ]
+    },
+    "fleshChange": {
+      "value": "No colour change described",
+      "sources": [
+        "fn"
+      ]
+    },
+    "smell": {
+      "value": "Not distinctive",
+      "sources": [
+        "fn"
+      ]
+    }
+  },
+  "lookalikes": [],
+  "noDangerousLookalike": null,
+  "photos": [
+    {
+      "file": "photos/pipe-club/1.webp",
+      "view": "whole",
+      "credit": "(c) keith_cohen, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/35285389"
+    },
+    {
+      "file": "photos/pipe-club/2.webp",
+      "view": "whole",
+      "credit": "(c) keith_cohen, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/34497624"
+    },
+    {
+      "file": "photos/pipe-club/3.webp",
+      "view": "whole",
+      "credit": "(c) zumley, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/103817619"
+    },
+    {
+      "file": "photos/pipe-club/4.webp",
+      "view": "whole",
+      "credit": "(c) keith_cohen, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/35285955"
+    },
+    {
+      "file": "photos/pipe-club/5.webp",
+      "view": "whole",
+      "credit": "(c) keith_cohen, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/35285389"
+    },
+    {
+      "file": "photos/pipe-club/6.webp",
+      "view": "whole",
+      "credit": "(c) zumley, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/103817619"
+    }
+  ],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Macrotyphula fistulosa, Pipe Club",
+      "url": "https://www.first-nature.com/fungi/typhula-fistulosa.php"
+    },
+    {
+      "id": "ns",
+      "title": "NatureSpot — Pipe Club",
+      "url": "https://www.naturespot.org/species/pipe-club"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-07"
+}

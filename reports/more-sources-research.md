@@ -1,5 +1,8 @@
 # More trusted websites for the 40 species without a page — for your approval (07/10/2026)
 
+**Stefan's ruling (07/10/2026): NatureSpot only** (not Rogers Mushrooms). Result: 12 new pages — see
+`reports/batch-3-naturespot.md`.
+
 The 40 species on the approved list without a page (see `reports/batch-2-cross-check.md`, end) need a second trusted
 website. **Nothing below has been used yet.** Your approval comes first; the two-websites-per-fact rule stays as it is.
 

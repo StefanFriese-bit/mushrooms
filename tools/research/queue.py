@@ -10,7 +10,7 @@ b1 = [s for s in lst if 'edible' in (s.get('reasons') or []) or s.get('dangerLev
 slug = lambda n: re.sub(r'[^a-z0-9]+', '-', n.lower()).strip('-')
 # Held back: no trusted site gives what a page must have (each one is named in the batch report).
 HELD = {'Chlorociboria aeruginascens',  # Green Elfcup: no edibility on any trusted site
-        'Agrocybe rivulosa',  # Wrinkled Fieldcap: Wikipedia's article is a stub; gills, ring, habitat on one site only
+        'Agrocybe rivulosa',  # Wrinkled Fieldcap: gills on First Nature only (Wikipedia is a stub; NatureSpot gives ring and habitat, not gills)
         'Clavulina rugosa',  # Wrinkled Club: edible, but only First Nature gives its spore print (edible pages need two)
         'Lycoperdon pratense',  # Meadow Puffball: edible, but Wikipedia's article is a stub (no spore colour, no stem)
         'Russula nigricans',  # Blackening Brittlegill: edible; only Wild Food UK gives its spore print (Wikipedia mixes two species)
@@ -19,14 +19,19 @@ HELD = {'Chlorociboria aeruginascens',  # Green Elfcup: no edibility on any trus
         'Collybia sordida',  # Sordid Blewit: edible; only First Nature gives the spore print that tells it from webcaps
         'Xerocomellus pruinatus',  # Matt Bolete: edible per First Nature only; Wikipedia's article is a stub
         'Cyathus olla',  # Field Bird's Nest: no trusted site gives a spore colour
-        'Phaeotremella frondosa'}  # edible (Wikipedia; First Nature: very poor), but only First Nature gives a spore print
+        'Phaeotremella frondosa',  # edible (Wikipedia; First Nature: very poor), but only First Nature gives a spore print
+        # Batch 3 (07/10/2026), with NatureSpot as the second site — still held:
+        'Clavulinopsis helvola', 'Dacrymyces stillatus', 'Neobulgaria pura', 'Ptychogaster albus',  # no site says whether it can be eaten
+        'Cyanosporus caesius',  # only First Nature calls it edible (as with the Matt Bolete)
+        'Hypomyces chrysospermus',  # no trusted site gives when it appears
+        'Deconica coprophila'}  # Wikipedia's only season is North America's; none for Britain
 rows = []
 for s in lst:
     if s in b1 or s['name'] in have or s['name'] in HELD:
         continue
     p = R / f"{slug(s['english'] or s['name'])}.txt"
     t = p.read_text() if p.exists() else ''
-    sites = [tag for tag in ('fn', 'wf', 'wp', 'wt') if re.search(rf'^\[{tag}\] https?://', t, re.M)]
+    sites = [tag for tag in ('fn', 'wf', 'wp', 'wt', 'ns') if re.search(rf'^\[{tag}\] https?://', t, re.M)]
     rows.append((p.stem, s['name'], sites))
 arg = sys.argv[1] if len(sys.argv) > 1 else '6'
 if arg == 'weak':

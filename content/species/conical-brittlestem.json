@@ -1,0 +1,208 @@
+{
+  "slug": "conical-brittlestem",
+  "inatId": 830766,
+  "scientific": "Parasola conopilea",
+  "english": "Conical Brittlestem",
+  "olderNames": [
+    "Parasola conopilus",
+    "Psathyrella conopilus",
+    "Psathyrella conopila",
+    "Psathyrella conopilea"
+  ],
+  "edibility": {
+    "value": "not-edible",
+    "sources": [
+      "fn"
+    ]
+  },
+  "edibilityNote": {
+    "value": "Generally regarded as inedible; small and thin-fleshed.",
+    "sources": [
+      "fn"
+    ]
+  },
+  "protectedInUk": {
+    "value": false,
+    "sources": [
+      "wf-prot",
+      "wp-s41"
+    ]
+  },
+  "topPoints": [
+    {
+      "value": "Conical or bell-shaped cap, shiny red-brown when wet, drying much paler.",
+      "sources": [
+        "fn",
+        "ns"
+      ]
+    },
+    {
+      "value": "A very long, thin, white stem for the size of the cap, and brittle.",
+      "sources": [
+        "fn",
+        "ns"
+      ]
+    },
+    {
+      "value": "Gills brown with a pale edge, darkening with age.",
+      "sources": [
+        "fn",
+        "ns"
+      ]
+    },
+    {
+      "value": "Very dark brown spore print.",
+      "sources": [
+        "fn",
+        "ns"
+      ]
+    }
+  ],
+  "habitat": {
+    "value": "Under broadleaved trees in woods, copses, parks and gardens, among leaf litter and woody debris.",
+    "sources": [
+      "fn",
+      "ns"
+    ]
+  },
+  "seasonMonths": {
+    "value": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "sources": [
+      "fn"
+    ]
+  },
+  "sporePrint": {
+    "value": "Very dark brown, almost black",
+    "sources": [
+      "fn",
+      "ns"
+    ]
+  },
+  "features": {
+    "underside": {
+      "value": "gills",
+      "sources": [
+        "fn",
+        "ns"
+      ]
+    },
+    "ring": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "ns"
+      ]
+    },
+    "bagAtBase": {
+      "value": "no",
+      "sources": [
+        "fn",
+        "ns"
+      ]
+    },
+    "growsOn": {
+      "value": "ground",
+      "sources": [
+        "fn",
+        "ns"
+      ]
+    },
+    "capCm": {
+      "value": [
+        2,
+        3.5
+      ],
+      "sources": [
+        "fn"
+      ]
+    },
+    "fleshChange": {
+      "value": "Thin flesh; no colour change described",
+      "sources": [
+        "fn"
+      ]
+    },
+    "smell": {
+      "value": "Not distinctive",
+      "sources": [
+        "fn"
+      ]
+    }
+  },
+  "lookalikes": [],
+  "noDangerousLookalike": null,
+  "photos": [
+    {
+      "file": "photos/conical-brittlestem/1.webp",
+      "view": "whole",
+      "credit": "(c) Alex Press, some rights reserved (CC BY)",
+      "licence": "cc-by",
+      "link": "https://www.inaturalist.org/observations/225761242"
+    },
+    {
+      "file": "photos/conical-brittlestem/2.webp",
+      "view": "whole",
+      "credit": "(c) Sydney Goldsworthy, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/226862530"
+    },
+    {
+      "file": "photos/conical-brittlestem/3.webp",
+      "view": "whole",
+      "credit": "(c) tabbyg123, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/241675447"
+    },
+    {
+      "file": "photos/conical-brittlestem/4.webp",
+      "view": "whole",
+      "credit": "(c) Moonie, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/139740860"
+    },
+    {
+      "file": "photos/conical-brittlestem/5.webp",
+      "view": "whole",
+      "credit": "(c) tabbyg123, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/241675447"
+    },
+    {
+      "file": "photos/conical-brittlestem/6.webp",
+      "view": "whole",
+      "credit": "(c) tabbyg123, some rights reserved (CC BY-NC)",
+      "licence": "cc-by-nc",
+      "link": "https://www.inaturalist.org/observations/241675447"
+    }
+  ],
+  "sources": [
+    {
+      "id": "fn",
+      "title": "First Nature — Parasola conopilea, Conical Brittlestem",
+      "url": "https://www.first-nature.com/fungi/parasola-conopilus.php"
+    },
+    {
+      "id": "ns",
+      "title": "NatureSpot — Conical Brittlestem",
+      "url": "https://www.naturespot.org/species/parasola-conopilus"
+    },
+    {
+      "id": "wf-prot",
+      "title": "Wild Food UK — Protected UK fungi (DEFRA list)",
+      "url": "https://www.wildfooduk.com/protected-uk-fungi/"
+    },
+    {
+      "id": "wp-s41",
+      "title": "Wikipedia — List of species and habitats of principal importance in England",
+      "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    }
+  ],
+  "checked": "2026-10-07"
+}

@@ -166,6 +166,32 @@
           ]
         }
       ]
+    },
+    {
+      "scientific": "Hygrocybe ceracea",
+      "english": "Butter Waxcap",
+      "slug": "butter-waxcap",
+      "kind": "not-edible",
+      "tellApart": [
+        {
+          "feature": "Cap in wet weather",
+          "thisOne": "Slimy and sticky",
+          "thatOne": "Greasy",
+          "sources": [
+            "fn-bu",
+            "ns-bu"
+          ]
+        },
+        {
+          "feature": "Size",
+          "thisOne": "Usually larger and taller",
+          "thatOne": "Small: cap up to about 3.5 cm",
+          "sources": [
+            "fn-bu",
+            "ns-bu"
+          ]
+        }
+      ]
     }
   ],
   "noDangerousLookalike": null,
@@ -243,6 +269,16 @@
       "id": "wp-bw",
       "title": "Wikipedia — Hygrocybe conica",
       "url": "https://en.wikipedia.org/wiki/Hygrocybe_conica"
+    },
+    {
+      "id": "fn-bu",
+      "title": "First Nature — Hygrocybe ceracea, Butter Waxcap",
+      "url": "https://www.first-nature.com/fungi/hygrocybe-ceracea.php"
+    },
+    {
+      "id": "ns-bu",
+      "title": "NatureSpot — Butter Waxcap",
+      "url": "https://www.naturespot.org/species/butter-waxcap"
     },
     {
       "id": "wf-prot",

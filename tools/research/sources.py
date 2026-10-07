@@ -6,7 +6,7 @@ Usage: sources.py <extract name> [<partner extract>=<id suffix> ...]
 import json, pathlib, re, sys
 
 ROOT = pathlib.Path(__file__).resolve().parents[2]
-SITE = {'fn': 'First Nature', 'wf': 'Wild Food UK', 'wp': 'Wikipedia', 'wt': 'Woodland Trust'}
+SITE = {'fn': 'First Nature', 'wf': 'Wild Food UK', 'wp': 'Wikipedia', 'wt': 'Woodland Trust', 'ns': 'NatureSpot'}
 FIXED = [
     {'id': 'wf-prot', 'title': 'Wild Food UK — Protected UK fungi (DEFRA list)', 'url': 'https://www.wildfooduk.com/protected-uk-fungi/'},
     {'id': 'wp-s41', 'title': 'Wikipedia — List of species and habitats of principal importance in England',
@@ -19,9 +19,9 @@ def found(name):
     head = re.match(r'######## (.*?) — (.*?) \(', text)
     english, sci = head.group(1), head.group(2)
     out = []
-    for tag, url in re.findall(r'^\[(fn|wf|wp|wt)\] (https?://\S+)', text, re.M):
+    for tag, url in re.findall(r'^\[(fn|wf|wp|wt|ns)\] (https?://\S+)', text, re.M):
         title = {'fn': f'{SITE[tag]} — {sci}, {english}', 'wf': f'{SITE[tag]} — {english}', 'wp': f'{SITE[tag]} — {sci}',
-                 'wt': f'{SITE[tag]} — {english}'}[tag]
+                 'wt': f'{SITE[tag]} — {english}', 'ns': f'{SITE[tag]} — {english}'}[tag]
         out.append((tag, title, url))
     return out
 

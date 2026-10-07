@@ -202,6 +202,23 @@
           ]
         }
       ]
+    },
+    {
+      "scientific": "Hygrocybe acutoconica",
+      "english": "Persistent Waxcap",
+      "slug": "persistent-waxcap",
+      "kind": "not-edible",
+      "tellApart": [
+        {
+          "feature": "When handled or old",
+          "thisOne": "Turns black all over",
+          "thatOne": "Stays yellow; the stem base only turns greyish",
+          "sources": [
+            "fn-pw",
+            "ns-pw"
+          ]
+        }
+      ]
     }
   ],
   "noDangerousLookalike": null,
@@ -289,6 +306,16 @@
       "id": "wp-gw",
       "title": "Wikipedia — Hygrocybe chlorophana",
       "url": "https://en.wikipedia.org/wiki/Hygrocybe_chlorophana"
+    },
+    {
+      "id": "fn-pw",
+      "title": "First Nature — Hygrocybe acutoconica, Persistent Waxcap",
+      "url": "https://www.first-nature.com/fungi/hygrocybe-acutoconica.php"
+    },
+    {
+      "id": "ns-pw",
+      "title": "NatureSpot — Persistent Waxcap",
+      "url": "https://www.naturespot.org/species/hygrocybe-acutoconica"
     },
     {
       "id": "wf-prot",
