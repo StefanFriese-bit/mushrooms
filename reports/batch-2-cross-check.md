@@ -53,23 +53,23 @@ Verdicts on the 194 new pages: 113 not edible, 44 edible (cook first), 9 edible 
    Lookalikes named by only ONE site are listed too (the cautious answer), e.g. Tawny Grisette → Deathcap (First
    Nature), Snakeskin Grisette → Panthercap (Wild Food UK). In batch 1 I left off mix-ups named by one website; the
    same rule would now add them (they are listed in that report). Your call whether to apply it there too.
-3. **"No dangerous lookalike"** is recorded on 25 edible pages because every lookalike the sites name is harmless —
+3. **(Decided 07/10/2026: the pages now say "The trusted sites name no dangerous lookalike" — no stronger than the evidence.)** **"No dangerous lookalike"** is recorded on 25 edible pages because every lookalike the sites name is harmless —
    no site says so in as many words, except for the Bovine Bolete (First Nature and Wild Food UK: no Suillus is toxic).
 4. **The Shaggy Parasol — settled (no decision needed).** Of the four trusted sites, three call it edible but say it
    upsets some people: Wild Food UK (try a small amount first), Wikipedia (not for beginners) and the Woodland Trust
    ("can cause stomach upsets in around one in 25 people"). Only First Nature says avoid it, on its own page and on
    the Slender Parasol's ("a toxic toadstool"). The page stays "Edible, but some people react"; its note now gives
    the Woodland Trust's one in 25, and the Slender Parasol's note keeps First Nature's warning.
-5. **"Reported edible, but not worth picking" counts as edible** when both sites say it: Pink Waxcap (vulnerable
+5. **(Decided 07/10/2026: they stay edible, with the "not worth picking" note.)** **"Reported edible, but not worth picking" counts as edible** when both sites say it: Pink Waxcap (vulnerable
    worldwide — its note says never pick it), Meadow Coral, White and Smoky Spindles, Crested Coral, Yellowleg Bonnet,
    Jelly Tooth. You could make these "not edible" instead.
 6. **(Decided: six for every species — done; the offline download is now 174 MB, 1,590 files, against 36 MB for the live app.) Photos: two per new species, not four.** Every photo is part of what the phone downloads for offline use. The
    two each added 37 MB: the download is now about 95 MB (the live app today: about 36 MB; batch 1 alone took it to
    58 MB). Four each would add roughly another 37 MB. Say if you want four.
-7. **The approved core list** (`tools/config/core-lists.json`) is unchanged. The new edible–dangerous pairs below live
+7. **(Decided 07/10/2026: the approved list stays as approved; the pairs live on the pages.)** **The approved core list** (`tools/config/core-lists.json`) is unchanged. The new edible–dangerous pairs below live
    on both pages, which is what the app uses. Adding them to the approved list would also add the batch-2 species in
    them (Fly Agaric, Common Inkcap, Shaggy Scalycap…) to it — your list, so your call.
-8. **Still open from batch 1 — woodchip.** "What is it growing on?" takes one answer. Several species grow only on
+8. **(Decided 07/10/2026: a species whose habitat names woodchip or mulch fits both "wood" and "ground" in Identify.)** **Still open from batch 1 — woodchip.** "What is it growing on?" takes one answer. Several species grow only on
    woodchip: recorded as "wood" where woodchip is all they grow on (Blueleg Brownie, Common Rustgill), as "ground"
    where it is one habitat among others (Blue Roundhead, Wrinkled Conecap).
 

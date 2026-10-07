@@ -77,6 +77,8 @@ export const QUESTIONS: Question[] = [
 ];
 
 const BANDS: Record<string, [number, number]> = { small: [0, 5], medium: [5, 10], large: [10, Infinity] };
+/** A habitat that names woodchip or mulch. */
+const WOODCHIP = /wood ?chip|mulch/i;
 
 /** Does one species fit one answer? "Not sure" and no answer always fit. */
 export function fits(s: SpeciesRecord, q: QuestionId, answer: string | undefined): boolean {
@@ -84,7 +86,8 @@ export function fits(s: SpeciesRecord, q: QuestionId, answer: string | undefined
   const f = s.features;
   switch (q) {
     case 'underside': return f.underside.value === answer;
-    case 'growsOn': return f.growsOn.value === answer;
+    // Woodchip and mulch look like wood to some and ground to others (Stefan 07/10/2026): such a species fits either.
+    case 'growsOn': return f.growsOn.value === answer || (WOODCHIP.test(s.habitat.value) && (answer === 'wood' || answer === 'ground'));
     case 'ring': return f.ring.value === answer || f.ring.value === 'sometimes';
     case 'bag': return f.bagAtBase.value === answer;
     case 'cap': {

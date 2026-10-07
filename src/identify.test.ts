@@ -43,6 +43,14 @@ describe('fits', () => {
     expect(fits(chanterelle, 'underside', 'gills')).toBe(false);
     expect(fits(bracket, 'growsOn', 'ground')).toBe(false);
   });
+  it('a species of woodchip or mulch fits both "wood" and "ground" (Stefan 07/10/2026), and nothing else', () => {
+    const chip = { ...rec('Chip', { growsOn: 'wood' }), habitat: { value: 'Woodchip mulch in parks and gardens.', ...src } };
+    expect(fits(chip, 'growsOn', 'wood')).toBe(true);
+    expect(fits(chip, 'growsOn', 'ground')).toBe(true);
+    expect(fits(chip, 'growsOn', 'dung')).toBe(false);
+    const plain = rec('Plain', { growsOn: 'wood' }); // no woodchip in its habitat: one answer, as before
+    expect(fits(plain, 'growsOn', 'ground')).toBe(false);
+  });
   it('a ring that is there "sometimes" fits both yes and no', () => {
     expect(fits(field, 'ring', 'yes')).toBe(true);
     expect(fits(field, 'ring', 'no')).toBe(true);
