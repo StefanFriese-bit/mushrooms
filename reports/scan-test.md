@@ -82,6 +82,7 @@ Over the species each model knows (up to three photos unless said):
 | EfficientNet-B3 | 13.2 M | 273 | timm, 0.5/0.5 colours | 76.2% | 80.6% | 96.0% | 97.7% (686/702) | 22.4% | 48.5% | no |
 | EfficientNet-B3 (8-bit) | 13.2 M | 273 | timm, 0.5/0.5 colours | 32.5% | 37.5% | 63.7% | 77.5% (544/702) | 43.7% | 82.6% | no |
 | FungiTastic EfficientNet-B3 | 15 M | 282 | square, 0.5/0.5 colours | 78.3% | 81.8% | 96.1% | 99.0% (705/712) | 32.7% | 38.0% | yes |
+| FungiTastic EfficientNet-B3 (phone file) | 15 M | 282 | square, 0.5/0.5 colours | 78.3% | 81.8% | 96.1% | 99.0% (705/712) | 32.7% | 38.0% | yes |
 | FungiTastic EfficientNetV2-B3 | 17.2 M | 282 | square, 0.5/0.5 colours | 80.4% | 84.3% | 96.7% | 97.1% (691/712) | 19.4% | 24.0% | no |
 | FungiTastic EfficientNetV2-B3 (phone file) | 17.2 M | 282 | square, 0.5/0.5 colours | 80.4% | 84.3% | 96.7% | 97.1% (691/712) | 19.4% | 24.0% | no |
 | ViT-Base (ceiling only) | 87 M | 273 | timm, 0.5/0.5 colours | 76.8% | 80.6% | 96.4% | 98.9% (694/702) | 36.0% | 42.4% | yes |
@@ -95,6 +96,7 @@ Over ALL our species with test photos (3178 observations, 750 of them dangerous 
 | FungiTastic EfficientNetV2-B3 (phone file) | 79.9% | 91.7% | 92.1% (691/750) | 38 |
 | FungiTastic ViT-Base (ceiling only) | 79.3% | 91.9% | 93.3% (700/750) | 38 |
 | FungiTastic EfficientNet-B3 | 77.5% | 91.0% | 94.0% (705/750) | 38 |
+| FungiTastic EfficientNet-B3 (phone file) | 77.5% | 91.0% | 94.0% (705/750) | 38 |
 | ViT-Base (ceiling only) | 74.2% | 88.6% | 92.5% (694/750) | 48 |
 | EfficientNet-B3 | 74.1% | 88.3% | 91.5% (686/750) | 48 |
 | EfficientNet-B0 | 72.1% | 87.1% | 92.0% (690/750) | 48 |
@@ -116,6 +118,7 @@ Thresholds per model (from the tuning half): safety = the highest score at which
 - EfficientNet-B3: safety 0.0002, not sure 0.9, off-season ×0.3, group 0.6
 - EfficientNet-B3 (8-bit): safety none reaches the pass mark, not sure 0.9, off-season ×0.3, group none reaches 90 in 100; against the same model in PyTorch 43.1 points of "right first" lost
 - FungiTastic EfficientNet-B3: safety 0.0002, not sure 0.7, off-season ×0.3, group 0.4
+- FungiTastic EfficientNet-B3 (phone file): safety 0.0002, not sure 0.7, off-season ×0.3, group 0.4; against the same model in PyTorch no "right first" lost
 - FungiTastic EfficientNetV2-B3: safety 0.0005, not sure 0.6, off-season ×0.3, group 0.3
 - FungiTastic EfficientNetV2-B3 (phone file): safety 0.0005, not sure 0.6, off-season ×0.3, group 0.3; against the same model in PyTorch no "right first" lost
 - ViT-Base (ceiling only): safety 0.00005, not sure 0.8, off-season ×0.3, group 0.6
