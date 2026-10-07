@@ -40,7 +40,10 @@ else:
     import timm, torch
     mean, std = ((0.5,) * 3, (0.5,) * 3) if a.norm == 'half' else ((0.485, 0.456, 0.406), (0.229, 0.224, 0.225))
     dev = 'mps' if torch.backends.mps.is_available() else 'cpu'
-    model = timm.create_model(f'hf-hub:{a.model}', pretrained=True).eval().to(dev)
+    # Transformers are built at the size they were trained at: timm's hub loader otherwise builds BVRA's 384-px ViTs at
+    # 224 px and silently shrinks their position grid while loading (checkpoint 577 positions, model 197).
+    sized = {'img_size': a.size} if any(t in a.model for t in ('vit_', 'beit_', 'swin_')) else {}
+    model = timm.create_model(f'hf-hub:{a.model}', pretrained=True, **sized).eval().to(dev)
     classes = model.num_classes
     m = torch.tensor(mean, device=dev).view(1, 3, 1, 1)
     s = torch.tensor(std, device=dev).view(1, 3, 1, 1)

@@ -4,15 +4,46 @@ import { fileURLToPath } from 'node:url';
 import { createInatClient } from './lib/inat.ts';
 import { makeGroupFilter, resolveGroups, type GroupsConfig } from './lib/groups.ts';
 import { parseCsv } from './lib/csv.ts';
-import { df20Classes, matchClasses, type Df20Row } from './lib/df20-classes.ts';
+import { df20Classes, matchClasses, type Df20Class, type Df20Row } from './lib/df20-classes.ts';
 
-// The model's species list (DF20, 1,604 classes), matched to our 300 (older names included), with whether each class
-// is a UK species and its UK records by month. Every lookup is cached under cache/df20/, saved as it goes.
+// A model family's species list, matched to our 300 (older names included), with whether each class is a UK species
+// and its UK records by month. Every lookup is cached under cache/df20/ (the taxonomy lookups are shared by every
+// family), saved as it goes.
+//   (default)              DF20, 1,604 classes → content/model/df20-classes.json (what the app runs)
+//   --family fungitastic   FungiTastic (DF24), 2,829 classes → content/model/fungitastic-classes.json (scan test only,
+//                          until a FungiTastic model is chosen); its list comes from tools/scan-test/fungitastic_classes.py
 const ROOT = new URL('../', import.meta.url);
 const CACHE = new URL('cache/df20/', ROOT);
 const ZIP_URL = 'http://ptak.felk.cvut.cz/plants/DanishFungiDataset/DF20-metadata.zip';
 const CSV = 'DF20-train_metadata_PROD-2.csv';
 const at = (rel: string) => fileURLToPath(new URL(rel, CACHE));
+const FAMILY_ARG = process.argv.includes('--family') ? process.argv[process.argv.indexOf('--family') + 1] : 'df20';
+if (FAMILY_ARG !== 'df20' && FAMILY_ARG !== 'fungitastic') throw new Error(`unknown --family ${FAMILY_ARG} (df20 or fungitastic)`);
+const FAMILY: 'df20' | 'fungitastic' = FAMILY_ARG;
+const FAMILIES = {
+  df20: { out: 'content/model/df20-classes.json',
+    source: 'BVRA Danish Fungi 2020 (DF20) models, 1,604 classes; names from DF20-metadata.zip (CC BY-NC 4.0, non-commercial)' },
+  fungitastic: { out: 'content/model/fungitastic-classes.json',
+    source: 'BVRA FungiTastic (DF24) models, 2,829 classes; names from the FungiTastic metadata.zip (CC BY-NC 4.0, non-commercial)' },
+} as const;
+
+async function loadDf20(): Promise<Df20Class[]> {
+  if (!existsSync(at(CSV))) {
+    if (!existsSync(at('DF20-metadata.zip'))) {
+      const res = await fetch(ZIP_URL);
+      if (!res.ok) throw new Error(`DF20 metadata: HTTP ${res.status}`);
+      writeFileSync(at('DF20-metadata.zip'), Buffer.from(await res.arrayBuffer()));
+    }
+    execFileSync('unzip', ['-o', '-q', at('DF20-metadata.zip'), '-d', at('.')]);
+  }
+  return df20Classes(parseCsv(readFileSync(at(CSV), 'utf8')) as unknown as Df20Row[]);
+}
+
+function loadFungiTastic(): Df20Class[] {
+  const file = new URL('cache/fungitastic/classes.json', ROOT);
+  if (!existsSync(file)) throw new Error('cache/fungitastic/classes.json is missing: run tools/scan-test/fungitastic_classes.py first');
+  return JSON.parse(readFileSync(file, 'utf8')) as Df20Class[];
+}
 
 /** A JSON object on disk that grows as lookups are made, saved every 20 additions and at the end. */
 function store<T>(file: string) {
@@ -31,18 +62,10 @@ type Ours = { name: string; inatId: number; dangerLevel: 'deadly' | 'poisonous' 
 
 async function main() {
   mkdirSync(CACHE, { recursive: true });
-  if (!existsSync(at(CSV))) {
-    if (!existsSync(at('DF20-metadata.zip'))) {
-      const res = await fetch(ZIP_URL);
-      if (!res.ok) throw new Error(`DF20 metadata: HTTP ${res.status}`);
-      writeFileSync(at('DF20-metadata.zip'), Buffer.from(await res.arrayBuffer()));
-    }
-    execFileSync('unzip', ['-o', '-q', at('DF20-metadata.zip'), '-d', at('.')]);
-  }
-  const classes = df20Classes(parseCsv(readFileSync(at(CSV), 'utf8')) as unknown as Df20Row[]);
-  console.log(`DF20: ${classes.length} classes, ${classes.reduce((n, c) => n + c.photos, 0)} training photos`);
+  const classes = FAMILY === 'df20' ? await loadDf20() : loadFungiTastic();
+  console.log(`${FAMILY}: ${classes.length} classes, ${classes.reduce((n, c) => n + c.photos, 0)} training photos`);
   // The model's output number i is class i: the list must run 0, 1, 2 … with no gap, or every name is wrong.
-  if (classes.some((c, i) => c.id !== i)) throw new Error('DF20 class numbers are not 0 … n-1: the names would not line up with the model');
+  if (classes.some((c, i) => c.id !== i)) throw new Error(`${FAMILY} class numbers are not 0 … n-1: the names would not line up with the model`);
 
   const inat = createInatClient();
   const ours = (JSON.parse(readFileSync(new URL('content/species-list.json', ROOT), 'utf8')) as { species: Ours[] }).species;
@@ -73,6 +96,7 @@ async function main() {
     const our = matched.get(c.id);
     if (our) { taxonIdOf.set(c.id, ourByName.get(our)!.inatId); continue; }
     if (uk.has(c.name)) { taxonIdOf.set(c.id, uk.get(c.name).id); continue; }
+    if (c.filedAs !== c.name && uk.has(c.filedAs)) { taxonIdOf.set(c.id, uk.get(c.filedAs).id); continue; }
     if (!lookup.has(c.name)) {
       const body = await inat.getJson(`/taxa?${new URLSearchParams({ q: c.name, rank: 'species', per_page: '10' })}`);
       const hit = (body.results ?? []).find((r: { name: string; matched_term?: string; is_active?: boolean }) =>
@@ -106,10 +130,10 @@ async function main() {
       months: taxon !== undefined ? months.get(String(taxon)) : Array(12).fill(0),
     };
   });
-  const dst = new URL('content/model/df20-classes.json', ROOT);
+  const dst = new URL(FAMILIES[FAMILY].out, ROOT);
   mkdirSync(new URL('./', dst), { recursive: true });
   writeFileSync(dst, JSON.stringify({
-    source: 'BVRA Danish Fungi 2020 (DF20) models, 1,604 classes; names from DF20-metadata.zip (CC BY-NC 4.0, non-commercial)',
+    source: FAMILIES[FAMILY].source,
     built: new Date().toISOString().slice(0, 10),
     classes: out,
   }) + '\n');
