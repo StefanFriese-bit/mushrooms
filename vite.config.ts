@@ -57,7 +57,11 @@ export default defineConfig({
     // %APP_NAME% / %APP_SHORT_NAME% in index.html come from src/brand.json, so the name is changed in one place.
     { name: 'brand-html', transformIndexHtml: (html: string) => html.replaceAll('%APP_NAME%', brand.name).replaceAll('%APP_SHORT_NAME%', brand.shortName) },
     VitePWA({
-      registerType: 'autoUpdate',
+      // Our own service worker (src/sw/sw.ts): it reports download progress and waits for his Restart (src/update.ts).
+      strategies: 'injectManifest',
+      srcDir: 'src/sw',
+      filename: 'sw.ts',
+      registerType: 'prompt',
       injectRegister: false,
       includeAssets: ['favicon.ico', 'apple-touch-icon-180x180.png'],
       manifest: {
@@ -76,20 +80,9 @@ export default defineConfig({
           { src: 'maskable-icon-512x512.png', sizes: '512x512', type: 'image/png', purpose: 'maskable' },
         ],
       },
-      workbox: {
+      injectManifest: {
         globPatterns: ['**/*.{js,css,html,webp,png,svg,ico,webmanifest}', ...OFFLINE_SCAN],
         maximumFileSizeToCacheInBytes: 30 * 1024 * 1024,
-        // Map areas he has looked at stay on the phone (spec 7): OpenFreeMap's style, tiles, fonts and icons, kept
-        // after the first view, up to a limit; never fetched in bulk.
-        runtimeCaching: [{
-          urlPattern: ({ url }) => url.origin === 'https://tiles.openfreemap.org',
-          handler: 'CacheFirst',
-          options: {
-            cacheName: 'map-viewed',
-            expiration: { maxEntries: 6000, maxAgeSeconds: 120 * 24 * 3600 },
-            cacheableResponse: { statuses: [200] },
-          },
-        }],
       },
     }),
   ],

@@ -9,7 +9,9 @@ const TYPES: Record<string, string> = {
   '.svg': 'image/svg+xml', '.webp': 'image/webp', '.ico': 'image/x-icon',
 };
 
-export async function startServer(root: string, base = '/mushrooms/') {
+/** Serves a build at `base`. `root` may be a function, read on every request: a test can switch to another build the way a
+ * publish does. */
+export async function startServer(root: string | (() => string), base = '/mushrooms/') {
   const sockets = new Set<Socket>();
   const server: Server = createServer(async (req, res) => {
     const path = decodeURIComponent((req.url ?? '/').split('?')[0]);
@@ -17,7 +19,7 @@ export async function startServer(root: string, base = '/mushrooms/') {
     let rel = normalize(path.slice(base.length)).replace(/^(\.\.[/\\])+/, '');
     if (rel === '' || rel === '.' || rel.endsWith('/')) rel = join(rel, 'index.html');
     try {
-      const body = await readFile(join(root, rel));
+      const body = await readFile(join(typeof root === 'function' ? root() : root, rel));
       res.writeHead(200, { 'Content-Type': TYPES[extname(rel)] ?? 'application/octet-stream', 'Cache-Control': 'no-cache' }).end(body);
     } catch {
       res.writeHead(404).end();

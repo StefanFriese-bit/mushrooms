@@ -11,6 +11,7 @@ import { Scan } from './screens/scan';
 import { Finds } from './screens/finds';
 import { FindNew } from './screens/find-new';
 import { FindPage } from './screens/find-page';
+import { UpdateBar } from './screens/update-bar';
 import brand from './brand.json';
 
 const TABS = [
@@ -79,6 +80,7 @@ export function App() {
   return (
     <div class="shell">
       <Header />
+      <UpdateBar addingFind={route.name === 'find-new'} />
       <main>{screen(route)}</main>
       <nav class="tabs" aria-label="Sections">
         {TABS.map((t) => (
