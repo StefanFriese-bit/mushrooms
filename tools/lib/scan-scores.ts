@@ -1,4 +1,5 @@
-import { readFileSync } from 'node:fs';
+import { readdirSync, readFileSync } from 'node:fs';
+import type { Edibility } from '../../src/types.ts';
 import type { Case } from './scan-metrics.ts';
 
 /** One test observation (cache/test-photos/index.json): our species, its photos (up to three) and the month seen. */
@@ -25,4 +26,16 @@ export function readScoreCases(root: URL, name: string, classCount: number, inde
       photos: e.files.map((f) => data.subarray(row.get(f)! * meta.classes, (row.get(f)! + 1) * meta.classes)) });
   }
   return { meta, cases };
+}
+
+/** Each guide page's edibility by scientific name (content/species/*.json) — half of how dangerous a species is
+ * (src/scan/danger.ts); the other half is the approved list. */
+export function pageEdibility(root: URL): Map<string, Edibility> {
+  const dir = new URL('content/species/', root);
+  const out = new Map<string, Edibility>();
+  for (const f of readdirSync(dir).filter((n) => n.endsWith('.json'))) {
+    const page = JSON.parse(readFileSync(new URL(f, dir), 'utf8')) as { scientific: string; edibility: { value: Edibility } };
+    out.set(page.scientific, page.edibility.value);
+  }
+  return out;
 }

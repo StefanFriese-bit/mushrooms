@@ -1,4 +1,5 @@
 import type { ScanResult } from './rules';
+import { dangerOfPage, worse } from './danger';
 import type { Edibility } from '../types';
 
 // What the Scan screen shows for each species on the shortlist (spec 6.2): the English name — ours, or for a species
@@ -16,8 +17,6 @@ export type ScanRow = {
 };
 export type Page = { slug: string; edibility: Edibility };
 
-const worse = (a: Danger, b: Danger): Danger => (a === 'deadly' || b === 'deadly' ? 'deadly' : a ?? b);
-const fromPage = (e: Edibility | undefined): Danger => (e === 'deadly' ? 'deadly' : e === 'poisonous' ? 'poisonous' : null);
 
 export function scanRows(r: ScanResult, english: Map<string, string>, pages: Map<string, Page>): ScanRow[] {
   const rows = r.items.map((i) => {
@@ -25,7 +24,7 @@ export function scanRows(r: ScanResult, english: Map<string, string>, pages: Map
     const page = pages.get(i.ours);
     return {
       english: english.get(i.ours) ?? i.ours, scientific: i.ours, slug: page?.slug ?? null, inList: true,
-      danger: worse(i.danger, fromPage(page?.edibility)), forSafety: i.forSafety,
+      danger: worse(i.danger, dangerOfPage(page?.edibility)), forSafety: i.forSafety,
     };
   });
   // iNaturalist files a few of the model's species as one (both Russula undulata and R. depallens are its Purple

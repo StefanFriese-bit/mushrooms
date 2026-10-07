@@ -5,7 +5,8 @@ import { join } from 'node:path';
 import type { ClassInfo, Thresholds } from '../src/scan/rules.ts';
 import type { CoreLists } from './lib/core-lists.ts';
 import { measure, type Case, type Measures } from './lib/scan-metrics.ts';
-import { readScoreCases, type TestEntry } from './lib/scan-scores.ts';
+import { pageEdibility, readScoreCases, type TestEntry } from './lib/scan-scores.ts';
+import { dangerousSpecies, withPageDanger } from '../src/scan/danger.ts';
 
 // Our scanner against Kindwise's paid mushroom identifier (mushroom.kindwise.com), on the SAME observations of the scan
 // test's checking half (odd observation numbers — photos neither side was tuned on) → reports/kindwise-test.md.
@@ -44,7 +45,9 @@ type Usage = { active: boolean; can_use_credits: { value: boolean; reason: strin
 
 const ours = read<{ species: Ours[] }>('content/species-list.json').species;
 const english = new Map(ours.map((s) => [s.name, s.english ?? s.name]));
-const danger = new Map(ours.filter((s) => s.dangerLevel).map((s) => [s.name, s.dangerLevel as 'deadly' | 'poisonous']));
+const PAGES = pageEdibility(ROOT);
+/** Dangerous as the app decides it: the worse of the approved list's level and the page's (src/scan/danger.ts). */
+const danger = dangerousSpecies(ours, PAGES);
 const index = read<TestEntry[]>('cache/test-photos/index.json');
 const checking = index.filter((e) => e.obsId % 2 === 1 && e.files.length > 0);
 
@@ -157,7 +160,7 @@ function kindwiseTally(sample: TestEntry[]): { t: Tally; rows: string[] } {
 function oursOn(sample: TestEntry[]): { m: Measures; label: string } | null {
   const settings = read<{ passed: boolean; model: string; file: string; norm: string; fit: string; thresholds: Thresholds }>('content/model/scan-settings.json');
   if (!settings.passed) return null;
-  const classes = read<{ classes: ClassInfo[] }>('content/model/df20-classes.json').classes;
+  const classes = withPageDanger(read<{ classes: ClassInfo[] }>('content/model/df20-classes.json').classes, PAGES);
   const name = `${settings.model.split('/')[1]}${settings.norm === 'half' ? '' : '.imagenet'}${settings.fit === 'squash' ? '' : `.${settings.fit}`}.phone`;
   const wanted = new Set(sample.map((e) => e.obsId));
   const cases: Case[] = readScoreCases(ROOT, name, classes.length, index).cases.filter((c) => wanted.has(c.obsId));

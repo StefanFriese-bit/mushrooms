@@ -1,7 +1,8 @@
 import { readFileSync, readdirSync, writeFileSync } from 'node:fs';
 import type { ClassInfo, Thresholds } from '../src/scan/rules.ts';
 import type { CoreLists } from './lib/core-lists.ts';
-import { readScoreCases, type ScoreMeta, type TestEntry } from './lib/scan-scores.ts';
+import { pageEdibility, readScoreCases, type ScoreMeta, type TestEntry } from './lib/scan-scores.ts';
+import { dangerousSpecies, withPageDanger } from '../src/scan/danger.ts';
 import {
   PASS_MARK, checkingHalf, chooseGroup, chooseNotSure, chooseSafety, measure, tuningHalf, type Case, type Measures,
 } from './lib/scan-metrics.ts';
@@ -49,6 +50,7 @@ function classesOf(family: Family): ClassInfo[] {
   if (!list) {
     list = read<{ classes: ClassInfo[] }>(FAMILY_FILES[family].file).classes;
     if (list.some((c, i) => c.id !== i)) throw new Error(`${FAMILY_FILES[family].file} is not in model order (class i at position i)`);
+    list = withPageDanger(list, PAGES); // the danger the app's rules use (src/scan/danger.ts)
     classLists.set(family, list);
   }
   return list;
@@ -57,7 +59,10 @@ const knownBy = (classes: ClassInfo[]) => new Set(classes.filter((c) => c.ours).
 const index = read<TestEntry[]>('cache/test-photos/index.json');
 const ours = read<{ species: Ours[] }>('content/species-list.json').species;
 const english = new Map(ours.map((s) => [s.name, s.english ?? s.name]));
-const danger = new Map(ours.filter((s) => s.dangerLevel).map((s) => [s.name, s.dangerLevel as 'deadly' | 'poisonous']));
+const PAGES = pageEdibility(ROOT);
+/** Dangerous = the worse of the approved list's level and the page's, exactly as the app decides it (src/scan/danger.ts). */
+const danger = dangerousSpecies(ours, PAGES);
+const onSafetyList = ours.filter((s) => s.dangerLevel).length;
 const lookalikes = new Map<string, string[]>();
 for (const p of read<CoreLists>('tools/config/core-lists.json').pairs) {
   lookalikes.set(p.edible, [...(lookalikes.get(p.edible) ?? []), p.dangerous]);
@@ -152,9 +157,10 @@ lines.push(`Built ${new Date().toISOString().slice(0, 10)} by \`tools/evaluate-s
   'figure below is measured on the other half.', '');
 lines.push(`**Pass mark (spec 6.3):** dangerous species on the shortlist at least ${PASS_MARK * 100} times in 100 when they are the answer. ` +
   `The file the phone runs (8-bit, or full size as a phone file) is scored through that file itself and must also lose at most ${MAX_FILE_LOSS * 100} point of "right first" against the same model run in PyTorch.`, '');
-lines.push(`**Dangerous** here means the ${danger.size} species on the approved list's safety list (Deadly, or a dangerous lookalike of ` +
-  'an edible). Other poisonous species among the 300 (the Fly Agaric, for one) count once their pages are written, and the ' +
-  'test is run again then.', '');
+lines.push(`**Dangerous** here means the ${danger.size} species the app treats as dangerous: the ${onSafetyList} on the approved list's ` +
+  `safety list (Deadly, or a dangerous lookalike of an edible) and ${danger.size - onSafetyList} more whose guide page says poisonous or ` +
+  'deadly (the Fly Agaric, the White Fibrecap …) — the worse of the two levels, as the app decides it (src/scan/danger.ts). ' +
+  'Until 07/10/2026 the test and the app\'s red banner counted only the safety list.', '');
 lines.push(`**Two species lists.** ${Object.values(FAMILY_FILES).map((f) => f.label).join(' and ')} models know different species. ` +
   '"Right first", "on the shortlist" and "dangerous on the shortlist" are given twice: over the species the model knows (the ' +
   'pass mark uses this one, as the spec says) and over ALL our species with test photos, where a species the model cannot ' +

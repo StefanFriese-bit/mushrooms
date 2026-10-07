@@ -2,7 +2,8 @@ import { useEffect, useMemo, useState } from 'preact/hooks';
 import { ALL_SPECIES } from '../content';
 import { hrefFor } from '../router';
 import { bySlug } from '../species';
-import { combine, genusOf, shortlist, type ClassInfo, type ScanResult } from '../scan/rules';
+import { combine, genusOf, shortlist, type ClassInfo, type Danger, type ScanResult } from '../scan/rules';
+import { dangerousSpecies, withPageDanger } from '../scan/danger';
 import { decode, loadEngine } from '../scan/engine';
 import { recordWords, scanRows, type ScanRow } from '../scan/rows';
 import { REPORT_URL, SETTINGS } from '../scan/settings';
@@ -19,6 +20,8 @@ const DANGER_WORDS = { deadly: 'Deadly', poisonous: 'Poisonous' } as const;
 const seen = () => { try { return localStorage.getItem(SEEN); } catch { return null; } };
 
 const pc = (x: number) => `${Math.round(x * 1000) / 10}%`;
+/** Each page's edibility by scientific name: part of how dangerous a species is (src/scan/danger.ts). */
+const PAGE_EDIBILITY = new Map(ALL_SPECIES.map((s) => [s.scientific, s.edibility.value]));
 
 /** The group headline ("most likely one of the brittlegills") and the guide's species in that group. */
 function GroupLine({ genus, label, classes }: { genus: string; label?: string; classes: ClassInfo[] }) {
@@ -87,8 +90,9 @@ export function Scan() {
     if (ok || !S.passed) return;
     Promise.all([import('../../content/model/df20-classes.json'), import('../../content/species-list.json')]).then(([c, l]) => {
       const known = new Set((c.default.classes as ClassInfo[]).map((x) => x.ours).filter(Boolean));
-      setUnknownDanger(l.default.species.filter((s: { name: string; dangerLevel: string | null }) => s.dangerLevel && !known.has(s.name))
-        .map((s: { english: string | null; name: string }) => s.english ?? s.name));
+      const dangerous = dangerousSpecies(l.default.species as Array<{ name: string; dangerLevel: Danger }>, PAGE_EDIBILITY);
+      setUnknownDanger((l.default.species as Array<{ name: string; english: string | null }>)
+        .filter((s) => dangerous.has(s.name) && !known.has(s.name)).map((s) => s.english ?? s.name));
     });
   }, [ok]);
 
@@ -134,7 +138,8 @@ export function Scan() {
         const p = await decode(f);
         try { scores.push(await engine.score(p)); } finally { URL.revokeObjectURL(p.url); }
       }
-      const all = (await import('../../content/model/df20-classes.json')).default.classes as ClassInfo[];
+      // The banner and the safety rule use the same danger as the rows: the worse of the approved list and the page.
+      const all = withPageDanger((await import('../../content/model/df20-classes.json')).default.classes as ClassInfo[], PAGE_EDIBILITY);
       setClasses(all);
       setResult(shortlist(combine(scores), all, new Date().getMonth() + 1, S.thresholds));
     } catch {
