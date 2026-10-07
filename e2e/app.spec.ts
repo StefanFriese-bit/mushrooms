@@ -103,6 +103,14 @@ test('the hidden speed test runs the scan model and names the Deathcap from its 
   await expect(row).toBeVisible({ timeout: 90_000 });
   await expect(row.locator('[data-test=scan-seconds]')).toHaveText(/^\d+\.\d\d s$/);
   await expect(row).toContainText('Deathcap');
+  // Every model on the page names it with its own species list (the FungiTastic candidate has 2,829 species).
+  for (let k = 1; k < MODEL_FILES.length; k++) {
+    await page.getByRole('button', { name: 'Run with WebAssembly' }).nth(k).click();
+    const next = page.locator('[data-test=speed-results] tbody tr').nth(k);
+    await expect(next).toBeVisible({ timeout: 90_000 });
+    await expect(next).toContainText(MODEL_FILES[k].label.split(' (')[0]);
+    await expect(next).toContainText('Deathcap');
+  }
 });
 
 const EDIBILITY_WORDS = /Edible, cooked|Edible, but some people react|Not edible|\bsafe\b/i;

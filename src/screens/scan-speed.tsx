@@ -34,7 +34,9 @@ async function measure(model: ModelFile, engine: Engine): Promise<Run> {
   for (let k = 0; k < 3; k++) await session.run({ pixels: input });
   const scanMs = performance.now() - t;
   const probs = first.probabilities.data as Float32Array;
-  const classes = (await import('../../content/model/df20-classes.json')).default.classes;
+  const classes = model.classes === 'fungitastic'
+    ? (await import('../../content/model/fungitastic-classes.json')).default.classes
+    : (await import('../../content/model/df20-classes.json')).default.classes;
   const english = new Map((await import('../../content/species-list.json')).default.species.map((s) => [s.name, s.english]));
   const top = [...probs.keys()].sort((a, b) => probs[b] - probs[a]).slice(0, 3).map((i) => {
     const ours = classes[i].ours;
@@ -65,7 +67,7 @@ export function ScanSpeed() {
     <>
       <h1>Scan speed test</h1>
       <p>Times the scan model on this phone, using the Deathcap's guide photo. Each button downloads its model once
-        (a few MB) — use Wi-Fi. This phone {gpu ? 'offers' : 'does not offer'} WebGPU.</p>
+        (17 to 61 MB) — use Wi-Fi. This phone {gpu ? 'offers' : 'does not offer'} WebGPU.</p>
       {MODEL_FILES.map((m) => (
         <div class="card" key={m.file}>
           <h2>{m.label}</h2>
