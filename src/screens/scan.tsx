@@ -9,6 +9,8 @@ import { recordWords, scanRows, type ScanRow } from '../scan/rows';
 import { REPORT_URL, SETTINGS } from '../scan/settings';
 import { handOver, shrinkPhoto } from '../finds/device';
 import { speciesNames } from '../species-names';
+import { NextChecks } from './scan-checks';
+import type { SpeciesRecord } from '../types';
 
 // Scan (spec 6.2, 8, 10): up to three photos (top, underneath, base) → the model on the phone → the shortlist. It
 // is a shortlist, never an identification: a dangerous species on it raises the red banner, a weak result says "Not
@@ -23,11 +25,15 @@ const pc = (x: number) => `${Math.round(x * 1000) / 10}%`;
 /** Each page's edibility by scientific name: part of how dangerous a species is (src/scan/danger.ts). */
 const PAGE_EDIBILITY = new Map(ALL_SPECIES.map((s) => [s.scientific, s.edibility.value]));
 
-/** The group headline ("most likely one of the brittlegills") and the guide's species in that group. */
-function GroupLine({ genus, label, classes }: { genus: string; label?: string; classes: ClassInfo[] }) {
+/** The guide's species in a group: those the model files under that genus, and those it cannot name whose genus it is. */
+function groupSpecies(genus: string, classes: ClassInfo[]): SpeciesRecord[] {
   const named = new Set(classes.filter((c) => c.ours && genusOf(c.name) === genus).map((c) => c.ours as string));
   const withClass = new Set(classes.filter((c) => c.ours).map((c) => c.ours as string));
-  const pages = ALL_SPECIES.filter((s) => named.has(s.scientific) || (!withClass.has(s.scientific) && genusOf(s.scientific) === genus));
+  return ALL_SPECIES.filter((s) => named.has(s.scientific) || (!withClass.has(s.scientific) && genusOf(s.scientific) === genus));
+}
+
+/** The group headline ("most likely one of the brittlegills") and the guide's species in that group. */
+function GroupLine({ genus, label, pages }: { genus: string; label?: string; pages: SpeciesRecord[] }) {
   const article = /^[AEIOU]/.test(genus) ? 'an' : 'a';
   return (
     <div class="card" data-test="scan-group">
@@ -71,6 +77,7 @@ export function Scan() {
   const [groupNames, setGroupNames] = useState<Record<string, string>>({});
   const [classes, setClasses] = useState<ClassInfo[]>([]);
   const [unknownDanger, setUnknownDanger] = useState<string[] | null>(null);
+  const [danger, setDanger] = useState(new Map<string, 'deadly' | 'poisonous'>());
   const previews = useMemo(() => files.map((f) => (f ? URL.createObjectURL(f) : null)), [files]);
   // Is the model already stored on this phone (by the service worker), so the scan works with no signal?
   const [stored, setStored] = useState<boolean | null>(null);
@@ -140,6 +147,8 @@ export function Scan() {
       }
       // The banner and the safety rule use the same danger as the rows: the worse of the approved list and the page.
       const all = withPageDanger((await import('../../content/model/df20-classes.json')).default.classes as ClassInfo[], PAGE_EDIBILITY);
+      const list = (await import('../../content/species-list.json')).default.species as Array<{ name: string; dangerLevel: Danger }>;
+      setDanger(dangerousSpecies(list, PAGE_EDIBILITY));
       setClasses(all);
       setResult(shortlist(combine(scores), all, new Date().getMonth() + 1, S.thresholds));
     } catch {
@@ -150,6 +159,7 @@ export function Scan() {
   };
   const pages = new Map(ALL_SPECIES.map((s) => [s.scientific, { slug: s.slug, edibility: s.edibility.value }]));
   const rows = result ? scanRows(result, english, pages) : [];
+  const group = result?.group ? { genus: result.group.genus, label: groupNames[result.group.genus], species: groupSpecies(result.group.genus, classes) } : null;
   // The photos go to a new find, scaled down; what it is stays "not identified yet" — a shortlist is not an answer.
   const saveAsFind = async () => {
     handOver(await Promise.all(photos.map((f) => shrinkPhoto(f))), null);
@@ -188,7 +198,7 @@ export function Scan() {
           {result.dangerous && (
             <p class="card verdict red" role="alert">A dangerous species is on this list. Do the checks before anything else.</p>
           )}
-          {result.group && <GroupLine genus={result.group.genus} label={groupNames[result.group.genus]} classes={classes} />}
+          {group && <GroupLine genus={group.genus} label={group.label} pages={group.species} />}
           {result.notSure && (
             <div class="card" data-test="not-sure">
               <p><strong>Not certain which species.</strong> When it isn't certain, the right one is still on this list
@@ -198,6 +208,9 @@ export function Scan() {
           )}
           <h2>The shortlist</h2>
           {rows.map((r, i) => <Row r={r} first={i === 0} key={r.scientific} />)}
+          <NextChecks key={rows.map((r) => r.scientific).join('|')} rows={rows}
+            group={group && group.species.length > 0 ? { label: group.label ? group.label.toLowerCase() : `${group.genus} species`, species: group.species } : null}
+            dangerOf={(s) => danger.get(s.scientific) ?? null} />
           <p class="card">A shortlist is not an identification. The next step is Check: your mushroom against the
             species and the ones it is mistaken for, feature by feature.</p>
           <p class="muted small">{recordWords(S.record)}</p>

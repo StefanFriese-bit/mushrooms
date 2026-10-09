@@ -386,6 +386,62 @@ test('the scan names the group, and gives English names to species the guide doe
   expect(await page.locator('main').innerText()).not.toMatch(/Edible, cooked|Edible, but some people react|Not edible|\bsafe\b/i);
 });
 
+test('what to check next: the guide\'s brittlegills compared in their own words when no question tells them apart', async ({ page }) => {
+  test.setTimeout(150_000);
+  await page.goto(`${site.url}#/scan`);
+  await page.getByRole('button', { name: /switch the scan on/ }).click();
+  await page.getByLabel('Top of the cap photo').setInputFiles(fileURLToPath(new URL('../public/photos/sickener/1.webp', import.meta.url)));
+  await page.getByRole('button', { name: 'Scan', exact: true }).click();
+  const card = page.locator('[data-test=next-checks]');
+  await expect(card).toBeVisible({ timeout: 120_000 });
+  await expect(card).toContainText("the guide's other brittlegills (the group the scan named)");
+  await expect(card).toContainText('Not in these checks, as the guide has no page for them: Crab Brittlegill');
+  await expect(card.locator('[data-test=still]')).toContainText('Possible: Sickener');
+  await expect(card.locator('[data-test=next-check]')).toHaveCount(0);
+  await expect(card).toContainText('The questions cannot tell these apart');
+  const facts = card.locator('[data-test=next-facts]');
+  await expect(facts).toHaveAttribute('open', ''); // three species: open at once
+  const grows = facts.locator('[data-test=next-fact]').filter({ hasText: 'Where it grows' });
+  for (const name of ['Sickener', 'Charcoal Burner', 'Ochre Brittlegill']) await expect(grows).toContainText(name);
+  expect(await page.locator('main').innerText()).not.toMatch(EDIBILITY_WORDS);
+});
+
+test('what to check next narrows the list as he answers, and never drops a dangerous species', async ({ page }) => {
+  test.setTimeout(150_000);
+  await page.goto(`${site.url}#/scan`);
+  await page.getByRole('button', { name: /switch the scan on/ }).click();
+  await page.getByLabel('Top of the cap photo').setInputFiles(fileURLToPath(new URL('../public/photos/deathcap/1.webp', import.meta.url)));
+  await page.getByRole('button', { name: 'Scan', exact: true }).click();
+  const card = page.locator('[data-test=next-checks]');
+  await expect(card).toBeVisible({ timeout: 120_000 });
+  const checks = card.locator('[data-test=next-check]');
+  await expect(checks.first()).toBeVisible();
+  // Each answer says which species have it: the bag at the base, Deathcap first among those with one.
+  const bag = checks.filter({ hasText: 'Is there a bag at the base of the stem?' });
+  await expect(bag.getByRole('button', { name: /^Yes, a bag or cup/ })).toContainText('Deathcap (Deadly)');
+  await bag.getByRole('button', { name: /^No bag: I dug out the whole base/ }).click();
+  await expect(bag.getByRole('button', { name: /^No bag/ })).toHaveAttribute('aria-pressed', 'true');
+  const still = card.locator('[data-test=still]');
+  await expect(still.locator('[data-test=still-fit]')).toContainText('Blusher');
+  await expect(still.locator('[data-test=still-kept]').filter({ hasText: 'Deathcap' }))
+    .toContainText('Kept on the list, though they do not fit what you said about the bag at the base');
+  await expect(still.locator('[data-test=ruled-out]')).toContainText('Ruled out by what you said about the bag at the base:');
+  await expect(still.locator('[data-test=ruled-out]')).toContainText('Orange Grisette');
+  await expect(still.locator('[data-test=ruled-out]')).not.toContainText('Deathcap');
+  await expect(still.getByRole('link', { name: 'Check Blusher against its lookalikes' })).toBeVisible();
+  // The same answer again takes it back; "Clear my answers" takes them all back.
+  await bag.getByRole('button', { name: /^No bag/ }).click();
+  await expect(still).toContainText('Possible: Deathcap');
+  await checks.filter({ hasText: 'Is there a ring on the stem?' }).getByRole('button', { name: /^No ring/ }).click();
+  await bag.getByRole('button', { name: /^No bag/ }).click();
+  await expect(still.locator('[data-test=none-fit]')).toContainText('None of the other species here fits your answers');
+  await expect(still.locator('[data-test=still-kept]').filter({ hasText: 'Deathcap' })).toContainText('the ring and the bag at the base');
+  await still.getByRole('button', { name: 'Clear my answers' }).click();
+  await expect(still).toContainText('Possible: Deathcap');
+  await expect(card.locator('[data-test=next-facts]')).not.toHaveAttribute('open', ''); // ten species: folded
+  expect(await page.locator('main').innerText()).not.toMatch(EDIBILITY_WORDS);
+});
+
 test('when the scan is not certain it says how often the right species is still on the list', async ({ page }) => {
   test.setTimeout(150_000);
   await page.goto(`${site.url}#/scan`);

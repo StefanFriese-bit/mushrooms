@@ -226,7 +226,11 @@ Both thresholds are set from the test, not by hand.
 
 ## 8. Screens
 
-- **Scan:** take or pick up to three photos (top, underneath, base) → the shortlist (6.2) → Check.
+- **Scan:** take or pick up to three photos (top, underneath, base) → the shortlist (6.2) → what to check next → Check.
+  *What to check next* (Stefan, 09/10/2026 — free and offline, instead of a paid identifier): the shortlist's species
+  that have a page, and the guide's other species of a group the scan names, compared with Identify's questions (best
+  split first, the spore print last) and the pages' own words for where each grows, smell, flesh, cap width and spore
+  print. A tap narrows the list; a Deadly or Poisonous species is never dropped by an answer.
 - **Check:** the top match, or any species he picks, side by side with its lookalikes, one row per feature. He ticks
   what he sees; a tick that fits a lookalike better than the match is flagged red. It ends with "Before eating, get
   it confirmed" and "Send to iNaturalist".
