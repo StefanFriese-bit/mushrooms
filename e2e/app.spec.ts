@@ -564,6 +564,37 @@ test.describe('Map', () => {
     await expect(page.locator('[data-test=find-row]')).toHaveCount(4);
   });
 
+  test('growth: a location saved at G1 shows "G1 · 3 days" three days later, and a revisit logs G2', async ({ page }) => {
+    // Stefan 10/10/2026: mark one just coming up, see the stage and how many days have passed, go back when it is time.
+    await page.goto(`${site.url}#/finds/new`);
+    await expect(page.locator('[data-test=where]')).toContainText('within 7 m', { timeout: 15000 });
+    await page.getByLabel('Description').fill('Looks like porcini');
+    const pick = page.locator('[data-test=growth-pick]');
+    await expect(pick.getByRole('button')).toHaveCount(5);
+    await pick.getByRole('button', { name: /G1\s*Button/ }).click();
+    await expect(pick.getByRole('button', { name: /G1\s*Button/ })).toHaveAttribute('aria-pressed', 'true');
+    await page.getByRole('button', { name: 'Save location' }).click();
+    await expect(page.locator('[data-test=growth-now]')).toContainText('G1 Button · today');
+    // The list shows it on the location's own line; the pin says it too.
+    await page.goto(`${site.url}#/finds`);
+    await expect(page.locator('[data-test=find-row] [data-test=growth-chip]')).toHaveText('G1 · today');
+    await page.locator('[data-test=map-pin]').click();
+    await expect(page.locator('.pin-pop-growth')).toHaveText('G1 Button · today');
+    // Three days later.
+    await page.clock.setSystemTime(new Date(Date.now() + 3 * 86_400_000 + 60_000));
+    await page.reload();
+    await expect(page.locator('[data-test=find-row] [data-test=growth-chip]')).toHaveText('G1 · 3 days');
+    await page.locator('[data-test=find-row] .loc-main').click();
+    await expect(page.locator('[data-test=growth-now]')).toContainText('G1 Button · 3 days ago');
+    // He goes back: it has grown.
+    await page.locator('[data-test=log-growth]').click();
+    await page.locator('[data-test=growth-pick]').getByRole('button', { name: /G2\s*Young/ }).click();
+    await expect(page.locator('[data-test=growth-now]')).toContainText('G2 Young · today');
+    await expect(page.locator('[data-test=growth-history] li')).toHaveCount(2);
+    await page.goto(`${site.url}#/finds`);
+    await expect(page.locator('[data-test=find-row] [data-test=growth-chip]')).toHaveText('G2 · today');
+  });
+
   test('a saved location can be described and identified afterwards, and deleted', async ({ page }) => {
     await page.goto(`${site.url}#/finds/new`);
     await expect(page.locator('[data-test=where]')).toContainText('within 7 m', { timeout: 15000 });

@@ -28,6 +28,13 @@ describe('a backup file', () => {
     expect(() => readBackup(packBackup([{ ...find('a'), at: 'yesterday' }], [], made))).toThrow(BackupError);
     expect(() => readBackup(packBackup([find('a'), find('a')], [], made))).toThrow(BackupError); // the same find twice
   });
+  it('keeps a growth log, still restores a backup from before growth logs, and refuses a broken log', () => {
+    const grown = { ...find('a'), growth: [{ stage: 0, at: '2026-10-07T09:30:00.000Z' }, { stage: 2, at: '2026-10-09T08:00:00.000Z' }] };
+    expect(readBackup(packBackup([grown, find('b')], [], made)).finds).toEqual([grown, find('b')]); // b: made before growth logs
+    for (const growth of [[{ stage: 7, at: '2026-10-07T09:30:00.000Z' }], [{ stage: 1, at: 'yesterday' }], [{ stage: 1.5, at: '2026-10-07T09:30:00.000Z' }], 'G1']) {
+      expect(() => readBackup(packBackup([{ ...find('a'), growth } as unknown as Find], [], made))).toThrow(BackupError);
+    }
+  });
   it('says plainly when a backup comes from another version of the app', () => {
     const newer = zipSync({ 'finds.json': strToU8(JSON.stringify({ app: 'mushroom-guide-finds', version: 99, made: '', finds: [], photos: [] })) });
     expect(() => readBackup(newer)).toThrow('That backup was made by a newer version of the app');

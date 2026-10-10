@@ -1,4 +1,5 @@
 import type { LatLon } from './geo';
+import type { GrowthLog } from './growth';
 import { planRestore } from './backup';
 
 // His finds (spec 7), kept in this phone's own database (IndexedDB) and nowhere else. A find's photos are stored as
@@ -11,6 +12,8 @@ export type Find = {
   species: string | null; // the scientific name of one of our species, or null = not identified yet
   notes: string;
   photoIds: string[];
+  /** What he saw grow there, each stage with the moment he logged it (src/finds/growth.ts). Older finds have none. */
+  growth?: GrowthLog[];
 };
 export type StoredPhoto = { id: string; findId: string; type: string; bytes: ArrayBuffer };
 
@@ -82,13 +85,20 @@ export async function addFind(f: Omit<Find, 'id' | 'photoIds'>, photos: Blob[]):
   return find;
 }
 
-/** Changes what he knows about a find (species, notes, its spot). */
-export async function updateFind(id: string, changes: Partial<Pick<Find, 'species' | 'notes' | 'spot'>>): Promise<Find> {
+/** Changes what he knows about a find (species, notes, its spot, its growth log). */
+export async function updateFind(id: string, changes: Partial<Pick<Find, 'species' | 'notes' | 'spot' | 'growth'>>): Promise<Find> {
   const old = await getFind(id);
   if (!old) throw new Error('That find is no longer on this phone');
   const next = { ...old, ...changes };
   await inTx(['finds'], 'readwrite', (tx) => { tx.objectStore('finds').put(next); });
   return next;
+}
+
+/** Adds what he sees growing there now to a find's growth log. */
+export async function logGrowth(id: string, stage: number, at = new Date().toISOString()): Promise<Find> {
+  const old = await getFind(id);
+  if (!old) throw new Error('That find is no longer on this phone');
+  return updateFind(id, { growth: [...(old.growth ?? []), { stage, at }] });
 }
 
 /** Removes a find and its photos. */

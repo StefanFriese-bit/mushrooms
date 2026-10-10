@@ -6,6 +6,7 @@ import { sayAccuracy } from '../finds/geo';
 import { FindsMap } from './finds-map';
 import { Icon } from './icons';
 import { BackLink } from './back-link';
+import { GrowthPicker } from './growth';
 
 // Save a location (Stefan 10/10/2026): the exact spot where he is standing — the GPS position, getting better while
 // the screen is open, or a pin he places by hand — with a description and a photo, both optional. Saves with no
@@ -28,6 +29,7 @@ export function FindNew() {
   const placed = useRef(false);
   const [photos, setPhotos] = useState<Blob[]>(handed?.photos ?? []);
   const [notes, setNotes] = useState('');
+  const [stage, setStage] = useState<number | null>(null); // growth stage, optional (src/finds/growth.ts)
   const [busy, setBusy] = useState<string | null>(null);
   const [problem, setProblem] = useState<string | null>(null);
   const previews = useMemo(() => photos.map((p) => URL.createObjectURL(p)), [photos]);
@@ -63,7 +65,9 @@ export function FindNew() {
     if (!spot && !confirm('There is no position yet. Save the location without one?')) return;
     setBusy('Saving…');
     try {
-      const f = await addFind({ at: new Date().toISOString(), spot, species: handed?.species ?? null, notes: notes.trim() }, photos);
+      const at = new Date().toISOString();
+      const f = await addFind({ at, spot, species: handed?.species ?? null, notes: notes.trim(),
+        ...(stage === null ? {} : { growth: [{ stage, at }] }) }, photos);
       try { sessionStorage.setItem(JUST_SAVED, f.id); } catch { /* the page simply does not say "saved" */ }
       location.hash = hrefFor({ name: 'find', id: f.id });
     } catch {
@@ -85,6 +89,11 @@ export function FindNew() {
         <h2><label for="description">Description</label><span class="optional">optional</span></h2>
         <textarea id="description" class="field" rows={3} value={notes} onInput={(e) => setNotes((e.target as HTMLTextAreaElement).value)}
           placeholder="What did you find? For example: Penny Bun, five caps, under the big beech" />
+      </section>
+      <section class="card">
+        <h2>Growth stage<span class="optional">optional</span></h2>
+        <p class="muted small">Just coming up? Mark how far: the location then shows the stage and how many days ago you saw it.</p>
+        <GrowthPicker value={stage} onPick={setStage} label="Growth stage" />
       </section>
       <section class="card">
         <h2>Photo<span class="optional">optional</span></h2>

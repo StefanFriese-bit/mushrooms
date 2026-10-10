@@ -31,7 +31,9 @@ const UK: [number, number] = [-2.5, 54.3];
 
 /** `accuracy`: how exact its GPS spot is (metres), drawn as a circle round it; null = placed by hand. `goHref`: the walk
  * back to it ("Take me there"); `when`: when it was saved — both shown when its pin is tapped. */
-export type Pin = { id: string; lat: number; lon: number; label: string; href: string; accuracy?: number | null; when?: string; goHref?: string };
+export type Pin = { id: string; lat: number; lon: number; label: string; href: string; accuracy?: number | null; when?: string;
+  /** The growth last logged there: "G1 Button · 3 days ago" (src/finds/growth.ts). */
+  growth?: string; goHref?: string };
 type Props = {
   pins?: Pin[];
   /** Show his position (the blue dot) and keep following it. */
@@ -169,6 +171,12 @@ export function FindsMap({ pins = [], locate = false, pick, here = null, tall = 
         when.className = 'pin-pop-when';
         when.textContent = p.when;
         pop.append(when);
+      }
+      if (p.growth) {
+        const growth = document.createElement('span');
+        growth.className = 'pin-pop-growth';
+        growth.textContent = p.growth;
+        pop.append(growth);
       }
       const links = document.createElement('span');
       links.className = 'pin-pop-links';

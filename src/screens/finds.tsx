@@ -7,6 +7,8 @@ import { BackupSection, useBackup } from './backup';
 import { Icon } from './icons';
 import { BackLink } from './back-link';
 import { findLabel } from '../finds/labels';
+import { growthWords } from '../finds/growth';
+import { GrowthChip } from './growth';
 import { askForCompassOnTap } from '../finds/compass';
 import { ALL, NO_FILTER, filterFinds, monthName, speciesChoices, type FindFilter } from '../finds/filters';
 
@@ -51,9 +53,9 @@ export function Finds() {
   const named = (finds ?? []).some((f) => f.species);
   const filtered = filter.species !== ALL || filter.pastYears;
   const pins = useMemo<Pin[]>(() => shown.filter((f) => f.spot).map((f) => ({
-    id: f.id, lat: f.spot!.lat, lon: f.spot!.lon, label: findLabel(f, names), when: sayWhen(f.at),
+    id: f.id, lat: f.spot!.lat, lon: f.spot!.lon, label: findLabel(f, names), when: sayWhen(f.at), growth: growthWords(f.growth, now) ?? undefined,
     href: hrefFor({ name: 'find', id: f.id }), goHref: hrefFor({ name: 'find-go', id: f.id }), accuracy: f.spot!.accuracy,
-  })), [shown, names]);
+  })), [shown, names, now]);
   return (
     <>
       <BackLink href={hrefFor({ name: 'map' })} label="Map" />
@@ -97,7 +99,11 @@ export function Finds() {
             return (
               <div class="loc-line" data-test="find-row" key={f.id}>
                 <a class="loc-main" href={hrefFor({ name: 'find', id: f.id })}>
-                  <span class="loc-date" title={sayWhen(f.at)}>{sayListWhen(f.at, now)}</span>
+                  {/* The growth chip under the date, so his note keeps the line's width. */}
+                  <span class="loc-when">
+                    <span class="loc-date" title={sayWhen(f.at)}>{sayListWhen(f.at, now)}</span>
+                    <GrowthChip log={f.growth} now={now} />
+                  </span>
                   <span class={`loc-desc${line.described ? '' : ' none'}`}>{line.text}</span>
                 </a>
                 {f.spot && (

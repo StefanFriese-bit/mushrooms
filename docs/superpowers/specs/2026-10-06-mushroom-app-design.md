@@ -244,6 +244,13 @@ zooms to 22 (about 4.5 m of ground across a phone's screen). In the code and the
 a "find", so older backups restore.
 
 - **Home:** the four sections (above).
+- **Growth at a location** (Stefan 10/10/2026: mark one just coming up, see "Porcini · G1 · 3 days ago", go back when it
+  is time): an optional stage when saving — G0 Surfacing (just breaking through), G1 Button (about 1–2 cm), G2 Young
+  (about 5 cm), G3 Grown (full size, cap open), G4 Old (past its best) — and "Log its growth now" on the location's page
+  for each revisit, with the whole log. The list shows the latest as a chip under the date ("G1 · 3 days"), the pin as
+  "G1 Button · 3 days ago"; days are counted by the phone's calendar. Stages describe size and age only: nothing says
+  when one is ready to pick or eat. The log is optional in the store and the backup file, so older backups restore
+  (`src/finds/growth.ts`).
 - **Map:** Save a location · View map · a saved location's page (Take me there first, then photos, the map, OS grid
   reference and Plus Code, description, what it is, delete) · Take me there (Stefan 10/10/2026: "brings up the compass
   and the directions and the map"): the iPhone's compass question is asked in the same tap that opens it — from the

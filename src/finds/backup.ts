@@ -1,5 +1,6 @@
 import { strFromU8, strToU8, unzipSync, zipSync, type Zippable } from 'fflate';
 import type { Find, Spot, StoredPhoto } from './store';
+import { isGrowthLog } from './growth';
 
 // His finds in one file (spec 7): a zip holding finds.json (the finds) and photos/<id>.<ext> (their photos, stored as
 // they are — JPEGs do not shrink further). He saves it to iCloud Drive; opening it again restores. The whole file is
@@ -42,7 +43,8 @@ function isFind(v: unknown): v is Find {
   if (typeof v !== 'object' || v === null) return false;
   const f = v as Record<string, unknown>;
   return isText(f.id) && f.id.length > 0 && isText(f.at) && !Number.isNaN(Date.parse(f.at)) && isSpot(f.spot) &&
-    (f.species === null || isText(f.species)) && isText(f.notes) && Array.isArray(f.photoIds) && f.photoIds.every(isText);
+    (f.species === null || isText(f.species)) && isText(f.notes) && Array.isArray(f.photoIds) && f.photoIds.every(isText) &&
+    (f.growth === undefined || isGrowthLog(f.growth)); // a growth log is optional: backups made before 10/10/2026 have none
 }
 
 /** Reads and checks a whole backup file; throws BackupError (nothing to change) if anything about it is wrong. */
