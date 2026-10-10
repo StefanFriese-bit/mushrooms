@@ -344,6 +344,7 @@ test.describe('Map', () => {
     await page.getByLabel('Description').fill('Chanterelles, a dozen\nunder the big beech by the stream');
     await page.getByLabel('Photo').setInputFiles(PHOTO);
     await expect(page.locator('.thumbs img')).toHaveCount(1);
+    const savedFrom = new Date(); // the saved time is a minute between this and the check below
     await page.getByRole('button', { name: 'Save location' }).click();
     await expect(page.locator('[data-test=saved-note]')).toHaveText('Location saved on this phone.');
     await expect(page.getByRole('heading', { name: 'Chanterelles, a dozen', exact: true })).toBeVisible();
@@ -361,9 +362,11 @@ test.describe('Map', () => {
     await page.locator('[data-test=view-map]').click();
     await expect(page.locator('[data-test=find-row]')).toHaveCount(1);
     await expect(page.locator('[data-test=find-row] .loc-desc')).toHaveText('Chanterelles, a dozen · under the big beech by the stream');
-    const now = new Date();
-    await expect(page.locator('[data-test=find-row] .loc-date')).toHaveText(
-      `${now.toLocaleDateString('en-GB', { day: 'numeric', month: 'short' })} ${now.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' })}`);
+    // Every minute from just before Save to now: a save at 09:40:59 is listed 09:40 though the check runs at 09:41.
+    const listed = (d: Date) => `${d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short' })} ${d.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' })}`;
+    const minutes = new Set<string>();
+    for (let t = savedFrom.getTime() - (savedFrom.getTime() % 60000); t <= Date.now(); t += 60000) minutes.add(listed(new Date(t)));
+    expect([...minutes]).toContain(await page.locator('[data-test=find-row] .loc-date').innerText());
     await page.locator('[data-test=map-pin]').click();
     const go = page.locator('.pin-pop-go');
     await expect(go).toHaveText('Take me there');
