@@ -239,6 +239,25 @@
           ]
         }
       ]
+    },
+    {
+      "scientific": "Imperator torosus",
+      "english": "Brawny Bolete",
+      "slug": null,
+      "kind": "poisonous",
+      "tellApart": [
+        {
+          "feature": "Pores",
+          "thisOne": "Yellow, soon turning orange-red; bruise dark blue",
+          "thatOne": "Sulphur-yellow, bruising blue — never red",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "wp-bwb"
+          ]
+        }
+      ]
     }
   ],
   "noDangerousLookalike": null,
@@ -321,7 +340,12 @@
       "id": "wp-s41",
       "title": "Wikipedia — List of species and habitats of principal importance in England",
       "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    },
+    {
+      "id": "wp-bwb",
+      "title": "Wikipedia — Imperator torosus",
+      "url": "https://en.wikipedia.org/wiki/Imperator_torosus"
     }
   ],
-  "checked": "2026-10-06"
+  "checked": "2026-10-10"
 }

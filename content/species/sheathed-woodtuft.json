@@ -206,6 +206,52 @@
           ]
         }
       ]
+    },
+    {
+      "scientific": "Flammulina velutipes",
+      "english": "Velvet Shank",
+      "slug": "velvet-shank",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Stem",
+          "thisOne": "A small ragged ring, dark and scaly below it",
+          "thatOne": "Velvety, dark brown to black lower down; no ring",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "fn-vs",
+            "wf-vs",
+            "wt-vs"
+          ]
+        },
+        {
+          "feature": "Gills",
+          "thisOne": "Pale ochre turning cinnamon",
+          "thatOne": "White to pale yellow",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "fn-vs",
+            "wf-vs",
+            "wp-vs"
+          ]
+        },
+        {
+          "feature": "Spore print",
+          "thisOne": "Rusty to cinnamon brown",
+          "thatOne": "White",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-vs",
+            "wp-vs",
+            "wf-vs"
+          ]
+        }
+      ]
     }
   ],
   "noDangerousLookalike": null,
@@ -293,7 +339,27 @@
       "id": "wp-s41",
       "title": "Wikipedia — List of species and habitats of principal importance in England",
       "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    },
+    {
+      "id": "fn-vs",
+      "title": "First Nature — Flammulina velutipes, Velvet Shank",
+      "url": "https://www.first-nature.com/fungi/flammulina-velutipes.php"
+    },
+    {
+      "id": "wf-vs",
+      "title": "Wild Food UK — Velvet Shank",
+      "url": "https://www.wildfooduk.com/mushroom-guide/velvet-shank/"
+    },
+    {
+      "id": "wt-vs",
+      "title": "Woodland Trust — Velvet Shank",
+      "url": "https://www.woodlandtrust.org.uk/trees-woods-and-wildlife/fungi-and-lichens/velvet-shank/"
+    },
+    {
+      "id": "wp-vs",
+      "title": "Wikipedia — Flammulina velutipes",
+      "url": "https://en.wikipedia.org/wiki/Flammulina_velutipes"
     }
   ],
-  "checked": "2026-10-06"
+  "checked": "2026-10-10"
 }

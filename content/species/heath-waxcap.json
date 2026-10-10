@@ -154,6 +154,37 @@
           ]
         }
       ]
+    },
+    {
+      "scientific": "Cuphophyllus pratensis",
+      "english": "Meadow Waxcap",
+      "slug": "meadow-waxcap",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Cap",
+          "thisOne": "Slimy, orange-brown, deeply grooved towards a toothed edge",
+          "thatOne": "Dry and smooth, pale apricot to orange-buff",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "fn-mw",
+            "wp-mw"
+          ]
+        },
+        {
+          "feature": "Stem",
+          "thisOne": "Slimy and orange",
+          "thatOne": "Stout, pale at first",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-mw",
+            "wp-mw"
+          ]
+        }
+      ]
     }
   ],
   "noDangerousLookalike": {
@@ -241,7 +272,17 @@
       "id": "wp-s41",
       "title": "Wikipedia — List of species and habitats of principal importance in England",
       "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    },
+    {
+      "id": "fn-mw",
+      "title": "First Nature — Cuphophyllus pratensis, Meadow Waxcap",
+      "url": "https://www.first-nature.com/fungi/cuphophyllus-pratensis.php"
+    },
+    {
+      "id": "wp-mw",
+      "title": "Wikipedia — Cuphophyllus pratensis",
+      "url": "https://en.wikipedia.org/wiki/Cuphophyllus_pratensis"
     }
   ],
-  "checked": "2026-10-06"
+  "checked": "2026-10-10"
 }

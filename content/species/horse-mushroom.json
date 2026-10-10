@@ -278,6 +278,65 @@
           ]
         }
       ]
+    },
+    {
+      "scientific": "Agaricus campestris",
+      "english": "Field Mushroom",
+      "slug": "field-mushroom",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Ring",
+          "thisOne": "A large double ring, with a cog-wheel pattern under a closed cap",
+          "thatOne": "A single thin ring, often gone once the cap opens",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "fn-fm",
+            "wf-fm",
+            "wp-fm"
+          ]
+        },
+        {
+          "feature": "Cut or bruised",
+          "thisOne": "Slowly turns slightly yellow",
+          "thatOne": "Stays white or turns slightly pink — never yellow",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "fn-fm",
+            "wf-fm",
+            "wp-fm"
+          ]
+        },
+        {
+          "feature": "Smell",
+          "thisOne": "Aniseed or almond",
+          "thatOne": "Pleasant, mushroomy",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "fn-fm",
+            "wf-fm"
+          ]
+        },
+        {
+          "feature": "Size",
+          "thisOne": "Bigger: cap 8 to 20 cm",
+          "thatOne": "Cap 3 to 10 cm",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "fn-fm",
+            "wf-fm",
+            "wp-fm"
+          ]
+        }
+      ]
     }
   ],
   "noDangerousLookalike": null,
@@ -385,7 +444,22 @@
       "id": "wp-s41",
       "title": "Wikipedia — List of species and habitats of principal importance in England",
       "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    },
+    {
+      "id": "fn-fm",
+      "title": "First Nature — Agaricus campestris, Field Mushroom",
+      "url": "https://www.first-nature.com/fungi/agaricus-campestris.php"
+    },
+    {
+      "id": "wf-fm",
+      "title": "Wild Food UK — Field Mushroom",
+      "url": "https://www.wildfooduk.com/mushroom-guide/field-mushroom/"
+    },
+    {
+      "id": "wp-fm",
+      "title": "Wikipedia — Agaricus campestris",
+      "url": "https://en.wikipedia.org/wiki/Agaricus_campestris"
     }
   ],
-  "checked": "2026-10-06"
+  "checked": "2026-10-10"
 }

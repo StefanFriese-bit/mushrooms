@@ -281,6 +281,26 @@
           ]
         }
       ]
+    },
+    {
+      "scientific": "Amanita excelsa",
+      "english": "European False Blusher",
+      "slug": "european-false-blusher",
+      "kind": "not-edible",
+      "tellApart": [
+        {
+          "feature": "Cap",
+          "thisOne": "Pinkish-brown, dotted with off-white, grey or pinkish warts",
+          "thatOne": "Grey-brown, dotted with grey patches that wash off easily",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "fn-efb",
+            "wf-pc"
+          ]
+        }
+      ]
     }
   ],
   "noDangerousLookalike": null,
@@ -393,7 +413,12 @@
       "id": "wp-s41",
       "title": "Wikipedia — List of species and habitats of principal importance in England",
       "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    },
+    {
+      "id": "fn-efb",
+      "title": "First Nature — Amanita excelsa, European False Blusher",
+      "url": "https://www.first-nature.com/fungi/amanita-excelsa.php"
     }
   ],
-  "checked": "2026-10-06"
+  "checked": "2026-10-10"
 }

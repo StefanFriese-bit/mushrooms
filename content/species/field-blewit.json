@@ -173,6 +173,52 @@
           ]
         }
       ]
+    },
+    {
+      "scientific": "Collybia nuda",
+      "english": "Wood Blewit",
+      "slug": "wood-blewit",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Cap",
+          "thisOne": "Pale buff to grey-brown",
+          "thatOne": "Lilac-tinged, fading to tan with age",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "fn-wb",
+            "wf-wb",
+            "wp-wb",
+            "wt-wb"
+          ]
+        },
+        {
+          "feature": "Gills",
+          "thisOne": "White to pinkish-buff",
+          "thatOne": "Lilac to violet when young, turning buff",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "fn-wb",
+            "wf-wb",
+            "wp-wb"
+          ]
+        },
+        {
+          "feature": "Where it grows",
+          "thisOne": "Grassland and pasture (sometimes woods on limy soil)",
+          "thatOne": "Leaf litter in woods; also hedgerows, gardens and compost heaps",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-wb",
+            "wf-wb"
+          ]
+        }
+      ]
     }
   ],
   "noDangerousLookalike": null,
@@ -260,7 +306,12 @@
       "id": "wp-s41",
       "title": "Wikipedia — List of species and habitats of principal importance in England",
       "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    },
+    {
+      "id": "wt-wb",
+      "title": "Woodland Trust — Wood Blewit",
+      "url": "https://www.woodlandtrust.org.uk/trees-woods-and-wildlife/fungi-and-lichens/wood-blewit/"
     }
   ],
-  "checked": "2026-10-06"
+  "checked": "2026-10-10"
 }

@@ -176,6 +176,26 @@
           ]
         }
       ]
+    },
+    {
+      "scientific": "Amanita rubescens",
+      "english": "Blusher",
+      "slug": "blusher",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Cap",
+          "thisOne": "Grey-brown, dotted with grey patches that wash off easily",
+          "thatOne": "Pinkish-brown, dotted with off-white, grey or pinkish warts",
+          "sources": [
+            "fn",
+            "wf-pc",
+            "fn-b",
+            "wf-b",
+            "wp-b"
+          ]
+        }
+      ]
     }
   ],
   "noDangerousLookalike": null,
@@ -258,9 +278,24 @@
       "id": "wp-s41",
       "title": "Wikipedia — List of species and habitats of principal importance in England",
       "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    },
+    {
+      "id": "fn-b",
+      "title": "First Nature — Amanita rubescens, Blusher",
+      "url": "https://www.first-nature.com/fungi/amanita-rubescens.php"
+    },
+    {
+      "id": "wf-b",
+      "title": "Wild Food UK — Blusher",
+      "url": "https://www.wildfooduk.com/mushroom-guide/blusher/"
+    },
+    {
+      "id": "wp-b",
+      "title": "Wikipedia — Amanita rubescens",
+      "url": "https://en.wikipedia.org/wiki/Amanita_rubescens"
     }
   ],
-  "checked": "2026-10-06",
+  "checked": "2026-10-10",
   "otherNames": {
     "value": [
       "Grey Spotted Amanita"

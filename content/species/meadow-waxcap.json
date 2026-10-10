@@ -137,7 +137,39 @@
       ]
     }
   },
-  "lookalikes": [],
+  "lookalikes": [
+    {
+      "scientific": "Gliophorus laetus",
+      "english": "Heath Waxcap",
+      "slug": "heath-waxcap",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Cap",
+          "thisOne": "Dry and smooth, pale apricot to orange-buff",
+          "thatOne": "Slimy, orange-brown, deeply grooved towards a toothed edge",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-hw",
+            "wf-hw",
+            "wp-hw"
+          ]
+        },
+        {
+          "feature": "Stem",
+          "thisOne": "Stout, pale at first",
+          "thatOne": "Slimy and orange",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-hw",
+            "wf-hw"
+          ]
+        }
+      ]
+    }
+  ],
   "noDangerousLookalike": {
     "sources": [
       "fn",
@@ -208,7 +240,22 @@
       "id": "wp-s41",
       "title": "Wikipedia — List of species and habitats of principal importance in England",
       "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    },
+    {
+      "id": "fn-hw",
+      "title": "First Nature — Gliophorus laetus, Heath Waxcap",
+      "url": "https://www.first-nature.com/fungi/gliophorus-laetus.php"
+    },
+    {
+      "id": "wf-hw",
+      "title": "Wild Food UK — Heath Waxcap",
+      "url": "https://www.wildfooduk.com/mushroom-guide/heath-waxcap/"
+    },
+    {
+      "id": "wp-hw",
+      "title": "Wikipedia — Gliophorus laetus",
+      "url": "https://en.wikipedia.org/wiki/Gliophorus_laetus"
     }
   ],
-  "checked": "2026-10-06"
+  "checked": "2026-10-10"
 }

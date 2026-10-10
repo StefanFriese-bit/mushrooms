@@ -144,6 +144,26 @@
           ]
         }
       ]
+    },
+    {
+      "scientific": "Hygrocybe chlorophana",
+      "english": "Golden Waxcap",
+      "slug": "golden-waxcap",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Size",
+          "thisOne": "Smaller, and very slimy",
+          "thatOne": "Cap 2 to 7.5 cm",
+          "sources": [
+            "fn",
+            "ns",
+            "fn-gw",
+            "wf-gw",
+            "wp-gw"
+          ]
+        }
+      ]
     }
   ],
   "noDangerousLookalike": null,
@@ -211,7 +231,22 @@
       "id": "wp-s41",
       "title": "Wikipedia — List of species and habitats of principal importance in England",
       "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    },
+    {
+      "id": "fn-gw",
+      "title": "First Nature — Hygrocybe chlorophana, Golden Waxcap",
+      "url": "https://www.first-nature.com/fungi/hygrocybe-chlorophana.php"
+    },
+    {
+      "id": "wf-gw",
+      "title": "Wild Food UK — Golden Waxcap",
+      "url": "https://www.wildfooduk.com/mushroom-guide/golden-waxcap-2/"
+    },
+    {
+      "id": "wp-gw",
+      "title": "Wikipedia — Hygrocybe chlorophana",
+      "url": "https://en.wikipedia.org/wiki/Hygrocybe_chlorophana"
     }
   ],
-  "checked": "2026-10-07"
+  "checked": "2026-10-10"
 }

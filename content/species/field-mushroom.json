@@ -356,6 +356,65 @@
           ]
         }
       ]
+    },
+    {
+      "scientific": "Agaricus arvensis",
+      "english": "Horse Mushroom",
+      "slug": "horse-mushroom",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Ring",
+          "thisOne": "A single thin ring, often gone once the cap opens",
+          "thatOne": "A large double ring, with a cog-wheel pattern under a closed cap",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "fn-hm",
+            "wf-hm",
+            "wp-hm"
+          ]
+        },
+        {
+          "feature": "Cut or bruised",
+          "thisOne": "Stays white or turns slightly pink — never yellow",
+          "thatOne": "Slowly turns slightly yellow",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "fn-hm",
+            "wf-hm",
+            "wp-hm"
+          ]
+        },
+        {
+          "feature": "Smell",
+          "thisOne": "Pleasant, mushroomy",
+          "thatOne": "Aniseed or almond",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-hm",
+            "wf-hm",
+            "wp-hm"
+          ]
+        },
+        {
+          "feature": "Size",
+          "thisOne": "Cap 3 to 10 cm",
+          "thatOne": "Bigger: cap 8 to 20 cm",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "fn-hm",
+            "wf-hm",
+            "wp-hm"
+          ]
+        }
+      ]
     }
   ],
   "noDangerousLookalike": null,
@@ -488,7 +547,22 @@
       "id": "wp-s41",
       "title": "Wikipedia — List of species and habitats of principal importance in England",
       "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    },
+    {
+      "id": "fn-hm",
+      "title": "First Nature — Agaricus arvensis, Horse Mushroom",
+      "url": "https://www.first-nature.com/fungi/agaricus-arvensis.php"
+    },
+    {
+      "id": "wf-hm",
+      "title": "Wild Food UK — Horse Mushroom",
+      "url": "https://www.wildfooduk.com/mushroom-guide/horse-mushroom-2/"
+    },
+    {
+      "id": "wp-hm",
+      "title": "Wikipedia — Agaricus arvensis",
+      "url": "https://en.wikipedia.org/wiki/Agaricus_arvensis"
     }
   ],
-  "checked": "2026-10-06"
+  "checked": "2026-10-10"
 }

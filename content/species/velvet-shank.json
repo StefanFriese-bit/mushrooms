@@ -230,6 +230,52 @@
           ]
         }
       ]
+    },
+    {
+      "scientific": "Kuehneromyces mutabilis",
+      "english": "Sheathed Woodtuft",
+      "slug": "sheathed-woodtuft",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Stem",
+          "thisOne": "Velvety, dark brown to black lower down; no ring",
+          "thatOne": "A small ragged ring, dark and scaly below it",
+          "sources": [
+            "fn",
+            "wf",
+            "wt",
+            "fn-sw",
+            "wf-sw",
+            "wp-sw"
+          ]
+        },
+        {
+          "feature": "Gills",
+          "thisOne": "White to pale yellow",
+          "thatOne": "Pale ochre turning cinnamon",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "fn-sw",
+            "wf-sw",
+            "wp-sw"
+          ]
+        },
+        {
+          "feature": "Spore print",
+          "thisOne": "White",
+          "thatOne": "Rusty to cinnamon brown",
+          "sources": [
+            "fn",
+            "wp",
+            "wf",
+            "fn-sw",
+            "wp-sw"
+          ]
+        }
+      ]
     }
   ],
   "noDangerousLookalike": null,
@@ -332,9 +378,24 @@
       "id": "wp-s41",
       "title": "Wikipedia — List of species and habitats of principal importance in England",
       "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    },
+    {
+      "id": "fn-sw",
+      "title": "First Nature — Kuehneromyces mutabilis, Sheathed Woodtuft",
+      "url": "https://www.first-nature.com/fungi/kuehneromyces-mutabilis.php"
+    },
+    {
+      "id": "wf-sw",
+      "title": "Wild Food UK — Sheathed Woodtuft",
+      "url": "https://www.wildfooduk.com/mushroom-guide/sheathed-woodtuft/"
+    },
+    {
+      "id": "wp-sw",
+      "title": "Wikipedia — Kuehneromyces mutabilis",
+      "url": "https://en.wikipedia.org/wiki/Kuehneromyces_mutabilis"
     }
   ],
-  "checked": "2026-10-06",
+  "checked": "2026-10-10",
   "otherNames": {
     "value": [
       "Winter Mushroom"

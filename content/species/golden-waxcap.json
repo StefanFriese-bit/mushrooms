@@ -192,6 +192,26 @@
           ]
         }
       ]
+    },
+    {
+      "scientific": "Hygrocybe glutinipes",
+      "english": "Glutinous Waxcap",
+      "slug": "glutinous-waxcap",
+      "kind": "not-edible",
+      "tellApart": [
+        {
+          "feature": "Size",
+          "thisOne": "Cap 2 to 7.5 cm",
+          "thatOne": "Smaller, and very slimy",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "fn-gw",
+            "ns-gw"
+          ]
+        }
+      ]
     }
   ],
   "noDangerousLookalike": null,
@@ -289,7 +309,17 @@
       "id": "wp-s41",
       "title": "Wikipedia — List of species and habitats of principal importance in England",
       "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    },
+    {
+      "id": "fn-gw",
+      "title": "First Nature — Hygrocybe glutinipes, Glutinous Waxcap",
+      "url": "https://www.first-nature.com/fungi/hygrocybe-glutinipes.php"
+    },
+    {
+      "id": "ns-gw",
+      "title": "NatureSpot — Glutinous Waxcap",
+      "url": "https://www.naturespot.org/species/Glutinous-Waxcap"
     }
   ],
-  "checked": "2026-10-06"
+  "checked": "2026-10-10"
 }

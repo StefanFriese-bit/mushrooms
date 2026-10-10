@@ -221,6 +221,40 @@
           ]
         }
       ]
+    },
+    {
+      "scientific": "Laccaria laccata",
+      "english": "Deceiver",
+      "slug": "deceiver",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Colour, fresh",
+          "thisOne": "Deep purple: cap, gills and stem",
+          "thatOne": "Salmon-pink, orange or reddish-brown",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "fn-d",
+            "wf-d",
+            "wp-d"
+          ]
+        },
+        {
+          "feature": "Colour, dried out",
+          "thisOne": "Fades to buff or almost white",
+          "thatOne": "Fades to buff too — colour no longer tells them apart",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "fn-d",
+            "wf-d",
+            "wp-d"
+          ]
+        }
+      ]
     }
   ],
   "noDangerousLookalike": null,
@@ -303,7 +337,22 @@
       "id": "wp-s41",
       "title": "Wikipedia — List of species and habitats of principal importance in England",
       "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    },
+    {
+      "id": "fn-d",
+      "title": "First Nature — Laccaria laccata, Deceiver",
+      "url": "https://www.first-nature.com/fungi/laccaria-laccata.php"
+    },
+    {
+      "id": "wf-d",
+      "title": "Wild Food UK — Deceiver",
+      "url": "https://www.wildfooduk.com/mushroom-guide/deceiver/"
+    },
+    {
+      "id": "wp-d",
+      "title": "Wikipedia — Laccaria laccata",
+      "url": "https://en.wikipedia.org/wiki/Laccaria_laccata"
     }
   ],
-  "checked": "2026-10-06"
+  "checked": "2026-10-10"
 }

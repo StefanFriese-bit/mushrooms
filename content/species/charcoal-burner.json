@@ -179,6 +179,25 @@
           ]
         }
       ]
+    },
+    {
+      "scientific": "Russula xerampelina",
+      "english": "Crab Brittlegill",
+      "slug": null,
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Smell",
+          "thisOne": "Nothing distinctive",
+          "thatOne": "Of boiled crab or shellfish, stronger with age",
+          "sources": [
+            "fn",
+            "wt",
+            "fn-cb",
+            "wp-cb"
+          ]
+        }
+      ]
     }
   ],
   "noDangerousLookalike": null,
@@ -271,7 +290,17 @@
       "id": "wp-s41",
       "title": "Wikipedia — List of species and habitats of principal importance in England",
       "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    },
+    {
+      "id": "fn-cb",
+      "title": "First Nature — Russula xerampelina, Crab Brittlegill",
+      "url": "https://www.first-nature.com/fungi/russula-xerampelina.php"
+    },
+    {
+      "id": "wp-cb",
+      "title": "Wikipedia — Russula xerampelina",
+      "url": "https://en.wikipedia.org/wiki/Russula_xerampelina"
     }
   ],
-  "checked": "2026-10-06"
+  "checked": "2026-10-10"
 }

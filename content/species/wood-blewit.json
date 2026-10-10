@@ -203,6 +203,52 @@
           ]
         }
       ]
+    },
+    {
+      "scientific": "Collybia personata",
+      "english": "Field Blewit",
+      "slug": "field-blewit",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Cap",
+          "thisOne": "Lilac-tinged, fading to tan with age",
+          "thatOne": "Pale buff to grey-brown",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "wt",
+            "fn-fb",
+            "wf-fb",
+            "wp-fb"
+          ]
+        },
+        {
+          "feature": "Gills",
+          "thisOne": "Lilac to violet when young, turning buff",
+          "thatOne": "White to pinkish-buff",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "fn-fb",
+            "wf-fb",
+            "wp-fb"
+          ]
+        },
+        {
+          "feature": "Where it grows",
+          "thisOne": "Leaf litter in woods; also hedgerows, gardens and compost heaps",
+          "thatOne": "Grassland and pasture (sometimes woods on limy soil)",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-fb",
+            "wf-fb"
+          ]
+        }
+      ]
     }
   ],
   "noDangerousLookalike": null,
@@ -295,9 +341,24 @@
       "id": "wp-s41",
       "title": "Wikipedia — List of species and habitats of principal importance in England",
       "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    },
+    {
+      "id": "fn-fb",
+      "title": "First Nature — Collybia personata, Field Blewit",
+      "url": "https://www.first-nature.com/fungi/lepista-saeva.php"
+    },
+    {
+      "id": "wf-fb",
+      "title": "Wild Food UK — Field Blewit",
+      "url": "https://www.wildfooduk.com/mushroom-guide/field-blewit/"
+    },
+    {
+      "id": "wp-fb",
+      "title": "Wikipedia — Collybia personata",
+      "url": "https://en.wikipedia.org/wiki/Collybia_personata"
     }
   ],
-  "checked": "2026-10-06",
+  "checked": "2026-10-10",
   "otherNames": {
     "value": [
       "Blue Hat",
