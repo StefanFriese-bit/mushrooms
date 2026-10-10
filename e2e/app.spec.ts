@@ -214,6 +214,52 @@ test('Identify: "Not sure" never narrows, and an answer can be changed', async (
   await expect(page.getByRole('heading', { name: `Fit every answer (${ALL.length})` })).toBeVisible();
 });
 
+test('How wide is the cap: a centimetre ruler down the right edge; it can be checked against a bank card and keeps the check', async ({ page }, info) => {
+  // The questions before it answered "Not sure", as a person could.
+  await page.goto(`${site.url}#/identify?underside=unsure&growsOn=unsure&ring=unsure&bag=unsure`);
+  await expect(page.getByRole('heading', { name: 'How wide is the cap?' })).toBeVisible();
+  const ruler = page.locator('[data-test=screen-ruler]');
+  await expect(ruler).toBeVisible();
+  const note = page.locator('[data-test=ruler-note]');
+  // The iPhone engine runs as an iPhone 15 (3 pixels a point): Apple's 460 ppi. The desktop browser is no iPhone.
+  const iPhone = info.project.name === 'iphone-safari-engine';
+  await expect(note).toContainText(iPhone ? 'Set for this iPhone’s screen.' : 'Not checked on this phone yet');
+  const px = Number(await ruler.getAttribute('data-px-per-cm'));
+  if (iPhone) expect(px).toBeCloseTo(460 / 2.54 / 3, 2);
+  // The 5 and 10 cm marks — where the answers change — sit 5 and 10 cm from the top of the ruler.
+  const top = (await ruler.boundingBox())!.y;
+  const at = async (cm: number) => { const b = (await ruler.locator(`[data-cm="${cm}"]`).boundingBox())!; return b.y + b.height / 2 - top; };
+  expect(await at(5)).toBeCloseTo(5 * px, 0);
+  if ((await ruler.boundingBox())!.height > 10 * px) expect(await at(10)).toBeCloseTo(10 * px, 0);
+  // Nothing on the page hides under it.
+  const rulerLeft = (await ruler.boundingBox())!.x;
+  for (const el of await page.locator('a.choice').all()) { const b = (await el.boundingBox())!; expect(b.x + b.width).toBeLessThanOrEqual(rulerLeft + 0.5); }
+  // He lays a card on the outline and makes it 1 px a centimetre larger; the ruler follows and keeps it.
+  await page.locator('[data-test=ruler-check-open]').click();
+  const sheet = page.locator('[data-test=ruler-check]');
+  const outline = sheet.locator('[data-test=card-outline]');
+  expect((await outline.boundingBox())!.height).toBeCloseTo(8.56 * px, 0);
+  for (let i = 0; i < 10; i++) await sheet.getByRole('button', { name: 'Larger' }).click();
+  expect((await outline.boundingBox())!.height).toBeCloseTo(8.56 * (px + 1), 0);
+  await sheet.getByRole('button', { name: 'Save' }).click();
+  await expect(sheet).toHaveCount(0);
+  await expect(note).toContainText('Checked against a bank card.');
+  await expect(ruler).toHaveAttribute('data-px-per-cm', (px + 1).toFixed(2));
+  await page.reload();
+  await expect(ruler).toHaveAttribute('data-px-per-cm', (px + 1).toFixed(2));
+  // Only on this question: answering it takes the ruler away, and the page uses the whole width again.
+  await page.getByRole('link', { name: /Under 5 cm/ }).click();
+  await expect(page.getByRole('heading', { name: 'What colour is its spore print?' })).toBeVisible();
+  await expect(ruler).toHaveCount(0);
+  expect(await page.evaluate(() => document.documentElement.classList.contains('ruler-on'))).toBe(false);
+  // The check can be forgotten.
+  await page.goBack();
+  await page.locator('[data-test=ruler-check-open]').click();
+  await sheet.getByRole('button', { name: 'Forget the check' }).click();
+  await expect(note).not.toContainText('Checked against a bank card.');
+  await expect(ruler).toHaveAttribute('data-px-per-cm', px.toFixed(2));
+});
+
 test('Check turns a feature red when it fits a lookalike, and never says anything about eating it', async ({ page }) => {
   await page.goto(`${site.url}#/species/field-mushroom`);
   await page.getByRole('link', { name: 'Check a mushroom against this one' }).click();

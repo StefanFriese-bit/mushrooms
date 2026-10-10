@@ -19,6 +19,7 @@ const SHAPES = {
   check: <path d="m5 12.5 4.5 4.5L19 7.5" />,
   alert: <><path d="M12 3.6 2.6 19.8h18.8z" /><path d="M12 10v4.4M12 17.2v.1" /></>,
   crop: <><path d="M6 2.5V18h15.5" /><path d="M2.5 6H18v15.5" /></>,
+  ruler: <><rect x="2.5" y="8" width="19" height="8" rx="1.5" /><path d="M6.5 8v3M10 8v4.5M13.5 8v3M17 8v4.5" /></>,
 } satisfies Record<string, JSX.Element>;
 export type IconName = keyof typeof SHAPES;
 

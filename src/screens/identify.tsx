@@ -5,6 +5,7 @@ import {
   QUESTIONS, UNSURE, answersFromQuery, narrow, nextQuestion, queryFromAnswers, type Answers, type Listed, type Question,
 } from '../identify';
 import { Drawing } from './drawings';
+import { CapRuler } from './ruler';
 
 // Identify (spec 8): one question at a time, the list narrowing; the answers live in the address, so Back and a
 // reload keep them. No word about eating anywhere on this screen: only the danger tags.
@@ -94,6 +95,7 @@ export function Identify({ query }: { query: string }) {
               the list</>} · <a href={link(answers, true)}>show them</a></p>
           <h2>{q.title}</h2>
           <p>{q.hint}</p>
+          {q.id === 'cap' && <CapRuler />}
           <div class="choices">
             {q.options.map((o) => (
               <a class="choice" href={link({ ...answers, [q.id]: o.value })} key={o.value}>

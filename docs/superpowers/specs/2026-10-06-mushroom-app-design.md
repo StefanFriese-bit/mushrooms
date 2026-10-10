@@ -262,6 +262,11 @@ a "find", so older backups restore.
   it confirmed" and "Send to iNaturalist".
 - **Guide:** search, "in season now", the species pages (5.1).
 - **Identify:** simple questions one at a time, each with drawings; the list narrows; "not sure" is always allowed.
+  On "How wide is the cap?" a centimetre ruler runs down the right edge of the screen (Stefan 10/10/2026: "I doubt
+  they'll have a measuring stick in the wild"): 0 at the top, 5 and 10 cm — where the answers change — in blue. A web
+  page cannot ask a phone its screen size, so on an iPhone the scale comes from Apple's own figures (460 ppi at 3 pixels
+  a point, 326 ppi at 2; a screen a mini shares with an iPhone X is marked unchecked), and he can check it once against
+  a bank card (ISO/IEC 7810 ID-1, 85.60 × 53.98 mm), kept on the phone (`src/ruler.ts`).
 - **Learn:** the top points for identifying any mushroom, how to take a spore print, the deadly families to know,
   and the UK foraging rules (landowner permission, protected species, taking only a little). Off the home page and the
   bar since 10/10/2026 ("not useful for me"); the page still opens at #/learn and is still checked, nothing leads to it.

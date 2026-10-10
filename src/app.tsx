@@ -47,7 +47,7 @@ function Header({ home }: { home: boolean }) {
   );
 }
 
-/** The five sections at the foot of every page but the home page, as the dashboard's tab buttons: picture above word. */
+/** The sections at the foot of every page but the home page, as the dashboard's tab buttons: picture above word. */
 function SectionBar({ active }: { active: SectionName | null }) {
   return (
     <nav class="tabs" aria-label="Sections">
