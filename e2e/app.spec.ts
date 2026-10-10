@@ -241,8 +241,10 @@ test.describe('Map', () => {
     await expect(page.locator('[data-test=saved-count]')).toHaveText('1 saved location, and the way back to each');
     await page.locator('[data-test=view-map]').click();
     await expect(page.locator('[data-test=find-row]')).toHaveCount(1);
-    await expect(page.locator('[data-test=find-row] .row-title')).toHaveText('Chanterelles, a dozen');
-    await expect(page.locator('[data-test=find-row] .note')).toContainText(today);
+    await expect(page.locator('[data-test=find-row] .loc-desc')).toHaveText('Chanterelles, a dozen · under the big beech by the stream');
+    const now = new Date();
+    await expect(page.locator('[data-test=find-row] .loc-date')).toHaveText(
+      `${now.toLocaleDateString('en-GB', { day: 'numeric', month: 'short' })} ${now.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' })}`);
     await page.locator('[data-test=map-pin]').click();
     const go = page.locator('.pin-pop-go');
     await expect(go).toHaveText('Take me there');
@@ -254,7 +256,7 @@ test.describe('Map', () => {
     await page.locator('[data-test=back-link]').click();
     await expect(page.getByRole('heading', { name: 'View map' })).toBeVisible();
     await expect(page.locator('[data-test=find-row]')).toHaveCount(1);
-    await page.locator('[data-test=find-row] .row-main').click();
+    await page.locator('[data-test=find-row] .loc-main').click();
     await expect(page.getByRole('heading', { name: 'Chanterelles, a dozen', exact: true })).toBeVisible();
     await page.locator('[data-test=back-link]').click();
     await expect(page.getByRole('heading', { name: 'View map' })).toBeVisible();
@@ -331,7 +333,7 @@ test.describe('Map', () => {
     await expect(page.locator('[data-test=backup-reminder]')).toHaveCount(0);
     // The location is deleted …
     await page.goto(`${site.url}#/finds`);
-    await page.locator('[data-test=find-row] .row-main').first().click();
+    await page.locator('[data-test=find-row] .loc-main').first().click();
     page.once('dialog', (d) => d.accept());
     await page.getByRole('button', { name: 'Delete this location' }).click();
     await expect(page.getByRole('heading', { name: 'View map' })).toBeVisible();
@@ -340,7 +342,7 @@ test.describe('Map', () => {
     await page.getByLabel('Backup file to restore').setInputFiles(file);
     await expect(page.locator('[data-test=backup-said]')).toHaveText('Restored 1 location.');
     await expect(page.locator('[data-test=find-row]')).toHaveCount(1);
-    await page.locator('[data-test=find-row] .row-main').first().click();
+    await page.locator('[data-test=find-row] .loc-main').first().click();
     await expect(page.getByRole('heading', { name: 'Chanterelles by the stream', exact: true })).toBeVisible();
     await expect(page.locator('.photos img')).toHaveCount(1);
     // Restoring again adds nothing twice; a damaged file changes nothing.

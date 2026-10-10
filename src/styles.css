@@ -232,15 +232,18 @@ ol.answers li { margin: 2px 0; }
 .pin-pop-go { background: var(--accent); color: #fff !important; padding: 5px 10px; border-radius: 6px; font-weight: 600; text-decoration: none; }
 .maplibregl-ctrl-attrib { font-size: 10px; }
 
-/* View map: a saved location's row, and "Go" beside it. */
-.loc-row { padding: 0; overflow: hidden; align-items: stretch; }
-.row-main { flex: 1; min-width: 0; display: flex; gap: 12px; align-items: center; padding: 10px; color: inherit; text-decoration: none; }
-.row-main:active { background: var(--subtle); }
-.row-title { display: block; font-weight: 600; overflow-wrap: anywhere; }
-.row-main .note { display: block; }
-.go-link { flex: none; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; padding: 0 16px;
-  border-left: 1px solid var(--line); background: var(--accent-weak); color: var(--accent-text); font-size: 12px; font-weight: 700; text-decoration: none; }
-.go-link:active { background: var(--tab-line); }
+/* View map: the saved locations, one line each — when, his note, and Go (Stefan 10/10/2026). */
+.loc-list { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; margin: 8px 0 16px; }
+.loc-line { display: flex; align-items: stretch; border-top: 1px solid var(--hairline); }
+.loc-line:first-child { border-top: 0; }
+.loc-main { flex: 1; min-width: 0; display: flex; align-items: baseline; gap: 10px; min-height: 46px; padding: 12px; color: inherit; text-decoration: none; }
+.loc-main:active { background: var(--subtle); }
+.loc-date { flex: none; min-width: 86px; font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.loc-desc { flex: 1; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-weight: 500; }
+.loc-desc.none { font-weight: 400; color: var(--faint); }
+.loc-go { flex: none; display: flex; align-items: center; gap: 4px; padding: 0 12px; border-left: 1px solid var(--hairline);
+  background: var(--accent-weak); color: var(--accent-text); font-size: 13px; font-weight: 700; text-decoration: none; }
+.loc-go:active { background: var(--tab-line); }
 .find-filters { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; margin: 8px 0; }
 .find-filters .field { flex: 1 1 200px; margin: 0; }
 .find-filters .check { font-size: 15px; white-space: nowrap; }

@@ -1,7 +1,6 @@
 import { useEffect, useMemo, useState } from 'preact/hooks';
 import { hrefFor } from '../router';
-import { listFinds, photosOf, photoAddress, type Find } from '../finds/store';
-import { sayAccuracy } from '../finds/geo';
+import { listFinds, type Find } from '../finds/store';
 import { speciesNames } from '../species-names';
 import { FindsMap, type Pin } from './finds-map';
 import { BackupSection, useBackup } from './backup';
@@ -14,6 +13,19 @@ import { ALL, NO_FILTER, filterFinds, monthName, speciesChoices, type FindFilter
 // first — each with "Take me there". Everything here lives on this phone only. (In the code a saved location is still
 // a "find": the store and the backup file keep that name, so older backups restore.)
 export const sayWhen = (iso: string) => new Date(iso).toLocaleString('en-GB', { dateStyle: 'medium', timeStyle: 'short' });
+/** When, in the list's one-liners — short, so his note has the room: "10 Oct 14:05" this year, "10 Oct 2025" before. */
+export function sayListWhen(iso: string, now = new Date()): string {
+  const d = new Date(iso);
+  const day = d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short' });
+  return d.getFullYear() === now.getFullYear() ? `${day} ${d.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' })}` : `${day} ${d.getFullYear()}`;
+}
+/** A location's note on one line (Stefan 10/10/2026: "looks like porcini…"): the whole description, its lines joined;
+ * without one, the species he named, else "No description". */
+function oneLine(f: Find, names: Map<string, string>): { text: string; described: boolean } {
+  const note = f.notes.split('\n').map((l) => l.trim()).filter(Boolean).join(' · ');
+  if (note) return { text: note, described: true };
+  return { text: f.species ? names.get(f.species) ?? f.species : 'No description', described: false };
+}
 
 export function useNames(): Map<string, string> {
   const [names, setNames] = useState(new Map<string, string>());
@@ -22,18 +34,6 @@ export function useNames(): Map<string, string> {
 }
 
 export { findLabel };
-
-/** The first photo of a saved location, small. */
-export function Thumb({ find }: { find: Find }) {
-  const [src, setSrc] = useState<string | null>(null);
-  useEffect(() => {
-    let url: string | null = null;
-    let gone = false;
-    photosOf(find).then((ps) => { if (!gone && ps[0]) { url = photoAddress(ps[0]); setSrc(url); } });
-    return () => { gone = true; if (url) URL.revokeObjectURL(url); };
-  }, [find.id]);
-  return src ? <img src={src} alt="" /> : <span class="no-photo"><Icon name="pin" size={22} /></span>;
-}
 
 export function Finds() {
   const [finds, setFinds] = useState<Find[] | null>(null);
@@ -87,22 +87,28 @@ export function Finds() {
         <p class="card" data-test="filter-empty">{filter.pastYears ? `Nothing saved in ${monthName(now)} in earlier years${filter.species !== ALL ? ' for this species' : ''} yet.`
           : 'No saved locations of this species yet.'}</p>
       )}
-      {shown.map((f) => (
-        <div class="row loc-row" data-test="find-row" key={f.id}>
-          <a class="row-main" href={hrefFor({ name: 'find', id: f.id })}>
-            <Thumb find={f} />
-            <span class="grow">
-              <span class="row-title">{findLabel(f, names)}</span>
-              <span class="note">{sayWhen(f.at)} · {f.spot ? sayAccuracy(f.spot.accuracy) : 'no position'}</span>
-            </span>
-          </a>
-          {f.spot && (
-            <a class="go-link" href={hrefFor({ name: 'find-go', id: f.id })} aria-label={`Take me there: ${findLabel(f, names)}`}>
-              <Icon name="navigate" size={20} /><span>Go</span>
-            </a>
-          )}
+      {shown.length > 0 && <h2>Saved locations <span class="muted">({shown.length})</span></h2>}
+      {shown.length > 0 && (
+        // One line each, newest first (Stefan 10/10/2026): when it was saved and his note; a tap opens it, Go walks back.
+        <div class="loc-list">
+          {shown.map((f) => {
+            const line = oneLine(f, names);
+            return (
+              <div class="loc-line" data-test="find-row" key={f.id}>
+                <a class="loc-main" href={hrefFor({ name: 'find', id: f.id })}>
+                  <span class="loc-date" title={sayWhen(f.at)}>{sayListWhen(f.at, now)}</span>
+                  <span class={`loc-desc${line.described ? '' : ' none'}`}>{line.text}</span>
+                </a>
+                {f.spot && (
+                  <a class="loc-go" href={hrefFor({ name: 'find-go', id: f.id })} aria-label={`Take me there: ${findLabel(f, names)}`}>
+                    <Icon name="navigate" size={16} />Go
+                  </a>
+                )}
+              </div>
+            );
+          })}
         </div>
-      ))}
+      )}
       {finds && <BackupSection b={backup} count={finds.length} />}
     </>
   );
