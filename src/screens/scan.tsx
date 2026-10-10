@@ -1,16 +1,17 @@
-import { useEffect, useMemo, useState } from 'preact/hooks';
+import { useEffect, useState } from 'preact/hooks';
 import { ALL_SPECIES } from '../content';
 import { hrefFor } from '../router';
 import { bySlug } from '../species';
-import { combine, combineMax, genusOf, shortlist, type ClassInfo, type Danger, type ScanResult } from '../scan/rules';
-import { dangerousSpecies, withPageDanger } from '../scan/danger';
-import { decode, loadEngine } from '../scan/engine';
+import { genusOf, shortlist, type ClassInfo, type Danger, type ScanResult } from '../scan/rules';
+import { dangerousSpecies } from '../scan/danger';
+import { PAGE_EDIBILITY, TESTED_PHOTOS, scorePhotos } from '../scan/run';
 import { recordWords, scanRows, type ScanRow } from '../scan/rows';
 import { REPORT_URL, SETTINGS } from '../scan/settings';
 import { handOver, shrinkPhoto } from '../finds/device';
 import { speciesNames } from '../species-names';
 import { NextChecks } from './scan-checks';
-import { Cropper } from './crop';
+import { PhotoSlots, noPhotos, photosIn } from './photo-slots';
+import { scanSwitchedOn, switchScanOn } from '../scan/switched-on';
 import { Icon } from './icons';
 import type { SpeciesRecord } from '../types';
 
@@ -19,17 +20,9 @@ import type { SpeciesRecord } from '../types';
 // is a shortlist, never an identification: a dangerous species on it raises the red banner, a weak result says "Not
 // sure" and offers Identify, the next step is always Check, and no word about eating appears. The scan stays off
 // unless it passed its test, and the first time he sees the test's record before switching it on.
-const SLOTS = ['Top of the cap', 'Underneath', 'Stem', 'Base of the stem', 'Cross-section'] as const;
-/** The scan's test measured up to three photos of a mushroom (tools/evaluate-scan.ts). With more, the safety rule reads
- * each photo on its own as well (combineMax): a dangerous species any one photo could be stays on the list. */
-const TESTED_PHOTOS = 3;
-const SEEN = 'scan-record-seen';
 const DANGER_WORDS = { deadly: 'Deadly', poisonous: 'Poisonous' } as const;
-const seen = () => { try { return localStorage.getItem(SEEN); } catch { return null; } };
 
 const pc = (x: number) => `${Math.round(x * 1000) / 10}%`;
-/** Each page's edibility by scientific name: part of how dangerous a species is (src/scan/danger.ts). */
-const PAGE_EDIBILITY = new Map(ALL_SPECIES.map((s) => [s.scientific, s.edibility.value]));
 
 /** The guide's species in a group: those the model files under that genus, and those it cannot name whose genus it is. */
 function groupSpecies(genus: string, classes: ClassInfo[]): SpeciesRecord[] {
@@ -78,11 +71,8 @@ function Row({ r }: { r: ScanRow }) {
 
 export function Scan() {
   const S = SETTINGS;
-  const [ok, setOk] = useState(() => S.passed && seen() === S.tested);
-  const [files, setFiles] = useState<Array<File | null>>(SLOTS.map(() => null));
-  // The photo as chosen, kept so a crop can be done again from the whole photo.
-  const [originals, setOriginals] = useState<Array<File | null>>(SLOTS.map(() => null));
-  const [cropping, setCropping] = useState<{ slot: number; file: File } | null>(null);
+  const [ok, setOk] = useState(scanSwitchedOn);
+  const [slots, setSlots] = useState(noPhotos);
   const [stage, setStage] = useState<'idle' | 'loading' | 'scanning'>('idle');
   const [scored, setScored] = useState(0);
   const [result, setResult] = useState<ScanResult | null>(null);
@@ -92,14 +82,12 @@ export function Scan() {
   const [classes, setClasses] = useState<ClassInfo[]>([]);
   const [unknownDanger, setUnknownDanger] = useState<string[] | null>(null);
   const [danger, setDanger] = useState(new Map<string, 'deadly' | 'poisonous'>());
-  const previews = useMemo(() => files.map((f) => (f ? URL.createObjectURL(f) : null)), [files]);
   // Is the model already stored on this phone (by the service worker), so the scan works with no signal?
   const [stored, setStored] = useState<boolean | null>(null);
   useEffect(() => {
     if (!S.passed || !('caches' in window)) return;
     caches.match(`${import.meta.env.BASE_URL}${S.file}`, { ignoreSearch: true }).then((r) => setStored(!!r), () => setStored(null));
   }, []);
-  useEffect(() => () => previews.forEach((u) => u && URL.revokeObjectURL(u)), [previews]);
   // English names: the guide's own for its 300, the BMS's or iNaturalist's for every other species the model knows.
   useEffect(() => {
     Promise.all([speciesNames(), import('../../content/model/df20-names.json')]).then(([n, d]) => {
@@ -138,35 +126,24 @@ export function Scan() {
         <p class="card">The scan gives a shortlist, never an answer. A dangerous species that could be in your photos is
           always added to the list, so you will often see one. Never eat a mushroom on the scan's word.</p>
         <p><a href={REPORT_URL}>The whole test report</a></p>
-        <p><button type="button" class="big-button" onClick={() => {
-          try { localStorage.setItem(SEEN, S.tested); } catch { /* not kept: he will see this again next time */ }
-          setOk(true);
-        }}>I've read this — switch the scan on</button></p>
+        <p><button type="button" class="big-button" onClick={() => { switchScanOn(); setOk(true); }}>
+          I've read this — switch the scan on</button></p>
       </>
     );
   }
 
-  const photos = files.filter((f): f is File => f !== null);
+  const photos = photosIn(slots);
   const run = async () => {
     setProblem(null);
     setResult(null);
-    setStage('loading');
     try {
-      const engine = await loadEngine(S.file, S.size, S.fit);
-      setStage('scanning');
-      const scores: Float32Array[] = [];
-      for (const f of photos) {
-        const p = await decode(f);
-        try { scores.push(await engine.score(p)); } finally { URL.revokeObjectURL(p.url); }
-      }
-      const safety = scores.length > TESTED_PHOTOS ? combineMax(scores) : undefined;
       // The banner and the safety rule use the same danger as the rows: the worse of the approved list and the page.
-      const all = withPageDanger((await import('../../content/model/df20-classes.json')).default.classes as ClassInfo[], PAGE_EDIBILITY);
+      const sc = await scorePhotos(photos, setStage);
       const list = (await import('../../content/species-list.json')).default.species as Array<{ name: string; dangerLevel: Danger }>;
       setDanger(dangerousSpecies(list, PAGE_EDIBILITY));
-      setClasses(all);
-      setResult(shortlist(combine(scores), all, new Date().getMonth() + 1, S.thresholds, safety));
-      setScored(scores.length);
+      setClasses(sc.classes);
+      setResult(shortlist(sc.averaged, sc.classes, new Date().getMonth() + 1, S.thresholds, sc.safety));
+      setScored(sc.count);
     } catch {
       setProblem('The photo scan isn\'t available right now. Open the app once with a signal so it can store the scan, or use Identify.');
     } finally {
@@ -190,46 +167,7 @@ export function Scan() {
       {stored === true && <p class="small" data-test="stored">✓ Stored on this phone: the scan works without a signal.</p>}
       {stored === false && <p class="small" data-test="stored">Not stored on this phone yet. Keep the app open on Wi-Fi for a
         minute, then come back here.</p>}
-      <div class="slots">
-        {SLOTS.map((label, i) => (
-          <figure class="slot" key={label} data-test="slot">
-            {previews[i] ? (
-              // Tap the photo to crop it again, from the whole photo.
-              <button type="button" class="slot-photo" aria-label={`Crop the ${label.toLowerCase()} photo again`}
-                onClick={() => setCropping({ slot: i, file: originals[i] ?? files[i]! })}>
-                <img src={previews[i]!} alt={label} /><span class="slot-crop"><Icon name="crop" size={16} /></span>
-              </button>
-            ) : <span class="slot-empty">+</span>}
-            <figcaption>{label}</figcaption>
-            {files[i] ? (
-              <button type="button" class="small-button" onClick={() => {
-                setFiles((fs) => fs.map((f, k) => (k === i ? null : f)));
-                setOriginals((fs) => fs.map((f, k) => (k === i ? null : f)));
-                setResult(null);
-              }}>Remove</button>
-            ) : (
-              <label class="small-button file-button">Add<input type="file" accept="image/*" aria-label={`${label} photo`}
-                onChange={(e) => {
-                  const input = e.target as HTMLInputElement;
-                  const f = input.files?.[0] ?? null;
-                  input.value = '';
-                  if (f) setCropping({ slot: i, file: f });
-                }} />
-              </label>
-            )}
-          </figure>
-        ))}
-      </div>
-      {cropping && (
-        <Cropper file={cropping.file} label={SLOTS[cropping.slot]} onCancel={() => setCropping(null)}
-          onDone={(cropped) => {
-            const { slot, file } = cropping;
-            setFiles((fs) => fs.map((f, k) => (k === slot ? cropped : f)));
-            setOriginals((fs) => fs.map((f, k) => (k === slot ? file : f)));
-            setCropping(null);
-            setResult(null);
-          }} />
-      )}
+      <PhotoSlots slots={slots} onChange={(next) => { setSlots(next); setResult(null); }} />
       <p><button type="button" class="big-button wide" disabled={photos.length === 0 || stage !== 'idle'} onClick={run}>
         {stage === 'loading' ? 'Getting the scan ready…' : stage === 'scanning' ? 'Scanning…' : 'Scan'}</button></p>
       {problem && <p class="card" role="alert">{problem}</p>}
@@ -260,9 +198,7 @@ export function Scan() {
             species and the ones it is mistaken for, feature by feature.</p>
           <p class="muted small">{recordWords(S.record)}</p>
           <p><button type="button" class="small-button" onClick={saveAsFind}>Save these photos with this location</button>{' '}
-            <button type="button" class="small-button" onClick={() => {
-              setFiles(SLOTS.map(() => null)); setOriginals(SLOTS.map(() => null)); setResult(null);
-            }}>Scan another</button></p>
+            <button type="button" class="small-button" onClick={() => { setSlots(noPhotos()); setResult(null); }}>Scan another</button></p>
         </section>
       )}
     </>

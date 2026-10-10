@@ -598,6 +598,38 @@ test('the scan runs the model on the phone: the Deathcap\'s photo puts the Death
   await expect(page.getByRole('heading', { name: 'Scan', exact: true })).toBeVisible();
 });
 
+test('Identify, then photos: his answers\' species in the order the photos put them; a dangerous species is never hidden', async ({ page }) => {
+  test.setTimeout(150_000);
+  const results = (q: string) => page.goto(`${site.url}#/identify?${q}&cap=unsure&spore=unsure`);
+  // Until the scan has been switched on (after reading its test), the step says where to do that.
+  await results('underside=gills&growsOn=ground&ring=yes&bag=yes');
+  const step = page.locator('[data-test=identify-photos]');
+  await expect(step.locator('[data-test=scan-off]')).toBeVisible();
+  await step.getByRole('link', { name: 'open Scan' }).click();
+  await page.getByRole('button', { name: /switch the scan on/ }).click();
+  // A Deathcap with a ring and a bag, on the ground: the Deathcap's own photo puts it first.
+  await results('underside=gills&growsOn=ground&ring=yes&bag=yes');
+  await addScanPhoto(page, 'Top of the cap', 'deathcap/1.webp');
+  await step.getByRole('button', { name: 'Narrow it down' }).click();
+  const ranked = step.locator('[data-test=photo-ranked]');
+  await expect(ranked).toBeVisible({ timeout: 120_000 });
+  await expect(ranked.getByText('A dangerous species is on this list')).toBeVisible();
+  await expect(ranked.locator('[data-test=photo-top-title]')).toHaveText('Most like your photos');
+  await expect(ranked.locator('[data-test=identify-row]').first()).toContainText('Deathcap');
+  await expect(ranked.locator('[data-test=photo-dangerous]')).toContainText('False Death-cap'); // a lookalike, in sight
+  expect(await page.locator('main').innerText()).not.toMatch(EDIBILITY_WORDS);
+  // He changes an answer (pores): the same photos re-order the new list at once, and the Deathcap the photo could be is
+  // shown although the answer rules it out.
+  await results('underside=pores&growsOn=ground&ring=unsure&bag=unsure');
+  await expect(ranked.locator('[data-test=photo-warnings]')).toContainText('Deathcap');
+  await expect(ranked.locator('[data-test=photo-top-title]')).toContainText('do not point clearly');
+  await expect(ranked.locator('[data-test=identify-row]').filter({ hasText: 'Deathcap' })).toHaveCount(0);
+  // A species the scan cannot recognise is listed apart, never ranked low.
+  await results('underside=gills&growsOn=wood&ring=unsure&bag=unsure');
+  await expect(ranked.locator('[data-test=photo-unknown]')).toContainText('Blueleg Brownie');
+  await expect(ranked.locator('[data-test=identify-row]').filter({ hasText: 'Blueleg Brownie' })).toHaveCount(0);
+});
+
 test('the scan names the group, and gives English names to species the guide does not cover', async ({ page }) => {
   test.setTimeout(150_000);
   await page.goto(`${site.url}#/scan`);

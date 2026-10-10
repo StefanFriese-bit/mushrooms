@@ -1,11 +1,12 @@
-import { ALL_SPECIES, photoUrl } from '../content';
+import { ALL_SPECIES } from '../content';
 import { hrefFor } from '../router';
-import { bySlug } from '../species';
 import {
   QUESTIONS, UNSURE, answersFromQuery, narrow, nextQuestion, queryFromAnswers, type Answers, type Listed, type Question,
 } from '../identify';
 import { Drawing } from './drawings';
 import { CapRuler } from './ruler';
+import { Row } from './identify-row';
+import { IdentifyPhotos } from './identify-photos';
 
 // Identify (spec 8): one question at a time, the list narrowing; the answers live in the address, so Back and a
 // reload keep them. No word about eating anywhere on this screen: only the danger tags.
@@ -14,23 +15,6 @@ const link = (a: Answers, show = false) => {
   return hrefFor({ name: 'identify', query: show ? (q ? `${q}&show=1` : 'show=1') : q });
 };
 const said = (q: Question, v: string) => (v === UNSURE ? q.unsureLabel : q.options.find((o) => o.value === v)?.label ?? v);
-const DANGER_WORDS = { deadly: 'Deadly', poisonous: 'Poisonous' } as const;
-
-function Row({ s, note }: { s: Listed; note?: string }) {
-  const page = s.slug ? bySlug(ALL_SPECIES, s.slug) : undefined;
-  return (
-    <div class={`row${s.keptFor ? ' kept' : ''}`} data-test="identify-row">
-      {page?.photos[0] ? <img src={photoUrl(page.photos[0].file)} alt="" loading="lazy" /> : <span class="no-photo" />}
-      <div class="grow">
-        <div>{page ? <a href={hrefFor({ name: 'species', slug: page.slug })}>{s.english}</a> : s.english}{' '}
-          {s.danger && <span class={`tag ${s.danger}`}>{DANGER_WORDS[s.danger]}</span>}</div>
-        <div class="sci">{s.scientific}</div>
-        {note && <div class="note">{note}</div>}
-      </div>
-      {page && page.lookalikes.length > 0 && <a class="small-button" href={hrefFor({ name: 'check', slug: page.slug })}>Check</a>}
-    </div>
-  );
-}
 
 function Results({ answers }: { answers: Answers }) {
   const r = narrow(ALL_SPECIES, answers);
@@ -40,6 +24,7 @@ function Results({ answers }: { answers: Answers }) {
   };
   return (
     <>
+      <IdentifyPhotos answers={answers} />
       <h2>Fit every answer ({r.matches.length})</h2>
       {r.matches.length === 0 && (
         <p class="card">Nothing in the guide fits every answer. Look again at your answers, or answer “Not sure” where you

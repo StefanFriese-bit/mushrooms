@@ -277,6 +277,18 @@ a.result:active { background: var(--subtle); }
 .backup-actions { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
 .backup-actions .file-button { margin-top: 0; }
 
+/* Identify, then photos (src/screens/identify-photos.tsx): the same slots as the Scan, and his answers' species in the
+   order the photos put them. */
+.identify-photos { margin: 12px 0 16px; }
+.identify-photos h2 { display: flex; align-items: center; gap: 8px; margin-top: 0; }
+.identify-photos h2 .icon { color: var(--brand); }
+.photo-ranked h3 { font-size: 16px; font-weight: 600; margin: 16px 0 6px; }
+.photo-warnings { background: var(--deadly-bg); border-color: var(--deadly-line); }
+.photo-warnings ul { margin: 6px 0 0; padding-left: 20px; }
+.danger-list { list-style: none; margin: 4px 0 8px; padding: 0; }
+.danger-list li { padding: 7px 2px; border-bottom: 1px solid var(--hairline); }
+.danger-list li:last-child { border-bottom: 0; }
+
 /* The ruler on "How wide is the cap?" (src/screens/ruler.tsx): a strip down the right edge, 0 at the top, over the
    page but under the bar at the foot; the page steps aside for it. */
 .ruler-on .shell { padding-right: 34px; }

@@ -43,21 +43,22 @@ export function outOfSeason(months: number[], month: number): boolean {
 /** The genus of a class: the first word of the model's own name for it. */
 export const genusOf = (name: string): string => name.split(' ')[0];
 
+/** One species' score from the photos. `raw` is before the season mark-down; `safe` is what the safety rule reads — raw,
+ * or with `safetyScores` (each class's best single photo) at least raw, so a dangerous species is never dropped by the
+ * extra photos. `first` is the model's first class for it (its name, and how dangerous it is). */
+export type SpeciesScore = { first: ClassInfo; score: number; raw: number; safe: number };
+
 /**
- * Rules 2–6 of spec 6.2. Species never recorded in the UK are removed; out of season, marked down; classes that are
- * the same species of ours are added up; the top five are the shortlist; a Poisonous or Deadly species whose score
- * BEFORE the season mark-down is at or above the safety threshold is added however low it ranks; below the "not sure"
- * threshold the scan says so. Its species added up by genus give the group headline, at or above the group line. All
- * the thresholds come from the test, never by hand.
+ * Each species' score as the shortlist ranks it (rules 2–4 of spec 6.2): species never recorded in the UK left out, out
+ * of season marked down, the model's classes of one species of ours added up. The ONE way photos are scored into
+ * species — the Scan's shortlist and Identify's photos both use it. Keys: our scientific name, or `class <id>` for a
+ * species the guide does not have. `byGenus` adds the species up by genus for the group headline.
  */
-export function shortlist(scores: ArrayLike<number>, classes: ClassInfo[], month: number, t: Thresholds,
-  safetyScores?: ArrayLike<number>): ScanResult {
+export function speciesScores(scores: ArrayLike<number>, classes: ClassInfo[], month: number, t: Thresholds,
+  safetyScores?: ArrayLike<number>): { bySpecies: Map<string, SpeciesScore>; byGenus: Map<string, number> } {
   if (scores.length !== classes.length) throw new Error(`scores for ${scores.length} classes, the class list has ${classes.length}`);
   if (safetyScores && safetyScores.length !== classes.length) throw new Error('the safety scores do not match the class list');
-  // raw: the species' score before the season mark-down; safe: what the safety rule reads — raw, or with `safetyScores`
-  // (each class's best single photo) at least raw, so a dangerous species is never dropped by the extra photos.
-  type Entry = { first: ClassInfo; score: number; raw: number; safe: number };
-  const bySpecies = new Map<string, Entry>();
+  const bySpecies = new Map<string, SpeciesScore>();
   const byGenus = new Map<string, number>();
   classes.forEach((c, i) => {
     if (!c.uk) return;
@@ -69,8 +70,21 @@ export function shortlist(scores: ArrayLike<number>, classes: ClassInfo[], month
     const e = bySpecies.get(key);
     if (e) { e.score += score; e.raw += raw; e.safe += safe; } else bySpecies.set(key, { first: c, score, raw, safe });
   });
+  return { bySpecies, byGenus };
+}
+
+/**
+ * Rules 2–6 of spec 6.2. Species never recorded in the UK are removed; out of season, marked down; classes that are
+ * the same species of ours are added up; the top five are the shortlist; a Poisonous or Deadly species whose score
+ * BEFORE the season mark-down is at or above the safety threshold is added however low it ranks; below the "not sure"
+ * threshold the scan says so. Its species added up by genus give the group headline, at or above the group line. All
+ * the thresholds come from the test, never by hand.
+ */
+export function shortlist(scores: ArrayLike<number>, classes: ClassInfo[], month: number, t: Thresholds,
+  safetyScores?: ArrayLike<number>): ScanResult {
+  const { bySpecies, byGenus } = speciesScores(scores, classes, month, t, safetyScores);
   const ranked = [...bySpecies.values()].filter((e) => e.score > 0).sort((a, b) => b.score - a.score);
-  const item = (e: Entry, forSafety: boolean): ShortlistItem =>
+  const item = (e: SpeciesScore, forSafety: boolean): ShortlistItem =>
     ({ id: e.first.id, name: e.first.name, ours: e.first.ours, danger: e.first.danger, score: e.score, forSafety });
   const items = ranked.slice(0, SHORTLIST).map((e) => item(e, false));
   for (const e of ranked.slice(SHORTLIST)) if (e.first.danger && e.safe >= t.safety) items.push(item(e, true));

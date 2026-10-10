@@ -267,6 +267,14 @@ a "find", so older backups restore.
   page cannot ask a phone its screen size, so on an iPhone the scale comes from Apple's own figures (460 ppi at 3 pixels
   a point, 326 ppi at 2; a screen a mini shares with an iPhone X is marked unchecked), and he can check it once against
   a bank card (ISO/IEC 7810 ID-1, 85.60 × 53.98 mm), kept on the phone (`src/ruler.ts`).
+  Once he has answered, **Narrow it down with photos** (Stefan 10/10/2026: "someone could add photos of the item … and
+  that could narrow down the search results"): the Scan's five photo slots and the same scan (`src/scan/run.ts`,
+  `speciesScores` in `src/scan/rules.ts`) put the species that fit his answers in order of how much they look like his
+  photos — the five most like them first, the rest folded away (`src/identify-photos.ts`). It never hides a dangerous
+  species: one that fits his answers or is kept as a lookalike stays in sight whatever the photos say; one the photos
+  could be (the scan's safety line) is shown in red although his answers ruled it out; a species the scan cannot
+  recognise (22 of the guide's 272, 8 of them dangerous) is listed apart, never ranked low. The photo scores do not
+  depend on his answers, so a changed answer re-orders the list at once.
 - **Learn:** the top points for identifying any mushroom, how to take a spore print, the deadly families to know,
   and the UK foraging rules (landowner permission, protected species, taking only a little). Off the home page and the
   bar since 10/10/2026 ("not useful for me"); the page still opens at #/learn and is still checked, nothing leads to it.
