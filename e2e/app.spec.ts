@@ -70,6 +70,31 @@ test('a species page shows its edibility, lookalikes and photo credits, and a lo
   await expect(page.locator('header.app-header')).toContainText(brand.name);
 });
 
+test('a species\' poisonous lookalikes, one at a time: the two side by side, then the points that tell them apart', async ({ page }) => {
+  await page.goto(`${site.url}#/species/velvet-shank`);
+  await page.locator('[data-test=lookalikes-button]').click();
+  await expect(page.getByRole('heading', { name: 'Poisonous lookalikes' })).toBeVisible();
+  await expect(page.locator('[data-test=lookalike-count]')).toHaveText('Velvet Shank · 1 of 2');
+  const pair = page.locator('[data-test=pair]');
+  await expect(pair).toContainText('Funeral Bell'); // the deadly one first
+  await expect(pair).toContainText('Deadly');
+  const rows = page.locator('[data-test=apart-row]');
+  await expect(rows.first()).toContainText('Ring'); // a ring settles it fastest, so it comes first
+  await expect(rows.first().locator('.apart-line.danger')).toContainText('A small, fragile ring');
+  await page.locator('[data-test=next-lookalike]').click();
+  await expect(page.locator('[data-test=lookalike-count]')).toHaveText('Velvet Shank · 2 of 2');
+  await expect(pair).toContainText('Common Rustgill');
+  await expect(page.locator('[data-test=next-lookalike]')).toHaveCount(0);
+  await page.getByRole('link', { name: 'Previous' }).click();
+  await expect(pair).toContainText('Funeral Bell');
+  await pair.getByRole('link', { name: /Funeral Bell/ }).click(); // the lookalike's own page
+  await expect(page.getByRole('heading', { name: 'Funeral Bell', exact: true })).toBeVisible();
+  await page.locator('[data-test=lookalikes-button]').click(); // a deadly species: what it is mistaken for
+  await expect(page.getByRole('heading', { name: 'Mistaken for' })).toBeVisible();
+  await page.locator('[data-test=back-link]').click();
+  await expect(page.getByRole('heading', { name: 'Funeral Bell', exact: true })).toBeVisible();
+});
+
 test('no page ever says "safe"', async ({ page }) => {
   for (const slug of ALL.map((s) => s.slug)) {
     await page.goto(`${site.url}#/species/${slug}`);

@@ -23,7 +23,7 @@ export function sectionOf(route: Route): SectionName | null {
   switch (route.name) {
     case 'map': case 'finds': case 'find': case 'find-new': case 'find-go': return 'map';
     case 'scan': return 'scan';
-    case 'guide': case 'species': case 'check': return 'guide';
+    case 'guide': case 'species': case 'check': case 'lookalikes': return 'guide';
     case 'identify': return 'identify';
     case 'learn': return 'learn';
     default: return null;

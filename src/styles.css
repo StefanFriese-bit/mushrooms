@@ -287,3 +287,20 @@ a.result:active { background: var(--subtle); }
 .go-way { font-size: 18px; margin: 0 0 8px; }
 .refs p { margin: 4px 0; }
 .refs code { font-size: 15px; background: var(--subtle); border: 1px solid var(--hairline); border-radius: 4px; padding: 0 4px; }
+
+/* The lookalike screen (src/screens/lookalikes.tsx): the two side by side, then one card per point that tells them apart. */
+.warn-button { background: var(--deadly); border-color: var(--deadly); }
+.warn-button:active { background: #a52c26; }
+.pair { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 8px 0 14px; }
+.pair-side { display: flex; flex-direction: column; align-items: flex-start; gap: 6px; padding: 8px; background: var(--surface);
+  border: 1px solid var(--line); border-radius: var(--radius-lg); color: inherit; text-decoration: none; }
+.pair-side img, .pair-nophoto { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: var(--radius); background: var(--sunken); }
+.pair-nophoto { display: grid; place-items: center; text-align: center; font-size: 13px; color: var(--faint); padding: 8px; }
+.pair-name { font-weight: 600; font-size: 16px; line-height: 1.25; }
+.apart-row { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 10px 12px; margin: 8px 0; }
+.apart-feature { font-size: 12.5px; font-weight: 700; letter-spacing: .6px; text-transform: uppercase; color: var(--muted); margin-bottom: 2px; }
+.apart-line { font-size: 17px; line-height: 1.35; padding: 5px 0; }
+.apart-line + .apart-line { border-top: 1px solid var(--hairline); }
+.apart-who { display: block; font-size: 12.5px; font-weight: 600; color: var(--muted); }
+.apart-line.danger, .apart-line.danger .apart-who { color: var(--deadly); }
+.pager { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin: 14px 0; }

@@ -16,6 +16,7 @@ import { UpdateBar } from './screens/update-bar';
 import brand from './brand.json';
 import { Home } from './screens/home';
 import { MapHome } from './screens/map-home';
+import { Lookalikes } from './screens/lookalikes';
 import { Icon } from './screens/icons';
 import { SECTIONS, sectionHref, sectionOf, type SectionName } from './sections';
 
@@ -71,6 +72,7 @@ function screen(route: Route) {
     case 'scan': return <Scan />;
     case 'identify': return <Identify query={route.query} />;
     case 'check': return <Check slug={route.slug} key={route.slug} />;
+    case 'lookalikes': return <Lookalikes slug={route.slug} n={route.n} />;
     case 'finds': return <Finds />;
     case 'find-new': return <FindNew />;
     case 'find': return <FindPage id={route.id} key={route.id} />;

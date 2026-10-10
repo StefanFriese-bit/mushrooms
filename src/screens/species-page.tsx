@@ -2,6 +2,8 @@ import type { Sourced, SpeciesRecord } from '../types';
 import { ALL_SPECIES, photoUrl } from '../content';
 import { hrefFor } from '../router';
 import { EDIBILITY_WORDS, KIND_WORDS, bySlug, tagClass } from '../species';
+import { isDangerous, lookalikeTitle } from '../lookalikes';
+import { Icon } from './icons';
 
 const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
@@ -33,6 +35,12 @@ export function SpeciesPage({ slug }: { slug: string }) {
         {s.protectedInUk.value && <> <span class="tag plain">Protected in the UK — do not pick</span></>}
       </p>
       {s.edibilityNote && <p class="card">{s.edibilityNote.value}<Refs rec={s} fact={s.edibilityNote} /></p>}
+      {s.lookalikes.length > 0 && (
+        // His spreadsheet's "possible confusion", one tap away (Stefan 10/10/2026).
+        <p><a class={`big-button wide${!isDangerous(s.edibility.value) && s.lookalikes.some((l) => isDangerous(l.kind)) ? ' warn-button' : ''}`}
+          href={hrefFor({ name: 'lookalikes', slug: s.slug, n: 0 })} data-test="lookalikes-button">
+          <Icon name="alert" size={20} />{lookalikeTitle(s)} ({s.lookalikes.length})</a></p>
+      )}
 
       <h2>Top points</h2>
       <ul>{s.topPoints.map((t) => <li key={t.value}>{t.value}<Refs rec={s} fact={t} /></li>)}</ul>

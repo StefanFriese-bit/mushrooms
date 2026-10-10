@@ -37,6 +37,13 @@ describe('parseHash', () => {
     expect(parseHash('#/finds/2f1c/go')).toEqual({ name: 'find-go', id: '2f1c' }); // walking back to it
     expect(hrefFor({ name: 'find-go', id: '2f1c' })).toBe('#/finds/2f1c/go');
   });
+  it('reads a species\' lookalikes, one at a time', () => {
+    expect(parseHash('#/lookalikes/velvet-shank')).toEqual({ name: 'lookalikes', slug: 'velvet-shank', n: 0 });
+    expect(parseHash('#/lookalikes/velvet-shank?n=1')).toEqual({ name: 'lookalikes', slug: 'velvet-shank', n: 1 });
+    expect(parseHash('#/lookalikes/velvet-shank?n=-3')).toEqual({ name: 'lookalikes', slug: 'velvet-shank', n: 0 });
+    expect(hrefFor({ name: 'lookalikes', slug: 'velvet-shank', n: 0 })).toBe('#/lookalikes/velvet-shank');
+    expect(hrefFor({ name: 'lookalikes', slug: 'velvet-shank', n: 1 })).toBe('#/lookalikes/velvet-shank?n=1');
+  });
   it('reports an unknown address, and sends it home', () => {
     expect(parseHash('#/nowhere')).toEqual({ name: 'not-found', path: '/nowhere' });
     expect(hrefFor({ name: 'not-found', path: '/nowhere' })).toBe('#/');

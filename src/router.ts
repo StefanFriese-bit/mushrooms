@@ -6,6 +6,7 @@ export type Route =
   | { name: 'scan' }
   | { name: 'identify'; query: string } // the answers, as Identify writes them (src/identify.ts)
   | { name: 'check'; slug: string }
+  | { name: 'lookalikes'; slug: string; n: number } // a species' lookalikes, one at a time (n = which, from 0)
   | { name: 'finds' } // View map: the saved locations on the map and in a list
   | { name: 'find-new' } // Save a location
   | { name: 'find'; id: string }
@@ -25,6 +26,10 @@ export function parseHash(hash: string): Route {
   if (parts[0] === 'guide' && parts.length === 1) return { name: 'guide', query: new URLSearchParams(qs).get('q') ?? '' };
   if (parts[0] === 'species' && parts[1]) return { name: 'species', slug: decodeURIComponent(parts[1]) };
   if (parts[0] === 'check' && parts[1]) return { name: 'check', slug: decodeURIComponent(parts[1]) };
+  if (parts[0] === 'lookalikes' && parts[1] && parts.length === 2) {
+    const n = Number(new URLSearchParams(qs).get('n') ?? 0);
+    return { name: 'lookalikes', slug: decodeURIComponent(parts[1]), n: Number.isInteger(n) && n > 0 ? n : 0 };
+  }
   if (parts[0] === 'finds' && parts[1] === 'new' && parts.length === 2) return { name: 'find-new' };
   if (parts[0] === 'finds' && parts[1] && parts.length === 2) return { name: 'find', id: decodeURIComponent(parts[1]) };
   if (parts[0] === 'finds' && parts[1] && parts[2] === 'go' && parts.length === 3) return { name: 'find-go', id: decodeURIComponent(parts[1]) };
@@ -42,6 +47,8 @@ export function hrefFor(route: Route): string {
       return `#/species/${encodeURIComponent(route.slug)}`;
     case 'check':
       return `#/check/${encodeURIComponent(route.slug)}`;
+    case 'lookalikes':
+      return `#/lookalikes/${encodeURIComponent(route.slug)}${route.n > 0 ? `?n=${route.n}` : ''}`;
     case 'find-new':
       return '#/finds/new';
     case 'find':
