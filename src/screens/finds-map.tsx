@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'preact/hooks';
 import type { Spot } from '../finds/store';
 import { circleRing, gridLines, type LatLon } from '../finds/geo';
+import { askForCompassOnTap } from '../finds/compass';
 
 // The map (spec 7): OpenFreeMap's tiles (OpenStreetMap data, credited on the map), his saved locations as pins, his
 // position, and — when saving a location — one pin he can move by tapping the map or dragging it. It zooms in until a
@@ -41,6 +42,8 @@ type Props = {
    * pins the first time it is known. */
   here?: (LatLon & { accuracy: number }) | null;
   tall?: boolean;
+  /** Shorter, so the arrow, the distance and the map fit on one screen (Take me there). */
+  short?: boolean;
 };
 
 type Ring = { ring: Array<[number, number]>; kind: 'find' | 'here' };
@@ -72,7 +75,7 @@ function drawGrid(m: MapObj) {
   m.addLayer({ id: 'grid-lines', type: 'line', source: 'grid', paint: { 'line-color': '#7f8c76', 'line-width': 1, 'line-opacity': 0.45 } });
 }
 
-export function FindsMap({ pins = [], locate = false, pick, here = null, tall = false }: Props) {
+export function FindsMap({ pins = [], locate = false, pick, here = null, tall = false, short = false }: Props) {
   const box = useRef<HTMLDivElement>(null);
   const lib = useRef<MapLib | null>(null);
   const map = useRef<MapObj | null>(null);
@@ -174,6 +177,7 @@ export function FindsMap({ pins = [], locate = false, pick, here = null, tall = 
         go.href = p.goHref;
         go.className = 'pin-pop-go';
         go.textContent = 'Take me there';
+        go.addEventListener('click', askForCompassOnTap);
         links.append(go);
       }
       const open = document.createElement('a');
@@ -249,7 +253,7 @@ export function FindsMap({ pins = [], locate = false, pick, here = null, tall = 
   }, [ready, pick?.spot?.lat, pick?.spot?.lon]);
 
   return (
-    <div class={`map-wrap${tall ? ' tall' : ''}`} data-map-mode={mode} data-grid={grid ? 'on' : 'off'}>
+    <div class={`map-wrap${tall ? ' tall' : ''}${short ? ' short' : ''}`} data-map-mode={mode} data-grid={grid ? 'on' : 'off'}>
       <div class="map" ref={box} data-test="map" />
       {problem && <p class="map-problem" role="status">{problem}</p>}
     </div>

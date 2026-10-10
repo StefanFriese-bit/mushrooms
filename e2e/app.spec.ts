@@ -111,7 +111,7 @@ test('works with the server switched off once it has been opened', async ({ page
   await site.stop();
   await page.reload();
   await expect(page.locator('header.app-header')).toContainText(brand.name);
-  await expect(page.locator('[data-test=home] a')).toHaveCount(5);
+  await expect(page.locator('[data-test=home] a')).toHaveCount(4);
   await page.locator('[data-test=home-guide]').click();
   await expect(page.locator('[data-test=species-row]')).toHaveCount(ALL.length);
   await page.goto(`${site.url}#/species/deathcap`);
@@ -123,10 +123,10 @@ test('About says whether the phone keeps the data (the app asks at start)', asyn
   await expect(page.getByText(/Storage kept by the phone: (yes|not yet|not supported in this browser)$/)).toBeVisible();
 });
 
-test('the home page: the five sections in Stefan\'s order, the Map first, and no bar at the foot', async ({ page }) => {
+test('the home page: the four sections in Stefan\'s order, the Map first, and no bar at the foot', async ({ page }) => {
   await page.goto(site.url);
   const buttons = page.locator('[data-test=home] a');
-  await expect(buttons).toHaveText(['Map', 'Scan', 'Guide', 'Identify', 'Learn']);
+  await expect(buttons).toHaveText(['Map', 'Scan', 'Guide', 'Identify']); // Learn taken off 10/10/2026: "not useful for me"
   await expect(page.locator('nav.tabs')).toHaveCount(0);
   await expect(page.locator('[data-test=home-button]')).toHaveCount(0); // already home
   expect(await page.title()).toBe(brand.name);
@@ -136,26 +136,30 @@ test('the home page: the five sections in Stefan\'s order, the Map first, and no
   await expect(page.locator('[data-test=save-location]')).toContainText('Save a location');
   await expect(page.locator('[data-test=view-map]')).toContainText('View map');
   await expect(page.locator('[data-test=saved-count]')).toHaveText('No saved locations yet');
-  // Every other page has the five sections at its foot, its own lit, in the same order.
+  // Every other page has the four sections at its foot, its own lit, in the same order.
   const bar = page.locator('nav.tabs a');
-  await expect(bar).toHaveText(['Map', 'Scan', 'Guide', 'Identify', 'Learn']);
+  await expect(bar).toHaveText(['Map', 'Scan', 'Guide', 'Identify']);
   await expect(page.locator('nav.tabs a[aria-current=page]')).toHaveText('Map');
-  await bar.filter({ hasText: 'Learn' }).click();
-  await expect(page.locator('nav.tabs a[aria-current=page]')).toHaveText('Learn');
+  await bar.filter({ hasText: 'Identify' }).click();
+  await expect(page.locator('nav.tabs a[aria-current=page]')).toHaveText('Identify');
+  // The four share the foot's width evenly.
+  const widths = await bar.evaluateAll((as) => as.map((a) => Math.round(a.getBoundingClientRect().width)));
+  expect(Math.max(...widths) - Math.min(...widths)).toBeLessThanOrEqual(1);
+  expect(widths.reduce((a, b) => a + b, 0)).toBeGreaterThan((page.viewportSize()!.width > 760 ? 720 : page.viewportSize()!.width) * 0.8);
 });
 
 test('the header shows the name and tagline from src/brand.json; Home goes home, the i opens About', async ({ page }) => {
-  await page.goto(`${site.url}#/learn`);
+  await page.goto(`${site.url}#/identify`);
   const header = page.locator('header.app-header');
   await expect(header).toContainText(brand.name);
   await expect(header).toContainText(brand.tagline);
   await header.locator('[data-test=about-button]').click();
   await expect(page.getByRole('heading', { name: 'About' })).toBeVisible();
   await header.locator('[data-test=home-button]').click();
-  await expect(page.locator('[data-test=home] a')).toHaveCount(5);
+  await expect(page.locator('[data-test=home] a')).toHaveCount(4);
   await page.goto(`${site.url}#/species/deathcap`);
   await header.getByRole('link', { name: `${brand.name}, home` }).click();
-  await expect(page.locator('[data-test=home] a')).toHaveCount(5);
+  await expect(page.locator('[data-test=home] a')).toHaveCount(4);
 });
 
 test('the hidden speed test runs the scan model and names the Deathcap from its own photo', async ({ page }) => {
@@ -311,19 +315,74 @@ test.describe('Map', () => {
     await expect(page.getByRole('heading', { name: 'Saved location', exact: true })).toBeVisible();
     await expect(page.locator('[data-test=os-grid]')).toHaveText(osGridRef(spot)!);
     await expect(page.locator('[data-test=plus-code]')).toHaveText(plusCode(spot));
+    // The way back comes first (Stefan 10/10/2026): Take me there sits above the photos, on the first screen.
+    await expect(page.locator('.photos img')).toHaveCount(1);
+    const goButton = (await page.locator('[data-test=find-again]').boundingBox())!;
+    expect(goButton.y).toBeLessThan((await page.locator('.photos img').boundingBox())!.y);
+    expect(goButton.y + goButton.height).toBeLessThanOrEqual((await page.locator('nav.tabs').boundingBox())!.y);
     // He walks away: 40 m south of it.
     const away = { lat: spot.lat - 0.00036, lon: spot.lon };
     await context.setGeolocation({ latitude: away.lat, longitude: away.lon, accuracy: 5 });
     await page.locator('[data-test=find-again]').click();
     await expect(page.locator('[data-test=go-distance]')).toHaveText(sayDistance(distanceM(away, spot)), { timeout: 15000 });
-    await expect(page.getByText('Head north', { exact: true })).toBeVisible();
+    await expect(page.getByText(/^Head north/)).toBeVisible();
     await expect(page.locator('[data-test=go-arrow]')).toHaveCount(1);
     await expect(page.locator('[data-test=here-dot]')).toHaveCount(1);
+    // The arrow, the distance and the map on one screen (at least 150 points of map above the bar at the foot), and
+    // walking directions one tap away.
+    const foot = (await page.locator('nav.tabs').boundingBox())!.y;
+    expect((await page.locator('[data-test=go-distance]').boundingBox())!.y).toBeLessThan(foot);
+    expect((await page.locator('.map-wrap.short [data-test=map]').boundingBox())!.y + 150).toBeLessThanOrEqual(foot);
+    await expect(page.locator('[data-test=go-directions]')).toHaveAttribute('href', 'https://maps.apple.com/?daddr=51.65880,0.04660&dirflg=w');
     // Back at the spot: as close as GPS can tell, and his own photos to recognise it by.
     await context.setGeolocation({ latitude: spot.lat, longitude: spot.lon, accuracy: 5 });
     await page.reload();
     await expect(page.locator('[data-test=go-distance]')).toHaveText('You are there', { timeout: 15000 });
     await expect(page.locator('[data-test=go-there] img')).toHaveCount(1);
+  });
+
+  test('Take me there asks for the compass in the same tap, and the arrow follows it', async ({ page, context }) => {
+    // An iPhone: the compass has to be asked for, and only a tap may ask.
+    await page.addInitScript(() => {
+      const w = window as unknown as Record<string, any>;
+      const DOE = w.DeviceOrientationEvent ?? function DeviceOrientationEvent() {};
+      w.__asked = [];
+      DOE.requestPermission = function (this: unknown) {
+        const ua = (navigator as unknown as { userActivation?: { isActive: boolean } }).userActivation;
+        w.__asked.push({ tap: ua ? ua.isActive : null, self: this === DOE });
+        return new Promise((done) => { w.__allow = () => done('granted'); });
+      };
+      w.DeviceOrientationEvent = DOE;
+    });
+    const spot = { lat: 51.6588, lon: 0.0466 };
+    await page.goto(`${site.url}#/finds/new`);
+    await expect(page.locator('[data-test=where]')).toContainText('within 7 m', { timeout: 15000 });
+    await page.getByRole('button', { name: 'Save location' }).click();
+    await expect(page.getByRole('heading', { name: 'Saved location', exact: true })).toBeVisible();
+    await context.setGeolocation({ latitude: spot.lat - 0.00036, longitude: spot.lon, accuracy: 5 }); // 40 m south of it
+    expect(await page.evaluate(() => (window as unknown as { __asked: unknown[] }).__asked)).toHaveLength(0); // not before the tap
+    await page.locator('[data-test=find-again]').click();
+    // The screen opens at once, with the phone's own question on top of it.
+    await expect(page.locator('[data-test=find-go]')).toBeVisible();
+    await expect(page.getByText('Asking for the compass…')).toBeVisible();
+    const asked = await page.evaluate(() => (window as unknown as { __asked: Array<{ tap: boolean | null; self: boolean }> }).__asked);
+    expect(asked).toHaveLength(1);
+    expect(asked[0].self).toBe(true); // asked of the phone's own object
+    expect(asked[0].tap).not.toBe(false); // inside his tap (null: this browser cannot tell)
+    await page.evaluate(() => (window as unknown as { __allow: () => void }).__allow());
+    // He allows it. The phone's top points east (90°), the find is due north: the arrow turns to his left (270°).
+    await expect(async () => {
+      await page.evaluate(() => {
+        for (const type of ['deviceorientation', 'deviceorientationabsolute']) {
+          const e = new Event(type);
+          Object.assign(e, { alpha: 270, webkitCompassHeading: 90, webkitCompassAccuracy: 10 });
+          window.dispatchEvent(e);
+        }
+      });
+      await expect(page.getByText('Head north: follow the arrow')).toBeVisible({ timeout: 500 });
+    }).toPass({ timeout: 10000 });
+    await expect(page.locator('[data-test=go-arrow]')).toHaveAttribute('transform', 'rotate(270)');
+    await expect(page.getByText('Asking for the compass…')).toHaveCount(0);
   });
 
   test('the map zooms in until a few metres fill the screen', async ({ page }) => {

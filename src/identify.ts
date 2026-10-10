@@ -65,7 +65,7 @@ export const QUESTIONS: Question[] = [
   },
   {
     id: 'spore', title: 'What colour is its spore print?',
-    hint: 'Leave the cap gills-down on white and dark paper for a few hours (see Learn).',
+    hint: 'Leave the cap gills-down on white and dark paper for a few hours.',
     unsureLabel: 'I have not made one',
     options: [
       { value: 'white', label: 'White, cream or pale yellow', drawing: 'spore-white' },

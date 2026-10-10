@@ -233,19 +233,23 @@ Both thresholds are set from the test, not by hand.
 **Redesign, Stefan 10/10/2026.** The app is called **The Mycelium Network** (home-screen label "Mycelium", from
 `src/brand.json`) and looks like his business dashboard: a steel-blue band at the top (#3b6da8), a light grey page with
 white cards on hairline borders, light-blue buttons with the picture above or beside the word, one blue for actions;
-always light. Opening the app shows the **home page: five buttons and nothing else, in his order — Map (first and
-largest, "the most important space"), Scan, Guide, Identify, Learn** (`src/sections.ts` is the one list). Every other
-page has a Home button in the band and the same five as a bar at its foot. "Finds" is now **Map** (his word): two
+always light. Opening the app shows the **home page: four buttons and nothing else, in his order — Map (first and
+largest, "the most important space"), Scan, Guide, Identify** (`src/sections.ts` is the one list; Learn was the fifth
+until the same day: "not useful for me"). Every other page has a Home button in the band and the same four as a bar at
+its foot. "Finds" is now **Map** (his word): two
 choices, **Save a location** (the spot where he stands, steadied while the screen is open, or placed by hand; a
 description and a photo, both optional; what it is can be added later on its page) and **View map** (every saved
 location as a pin with its accuracy circle, his position, the list; a pin or a row offers **Take me there**). The map
 zooms to 22 (about 4.5 m of ground across a phone's screen). In the code and the backup file a saved location is still
 a "find", so older backups restore.
 
-- **Home:** the five sections (above).
-- **Map:** Save a location · View map · a saved location's page (photos, Take me there, the map, OS grid reference and
-  Plus Code, description, what it is, delete) · Take me there (arrow, distance, compass, "You are there" with its
-  photos and description).
+- **Home:** the four sections (above).
+- **Map:** Save a location · View map · a saved location's page (Take me there first, then photos, the map, OS grid
+  reference and Plus Code, description, what it is, delete) · Take me there (Stefan 10/10/2026: "brings up the compass
+  and the directions and the map"): the iPhone's compass question is asked in the same tap that opens it — from the
+  location's page, a pin or a row of the list — and the arrow follows the compass once he allows it; the arrow, the
+  distance and the map on one screen; Apple Maps' walking directions one tap away; "You are there" with its photos and
+  description.
 - **Scan:** take or pick up to five photos (top of the cap, underneath, stem, base of the stem, cross-section; any one
   is enough), each croppable (pinch or slider, drag; 10/10/2026) → the shortlist (6.2: each species as a large photo with
   its name and danger, a tap opens its page) → what to check next → Check.
@@ -259,7 +263,8 @@ a "find", so older backups restore.
 - **Guide:** search, "in season now", the species pages (5.1).
 - **Identify:** simple questions one at a time, each with drawings; the list narrows; "not sure" is always allowed.
 - **Learn:** the top points for identifying any mushroom, how to take a spore print, the deadly families to know,
-  and the UK foraging rules (landowner permission, protected species, taking only a little).
+  and the UK foraging rules (landowner permission, protected species, taking only a little). Off the home page and the
+  bar since 10/10/2026 ("not useful for me"); the page still opens at #/learn and is still checked, nothing leads to it.
 - **About:** version, credits (model, photos, maps), licences, storage state, backup.
 - **TEST version:** a banner on every screen: "Test version — not for identifying mushrooms".
 

@@ -7,6 +7,7 @@ import { BackupSection, useBackup } from './backup';
 import { Icon } from './icons';
 import { BackLink } from './back-link';
 import { findLabel } from '../finds/labels';
+import { askForCompassOnTap } from '../finds/compass';
 import { ALL, NO_FILTER, filterFinds, monthName, speciesChoices, type FindFilter } from '../finds/filters';
 
 // View map (spec 7; Stefan 10/10/2026): his saved locations as pins on his own map, his position, and the list, newest
@@ -100,7 +101,8 @@ export function Finds() {
                   <span class={`loc-desc${line.described ? '' : ' none'}`}>{line.text}</span>
                 </a>
                 {f.spot && (
-                  <a class="loc-go" href={hrefFor({ name: 'find-go', id: f.id })} aria-label={`Take me there: ${findLabel(f, names)}`}>
+                  <a class="loc-go" href={hrefFor({ name: 'find-go', id: f.id })} aria-label={`Take me there: ${findLabel(f, names)}`}
+                    onClick={askForCompassOnTap}>
                     <Icon name="navigate" size={16} />Go
                   </a>
                 )}

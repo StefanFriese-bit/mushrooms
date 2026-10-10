@@ -1,7 +1,7 @@
 import { SECTIONS, sectionHref } from '../sections';
 import { Icon } from './icons';
 
-// Home (Stefan 10/10/2026): the five sections and nothing else, the Map first and largest — "the most important space".
+// Home (Stefan 10/10/2026): the four sections and nothing else, the Map first and largest — "the most important space".
 export function Home() {
   return (
     <>

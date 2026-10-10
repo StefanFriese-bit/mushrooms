@@ -21,13 +21,41 @@ export const arrowTurn = (bearing: number, heading: number): number => (((bearin
 
 type PermissionAsking = { requestPermission?: () => Promise<'granted' | 'denied'> };
 
-/** Asks for the compass (an iPhone shows its own question; it must come from his tap). */
-export async function allowCompass(): Promise<'granted' | 'denied' | 'none'> {
-  if (typeof window === 'undefined' || !('DeviceOrientationEvent' in window)) return 'none';
-  const ask = (window.DeviceOrientationEvent as unknown as PermissionAsking).requestPermission;
-  if (typeof ask !== 'function') return 'granted';
-  try { return (await ask()) === 'granted' ? 'granted' : 'denied'; } catch { return 'denied'; }
+export type CompassAnswer = 'granted' | 'denied' | 'none';
+let question: Promise<CompassAnswer> | null = null;
+let answer: CompassAnswer | null = null;
+
+/** The compass question while the app is open: null when it has not been asked yet; otherwise the phone's answer (null
+ * while the question is still on screen) and the promise of it. */
+export function compassAsked(): { answer: CompassAnswer | null; reply: Promise<CompassAnswer> } | null {
+  return question ? { answer, reply: question } : null;
 }
+
+/** Asks for the compass (an iPhone shows its own question; it must come from his tap). The answer is kept while the app
+ * is open, so the Take me there screen can follow it. Never fails: a refusal or an error is 'denied'. */
+export function allowCompass(): Promise<CompassAnswer> {
+  let reply: Promise<CompassAnswer>;
+  if (typeof window === 'undefined' || !('DeviceOrientationEvent' in window)) reply = Promise.resolve('none');
+  else {
+    const orientation = window.DeviceOrientationEvent as unknown as PermissionAsking;
+    if (typeof orientation.requestPermission !== 'function') reply = Promise.resolve('granted');
+    else {
+      try {
+        // Asked of the object itself, inside his tap: an iPhone shows its question only then.
+        reply = orientation.requestPermission().then((r): CompassAnswer => (r === 'granted' ? 'granted' : 'denied'), () => 'denied');
+      } catch { reply = Promise.resolve('denied'); }
+    }
+  }
+  answer = null;
+  const asked: Promise<CompassAnswer> = reply.then((a) => { if (question === asked) answer = a; return a; });
+  question = asked;
+  return asked;
+}
+
+/** A tap on "Take me there" (Stefan 10/10/2026: it should bring up the compass, the directions and the map). The
+ * compass is asked for in that same tap, because an iPhone shows its question only from a tap; the link then opens the
+ * screen as usual, and the arrow follows the compass as soon as he allows it. */
+export function askForCompassOnTap(): void { void allowCompass(); }
 
 /** Follows the compass; `onHeading` gets null while the phone gives no heading. Returns the function that stops. */
 export function followHeading(onHeading: (h: Heading | null) => void): () => void {

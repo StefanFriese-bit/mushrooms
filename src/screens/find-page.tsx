@@ -10,6 +10,7 @@ import { findLabel, sayWhen, useNames } from './finds';
 import { wasJustSaved } from './find-new';
 import { Icon } from './icons';
 import { BackLink } from './back-link';
+import { askForCompassOnTap } from '../finds/compass';
 
 // One saved location (spec 7): its photos, when it was saved, where (with "Take me there" — an arrow and the
 // distance, no signal needed — and Apple Maps' walking directions), its OS grid reference and Plus Code to copy or
@@ -75,22 +76,25 @@ export function FindPage({ id }: { id: string }) {
     <>
       <BackLink href={hrefFor({ name: 'finds' })} label="Map" />
       {justSaved && <p class="card saved-note" role="status" data-test="saved-note"><Icon name="check" size={20} />Location saved on this phone.</p>}
+      <h1>{label}</h1>
+      <p class="muted">Saved {sayWhen(find.at)}{find.spot ? ` · ${sayAccuracy(find.spot.accuracy)}` : ''}</p>
+      {find.spot && (
+        // The first thing on the page (Stefan 10/10/2026): the compass, the way and the map, one tap away.
+        <p><a class="big-button wide" href={hrefFor({ name: 'find-go', id: find.id })} data-test="find-again" onClick={askForCompassOnTap}>
+          <Icon name="navigate" size={20} />Take me there</a></p>
+      )}
       {srcs.length > 0 && (
         <div class="photos">
           {srcs.map((s, i) => <figure key={s}><img src={s} alt={`Photo ${i + 1}`} /></figure>)}
         </div>
       )}
-      <h1>{label}</h1>
-      <p class="muted">Saved {sayWhen(find.at)}{find.spot ? ` · ${sayAccuracy(find.spot.accuracy)}` : ''}</p>
       {find.species && (
         <p>What it is: <strong>{names.get(find.species) ?? find.species}</strong>{page && <> · <a href={hrefFor({ name: 'species', slug: page.slug })}>its page in the guide</a>
           {page.lookalikes.length > 0 && <> · <a href={hrefFor({ name: 'check', slug: page.slug })}>check it against its lookalikes</a></>}</>}</p>
       )}
       {find.spot ? (
         <>
-          <p><a class="big-button wide" href={hrefFor({ name: 'find-go', id: find.id })} data-test="find-again">
-            <Icon name="navigate" size={20} />Take me there</a></p>
-          <p class="small muted">An arrow and the distance on this phone, no signal needed. Or <a href={appleMapsLink(find.spot)}
+          <p class="small muted">Take me there: an arrow, the distance and the map, no signal needed. Or <a href={appleMapsLink(find.spot)}
             data-test="take-me-there">walking directions in Apple Maps</a> (needs a signal).</p>
           <FindsMap pins={[{ id: find.id, lat: find.spot.lat, lon: find.spot.lon, label, href: hrefFor({ name: 'find', id: find.id }),
             accuracy: find.spot.accuracy }]} locate />
