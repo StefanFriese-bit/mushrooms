@@ -137,7 +137,39 @@
       ]
     }
   },
-  "lookalikes": [],
+  "lookalikes": [
+    {
+      "scientific": "Imleria badia",
+      "english": "Bay Bolete",
+      "slug": "bay-bolete",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Stem",
+          "thisOne": "Yellow, flushed with red fibres, like a stick of rhubarb",
+          "thatOne": "Brown and streaky",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-bb",
+            "wf-bb"
+          ]
+        },
+        {
+          "feature": "Pores when pressed",
+          "thisOne": "Slowly bruise blue-green",
+          "thatOne": "Turn blue-green at once",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-bb",
+            "wf-bb",
+            "wp-bb"
+          ]
+        }
+      ]
+    }
+  ],
   "noDangerousLookalike": {
     "sources": [
       "fn",
@@ -208,7 +240,22 @@
       "id": "wp-s41",
       "title": "Wikipedia — List of species and habitats of principal importance in England",
       "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    },
+    {
+      "id": "fn-bb",
+      "title": "First Nature — Imleria badia, Bay Bolete",
+      "url": "https://www.first-nature.com/fungi/imleria-badia.php"
+    },
+    {
+      "id": "wf-bb",
+      "title": "Wild Food UK — Bay Bolete",
+      "url": "https://www.wildfooduk.com/mushroom-guide/bay-bolete-boletus-imleria-badia/"
+    },
+    {
+      "id": "wp-bb",
+      "title": "Wikipedia — Imleria badia",
+      "url": "https://en.wikipedia.org/wiki/Imleria_badia"
     }
   ],
-  "checked": "2026-10-06"
+  "checked": "2026-10-10"
 }

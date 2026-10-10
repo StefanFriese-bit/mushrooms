@@ -129,7 +129,51 @@
       ]
     }
   },
-  "lookalikes": [],
+  "lookalikes": [
+    {
+      "scientific": "Coprinellus micaceus",
+      "english": "Glistening Inkcap",
+      "slug": "glistening-inkcap",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Cap",
+          "thisOne": "Tiny, 0.5–1.5 cm, beige turning grey",
+          "thatOne": "1–4 cm, tan to orange-brown, dusted with glistening white grains",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-gi",
+            "wf-gi",
+            "wp-gi"
+          ]
+        },
+        {
+          "feature": "Gills",
+          "thisOne": "Turn black but do not melt into ink",
+          "thatOne": "Turn black and melt into ink",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-gi",
+            "wf-gi"
+          ]
+        },
+        {
+          "feature": "How they grow",
+          "thisOne": "Crowds of hundreds",
+          "thatOne": "Dense tufts",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-gi",
+            "wf-gi",
+            "wp-gi"
+          ]
+        }
+      ]
+    }
+  ],
   "noDangerousLookalike": {
     "sources": [
       "fn",
@@ -200,7 +244,22 @@
       "id": "wp-s41",
       "title": "Wikipedia — List of species and habitats of principal importance in England",
       "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    },
+    {
+      "id": "fn-gi",
+      "title": "First Nature — Coprinellus micaceus, Glistening Inkcap",
+      "url": "https://www.first-nature.com/fungi/coprinellus-micaceus.php"
+    },
+    {
+      "id": "wf-gi",
+      "title": "Wild Food UK — Glistening Inkcap",
+      "url": "https://www.wildfooduk.com/mushroom-guide/glistening-inkcap/"
+    },
+    {
+      "id": "wp-gi",
+      "title": "Wikipedia — Coprinellus micaceus",
+      "url": "https://en.wikipedia.org/wiki/Coprinellus_micaceus"
     }
   ],
-  "checked": "2026-10-06"
+  "checked": "2026-10-10"
 }

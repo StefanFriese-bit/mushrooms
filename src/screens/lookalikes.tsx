@@ -1,6 +1,6 @@
 import { ALL_SPECIES, photoUrl } from '../content';
 import { hrefFor } from '../router';
-import { EDIBILITY_WORDS, KIND_WORDS, bySlug, tagClass } from '../species';
+import { EDIBILITY_WORDS, KIND_WORDS, bySlug, siteNames, tagClass } from '../species';
 import { apartRows, isDangerous, lookalikeTitle, orderedLookalikes } from '../lookalikes';
 import { BackLink } from './back-link';
 import { Icon } from './icons';
@@ -25,7 +25,7 @@ export function Lookalikes({ slug, n }: { slug: string; n: number }) {
   const all = orderedLookalikes(s);
   const back = <BackLink href={hrefFor({ name: 'species', slug })} label={s.english} />;
   if (all.length === 0) {
-    return <>{back}<h1>Lookalikes</h1><p class="card">{s.noDangerousLookalike ? 'The trusted sites name no dangerous lookalike.'
+    return <>{back}<h1>Lookalikes</h1><p class="card">{s.noDangerousLookalike ? `${siteNames(s, s.noDangerousLookalike.sources)} name no dangerous lookalike.`
       : 'This page names no lookalikes yet.'}</p></>;
   }
   const i = Math.min(Math.max(0, n), all.length - 1);

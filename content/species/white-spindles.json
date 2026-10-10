@@ -130,7 +130,27 @@
       ]
     }
   },
-  "lookalikes": [],
+  "lookalikes": [
+    {
+      "scientific": "Clavulinopsis fusiformis",
+      "english": "Golden Spindles",
+      "slug": "golden-spindles",
+      "kind": "not-edible",
+      "tellApart": [
+        {
+          "feature": "Colour",
+          "thisOne": "White; the pointed tips may yellow with age",
+          "thatOne": "Bright yellow",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-gs",
+            "wp-gs"
+          ]
+        }
+      ]
+    }
+  ],
   "noDangerousLookalike": {
     "sources": [
       "fn",
@@ -201,7 +221,17 @@
       "id": "wp-s41",
       "title": "Wikipedia — List of species and habitats of principal importance in England",
       "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    },
+    {
+      "id": "fn-gs",
+      "title": "First Nature — Clavulinopsis fusiformis, Golden Spindles",
+      "url": "https://www.first-nature.com/fungi/clavulinopsis-fusiformis.php"
+    },
+    {
+      "id": "wp-gs",
+      "title": "Wikipedia — Clavulinopsis fusiformis",
+      "url": "https://en.wikipedia.org/wiki/Clavulinopsis_fusiformis"
     }
   ],
-  "checked": "2026-10-06"
+  "checked": "2026-10-10"
 }

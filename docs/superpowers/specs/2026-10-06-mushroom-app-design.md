@@ -261,6 +261,17 @@ a "find", so older backups restore.
   what he sees; a tick that fits a lookalike better than the match is flagged red. It ends with "Before eating, get
   it confirmed" and "Send to iNaturalist".
 - **Guide:** search, "in season now", the species pages (5.1).
+  **Lookalike audit, 10/10/2026** (Stefan: "I don't want to be the one to define it because I'm not an expert" — the
+  trusted sites decide): the 34 edible species that listed no lookalike were checked against their own sites. A
+  lookalike goes in when two sites name it, each tell-apart point on two sites; 17 pairs were added (e.g. Penny Bun —
+  Bitter Bolete and Bay Bolete; Hen of the Woods and Chicken of the Woods — Giant Polypore; Pestle Puffball — Deathcap,
+  which First Nature warns of and Wild Food UK warns of for white puffballs). "No dangerous lookalike" now cites only
+  sites that name none, and says which ("First Nature and Wild Food UK name no dangerous lookalike"): where one trusted
+  site alone names a dangerous lookalike (Penny Bun, Tawny Funnel, Wood Hedgehog, Orange Peel Fungus, Glistening Inkcap)
+  it stays off the page under the two-site rule, so "the trusted sites" would have claimed too much. A species page
+  lists the dangerous lookalikes (or, for a dangerous species, the edible ones it is mistaken for) first, the rest under
+  "Other lookalikes". Next: the 57 edible species that already list lookalikes, for ones their sites name and the page
+  lacks.
 - **Identify:** simple questions one at a time, each with drawings; the list narrows; "not sure" is always allowed.
   On "How wide is the cap?" a centimetre ruler runs down the right edge of the screen (Stefan 10/10/2026: "I doubt
   they'll have a measuring stick in the wild"): 0 at the top, 5 and 10 cm — where the answers change — in blue. A web

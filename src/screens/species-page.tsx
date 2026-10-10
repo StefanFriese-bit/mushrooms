@@ -1,7 +1,7 @@
 import type { Sourced, SpeciesRecord } from '../types';
 import { ALL_SPECIES, photoUrl } from '../content';
 import { hrefFor } from '../router';
-import { EDIBILITY_WORDS, KIND_WORDS, bySlug, tagClass } from '../species';
+import { EDIBILITY_WORDS, KIND_WORDS, bySlug, siteNames, tagClass } from '../species';
 import { isDangerous, lookalikeTitle } from '../lookalikes';
 import { Icon } from './icons';
 
@@ -12,10 +12,34 @@ function Refs({ rec, fact }: { rec: SpeciesRecord; fact: { sources: string[] } }
   return <sup class="muted"> [{n.join(', ')}]</sup>;
 }
 
+/** One lookalike: its name and danger, and the features that tell the two apart, side by side. */
+function Lookalike({ s, l }: { s: SpeciesRecord; l: SpeciesRecord['lookalikes'][number] }) {
+  return (
+    <div class="card">
+      <h3>
+        {l.slug && bySlug(ALL_SPECIES, l.slug) ? <a href={hrefFor({ name: 'species', slug: l.slug })}>{l.english}</a> : l.english}{' '}
+        <span class={`tag ${tagClass(l.kind)}`}>{KIND_WORDS[l.kind]}</span>
+      </h3>
+      <p class="sci">{l.scientific}</p>
+      <table class="apart">
+        <thead><tr><th></th><th>{s.english}</th><th>{l.english}</th></tr></thead>
+        <tbody>
+          {l.tellApart.map((r) => (
+            <tr key={r.feature}><th>{r.feature}</th><td>{r.thisOne}</td><td>{r.thatOne}<Refs rec={s} fact={r} /></td></tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
 export function SpeciesPage({ slug }: { slug: string }) {
   const s = bySlug(ALL_SPECIES, slug);
   if (!s) return <><h1>Not in the guide</h1><p><a href={hrefFor({ name: 'guide', query: '' })}>Back to the guide</a></p></>;
   const line = (label: string, f: Sourced<string>) => <p><strong>{label}:</strong> {f.value}<Refs rec={s} fact={f} /></p>;
+  const ownEdible = tagClass(s.edibility.value) === 'edible';
+  const first = s.lookalikes.filter((l) => (ownEdible ? isDangerous(l.kind) : l.kind === 'edible'));
+  const rest = s.lookalikes.filter((l) => !first.includes(l));
   return (
     <>
       <div class="photos">
@@ -45,25 +69,17 @@ export function SpeciesPage({ slug }: { slug: string }) {
       <h2>Top points</h2>
       <ul>{s.topPoints.map((t) => <li key={t.value}>{t.value}<Refs rec={s} fact={t} /></li>)}</ul>
 
-      <h2>{tagClass(s.edibility.value) === 'edible' ? 'Dangerous lookalikes' : 'Edible species it is mistaken for'}</h2>
-      {s.noDangerousLookalike && <p>The trusted sites name no dangerous lookalike<Refs rec={s} fact={s.noDangerousLookalike} /></p>}
-      {s.lookalikes.map((l) => (
-        <div class="card" key={l.scientific}>
-          <h3>
-            {l.slug && bySlug(ALL_SPECIES, l.slug) ? <a href={hrefFor({ name: 'species', slug: l.slug })}>{l.english}</a> : l.english}{' '}
-            <span class={`tag ${tagClass(l.kind)}`}>{KIND_WORDS[l.kind]}</span>
-          </h3>
-          <p class="sci">{l.scientific}</p>
-          <table class="apart">
-            <thead><tr><th></th><th>{s.english}</th><th>{l.english}</th></tr></thead>
-            <tbody>
-              {l.tellApart.map((r) => (
-                <tr key={r.feature}><th>{r.feature}</th><td>{r.thisOne}</td><td>{r.thatOne}<Refs rec={s} fact={r} /></td></tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      ))}
+      {/* An edible species: its dangerous lookalikes first, then the rest; a dangerous or inedible one: the edible species
+          it is mistaken for first. Each under its own heading (10/10/2026: the lookalike audit added harmless lookalikes,
+          which a single "Dangerous lookalikes" heading would have called dangerous). */}
+      {(ownEdible || first.length > 0) && (
+        <h2 data-test="lookalikes-first">{ownEdible ? 'Dangerous lookalikes' : 'Edible species it is mistaken for'}</h2>
+      )}
+      {s.noDangerousLookalike && <p data-test="no-dangerous">{siteNames(s, s.noDangerousLookalike.sources)} name no dangerous
+        lookalike<Refs rec={s} fact={s.noDangerousLookalike} /></p>}
+      {first.map((l) => <Lookalike key={l.scientific} s={s} l={l} />)}
+      {rest.length > 0 && <h2 data-test="lookalikes-rest">{ownEdible || first.length > 0 ? 'Other lookalikes' : 'Lookalikes'}</h2>}
+      {rest.map((l) => <Lookalike key={l.scientific} s={s} l={l} />)}
       {s.lookalikes.length > 0 && (
         <p><a class="small-button" href={hrefFor({ name: 'check', slug: s.slug })}>Check a mushroom against this one</a></p>
       )}

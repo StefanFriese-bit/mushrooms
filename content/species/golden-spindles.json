@@ -127,7 +127,27 @@
       ]
     }
   },
-  "lookalikes": [],
+  "lookalikes": [
+    {
+      "scientific": "Clavaria fragilis",
+      "english": "White Spindles",
+      "slug": "white-spindles",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Colour",
+          "thisOne": "Bright yellow",
+          "thatOne": "White; the pointed tips may yellow with age",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-ws",
+            "wp-ws"
+          ]
+        }
+      ]
+    }
+  ],
   "noDangerousLookalike": null,
   "photos": [
     {
@@ -193,7 +213,17 @@
       "id": "wp-s41",
       "title": "Wikipedia — List of species and habitats of principal importance in England",
       "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    },
+    {
+      "id": "fn-ws",
+      "title": "First Nature — Clavaria fragilis, White Spindles",
+      "url": "https://www.first-nature.com/fungi/clavaria-fragilis.php"
+    },
+    {
+      "id": "wp-ws",
+      "title": "Wikipedia — Clavaria fragilis",
+      "url": "https://en.wikipedia.org/wiki/Clavaria_fragilis"
     }
   ],
-  "checked": "2026-10-06"
+  "checked": "2026-10-10"
 }

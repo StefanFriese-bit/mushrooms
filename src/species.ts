@@ -68,3 +68,12 @@ export function searchSpecies(all: SpeciesRecord[], query: string): SpeciesRecor
 export function bySlug(all: SpeciesRecord[], slug: string): SpeciesRecord | undefined {
   return all.find((s) => s.slug === slug);
 }
+
+/** The websites behind a fact, by name — "First Nature and Wild Food UK" — from its sources' titles ("First Nature — …").
+ * "No dangerous lookalike" says WHICH sites name none (10/10/2026): another trusted site may name one that only it names,
+ * and a one-site fact stays off the page, so "the trusted sites" would claim more than is true. */
+export function siteNames(rec: SpeciesRecord, sources: string[]): string {
+  const names = [...new Set(sources.map((id) => rec.sources.find((s) => s.id === id)?.title.split(' — ')[0].trim())
+    .filter((n): n is string => !!n))];
+  return names.length > 1 ? `${names.slice(0, -1).join(', ')} and ${names[names.length - 1]}` : names[0] ?? 'The trusted sites';
+}

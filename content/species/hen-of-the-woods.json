@@ -139,7 +139,51 @@
       ]
     }
   },
-  "lookalikes": [],
+  "lookalikes": [
+    {
+      "scientific": "Meripilus giganteus",
+      "english": "Giant Polypore",
+      "slug": "giant-polypore",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Caps",
+          "thisOne": "Many grey-brown, spoon-shaped caps",
+          "thatOne": "Thicker, tan to brown, fan-shaped caps",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "fn-gp",
+            "wp-gp"
+          ]
+        },
+        {
+          "feature": "Pores",
+          "thisOne": "Small and white",
+          "thatOne": "White, bruising dark brown to black",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "fn-gp",
+            "wp-gp"
+          ]
+        },
+        {
+          "feature": "Tree",
+          "thisOne": "At the base of old oaks",
+          "thatOne": "Mostly beech",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-gp",
+            "wp-gp"
+          ]
+        }
+      ]
+    }
+  ],
   "noDangerousLookalike": {
     "sources": [
       "fn",
@@ -215,7 +259,17 @@
       "id": "wp-s41",
       "title": "Wikipedia — List of species and habitats of principal importance in England",
       "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    },
+    {
+      "id": "fn-gp",
+      "title": "First Nature — Meripilus giganteus, Giant Polypore",
+      "url": "https://www.first-nature.com/fungi/meripilus-giganteus.php"
+    },
+    {
+      "id": "wp-gp",
+      "title": "Wikipedia — Meripilus giganteus",
+      "url": "https://en.wikipedia.org/wiki/Meripilus_giganteus"
     }
   ],
-  "checked": "2026-10-06"
+  "checked": "2026-10-10"
 }

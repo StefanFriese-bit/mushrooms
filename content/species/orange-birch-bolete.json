@@ -158,7 +158,41 @@
       ]
     }
   },
-  "lookalikes": [],
+  "lookalikes": [
+    {
+      "scientific": "Leccinum scabrum",
+      "english": "Brown Birch Bolete",
+      "slug": "brown-birch-bolete",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Cap",
+          "thisOne": "Orange to orange-brown",
+          "thatOne": "Shades of brown",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "fn-bbb",
+            "wf-bbb",
+            "wp-bbb"
+          ]
+        },
+        {
+          "feature": "Cut flesh",
+          "thisOne": "Turns grey, blue-green, then almost black, especially at the stem base",
+          "thatOne": "Stays white or turns slightly pink — never blue",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "fn-bbb",
+            "wf-bbb"
+          ]
+        }
+      ]
+    }
+  ],
   "noDangerousLookalike": {
     "sources": [
       "fn",
@@ -234,7 +268,22 @@
       "id": "wp-s41",
       "title": "Wikipedia — List of species and habitats of principal importance in England",
       "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    },
+    {
+      "id": "fn-bbb",
+      "title": "First Nature — Leccinum scabrum, Brown Birch Bolete",
+      "url": "https://www.first-nature.com/fungi/leccinum-scabrum.php"
+    },
+    {
+      "id": "wf-bbb",
+      "title": "Wild Food UK — Brown Birch Bolete",
+      "url": "https://www.wildfooduk.com/mushroom-guide/brown-birch-bolete/"
+    },
+    {
+      "id": "wp-bbb",
+      "title": "Wikipedia — Leccinum scabrum",
+      "url": "https://en.wikipedia.org/wiki/Leccinum_scabrum"
     }
   ],
-  "checked": "2026-10-06"
+  "checked": "2026-10-10"
 }

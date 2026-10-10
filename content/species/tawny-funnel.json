@@ -128,11 +128,30 @@
       ]
     }
   },
-  "lookalikes": [],
+  "lookalikes": [
+    {
+      "scientific": "Infundibulicybe gibba",
+      "english": "Common Funnel",
+      "slug": null,
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Colour",
+          "thisOne": "Tawny, orange-brown or buff",
+          "thatOne": "Paler: creamy-brown, sometimes pinkish",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-cf"
+          ]
+        }
+      ]
+    }
+  ],
   "noDangerousLookalike": {
     "sources": [
       "wf",
-      "wp"
+      "fn"
     ]
   },
   "photos": [
@@ -199,7 +218,17 @@
       "id": "wp-s41",
       "title": "Wikipedia — List of species and habitats of principal importance in England",
       "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    },
+    {
+      "id": "fn",
+      "title": "First Nature — Lepista flaccida, Tawny Funnel",
+      "url": "https://www.first-nature.com/fungi/lepista-flaccida.php"
+    },
+    {
+      "id": "fn-cf",
+      "title": "First Nature — Clitocybe gibba, Common Funnel",
+      "url": "https://www.first-nature.com/fungi/clitocybe-gibba.php"
     }
   ],
-  "checked": "2026-10-06"
+  "checked": "2026-10-10"
 }

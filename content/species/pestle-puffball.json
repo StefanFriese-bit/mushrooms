@@ -140,13 +140,49 @@
       ]
     }
   },
-  "lookalikes": [],
-  "noDangerousLookalike": {
-    "sources": [
-      "wf",
-      "fn"
-    ]
-  },
+  "lookalikes": [
+    {
+      "scientific": "Lycoperdon perlatum",
+      "english": "Common Puffball",
+      "slug": "common-puffball",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Shape and size",
+          "thisOne": "Tall, like a pestle: a round head 6 to 10 cm across on a thick, stem-like base",
+          "thatOne": "Small and pear-shaped, 3 to 6 cm across",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "fn-cp",
+            "wf-cp",
+            "wp-cp"
+          ]
+        }
+      ]
+    },
+    {
+      "scientific": "Amanita phalloides",
+      "english": "Deathcap",
+      "slug": "deathcap",
+      "kind": "deadly",
+      "tellApart": [
+        {
+          "feature": "Cut top to bottom (a young one)",
+          "thisOne": "White and firm all through",
+          "thatOne": "The outline of a cap, gills and stem",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "fn-d",
+            "wf-cp"
+          ]
+        }
+      ]
+    }
+  ],
   "photos": [
     {
       "file": "photos/pestle-puffball/1.webp",
@@ -216,7 +252,27 @@
       "id": "wp-s41",
       "title": "Wikipedia — List of species and habitats of principal importance in England",
       "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    },
+    {
+      "id": "fn-cp",
+      "title": "First Nature — Lycoperdon perlatum, Common Puffball",
+      "url": "https://www.first-nature.com/fungi/lycoperdon-perlatum.php"
+    },
+    {
+      "id": "wf-cp",
+      "title": "Wild Food UK — Common Puffball",
+      "url": "https://www.wildfooduk.com/mushroom-guide/common-puffball/"
+    },
+    {
+      "id": "wp-cp",
+      "title": "Wikipedia — Lycoperdon perlatum",
+      "url": "https://en.wikipedia.org/wiki/Lycoperdon_perlatum"
+    },
+    {
+      "id": "fn-d",
+      "title": "First Nature — Amanita phalloides, Deathcap",
+      "url": "https://www.first-nature.com/fungi/amanita-phalloides.php"
     }
   ],
-  "checked": "2026-10-06"
+  "checked": "2026-10-10"
 }

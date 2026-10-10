@@ -130,7 +130,39 @@
       ]
     }
   },
-  "lookalikes": [],
+  "lookalikes": [
+    {
+      "scientific": "Cerioporus squamosus",
+      "english": "Dryad's Saddle",
+      "slug": "dryad-s-saddle",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Size",
+          "thisOne": "Cap 2 to 12 cm across",
+          "thatOne": "Much bigger: 10 to 40 cm across",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-dss",
+            "wf-dss",
+            "wp-dss"
+          ]
+        },
+        {
+          "feature": "Stem",
+          "thisOne": "Short and pale",
+          "thatOne": "Short and thick, at one side, black at the base",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-dss",
+            "wf-dss"
+          ]
+        }
+      ]
+    }
+  ],
   "noDangerousLookalike": {
     "sources": [
       "wf",
@@ -206,7 +238,22 @@
       "id": "wp-s41",
       "title": "Wikipedia — List of species and habitats of principal importance in England",
       "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    },
+    {
+      "id": "fn-dss",
+      "title": "First Nature — Cerioporus squamosus, Dryad's Saddle",
+      "url": "https://www.first-nature.com/fungi/polyporus-squamosus.php"
+    },
+    {
+      "id": "wf-dss",
+      "title": "Wild Food UK — Dryad's Saddle",
+      "url": "https://www.wildfooduk.com/mushroom-guide/dryads-saddle/"
+    },
+    {
+      "id": "wp-dss",
+      "title": "Wikipedia — Cerioporus squamosus",
+      "url": "https://en.wikipedia.org/wiki/Cerioporus_squamosus"
     }
   ],
-  "checked": "2026-10-06"
+  "checked": "2026-10-10"
 }

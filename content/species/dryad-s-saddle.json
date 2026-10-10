@@ -150,7 +150,39 @@
       ]
     }
   },
-  "lookalikes": [],
+  "lookalikes": [
+    {
+      "scientific": "Polyporus tuberaster",
+      "english": "Tuberous Polypore",
+      "slug": "tuberous-polypore",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Size",
+          "thisOne": "Much bigger: 10 to 40 cm across",
+          "thatOne": "Cap 2 to 12 cm across",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "fn-tp",
+            "wf-tp"
+          ]
+        },
+        {
+          "feature": "Stem",
+          "thisOne": "Short and thick, at one side, black at the base",
+          "thatOne": "Short and pale",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-tp",
+            "wf-tp"
+          ]
+        }
+      ]
+    }
+  ],
   "noDangerousLookalike": {
     "sources": [
       "fn",
@@ -226,7 +258,17 @@
       "id": "wp-s41",
       "title": "Wikipedia — List of species and habitats of principal importance in England",
       "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    },
+    {
+      "id": "fn-tp",
+      "title": "First Nature — Polyporus tuberaster, Tuberous Polypore",
+      "url": "https://www.first-nature.com/fungi/polyporus-tuberaster.php"
+    },
+    {
+      "id": "wf-tp",
+      "title": "Wild Food UK — Tuberous Polypore",
+      "url": "https://www.wildfooduk.com/mushroom-guide/tuberous-polypore/"
     }
   ],
-  "checked": "2026-10-06"
+  "checked": "2026-10-10"
 }

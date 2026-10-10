@@ -88,7 +88,6 @@
     ],
     "sources": [
       "fn",
-      "wf",
       "wt"
     ]
   },
@@ -155,7 +154,52 @@
       ]
     }
   },
-  "lookalikes": [],
+  "lookalikes": [
+    {
+      "scientific": "Meripilus giganteus",
+      "english": "Giant Polypore",
+      "slug": "giant-polypore",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Colour",
+          "thisOne": "Bright sulphur-yellow to orange, fading to cream with age",
+          "thatOne": "Tan to brown",
+          "sources": [
+            "fn",
+            "wp",
+            "wt",
+            "fn-gp",
+            "wp-gp"
+          ]
+        },
+        {
+          "feature": "Pores",
+          "thisOne": "White to pale yellow",
+          "thatOne": "White, bruising dark brown to black",
+          "sources": [
+            "fn",
+            "wp",
+            "wt",
+            "fn-gp",
+            "wp-gp"
+          ]
+        },
+        {
+          "feature": "Where on the tree",
+          "thisOne": "Shelves out of the trunk, often in tiers",
+          "thatOne": "A rosette at the base of the tree or stump",
+          "sources": [
+            "fn",
+            "wp",
+            "wt",
+            "fn-gp",
+            "wp-gp"
+          ]
+        }
+      ]
+    }
+  ],
   "noDangerousLookalike": {
     "sources": [
       "fn",
@@ -215,7 +259,7 @@
     {
       "id": "wf",
       "title": "Wild Food UK — Chicken of the Woods",
-      "url": "https://www.wildfooduk.com/mushroom-guide/chicken-of-the-woods/"
+      "url": "https://www.wildfooduk.com/mushroom-guide/chicken-of-the-woods-2/"
     },
     {
       "id": "wp",
@@ -236,9 +280,19 @@
       "id": "wp-s41",
       "title": "Wikipedia — List of species and habitats of principal importance in England",
       "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    },
+    {
+      "id": "fn-gp",
+      "title": "First Nature — Meripilus giganteus, Giant Polypore",
+      "url": "https://www.first-nature.com/fungi/meripilus-giganteus.php"
+    },
+    {
+      "id": "wp-gp",
+      "title": "Wikipedia — Meripilus giganteus",
+      "url": "https://en.wikipedia.org/wiki/Meripilus_giganteus"
     }
   ],
-  "checked": "2026-10-06",
+  "checked": "2026-10-10",
   "otherNames": {
     "value": [
       "Chicken Mushroom",

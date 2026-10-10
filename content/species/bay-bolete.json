@@ -149,7 +149,72 @@
       ]
     }
   },
-  "lookalikes": [],
+  "lookalikes": [
+    {
+      "scientific": "Boletus edulis",
+      "english": "Penny Bun / Cep",
+      "slug": "penny-bun-cep",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Net on the stem",
+          "thisOne": "None: a brown, streaky stem",
+          "thatOne": "A fine white net, clearest near the top",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-pbc",
+            "wf-pbc",
+            "wp-pbc",
+            "wt-pbc"
+          ]
+        },
+        {
+          "feature": "Pressed or cut",
+          "thisOne": "Pores turn blue-green at once; the flesh turns slightly blue",
+          "thatOne": "Does not turn blue when cut or bruised",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "fn-pbc",
+            "wp-pbc"
+          ]
+        }
+      ]
+    },
+    {
+      "scientific": "Xerocomellus chrysenteron",
+      "english": "Red Cracking Bolete",
+      "slug": "red-cracking-bolete",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Stem",
+          "thisOne": "Brown and streaky",
+          "thatOne": "Yellow, flushed with red fibres, like a stick of rhubarb",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-rcb",
+            "wp-rcb"
+          ]
+        },
+        {
+          "feature": "Pores when pressed",
+          "thisOne": "Turn blue-green at once",
+          "thatOne": "Slowly bruise blue-green",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "fn-rcb",
+            "wp-rcb"
+          ]
+        }
+      ]
+    }
+  ],
   "noDangerousLookalike": {
     "sources": [
       "fn",
@@ -225,7 +290,37 @@
       "id": "wp-s41",
       "title": "Wikipedia — List of species and habitats of principal importance in England",
       "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    },
+    {
+      "id": "fn-pbc",
+      "title": "First Nature — Boletus edulis, Penny Bun / Cep",
+      "url": "https://www.first-nature.com/fungi/boletus-edulis.php"
+    },
+    {
+      "id": "wf-pbc",
+      "title": "Wild Food UK — Penny Bun / Cep",
+      "url": "https://www.wildfooduk.com/mushroom-guide/cep/"
+    },
+    {
+      "id": "wp-pbc",
+      "title": "Wikipedia — Boletus edulis",
+      "url": "https://en.wikipedia.org/wiki/Boletus_edulis"
+    },
+    {
+      "id": "wt-pbc",
+      "title": "Woodland Trust — Penny Bun / Cep",
+      "url": "https://www.woodlandtrust.org.uk/trees-woods-and-wildlife/fungi-and-lichens/penny-bun/"
+    },
+    {
+      "id": "fn-rcb",
+      "title": "First Nature — Xerocomellus chrysenteron, Red Cracking Bolete",
+      "url": "https://www.first-nature.com/fungi/xerocomellus-chrysenteron.php"
+    },
+    {
+      "id": "wp-rcb",
+      "title": "Wikipedia — Xerocomellus chrysenteron",
+      "url": "https://en.wikipedia.org/wiki/Xerocomellus_chrysenteron"
     }
   ],
-  "checked": "2026-10-06"
+  "checked": "2026-10-10"
 }

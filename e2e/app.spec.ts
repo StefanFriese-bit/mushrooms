@@ -95,6 +95,35 @@ test('a species\' poisonous lookalikes, one at a time: the two side by side, the
   await expect(page.getByRole('heading', { name: 'Funeral Bell', exact: true })).toBeVisible();
 });
 
+test('a species page puts its lookalikes under the right heading, and says which sites name no dangerous one', async ({ page }) => {
+  // An edible species: "Dangerous lookalikes" holds only dangerous ones (or which sites name none); the harmless ones it
+  // is mixed up with stand apart, under "Other lookalikes" (10/10/2026: the lookalike audit added them).
+  await page.goto(`${site.url}#/species/penny-bun-cep`);
+  await expect(page.locator('[data-test=lookalikes-first]')).toHaveText('Dangerous lookalikes');
+  await expect(page.locator('[data-test=no-dangerous]')).toContainText('First Nature and Wild Food UK name no dangerous lookalike');
+  await expect(page.locator('[data-test=lookalikes-rest]')).toHaveText('Other lookalikes');
+  /** The lookalike cards between a heading and the next one. */
+  const cardsUnder = (test: string) => page.evaluate((t) => {
+    const out: string[] = [];
+    let el = document.querySelector(`[data-test=${t}]`)?.nextElementSibling;
+    while (el && el.tagName !== 'H2') { if (el.matches('.card')) out.push(el.querySelector('h3')?.textContent ?? ''); el = el.nextElementSibling; }
+    return out;
+  }, test);
+  expect(await cardsUnder('lookalikes-first')).toEqual([]); // none dangerous: no card under "Dangerous lookalikes"
+  const others = await cardsUnder('lookalikes-rest');
+  expect(others.some((t) => t.includes('Bitter Bolete'))).toBe(true);
+  expect(others.some((t) => t.includes('Bay Bolete'))).toBe(true);
+  // A dangerous species: the edible species it is mistaken for first; a poisonous lookalike of it is not called edible.
+  await page.goto(`${site.url}#/species/deathcap`);
+  await expect(page.locator('[data-test=lookalikes-first]')).toHaveText('Edible species it is mistaken for');
+  const firstCards = await cardsUnder('lookalikes-first');
+  expect(firstCards.length).toBeGreaterThan(0);
+  expect(firstCards.every((t) => /Edible/.test(t))).toBe(true);
+  expect(firstCards.some((t) => /False Death-cap/.test(t))).toBe(false);
+  await expect(page.locator('[data-test=lookalikes-rest]')).toHaveText('Other lookalikes');
+  expect((await cardsUnder('lookalikes-rest')).some((t) => /False Death-cap/.test(t))).toBe(true);
+});
+
 test('no page ever says "safe"', async ({ page }) => {
   for (const slug of ALL.map((s) => s.slug)) {
     await page.goto(`${site.url}#/species/${slug}`);
@@ -214,6 +243,10 @@ test('Identify: "Not sure" never narrows, and an answer can be changed', async (
   await expect(page.getByRole('heading', { name: `Fit every answer (${ALL.length})` })).toBeVisible();
 });
 
+// No offline download here: its "Saving the guide…" bar appears at the top part-way through and can take a tap meant for
+// the page (seen once under a full run's load).
+test.describe('the cap ruler', () => {
+  test.use({ serviceWorkers: 'block' });
 test('How wide is the cap: a centimetre ruler down the right edge; it can be checked against a bank card and keeps the check', async ({ page }, info) => {
   // The questions before it answered "Not sure", as a person could.
   await page.goto(`${site.url}#/identify?underside=unsure&growsOn=unsure&ring=unsure&bag=unsure`);
@@ -258,6 +291,7 @@ test('How wide is the cap: a centimetre ruler down the right edge; it can be che
   await sheet.getByRole('button', { name: 'Forget the check' }).click();
   await expect(note).not.toContainText('Checked against a bank card.');
   await expect(ruler).toHaveAttribute('data-px-per-cm', px.toFixed(2));
+});
 });
 
 test('Check turns a feature red when it fits a lookalike, and never says anything about eating it', async ({ page }) => {

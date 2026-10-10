@@ -146,11 +146,76 @@
       ]
     }
   },
-  "lookalikes": [],
+  "lookalikes": [
+    {
+      "scientific": "Hydnum rufescens",
+      "english": "Terracotta Hedgehog",
+      "slug": "terracotta-hedgehog",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Cap colour",
+          "thisOne": "Creamy white to pale buff or salmon",
+          "thatOne": "Orange-red to terracotta",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "fn-th",
+            "wf-th"
+          ]
+        },
+        {
+          "feature": "Spines at the stem",
+          "thisOne": "Run a little way down the stem",
+          "thatOne": "Stop short of the stem",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "fn-th",
+            "wf-th"
+          ]
+        }
+      ]
+    },
+    {
+      "scientific": "Pseudohydnum gelatinosum",
+      "english": "Jelly Tooth",
+      "slug": "jelly-tooth",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Grows on",
+          "thisOne": "The ground",
+          "thatOne": "Rotting conifer wood",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "fn-jt",
+            "wp-jt"
+          ]
+        },
+        {
+          "feature": "Cap",
+          "thisOne": "Creamy white to pale buff or salmon, finely velvety",
+          "thatOne": "Translucent, greyish-white jelly",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "fn-jt",
+            "wp-jt"
+          ]
+        }
+      ]
+    }
+  ],
   "noDangerousLookalike": {
     "sources": [
       "fn",
-      "wf"
+      "wp"
     ]
   },
   "photos": [
@@ -222,9 +287,29 @@
       "id": "wp-s41",
       "title": "Wikipedia — List of species and habitats of principal importance in England",
       "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    },
+    {
+      "id": "fn-th",
+      "title": "First Nature — Hydnum rufescens, Terracotta Hedgehog",
+      "url": "https://www.first-nature.com/fungi/hydnum-rufescens.php"
+    },
+    {
+      "id": "wf-th",
+      "title": "Wild Food UK — Terracotta Hedgehog",
+      "url": "https://www.wildfooduk.com/mushroom-guide/terracotta-hedgehog/"
+    },
+    {
+      "id": "fn-jt",
+      "title": "First Nature — Pseudohydnum gelatinosum, Jelly Tooth",
+      "url": "https://www.first-nature.com/fungi/pseudohydnum-gelatinosum.php"
+    },
+    {
+      "id": "wp-jt",
+      "title": "Wikipedia — Pseudohydnum gelatinosum",
+      "url": "https://en.wikipedia.org/wiki/Pseudohydnum_gelatinosum"
     }
   ],
-  "checked": "2026-10-06",
+  "checked": "2026-10-10",
   "otherNames": {
     "value": [
       "Hedgehog Fungus"

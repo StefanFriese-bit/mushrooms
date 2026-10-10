@@ -147,7 +147,39 @@
       ]
     }
   },
-  "lookalikes": [],
+  "lookalikes": [
+    {
+      "scientific": "Lycoperdon utriforme",
+      "english": "Mosaic Puffball",
+      "slug": "mosaic-puffball",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Size",
+          "thisOne": "Huge: 10 to 80 cm across",
+          "thatOne": "Smaller: usually 6 to 15 cm across",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-mp",
+            "wp-mp",
+            "wf-mp"
+          ]
+        },
+        {
+          "feature": "Shape",
+          "thisOne": "Round, like a football",
+          "thatOne": "Pear-shaped",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-mp",
+            "wp-mp"
+          ]
+        }
+      ]
+    }
+  ],
   "noDangerousLookalike": {
     "sources": [
       "fn",
@@ -223,7 +255,22 @@
       "id": "wp-s41",
       "title": "Wikipedia — List of species and habitats of principal importance in England",
       "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    },
+    {
+      "id": "fn-mp",
+      "title": "First Nature — Lycoperdon utriforme, Mosaic Puffball",
+      "url": "https://www.first-nature.com/fungi/lycoperdon-utriforme.php"
+    },
+    {
+      "id": "wf-mp",
+      "title": "Wild Food UK — Mosaic Puffball",
+      "url": "https://www.wildfooduk.com/mushroom-guide/mosaic-puffball/"
+    },
+    {
+      "id": "wp-mp",
+      "title": "Wikipedia — Calvatia utriformis",
+      "url": "https://en.wikipedia.org/wiki/Calvatia_utriformis"
     }
   ],
-  "checked": "2026-10-06"
+  "checked": "2026-10-10"
 }

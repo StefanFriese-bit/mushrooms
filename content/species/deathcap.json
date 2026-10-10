@@ -639,6 +639,26 @@
           ]
         }
       ]
+    },
+    {
+      "scientific": "Lycoperdon excipuliforme",
+      "english": "Pestle Puffball",
+      "slug": "pestle-puffball",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Cut top to bottom (a young one)",
+          "thisOne": "The outline of a cap, gills and stem",
+          "thatOne": "White and firm all through",
+          "sources": [
+            "fn",
+            "wf-cp",
+            "fn-pp",
+            "wf-pp",
+            "wp-pp"
+          ]
+        }
+      ]
     }
   ],
   "noDangerousLookalike": null,
@@ -906,7 +926,22 @@
       "id": "wp-s41",
       "title": "Wikipedia — List of species and habitats of principal importance in England",
       "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    },
+    {
+      "id": "fn-pp",
+      "title": "First Nature — Lycoperdon excipuliforme, Pestle Puffball",
+      "url": "https://www.first-nature.com/fungi/lycoperdon-excipuliforme.php"
+    },
+    {
+      "id": "wf-pp",
+      "title": "Wild Food UK — Pestle Puffball",
+      "url": "https://www.wildfooduk.com/mushroom-guide/pestle-puffball/"
+    },
+    {
+      "id": "wp-pp",
+      "title": "Wikipedia — Lycoperdon excipuliforme",
+      "url": "https://en.wikipedia.org/wiki/Lycoperdon_excipuliforme"
     }
   ],
-  "checked": "2026-10-06"
+  "checked": "2026-10-10"
 }

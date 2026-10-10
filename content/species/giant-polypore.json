@@ -126,7 +126,95 @@
       ]
     }
   },
-  "lookalikes": [],
+  "lookalikes": [
+    {
+      "scientific": "Grifola frondosa",
+      "english": "Hen of the Woods",
+      "slug": "hen-of-the-woods",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Caps",
+          "thisOne": "Thicker, tan to brown, fan-shaped caps",
+          "thatOne": "Many grey-brown, spoon-shaped caps",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-hotw",
+            "wf-hotw",
+            "wp-hotw"
+          ]
+        },
+        {
+          "feature": "Pores",
+          "thisOne": "White, bruising dark brown to black",
+          "thatOne": "Small and white",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-hotw",
+            "wf-hotw",
+            "wp-hotw"
+          ]
+        },
+        {
+          "feature": "Tree",
+          "thisOne": "Mostly beech",
+          "thatOne": "At the base of old oaks",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-hotw",
+            "wf-hotw"
+          ]
+        }
+      ]
+    },
+    {
+      "scientific": "Laetiporus sulphureus",
+      "english": "Chicken of the Woods",
+      "slug": "chicken-of-the-woods",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Colour",
+          "thisOne": "Tan to brown",
+          "thatOne": "Bright sulphur-yellow to orange, fading to cream with age",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-cotw",
+            "wp-cotw",
+            "wt-cotw"
+          ]
+        },
+        {
+          "feature": "Pores",
+          "thisOne": "White, bruising dark brown to black",
+          "thatOne": "White to pale yellow",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-cotw",
+            "wp-cotw",
+            "wt-cotw"
+          ]
+        },
+        {
+          "feature": "Where on the tree",
+          "thisOne": "A rosette at the base of the tree or stump",
+          "thatOne": "Shelves out of the trunk, often in tiers",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-cotw",
+            "wp-cotw",
+            "wt-cotw"
+          ]
+        }
+      ]
+    }
+  ],
   "noDangerousLookalike": {
     "sources": [
       "fn",
@@ -197,7 +285,37 @@
       "id": "wp-s41",
       "title": "Wikipedia — List of species and habitats of principal importance in England",
       "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    },
+    {
+      "id": "fn-hotw",
+      "title": "First Nature — Grifola frondosa, Hen of the Woods",
+      "url": "https://www.first-nature.com/fungi/grifola-frondosa.php"
+    },
+    {
+      "id": "wf-hotw",
+      "title": "Wild Food UK — Hen of the Woods",
+      "url": "https://www.wildfooduk.com/mushroom-guide/hen-of-the-woods/"
+    },
+    {
+      "id": "wp-hotw",
+      "title": "Wikipedia — Grifola frondosa",
+      "url": "https://en.wikipedia.org/wiki/Grifola_frondosa"
+    },
+    {
+      "id": "fn-cotw",
+      "title": "First Nature — Laetiporus sulphureus, Chicken of the Woods",
+      "url": "https://www.first-nature.com/fungi/laetiporus-sulphureus.php"
+    },
+    {
+      "id": "wp-cotw",
+      "title": "Wikipedia — Laetiporus sulphureus",
+      "url": "https://en.wikipedia.org/wiki/Laetiporus_sulphureus"
+    },
+    {
+      "id": "wt-cotw",
+      "title": "Woodland Trust — Chicken of the Woods",
+      "url": "https://www.woodlandtrust.org.uk/trees-woods-and-wildlife/fungi-and-lichens/chicken-of-the-woods/"
     }
   ],
-  "checked": "2026-10-06"
+  "checked": "2026-10-10"
 }

@@ -207,6 +207,39 @@
           ]
         }
       ]
+    },
+    {
+      "scientific": "Suillus luteus",
+      "english": "Slippery Jack",
+      "slug": "slippery-jack",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Tree",
+          "thisOne": "Only under larch",
+          "thatOne": "Only under pine",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "fn-sj",
+            "wf-sj"
+          ]
+        },
+        {
+          "feature": "Cap",
+          "thisOne": "Bright yellow to rusty-orange, slimy",
+          "thatOne": "Chestnut to dark brown, very slimy when wet",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "fn-sj",
+            "wf-sj",
+            "wp-sj"
+          ]
+        }
+      ]
     }
   ],
   "noDangerousLookalike": {
@@ -309,7 +342,22 @@
       "id": "wp-s41",
       "title": "Wikipedia — List of species and habitats of principal importance in England",
       "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    },
+    {
+      "id": "fn-sj",
+      "title": "First Nature — Suillus luteus, Slippery Jack",
+      "url": "https://www.first-nature.com/fungi/suillus-luteus.php"
+    },
+    {
+      "id": "wf-sj",
+      "title": "Wild Food UK — Slippery Jack",
+      "url": "https://www.wildfooduk.com/mushroom-guide/slippery-jack-2/"
+    },
+    {
+      "id": "wp-sj",
+      "title": "Wikipedia — Suillus luteus",
+      "url": "https://en.wikipedia.org/wiki/Suillus_luteus"
     }
   ],
-  "checked": "2026-10-06"
+  "checked": "2026-10-10"
 }

@@ -188,6 +188,37 @@
           ]
         }
       ]
+    },
+    {
+      "scientific": "Calvatia gigantea",
+      "english": "Giant Puffball",
+      "slug": "giant-puffball",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Size",
+          "thisOne": "Usually 6 to 15 cm across",
+          "thatOne": "Huge: 10 to 80 cm across",
+          "sources": [
+            "fn",
+            "wp",
+            "wf",
+            "fn-gp",
+            "wp-gp"
+          ]
+        },
+        {
+          "feature": "Shape",
+          "thisOne": "Pear-shaped",
+          "thatOne": "Round, like a football",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-gp",
+            "wf-gp"
+          ]
+        }
+      ]
     }
   ],
   "noDangerousLookalike": null,
@@ -300,7 +331,22 @@
       "id": "wp-s41",
       "title": "Wikipedia — List of species and habitats of principal importance in England",
       "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    },
+    {
+      "id": "fn-gp",
+      "title": "First Nature — Calvatia gigantea, Giant Puffball",
+      "url": "https://www.first-nature.com/fungi/calvatia-gigantea.php"
+    },
+    {
+      "id": "wf-gp",
+      "title": "Wild Food UK — Giant Puffball",
+      "url": "https://www.wildfooduk.com/mushroom-guide/giant-puffball/"
+    },
+    {
+      "id": "wp-gp",
+      "title": "Wikipedia — Calvatia gigantea",
+      "url": "https://en.wikipedia.org/wiki/Calvatia_gigantea"
     }
   ],
-  "checked": "2026-10-06"
+  "checked": "2026-10-10"
 }

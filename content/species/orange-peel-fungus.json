@@ -132,11 +132,41 @@
       ]
     }
   },
-  "lookalikes": [],
+  "lookalikes": [
+    {
+      "scientific": "Sarcoscypha austriaca",
+      "english": "Scarlet Elfcup",
+      "slug": null,
+      "kind": "not-edible",
+      "tellApart": [
+        {
+          "feature": "Colour",
+          "thisOne": "Bright orange",
+          "thatOne": "Bright red: scarlet",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "wf-se"
+          ]
+        },
+        {
+          "feature": "Grows on",
+          "thisOne": "Bare, disturbed soil and gravel",
+          "thatOne": "Dead wood — twigs and branches, often under leaf litter or moss",
+          "sources": [
+            "fn",
+            "wf",
+            "wf-se"
+          ]
+        }
+      ]
+    }
+  ],
   "noDangerousLookalike": {
     "sources": [
       "wf",
-      "wp"
+      "fn"
     ]
   },
   "photos": [
@@ -208,7 +238,12 @@
       "id": "wp-s41",
       "title": "Wikipedia — List of species and habitats of principal importance in England",
       "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    },
+    {
+      "id": "wf-se",
+      "title": "Wild Food UK — Scarlet Elfcup",
+      "url": "https://www.wildfooduk.com/mushroom-guide/scarlet-elfcup/"
     }
   ],
-  "checked": "2026-10-06"
+  "checked": "2026-10-10"
 }

@@ -166,12 +166,71 @@
       ]
     }
   },
-  "lookalikes": [],
+  "lookalikes": [
+    {
+      "scientific": "Tylopilus felleus",
+      "english": "Bitter Bolete",
+      "slug": null,
+      "kind": "not-edible",
+      "tellApart": [
+        {
+          "feature": "Net on the stem",
+          "thisOne": "A whitish net, lighter than the stem",
+          "thatOne": "A dark net, darker than the stem",
+          "sources": [
+            "wf",
+            "wp"
+          ]
+        },
+        {
+          "feature": "Pores",
+          "thisOne": "White when young, then yellow and olive-green",
+          "thatOne": "Pinkish",
+          "sources": [
+            "fn",
+            "wp"
+          ]
+        }
+      ]
+    },
+    {
+      "scientific": "Imleria badia",
+      "english": "Bay Bolete",
+      "slug": "bay-bolete",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Net on the stem",
+          "thisOne": "A fine white net, clearest near the top",
+          "thatOne": "None: a brown, streaky stem",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "wt",
+            "fn-bb",
+            "wf-bb"
+          ]
+        },
+        {
+          "feature": "Pressed or cut",
+          "thisOne": "Does not turn blue when cut or bruised",
+          "thatOne": "Pores turn blue-green at once; the flesh turns slightly blue",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-bb",
+            "wf-bb",
+            "wp-bb"
+          ]
+        }
+      ]
+    }
+  ],
   "noDangerousLookalike": {
     "sources": [
       "fn",
-      "wf",
-      "wp"
+      "wf"
     ]
   },
   "photos": [
@@ -248,9 +307,24 @@
       "id": "wp-s41",
       "title": "Wikipedia — List of species and habitats of principal importance in England",
       "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    },
+    {
+      "id": "fn-bb",
+      "title": "First Nature — Imleria badia, Bay Bolete",
+      "url": "https://www.first-nature.com/fungi/imleria-badia.php"
+    },
+    {
+      "id": "wf-bb",
+      "title": "Wild Food UK — Bay Bolete",
+      "url": "https://www.wildfooduk.com/mushroom-guide/bay-bolete-boletus-imleria-badia/"
+    },
+    {
+      "id": "wp-bb",
+      "title": "Wikipedia — Imleria badia",
+      "url": "https://en.wikipedia.org/wiki/Imleria_badia"
     }
   ],
-  "checked": "2026-10-06",
+  "checked": "2026-10-10",
   "otherNames": {
     "value": [
       "King Bolete",
