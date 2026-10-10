@@ -5,6 +5,7 @@ import { followSpot, shrinkPhoto, takeHandOver } from '../finds/device';
 import { sayAccuracy } from '../finds/geo';
 import { FindsMap } from './finds-map';
 import { Icon } from './icons';
+import { BackLink } from './back-link';
 
 // Save a location (Stefan 10/10/2026): the exact spot where he is standing — the GPS position, getting better while
 // the screen is open, or a pin he places by hand — with a description and a photo, both optional. Saves with no
@@ -72,6 +73,7 @@ export function FindNew() {
   };
   return (
     <>
+      <BackLink href={hrefFor({ name: 'map' })} label="Map" />
       <h1>Save a location</h1>
       <section class="card">
         <h2>Where you are</h2>

@@ -119,6 +119,11 @@ a.row:active { background: var(--subtle); }
 .tag.poisonous { color: var(--poison); background: var(--poison-bg); border-color: var(--poison-line); }
 .tag.edible { color: var(--edible); background: var(--edible-bg); border-color: var(--edible-line); }
 .tag.plain { color: var(--plain); background: var(--plain-bg); border-color: var(--plain-line); }
+/* The way back up, at the top of a page (src/screens/back-link.tsx): big enough for a thumb. */
+.back-link { display: inline-flex; align-items: center; gap: 2px; min-height: 40px; margin: -4px 0 0 -6px; padding: 6px 10px 6px 4px;
+  border-radius: var(--radius); color: var(--accent-text); font-size: 16px; font-weight: 600; text-decoration: none; }
+.back-link:active { background: var(--accent-weak); }
+.back-link + h1, .back-link + .title-row, .back-link + .card { margin-top: 2px; }
 .title-row { display: flex; align-items: center; justify-content: space-between; gap: 8px 12px; flex-wrap: wrap; margin: 6px 0 10px; }
 .title-row h1 { margin: 0; }
 .optional { margin-left: 8px; font-size: 13px; font-weight: 500; color: var(--faint); }

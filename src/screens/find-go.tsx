@@ -5,6 +5,7 @@ import { followHere } from '../finds/device';
 import { appleMapsLink, bearingDeg, compassWord, distanceM, isThere, sayAccuracy, sayDistance, type Fix } from '../finds/geo';
 import { allowCompass, arrowTurn, followHeading, type Heading } from '../finds/compass';
 import { FindsMap } from './finds-map';
+import { BackLink } from './back-link';
 import { findLabel, useNames } from './finds';
 
 // Take me there (spec 7): back to a saved location, the way a geocaching app does it: how far, which way (an arrow that follows the phone's
@@ -50,7 +51,7 @@ export function FindGo({ id }: { id: string }) {
   if (find === null) return <><h1>Not found</h1><p>That location is not on this phone. <a href={hrefFor({ name: 'finds' })}>Back to the map</a></p></>;
   const label = findLabel(find, names);
   if (!find.spot) {
-    return <><h1>Back to: {label}</h1><p>No position was saved with this location, so there is nothing to walk back to.</p>
+    return <><BackLink href={hrefFor({ name: 'finds' })} label="Map" /><h1>Back to: {label}</h1><p>No position was saved with this location, so there is nothing to walk back to.</p>
       <p><a href={hrefFor({ name: 'find', id: find.id })}>Back to the location</a></p></>;
   }
   const spot = find.spot;
@@ -69,6 +70,7 @@ export function FindGo({ id }: { id: string }) {
 
   return (
     <>
+      <BackLink href={hrefFor({ name: 'finds' })} label="Map" />
       <h1>Back to: {label}</h1>
       <div class="go" data-test="find-go">
         <svg class="go-dial" viewBox="-100 -100 200 200" role="img"

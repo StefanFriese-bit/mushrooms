@@ -6,6 +6,7 @@ import { speciesNames } from '../species-names';
 import { FindsMap, type Pin } from './finds-map';
 import { BackupSection, useBackup } from './backup';
 import { Icon } from './icons';
+import { BackLink } from './back-link';
 import { findLabel } from '../finds/labels';
 import { ALL, NO_FILTER, filterFinds, monthName, speciesChoices, type FindFilter } from '../finds/filters';
 
@@ -54,6 +55,7 @@ export function Finds() {
   })), [shown, names]);
   return (
     <>
+      <BackLink href={hrefFor({ name: 'map' })} label="Map" />
       <div class="title-row">
         <h1>View map</h1>
         <a class="small-button" href={hrefFor({ name: 'find-new' })}><Icon name="plus" size={18} />Save a location</a>

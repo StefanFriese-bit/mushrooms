@@ -13,6 +13,7 @@ const SHAPES = {
   home: <><path d="M3.5 10.6 12 3.8l8.5 6.8" /><path d="M5.6 9.2V20h12.8V9.2" /><path d="M10 20v-5.4h4V20" /></>,
   info: <><circle cx="12" cy="12" r="9" /><path d="M12 10.8v5.6M12 7.6v.1" /></>,
   chevron: <path d="m9.5 6 6 6-6 6" />,
+  back: <path d="m14.5 6-6 6 6 6" />,
   navigate: <path d="M12 3.2 19.2 20 12 16.2 4.8 20z" />,
   camera: <><path d="M4 8.5A1.5 1.5 0 0 1 5.5 7h2.2l1.6-2.2h5.4L16.3 7h2.2A1.5 1.5 0 0 1 20 8.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 17.5z" /><circle cx="12" cy="12.8" r="3.4" /><path d="M12 11.1v3.4M10.3 12.8h3.4" /></>,
   plus: <path d="M12 5v14M5 12h14" />,

@@ -9,6 +9,7 @@ import { FindsMap } from './finds-map';
 import { findLabel, sayWhen, useNames } from './finds';
 import { wasJustSaved } from './find-new';
 import { Icon } from './icons';
+import { BackLink } from './back-link';
 
 // One saved location (spec 7): its photos, when it was saved, where (with "Take me there" — an arrow and the
 // distance, no signal needed — and Apple Maps' walking directions), its OS grid reference and Plus Code to copy or
@@ -72,6 +73,7 @@ export function FindPage({ id }: { id: string }) {
   const label = findLabel(find, names);
   return (
     <>
+      <BackLink href={hrefFor({ name: 'finds' })} label="Map" />
       {justSaved && <p class="card saved-note" role="status" data-test="saved-note"><Icon name="check" size={20} />Location saved on this phone.</p>}
       {srcs.length > 0 && (
         <div class="photos">

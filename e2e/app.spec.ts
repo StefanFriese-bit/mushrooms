@@ -228,6 +228,9 @@ test.describe('Map', () => {
     await page.getByRole('button', { name: 'Save location' }).click();
     await expect(page.locator('[data-test=saved-note]')).toHaveText('Location saved on this phone.');
     await expect(page.getByRole('heading', { name: 'Chanterelles, a dozen', exact: true })).toBeVisible();
+    // The date and time are saved by themselves (Stefan 10/10/2026), shown in the phone's own time.
+    const today = new Date().toLocaleDateString('en-GB', { dateStyle: 'medium' });
+    await expect(page.getByText(new RegExp(`^Saved ${today}(,| at) \\d{2}:\\d{2} · within 7 m$`))).toBeVisible();
     await expect(page.getByText('under the big beech by the stream')).toBeVisible();
     await expect(page.locator('[data-test=take-me-there]')).toHaveAttribute('href', 'https://maps.apple.com/?daddr=51.65880,0.04660&dirflg=w');
     await expect(page.locator('.photos img')).toHaveCount(1);
@@ -239,12 +242,24 @@ test.describe('Map', () => {
     await page.locator('[data-test=view-map]').click();
     await expect(page.locator('[data-test=find-row]')).toHaveCount(1);
     await expect(page.locator('[data-test=find-row] .row-title')).toHaveText('Chanterelles, a dozen');
+    await expect(page.locator('[data-test=find-row] .note')).toContainText(today);
     await page.locator('[data-test=map-pin]').click();
     const go = page.locator('.pin-pop-go');
     await expect(go).toHaveText('Take me there');
     await go.click();
     await expect(page.getByRole('heading', { name: 'Back to: Chanterelles, a dozen' })).toBeVisible();
     await expect(page.locator('[data-test=go-distance]')).toHaveText('You are there', { timeout: 15000 });
+    // One tap back to the map (Stefan 10/10/2026: "how do I go back to just the map"): from the walk back, from the
+    // location's own page, and from the map up to the Map's two choices.
+    await page.locator('[data-test=back-link]').click();
+    await expect(page.getByRole('heading', { name: 'View map' })).toBeVisible();
+    await expect(page.locator('[data-test=find-row]')).toHaveCount(1);
+    await page.locator('[data-test=find-row] .row-main').click();
+    await expect(page.getByRole('heading', { name: 'Chanterelles, a dozen', exact: true })).toBeVisible();
+    await page.locator('[data-test=back-link]').click();
+    await expect(page.getByRole('heading', { name: 'View map' })).toBeVisible();
+    await page.locator('[data-test=back-link]').click();
+    await expect(page.locator('[data-test=save-location]')).toBeVisible();
     // Spec 9: his locations go nowhere — the only addresses are the app's own and the map's.
     expect([...hosts].filter((h) => h !== new URL(site.url).host && h !== 'tiles.openfreemap.org')).toEqual([]);
   });
