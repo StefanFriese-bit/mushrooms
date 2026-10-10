@@ -277,8 +277,12 @@ a "find", so older backups restore.
   site alone names a dangerous lookalike (Penny Bun, Tawny Funnel, Wood Hedgehog, Orange Peel Fungus, Glistening Inkcap)
   it stays off the page under the two-site rule, so "the trusted sites" would have claimed too much. A species page
   lists the dangerous lookalikes (or, for a dangerous species, the edible ones it is mistaken for) first, the rest under
-  "Other lookalikes". Next: the 57 edible species that already list lookalikes, for ones their sites name and the page
-  lacks.
+  "Other lookalikes". The 57 edible species that already listed lookalikes were then re-read the same way and gained
+  23 more (e.g. Velvet Shank — Sheathed Woodtuft, Stinkhorn — Morel and Dune Stinkhorn, Trumpet Chanterelle —
+  Chanterelle, Wood Blewit — Violet Webcap), so all 91 edible species are done. A lookalike without a page of its own
+  goes in only when two sites say whether it is eaten, or one site advises against eating it. Left off although two
+  sites name them: species with no page and no stated edibility, and Caesar's Mushroom, which First Nature says has not
+  been recorded in Britain or Ireland.
 - **Identify:** simple questions one at a time, each with drawings; the list narrows; "not sure" is always allowed.
   On "How wide is the cap?" a centimetre ruler runs down the right edge of the screen (Stefan 10/10/2026: "I doubt
   they'll have a measuring stick in the wild"): 0 at the top, 5 and 10 cm — where the answers change — in blue. A web

@@ -337,6 +337,38 @@
           ]
         }
       ]
+    },
+    {
+      "scientific": "Agaricus sylvicola",
+      "english": "Wood Mushroom",
+      "slug": "wood-mushroom",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Where it grows",
+          "thisOne": "Grassland: meadows, pasture and verges, often in large rings",
+          "thatOne": "In woodland, usually in troops",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "fn-wm",
+            "wf-wm"
+          ]
+        },
+        {
+          "feature": "Size",
+          "thisOne": "Bigger: cap 8–20 cm",
+          "thatOne": "Cap 6–14 cm",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "fn-wm",
+            "wp-wm"
+          ]
+        }
+      ]
     }
   ],
   "noDangerousLookalike": null,
@@ -459,6 +491,21 @@
       "id": "wp-fm",
       "title": "Wikipedia — Agaricus campestris",
       "url": "https://en.wikipedia.org/wiki/Agaricus_campestris"
+    },
+    {
+      "id": "fn-wm",
+      "title": "First Nature — Agaricus sylvicola, Wood Mushroom",
+      "url": "https://www.first-nature.com/fungi/agaricus-sylvicola.php"
+    },
+    {
+      "id": "wf-wm",
+      "title": "Wild Food UK — Wood Mushroom",
+      "url": "https://www.wildfooduk.com/mushroom-guide/wood-mushroom/"
+    },
+    {
+      "id": "wp-wm",
+      "title": "Wikipedia — Agaricus sylvicola",
+      "url": "https://en.wikipedia.org/wiki/Agaricus_sylvicola"
     }
   ],
   "checked": "2026-10-10"

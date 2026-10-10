@@ -288,6 +288,38 @@
           ]
         }
       ]
+    },
+    {
+      "scientific": "Apioperdon pyriforme",
+      "english": "Stump Puffball",
+      "slug": "stump-puffball",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Where it grows",
+          "thisOne": "On the ground: woodland leaf litter, pasture and heaths",
+          "thatOne": "In dense clusters on rotting stumps and buried wood",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-sp",
+            "wf-sp"
+          ]
+        },
+        {
+          "feature": "Size",
+          "thisOne": "3–6 cm across",
+          "thatOne": "1.5–4 cm across",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "fn-sp",
+            "wf-sp",
+            "wp-sp"
+          ]
+        }
+      ]
     }
   ],
   "noDangerousLookalike": null,
@@ -430,6 +462,21 @@
       "id": "wp-pp",
       "title": "Wikipedia — Lycoperdon excipuliforme",
       "url": "https://en.wikipedia.org/wiki/Lycoperdon_excipuliforme"
+    },
+    {
+      "id": "fn-sp",
+      "title": "First Nature — Apioperdon pyriforme, Stump Puffball",
+      "url": "https://www.first-nature.com/fungi/lycoperdon-pyriforme.php"
+    },
+    {
+      "id": "wf-sp",
+      "title": "Wild Food UK — Stump Puffball",
+      "url": "https://www.wildfooduk.com/mushroom-guide/stump-puffball/"
+    },
+    {
+      "id": "wp-sp",
+      "title": "Wikipedia — Apioperdon pyriforme",
+      "url": "https://en.wikipedia.org/wiki/Apioperdon_pyriforme"
     }
   ],
   "checked": "2026-10-10"

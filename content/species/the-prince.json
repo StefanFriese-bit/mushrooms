@@ -262,6 +262,26 @@
           ]
         }
       ]
+    },
+    {
+      "scientific": "Chlorophyllum rhacodes",
+      "english": "Shaggy Parasol",
+      "slug": "shaggy-parasol",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Spore print",
+          "thisOne": "Dark brown or purplish-brown",
+          "thatOne": "White to pale cream",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-sp",
+            "wt-sp",
+            "wp-sp"
+          ]
+        }
+      ]
     }
   ],
   "noDangerousLookalike": null,
@@ -374,7 +394,22 @@
       "id": "wp-s41",
       "title": "Wikipedia — List of species and habitats of principal importance in England",
       "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    },
+    {
+      "id": "fn-sp",
+      "title": "First Nature — Chlorophyllum rhacodes, Shaggy Parasol",
+      "url": "https://www.first-nature.com/fungi/chlorophyllum-rhacodes.php"
+    },
+    {
+      "id": "wt-sp",
+      "title": "Woodland Trust — Shaggy Parasol",
+      "url": "https://www.woodlandtrust.org.uk/trees-woods-and-wildlife/fungi-and-lichens/shaggy-parasol/"
+    },
+    {
+      "id": "wp-sp",
+      "title": "Wikipedia — Chlorophyllum rhacodes",
+      "url": "https://en.wikipedia.org/wiki/Chlorophyllum_rhacodes"
     }
   ],
-  "checked": "2026-10-06"
+  "checked": "2026-10-10"
 }

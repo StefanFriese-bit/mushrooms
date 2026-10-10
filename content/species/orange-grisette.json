@@ -158,6 +158,35 @@
           ]
         }
       ]
+    },
+    {
+      "scientific": "Amanita fulva",
+      "english": "Tawny Grisette",
+      "slug": "tawny-grisette",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Stem",
+          "thisOne": "Pale orange, with a zig-zag snakeskin pattern",
+          "thatOne": "Plain and smooth",
+          "sources": [
+            "fn",
+            "wf"
+          ]
+        },
+        {
+          "feature": "Cap",
+          "thisOne": "Orange to yellow-orange, darker in the centre",
+          "thatOne": "Tawny orange-brown",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "fn-tg",
+            "wp-tg"
+          ]
+        }
+      ]
     }
   ],
   "noDangerousLookalike": null,
@@ -250,7 +279,17 @@
       "id": "wp-s41",
       "title": "Wikipedia — List of species and habitats of principal importance in England",
       "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    },
+    {
+      "id": "fn-tg",
+      "title": "First Nature — Amanita fulva, Tawny Grisette",
+      "url": "https://www.first-nature.com/fungi/amanita-fulva.php"
+    },
+    {
+      "id": "wp-tg",
+      "title": "Wikipedia — Amanita fulva",
+      "url": "https://en.wikipedia.org/wiki/Amanita_fulva"
     }
   ],
-  "checked": "2026-10-06"
+  "checked": "2026-10-10"
 }

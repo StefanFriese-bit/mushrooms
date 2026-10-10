@@ -221,6 +221,38 @@
           ]
         }
       ]
+    },
+    {
+      "scientific": "Volvopluteus gloiocephalus",
+      "english": "Stubble Rosegill",
+      "slug": "stubble-rosegill",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Cap",
+          "thisOne": "Covered in long, silky fibres",
+          "thatOne": "Smooth, sticky when wet",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "fn-sr",
+            "wf-sr"
+          ]
+        },
+        {
+          "feature": "Where it grows",
+          "thisOne": "On wood: dead or damaged broadleaved trees",
+          "thatOne": "On the ground: fields, grassland and rich soil",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "fn-sr",
+            "wf-sr"
+          ]
+        }
+      ]
     }
   ],
   "noDangerousLookalike": null,
@@ -328,7 +360,17 @@
       "id": "wp-s41",
       "title": "Wikipedia — List of species and habitats of principal importance in England",
       "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    },
+    {
+      "id": "fn-sr",
+      "title": "First Nature — Volvopluteus gloiocephalus, Stubble Rosegill",
+      "url": "https://www.first-nature.com/fungi/volvopluteus-gloiocephalus.php"
+    },
+    {
+      "id": "wf-sr",
+      "title": "Wild Food UK — Stubble Rosegill",
+      "url": "https://www.wildfooduk.com/mushroom-guide/stubble-rosegill/"
     }
   ],
-  "checked": "2026-10-06"
+  "checked": "2026-10-10"
 }

@@ -134,7 +134,52 @@
       ]
     }
   },
-  "lookalikes": [],
+  "lookalikes": [
+    {
+      "scientific": "Collybia nuda",
+      "english": "Wood Blewit",
+      "slug": "wood-blewit",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Spore print",
+          "thisOne": "Rusty brown",
+          "thatOne": "Pale pinkish-buff",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-wb",
+            "wf-wb",
+            "wp-wb"
+          ]
+        },
+        {
+          "feature": "Colour",
+          "thisOne": "Deep violet-purple all over: cap, gills, stem and flesh",
+          "thatOne": "Lilac-tinged cap, fading to tan with age",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-wb",
+            "wf-wb",
+            "wp-wb",
+            "wt-wb"
+          ]
+        },
+        {
+          "feature": "Stem",
+          "thisOne": "A cobweb-like veil when young",
+          "thatOne": "No cobweb-like veil threads",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-wb",
+            "wp-wb"
+          ]
+        }
+      ]
+    }
+  ],
   "noDangerousLookalike": null,
   "photos": [
     {
@@ -200,7 +245,27 @@
       "id": "wp-s41",
       "title": "Wikipedia — List of species and habitats of principal importance in England",
       "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    },
+    {
+      "id": "fn-wb",
+      "title": "First Nature — Collybia nuda, Wood Blewit",
+      "url": "https://www.first-nature.com/fungi/lepista-nuda.php"
+    },
+    {
+      "id": "wf-wb",
+      "title": "Wild Food UK — Wood Blewit",
+      "url": "https://www.wildfooduk.com/mushroom-guide/wood-blewit/"
+    },
+    {
+      "id": "wp-wb",
+      "title": "Wikipedia — Collybia nuda",
+      "url": "https://en.wikipedia.org/wiki/Collybia_nuda"
+    },
+    {
+      "id": "wt-wb",
+      "title": "Woodland Trust — Wood Blewit",
+      "url": "https://www.woodlandtrust.org.uk/trees-woods-and-wildlife/fungi-and-lichens/wood-blewit/"
     }
   ],
-  "checked": "2026-10-06"
+  "checked": "2026-10-10"
 }

@@ -72,9 +72,11 @@ test('a species page shows its edibility, lookalikes and photo credits, and a lo
 
 test('a species\' poisonous lookalikes, one at a time: the two side by side, then the points that tell them apart', async ({ page }) => {
   await page.goto(`${site.url}#/species/velvet-shank`);
+  // The button counts only what its name says: two poisonous lookalikes, and Sheathed Woodtuft, which is edible.
+  await expect(page.locator('[data-test=lookalikes-button]')).toHaveText('Poisonous lookalikes (2) and 1 other');
   await page.locator('[data-test=lookalikes-button]').click();
   await expect(page.getByRole('heading', { name: 'Poisonous lookalikes' })).toBeVisible();
-  await expect(page.locator('[data-test=lookalike-count]')).toHaveText('Velvet Shank · 1 of 2');
+  await expect(page.locator('[data-test=lookalike-count]')).toHaveText('Velvet Shank · 1 of 3');
   const pair = page.locator('[data-test=pair]');
   await expect(pair).toContainText('Funeral Bell'); // the deadly one first
   await expect(pair).toContainText('Deadly');
@@ -82,9 +84,17 @@ test('a species\' poisonous lookalikes, one at a time: the two side by side, the
   await expect(rows.first()).toContainText('Ring'); // a ring settles it fastest, so it comes first
   await expect(rows.first().locator('.apart-line.danger')).toContainText('A small, fragile ring');
   await page.locator('[data-test=next-lookalike]').click();
-  await expect(page.locator('[data-test=lookalike-count]')).toHaveText('Velvet Shank · 2 of 2');
+  await expect(page.locator('[data-test=lookalike-count]')).toHaveText('Velvet Shank · 2 of 3');
   await expect(pair).toContainText('Common Rustgill');
+  await expect(page.getByRole('heading', { name: 'Poisonous lookalikes' })).toBeVisible();
+  await page.locator('[data-test=next-lookalike]').click();
+  await expect(page.locator('[data-test=lookalike-count]')).toHaveText('Velvet Shank · 3 of 3');
+  await expect(pair).toContainText('Sheathed Woodtuft');
+  await expect(page.getByRole('heading', { name: 'Other lookalikes' })).toBeVisible(); // a harmless one is never called poisonous
+  await expect(page.getByRole('heading', { name: 'Poisonous lookalikes' })).toHaveCount(0);
   await expect(page.locator('[data-test=next-lookalike]')).toHaveCount(0);
+  await page.getByRole('link', { name: 'Previous' }).click();
+  await expect(pair).toContainText('Common Rustgill');
   await page.getByRole('link', { name: 'Previous' }).click();
   await expect(pair).toContainText('Funeral Bell');
   await pair.getByRole('link', { name: /Funeral Bell/ }).click(); // the lookalike's own page

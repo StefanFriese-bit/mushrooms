@@ -204,6 +204,71 @@
           ]
         }
       ]
+    },
+    {
+      "scientific": "Morchella elata",
+      "english": "Black Morel",
+      "slug": null,
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Cap",
+          "thisOne": "A honeycomb of irregular pits, pale cream, tan or grey-brown",
+          "thatOne": "Darker and usually more pointed, its ridges in fairly regular vertical lines",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "wt"
+          ]
+        }
+      ]
+    },
+    {
+      "scientific": "Phallus impudicus",
+      "english": "Stinkhorn",
+      "slug": "stinkhorn",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Smell",
+          "thisOne": "Not distinctive, or faintly pleasant",
+          "thatOne": "Foul and strong once grown",
+          "sources": [
+            "fn",
+            "wf",
+            "fn-s",
+            "wf-s",
+            "wt-s"
+          ]
+        },
+        {
+          "feature": "Cap",
+          "thisOne": "A honeycomb of pits and ridges",
+          "thatOne": "Honeycombed, coated in olive-black slime",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "fn-s",
+            "wf-s",
+            "wp-s",
+            "wt-s"
+          ]
+        },
+        {
+          "feature": "Stem base",
+          "thisOne": "No bag",
+          "thatOne": "A white bag (volva), left by the 'egg'",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-s",
+            "wp-s",
+            "wf-s"
+          ]
+        }
+      ]
     }
   ],
   "noDangerousLookalike": null,
@@ -296,9 +361,29 @@
       "id": "wp-s41",
       "title": "Wikipedia — List of species and habitats of principal importance in England",
       "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    },
+    {
+      "id": "fn-s",
+      "title": "First Nature — Phallus impudicus, Stinkhorn",
+      "url": "https://www.first-nature.com/fungi/phallus-impudicus.php"
+    },
+    {
+      "id": "wf-s",
+      "title": "Wild Food UK — Stinkhorn",
+      "url": "https://www.wildfooduk.com/mushroom-guide/stinkhorn/"
+    },
+    {
+      "id": "wt-s",
+      "title": "Woodland Trust — Stinkhorn",
+      "url": "https://www.woodlandtrust.org.uk/trees-woods-and-wildlife/fungi-and-lichens/stinkhorn/"
+    },
+    {
+      "id": "wp-s",
+      "title": "Wikipedia — Phallus impudicus",
+      "url": "https://en.wikipedia.org/wiki/Phallus_impudicus"
     }
   ],
-  "checked": "2026-10-06",
+  "checked": "2026-10-10",
   "otherNames": {
     "value": [
       "Common Morel",

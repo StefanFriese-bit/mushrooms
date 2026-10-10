@@ -247,6 +247,84 @@
           ]
         }
       ]
+    },
+    {
+      "scientific": "Phallus hadriani",
+      "english": "Dune Stinkhorn",
+      "slug": null,
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Stem base",
+          "thisOne": "A white bag (volva)",
+          "thatOne": "A pink to violet bag (volva)",
+          "sources": [
+            "fn",
+            "wp",
+            "wt",
+            "fn-dun",
+            "wp-dun"
+          ]
+        },
+        {
+          "feature": "Where it grows",
+          "thisOne": "Woodland, near rotting wood",
+          "thatOne": "In Britain, almost only on sand dunes",
+          "sources": [
+            "fn",
+            "wf",
+            "wt",
+            "fn-dun",
+            "wp-dun"
+          ]
+        }
+      ]
+    },
+    {
+      "scientific": "Morchella esculenta",
+      "english": "Morel",
+      "slug": "morel",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Smell",
+          "thisOne": "Foul and strong once grown",
+          "thatOne": "Not distinctive, or faintly pleasant",
+          "sources": [
+            "fn",
+            "wf",
+            "wt",
+            "fn-m",
+            "wf-m"
+          ]
+        },
+        {
+          "feature": "Cap",
+          "thisOne": "Honeycombed, coated in olive-black slime",
+          "thatOne": "A honeycomb of pits and ridges",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "wt",
+            "fn-m",
+            "wf-m",
+            "wp-m"
+          ]
+        },
+        {
+          "feature": "Stem base",
+          "thisOne": "A white bag (volva), left by the 'egg'",
+          "thatOne": "No bag",
+          "sources": [
+            "fn",
+            "wp",
+            "wf",
+            "fn-m",
+            "wp-m"
+          ]
+        }
+      ]
     }
   ],
   "noDangerousLookalike": null,
@@ -394,9 +472,34 @@
       "id": "wp-s41",
       "title": "Wikipedia — List of species and habitats of principal importance in England",
       "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    },
+    {
+      "id": "fn-dun",
+      "title": "First Nature — Phallus hadriani, Dune Stinkhorn",
+      "url": "https://www.first-nature.com/fungi/phallus-hadriani.php"
+    },
+    {
+      "id": "wp-dun",
+      "title": "Wikipedia — Phallus hadriani",
+      "url": "https://en.wikipedia.org/wiki/Phallus_hadriani"
+    },
+    {
+      "id": "fn-m",
+      "title": "First Nature — Morchella esculenta, Morel",
+      "url": "https://www.first-nature.com/fungi/morchella-esculenta.php"
+    },
+    {
+      "id": "wf-m",
+      "title": "Wild Food UK — Morel",
+      "url": "https://www.wildfooduk.com/mushroom-guide/morel/"
+    },
+    {
+      "id": "wp-m",
+      "title": "Wikipedia — Morchella esculenta",
+      "url": "https://en.wikipedia.org/wiki/Morchella_esculenta"
     }
   ],
-  "checked": "2026-10-06",
+  "checked": "2026-10-10",
   "otherNames": {
     "value": [
       "Common Stinkhorn"

@@ -172,6 +172,36 @@
           ]
         }
       ]
+    },
+    {
+      "scientific": "Pleurotus ostreatus",
+      "english": "Oyster Mushroom",
+      "slug": "oyster-mushroom",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Cap colour",
+          "thisOne": "Paler: white to pale grey-brown",
+          "thatOne": "Grey, brownish or blue-grey",
+          "sources": [
+            "wf",
+            "wp",
+            "fn-om",
+            "wf-om",
+            "wp-om"
+          ]
+        },
+        {
+          "feature": "When",
+          "thisOne": "Most often in summer",
+          "thatOne": "Mostly in the colder months",
+          "sources": [
+            "wf",
+            "wp",
+            "wf-om"
+          ]
+        }
+      ]
     }
   ],
   "noDangerousLookalike": null,
@@ -249,7 +279,22 @@
       "id": "wp-s41",
       "title": "Wikipedia — List of species and habitats of principal importance in England",
       "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    },
+    {
+      "id": "fn-om",
+      "title": "First Nature — Pleurotus ostreatus, Oyster Mushroom",
+      "url": "https://www.first-nature.com/fungi/pleurotus-ostreatus.php"
+    },
+    {
+      "id": "wf-om",
+      "title": "Wild Food UK — Oyster Mushroom",
+      "url": "https://www.wildfooduk.com/mushroom-guide/oyster-mushroom/"
+    },
+    {
+      "id": "wp-om",
+      "title": "Wikipedia — Pleurotus ostreatus",
+      "url": "https://en.wikipedia.org/wiki/Pleurotus_ostreatus"
     }
   ],
-  "checked": "2026-10-06"
+  "checked": "2026-10-10"
 }

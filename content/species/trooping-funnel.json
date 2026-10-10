@@ -218,6 +218,35 @@
           ]
         }
       ]
+    },
+    {
+      "scientific": "Melanoleuca grammopodia",
+      "english": "Grooved Cavalier",
+      "slug": null,
+      "kind": "not-edible",
+      "tellApart": [
+        {
+          "feature": "Cap colour",
+          "thisOne": "Creamy-buff",
+          "thatOne": "Pale brown",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "fn-gc"
+          ]
+        },
+        {
+          "feature": "Smell",
+          "thisOne": "Mushroomy, or faintly of almonds",
+          "thatOne": "Musty or musky",
+          "sources": [
+            "wf",
+            "fn",
+            "wp"
+          ]
+        }
+      ]
     }
   ],
   "noDangerousLookalike": null,
@@ -325,7 +354,12 @@
       "id": "wp-s41",
       "title": "Wikipedia — List of species and habitats of principal importance in England",
       "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    },
+    {
+      "id": "fn-gc",
+      "title": "First Nature — Melanoleuca grammopodia, Grooved Cavalier",
+      "url": "https://www.first-nature.com/fungi/melanoleuca-grammopodia.php"
     }
   ],
-  "checked": "2026-10-06"
+  "checked": "2026-10-10"
 }

@@ -2,7 +2,7 @@ import type { Sourced, SpeciesRecord } from '../types';
 import { ALL_SPECIES, photoUrl } from '../content';
 import { hrefFor } from '../router';
 import { EDIBILITY_WORDS, KIND_WORDS, bySlug, siteNames, tagClass } from '../species';
-import { isDangerous, lookalikeTitle } from '../lookalikes';
+import { isDangerous, lookalikeButton } from '../lookalikes';
 import { Icon } from './icons';
 
 const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
@@ -63,7 +63,7 @@ export function SpeciesPage({ slug }: { slug: string }) {
         // His spreadsheet's "possible confusion", one tap away (Stefan 10/10/2026).
         <p><a class={`big-button wide${!isDangerous(s.edibility.value) && s.lookalikes.some((l) => isDangerous(l.kind)) ? ' warn-button' : ''}`}
           href={hrefFor({ name: 'lookalikes', slug: s.slug, n: 0 })} data-test="lookalikes-button">
-          <Icon name="alert" size={20} />{lookalikeTitle(s)} ({s.lookalikes.length})</a></p>
+          <Icon name="alert" size={20} />{lookalikeButton(s)}</a></p>
       )}
 
       <h2>Top points</h2>

@@ -19,6 +19,25 @@ export function lookalikeTitle(s: SpeciesRecord): string {
   return s.lookalikes.some((l) => isDangerous(l.kind)) ? 'Poisonous lookalikes' : 'Lookalikes';
 }
 
+/** The heading over one lookalike on the screen. An edible species' dangerous lookalikes come first, as "Poisonous
+ * lookalikes"; the harmless ones after them, as "Other lookalikes" — the species page's own split (10/10/2026: the
+ * lookalike audit put harmless lookalikes beside dangerous ones, and one heading over all of them called them poisonous). */
+export function lookalikeHeading(s: SpeciesRecord, l: Lookalike): string {
+  if (isDangerous(s.edibility.value)) return 'Mistaken for';
+  if (isDangerous(l.kind)) return 'Poisonous lookalikes';
+  return s.lookalikes.some((x) => isDangerous(x.kind)) ? 'Other lookalikes' : 'Lookalikes';
+}
+
+/** The species page's button. The number beside a name counts only what the name says: "Poisonous lookalikes (2) and
+ * 1 other", never "Poisonous lookalikes (3)" when one of the three is harmless. */
+export function lookalikeButton(s: SpeciesRecord): string {
+  const title = lookalikeTitle(s);
+  if (title !== 'Poisonous lookalikes') return `${title} (${s.lookalikes.length})`;
+  const dangerous = s.lookalikes.filter((l) => isDangerous(l.kind)).length;
+  const others = s.lookalikes.length - dangerous;
+  return others === 0 ? `${title} (${dangerous})` : `${title} (${dangerous}) and ${others} other${others === 1 ? '' : 's'}`;
+}
+
 /** The order the tell-apart facts are shown in — the checks that settle it fastest first: a ring, the bag at the base,
  * under the cap, the spore print, the stem, the flesh, the smell, the cap, where it grows, its size, its season. */
 const FEATURE_ORDER: Array<[RegExp, number]> = [

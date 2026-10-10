@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { apartRows, featureRank, lookalikeTitle, orderedLookalikes } from './lookalikes';
+import { apartRows, featureRank, lookalikeButton, lookalikeHeading, lookalikeTitle, orderedLookalikes } from './lookalikes';
 import type { Lookalike, SpeciesRecord } from './types';
 
 const look = (english: string, kind: Lookalike['kind'], rows: string[] = []): Lookalike =>
@@ -18,6 +18,25 @@ describe('the lookalike screen', () => {
     expect(lookalikeTitle(species('edible-cooked', [look('X', 'edible')]))).toBe('Lookalikes');
     expect(lookalikeTitle(species('deadly', [look('X', 'edible')]))).toBe('Mistaken for');
     expect(lookalikeTitle(species('poisonous', [look('X', 'edible')]))).toBe('Mistaken for');
+  });
+  it('never calls a harmless lookalike poisonous: beside dangerous ones it stands under "Other lookalikes"', () => {
+    const mixed = species('edible-cooked', [look('Deadly one', 'deadly'), look('Edible one', 'edible'), look('Not eaten', 'not-edible')]);
+    expect(lookalikeHeading(mixed, mixed.lookalikes[0])).toBe('Poisonous lookalikes');
+    expect(lookalikeHeading(mixed, mixed.lookalikes[1])).toBe('Other lookalikes');
+    expect(lookalikeHeading(mixed, mixed.lookalikes[2])).toBe('Other lookalikes');
+    const harmless = species('edible-cooked', [look('Edible one', 'edible')]);
+    expect(lookalikeHeading(harmless, harmless.lookalikes[0])).toBe('Lookalikes');
+    const deadly = species('deadly', [look('Edible one', 'edible')]);
+    expect(lookalikeHeading(deadly, deadly.lookalikes[0])).toBe('Mistaken for');
+  });
+  it('counts on the button only what its name says', () => {
+    expect(lookalikeButton(species('edible-cooked', [look('A', 'deadly'), look('B', 'poisonous'), look('C', 'edible')])))
+      .toBe('Poisonous lookalikes (2) and 1 other');
+    expect(lookalikeButton(species('edible-cooked', [look('A', 'deadly'), look('B', 'edible'), look('C', 'not-edible')])))
+      .toBe('Poisonous lookalikes (1) and 2 others');
+    expect(lookalikeButton(species('edible-cooked', [look('A', 'deadly'), look('B', 'poisonous')]))).toBe('Poisonous lookalikes (2)');
+    expect(lookalikeButton(species('edible-cooked', [look('A', 'edible'), look('B', 'not-edible')]))).toBe('Lookalikes (2)');
+    expect(lookalikeButton(species('deadly', [look('A', 'edible'), look('B', 'edible')]))).toBe('Mistaken for (2)');
   });
   it('puts the checks that settle it fastest first: ring, bag, gills, spore print, stem … the page\'s order otherwise', () => {
     const l = look('X', 'deadly', ['Where it grows', 'Cap', 'Spore print', 'Stem', 'Ring', 'Gills', 'Smell', 'Stem base']);

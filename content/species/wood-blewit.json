@@ -249,6 +249,50 @@
           ]
         }
       ]
+    },
+    {
+      "scientific": "Cortinarius violaceus",
+      "english": "Violet Webcap",
+      "slug": "violet-webcap",
+      "kind": "not-edible",
+      "tellApart": [
+        {
+          "feature": "Spore print",
+          "thisOne": "Pale pinkish-buff",
+          "thatOne": "Rusty brown",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "fn-vw",
+            "wp-vw"
+          ]
+        },
+        {
+          "feature": "Colour",
+          "thisOne": "Lilac-tinged cap, fading to tan with age",
+          "thatOne": "Deep violet-purple all over: cap, gills, stem and flesh",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "wt",
+            "fn-vw",
+            "wp-vw"
+          ]
+        },
+        {
+          "feature": "Stem",
+          "thisOne": "No cobweb-like veil threads",
+          "thatOne": "A cobweb-like veil when young",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-vw",
+            "wp-vw"
+          ]
+        }
+      ]
     }
   ],
   "noDangerousLookalike": null,
@@ -356,6 +400,16 @@
       "id": "wp-fb",
       "title": "Wikipedia — Collybia personata",
       "url": "https://en.wikipedia.org/wiki/Collybia_personata"
+    },
+    {
+      "id": "fn-vw",
+      "title": "First Nature — Cortinarius violaceus, Violet Webcap",
+      "url": "https://www.first-nature.com/fungi/cortinarius-violaceus.php"
+    },
+    {
+      "id": "wp-vw",
+      "title": "Wikipedia — Cortinarius violaceus",
+      "url": "https://en.wikipedia.org/wiki/Cortinarius_violaceus"
     }
   ],
   "checked": "2026-10-10",

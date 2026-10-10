@@ -360,6 +360,65 @@
           ]
         }
       ]
+    },
+    {
+      "scientific": "Craterellus tubaeformis",
+      "english": "Trumpet Chanterelle",
+      "slug": "trumpet-chanterelle",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Cap colour",
+          "thisOne": "Egg-yolk yellow",
+          "thatOne": "Brown",
+          "sources": [
+            "fn",
+            "wf",
+            "wt",
+            "fn-tub",
+            "wf-tc",
+            "wp-tc"
+          ]
+        },
+        {
+          "feature": "Size",
+          "thisOne": "Cap 3–10 cm",
+          "thatOne": "Cap 2–5 cm",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "fn-tub",
+            "wf-tc",
+            "wp-tc"
+          ]
+        },
+        {
+          "feature": "Stem",
+          "thisOne": "Solid, the same colour as the cap",
+          "thatOne": "Yellow and hollow",
+          "sources": [
+            "fn",
+            "wf",
+            "wt",
+            "fn-tub",
+            "wf-tc",
+            "wp-tc"
+          ]
+        },
+        {
+          "feature": "Smell",
+          "thisOne": "Fruity, like apricots",
+          "thatOne": "Mild, not distinctive",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "fn-tub",
+            "wp-tc"
+          ]
+        }
+      ]
     }
   ],
   "noDangerousLookalike": null,
@@ -492,9 +551,19 @@
       "id": "wp-s41",
       "title": "Wikipedia — List of species and habitats of principal importance in England",
       "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    },
+    {
+      "id": "wf-tc",
+      "title": "Wild Food UK — Trumpet Chanterelle",
+      "url": "https://www.wildfooduk.com/mushroom-guide/winter-chanterelle/"
+    },
+    {
+      "id": "wp-tc",
+      "title": "Wikipedia — Craterellus tubaeformis",
+      "url": "https://en.wikipedia.org/wiki/Craterellus_tubaeformis"
     }
   ],
-  "checked": "2026-10-06",
+  "checked": "2026-10-10",
   "otherNames": {
     "value": [
       "Girolle"

@@ -184,6 +184,65 @@
           ]
         }
       ]
+    },
+    {
+      "scientific": "Cantharellus cibarius",
+      "english": "Chanterelle",
+      "slug": "chanterelle",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Cap colour",
+          "thisOne": "Brown",
+          "thatOne": "Egg-yolk yellow",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "fn-c",
+            "wf-c",
+            "wt-c"
+          ]
+        },
+        {
+          "feature": "Size",
+          "thisOne": "Cap 2–5 cm",
+          "thatOne": "Cap 3–10 cm",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "fn-c",
+            "wf-c",
+            "wp-c"
+          ]
+        },
+        {
+          "feature": "Stem",
+          "thisOne": "Yellow and hollow",
+          "thatOne": "Solid, the same colour as the cap",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "fn-c",
+            "wf-c",
+            "wt-c"
+          ]
+        },
+        {
+          "feature": "Smell",
+          "thisOne": "Mild, not distinctive",
+          "thatOne": "Fruity, like apricots",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-c",
+            "wf-c",
+            "wp-c"
+          ]
+        }
+      ]
     }
   ],
   "noDangerousLookalike": null,
@@ -271,7 +330,27 @@
       "id": "wp-s41",
       "title": "Wikipedia — List of species and habitats of principal importance in England",
       "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    },
+    {
+      "id": "fn-c",
+      "title": "First Nature — Cantharellus cibarius, Chanterelle",
+      "url": "https://www.first-nature.com/fungi/cantharellus-cibarius.php"
+    },
+    {
+      "id": "wf-c",
+      "title": "Wild Food UK — Chanterelle",
+      "url": "https://www.wildfooduk.com/mushroom-guide/chanterelle-3/"
+    },
+    {
+      "id": "wt-c",
+      "title": "Woodland Trust — Chanterelle",
+      "url": "https://www.woodlandtrust.org.uk/trees-woods-and-wildlife/fungi-and-lichens/chanterelle/"
+    },
+    {
+      "id": "wp-c",
+      "title": "Wikipedia — Cantharellus cibarius",
+      "url": "https://en.wikipedia.org/wiki/Cantharellus_cibarius"
     }
   ],
-  "checked": "2026-10-06"
+  "checked": "2026-10-10"
 }

@@ -1,7 +1,7 @@
 import { ALL_SPECIES, photoUrl } from '../content';
 import { hrefFor } from '../router';
 import { EDIBILITY_WORDS, KIND_WORDS, bySlug, siteNames, tagClass } from '../species';
-import { apartRows, isDangerous, lookalikeTitle, orderedLookalikes } from '../lookalikes';
+import { apartRows, isDangerous, lookalikeHeading, orderedLookalikes } from '../lookalikes';
 import { BackLink } from './back-link';
 import { Icon } from './icons';
 
@@ -36,7 +36,7 @@ export function Lookalikes({ slug, n }: { slug: string; n: number }) {
   return (
     <>
       {back}
-      <h1>{lookalikeTitle(s)}</h1>
+      <h1>{lookalikeHeading(s, l)}</h1>
       <p class="muted" data-test="lookalike-count">{s.english} · {i + 1} of {all.length}</p>
       <div class="pair" data-test="pair">
         <Side name={s.english} file={s.photos[0]?.file} tag={EDIBILITY_WORDS[s.edibility.value]} cls={tagClass(s.edibility.value)} />

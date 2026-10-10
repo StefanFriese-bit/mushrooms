@@ -310,6 +310,53 @@
           ]
         }
       ]
+    },
+    {
+      "scientific": "Chlorophyllum rhacodes",
+      "english": "Shaggy Parasol",
+      "slug": "shaggy-parasol",
+      "kind": "edible",
+      "tellApart": [
+        {
+          "feature": "Stem",
+          "thisOne": "A brown snakeskin pattern of bands",
+          "thatOne": "Plain, no snakeskin bands, with a very bulbous base",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "fn-sp",
+            "wf-sp",
+            "wp-sp"
+          ]
+        },
+        {
+          "feature": "Cut flesh",
+          "thisOne": "White, not reddening",
+          "thatOne": "Turns orange-red",
+          "sources": [
+            "fn",
+            "wp",
+            "fn-sp",
+            "wf-sp",
+            "wp-sp"
+          ]
+        },
+        {
+          "feature": "Cap",
+          "thisOne": "Pale with darker brown scales and a smooth, dark bump in the middle",
+          "thatOne": "Thick, shaggy brown scales on a cream background",
+          "sources": [
+            "fn",
+            "wf",
+            "wp",
+            "fn-sp",
+            "wf-sp",
+            "wp-sp",
+            "wt-sp"
+          ]
+        }
+      ]
     }
   ],
   "noDangerousLookalike": null,
@@ -427,7 +474,27 @@
       "id": "wp-s41",
       "title": "Wikipedia — List of species and habitats of principal importance in England",
       "url": "https://en.wikipedia.org/wiki/List_of_species_and_habitats_of_principal_importance_in_England"
+    },
+    {
+      "id": "fn-sp",
+      "title": "First Nature — Chlorophyllum rhacodes, Shaggy Parasol",
+      "url": "https://www.first-nature.com/fungi/chlorophyllum-rhacodes.php"
+    },
+    {
+      "id": "wf-sp",
+      "title": "Wild Food UK — Shaggy Parasol",
+      "url": "https://www.wildfooduk.com/mushroom-guide/shaggy-parasol/"
+    },
+    {
+      "id": "wp-sp",
+      "title": "Wikipedia — Chlorophyllum rhacodes",
+      "url": "https://en.wikipedia.org/wiki/Chlorophyllum_rhacodes"
+    },
+    {
+      "id": "wt-sp",
+      "title": "Woodland Trust — Shaggy Parasol",
+      "url": "https://www.woodlandtrust.org.uk/trees-woods-and-wildlife/fungi-and-lichens/shaggy-parasol/"
     }
   ],
-  "checked": "2026-10-06"
+  "checked": "2026-10-10"
 }
