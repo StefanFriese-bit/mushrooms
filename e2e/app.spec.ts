@@ -1,4 +1,4 @@
-import { expect, test } from '@playwright/test';
+import { expect, test, type Page } from '@playwright/test';
 import { fileURLToPath } from 'node:url';
 import { startServer } from './server';
 import brand from '../src/brand.json' with { type: 'json' };
@@ -23,6 +23,16 @@ function answersFor(labels: string[]): Answers {
   const a: Answers = {};
   QUESTIONS.forEach((q, i) => { a[q.id] = labels[i] === q.unsureLabel ? UNSURE : q.options.find((o) => o.label === labels[i])!.value; });
   return a;
+}
+
+/** A scan photo: chosen for a slot, then "Use this" on the crop screen (its starting view is the centre square, which
+ * is what the scan looked at before cropping existed). */
+async function addScanPhoto(page: Page, slot: string, photo: string) {
+  await page.getByLabel(`${slot} photo`, { exact: true }).setInputFiles(fileURLToPath(new URL(`../public/photos/${photo}`, import.meta.url)));
+  const crop = page.locator('[data-test=cropper]');
+  await expect(crop).toBeVisible();
+  await crop.getByRole('button', { name: 'Use this' }).click();
+  await expect(crop).toHaveCount(0);
 }
 
 test.beforeEach(async () => { site = await startServer(DIST); });
@@ -446,7 +456,7 @@ test('the scan runs the model on the phone: the Deathcap\'s photo puts the Death
   await expect(page.getByRole('heading', { name: 'Scan: its test first' })).toBeVisible();
   await expect(page.getByText(/Tested on [\d,]+ UK finds it had never seen/)).toBeVisible();
   await page.getByRole('button', { name: /switch the scan on/ }).click();
-  await page.getByLabel('Top of the cap photo').setInputFiles(fileURLToPath(new URL('../public/photos/deathcap/1.webp', import.meta.url)));
+  await addScanPhoto(page, 'Top of the cap', 'deathcap/1.webp');
   await page.getByRole('button', { name: 'Scan', exact: true }).click();
   const result = page.locator('[data-test=scan-result]');
   await expect(result).toBeVisible({ timeout: 120_000 });
@@ -462,7 +472,7 @@ test('the scan names the group, and gives English names to species the guide doe
   test.setTimeout(150_000);
   await page.goto(`${site.url}#/scan`);
   await page.getByRole('button', { name: /switch the scan on/ }).click();
-  await page.getByLabel('Top of the cap photo').setInputFiles(fileURLToPath(new URL('../public/photos/sickener/1.webp', import.meta.url)));
+  await addScanPhoto(page, 'Top of the cap', 'sickener/1.webp');
   await page.getByRole('button', { name: 'Scan', exact: true }).click();
   const result = page.locator('[data-test=scan-result]');
   await expect(result).toBeVisible({ timeout: 120_000 });
@@ -477,7 +487,7 @@ test('what to check next: the guide\'s brittlegills compared in their own words 
   test.setTimeout(150_000);
   await page.goto(`${site.url}#/scan`);
   await page.getByRole('button', { name: /switch the scan on/ }).click();
-  await page.getByLabel('Top of the cap photo').setInputFiles(fileURLToPath(new URL('../public/photos/sickener/1.webp', import.meta.url)));
+  await addScanPhoto(page, 'Top of the cap', 'sickener/1.webp');
   await page.getByRole('button', { name: 'Scan', exact: true }).click();
   const card = page.locator('[data-test=next-checks]');
   await expect(card).toBeVisible({ timeout: 120_000 });
@@ -497,7 +507,7 @@ test('what to check next narrows the list as he answers, and never drops a dange
   test.setTimeout(150_000);
   await page.goto(`${site.url}#/scan`);
   await page.getByRole('button', { name: /switch the scan on/ }).click();
-  await page.getByLabel('Top of the cap photo').setInputFiles(fileURLToPath(new URL('../public/photos/deathcap/1.webp', import.meta.url)));
+  await addScanPhoto(page, 'Top of the cap', 'deathcap/1.webp');
   await page.getByRole('button', { name: 'Scan', exact: true }).click();
   const card = page.locator('[data-test=next-checks]');
   await expect(card).toBeVisible({ timeout: 120_000 });
@@ -529,11 +539,66 @@ test('what to check next narrows the list as he answers, and never drops a dange
   expect(await page.locator('main').innerText()).not.toMatch(EDIBILITY_WORDS);
 });
 
+test('scan: five photo slots in Stefan\'s order; a chosen photo opens the crop screen, and zooming in crops it', async ({ page }) => {
+  await page.goto(`${site.url}#/scan`);
+  await page.getByRole('button', { name: /switch the scan on/ }).click();
+  await expect(page.locator('[data-test=slot] figcaption')).toHaveText(['Top of the cap', 'Underneath', 'Stem', 'Base of the stem', 'Cross-section']);
+  await page.getByLabel('Top of the cap photo').setInputFiles(fileURLToPath(new URL('../public/photos/deathcap/1.webp', import.meta.url)));
+  const crop = page.locator('[data-test=cropper]');
+  await expect(crop.getByRole('heading', { name: 'Crop: Top of the cap' })).toBeVisible();
+  const photo = crop.locator('.crop-frame img');
+  await expect(photo).toBeVisible();
+  const original = await photo.evaluate((i: HTMLImageElement) => Math.min(i.naturalWidth, i.naturalHeight));
+  // Zoom in three times with the slider, then drag the photo: it moves under the square.
+  await crop.getByLabel('Zoom').evaluate((el: HTMLInputElement) => { el.value = '3'; el.dispatchEvent(new Event('input', { bubbles: true })); });
+  const before = await photo.evaluate((i) => (i as HTMLElement).style.transform);
+  const box = (await crop.locator('.crop-frame').boundingBox())!;
+  await page.mouse.move(box.x + box.width / 2, box.y + box.height / 2);
+  await page.mouse.down();
+  await page.mouse.move(box.x + box.width / 2 + 40, box.y + box.height / 2 + 30, { steps: 5 });
+  await page.mouse.up();
+  await expect.poll(() => photo.evaluate((i) => (i as HTMLElement).style.transform)).not.toBe(before);
+  await crop.getByRole('button', { name: 'Use this' }).click();
+  await expect(crop).toHaveCount(0);
+  // The slot holds the crop: a square, a third of the photo's shorter side.
+  const slotPhoto = page.locator('[data-test=slot] .slot-photo img').first();
+  await expect(slotPhoto).toBeVisible();
+  const [w, h] = await slotPhoto.evaluate((i: HTMLImageElement) => [i.naturalWidth, i.naturalHeight]);
+  expect(w).toBe(h);
+  expect(Math.abs(w - Math.max(256, Math.round(original / 3)))).toBeLessThanOrEqual(1);
+  // A tap on the photo crops it again, from the whole photo; Cancel keeps the crop.
+  await page.getByRole('button', { name: 'Crop the top of the cap photo again' }).click();
+  await expect(crop).toBeVisible();
+  await expect.poll(() => crop.locator('.crop-frame img').evaluate((i: HTMLImageElement) => Math.min(i.naturalWidth, i.naturalHeight))).toBe(original);
+  await crop.getByRole('button', { name: 'Cancel' }).click();
+  await expect(crop).toHaveCount(0);
+  await expect(slotPhoto).toBeVisible();
+});
+
+test('scan: with more than three photos it says so; the shortlist shows each species large, and a tap opens its page', async ({ page }) => {
+  test.setTimeout(150_000);
+  await page.goto(`${site.url}#/scan`);
+  await page.getByRole('button', { name: /switch the scan on/ }).click();
+  await addScanPhoto(page, 'Top of the cap', 'deathcap/1.webp');
+  await addScanPhoto(page, 'Underneath', 'deathcap/2.webp');
+  await addScanPhoto(page, 'Stem', 'deathcap/3.webp');
+  await addScanPhoto(page, 'Cross-section', 'deathcap/4.webp');
+  await page.getByRole('button', { name: 'Scan', exact: true }).click();
+  const result = page.locator('[data-test=scan-result]');
+  await expect(result).toBeVisible({ timeout: 120_000 });
+  await expect(result.locator('[data-test=many-photos]')).toContainText('Scanned with 4 photos');
+  await expect(result.getByText('A dangerous species is on this list')).toBeVisible();
+  const deathcap = result.locator('a[data-test=scan-row]').filter({ hasText: 'Deathcap' });
+  await expect(deathcap.locator('img.result-photo')).toBeVisible();
+  await deathcap.click();
+  await expect(page.getByRole('heading', { name: 'Deathcap', exact: true })).toBeVisible();
+});
+
 test('when the scan is not certain it says how often the right species is still on the list', async ({ page }) => {
   test.setTimeout(150_000);
   await page.goto(`${site.url}#/scan`);
   await page.getByRole('button', { name: /switch the scan on/ }).click();
-  await page.getByLabel('Top of the cap photo').setInputFiles(fileURLToPath(new URL('../public/photos/charcoal-burner/1.webp', import.meta.url)));
+  await addScanPhoto(page, 'Top of the cap', 'charcoal-burner/1.webp');
   await page.getByRole('button', { name: 'Scan', exact: true }).click();
   const notSure = page.locator('[data-test=not-sure]');
   await expect(notSure).toBeVisible({ timeout: 120_000 });

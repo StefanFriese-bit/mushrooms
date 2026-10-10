@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { combine, outOfSeason, shortlist, type ClassInfo } from './rules';
+import { combine, combineMax, outOfSeason, shortlist, type ClassInfo } from './rules';
 
 const ALL_YEAR = Array(12).fill(5);
 const JUL_DEC = [0, 0, 0, 0, 0, 0, 16, 71, 86, 207, 43, 4];
@@ -16,6 +16,16 @@ describe('combine', () => {
   it('refuses no photos, and photos scored by different models', () => {
     expect(() => combine([])).toThrow();
     expect(() => combine([[1], [0.5, 0.5]])).toThrow();
+  });
+});
+
+describe('combineMax', () => {
+  it('keeps each class\'s best single photo', () => {
+    expect(combineMax([[0.2, 0.8], [0.6, 0.4], [0.1, 0.1]])).toEqual([0.6, 0.8]);
+  });
+  it('refuses no photos, and photos scored by different models', () => {
+    expect(() => combineMax([])).toThrow();
+    expect(() => combineMax([[1], [0.5, 0.5]])).toThrow();
   });
 });
 
@@ -55,6 +65,24 @@ describe('shortlist', () => {
     expect(r.items.some((i) => i.ours === 'Deadly')).toBe(false);
     expect(r.notSure).toBe(true);
     expect(r.dangerous).toBe(false);
+  });
+  it('with the photos read one by one as well, keeps a dangerous species any one photo could be (more than three photos)', () => {
+    // On average the Deadly class is under the safety line (0.04 < 0.05) — but one photo gave it 0.12.
+    const average = [0.2, 0.19, 0.18, 0.17, 0.16, 0.15, 0.04, 0, 0];
+    const best = [0.3, 0.25, 0.2, 0.2, 0.2, 0.2, 0.12, 0, 0];
+    expect(shortlist(average, classes, 10, T).items.some((i) => i.ours === 'Deadly')).toBe(false);
+    const r = shortlist(average, classes, 10, T, best);
+    expect(r.items.find((i) => i.ours === 'Deadly')?.forSafety).toBe(true);
+    expect(r.dangerous).toBe(true);
+    // The ranking and "not sure" still come from the average.
+    expect(r.items.slice(0, 5).map((i) => i.ours)).toEqual(['A', 'B', 'C', 'D', 'E']);
+    expect(r.notSure).toBe(shortlist(average, classes, 10, T).notSure);
+  });
+  it('never keeps less than the average would: a best-photo score below the average counts as the average', () => {
+    const scores = [0.2, 0.19, 0.18, 0.17, 0.16, 0.15, 0.06, 0, 0];
+    const low = [0, 0, 0, 0, 0, 0, 0, 0, 0];
+    expect(shortlist(scores, classes, 10, T, low).items.some((i) => i.ours === 'Deadly')).toBe(true);
+    expect(() => shortlist(scores, classes, 10, T, [0.1])).toThrow();
   });
   it('adds up classes that are the same species of ours', () => {
     const c = [cls(0, 'A'), cls(1, 'A'), cls(2, 'B')];

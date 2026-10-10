@@ -20,6 +20,20 @@ export function combine(photos: ArrayLike<number>[]): number[] {
   return out;
 }
 
+/** Each class's highest score in any one photo. Used for the safety rule when more photos are given than the scan's test
+ * measured (three): a Deadly or Poisonous species that any one photo could be stays on the list — never less than the
+ * average of any of those photos would keep (src/screens/scan.tsx, Stefan 10/10/2026: five photo slots). */
+export function combineMax(photos: ArrayLike<number>[]): number[] {
+  if (photos.length === 0) throw new Error('combineMax needs at least one photo');
+  const n = photos[0].length;
+  const out = new Array<number>(n).fill(0);
+  for (const p of photos) {
+    if (p.length !== n) throw new Error('the photos were scored by different models');
+    for (let i = 0; i < n; i++) if (p[i] > out[i]) out[i] = p[i];
+  }
+  return out;
+}
+
 /** Out of season = no UK records in that month or in the months either side (January follows December). */
 export function outOfSeason(months: number[], month: number): boolean {
   const at = (m: number) => months[(m - 1 + 12) % 12] ?? 0;
@@ -36,25 +50,30 @@ export const genusOf = (name: string): string => name.split(' ')[0];
  * threshold the scan says so. Its species added up by genus give the group headline, at or above the group line. All
  * the thresholds come from the test, never by hand.
  */
-export function shortlist(scores: ArrayLike<number>, classes: ClassInfo[], month: number, t: Thresholds): ScanResult {
+export function shortlist(scores: ArrayLike<number>, classes: ClassInfo[], month: number, t: Thresholds,
+  safetyScores?: ArrayLike<number>): ScanResult {
   if (scores.length !== classes.length) throw new Error(`scores for ${scores.length} classes, the class list has ${classes.length}`);
-  type Entry = { first: ClassInfo; score: number; raw: number };
+  if (safetyScores && safetyScores.length !== classes.length) throw new Error('the safety scores do not match the class list');
+  // raw: the species' score before the season mark-down; safe: what the safety rule reads — raw, or with `safetyScores`
+  // (each class's best single photo) at least raw, so a dangerous species is never dropped by the extra photos.
+  type Entry = { first: ClassInfo; score: number; raw: number; safe: number };
   const bySpecies = new Map<string, Entry>();
   const byGenus = new Map<string, number>();
   classes.forEach((c, i) => {
     if (!c.uk) return;
     const raw = scores[i];
+    const safe = safetyScores ? Math.max(safetyScores[i], raw) : raw;
     const score = outOfSeason(c.months, month) ? raw * t.offSeason : raw;
     byGenus.set(genusOf(c.name), (byGenus.get(genusOf(c.name)) ?? 0) + score);
     const key = c.ours ?? `class ${c.id}`;
     const e = bySpecies.get(key);
-    if (e) { e.score += score; e.raw += raw; } else bySpecies.set(key, { first: c, score, raw });
+    if (e) { e.score += score; e.raw += raw; e.safe += safe; } else bySpecies.set(key, { first: c, score, raw, safe });
   });
   const ranked = [...bySpecies.values()].filter((e) => e.score > 0).sort((a, b) => b.score - a.score);
   const item = (e: Entry, forSafety: boolean): ShortlistItem =>
     ({ id: e.first.id, name: e.first.name, ours: e.first.ours, danger: e.first.danger, score: e.score, forSafety });
   const items = ranked.slice(0, SHORTLIST).map((e) => item(e, false));
-  for (const e of ranked.slice(SHORTLIST)) if (e.first.danger && e.raw >= t.safety) items.push(item(e, true));
+  for (const e of ranked.slice(SHORTLIST)) if (e.first.danger && e.safe >= t.safety) items.push(item(e, true));
   const [genus, mass] = [...byGenus.entries()].reduce((a, b) => (b[1] > a[1] ? b : a), ['', 0]);
   const group = genus && mass >= t.group ? { genus, score: mass } : null;
   return { items, notSure: (items[0]?.score ?? 0) < t.notSure, dangerous: items.some((i) => i.danger !== null), group };

@@ -206,6 +206,31 @@ ol.answers li { margin: 2px 0; }
 .slot img, .slot-empty { display: block; width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: var(--radius); background: var(--surface); }
 .slot-empty { display: flex; align-items: center; justify-content: center; font-size: 28px; color: var(--faint); border: 2px dashed var(--line-strong); }
 .slot figcaption { margin: 4px 0; line-height: 1.2; }
+.slot-photo { position: relative; display: block; width: 100%; padding: 0; border: 0; background: none; cursor: pointer; }
+.slot-crop { position: absolute; right: 5px; bottom: 5px; display: grid; place-items: center; width: 26px; height: 26px;
+  border-radius: 6px; background: rgba(255, 255, 255, .92); color: var(--accent-text); box-shadow: 0 1px 3px rgba(0, 0, 0, .25); }
+/* The crop screen (src/screens/crop.tsx): the photo moves and zooms under a fixed square. */
+.crop-sheet { position: fixed; inset: 0; z-index: 10; display: flex; align-items: center; justify-content: center;
+  padding: calc(12px + env(safe-area-inset-top)) 12px calc(12px + env(safe-area-inset-bottom)); background: rgba(15, 23, 42, .72); }
+.crop-inner { width: min(100%, 460px); max-height: 100%; overflow: auto; background: var(--surface); border-radius: var(--radius-lg); padding: 14px; }
+.crop-inner h2 { margin: 0 0 4px; }
+.crop-frame { position: relative; width: 100%; aspect-ratio: 1; overflow: hidden; margin: 10px 0; border-radius: var(--radius);
+  background: #111; touch-action: none; user-select: none; -webkit-user-select: none; cursor: grab;
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, .85); }
+.crop-frame img { position: absolute; left: 0; top: 0; max-width: none; transform-origin: 0 0; pointer-events: none; }
+.crop-zoom { display: flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 600; color: var(--muted); }
+.crop-zoom input { flex: 1; accent-color: var(--accent); }
+.crop-actions { display: flex; justify-content: flex-end; align-items: center; gap: 10px; margin-top: 12px; }
+/* The scan's shortlist: a large photo of each species with its name beside it; a tap opens its page. */
+.result { display: flex; align-items: center; gap: 14px; margin: 10px 0; padding: 10px; background: var(--surface);
+  border: 1px solid var(--line); border-radius: var(--radius-lg); color: inherit; text-decoration: none; }
+a.result:active { background: var(--subtle); }
+.result.kept { border-left: 4px solid var(--deadly); }
+.result > .icon:last-child { color: #94a3b8; }
+.result-photo { width: 132px; height: 132px; flex: none; object-fit: cover; border-radius: var(--radius); background: var(--sunken); }
+.result-text { flex: 1; min-width: 0; display: flex; flex-direction: column; align-items: flex-start; gap: 4px; }
+.result-name { font-size: 18px; font-weight: 600; line-height: 1.25; overflow-wrap: anywhere; }
+.result.plain .result-name { font-size: 16px; }
 .still p { margin: 4px 0; }
 .still .kept-line { border-left: 4px solid var(--deadly); padding-left: 8px; }
 .fact-list { margin: 4px 0 0; padding-left: 18px; font-size: 14px; }

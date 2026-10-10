@@ -18,6 +18,7 @@ const SHAPES = {
   camera: <><path d="M4 8.5A1.5 1.5 0 0 1 5.5 7h2.2l1.6-2.2h5.4L16.3 7h2.2A1.5 1.5 0 0 1 20 8.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 17.5z" /><circle cx="12" cy="12.8" r="3.4" /><path d="M12 11.1v3.4M10.3 12.8h3.4" /></>,
   plus: <path d="M12 5v14M5 12h14" />,
   check: <path d="m5 12.5 4.5 4.5L19 7.5" />,
+  crop: <><path d="M6 2.5V18h15.5" /><path d="M2.5 6H18v15.5" /></>,
 } satisfies Record<string, JSX.Element>;
 export type IconName = keyof typeof SHAPES;
 

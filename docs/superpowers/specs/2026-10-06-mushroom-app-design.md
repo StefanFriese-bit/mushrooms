@@ -183,12 +183,16 @@ Working name: "Mushroom app" (the final name is his to choose).
 
 ### 6.2 The rules (pure functions, tested without the model)
 
-1. Each photo is scored; the scores of up to three photos are averaged.
+1. Each photo is scored; the scores of the photos given are averaged. Up to five photos since 10/10/2026 (top of
+   the cap, underneath, stem, base of the stem, cross-section — Stefan); each may first be cropped to the part that
+   matters, and the scan looks at what is inside the crop square.
 2. Species never recorded in the UK are removed.
 3. Species out of season (from UK monthly record counts) are marked down, never removed.
 4. The shortlist is the top five.
 5. Any Poisonous or Deadly species scoring above the safety threshold is added to the shortlist however low it
-   scores, and a red banner says a dangerous species is on the list and to do the checks first.
+   scores, and a red banner says a dangerous species is on the list and to do the checks first. With more photos than
+   the test measured (three), this rule also reads each photo on its own (each class's best photo): a dangerous species
+   any one photo could be stays on the list — never fewer than the average would keep — and the screen says so.
 6. If the top score is below the "not sure" threshold, the screen says "Not sure" and offers Identify.
 7. The screen shows the scan's measured record (6.3).
 8. No edibility verdict on this screen. The next step is always Check.
@@ -242,7 +246,9 @@ a "find", so older backups restore.
 - **Map:** Save a location · View map · a saved location's page (photos, Take me there, the map, OS grid reference and
   Plus Code, description, what it is, delete) · Take me there (arrow, distance, compass, "You are there" with its
   photos and description).
-- **Scan:** take or pick up to three photos (top, underneath, base) → the shortlist (6.2) → what to check next → Check.
+- **Scan:** take or pick up to five photos (top of the cap, underneath, stem, base of the stem, cross-section; any one
+  is enough), each croppable (pinch or slider, drag; 10/10/2026) → the shortlist (6.2: each species as a large photo with
+  its name and danger, a tap opens its page) → what to check next → Check.
   *What to check next* (Stefan, 09/10/2026 — free and offline, instead of a paid identifier): the shortlist's species
   that have a page, and the guide's other species of a group the scan names, compared with Identify's questions (best
   split first, the spore print last) and the pages' own words for where each grows, smell, flesh, cap width and spore
