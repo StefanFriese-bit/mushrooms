@@ -14,43 +14,55 @@ import { FindPage } from './screens/find-page';
 import { FindGo } from './screens/find-go';
 import { UpdateBar } from './screens/update-bar';
 import brand from './brand.json';
+import { Home } from './screens/home';
+import { MapHome } from './screens/map-home';
+import { Icon } from './screens/icons';
+import { SECTIONS, sectionHref, sectionOf, type SectionName } from './sections';
 
-const TABS = [
-  { name: 'scan', label: 'Scan' },
-  { name: 'guide', label: 'Guide' },
-  { name: 'identify', label: 'Identify' },
-  { name: 'finds', label: 'Finds' },
-  { name: 'learn', label: 'Learn' },
-] as const;
-
-/** The green band at the top: the mark from the home-screen icon, the name and the tagline (src/brand.json). */
-function Header() {
+/** The steel-blue band at the top, as on the dashboard: the mark from the home-screen icon, the name and the tagline
+ * (src/brand.json), which open the home page; on every other page a Home button; About on the right. */
+function Header({ home }: { home: boolean }) {
   return (
     <header class="app-header">
-      <a class="brand" href={hrefFor({ name: 'guide', query: '' })} aria-label={`${brand.name}, open the guide`}>
-        <svg class="brand-mark" viewBox="88 96 336 344" aria-hidden="true">
-          <path d="M96 268c0-92 72-164 160-164s160 72 160 164c0 14-11 24-25 24H121c-14 0-25-10-25-24z" fill="#e9d8b4" />
-          <circle cx="200" cy="200" r="18" fill="#c9b48a" /><circle cx="296" cy="176" r="14" fill="#c9b48a" />
-          <circle cx="338" cy="236" r="12" fill="#c9b48a" />
-          <path d="M216 292h80l-10 116c-1 14-13 24-27 24h-6c-14 0-26-10-27-24z" fill="#f6f1e6" />
-        </svg>
-        <span class="brand-text">
-          <span class="brand-name">{brand.name}</span>
-          <span class="brand-tagline">{brand.tagline}</span>
-        </span>
-      </a>
+      <div class="app-header-row">
+        {!home && (
+          <a class="head-button" href={hrefFor({ name: 'home' })} aria-label="Home" data-test="home-button"><Icon name="home" size={22} /></a>
+        )}
+        <a class="brand" href={hrefFor({ name: 'home' })} aria-label={`${brand.name}, home`}>
+          <svg class="brand-mark" viewBox="88 96 336 344" aria-hidden="true">
+            <path d="M96 268c0-92 72-164 160-164s160 72 160 164c0 14-11 24-25 24H121c-14 0-25-10-25-24z" fill="#e9d8b4" />
+            <circle cx="200" cy="200" r="18" fill="#c9b48a" /><circle cx="296" cy="176" r="14" fill="#c9b48a" />
+            <circle cx="338" cy="236" r="12" fill="#c9b48a" />
+            <path d="M216 292h80l-10 116c-1 14-13 24-27 24h-6c-14 0-26-10-27-24z" fill="#f6f1e6" />
+          </svg>
+          <span class="brand-text">
+            <span class="brand-name">{brand.name}</span>
+            <span class="brand-tagline">{brand.tagline}</span>
+          </span>
+        </a>
+        <a class="head-button" href={hrefFor({ name: 'about' })} aria-label="About this app" data-test="about-button"><Icon name="info" size={22} /></a>
+      </div>
     </header>
   );
 }
 
-/** A tab opens its section from the start (the guide unsearched, Identify with no answers). */
-function tabHref(name: (typeof TABS)[number]['name']): string {
-  if (name === 'guide' || name === 'identify') return hrefFor({ name, query: '' });
-  return hrefFor({ name });
+/** The five sections at the foot of every page but the home page, as the dashboard's tab buttons: picture above word. */
+function SectionBar({ active }: { active: SectionName | null }) {
+  return (
+    <nav class="tabs" aria-label="Sections">
+      {SECTIONS.map((s) => (
+        <a key={s.name} class="tab-btn" href={sectionHref(s.name)} aria-current={active === s.name ? 'page' : undefined}>
+          <Icon name={s.icon} size={20} /><span>{s.label}</span>
+        </a>
+      ))}
+    </nav>
+  );
 }
 
 function screen(route: Route) {
   switch (route.name) {
+    case 'home': return <Home />;
+    case 'map': return <MapHome />;
     case 'guide': return <Guide query={route.query} />;
     case 'species': return <SpeciesPage slug={route.slug} />;
     case 'learn': return <Learn />;
@@ -63,7 +75,7 @@ function screen(route: Route) {
     case 'find-new': return <FindNew />;
     case 'find': return <FindPage id={route.id} key={route.id} />;
     case 'find-go': return <FindGo id={route.id} key={route.id} />;
-    default: return <><h1>Not found</h1><p><a href="#/guide">Open the guide</a></p></>;
+    default: return <><h1>Not found</h1><p><a href={hrefFor({ name: 'home' })}>Back to the start</a></p></>;
   }
 }
 
@@ -78,19 +90,13 @@ export function App() {
     setRoute((r) => (JSON.stringify(r) === JSON.stringify(now) ? r : now));
     return () => removeEventListener('hashchange', onHash);
   }, []);
-  const active = route.name === 'species' ? 'guide' : route.name === 'find' || route.name === 'find-new' || route.name === 'find-go' ? 'finds' : route.name;
+  const home = route.name === 'home';
   return (
-    <div class="shell">
-      <Header />
+    <div class={`shell${home ? ' at-home' : ''}`}>
+      <Header home={home} />
       <UpdateBar addingFind={route.name === 'find-new'} />
       <main>{screen(route)}</main>
-      <nav class="tabs" aria-label="Sections">
-        {TABS.map((t) => (
-          <a key={t.name} href={tabHref(t.name)}
-            aria-current={active === t.name ? 'page' : undefined}>{t.label}</a>
-        ))}
-      </nav>
-      <p class="muted" style="text-align:center;font-size:12px"><a href="#/about">About</a></p>
+      {!home && <SectionBar active={sectionOf(route)} />}
     </div>
   );
 }

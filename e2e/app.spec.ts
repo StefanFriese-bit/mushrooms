@@ -29,10 +29,10 @@ test.beforeEach(async () => { site = await startServer(DIST); });
 test.afterEach(async () => { await site.stop(); });
 
 test('every species is in the guide, and no screen calls the app a test version', async ({ page }) => {
-  await page.goto(site.url);
+  await page.goto(`${site.url}#/guide`);
   await expect(page.locator('[data-test=species-row]')).toHaveCount(ALL.length);
   expect(await page.title()).not.toMatch(TEST_WORDS);
-  for (const route of ['#/guide', '#/identify', '#/scan', '#/finds', '#/learn', '#/about', '#/species/deathcap']) {
+  for (const route of ['#/guide', '#/identify', '#/scan', '#/map', '#/finds', '#/learn', '#/about', '#/species/deathcap']) {
     await page.goto(`${site.url}${route}`);
     await expect(page.getByRole('heading', { level: 1 }).first()).toBeVisible();
     expect(await page.locator('body').innerText()).not.toMatch(TEST_WORDS);
@@ -76,6 +76,8 @@ test('works with the server switched off once it has been opened', async ({ page
   await site.stop();
   await page.reload();
   await expect(page.locator('header.app-header')).toContainText(brand.name);
+  await expect(page.locator('[data-test=home] a')).toHaveCount(5);
+  await page.locator('[data-test=home-guide]').click();
   await expect(page.locator('[data-test=species-row]')).toHaveCount(ALL.length);
   await page.goto(`${site.url}#/species/deathcap`);
   await expect(page.getByRole('heading', { name: 'Deathcap' })).toBeVisible();
@@ -86,13 +88,39 @@ test('About says whether the phone keeps the data (the app asks at start)', asyn
   await expect(page.getByText(/Storage kept by the phone: (yes|not yet|not supported in this browser)$/)).toBeVisible();
 });
 
-test('the header shows the name and tagline from src/brand.json, and takes you to the guide', async ({ page }) => {
+test('the home page: the five sections in Stefan\'s order, the Map first, and no bar at the foot', async ({ page }) => {
+  await page.goto(site.url);
+  const buttons = page.locator('[data-test=home] a');
+  await expect(buttons).toHaveText(['Map', 'Scan', 'Guide', 'Identify', 'Learn']);
+  await expect(page.locator('nav.tabs')).toHaveCount(0);
+  await expect(page.locator('[data-test=home-button]')).toHaveCount(0); // already home
+  expect(await page.title()).toBe(brand.name);
+  // The Map offers two things: save where he stands, or see the map.
+  await page.locator('[data-test=home-map]').click();
+  await expect(page.getByRole('heading', { name: 'Map', exact: true })).toBeVisible();
+  await expect(page.locator('[data-test=save-location]')).toContainText('Save a location');
+  await expect(page.locator('[data-test=view-map]')).toContainText('View map');
+  await expect(page.locator('[data-test=saved-count]')).toHaveText('No saved locations yet');
+  // Every other page has the five sections at its foot, its own lit, in the same order.
+  const bar = page.locator('nav.tabs a');
+  await expect(bar).toHaveText(['Map', 'Scan', 'Guide', 'Identify', 'Learn']);
+  await expect(page.locator('nav.tabs a[aria-current=page]')).toHaveText('Map');
+  await bar.filter({ hasText: 'Learn' }).click();
+  await expect(page.locator('nav.tabs a[aria-current=page]')).toHaveText('Learn');
+});
+
+test('the header shows the name and tagline from src/brand.json; Home goes home, the i opens About', async ({ page }) => {
   await page.goto(`${site.url}#/learn`);
   const header = page.locator('header.app-header');
   await expect(header).toContainText(brand.name);
   await expect(header).toContainText(brand.tagline);
-  await header.getByRole('link').click();
-  await expect(page.locator('[data-test=species-row]')).toHaveCount(ALL.length);
+  await header.locator('[data-test=about-button]').click();
+  await expect(page.getByRole('heading', { name: 'About' })).toBeVisible();
+  await header.locator('[data-test=home-button]').click();
+  await expect(page.locator('[data-test=home] a')).toHaveCount(5);
+  await page.goto(`${site.url}#/species/deathcap`);
+  await header.getByRole('link', { name: `${brand.name}, home` }).click();
+  await expect(page.locator('[data-test=home] a')).toHaveCount(5);
 });
 
 test('the hidden speed test runs the scan model and names the Deathcap from its own photo', async ({ page }) => {
@@ -177,46 +205,58 @@ test('Check on a deadly species: its own features are red; an edible lookalike\'
   await expect(verdict).toContainText('Treat your mushroom as Deathcap: do not eat it');
 });
 
-// Finds: no real map service in tests — the map style is a plain background, so only the app's own code is tested.
+// The Map: no real map service in tests — the map style is a plain background, so only the app's own code is tested.
 const PLAIN_MAP = { version: 8, sources: {}, layers: [{ id: 'bg', type: 'background', paint: { 'background-color': '#e8efe0' } }] };
 const PHOTO = fileURLToPath(new URL('../public/photos/chanterelle/1.webp', import.meta.url));
-test.describe('Finds', () => {
+test.describe('Map', () => {
   test.use({ serviceWorkers: 'block', geolocation: { latitude: 51.6588, longitude: 0.0466, accuracy: 7 }, permissions: ['geolocation'] });
   test.beforeEach(async ({ page }) => {
     await page.route('https://tiles.openfreemap.org/**', (r) => (r.request().url().includes('/styles/') ? r.fulfill({ json: PLAIN_MAP }) : r.fulfill({ status: 404 })));
   });
 
-  test('a find saves its GPS spot, photo, species and notes on the phone, and "Take me there" walks to it', async ({ page }) => {
+  test('Save a location keeps the exact spot, a description and a photo on the phone; its pin offers Take me there', async ({ page }) => {
     const hosts = new Set<string>();
     page.on('request', (r) => { const u = new URL(r.url()); if (/^https?:$/.test(u.protocol)) hosts.add(u.host); }); // blob: = in the phone's memory
-    await page.goto(`${site.url}#/finds`);
-    await page.getByRole('link', { name: 'Add a find here' }).click();
+    await page.goto(site.url);
+    await page.locator('[data-test=home-map]').click();
+    await page.locator('[data-test=save-location]').click();
+    await expect(page.getByRole('heading', { name: 'Save a location' })).toBeVisible();
     await expect(page.locator('[data-test=where]')).toContainText('Your position, within 7 m', { timeout: 15000 });
-    await page.locator('input[type=file]').setInputFiles(PHOTO);
+    await page.getByLabel('Description').fill('Chanterelles, a dozen\nunder the big beech by the stream');
+    await page.getByLabel('Photo').setInputFiles(PHOTO);
     await expect(page.locator('.thumbs img')).toHaveCount(1);
-    await page.getByLabel('What it is').selectOption('Cantharellus cibarius');
-    await page.getByLabel('Notes').fill('Under beech, by the stream.');
-    await page.getByRole('button', { name: 'Save the find' }).click();
-    await expect(page.getByRole('heading', { name: 'Chanterelle', exact: true })).toBeVisible();
+    await page.getByRole('button', { name: 'Save location' }).click();
+    await expect(page.locator('[data-test=saved-note]')).toHaveText('Location saved on this phone.');
+    await expect(page.getByRole('heading', { name: 'Chanterelles, a dozen', exact: true })).toBeVisible();
+    await expect(page.getByText('under the big beech by the stream')).toBeVisible();
     await expect(page.locator('[data-test=take-me-there]')).toHaveAttribute('href', 'https://maps.apple.com/?daddr=51.65880,0.04660&dirflg=w');
-    await expect(page.getByText('Under beech, by the stream.')).toBeVisible();
     await expect(page.locator('.photos img')).toHaveCount(1);
     await page.reload();
-    await expect(page.getByRole('heading', { name: 'Chanterelle', exact: true })).toBeVisible();
-    await page.goto(`${site.url}#/finds`);
+    await expect(page.getByRole('heading', { name: 'Chanterelles, a dozen', exact: true })).toBeVisible();
+    await expect(page.locator('[data-test=saved-note]')).toHaveCount(0); // said once, straight after saving
+    await page.goto(`${site.url}#/map`);
+    await expect(page.locator('[data-test=saved-count]')).toHaveText('1 saved location, and the way back to each');
+    await page.locator('[data-test=view-map]').click();
     await expect(page.locator('[data-test=find-row]')).toHaveCount(1);
-    await expect(page.locator('[data-test=map-pin]')).toHaveCount(1);
-    // Spec 9: his finds go nowhere — the only addresses are the app's own and the map's.
+    await expect(page.locator('[data-test=find-row] .row-title')).toHaveText('Chanterelles, a dozen');
+    await page.locator('[data-test=map-pin]').click();
+    const go = page.locator('.pin-pop-go');
+    await expect(go).toHaveText('Take me there');
+    await go.click();
+    await expect(page.getByRole('heading', { name: 'Back to: Chanterelles, a dozen' })).toBeVisible();
+    await expect(page.locator('[data-test=go-distance]')).toHaveText('You are there', { timeout: 15000 });
+    // Spec 9: his locations go nowhere — the only addresses are the app's own and the map's.
     expect([...hosts].filter((h) => h !== new URL(site.url).host && h !== 'tiles.openfreemap.org')).toEqual([]);
   });
 
-  test('Find it again: how far and which way, then "you are there" with its photos; its grid reference and Plus Code', async ({ page, context }) => {
+  test('Take me there: how far and which way, then "you are there" with its photos; its grid reference and Plus Code', async ({ page, context }) => {
     const spot = { lat: 51.6588, lon: 0.0466 };
     await page.goto(`${site.url}#/finds/new`);
     await expect(page.locator('[data-test=where]')).toContainText('within 7 m', { timeout: 15000 });
-    await page.locator('input[type=file]').setInputFiles(PHOTO);
+    await page.getByLabel('Photo').setInputFiles(PHOTO);
     await expect(page.locator('.thumbs img')).toHaveCount(1);
-    await page.getByRole('button', { name: 'Save the find' }).click();
+    await page.getByRole('button', { name: 'Save location' }).click();
+    await expect(page.getByRole('heading', { name: 'Saved location', exact: true })).toBeVisible();
     await expect(page.locator('[data-test=os-grid]')).toHaveText(osGridRef(spot)!);
     await expect(page.locator('[data-test=plus-code]')).toHaveText(plusCode(spot));
     // He walks away: 40 m south of it.
@@ -234,39 +274,64 @@ test.describe('Finds', () => {
     await expect(page.locator('[data-test=go-there] img')).toHaveCount(1);
   });
 
-  test('backup and restore: one file brings a deleted find back with its photo; a damaged file changes nothing', async ({ page }, info) => {
+  test('the map zooms in until a few metres fill the screen', async ({ page }) => {
+    await page.goto(`${site.url}#/finds/new`);
+    await expect(page.locator('[data-test=where]')).toContainText('within 7 m', { timeout: 15000 });
+    await page.getByRole('button', { name: 'Save location' }).click();
+    await expect(page.getByRole('heading', { name: 'Saved location', exact: true })).toBeVisible();
+    const zoomIn = page.locator('.maplibregl-ctrl-zoom-in');
+    await expect(zoomIn).toBeVisible();
+    // From 18, one step per press (each press animates: the next waits for it), until the closest zoom stops the button.
+    // A press can find the button already off: the last animation reached the closest zoom between the look and the press.
+    for (let i = 0; i < 10 && !(await zoomIn.isDisabled()); i++) {
+      await zoomIn.click({ timeout: 2000 }).catch(() => {});
+      await page.waitForTimeout(450);
+    }
+    await expect(zoomIn).toBeDisabled();
+    await expect(page.locator('.maplibregl-ctrl-scale')).toHaveText(/^\d+\s(cm|m)$/); // MapLibre writes a no-break space
+    const metres = await page.locator('.maplibregl-ctrl-scale').evaluate((el) => {
+      const t = el.textContent ?? ''; const n = parseFloat(t); return t.endsWith('cm') ? n / 100 : n;
+    });
+    expect(metres).toBeLessThanOrEqual(1); // the scale bar (at most 100 points wide) stands for a metre or less
+  });
+
+  test('backup and restore: one file brings a deleted location back with its photo; a damaged file changes nothing', async ({ page }, info) => {
     await page.addInitScript(() => { Object.defineProperty(navigator, 'canShare', { value: undefined }); }); // the download route
     await page.goto(`${site.url}#/finds/new`);
     await expect(page.locator('[data-test=where]')).toContainText('within 7 m', { timeout: 15000 });
-    await page.locator('input[type=file]').setInputFiles(PHOTO);
+    await page.getByLabel('Photo').setInputFiles(PHOTO);
     await expect(page.locator('.thumbs img')).toHaveCount(1);
-    await page.getByLabel('What it is').selectOption('Cantharellus cibarius');
-    await page.getByRole('button', { name: 'Save the find' }).click();
-    await expect(page.getByRole('heading', { name: 'Chanterelle', exact: true })).toBeVisible();
+    await page.getByLabel('Description').fill('Chanterelles by the stream');
+    await page.getByRole('button', { name: 'Save location' }).click();
+    await expect(page.getByRole('heading', { name: 'Chanterelles by the stream', exact: true })).toBeVisible();
+    await page.goto(`${site.url}#/map`);
+    await expect(page.locator('[data-test=backup-reminder]')).toContainText('1 location is not in a backup yet');
     await page.goto(`${site.url}#/finds`);
-    await expect(page.locator('[data-test=backup-reminder]')).toContainText('1 find is not in a backup yet');
-    const [download] = await Promise.all([page.waitForEvent('download'), page.getByRole('button', { name: 'Back up 1 find' }).click()]);
-    expect(download.suggestedFilename()).toMatch(/^mushroom-finds-\d{4}-\d{2}-\d{2}\.zip$/);
+    const [download] = await Promise.all([page.waitForEvent('download'), page.getByRole('button', { name: 'Back up 1 location' }).click()]);
+    expect(download.suggestedFilename()).toMatch(/^mycelium-backup-\d{4}-\d{2}-\d{2}\.zip$/);
     const file = info.outputPath('backup.zip');
     await download.saveAs(file);
-    await expect(page.locator('[data-test=backup-reminder]')).toHaveCount(0);
     await expect(page.locator('[data-test=backup]')).toContainText('Last backup:');
-    // The find is deleted …
-    await page.locator('[data-test=find-row]').first().click();
+    await page.goto(`${site.url}#/map`);
+    await expect(page.locator('[data-test=backup-reminder]')).toHaveCount(0);
+    // The location is deleted …
+    await page.goto(`${site.url}#/finds`);
+    await page.locator('[data-test=find-row] .row-main').first().click();
     page.once('dialog', (d) => d.accept());
-    await page.getByRole('button', { name: 'Delete this find' }).click();
+    await page.getByRole('button', { name: 'Delete this location' }).click();
+    await expect(page.getByRole('heading', { name: 'View map' })).toBeVisible();
     await expect(page.locator('[data-test=find-row]')).toHaveCount(0);
     // … and the file brings it back, photo and all.
     await page.getByLabel('Backup file to restore').setInputFiles(file);
-    await expect(page.locator('[data-test=backup-said]')).toHaveText('Restored 1 find.');
+    await expect(page.locator('[data-test=backup-said]')).toHaveText('Restored 1 location.');
     await expect(page.locator('[data-test=find-row]')).toHaveCount(1);
-    await page.locator('[data-test=find-row]').first().click();
-    await expect(page.getByRole('heading', { name: 'Chanterelle', exact: true })).toBeVisible();
+    await page.locator('[data-test=find-row] .row-main').first().click();
+    await expect(page.getByRole('heading', { name: 'Chanterelles by the stream', exact: true })).toBeVisible();
     await expect(page.locator('.photos img')).toHaveCount(1);
     // Restoring again adds nothing twice; a damaged file changes nothing.
     await page.goto(`${site.url}#/finds`);
     await page.getByLabel('Backup file to restore').setInputFiles(file);
-    await expect(page.locator('[data-test=backup-said]')).toHaveText('Restored 0 finds; 1 find was already on this phone and left as it was.');
+    await expect(page.locator('[data-test=backup-said]')).toHaveText('Restored 0 locations; 1 location was already on this phone and left as it was.');
     const bytes = readFileSync(file);
     await page.getByLabel('Backup file to restore').setInputFiles({ name: 'broken.zip', mimeType: 'application/zip', buffer: bytes.subarray(0, bytes.length - 60) });
     await expect(page.locator('[data-test=backup-said]')).toHaveText("That file can't be restored. Nothing was changed.");
@@ -289,7 +354,7 @@ test.describe('Finds', () => {
     await page.goto(`${site.url}#/finds`);
     await page.getByLabel('Backup file to restore').setInputFiles(file);
     await expect(page.locator('[data-test=find-row]')).toHaveCount(4);
-    const which = page.getByLabel('Which finds to show');
+    const which = page.getByLabel('Which locations to show');
     await which.selectOption('Cantharellus cibarius');
     await expect(page.locator('[data-test=find-row]')).toHaveCount(2);
     await expect(page.locator('[data-test=filter-count]')).toContainText('Showing 2 of 4');
@@ -305,31 +370,36 @@ test.describe('Finds', () => {
     await expect(page.locator('[data-test=find-row]')).toHaveCount(4);
   });
 
-  test('a find can be changed and deleted', async ({ page }) => {
+  test('a saved location can be described and identified afterwards, and deleted', async ({ page }) => {
     await page.goto(`${site.url}#/finds/new`);
     await expect(page.locator('[data-test=where]')).toContainText('within 7 m', { timeout: 15000 });
-    await page.getByRole('button', { name: 'Save the find' }).click();
-    await expect(page.getByRole('heading', { name: 'Not identified yet' })).toBeVisible();
-    await page.getByRole('button', { name: 'Change what it is or the notes' }).click();
+    await page.getByRole('button', { name: 'Save location' }).click();
+    await expect(page.getByRole('heading', { name: 'Saved location', exact: true })).toBeVisible();
+    await page.getByRole('button', { name: 'Edit the description or what it is' }).click();
     await page.getByLabel('What it is').selectOption('Macrolepiota procera');
     await page.getByRole('button', { name: 'Save changes' }).click();
-    await expect(page.getByRole('heading', { name: 'Parasol', exact: true })).toBeVisible();
+    await expect(page.getByRole('heading', { name: 'Parasol', exact: true })).toBeVisible(); // no description: the species
+    await page.getByRole('button', { name: 'Edit the description or what it is' }).click();
+    await page.getByLabel('Description').fill('Three parasols by the gate');
+    await page.getByRole('button', { name: 'Save changes' }).click();
+    await expect(page.getByRole('heading', { name: 'Three parasols by the gate', exact: true })).toBeVisible();
+    await expect(page.getByText('What it is: Parasol')).toBeVisible();
     page.once('dialog', (d) => d.accept());
-    await page.getByRole('button', { name: 'Delete this find' }).click();
-    await expect(page.getByRole('heading', { name: 'Finds' })).toBeVisible();
+    await page.getByRole('button', { name: 'Delete this location' }).click();
+    await expect(page.getByRole('heading', { name: 'View map' })).toBeVisible();
     await expect(page.locator('[data-test=find-row]')).toHaveCount(0);
   });
 });
 
-test.describe('Finds with no map service', () => {
+test.describe('Map with no map service', () => {
   test.use({ serviceWorkers: 'block', geolocation: { latitude: 51.6588, longitude: 0.0466, accuracy: 7 }, permissions: ['geolocation'] });
-  test('with no stored map and no signal, the finds and the position still show on a plain grid, with a scale', async ({ page }) => {
+  test('with no stored map and no signal, the locations and the position still show on a plain grid, with a scale', async ({ page }) => {
     await page.route('https://tiles.openfreemap.org/**', (r) => r.abort());
     await page.route('https://tile.openstreetmap.org/**', (r) => r.abort());
     await page.goto(`${site.url}#/finds/new`);
     await expect(page.locator('[data-test=where]')).toContainText('within 7 m', { timeout: 15000 });
-    await page.getByRole('button', { name: 'Save the find' }).click();
-    await expect(page.getByRole('heading', { name: 'Not identified yet' })).toBeVisible();
+    await page.getByRole('button', { name: 'Save location' }).click();
+    await expect(page.getByRole('heading', { name: 'Saved location', exact: true })).toBeVisible();
     await page.goto(`${site.url}#/finds`);
     const wrap = page.locator('.map-wrap');
     await expect(wrap).toHaveAttribute('data-map-mode', 'fallback', { timeout: 15000 });
@@ -340,7 +410,7 @@ test.describe('Finds with no map service', () => {
   });
 });
 
-test.describe('Finds without location', () => {
+test.describe('Map without location', () => {
   test.use({ serviceWorkers: 'block', permissions: [] });
   test('with location refused, the pin is placed by hand on the map', async ({ page }) => {
     await page.route('https://tiles.openfreemap.org/**', (r) => (r.request().url().includes('/styles/') ? r.fulfill({ json: PLAIN_MAP }) : r.fulfill({ status: 404 })));
@@ -348,7 +418,7 @@ test.describe('Finds without location', () => {
     await expect(page.locator('[data-test=where]')).toContainText(/Location is off|No GPS fix/, { timeout: 35000 });
     await page.locator('[data-test=map] canvas').click({ position: { x: 120, y: 90 } });
     await expect(page.locator('[data-test=where]')).toHaveText('Placed by hand on the map');
-    await page.getByRole('button', { name: 'Save the find' }).click();
+    await page.getByRole('button', { name: 'Save location' }).click();
     await expect(page.getByText('placed by hand')).toBeVisible();
   });
 });

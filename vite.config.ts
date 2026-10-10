@@ -67,9 +67,9 @@ export default defineConfig({
       manifest: {
         name: brand.name,
         short_name: brand.shortName,
-        description: 'A UK mushroom field guide.',
-        theme_color: '#2f3a2f',
-        background_color: '#ffffff',
+        description: 'A UK mushroom field guide, with your own map of where you found them.',
+        theme_color: '#3b6da8',
+        background_color: '#f7f8fa',
         display: 'standalone',
         start_url: '/mushrooms/',
         scope: '/mushrooms/',

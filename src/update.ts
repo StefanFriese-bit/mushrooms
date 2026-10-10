@@ -3,7 +3,7 @@ import { progressStep, type SwMessage } from './sw/messages';
 
 // How a new version reaches the phone (spec 4.3), and what he is told about it. The worker (src/sw/sw.ts) downloads a
 // new version in the background and reports how far it has got; once it is complete it waits, and he decides when to
-// restart into it — never in the middle of something (the bar is not offered while a find is being added).
+// restart into it — never in the middle of something (the bar is not offered while a location is being saved).
 // The first time the app is opened the same download fills the phone; he is told when the guide works without signal.
 
 export type UpdateState =
@@ -29,7 +29,7 @@ export function onUpdate(listener: (s: UpdateState) => void): () => void {
   return () => listeners.delete(listener);
 }
 
-/** What the bar says, or null for no bar. `addingFind`: the "Add a find" screen is open (no Restart offered there). */
+/** What the bar says, or null for no bar. `addingFind`: the "Save a location" screen is open (no Restart offered there). */
 export function updateText(s: UpdateState, addingFind: boolean): { text: string; percent?: number; action?: 'restart' | 'dismiss' } | null {
   switch (s.kind) {
     case 'idle': return null;

@@ -214,7 +214,7 @@ export function Scan() {
           <p class="card">A shortlist is not an identification. The next step is Check: your mushroom against the
             species and the ones it is mistaken for, feature by feature.</p>
           <p class="muted small">{recordWords(S.record)}</p>
-          <p><button type="button" class="small-button" onClick={saveAsFind}>Save these photos as a find</button>{' '}
+          <p><button type="button" class="small-button" onClick={saveAsFind}>Save these photos with this location</button>{' '}
             <button type="button" class="small-button" onClick={() => { setFiles([null, null, null]); setResult(null); }}>Scan another</button></p>
         </section>
       )}

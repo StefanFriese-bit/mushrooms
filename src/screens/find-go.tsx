@@ -7,7 +7,7 @@ import { allowCompass, arrowTurn, followHeading, type Heading } from '../finds/c
 import { FindsMap } from './finds-map';
 import { findLabel, useNames } from './finds';
 
-// Back to a find (spec 7), the way a geocaching app does it: how far, which way (an arrow that follows the phone's
+// Take me there (spec 7): back to a saved location, the way a geocaching app does it: how far, which way (an arrow that follows the phone's
 // compass), and — once he is as close as GPS can tell — "look around here" with the find's own photos. Everything works
 // with no signal: GPS needs only the sky, and the compass needs nothing. The screen is kept awake while it is open.
 type CompassState = 'off' | 'asking' | 'on' | 'denied' | 'none';
@@ -47,11 +47,11 @@ export function FindGo({ id }: { id: string }) {
   }, [find?.id]);
 
   if (find === undefined) return <p class="muted">Loading…</p>;
-  if (find === null) return <><h1>Not found</h1><p>That find is not on this phone. <a href={hrefFor({ name: 'finds' })}>Back to your finds</a></p></>;
+  if (find === null) return <><h1>Not found</h1><p>That location is not on this phone. <a href={hrefFor({ name: 'finds' })}>Back to the map</a></p></>;
   const label = findLabel(find, names);
   if (!find.spot) {
-    return <><h1>Back to: {label}</h1><p>No spot was saved with this find, so there is nothing to walk back to.</p>
-      <p><a href={hrefFor({ name: 'find', id: find.id })}>Back to the find</a></p></>;
+    return <><h1>Back to: {label}</h1><p>No position was saved with this location, so there is nothing to walk back to.</p>
+      <p><a href={hrefFor({ name: 'find', id: find.id })}>Back to the location</a></p></>;
   }
   const spot = find.spot;
   const distance = here ? distanceM(here, spot) : null;
@@ -89,7 +89,7 @@ export function FindGo({ id }: { id: string }) {
         {gpsProblem && <p class="card" role="alert">{gpsProblem}</p>}
         <p class="muted small">
           {here ? <>Your position: {sayAccuracy(here.accuracy)}. </> : null}
-          The find was saved {spot.accuracy === null ? 'by placing a pin by hand' : sayAccuracy(spot.accuracy)}.
+          The location was saved {spot.accuracy === null ? 'by placing a pin by hand' : sayAccuracy(spot.accuracy)}.
         </p>
         {compass === 'off' && <p><button type="button" class="small-button" onClick={turnOn}>Use the compass</button></p>}
         {compass === 'asking' && <p class="muted small">Asking for the compass…</p>}
@@ -103,7 +103,8 @@ export function FindGo({ id }: { id: string }) {
       {there && (
         <div class="card" data-test="go-there">
           <p><strong>You are as close as GPS can tell</strong> ({sayAccuracy(Math.max(5, (here?.accuracy ?? 0) + (spot.accuracy ?? 0)))}).
-            Look around here — these are your photos of it:</p>
+            Look around here{srcs.length > 0 ? ' — these are your photos of it:' : '.'}</p>
+          {find.notes && <p class="description">{find.notes}</p>}
           {srcs.length > 0 && (
             <div class="photos">{srcs.map((s, i) => <figure key={s}><img src={s} alt={`Photo ${i + 1}`} /></figure>)}</div>
           )}
@@ -111,9 +112,9 @@ export function FindGo({ id }: { id: string }) {
       )}
       <FindsMap pins={[{ id: find.id, lat: spot.lat, lon: spot.lon, label, href: hrefFor({ name: 'find', id: find.id }), accuracy: spot.accuracy }]}
         here={here} />
-      <p class="muted small">Under trees GPS is less exact than in the open, and the find may be anywhere inside its
-        circle. Paths in Apple Maps: <a href={appleMapsLink(spot)}>directions</a> (needs signal).</p>
-      <p><a href={hrefFor({ name: 'find', id: find.id })}>Back to the find</a></p>
+      <p class="muted small">Under trees GPS is less exact than in the open, and the mushroom may be anywhere inside its
+        circle. Paths in Apple Maps: <a href={appleMapsLink(spot)}>walking directions</a> (needs a signal).</p>
+      <p><a href={hrefFor({ name: 'find', id: find.id })}>Back to the location</a></p>
     </>
   );
 }

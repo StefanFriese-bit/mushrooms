@@ -226,6 +226,22 @@ Both thresholds are set from the test, not by hand.
 
 ## 8. Screens
 
+**Redesign, Stefan 10/10/2026.** The app is called **The Mycelium Network** (home-screen label "Mycelium", from
+`src/brand.json`) and looks like his business dashboard: a steel-blue band at the top (#3b6da8), a light grey page with
+white cards on hairline borders, light-blue buttons with the picture above or beside the word, one blue for actions;
+always light. Opening the app shows the **home page: five buttons and nothing else, in his order — Map (first and
+largest, "the most important space"), Scan, Guide, Identify, Learn** (`src/sections.ts` is the one list). Every other
+page has a Home button in the band and the same five as a bar at its foot. "Finds" is now **Map** (his word): two
+choices, **Save a location** (the spot where he stands, steadied while the screen is open, or placed by hand; a
+description and a photo, both optional; what it is can be added later on its page) and **View map** (every saved
+location as a pin with its accuracy circle, his position, the list; a pin or a row offers **Take me there**). The map
+zooms to 22 (about 4.5 m of ground across a phone's screen). In the code and the backup file a saved location is still
+a "find", so older backups restore.
+
+- **Home:** the five sections (above).
+- **Map:** Save a location · View map · a saved location's page (photos, Take me there, the map, OS grid reference and
+  Plus Code, description, what it is, delete) · Take me there (arrow, distance, compass, "You are there" with its
+  photos and description).
 - **Scan:** take or pick up to three photos (top, underneath, base) → the shortlist (6.2) → what to check next → Check.
   *What to check next* (Stefan, 09/10/2026 — free and offline, instead of a paid identifier): the shortlist's species
   that have a page, and the guide's other species of a group the scan names, compared with Identify's questions (best
@@ -236,7 +252,6 @@ Both thresholds are set from the test, not by hand.
   it confirmed" and "Send to iNaturalist".
 - **Guide:** search, "in season now", the species pages (5.1).
 - **Identify:** simple questions one at a time, each with drawings; the list narrows; "not sure" is always allowed.
-- **Finds:** map and list, "add a find here", the find's own page.
 - **Learn:** the top points for identifying any mushroom, how to take a spore print, the deadly families to know,
   and the UK foraging rules (landowner permission, protected species, taking only a little).
 - **About:** version, credits (model, photos, maps), licences, storage state, backup.

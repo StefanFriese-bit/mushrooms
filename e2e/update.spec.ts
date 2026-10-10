@@ -8,7 +8,7 @@ import { startServer } from './server';
 // How a new version reaches the phone (src/update.ts, src/sw/sw.ts). The automatic update of 06/10/2026 never finished
 // on his iPhone: the worker of that time downloaded a new version and then waited until every window of the app was
 // closed — and nothing told it to go on. Here: a first visit fills the phone and says so; a publish downloads in the
-// background, waits for his Restart (a reload does NOT switch), is never offered on "Add a find", and Restart switches.
+// background, waits for his Restart (a reload does NOT switch), is never offered on "Save a location", and Restart switches.
 const DIST = fileURLToPath(new URL('../dist', import.meta.url));
 
 /** The next version: the same build with a marked index.html and that file's new revision in the worker's list, the way
@@ -29,7 +29,7 @@ function nextBuild(): string {
 const isNext = (page: import('@playwright/test').Page) =>
   page.evaluate(() => document.querySelector('meta[name=build]')?.getAttribute('content') === 'next').catch(() => false);
 
-test('a first visit fills the phone and says so; a new version waits for Restart, never on "Add a find"', async ({ page }) => {
+test('a first visit fills the phone and says so; a new version waits for Restart, never on "Save a location"', async ({ page }) => {
   test.setTimeout(240_000);
   let root = DIST;
   const next = nextBuild();
@@ -63,7 +63,7 @@ test('a first visit fills the phone and says so; a new version waits for Restart
     expect(await isNext(page)).toBe(false);
 
     await page.goto(`${site.url}#/finds/new`);
-    await expect(page.getByRole('heading', { name: 'Add a find' })).toBeVisible();
+    await expect(page.getByRole('heading', { name: 'Save a location' })).toBeVisible();
     await expect(bar).toHaveCount(0); // never offered while a find is being added
     await page.goto(`${site.url}#/guide`);
     await expect(bar).toContainText('A new version is ready');

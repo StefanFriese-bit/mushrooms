@@ -2,9 +2,14 @@ import { describe, expect, it } from 'vitest';
 import { hrefFor, parseHash } from './router.ts';
 
 describe('parseHash', () => {
-  it('opens the guide by default', () => {
-    expect(parseHash('')).toEqual({ name: 'guide', query: '' });
-    expect(parseHash('#/')).toEqual({ name: 'guide', query: '' });
+  it('opens the home page by default', () => {
+    expect(parseHash('')).toEqual({ name: 'home' });
+    expect(parseHash('#/')).toEqual({ name: 'home' });
+    expect(hrefFor({ name: 'home' })).toBe('#/');
+  });
+  it('opens the guide at its own address', () => {
+    expect(parseHash('#/guide')).toEqual({ name: 'guide', query: '' });
+    expect(parseHash('#/guide/extra')).toEqual({ name: 'not-found', path: '/guide/extra' });
   });
   it('reads the guide search', () => {
     expect(parseHash('#/guide?q=cap')).toEqual({ name: 'guide', query: 'cap' });
@@ -13,7 +18,7 @@ describe('parseHash', () => {
     expect(parseHash('#/species/field-mushroom')).toEqual({ name: 'species', slug: 'field-mushroom' });
   });
   it('reads the other tabs', () => {
-    for (const n of ['scan', 'finds', 'learn', 'about', 'scan-speed'] as const) expect(parseHash(`#/${n}`)).toEqual({ name: n });
+    for (const n of ['map', 'scan', 'finds', 'learn', 'about', 'scan-speed'] as const) expect(parseHash(`#/${n}`)).toEqual({ name: n });
   });
   it('keeps the Identify answers as they are written', () => {
     expect(parseHash('#/identify')).toEqual({ name: 'identify', query: '' });
@@ -32,8 +37,9 @@ describe('parseHash', () => {
     expect(parseHash('#/finds/2f1c/go')).toEqual({ name: 'find-go', id: '2f1c' }); // walking back to it
     expect(hrefFor({ name: 'find-go', id: '2f1c' })).toBe('#/finds/2f1c/go');
   });
-  it('reports an unknown address', () => {
+  it('reports an unknown address, and sends it home', () => {
     expect(parseHash('#/nowhere')).toEqual({ name: 'not-found', path: '/nowhere' });
+    expect(hrefFor({ name: 'not-found', path: '/nowhere' })).toBe('#/');
   });
 });
 

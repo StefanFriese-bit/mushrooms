@@ -76,7 +76,7 @@ export function planRestore(onPhone: Set<string>, finds: Find[]): { add: Find[];
 }
 
 /** The file's name: the day it was made. */
-export const backupName = (made: Date) => `mushroom-finds-${made.toISOString().slice(0, 10)}.zip`;
+export const backupName = (made: Date) => `mycelium-backup-${made.toISOString().slice(0, 10)}.zip`;
 
 // When he last saved a backup and which finds it held — kept in the browser's small store, not in the finds database,
 // so this can never touch his finds. Lost (cleared) only means one reminder too many.
