@@ -55,20 +55,20 @@ function DogsSave({ old, onSaved }: { old: DogsSpot | null; onSaved: (d: DogsSpo
   return (
     <>
       <h1>Where the dogs are</h1>
-      <p class="muted">Tied them up? Save the spot here, then go foraging. When you are done, the Dogs button walks you back to
-        them: the arrow, the distance and the map, no signal needed.</p>
-      {old && <p class="muted small" data-test="dogs-replaces">The spot saved {sayDogsWhen(old.at)} is replaced when you save.
-        {' '}<a href={hrefFor({ name: 'dogs-go' })} onClick={askForCompassOnTap}>Take me to that one</a></p>}
-      <section class="card">
-        <h2>Where you are</h2>
-        <p data-test="where">{where}</p>
-        <FindsMap pick={{ spot, onPick: place }} />
-        <p class="muted small">Not quite right? Tap the map or drag the pin.</p>
-      </section>
-      {problem && <p class="card alert" role="alert">{problem}</p>}
+      <p data-test="where">{where}</p>
+      {/* The button on the first screen, above the map: he is holding the leads. */}
       <p><button type="button" class="big-button wide" disabled={!spot} onClick={save} data-test="dogs-save">
         <Icon name="paw" size={20} />Save the dogs' spot</button></p>
       {!spot && <p class="muted small">The button works once there is a position — or place the pin on the map.</p>}
+      {problem && <p class="card alert" role="alert">{problem}</p>}
+      {old && <p class="muted small" data-test="dogs-replaces">The spot saved {sayDogsWhen(old.at)} is replaced when you save.
+        {' '}<a href={hrefFor({ name: 'dogs-go' })} onClick={askForCompassOnTap}>Take me to that one</a></p>}
+      <section class="card">
+        <FindsMap pick={{ spot, onPick: place }} />
+        <p class="muted small">Not quite right? Tap the map or drag the pin, then save.</p>
+      </section>
+      <p class="muted small">Then go foraging. When you are done, tap Dogs and it walks you back to them: the arrow, the
+        distance and the map, no signal needed.</p>
     </>
   );
 }

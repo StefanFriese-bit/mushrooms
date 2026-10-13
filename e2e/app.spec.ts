@@ -658,6 +658,9 @@ test.describe('Dogs', () => {
     await expect(page.getByRole('heading', { name: 'Where the dogs are' })).toBeVisible();
     await expect(page.locator('nav.tabs a[aria-current=page]')).toHaveText('Dogs');
     await expect(page.locator('[data-test=where]')).toContainText('Your position, within 7 m', { timeout: 15000 });
+    // The button is on the first screen, above the bar at the foot: no scrolling with the leads in one hand.
+    const saveBox = (await page.locator('[data-test=dogs-save]').boundingBox())!;
+    expect(saveBox.y + saveBox.height).toBeLessThanOrEqual((await page.locator('nav.tabs').boundingBox())!.y);
     await page.locator('[data-test=dogs-save]').click();
     await expect(page.locator('[data-test=saved-note]')).toHaveText('The dogs\' spot is saved on this phone.');
     await expect(page.getByRole('heading', { name: 'The dogs', exact: true })).toBeVisible();
