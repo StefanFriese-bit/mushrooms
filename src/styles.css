@@ -382,8 +382,11 @@ a.result:active { background: var(--subtle); }
 .find-search { width: 100%; }
 /* A numbered pin on the planned walk (src/finds/walk.ts). The pin itself is drawn turned 45°, so its number is turned
    back again to stand upright. */
-.pin-stop { background: #1a73e8; }
-.pin-stop-n { display: block; transform: rotate(45deg); color: #fff; font: 700 13px/1 var(--font); text-align: center; margin-top: 4px; }
+/* ⚠ The number is NOT turned back: MapLibre puts its own transform on a marker's element, which replaces the 45° the
+   pin is drawn at in CSS — so on the map the pin is never actually turned, and counter-turning the digit laid it on
+   its back (13/10/2026). */
+.pin-stop { background: #1a73e8; display: flex; align-items: center; justify-content: center; }
+.pin-stop-n { color: #fff; font: 700 13px/1 var(--font); }
 /* The planned walk: its card on the map screen, and each stop's number down the list. */
 .walk-card { display: flex; flex-direction: column; gap: 6px; }
 .walk-card-do { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }

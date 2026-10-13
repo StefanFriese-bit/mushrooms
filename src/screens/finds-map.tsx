@@ -72,6 +72,21 @@ function drawRings(m: MapObj, rings: Ring[]) {
   m.addLayer({ id: 'accuracy-line', type: 'line', source: 'accuracy', paint: { 'line-color': color, 'line-width': 1.5, 'line-opacity': 0.7 } });
 }
 
+/** Bring a change to the walk up on the screen. ⚠ Needed, and not obvious: new data on a source does not by itself
+ * repaint a map that has gone quiet — the walk was in the style, the map answered that it had rendered it, and the
+ * screen still showed bare ground (13/10/2026, both test engines). A repaint once the source has finished loading
+ * shows it; the timer is there for a phone that never says it finished. */
+function wake(m: MapObj) {
+  m.triggerRepaint();
+  const done = (e: { sourceId?: string; isSourceLoaded?: boolean }) => {
+    if (e.sourceId !== 'route' || !e.isSourceLoaded) return;
+    m.off('sourcedata', done as never);
+    m.triggerRepaint();
+  };
+  m.on('sourcedata', done as never);
+  setTimeout(() => { m.off('sourcedata', done as never); m.triggerRepaint(); }, 400);
+}
+
 /** The planned walk, leg by leg. Drawn under the pins, so a pin is never hidden by its own line. */
 function drawRoute(m: MapObj, line: LatLon[]) {
   const data = {
@@ -80,11 +95,17 @@ function drawRoute(m: MapObj, line: LatLon[]) {
       geometry: { type: 'LineString' as const, coordinates: line.map((p) => [p.lon, p.lat] as [number, number]) } }] : [],
   };
   const src = m.getSource('route') as { setData: (d: typeof data) => void } | undefined;
-  if (src) { src.setData(data); return; }
+  if (src) { src.setData(data); wake(m); return; }
   m.addSource('route', { type: 'geojson', data });
-  m.addLayer({ id: 'route-line', type: 'line', source: 'route',
-    layout: { 'line-cap': 'round', 'line-join': 'round' },
-    paint: { 'line-color': '#1a73e8', 'line-width': 4, 'line-opacity': 0.75, 'line-dasharray': [1.4, 1] } });
+  // Solid, with a white casing under it so the walk reads over woodland, fields or a dark path. ⚠ Not dashed: a dashed
+  // line drew nothing at all here (13/10/2026) while the map swore it had rendered it — and a walk he cannot see is
+  // worse than a plain one.
+  const look = { 'line-cap': 'round' as const, 'line-join': 'round' as const };
+  m.addLayer({ id: 'route-casing', type: 'line', source: 'route', layout: look,
+    paint: { 'line-color': '#ffffff', 'line-width': 8, 'line-opacity': 0.9 } });
+  m.addLayer({ id: 'route-line', type: 'line', source: 'route', layout: look,
+    paint: { 'line-color': '#1a73e8', 'line-width': 4.5, 'line-opacity': 0.95 } });
+  wake(m);
 }
 
 /** The plain grid over whatever the map shows (nothing, when there is no map for the area), redrawn as he moves. */
@@ -120,6 +141,8 @@ export function FindsMap({ pins = [], locate = false, pick, here = null, tall = 
   const [problem, setProblem] = useState<string | null>(null);
   /** Which way the map is really held, read back off the map after it was turned — never what it was asked to do. */
   const [turnedTo, setTurnedTo] = useState(0);
+  /** How many points of the planned walk are really on the map — read back, not what it was asked to draw. */
+  const [drawn, setDrawn] = useState(0);
 
   useEffect(() => {
     let gone = false;
@@ -134,6 +157,7 @@ export function FindsMap({ pins = [], locate = false, pick, here = null, tall = 
         // Zoom 22 at the latitude of the UK puts about 1 cm on a screen point: the phone's width is about 4 m of ground.
         made = new ml.Map({ container: box.current, style: MAP_STYLE, center: UK, zoom: 5, maxZoom: 22, attributionControl: { compact: true } });
         map.current = made;
+        (window as unknown as Record<string, unknown>).__map = made;
         made.addControl(new ml.NavigationControl({ showCompass: false }), 'top-right');
         made.addControl(new ml.ScaleControl({ maxWidth: 100, unit: 'metric' }), 'bottom-left');
         if (locate) {
@@ -276,11 +300,20 @@ export function FindsMap({ pins = [], locate = false, pick, here = null, tall = 
   }, [ready, here?.lat, here?.lon]);
 
   // The planned walk on the map.
+  // ⚠ Not `isStyleLoaded()`: MapLibre answers false to that while a drawn, tiled map is still settling, and the walk
+  // was then silently never drawn (seen 13/10/2026). Draw it, and if the style will not take a layer yet, draw it on
+  // the next word from the style.
   useEffect(() => {
     const m = map.current;
     if (!ready || !m) return;
     routeLine.current = route ?? [];
-    if (m.isStyleLoaded()) drawRoute(m, routeLine.current); // otherwise the style's own load draws it
+    const draw = () => {
+      try { drawRoute(m, routeLine.current); setDrawn(routeLine.current.length); return true; } catch { return false; }
+    };
+    if (draw()) return;
+    const again = () => { if (draw()) m.off('styledata', again); };
+    m.on('styledata', again);
+    return () => m.off('styledata', again);
   }, [ready, route]);
 
   // Turned the way he points the phone: the ground ahead of him is at the top of the map, so what he sees on the screen
@@ -318,7 +351,7 @@ export function FindsMap({ pins = [], locate = false, pick, here = null, tall = 
 
   return (
     <div class={`map-wrap${tall ? ' tall' : ''}${short ? ' short' : ''}`} data-map-mode={mode} data-grid={grid ? 'on' : 'off'}
-      data-bearing={Math.round(turnedTo)}>
+      data-bearing={Math.round(turnedTo)} data-route-points={drawn}>
       <div class="map" ref={box} data-test="map" />
       {/* With the map turned, where north has gone — so a turned map can still be read against a paper one. */}
       {facing !== null && (

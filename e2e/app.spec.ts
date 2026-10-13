@@ -4,6 +4,7 @@ import { startServer } from './server';
 import brand from '../src/brand.json' with { type: 'json' };
 import { MODEL_FILES } from '../src/scan/model-files';
 import { readFileSync, readdirSync, writeFileSync } from 'node:fs';
+import sharp from 'sharp';
 import { packBackup } from '../src/finds/backup';
 import { narrow, QUESTIONS, UNSURE, type Answers } from '../src/identify';
 import { searchSpecies } from '../src/species';
@@ -33,6 +34,18 @@ async function addScanPhoto(page: Page, slot: string, photo: string) {
   await expect(crop).toBeVisible();
   await crop.getByRole('button', { name: 'Use this' }).click();
   await expect(crop).toHaveCount(0);
+}
+
+/** How much of the walk's own blue (#1a73e8) is on the map, counted in a picture of it — the only way to know the line
+ * is really on the screen: the map's own answers say it is drawn even when nothing is painted. */
+async function blueOnTheMap(page: Page): Promise<number> {
+  const shot = await page.locator('.map-wrap').screenshot();
+  const { data, info } = await sharp(shot).raw().toBuffer({ resolveWithObject: true });
+  let blue = 0;
+  for (let i = 0; i < data.length; i += info.channels) {
+    if (Math.abs(data[i] - 26) < 40 && Math.abs(data[i + 1] - 115) < 40 && Math.abs(data[i + 2] - 232) < 40) blue++;
+  }
+  return blue;
 }
 
 test.beforeEach(async () => { site = await startServer(DIST); });
@@ -563,6 +576,8 @@ test.describe('Map', () => {
     // He picks what he is looking for first: the walk is round whatever the map is showing.
     await page.getByLabel('Find a word in your locations').fill('penny bun');
     await expect(page.locator('[data-test=find-row]')).toHaveCount(4);
+    await page.waitForTimeout(1200);
+    const bareBlue = await blueOnTheMap(page); // the map before there is a walk on it
     await page.locator('[data-test=plan-walk]').click();
     // Nearest first from where he stands: 100 m, 200 m, 300 m, 400 m — the chanterelle is not on it.
     await expect(page.locator('[data-test=walk-card]')).toContainText('4 stops');
@@ -574,6 +589,12 @@ test.describe('Map', () => {
     expect(order[3]).toContain('under the beech'); // 400 m
     // The walk is drawn on the map, and the stops are numbered pins.
     await expect(page.locator('[data-test=map-pin].pin-stop')).toHaveCount(4);
+    // ⚠ Looked at, not taken on trust: the map can hold the walk, say it has rendered it, and still show bare ground
+    // (13/10/2026). So count the blue of the walk in a picture of the map — it must be far more than before it.
+    await expect(page.locator('.map-wrap')).toHaveAttribute('data-route-points', '5');
+    await page.waitForTimeout(1200); // the map settles, then it is photographed
+    const walkBlue = await blueOnTheMap(page);
+    expect(walkBlue).toBeGreaterThan(bareBlue + 2000);
     // He walks it: the first stop, then the one after it, without going back to the map.
     await page.locator('[data-test=walk-start]').click();
     await expect(page.getByText('Stop 1 of 4 on your walk')).toBeVisible();
