@@ -39,7 +39,12 @@ async function addScanPhoto(page: Page, slot: string, photo: string) {
 /** How much of the walk's own blue (#1a73e8) is on the map, counted in a picture of it — the only way to know the line
  * is really on the screen: the map's own answers say it is drawn even when nothing is painted. */
 async function blueOnTheMap(page: Page): Promise<number> {
+  // The pins, the position dot and the map's own buttons are the same blue, and at three screen points to the pixel
+  // they drown the line: they are hidden for the picture, so what is counted is the walk itself.
+  const hide = await page.addStyleTag({ content: '.pin, .here-dot, .maplibregl-ctrl, .maplibregl-user-location-dot { display: none !important; }' });
+  await page.waitForTimeout(250);
   const shot = await page.locator('.map-wrap').screenshot();
+  await hide.evaluate((el) => (el as unknown as HTMLStyleElement).remove());
   const { data, info } = await sharp(shot).raw().toBuffer({ resolveWithObject: true });
   let blue = 0;
   for (let i = 0; i < data.length; i += info.channels) {
@@ -594,7 +599,10 @@ test.describe('Map', () => {
     await expect(page.locator('.map-wrap')).toHaveAttribute('data-route-points', '5');
     await page.waitForTimeout(1200); // the map settles, then it is photographed
     const walkBlue = await blueOnTheMap(page);
-    expect(walkBlue).toBeGreaterThan(bareBlue + 2000);
+    // With the pins hidden this is the line and nothing else: about 1,400 points on a plain screen, nine times that
+    // on a phone's (three screen points to the pixel). Bare ground before it is 0.
+    expect(bareBlue).toBeLessThan(200);
+    expect(walkBlue).toBeGreaterThan(600);
     // He walks it: the first stop, then the one after it, without going back to the map.
     await page.locator('[data-test=walk-start]').click();
     await expect(page.getByText('Stop 1 of 4 on your walk')).toBeVisible();
