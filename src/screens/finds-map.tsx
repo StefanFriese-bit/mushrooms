@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'preact/hooks';
 import type { Spot } from '../finds/store';
 import { circleRing, gridLines, type LatLon } from '../finds/geo';
-import { askForCompassOnTap } from '../finds/compass';
+import { askForCompassOnTap, nextMapBearing } from '../finds/compass';
 
 // The map (spec 7): OpenFreeMap's tiles (OpenStreetMap data, credited on the map), his saved locations as pins, his
 // position, and — when saving a location — one pin he can move by tapping the map or dragging it. It zooms in until a
@@ -46,6 +46,10 @@ type Props = {
   tall?: boolean;
   /** Shorter, so the arrow, the distance and the map fit on one screen (Take me there). */
   short?: boolean;
+  /** Turn the map so that the way he is facing is at the top, the way a car's GPS does (the compass heading in degrees,
+   * src/finds/compass.ts). null or left out = north at the top. The pins stay upright: MapLibre holds a marker's own
+   * element against the screen, not against the map. */
+  facing?: number | null;
 };
 
 type Ring = { ring: Array<[number, number]>; kind: 'find' | 'here' };
@@ -77,7 +81,7 @@ function drawGrid(m: MapObj) {
   m.addLayer({ id: 'grid-lines', type: 'line', source: 'grid', paint: { 'line-color': '#7f8c76', 'line-width': 1, 'line-opacity': 0.45 } });
 }
 
-export function FindsMap({ pins = [], locate = false, pick, here = null, tall = false, short = false }: Props) {
+export function FindsMap({ pins = [], locate = false, pick, here = null, tall = false, short = false, facing = null }: Props) {
   const box = useRef<HTMLDivElement>(null);
   const lib = useRef<MapLib | null>(null);
   const map = useRef<MapObj | null>(null);
@@ -93,6 +97,8 @@ export function FindsMap({ pins = [], locate = false, pick, here = null, tall = 
   const framed = useRef(false);
   const [ready, setReady] = useState(false);
   const [problem, setProblem] = useState<string | null>(null);
+  /** Which way the map is really held, read back off the map after it was turned — never what it was asked to do. */
+  const [turnedTo, setTurnedTo] = useState(0);
 
   useEffect(() => {
     let gone = false;
@@ -239,6 +245,18 @@ export function FindsMap({ pins = [], locate = false, pick, here = null, tall = 
     }
   }, [ready, here?.lat, here?.lon]);
 
+  // Turned the way he points the phone: the ground ahead of him is at the top of the map, so what he sees on the screen
+  // lies the way the wood does in front of him. Only a real turn moves it (MAP_TURN_MIN_DEG), or the compass's own
+  // wandering would keep the map shivering while he stands still.
+  useEffect(() => {
+    const m = map.current;
+    if (!ready || !m) return;
+    const to = nextMapBearing(m.getBearing(), facing);
+    if (to === null) return;
+    m.setBearing(to);
+    setTurnedTo(m.getBearing()); // what the map now holds, asked of the map itself
+  }, [ready, facing]);
+
   // The new find's pin: placed on its spot, moved by a tap on the map or by dragging it.
   useEffect(() => {
     const ml = lib.current;
@@ -261,8 +279,20 @@ export function FindsMap({ pins = [], locate = false, pick, here = null, tall = 
   }, [ready, pick?.spot?.lat, pick?.spot?.lon]);
 
   return (
-    <div class={`map-wrap${tall ? ' tall' : ''}${short ? ' short' : ''}`} data-map-mode={mode} data-grid={grid ? 'on' : 'off'}>
+    <div class={`map-wrap${tall ? ' tall' : ''}${short ? ' short' : ''}`} data-map-mode={mode} data-grid={grid ? 'on' : 'off'}
+      data-bearing={Math.round(turnedTo)}>
       <div class="map" ref={box} data-test="map" />
+      {/* With the map turned, where north has gone — so a turned map can still be read against a paper one. */}
+      {facing !== null && (
+        <svg class="map-north" viewBox="-16 -16 32 32" data-test="map-north" role="img" aria-label={`North is ${Math.round(((360 - turnedTo) % 360))}° round from the top of the screen`}>
+          <circle r="15" class="map-north-ring" />
+          <g transform={`rotate(${-turnedTo})`}>
+            <path d="M0 -12 L4.5 0 L-4.5 0 Z" class="map-north-needle" />
+            {/* Turned back again, so the letter stands upright however the map lies. */}
+            <g transform={`translate(0 -7) rotate(${turnedTo})`}><text class="map-north-n">N</text></g>
+          </g>
+        </svg>
+      )}
       {problem && <p class="map-problem" role="status">{problem}</p>}
     </div>
   );

@@ -3,7 +3,7 @@ import { useEffect, useState } from 'preact/hooks';
 import type { Spot } from '../finds/store';
 import { followHere } from '../finds/device';
 import { appleMapsLink, bearingDeg, compassWord, distanceM, isThere, sayAccuracy, sayDistance, type Fix } from '../finds/geo';
-import { allowCompass, arrowTurn, compassAsked, followHeading, type CompassAnswer, type Heading } from '../finds/compass';
+import { allowCompass, arrowTurn, compassAsked, followHeading, mapTurnsWithMe, rememberMapTurns, type CompassAnswer, type Heading } from '../finds/compass';
 import { FindsMap } from './finds-map';
 import { BackLink } from './back-link';
 import { Icon } from './icons';
@@ -37,6 +37,8 @@ export function GoTo({ title, subtitle, spot, back, pin, thereText, thereExtra, 
   const [here, setHere] = useState<Fix | null>(null);
   const [gpsProblem, setGpsProblem] = useState<string | null>(null);
   const [heading, setHeading] = useState<Heading | null>(null);
+  // The map turned the way he points the phone (Stefan 13/10/2026) — on unless he locked it to north last time.
+  const [turnMap, setTurnMap] = useState(mapTurnsWithMe);
   // The tap that opened this screen asked for the compass (askForCompassOnTap): it is on as soon as he allows it.
   const [compass, setCompass] = useState<CompassState>(() => {
     const asked = compassAsked();
@@ -78,6 +80,9 @@ export function GoTo({ title, subtitle, spot, back, pin, thereText, thereExtra, 
     setCompass('asking');
     setCompass(stateOf(await allowCompass()));
   };
+  // Which way the map is held: the way he is facing while the compass is on and he has not locked it to north.
+  const facing = compass === 'on' && heading && turnMap ? heading.deg : null;
+  const turnMapTo = (on: boolean) => { setTurnMap(on); rememberMapTurns(on); };
 
   return (
     <>
@@ -125,8 +130,18 @@ export function GoTo({ title, subtitle, spot, back, pin, thereText, thereExtra, 
           {thereExtra}
         </div>
       )}
+      {/* The map lying the way the wood lies in front of him, or held with north at the top to read it. Only worth
+          offering once the compass is on: without it there is nothing to turn the map by. */}
+      {compass === 'on' && heading && (
+        <p class="go-turn">
+          <button type="button" class="small-button" onClick={() => turnMapTo(!turnMap)} data-test="map-turn">
+            <Icon name={turnMap ? 'map' : 'navigate'} size={18} />{turnMap ? 'North at the top' : 'Turn the map with me'}
+          </button>
+          <span class="muted small">{turnMap ? 'The map turns the way you point the phone.' : 'The map is held with north at the top.'}</span>
+        </p>
+      )}
       <FindsMap pins={[{ id: pin.id, lat: spot.lat, lon: spot.lon, label: pin.label, href: pin.href, accuracy: spot.accuracy }]}
-        here={here} short />
+        here={here} short facing={facing} />
       <p class="go-paths"><a class="small-button" href={appleMapsLink(spot)} data-test="go-directions">
         <Icon name="map" size={18} />Walking directions</a> <span class="muted small">in Apple Maps (needs a signal)</span></p>
       <p class="muted small">{circleNote}</p>

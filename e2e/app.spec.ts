@@ -477,6 +477,23 @@ test.describe('Map', () => {
     }).toPass({ timeout: 10000 });
     await expect(page.locator('[data-test=go-arrow]')).toHaveAttribute('transform', 'rotate(270)');
     await expect(page.getByText('Asking for the compass…')).toHaveCount(0);
+    // The map lies the way he is pointing (Stefan 13/10/2026), like a car's GPS: the phone's top points east, so the
+    // map is turned to 90° and north now lies to his left. The needle says where north has gone.
+    const wrap = page.locator('.map-wrap');
+    await expect(wrap).toHaveAttribute('data-bearing', '90');
+    await expect(page.locator('[data-test=map-north]')).toBeVisible();
+    // The pin is held upright against the screen, not turned with the map.
+    await expect(page.locator('[data-test=map-pin]')).toBeVisible();
+    // He locks it to read the map: north back to the top, the needle gone, and the choice kept for the next walk.
+    await page.locator('[data-test=map-turn]').click();
+    await expect(wrap).toHaveAttribute('data-bearing', '0');
+    await expect(page.locator('[data-test=map-north]')).toHaveCount(0);
+    await expect(page.getByText('The map is held with north at the top.')).toBeVisible();
+    expect(await page.evaluate(() => localStorage.getItem('map-turns-with-me'))).toBe('0');
+    // And back again.
+    await page.locator('[data-test=map-turn]').click();
+    await expect(wrap).toHaveAttribute('data-bearing', '90');
+    expect(await page.evaluate(() => localStorage.getItem('map-turns-with-me'))).toBe('1');
   });
 
   test('the map zooms in until a few metres fill the screen', async ({ page }) => {

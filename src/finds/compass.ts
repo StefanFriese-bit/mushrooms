@@ -65,3 +65,35 @@ export function followHeading(onHeading: (h: Heading | null) => void): () => voi
   window.addEventListener(type, listen);
   return () => window.removeEventListener(type, listen);
 }
+
+// The map turned the way he points the phone (Stefan 13/10/2026: "on the actual map … have the orientation of them kind
+// of in the way that I'm pointing the phone so the direction is always in front of me … like you were on GPS"). The
+// rules live here, beside the compass they are fed by, so they can be checked without a map.
+
+/** The shortest way round from one direction to another, in degrees: + to the right, - to the left. 350° → 10° is +20,
+ * never -340. */
+export function signedTurn(from: number, to: number): number {
+  return (((to - from) % 360) + 540) % 360 - 180;
+}
+
+/** Under this the map is left alone: a compass wanders by a degree or two while the phone is held still, and a map that
+ * answered every wander would never sit still. */
+export const MAP_TURN_MIN_DEG = 3;
+
+/** What to turn the map to, or null to leave it where it is. `facing` null = north at the top again (always done, however
+ * small the turn — holding the map askew after he has locked it would be wrong). */
+export function nextMapBearing(now: number, facing: number | null, minDeg = MAP_TURN_MIN_DEG): number | null {
+  const want = facing === null ? 0 : ((facing % 360) + 360) % 360;
+  if (facing === null) return Math.abs(signedTurn(now, 0)) < 0.5 ? null : 0;
+  return Math.abs(signedTurn(now, want)) < minDeg ? null : want;
+}
+
+const TURNS_KEY = 'map-turns-with-me';
+/** Whether the map turns with him: his last choice, on until he says otherwise. A phone that gives the app no storage
+ * simply starts it on again. */
+export function mapTurnsWithMe(): boolean {
+  try { return localStorage.getItem(TURNS_KEY) !== '0'; } catch { return true; }
+}
+export function rememberMapTurns(on: boolean): void {
+  try { localStorage.setItem(TURNS_KEY, on ? '1' : '0'); } catch { /* the choice simply does not outlast the app */ }
+}

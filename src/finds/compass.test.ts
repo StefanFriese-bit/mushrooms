@@ -1,5 +1,5 @@
 import { afterEach, describe, expect, it, vi } from 'vitest';
-import { arrowTurn, headingFrom } from './compass';
+import { arrowTurn, headingFrom, mapTurnsWithMe, nextMapBearing, rememberMapTurns, signedTurn } from './compass';
 
 describe('the compass for the arrow back to a find', () => {
   it('reads an iPhone\'s heading, and its own accuracy when it has one', () => {
@@ -73,5 +73,54 @@ describe('asking for the compass in the Take me there tap', () => {
     await expect(second).resolves.toBe('granted');
     await Promise.resolve();
     expect(c.compassAsked()?.answer).toBe('granted');
+  });
+});
+
+describe('the map turned the way he points the phone', () => {
+  it('turns the shortest way round, never the long way', () => {
+    expect(signedTurn(350, 10)).toBe(20);
+    expect(signedTurn(10, 350)).toBe(-20);
+    // Exactly half a turn is as far one way as the other: it answers -180 every time, and only how far it is matters.
+    expect(Math.abs(signedTurn(0, 180))).toBe(180);
+    expect(Math.abs(signedTurn(90, 270))).toBe(180);
+    expect(signedTurn(0, 0)).toBe(0);
+  });
+
+  it('leaves the map alone while the phone is only wandering, and turns it when he really turns', () => {
+    expect(nextMapBearing(90, 91)).toBe(null); // 1° — the compass's own shiver
+    expect(nextMapBearing(90, 92.9)).toBe(null);
+    expect(nextMapBearing(90, 93)).toBe(93);
+    expect(nextMapBearing(90, 270)).toBe(270);
+    // Across north: 358° → 2° is a 4° turn, so it happens, and 359° → 1° is 2°, so it does not.
+    expect(nextMapBearing(358, 2)).toBe(2);
+    expect(nextMapBearing(359, 1)).toBe(null);
+  });
+
+  it('brings the map back to north the moment he locks it, however small the turn', () => {
+    expect(nextMapBearing(1, null)).toBe(0); // 1° would be too small to follow him, but locking is his own choice
+    expect(nextMapBearing(270, null)).toBe(0);
+    expect(nextMapBearing(0, null)).toBe(null); // already north at the top: nothing to do
+  });
+
+  it('is given a direction that is already between 0 and 360, whatever the phone said', () => {
+    expect(nextMapBearing(0, 400)).toBe(40);
+    expect(nextMapBearing(0, -90)).toBe(270);
+  });
+
+  it('remembers his choice, and starts turning with him on a phone that keeps nothing', () => {
+    const store = new Map<string, string>();
+    vi.stubGlobal('localStorage', {
+      getItem: (k: string) => store.get(k) ?? null,
+      setItem: (k: string, v: string) => { store.set(k, v); },
+    });
+    expect(mapTurnsWithMe()).toBe(true); // nothing said yet
+    rememberMapTurns(false);
+    expect(mapTurnsWithMe()).toBe(false);
+    rememberMapTurns(true);
+    expect(mapTurnsWithMe()).toBe(true);
+    // A phone that refuses storage altogether: the map still turns with him.
+    vi.stubGlobal('localStorage', { getItem: () => { throw new Error('no'); }, setItem: () => { throw new Error('no'); } });
+    expect(mapTurnsWithMe()).toBe(true);
+    expect(() => rememberMapTurns(false)).not.toThrow();
   });
 });
