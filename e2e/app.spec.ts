@@ -150,7 +150,7 @@ test('works with the server switched off once it has been opened', async ({ page
   await site.stop();
   await page.reload();
   await expect(page.locator('header.app-header')).toContainText(brand.name);
-  await expect(page.locator('[data-test=home] a')).toHaveCount(4);
+  await expect(page.locator('[data-test=home] a')).toHaveCount(5);
   await page.locator('[data-test=home-guide]').click();
   await expect(page.locator('[data-test=species-row]')).toHaveCount(ALL.length);
   await page.goto(`${site.url}#/species/deathcap`);
@@ -162,10 +162,11 @@ test('About says whether the phone keeps the data (the app asks at start)', asyn
   await expect(page.getByText(/Storage kept by the phone: (yes|not yet|not supported in this browser)$/)).toBeVisible();
 });
 
-test('the home page: the four sections in Stefan\'s order, the Map first, and no bar at the foot', async ({ page }) => {
+test('the home page: the sections in Stefan\'s order, the Map first, and no bar at the foot', async ({ page }) => {
   await page.goto(site.url);
-  const buttons = page.locator('[data-test=home] a');
-  await expect(buttons).toHaveText(['Map', 'Scan', 'Guide', 'Identify']); // Learn taken off 10/10/2026: "not useful for me"
+  const buttons = page.locator('[data-test=home] a .home-label');
+  // Learn taken off 10/10/2026: "not useful for me"; Dogs added last 13/10/2026.
+  await expect(buttons).toHaveText(['Map', 'Scan', 'Guide', 'Identify', 'Dogs']);
   await expect(page.locator('nav.tabs')).toHaveCount(0);
   await expect(page.locator('[data-test=home-button]')).toHaveCount(0); // already home
   expect(await page.title()).toBe(brand.name);
@@ -175,13 +176,13 @@ test('the home page: the four sections in Stefan\'s order, the Map first, and no
   await expect(page.locator('[data-test=save-location]')).toContainText('Save a location');
   await expect(page.locator('[data-test=view-map]')).toContainText('View map');
   await expect(page.locator('[data-test=saved-count]')).toHaveText('No saved locations yet');
-  // Every other page has the four sections at its foot, its own lit, in the same order.
+  // Every other page has the sections at its foot, its own lit, in the same order.
   const bar = page.locator('nav.tabs a');
-  await expect(bar).toHaveText(['Map', 'Scan', 'Guide', 'Identify']);
+  await expect(bar).toHaveText(['Map', 'Scan', 'Guide', 'Identify', 'Dogs']);
   await expect(page.locator('nav.tabs a[aria-current=page]')).toHaveText('Map');
   await bar.filter({ hasText: 'Identify' }).click();
   await expect(page.locator('nav.tabs a[aria-current=page]')).toHaveText('Identify');
-  // The four share the foot's width evenly.
+  // They share the foot's width evenly.
   const widths = await bar.evaluateAll((as) => as.map((a) => Math.round(a.getBoundingClientRect().width)));
   expect(Math.max(...widths) - Math.min(...widths)).toBeLessThanOrEqual(1);
   expect(widths.reduce((a, b) => a + b, 0)).toBeGreaterThan((page.viewportSize()!.width > 760 ? 720 : page.viewportSize()!.width) * 0.8);
@@ -195,10 +196,10 @@ test('the header shows the name and tagline from src/brand.json; Home goes home,
   await header.locator('[data-test=about-button]').click();
   await expect(page.getByRole('heading', { name: 'About' })).toBeVisible();
   await header.locator('[data-test=home-button]').click();
-  await expect(page.locator('[data-test=home] a')).toHaveCount(4);
+  await expect(page.locator('[data-test=home] a')).toHaveCount(5);
   await page.goto(`${site.url}#/species/deathcap`);
   await header.getByRole('link', { name: `${brand.name}, home` }).click();
-  await expect(page.locator('[data-test=home] a')).toHaveCount(4);
+  await expect(page.locator('[data-test=home] a')).toHaveCount(5);
 });
 
 test('the hidden speed test runs the scan model and names the Deathcap from its own photo', async ({ page }) => {
@@ -623,6 +624,102 @@ test.describe('Map', () => {
     await page.getByRole('button', { name: 'Delete this location' }).click();
     await expect(page.getByRole('heading', { name: 'View map' })).toBeVisible();
     await expect(page.locator('[data-test=find-row]')).toHaveCount(0);
+  });
+});
+
+test.describe('Dogs', () => {
+  // Stefan 13/10/2026: "I tie the dogs … to a tree while I walk around in the area and yesterday I almost lost them".
+  test.use({ serviceWorkers: 'block', geolocation: { latitude: 51.6588, longitude: 0.0466, accuracy: 7 }, permissions: ['geolocation'] });
+  test.beforeEach(async ({ page }) => {
+    await page.route('https://tiles.openfreemap.org/**', (r) => (r.request().url().includes('/styles/') ? r.fulfill({ json: PLAIN_MAP }) : r.fulfill({ status: 404 })));
+  });
+
+  test('save where the dogs are tied; later one tap on Dogs asks for the compass and walks back; "Got them" forgets the spot', async ({ page, context }) => {
+    // An iPhone: the compass has to be asked for, and only a tap may ask.
+    await page.addInitScript(() => {
+      const w = window as unknown as Record<string, any>;
+      const DOE = w.DeviceOrientationEvent ?? function DeviceOrientationEvent() {};
+      w.__asked = [];
+      DOE.requestPermission = function (this: unknown) {
+        const ua = (navigator as unknown as { userActivation?: { isActive: boolean } }).userActivation;
+        w.__asked.push({ tap: ua ? ua.isActive : null, self: this === DOE });
+        return Promise.resolve('granted');
+      };
+      w.DeviceOrientationEvent = DOE;
+    });
+    const asked = () => page.evaluate(() => (window as unknown as { __asked: Array<{ tap: boolean | null; self: boolean }> }).__asked);
+    const spot = { lat: 51.6588, lon: 0.0466 };
+    await page.goto(site.url);
+    const dogs = page.locator('[data-test=home-dogs]');
+    await expect(page.locator('[data-test=home-dogs-sub]')).toHaveText('Save where you tied them');
+    await expect(dogs).toHaveAttribute('href', '#/dogs');
+    await dogs.click();
+    expect(await asked()).toHaveLength(0); // nothing to walk back to yet: no compass question
+    await expect(page.getByRole('heading', { name: 'Where the dogs are' })).toBeVisible();
+    await expect(page.locator('nav.tabs a[aria-current=page]')).toHaveText('Dogs');
+    await expect(page.locator('[data-test=where]')).toContainText('Your position, within 7 m', { timeout: 15000 });
+    await page.locator('[data-test=dogs-save]').click();
+    await expect(page.locator('[data-test=saved-note]')).toHaveText('The dogs\' spot is saved on this phone.');
+    await expect(page.getByRole('heading', { name: 'The dogs', exact: true })).toBeVisible();
+    await expect(page.locator('[data-test=dogs-saved]')).toHaveText(/^Saved today at \d{2}:\d{2} · within 7 m$/);
+    // Kept on the phone (a reload, the app closed and opened again) — and it is not one of his saved locations.
+    await page.reload();
+    await expect(page.getByRole('heading', { name: 'The dogs', exact: true })).toBeVisible();
+    await expect(page.locator('[data-test=saved-note]')).toHaveCount(0); // said once, straight after saving
+    await page.goto(`${site.url}#/map`);
+    await expect(page.locator('[data-test=saved-count]')).toHaveText('No saved locations yet');
+    // The bar at the foot leads straight back to them too.
+    await expect(page.locator('nav.tabs a', { hasText: 'Dogs' })).toHaveAttribute('href', '#/dogs/go');
+    // He forages: 40 m south of the dogs. Home: one tap on Dogs.
+    const away = { lat: spot.lat - 0.00036, lon: spot.lon };
+    await context.setGeolocation({ latitude: away.lat, longitude: away.lon, accuracy: 5 });
+    await page.goto(site.url);
+    await expect(page.locator('[data-test=home-dogs-sub]')).toHaveText(/^Take me back to them · saved today at \d{2}:\d{2}$/);
+    await dogs.click();
+    await expect(page.getByRole('heading', { name: 'Back to the dogs' })).toBeVisible();
+    await expect(page.locator('[data-test=find-go]')).toBeVisible();
+    const q = await asked();
+    expect(q).toHaveLength(1); // the compass, asked in the same tap
+    expect(q[0].self).toBe(true);
+    expect(q[0].tap).not.toBe(false);
+    await expect(page.locator('[data-test=go-distance]')).toHaveText(sayDistance(distanceM(away, spot)), { timeout: 15000 });
+    await expect(page.getByText(/^Head north/)).toBeVisible();
+    await expect(page.locator('[data-test=go-arrow]')).toHaveCount(1);
+    await expect(page.locator('[data-test=map-pin]')).toHaveCount(1);
+    await expect(page.locator('[data-test=go-directions]')).toHaveAttribute('href', 'https://maps.apple.com/?daddr=51.65880,0.04660&dirflg=w');
+    // Back with the dogs.
+    await context.setGeolocation({ latitude: spot.lat, longitude: spot.lon, accuracy: 5 });
+    await page.reload();
+    await expect(page.locator('[data-test=go-distance]')).toHaveText('You are there', { timeout: 15000 });
+    await expect(page.locator('[data-test=go-there]')).toContainText('The dogs should be right here.');
+    page.once('dialog', (d) => d.accept());
+    await page.locator('[data-test=go-there] [data-test=dogs-forget]').click();
+    await expect(page.locator('[data-test=home-dogs-sub]')).toHaveText('Save where you tied them');
+    await expect(dogs).toHaveAttribute('href', '#/dogs');
+  });
+
+  test('a spot from an earlier walk: Dogs saves a new one, and says the old one is replaced; "Save a new spot" replaces this walk\'s', async ({ page }) => {
+    await page.goto(site.url);
+    await page.evaluate(() => localStorage.setItem('dogs-spot', JSON.stringify(
+      { lat: 51.65, lon: 0.04, accuracy: 9, at: new Date(Date.now() - 20 * 3_600_000).toISOString() })));
+    await page.reload();
+    await expect(page.locator('[data-test=home-dogs-sub]')).toHaveText('Save where you tied them');
+    await page.locator('[data-test=home-dogs]').click();
+    await expect(page.getByRole('heading', { name: 'Where the dogs are' })).toBeVisible();
+    await expect(page.locator('[data-test=dogs-replaces]')).toContainText('is replaced when you save');
+    await expect(page.locator('[data-test=where]')).toContainText('within 7 m', { timeout: 15000 });
+    await page.locator('[data-test=dogs-save]').click();
+    await expect(page.locator('[data-test=dogs-saved]')).toContainText('Saved today at');
+    expect(await page.evaluate(() => JSON.parse(localStorage.getItem('dogs-spot')!).lat)).toBe(51.6588);
+    // Tied them somewhere else: a new spot replaces this walk's.
+    await page.locator('[data-test=dogs-new]').click();
+    await expect(page.getByRole('heading', { name: 'Where the dogs are' })).toBeVisible();
+    await expect(page.locator('[data-test=dogs-replaces]')).toContainText('today at');
+    await page.locator('[data-test=map] canvas').click({ position: { x: 120, y: 90 } });
+    await expect(page.locator('[data-test=where]')).toHaveText('Placed by hand on the map');
+    await page.locator('[data-test=dogs-save]').click();
+    await expect(page.locator('[data-test=saved-note]')).toBeVisible();
+    await expect(page.locator('[data-test=dogs-saved]')).toContainText('placed by hand');
   });
 });
 

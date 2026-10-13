@@ -12,13 +12,14 @@ import { Finds } from './screens/finds';
 import { FindNew } from './screens/find-new';
 import { FindPage } from './screens/find-page';
 import { FindGo } from './screens/find-go';
+import { Dogs, DogsGo, DogsNew } from './screens/dogs';
 import { UpdateBar } from './screens/update-bar';
 import brand from './brand.json';
 import { Home } from './screens/home';
 import { MapHome } from './screens/map-home';
 import { Lookalikes } from './screens/lookalikes';
 import { Icon } from './screens/icons';
-import { SECTIONS, sectionHref, sectionOf, type SectionName } from './sections';
+import { SECTIONS, onSectionTap, sectionHref, sectionOf, type SectionName } from './sections';
 
 /** The steel-blue band at the top, as on the dashboard: the mark from the home-screen icon, the name and the tagline
  * (src/brand.json), which open the home page; on every other page a Home button; About on the right. */
@@ -52,7 +53,7 @@ function SectionBar({ active }: { active: SectionName | null }) {
   return (
     <nav class="tabs" aria-label="Sections">
       {SECTIONS.map((s) => (
-        <a key={s.name} class="tab-btn" href={sectionHref(s.name)} aria-current={active === s.name ? 'page' : undefined}>
+        <a key={s.name} class="tab-btn" href={sectionHref(s.name)} aria-current={active === s.name ? 'page' : undefined} onClick={onSectionTap}>
           <Icon name={s.icon} size={20} /><span>{s.label}</span>
         </a>
       ))}
@@ -77,6 +78,9 @@ function screen(route: Route) {
     case 'find-new': return <FindNew />;
     case 'find': return <FindPage id={route.id} key={route.id} />;
     case 'find-go': return <FindGo id={route.id} key={route.id} />;
+    case 'dogs': return <Dogs />;
+    case 'dogs-new': return <DogsNew />;
+    case 'dogs-go': return <DogsGo />;
     default: return <><h1>Not found</h1><p><a href={hrefFor({ name: 'home' })}>Back to the start</a></p></>;
   }
 }

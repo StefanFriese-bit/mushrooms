@@ -18,7 +18,7 @@ describe('parseHash', () => {
     expect(parseHash('#/species/field-mushroom')).toEqual({ name: 'species', slug: 'field-mushroom' });
   });
   it('reads the other tabs', () => {
-    for (const n of ['map', 'scan', 'finds', 'learn', 'about', 'scan-speed'] as const) expect(parseHash(`#/${n}`)).toEqual({ name: n });
+    for (const n of ['map', 'scan', 'finds', 'learn', 'about', 'scan-speed', 'dogs'] as const) expect(parseHash(`#/${n}`)).toEqual({ name: n });
   });
   it('keeps the Identify answers as they are written', () => {
     expect(parseHash('#/identify')).toEqual({ name: 'identify', query: '' });

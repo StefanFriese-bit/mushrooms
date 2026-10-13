@@ -11,12 +11,15 @@ export type Route =
   | { name: 'find-new' } // Save a location
   | { name: 'find'; id: string }
   | { name: 'find-go'; id: string } // walking back to a find: arrow and distance
+  | { name: 'dogs' } // the dogs' spot: save it, or (once saved) walk back to it
+  | { name: 'dogs-new' } // save a new spot for the dogs, replacing the saved one
+  | { name: 'dogs-go' } // walking back to the dogs: arrow and distance
   | { name: 'learn' }
   | { name: 'about' }
   | { name: 'scan-speed' }
   | { name: 'not-found'; path: string };
 
-const SIMPLE = ['map', 'scan', 'finds', 'learn', 'about', 'scan-speed'] as const;
+const SIMPLE = ['map', 'scan', 'finds', 'learn', 'about', 'scan-speed', 'dogs'] as const;
 
 export function parseHash(hash: string): Route {
   const raw = hash.replace(/^#/, '') || '/';
@@ -34,6 +37,8 @@ export function parseHash(hash: string): Route {
   if (parts[0] === 'finds' && parts[1] && parts.length === 2) return { name: 'find', id: decodeURIComponent(parts[1]) };
   if (parts[0] === 'finds' && parts[1] && parts[2] === 'go' && parts.length === 3) return { name: 'find-go', id: decodeURIComponent(parts[1]) };
   if (parts[0] === 'identify' && parts.length === 1) return { name: 'identify', query: qs };
+  if (parts[0] === 'dogs' && parts[1] === 'new' && parts.length === 2) return { name: 'dogs-new' };
+  if (parts[0] === 'dogs' && parts[1] === 'go' && parts.length === 2) return { name: 'dogs-go' };
   const simple = SIMPLE.find((n) => n === parts[0]);
   if (simple && parts.length === 1) return { name: simple };
   return { name: 'not-found', path };
@@ -57,6 +62,10 @@ export function hrefFor(route: Route): string {
       return `#/finds/${encodeURIComponent(route.id)}/go`;
     case 'identify':
       return route.query ? `#/identify?${route.query}` : '#/identify';
+    case 'dogs-new':
+      return '#/dogs/new';
+    case 'dogs-go':
+      return '#/dogs/go';
     case 'home':
     case 'not-found':
       return '#/';
