@@ -542,6 +542,60 @@ test.describe('Map', () => {
     await expect(page.getByText('This phone gives no compass, so the dial shows north at the top, like a map.')).toHaveCount(0);
   });
 
+  test('a walk round the ones he is looking for: planned from where he stands, numbered on the map, walked stop to stop', async ({ page, context }, info) => {
+    // Stefan 13/10/2026: "select the mushroom to look for, in this case the penny bun, and then have the map plot out
+    // a walk from where I start hitting each location in a logical way".
+    const at = new Date().toISOString();
+    // Four penny bun spots north of him and one chanterelle, which must stay out of the walk.
+    const spot = (n: number, e: number) => ({ lat: 51.6588 + n / 111320, lon: 0.0466 + e / 69000, accuracy: 8 });
+    const file = info.outputPath('walk-finds.zip');
+    writeFileSync(file, packBackup([
+      { id: 'w1', at, spot: spot(300, 0), species: null, notes: 'penny bun by the oak', photoIds: [] },
+      { id: 'w2', at, spot: spot(100, 0), species: null, notes: 'penny buns on the slope', photoIds: [] },
+      { id: 'w3', at, spot: spot(200, 0), species: null, notes: 'penny bun ring', photoIds: [] },
+      { id: 'w4', at, spot: spot(400, 0), species: null, notes: 'penny bun under the beech', photoIds: [] },
+      { id: 'w5', at, spot: spot(50, 400), species: null, notes: 'chanterelles by the stream', photoIds: [] },
+    ], [], new Date()));
+    await context.setGeolocation({ latitude: 51.6588, longitude: 0.0466, accuracy: 5 }); // he starts at the bottom
+    await page.goto(`${site.url}#/finds`);
+    await page.getByLabel('Backup file to restore').setInputFiles(file);
+    await expect(page.locator('[data-test=find-row]')).toHaveCount(5);
+    // He picks what he is looking for first: the walk is round whatever the map is showing.
+    await page.getByLabel('Find a word in your locations').fill('penny bun');
+    await expect(page.locator('[data-test=find-row]')).toHaveCount(4);
+    await page.locator('[data-test=plan-walk]').click();
+    // Nearest first from where he stands: 100 m, 200 m, 300 m, 400 m — the chanterelle is not on it.
+    await expect(page.locator('[data-test=walk-card]')).toContainText('4 stops');
+    await expect(page.locator('[data-test=loc-stop]')).toHaveCount(4);
+    await expect(page.locator('[data-test=loc-stop]').first()).toHaveText('1');
+    const order = await page.locator('[data-test=find-row]').evaluateAll((rows) =>
+      rows.map((r) => r.querySelector('.loc-desc')?.textContent ?? ''));
+    expect(order[0]).toContain('on the slope');   // 100 m
+    expect(order[3]).toContain('under the beech'); // 400 m
+    // The walk is drawn on the map, and the stops are numbered pins.
+    await expect(page.locator('[data-test=map-pin].pin-stop')).toHaveCount(4);
+    // He walks it: the first stop, then the one after it, without going back to the map.
+    await page.locator('[data-test=walk-start]').click();
+    await expect(page.getByText('Stop 1 of 4 on your walk')).toBeVisible();
+    await context.setGeolocation({ latitude: spot(100, 0).lat, longitude: spot(100, 0).lon, accuracy: 5 });
+    await expect(page.locator('[data-test=go-distance]')).toHaveText('You are there', { timeout: 15000 });
+    await page.locator('[data-test=walk-next]').click();
+    await expect(page.getByText('Stop 2 of 4 on your walk')).toBeVisible();
+    // At the last stop it says so rather than offering another.
+    await page.goto(`${site.url}#/finds/w4/go`);
+    await context.setGeolocation({ latitude: spot(400, 0).lat, longitude: spot(400, 0).lon, accuracy: 5 });
+    await expect(page.locator('[data-test=go-distance]')).toHaveText('You are there', { timeout: 15000 });
+    await expect(page.locator('[data-test=walk-done]')).toContainText('last stop');
+    await expect(page.locator('[data-test=walk-next]')).toHaveCount(0);
+    // Back on the map the walk is still his until he clears it.
+    await page.goto(`${site.url}#/finds`);
+    await expect(page.locator('[data-test=walk-card]')).toContainText('4 stops');
+    await page.locator('[data-test=walk-clear]').click();
+    await expect(page.locator('[data-test=walk-card]')).toHaveCount(0);
+    await expect(page.locator('[data-test=loc-stop]')).toHaveCount(0);
+    await expect(page.locator('[data-test=map-pin].pin-stop')).toHaveCount(0);
+  });
+
   test('the map zooms in until a few metres fill the screen', async ({ page }) => {
     await page.goto(`${site.url}#/finds/new`);
     await expect(page.locator('[data-test=where]')).toContainText('within 7 m', { timeout: 15000 });

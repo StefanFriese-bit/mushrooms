@@ -380,3 +380,12 @@ a.result:active { background: var(--subtle); }
 .go-turn { display: flex; align-items: center; flex-wrap: wrap; gap: 4px 10px; margin: 6px 0 0; }
 /* The word search over his saved locations, above the species choice (src/screens/finds.tsx). */
 .find-search { width: 100%; }
+/* A numbered pin on the planned walk (src/finds/walk.ts). The pin itself is drawn turned 45°, so its number is turned
+   back again to stand upright. */
+.pin-stop { background: #1a73e8; }
+.pin-stop-n { display: block; transform: rotate(45deg); color: #fff; font: 700 13px/1 var(--font); text-align: center; margin-top: 4px; }
+/* The planned walk: its card on the map screen, and each stop's number down the list. */
+.walk-card { display: flex; flex-direction: column; gap: 6px; }
+.walk-card-do { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.loc-stop { flex: 0 0 auto; align-self: center; width: 22px; height: 22px; border-radius: 50%; background: #1a73e8; color: #fff;
+  font: 700 12px/22px var(--font); text-align: center; margin-right: 8px; }

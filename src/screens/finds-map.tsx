@@ -32,6 +32,8 @@ const UK: [number, number] = [-2.5, 54.3];
 /** `accuracy`: how exact its GPS spot is (metres), drawn as a circle round it; null = placed by hand. `goHref`: the walk
  * back to it ("Take me there"); `when`: when it was saved — both shown when its pin is tapped. */
 export type Pin = { id: string; lat: number; lon: number; label: string; href: string; accuracy?: number | null; when?: string;
+  /** Its place on the planned walk, 1, 2, 3 … — drawn in the pin. Left out when there is no walk. */
+  stop?: number;
   /** The growth last logged there: "G1 Button · 3 days ago" (src/finds/growth.ts). */
   growth?: string; goHref?: string };
 type Props = {
@@ -46,6 +48,9 @@ type Props = {
   tall?: boolean;
   /** Shorter, so the arrow, the distance and the map fit on one screen (Take me there). */
   short?: boolean;
+  /** The planned walk, drawn as a line: where he started, then each stop in order (src/finds/walk.ts). Straight lines
+   * over the ground — there is no path map on the phone, and it must work with no signal. */
+  route?: LatLon[] | null;
   /** Turn the map so that the way he is facing is at the top, the way a car's GPS does (the compass heading in degrees,
    * src/finds/compass.ts). null or left out = north at the top. The pins stay upright: MapLibre holds a marker's own
    * element against the screen, not against the map. */
@@ -67,6 +72,21 @@ function drawRings(m: MapObj, rings: Ring[]) {
   m.addLayer({ id: 'accuracy-line', type: 'line', source: 'accuracy', paint: { 'line-color': color, 'line-width': 1.5, 'line-opacity': 0.7 } });
 }
 
+/** The planned walk, leg by leg. Drawn under the pins, so a pin is never hidden by its own line. */
+function drawRoute(m: MapObj, line: LatLon[]) {
+  const data = {
+    type: 'FeatureCollection' as const,
+    features: line.length > 1 ? [{ type: 'Feature' as const, properties: {},
+      geometry: { type: 'LineString' as const, coordinates: line.map((p) => [p.lon, p.lat] as [number, number]) } }] : [],
+  };
+  const src = m.getSource('route') as { setData: (d: typeof data) => void } | undefined;
+  if (src) { src.setData(data); return; }
+  m.addSource('route', { type: 'geojson', data });
+  m.addLayer({ id: 'route-line', type: 'line', source: 'route',
+    layout: { 'line-cap': 'round', 'line-join': 'round' },
+    paint: { 'line-color': '#1a73e8', 'line-width': 4, 'line-opacity': 0.75, 'line-dasharray': [1.4, 1] } });
+}
+
 /** The plain grid over whatever the map shows (nothing, when there is no map for the area), redrawn as he moves. */
 function drawGrid(m: MapObj) {
   const b = m.getBounds();
@@ -81,7 +101,7 @@ function drawGrid(m: MapObj) {
   m.addLayer({ id: 'grid-lines', type: 'line', source: 'grid', paint: { 'line-color': '#7f8c76', 'line-width': 1, 'line-opacity': 0.45 } });
 }
 
-export function FindsMap({ pins = [], locate = false, pick, here = null, tall = false, short = false, facing = null }: Props) {
+export function FindsMap({ pins = [], locate = false, pick, here = null, tall = false, short = false, facing = null, route = null }: Props) {
   const box = useRef<HTMLDivElement>(null);
   const lib = useRef<MapLib | null>(null);
   const map = useRef<MapObj | null>(null);
@@ -90,6 +110,7 @@ export function FindsMap({ pins = [], locate = false, pick, here = null, tall = 
   const hereMarker = useRef<MarkerObj | null>(null);
   const framedHere = useRef(false);
   const rings = useRef<Ring[]>([]);
+  const routeLine = useRef<LatLon[]>([]);
   const [mode, setMode] = useState<'normal' | 'fallback'>('normal');
   const [grid, setGrid] = useState(false);
   const onPick = useRef(pick?.onPick);
@@ -131,6 +152,7 @@ export function FindsMap({ pins = [], locate = false, pick, here = null, tall = 
         // After any style (the first, or the fallback): the accuracy circles again, and the grid when it is on.
         made.on('style.load', () => {
           drawRings(made!, rings.current);
+          if (routeLine.current.length > 1) drawRoute(made!, routeLine.current);
           if (gridOn) drawGrid(made!);
         });
         made.on('error', (event) => {
@@ -167,6 +189,14 @@ export function FindsMap({ pins = [], locate = false, pick, here = null, tall = 
       el.className = 'pin';
       el.setAttribute('aria-label', p.label);
       el.setAttribute('data-test', 'map-pin');
+      if (p.stop) {
+        el.classList.add('pin-stop');
+        const n = document.createElement('span');
+        n.className = 'pin-stop-n';
+        n.textContent = String(p.stop);
+        el.append(n);
+        el.setAttribute('aria-label', `Stop ${p.stop}: ${p.label}`);
+      }
       const pop = document.createElement('div');
       pop.className = 'pin-pop';
       const name = document.createElement('strong');
@@ -244,6 +274,14 @@ export function FindsMap({ pins = [], locate = false, pick, here = null, tall = 
       m.fitBounds([[Math.min(...lons), Math.min(...lats)], [Math.max(...lons), Math.max(...lats)]], { padding: 60, maxZoom: 19, duration: 0 });
     }
   }, [ready, here?.lat, here?.lon]);
+
+  // The planned walk on the map.
+  useEffect(() => {
+    const m = map.current;
+    if (!ready || !m) return;
+    routeLine.current = route ?? [];
+    if (m.isStyleLoaded()) drawRoute(m, routeLine.current); // otherwise the style's own load draws it
+  }, [ready, route]);
 
   // Turned the way he points the phone: the ground ahead of him is at the top of the map, so what he sees on the screen
   // lies the way the wood does in front of him. Only a real turn moves it (MAP_TURN_MIN_DEG), or the compass's own

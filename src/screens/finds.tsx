@@ -11,6 +11,10 @@ import { growthWords } from '../finds/growth';
 import { GrowthChip } from './growth';
 import { askForCompassOnTap } from '../finds/compass';
 import { ALL, NO_FILTER, filterFinds, monthName, speciesChoices, type FindFilter } from '../finds/filters';
+import { followHere } from '../finds/device';
+import { sayDistance, type Fix } from '../finds/geo';
+import { planWalk, walkLine, type Stop } from '../finds/walk';
+import { clearWalk, saveWalk, walkOf } from '../finds/walk-store';
 
 // View map (spec 7; Stefan 10/10/2026): his saved locations as pins on his own map, his position, and the list, newest
 // first — each with "Take me there". Everything here lives on this phone only. (In the code a saved location is still
@@ -46,16 +50,31 @@ export function Finds() {
   useEffect(() => { void load(); }, []);
   const backup = useBackup(finds ?? [], () => void load());
   const [filter, setFilter] = useState<FindFilter>(NO_FILTER);
+  // Where he stands: the walk starts from here (the blue dot already follows it).
+  const [here, setHere] = useState<Fix | null>(null);
+  useEffect(() => followHere(setHere, () => {}), []);
+  const [walk, setWalk] = useState(() => walkOf());
   const now = useMemo(() => new Date(), []);
   const shown = useMemo(() => filterFinds(finds ?? [], filter, now, names), [finds, filter, now, names]);
   const choices = useMemo(() => speciesChoices(finds ?? [], names), [finds, names]);
   // The species choice only once a saved location has been named as a species (on its page).
   const named = (finds ?? []).some((f) => f.species);
   const filtered = filter.species !== ALL || filter.pastYears || filter.text.trim() !== '';
+  // The locations he could walk to: the ones the filter shows that have a spot.
+  const walkable = useMemo<Stop[]>(() => shown.filter((f) => f.spot).map((f) => ({ id: f.id, lat: f.spot!.lat, lon: f.spot!.lon })), [shown]);
+  const onWalk = useMemo(() => new Map((walk?.order ?? []).map((s, i) => [s.id, i + 1])), [walk]);
+  // On a walk the list follows the walk; otherwise it stays newest first.
+  const listed = useMemo(() => (walk ? [...shown].sort((a, b) => (onWalk.get(a.id) ?? 99) - (onWalk.get(b.id) ?? 99)) : shown), [shown, walk, onWalk]);
   const pins = useMemo<Pin[]>(() => shown.filter((f) => f.spot).map((f) => ({
     id: f.id, lat: f.spot!.lat, lon: f.spot!.lon, label: findLabel(f, names), when: sayWhen(f.at), growth: growthWords(f.growth, now) ?? undefined,
     href: hrefFor({ name: 'find', id: f.id }), goHref: hrefFor({ name: 'find-go', id: f.id }), accuracy: f.spot!.accuracy,
-  })), [shown, names, now]);
+    stop: onWalk.get(f.id),
+  })), [shown, names, now, onWalk]);
+  const planTheWalk = () => {
+    if (!here) return;
+    setWalk(saveWalk(planWalk(here, walkable), here)); // saved as it is planned: the walk outlives this screen
+  };
+  const dropTheWalk = () => { clearWalk(); setWalk(null); };
   return (
     <>
       <BackLink href={hrefFor({ name: 'map' })} label="Map" />
@@ -63,7 +82,8 @@ export function Finds() {
         <h1>View map</h1>
         <a class="small-button" href={hrefFor({ name: 'find-new' })}><Icon name="plus" size={18} />Save a location</a>
       </div>
-      <FindsMap pins={pins} key={filtered ? JSON.stringify(filter) : 'all'} locate tall />
+      <FindsMap pins={pins} key={filtered ? JSON.stringify(filter) : 'all'} locate tall
+        route={walk ? walkLine(walk.start, walk) : null} />
       <p class="muted small">Your saved locations are on this phone only. The blue dot is you. Tap a pin for the way back.
         Areas you have looked at with a signal stay on the map without one.</p>
       {problem && <p class="card alert" role="alert">{problem}</p>}
@@ -87,6 +107,25 @@ export function Finds() {
           </label>
           {filtered && <p class="muted small" data-test="filter-count">Showing {shown.length} of {finds.length}{' '}
             <button type="button" class="link-button" onClick={() => setFilter(NO_FILTER)}>Show all</button></p>}
+          {/* The walk round them, in the order that keeps it short (Stefan 13/10/2026). */}
+          {walkable.length > 1 && !walk && (
+            <p><button type="button" class="small-button" onClick={planTheWalk} disabled={!here} data-test="plan-walk">
+              <Icon name="navigate" size={18} />Plan a walk round these {walkable.length}</button>
+              {!here && <span class="muted small"> Waiting for your position…</span>}</p>
+          )}
+          {walk && (
+            <p class="card walk-card" data-test="walk-card">
+              <strong>Your walk: {walk.order.length} stops, {sayDistance(walk.total)}</strong>
+              <span class="muted small">From where you are now, in the order that keeps the walking short. Then{' '}
+                {sayDistance(walk.backToStart)} back to where you started. The line is straight over the ground, not a path —
+                follow the arrow on each stop.</span>
+              <span class="walk-card-do">
+                <a class="small-button primary" href={hrefFor({ name: 'find-go', id: walk.order[0].id })} onClick={askForCompassOnTap}
+                  data-test="walk-start"><Icon name="navigate" size={16} />Start: stop 1</a>
+                <button type="button" class="small-button" onClick={dropTheWalk} data-test="walk-clear">Clear the walk</button>
+              </span>
+            </p>
+          )}
         </div>
       )}
       {finds && finds.length === 0 && <p class="card">No saved locations yet. “Save a location” keeps the spot where you
@@ -96,15 +135,17 @@ export function Finds() {
           : filter.pastYears ? `Nothing saved in ${monthName(now)} in earlier years${filter.species !== ALL ? ' for this species' : ''} yet.`
           : 'No saved locations of this species yet.'}</p>
       )}
-      {shown.length > 0 && <h2>Saved locations <span class="muted">({shown.length})</span></h2>}
+      {shown.length > 0 && <h2>{walk ? 'Your walk' : 'Saved locations'} <span class="muted">({shown.length})</span></h2>}
       {shown.length > 0 && (
         // One line each, newest first (Stefan 10/10/2026): when it was saved and his note; a tap opens it, Go walks back.
         <div class="loc-list">
-          {shown.map((f) => {
+          {listed.map((f) => {
             const line = oneLine(f, names);
+            const stop = onWalk.get(f.id);
             return (
               <div class="loc-line" data-test="find-row" key={f.id}>
                 <a class="loc-main" href={hrefFor({ name: 'find', id: f.id })}>
+                  {stop && <span class="loc-stop" data-test="loc-stop">{stop}</span>}
                   {/* The growth chip under the date, so his note keeps the line's width. */}
                   <span class="loc-when">
                     <span class="loc-date" title={sayWhen(f.at)}>{sayListWhen(f.at, now)}</span>
