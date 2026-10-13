@@ -375,6 +375,6 @@ a.result:active { background: var(--subtle); }
 .map-north { position: absolute; top: 8px; left: 8px; width: 38px; height: 38px; pointer-events: none; }
 .map-north-ring { fill: var(--surface); fill-opacity: .9; stroke: var(--line); stroke-width: 1.5; }
 .map-north-needle { fill: var(--deadly); }
-.map-north-n { font: 700 9px var(--font); fill: #fff; text-anchor: middle; dominant-baseline: middle; }
+.map-north-n { font: 700 10px var(--font); fill: var(--fg); text-anchor: middle; dominant-baseline: middle; }
 /* "North at the top" / "Turn the map with me", above the map on the walk back. */
 .go-turn { display: flex; align-items: center; flex-wrap: wrap; gap: 4px 10px; margin: 6px 0 0; }

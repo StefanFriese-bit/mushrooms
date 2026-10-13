@@ -286,11 +286,10 @@ export function FindsMap({ pins = [], locate = false, pick, here = null, tall = 
       {facing !== null && (
         <svg class="map-north" viewBox="-16 -16 32 32" data-test="map-north" role="img" aria-label={`North is ${Math.round(((360 - turnedTo) % 360))}° round from the top of the screen`}>
           <circle r="15" class="map-north-ring" />
-          <g transform={`rotate(${-turnedTo})`}>
-            <path d="M0 -12 L4.5 0 L-4.5 0 Z" class="map-north-needle" />
-            {/* Turned back again, so the letter stands upright however the map lies. */}
-            <g transform={`translate(0 -7) rotate(${turnedTo})`}><text class="map-north-n">N</text></g>
-          </g>
+          {/* The red wedge sits at the rim and swings round to where north has gone; the letter stays upright in the
+              middle, so it is readable whichever way the map is held. */}
+          <g transform={`rotate(${-turnedTo})`}><path d="M0 -14.5 L4.5 -7 L-4.5 -7 Z" class="map-north-needle" /></g>
+          <text y="1" class="map-north-n">N</text>
         </svg>
       )}
       {problem && <p class="map-problem" role="status">{problem}</p>}

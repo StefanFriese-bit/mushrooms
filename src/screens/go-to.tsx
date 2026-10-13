@@ -1,5 +1,5 @@
 import type { ComponentChildren } from 'preact';
-import { useEffect, useState } from 'preact/hooks';
+import { useEffect, useRef, useState } from 'preact/hooks';
 import type { Spot } from '../finds/store';
 import { followHere } from '../finds/device';
 import { appleMapsLink, bearingDeg, compassWord, distanceM, isThere, sayAccuracy, sayDistance, type Fix } from '../finds/geo';
@@ -37,6 +37,8 @@ export function GoTo({ title, subtitle, spot, back, pin, thereText, thereExtra, 
   const [here, setHere] = useState<Fix | null>(null);
   const [gpsProblem, setGpsProblem] = useState<string | null>(null);
   const [heading, setHeading] = useState<Heading | null>(null);
+  /** Whether this screen has ever had a reading out of the compass. */
+  const heardOne = useRef(false);
   // The map turned the way he points the phone (Stefan 13/10/2026) — on unless he locked it to north last time.
   const [turnMap, setTurnMap] = useState(mapTurnsWithMe);
   // The tap that opened this screen asked for the compass (askForCompassOnTap): it is on as soon as he allows it.
@@ -53,11 +55,18 @@ export function GoTo({ title, subtitle, spot, back, pin, thereText, thereExtra, 
     return () => { gone = true; };
   }, []);
   useEffect(() => {
-    if (compass !== 'on') return;
-    let heard = false;
-    const stop = followHeading((h) => { if (h) heard = true; setHeading(h); });
-    // A phone that allows the compass but never sends a heading has none: say so rather than wait for ever.
-    const quiet = setTimeout(() => { if (!heard) setCompass('none'); }, 3000);
+    // It keeps listening after saying the phone gives none: a compass can be slow to wake (cold, under trees), and
+    // before 13/10/2026 the first three quiet seconds switched it off for the rest of the walk, with no way back.
+    if (compass !== 'on' && compass !== 'none') return;
+    const stop = followHeading((h) => {
+      if (!h) return; // an event carrying no heading: the last one still stands, rather than the arrow blinking away
+      heardOne.current = true;
+      setHeading(h);
+      setCompass((c) => (c === 'none' ? 'on' : c)); // it has one after all
+    });
+    // A phone that allows the compass but never sends a heading has none: say so rather than wait for ever. Once one
+    // has been heard it is never unsaid — a gap between readings is not the same as having no compass.
+    const quiet = setTimeout(() => { if (!heardOne.current) setCompass((c) => (c === 'on' ? 'none' : c)); }, 3000);
     return () => { stop(); clearTimeout(quiet); };
   }, [compass]);
   // Keep the screen on while walking back (phones that cannot simply let it sleep as usual).
