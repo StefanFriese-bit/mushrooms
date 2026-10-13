@@ -47,11 +47,11 @@ export function Finds() {
   const backup = useBackup(finds ?? [], () => void load());
   const [filter, setFilter] = useState<FindFilter>(NO_FILTER);
   const now = useMemo(() => new Date(), []);
-  const shown = useMemo(() => filterFinds(finds ?? [], filter, now), [finds, filter, now]);
+  const shown = useMemo(() => filterFinds(finds ?? [], filter, now, names), [finds, filter, now, names]);
   const choices = useMemo(() => speciesChoices(finds ?? [], names), [finds, names]);
   // The species choice only once a saved location has been named as a species (on its page).
   const named = (finds ?? []).some((f) => f.species);
-  const filtered = filter.species !== ALL || filter.pastYears;
+  const filtered = filter.species !== ALL || filter.pastYears || filter.text.trim() !== '';
   const pins = useMemo<Pin[]>(() => shown.filter((f) => f.spot).map((f) => ({
     id: f.id, lat: f.spot!.lat, lon: f.spot!.lon, label: findLabel(f, names), when: sayWhen(f.at), growth: growthWords(f.growth, now) ?? undefined,
     href: hrefFor({ name: 'find', id: f.id }), goHref: hrefFor({ name: 'find-go', id: f.id }), accuracy: f.spot!.accuracy,
@@ -69,6 +69,11 @@ export function Finds() {
       {problem && <p class="card alert" role="alert">{problem}</p>}
       {finds && finds.length > 0 && (
         <div class="find-filters" data-test="find-filters">
+          {/* A word out of his own descriptions (Stefan 13/10/2026): the map and the list show only those locations,
+              and each one still has Go. */}
+          <input class="field find-search" type="search" inputMode="search" value={filter.text} data-test="find-search"
+            aria-label="Find a word in your locations" placeholder="A word in your locations, e.g. penny bun"
+            onInput={(e) => setFilter({ ...filter, text: (e.target as HTMLInputElement).value })} />
           {named && (
             <select class="field" aria-label="Which locations to show" value={filter.species}
               onChange={(e) => setFilter({ ...filter, species: (e.target as HTMLSelectElement).value })}>
@@ -87,7 +92,8 @@ export function Finds() {
       {finds && finds.length === 0 && <p class="card">No saved locations yet. “Save a location” keeps the spot where you
         stand, with a description and a photo if you like. It works without a signal.</p>}
       {finds && filtered && shown.length === 0 && (
-        <p class="card" data-test="filter-empty">{filter.pastYears ? `Nothing saved in ${monthName(now)} in earlier years${filter.species !== ALL ? ' for this species' : ''} yet.`
+        <p class="card" data-test="filter-empty">{filter.text.trim() ? `No saved location mentions “${filter.text.trim()}”.`
+          : filter.pastYears ? `Nothing saved in ${monthName(now)} in earlier years${filter.species !== ALL ? ' for this species' : ''} yet.`
           : 'No saved locations of this species yet.'}</p>
       )}
       {shown.length > 0 && <h2>Saved locations <span class="muted">({shown.length})</span></h2>}

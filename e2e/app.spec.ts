@@ -638,6 +638,47 @@ test.describe('Map', () => {
     await expect(page.locator('[data-test=find-row]')).toHaveCount(4);
   });
 
+  test('a word in his own descriptions: the map and the list show those locations, and each one still has Go', async ({ page }, info) => {
+    // Stefan 13/10/2026: "if I've saved locations that have the word penny bun in … I can view on the map where all
+    // those locations are and choose one of them to navigate towards". The species choice above only knows locations
+    // he has named on their own page; this searches what he typed.
+    const at = new Date().toISOString();
+    const f = (id: string, notes: string, species: string | null) =>
+      ({ id, at, spot: { lat: 51.6588, lon: 0.0466 + Number(id.slice(1)) / 1000, accuracy: 8 }, species, notes, photoIds: [] });
+    const file = info.outputPath('word-finds.zip');
+    writeFileSync(file, packBackup([
+      f('f1', 'Penny bun under the big beech', null),
+      f('f2', 'penny buns by the gate\nthree of them', null),
+      f('f3', 'chanterelles on the bank', null),
+      f('f4', '', 'Boletus edulis'), // never described, but named as a Penny Bun
+    ], [], new Date()));
+    await page.goto(`${site.url}#/finds`);
+    await page.getByLabel('Backup file to restore').setInputFiles(file);
+    await expect(page.locator('[data-test=find-row]')).toHaveCount(4);
+    await expect(page.locator('[data-test=map-pin]')).toHaveCount(4);
+    const search = page.getByLabel('Find a word in your locations');
+    await search.fill('penny bun');
+    await expect(page.locator('[data-test=find-row]')).toHaveCount(3); // f1, f2 and the one named Boletus edulis
+    await expect(page.locator('[data-test=map-pin]')).toHaveCount(3);
+    await expect(page.locator('[data-test=filter-count]')).toContainText('Showing 3 of 4');
+    // One of them, chosen and walked to: every row keeps its Go.
+    await expect(page.locator('[data-test=find-row] .loc-go')).toHaveCount(3);
+    await page.locator('[data-test=find-row]').first().locator('.loc-go').click();
+    await expect(page.getByRole('heading', { name: /^Back to: Penny bun under the big beech/ })).toBeVisible();
+    await page.goBack();
+    // What the phone hears when he says it, and a word that is nowhere.
+    await search.fill('penny bunny');
+    await expect(page.locator('[data-test=find-row]')).toHaveCount(3);
+    await search.fill('chanterelle');
+    await expect(page.locator('[data-test=find-row]')).toHaveCount(1);
+    await search.fill('morel');
+    await expect(page.locator('[data-test=filter-empty]')).toContainText('No saved location mentions “morel”');
+    await expect(page.locator('[data-test=map-pin]')).toHaveCount(0);
+    await page.getByRole('button', { name: 'Show all' }).click();
+    await expect(page.locator('[data-test=find-row]')).toHaveCount(4);
+    await expect(search).toHaveValue('');
+  });
+
   test('growth: a location saved at G1 shows "G1 · 3 days" three days later, and a revisit logs G2', async ({ page }) => {
     // Stefan 10/10/2026: mark one just coming up, see the stage and how many days have passed, go back when it is time.
     await page.goto(`${site.url}#/finds/new`);

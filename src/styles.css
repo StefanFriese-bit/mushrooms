@@ -378,3 +378,5 @@ a.result:active { background: var(--subtle); }
 .map-north-n { font: 700 10px var(--font); fill: var(--fg); text-anchor: middle; dominant-baseline: middle; }
 /* "North at the top" / "Turn the map with me", above the map on the walk back. */
 .go-turn { display: flex; align-items: center; flex-wrap: wrap; gap: 4px 10px; margin: 6px 0 0; }
+/* The word search over his saved locations, above the species choice (src/screens/finds.tsx). */
+.find-search { width: 100%; }
