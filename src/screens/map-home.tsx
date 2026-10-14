@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'preact/hooks';
 import { hrefFor } from '../router';
 import { listFinds, type Find } from '../finds/store';
-import { BackupReminder, plural, useBackup } from './backup';
+import { BackupReminder, CloudWarning, plural, useBackup } from './backup';
 import { Icon } from './icons';
 
 // The Map (Stefan 10/10/2026): two choices — save the spot where he stands, or see his saved locations and walk back
@@ -26,6 +26,7 @@ export function MapHome() {
           <span class="choice-text"><strong>View map</strong><small data-test="saved-count">{saved}</small></span>
         </a>
       </div>
+      {finds && <CloudWarning b={backup} />}
       {finds && <BackupReminder b={backup} />}
     </>
   );

@@ -39,7 +39,7 @@ function isSpot(v: unknown): v is Spot | null {
   const s = v as Record<string, unknown>;
   return isNumber(s.lat) && isNumber(s.lon) && Math.abs(s.lat) <= 90 && Math.abs(s.lon) <= 180 && (s.accuracy === null || isNumber(s.accuracy));
 }
-function isFind(v: unknown): v is Find {
+export function isFind(v: unknown): v is Find {
   if (typeof v !== 'object' || v === null) return false;
   const f = v as Record<string, unknown>;
   return isText(f.id) && f.id.length > 0 && isText(f.at) && !Number.isNaN(Date.parse(f.at)) && isSpot(f.spot) &&
@@ -91,9 +91,11 @@ export function noteBackup(note: BackupNote): void {
   try { localStorage.setItem(KEY, JSON.stringify(note)); } catch { /* not kept: he gets one reminder too many */ }
 }
 
-/** The reminder (spec 7): finds not in a backup, when the last backup is more than 7 days old (or there is none). */
-export function backupReminder(findIds: string[], note: BackupNote | null, now: Date): number {
-  const inBackup = new Set(note?.ids ?? []);
+/** The reminder (spec 7): finds not in a backup, when the last backup is more than 7 days old (or there is none).
+ * `cloud`: the last automatic backup that reached GitHub (src/finds/cloud-backup.ts) — a find in it is backed up too,
+ * so the reminder stays quiet while the automatic backup keeps up (14/10/2026: the photos are his to keep or not). */
+export function backupReminder(findIds: string[], note: BackupNote | null, now: Date, cloud: { ids: string[] } | null = null): number {
+  const inBackup = new Set([...(note?.ids ?? []), ...(cloud?.ids ?? [])]);
   const missing = findIds.filter((id) => !inBackup.has(id)).length;
   if (missing === 0) return 0;
   if (note && now.getTime() - Date.parse(note.at) <= 7 * 24 * 3600 * 1000) return 0;

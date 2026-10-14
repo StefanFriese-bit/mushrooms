@@ -392,3 +392,9 @@ a.result:active { background: var(--subtle); }
 .walk-card-do { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
 .loc-stop { flex: 0 0 auto; align-self: center; width: 22px; height: 22px; border-radius: 50%; background: #1a73e8; color: #fff;
   font: 700 12px/22px var(--font); text-align: center; margin-right: 8px; }
+
+/* The automatic backup block at the top of the Backup section (src/screens/backup.tsx). */
+.cloud { margin-bottom: 14px; padding-bottom: 12px; border-bottom: 1px solid var(--line, #d8dfd0); }
+.cloud h3, .card > h3 { margin: 6px 0 4px; font-size: 1rem; }
+.cloud-key { width: 100%; font-family: ui-monospace, Menlo, monospace; font-size: 0.85rem; }
+.alert-text { color: #a33; }

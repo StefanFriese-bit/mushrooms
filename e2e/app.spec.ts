@@ -689,6 +689,133 @@ test.describe('Map', () => {
     await expect(page.locator('[data-test=find-row]')).toHaveCount(1);
   });
 
+  // The automatic backup (src/finds/cloud-backup.ts): GitHub is a stand-in that keeps the branch's tree and the file.
+  type GitHubState = { file: string | null; sha: string | null; puts: Array<{ sha?: string; text: string; message: string }>; calls: number };
+  async function standInGitHub(page: Page, opts: { file?: string | null; refuseKey?: boolean; down?: boolean; state?: GitHubState } = {}) {
+    const state: GitHubState = opts.state ?? { file: opts.file ?? null, sha: opts.file ? 'sha-0' : null, puts: [], calls: 0 };
+    await page.route('https://api.github.com/**', (route) => {
+      const req = route.request();
+      const path = new URL(req.url()).pathname;
+      state.calls++;
+      if (opts.down) return route.abort('internetdisconnected');
+      const auth = req.headers().authorization ?? '';
+      if (opts.refuseKey || !auth.startsWith('Bearer github_pat_')) return route.fulfill({ status: 401, json: { message: 'Bad credentials' } });
+      if (req.method() === 'GET' && path === '/repos/ECWuser/mushrooms-backup') return route.fulfill({ json: { full_name: 'ECWuser/mushrooms-backup' } });
+      if (req.method() === 'GET' && path === '/repos/ECWuser/mushrooms-backup/git/trees/main') {
+        return state.sha ? route.fulfill({ json: { tree: [{ path: 'locations.json', type: 'blob', sha: state.sha }] } }) : route.fulfill({ status: 404, json: { message: 'Not Found' } });
+      }
+      if (req.method() === 'PUT' && path === '/repos/ECWuser/mushrooms-backup/contents/locations.json') {
+        const body = req.postDataJSON() as { content: string; sha?: string; message: string };
+        if ((body.sha ?? null) !== state.sha) return route.fulfill({ status: 409, json: { message: 'sha mismatch' } });
+        state.file = Buffer.from(body.content, 'base64').toString('utf8');
+        state.sha = `sha-${state.puts.length + 1}`;
+        state.puts.push({ sha: body.sha, text: state.file, message: body.message });
+        return route.fulfill({ status: body.sha ? 200 : 201, json: { content: { sha: state.sha } } });
+      }
+      if (req.method() === 'GET' && path === '/repos/ECWuser/mushrooms-backup/contents/locations.json') {
+        return state.file === null ? route.fulfill({ status: 404, json: { message: 'Not Found' } }) : route.fulfill({ status: 200, body: state.file, contentType: 'application/json' });
+      }
+      return route.fulfill({ status: 500, json: { message: `unexpected ${req.method()} ${path}` } });
+    });
+    return state;
+  }
+  const KEY = 'github_pat_11AAAAAAA0000000000000_abcdefghijklmnopqrstuvwxyz0123456789';
+
+  test('automatic backup: a pasted key sends the locations to GitHub by themselves, without photos; a new phone gets them back; a phone with none never writes over the backup', async ({ page, browser }) => {
+    const gh = await standInGitHub(page);
+    await page.goto(`${site.url}#/finds`);
+    await expect(page.locator('[data-test=cloud]')).toContainText('can go to a private place on GitHub by themselves');
+    await page.locator('[data-test=cloud-setup]').click();
+    await page.locator('[data-test=cloud-key]').fill(KEY);
+    await page.locator('[data-test=cloud-save-key]').click();
+    await expect(page.locator('[data-test=backup-said]')).toContainText('The key is kept on this phone');
+    await expect(page.locator('[data-test=cloud-status]')).toContainText('On.');
+    // A location saved with a photo reaches GitHub by itself — the location, never the photo.
+    await page.goto(`${site.url}#/finds/new`);
+    await expect(page.locator('[data-test=where]')).toContainText('within 7 m', { timeout: 15000 });
+    await page.getByLabel('Photo').setInputFiles(PHOTO);
+    await expect(page.locator('.thumbs img')).toHaveCount(1);
+    await page.getByLabel('Description').fill('Chanterelles by the stream');
+    await page.getByRole('button', { name: 'Save location' }).click();
+    await expect(page.getByRole('heading', { name: 'Chanterelles by the stream', exact: true })).toBeVisible();
+    await expect.poll(() => gh.puts.length, { timeout: 10000 }).toBeGreaterThanOrEqual(1);
+    const last = () => JSON.parse(gh.puts[gh.puts.length - 1].text) as { locations: Array<Record<string, unknown>> };
+    await expect.poll(() => last().locations.length, { timeout: 10000 }).toBe(1);
+    expect(last().locations[0]).toMatchObject({ notes: 'Chanterelles by the stream', spot: { lat: 51.6588, lon: 0.0466 } });
+    expect(last().locations[0]).not.toHaveProperty('photoIds');
+    expect(gh.puts[gh.puts.length - 1].text).not.toContain('photo');
+    expect(gh.puts[gh.puts.length - 1].message).toBe('Backup: 1 location');
+    // The section says so; the Map page's file-backup reminder stays quiet, the automatic backup covers it.
+    await page.goto(`${site.url}#/finds`);
+    await expect(page.locator('[data-test=cloud-status]')).toContainText('(1 location)');
+    await page.goto(`${site.url}#/map`);
+    await expect(page.locator('[data-test=saved-count]')).toContainText('1 saved location'); // the locations are loaded: now the reminder would show
+    await expect(page.locator('[data-test=backup-reminder]')).toHaveCount(0);
+    await expect(page.locator('[data-test=cloud-warning]')).toHaveCount(0);
+    // A new phone (a fresh browser, nothing on it) talking to the same GitHub. The key is pasted; the backup on GitHub is
+    // NOT written over by the empty phone.
+    const putsBefore = gh.puts.length;
+    const phone2 = await browser.newContext({ serviceWorkers: 'block', geolocation: { latitude: 51.6588, longitude: 0.0466, accuracy: 7 }, permissions: ['geolocation'] });
+    const p2 = await phone2.newPage();
+    await p2.route('https://tiles.openfreemap.org/**', (r) => (r.request().url().includes('/styles/') ? r.fulfill({ json: PLAIN_MAP }) : r.fulfill({ status: 404 })));
+    await standInGitHub(p2, { state: gh });
+    await p2.goto(`${site.url}#/finds`);
+    await expect(p2.locator('[data-test=cloud-setup]')).toBeVisible();
+    await p2.locator('[data-test=cloud-setup]').click();
+    await p2.locator('[data-test=cloud-key]').fill(KEY);
+    await p2.locator('[data-test=cloud-save-key]').click();
+    await expect(p2.locator('[data-test=cloud-held]')).toContainText('this phone has no saved locations, so nothing was sent');
+    expect(gh.puts.length).toBe(putsBefore);
+    expect(last().locations).toHaveLength(1);
+    // Restore from GitHub brings the location back — without its photo, which the automatic backup never held.
+    await p2.locator('[data-test=cloud-restore]').click();
+    await expect(p2.locator('[data-test=backup-said]')).toContainText('Restored 1 location from GitHub');
+    await expect(p2.locator('[data-test=find-row]')).toHaveCount(1);
+    await p2.locator('[data-test=find-row] .loc-main').first().click();
+    await expect(p2.getByRole('heading', { name: 'Chanterelles by the stream', exact: true })).toBeVisible();
+    await expect(p2.locator('.photos img')).toHaveCount(0);
+    // The restored location is already on GitHub: nothing is pushed for it, and a second restore adds nothing twice.
+    await p2.goto(`${site.url}#/finds`);
+    await p2.locator('[data-test=cloud-restore]').click();
+    await expect(p2.locator('[data-test=backup-said]')).toContainText('1 location was already on this phone');
+    await expect(p2.locator('[data-test=find-row]')).toHaveCount(1);
+    await expect.poll(() => gh.puts.length).toBe(putsBefore); // the restored location was on GitHub already: nothing pushed
+    await phone2.close();
+  });
+
+  test('automatic backup: a key GitHub refuses is not kept; with no signal the section says so and the Map warns only after a day', async ({ page }) => {
+    const gh = await standInGitHub(page, { refuseKey: true });
+    await page.goto(`${site.url}#/finds`);
+    await page.locator('[data-test=cloud-setup]').click();
+    await page.locator('[data-test=cloud-key]').fill('not a key');
+    await page.locator('[data-test=cloud-save-key]').click();
+    await expect(page.locator('[data-test=backup-said]')).toContainText('does not look like a GitHub key');
+    await page.locator('[data-test=cloud-key]').fill(KEY);
+    await page.locator('[data-test=cloud-save-key]').click();
+    await expect(page.locator('[data-test=backup-said]')).toContainText('GitHub did not accept the key');
+    await expect(page.locator('[data-test=cloud-key]')).toBeVisible(); // not kept: the box stays for another try
+    await expect(page.locator('[data-test=cloud-status]')).toHaveCount(0);
+    await page.reload();
+    await expect(page.locator('[data-test=cloud-setup]')).toBeVisible(); // nothing was kept on the phone
+    expect(gh.puts).toHaveLength(0);
+    // A kept key, then no signal: the try is said in words; the Map warns once the trouble is a day old.
+    await page.unroute('https://api.github.com/**');
+    const yesterday = new Date(Date.now() - 26 * 3600 * 1000).toISOString();
+    await page.evaluate(([key, since]) => localStorage.setItem('cloud-backup', JSON.stringify({ key, sent: null, failed: { since, at: since, why: 'no signal' }, held: null })), [KEY, yesterday]);
+    await standInGitHub(page, { down: true });
+    await page.goto(`${site.url}#/finds/new`);
+    await expect(page.locator('[data-test=where]')).toContainText('within 7 m', { timeout: 15000 });
+    await page.getByLabel('Description').fill('Under the oak');
+    await page.getByRole('button', { name: 'Save location' }).click();
+    await expect(page.getByRole('heading', { name: 'Under the oak', exact: true })).toBeVisible();
+    await page.goto(`${site.url}#/finds`);
+    await page.locator('[data-test=cloud-now]').click();
+    await expect(page.locator('[data-test=backup-said]')).toContainText('Not sent: no signal');
+    await expect(page.locator('[data-test=cloud-failed]')).toContainText('no signal');
+    await page.goto(`${site.url}#/map`);
+    await expect(page.locator('[data-test=cloud-warning]')).toContainText('has not reached GitHub since');
+  });
+
   test('filters: by species, and this month in past years — the map and the list together', async ({ page }, info) => {
     const now = new Date();
     const on = (y: number, m: number) => new Date(now.getFullYear() - y, m, 5, 10).toISOString();

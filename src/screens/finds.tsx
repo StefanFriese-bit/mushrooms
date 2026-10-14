@@ -164,7 +164,7 @@ export function Finds() {
           })}
         </div>
       )}
-      {finds && <BackupSection b={backup} count={finds.length} />}
+      {finds && <BackupSection b={backup} count={finds.length} finds={finds} />}
     </>
   );
 }

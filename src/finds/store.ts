@@ -3,7 +3,8 @@ import type { GrowthLog } from './growth';
 import { planRestore } from './backup';
 
 // His finds (spec 7), kept in this phone's own database (IndexedDB) and nowhere else. A find's photos are stored as
-// bytes beside it. Nothing here ever talks to the network.
+// bytes beside it. Nothing here ever talks to the network: it only SAYS when the finds changed (onFindsChanged), and the
+// automatic backup (src/finds/cloud-backup.ts) listens.
 export type Spot = LatLon & { accuracy: number | null }; // accuracy in metres; null = placed on the map by hand
 export type Find = {
   id: string;
@@ -23,6 +24,14 @@ function newId(): string {
   const b = crypto.getRandomValues(new Uint8Array(16));
   return [...b].map((x) => x.toString(16).padStart(2, '0')).join('');
 }
+
+/** Told after every change to the finds on this phone (a find added, changed, removed or restored). */
+const changeListeners = new Set<() => void>();
+export function onFindsChanged(listener: () => void): () => void {
+  changeListeners.add(listener);
+  return () => changeListeners.delete(listener);
+}
+function changed(): void { for (const l of changeListeners) { try { l(); } catch { /* a listener's fault is its own */ } } }
 
 const DB_NAME = 'mushroom-finds';
 const VERSION = 1;
@@ -82,6 +91,7 @@ export async function addFind(f: Omit<Find, 'id' | 'photoIds'>, photos: Blob[]):
     tx.objectStore('finds').add(find);
     for (const p of stored) tx.objectStore('photos').add(p);
   });
+  changed();
   return find;
 }
 
@@ -91,6 +101,7 @@ export async function updateFind(id: string, changes: Partial<Pick<Find, 'specie
   if (!old) throw new Error('That find is no longer on this phone');
   const next = { ...old, ...changes };
   await inTx(['finds'], 'readwrite', (tx) => { tx.objectStore('finds').put(next); });
+  changed();
   return next;
 }
 
@@ -107,6 +118,7 @@ export async function deleteFind(f: Find): Promise<void> {
     tx.objectStore('finds').delete(f.id);
     for (const id of f.photoIds) tx.objectStore('photos').delete(id);
   });
+  changed();
 }
 
 export async function photosOf(f: Find): Promise<StoredPhoto[]> {
@@ -139,5 +151,6 @@ export async function restoreFinds(finds: Find[], photos: StoredPhoto[]): Promis
       for (const p of byFind.get(f.id) ?? []) tx.objectStore('photos').put(p);
     }
   });
+  if (add.length > 0) changed();
   return { added: add.length, already: finds.length - add.length };
 }
