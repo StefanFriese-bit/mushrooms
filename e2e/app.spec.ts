@@ -404,6 +404,11 @@ test.describe('Map', () => {
     await expect(page.locator('[data-test=go-distance]')).toHaveText('You are there', { timeout: 15000 });
     // One tap back to the map (Stefan 10/10/2026: "how do I go back to just the map"): from the walk back, from the
     // location's own page, and from the map up to the Map's two choices.
+    // The way back is a thumb-sized button with the iOS touch rules (Stefan 14/10/2026: the back arrow was "sticky" in the field).
+    const backBox = (await page.locator('[data-test=back-link]').boundingBox())!;
+    expect(backBox.height).toBeGreaterThanOrEqual(48);
+    expect(backBox.width).toBeGreaterThanOrEqual(120);
+    expect(await page.locator('[data-test=back-link]').evaluate((el) => { const s = getComputedStyle(el); return [s.touchAction, s.userSelect, (s as unknown as Record<string, string>).webkitTouchCallout ?? 'none']; })).toEqual(['manipulation', 'none', 'none']);
     await page.locator('[data-test=back-link]').click();
     await expect(page.getByRole('heading', { name: 'View map' })).toBeVisible();
     await expect(page.locator('[data-test=find-row]')).toHaveCount(1);

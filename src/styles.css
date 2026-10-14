@@ -122,10 +122,15 @@ a.row:active { background: var(--subtle); }
 .tag.poisonous { color: var(--poison); background: var(--poison-bg); border-color: var(--poison-line); }
 .tag.edible { color: var(--edible); background: var(--edible-bg); border-color: var(--edible-line); }
 .tag.plain { color: var(--plain); background: var(--plain-bg); border-color: var(--plain-line); }
-/* The way back up, at the top of a page (src/screens/back-link.tsx): big enough for a thumb. */
-.back-link { display: inline-flex; align-items: center; gap: 2px; min-height: 40px; margin: -4px 0 0 -6px; padding: 6px 10px 6px 4px;
-  border-radius: var(--radius); color: var(--accent-text); font-size: 16px; font-weight: 600; text-decoration: none; }
-.back-link:active { background: var(--accent-weak); }
+/* The way back up, at the top of a page (src/screens/back-link.tsx): a real button for a thumb in the field (Stefan
+   14/10/2026: "quite sticky and didn't work when I was in the field"). Measured before: 67 x 40 points, a plain link.
+   Now at least 48 points tall and 120 wide, with the three iOS rules a field tap needs: no long-press link preview
+   (touch-callout), no text selection on a firm press (user-select), no double-tap wait (touch-action). */
+.back-link { display: inline-flex; align-items: center; gap: 4px; min-height: 48px; min-width: 120px; margin: 0 0 0 -2px; padding: 10px 18px 10px 10px;
+  border: 1px solid var(--accent-line); border-radius: var(--radius); background: var(--accent-weak); color: var(--accent-text);
+  font-size: 17px; font-weight: 600; text-decoration: none;
+  touch-action: manipulation; -webkit-touch-callout: none; user-select: none; -webkit-user-select: none; -webkit-tap-highlight-color: transparent; }
+.back-link:active { background: var(--accent-line); }
 .back-link + h1, .back-link + .title-row, .back-link + .card { margin-top: 2px; }
 .title-row { display: flex; align-items: center; justify-content: space-between; gap: 8px 12px; flex-wrap: wrap; margin: 6px 0 10px; }
 .title-row h1 { margin: 0; }
