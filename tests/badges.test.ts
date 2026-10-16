@@ -24,4 +24,21 @@ describe('a saved location\'s picture', () => {
     expect(badgeFromWords('fly agaric next to a penny bun')).toBeNull();
     expect(badgeFromWords('')).toBeNull();
   });
+  it('the three he looks for most: Horn of Plenty, Hedgehog, Winter Chanterelle', () => {
+    expect(badgeOfFind({ species: 'Craterellus cornucopioides', notes: '' })?.key).toBe('horn-of-plenty');
+    expect(badgeOfFind({ species: 'Hydnum repandum', notes: '' })?.key).toBe('hedgehog');
+    expect(badgeOfFind({ species: 'Hydnum rufescens', notes: '' })?.key).toBe('hedgehog');
+    expect(badgeOfFind({ species: 'Craterellus tubaeformis', notes: '' })?.key).toBe('winter-chanterelle');
+    expect(badgeFromWords('Black trumpets in the moss')?.key).toBe('horn-of-plenty');
+    expect(badgeFromWords('horn of plenty')?.key).toBe('horn-of-plenty');
+    expect(badgeFromWords('Hedgehogs under the beech')?.key).toBe('hedgehog');
+    expect(badgeFromWords('Winter chanterelles, loads')?.key).toBe('winter-chanterelle');
+    expect(badgeFromWords('yellowfoot')?.key).toBe('winter-chanterelle');
+  });
+  it('near misses give none: a plain Chanterelle, a Yellowleg Bonnet, a trumpet alone', () => {
+    expect(badgeOfFind({ species: 'Cantharellus cibarius', notes: 'winter chanterelle' })).toBeNull();
+    expect(badgeFromWords('chanterelle')).toBeNull();
+    expect(badgeFromWords('yellowleg bonnet')).toBeNull();
+    expect(badgeFromWords('trumpet shaped')).toBeNull();
+  });
 });

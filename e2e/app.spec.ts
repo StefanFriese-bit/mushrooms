@@ -931,7 +931,7 @@ test.describe('Map', () => {
     await page.goto(`${site.url}#/finds/new`);
     await expect(page.locator('[data-test=where]')).toContainText('within 7 m', { timeout: 15000 });
     const pick = page.locator('[data-test=badge-pick]');
-    await expect(pick.getByRole('button')).toHaveText(['Penny Bun', 'Fly Agaric', 'Birch Bolete']);
+    await expect(pick.getByRole('button')).toHaveText(['Penny Bun', 'Fly Agaric', 'Birch Bolete', 'Horn of Plenty', 'Hedgehog', 'Winter Chanterelle']);
     // Above the description.
     const pickTop = (await pick.boundingBox())!.y;
     const descTop = (await page.getByLabel('Description').boundingBox())!.y;

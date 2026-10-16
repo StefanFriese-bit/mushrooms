@@ -1,4 +1,5 @@
-// The three mushrooms he marks with a picture (Stefan 16/10/2026): "a crown for the Penny Bun Bolete, a red cap with
+// The mushrooms he marks with a picture (Stefan 16/10/2026; three more the same day: Horn of Plenty, Hedgehog, Winter
+// Chanterelle — "these are the ones I primarily look for"): "a crown for the Penny Bun Bolete, a red cap with
 // white dots for the Fly Agaric, a thin silver tree for the Birch Bolete" — picked above the description when he saves
 // a location, and drawn as the location's pin on every map, so a look at the map says what grows where.
 //
@@ -6,8 +7,8 @@
 // sets), so the map's species choice, the word search and the location's title all follow it. A location named any of
 // these three on its page gets the picture too.
 
-export type BadgeKey = 'penny-bun' | 'fly-agaric' | 'birch-bolete';
-export type Badge = { key: BadgeKey; name: string; species: string; svg: string };
+export type BadgeKey = 'penny-bun' | 'fly-agaric' | 'birch-bolete' | 'horn-of-plenty' | 'hedgehog' | 'winter-chanterelle';
+export type Badge = { key: BadgeKey; name: string; species: string; alsoSpecies?: string[]; svg: string };
 
 // Drawn on a 32 × 32 square, in their own colours (they are pictures, not line icons). Plain constants: never built
 // from anything he typed, so they are safe to put into the page as they are.
@@ -26,23 +27,57 @@ const FLY_AGARIC = `<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" 
 <circle cx="14.5" cy="15" r="1.4" fill="#fff"/><circle cx="24.5" cy="16" r="1.2" fill="#fff"/><circle cx="7" cy="16.5" r="1.1" fill="#fff"/><circle cx="19" cy="16" r="1.1" fill="#fff"/>
 </svg>`;
 
+// A silver birch: the white trunk with its black marks standing in front of a light, rounded yellow-green crown,
+// a few leaves already turning gold.
 const BIRCH_BOLETE = `<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-<path d="M16 10 8.5 5.5M16 14.5 23.5 9.5M16 19 9.5 15.5" stroke="#7d8792" stroke-width="1.5" stroke-linecap="round"/>
-<path d="M14 30.5V3.5Q16 2 18 3.5V30.5Z" fill="#e9ecf1" stroke="#7d8792" stroke-width="1.2" stroke-linejoin="round"/>
-<path d="M14 8H16.6M15.6 12.5H18M14 17H16.8M15.2 21.5H18M14 26H16.4" stroke="#2f343a" stroke-width="1.6" stroke-linecap="round"/>
-<ellipse cx="7.8" cy="5" rx="2.6" ry="1.6" fill="#9cbf3b"/><ellipse cx="24.4" cy="9" rx="2.6" ry="1.6" fill="#9cbf3b"/><ellipse cx="8.6" cy="15" rx="2.4" ry="1.5" fill="#9cbf3b"/>
+<g fill="#a9c63c"><circle cx="10.5" cy="11" r="4.6"/><circle cx="21.5" cy="11" r="4.6"/><circle cx="16" cy="7.2" r="5.2"/><circle cx="12.5" cy="16" r="4"/><circle cx="19.8" cy="16" r="4"/><circle cx="16" cy="13" r="5"/></g>
+<g fill="#c9dc5a"><circle cx="13.4" cy="6" r="2.2"/><circle cx="9" cy="9.6" r="1.9"/><circle cx="19.6" cy="8.6" r="1.8"/><circle cx="22.6" cy="13.6" r="1.6"/><circle cx="11" cy="14.8" r="1.5"/></g>
+<g fill="#e2b83a"><circle cx="21.2" cy="5.6" r="1.2"/><circle cx="7" cy="13.4" r="1.1"/><circle cx="23.8" cy="17.4" r="1.1"/><circle cx="14.2" cy="18.6" r=".9"/></g>
+<path d="M16 13.5 11.6 9.6M16.4 11.2 20.6 8.4M16.1 16.6 20 14.4" stroke="#f4f3ef" stroke-width="1" stroke-linecap="round"/>
+<path d="M14.4 31 15.3 7.5Q16.1 6.6 16.9 7.5L17.8 31Z" fill="#fdfdfb" stroke="#5f5a54" stroke-width=".9" stroke-linejoin="round"/>
+<g stroke="#1f1d1b" stroke-width="1.3" stroke-linecap="round"><path d="M15.5 11H16.4M16 14.4H17.2M15.2 17.8H16.6M16.4 21.2H17.6M14.9 24.6H16.8M16.5 27.4H17.7"/></g>
+<path d="M14.6 28.6 17.6 28.2 17.8 31H14.4Z" fill="#3b3733"/>
+</svg>`;
+
+// Horn of Plenty / Black Trumpet: a dark, hollow trumpet with a ragged, rolled-out rim.
+const HORN_OF_PLENTY = `<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+<path d="M14.2 30.2Q16 31 17.8 30.2L18.4 22.5Q23.5 15 27.5 8.5Q24.5 6.4 22.5 8.2Q20.5 5.8 18 7.4Q16 5.2 14 7.2Q11.5 5.6 9.5 8Q7.2 6.6 4.5 8.5Q8.5 15 13.6 22.5Z" fill="#2c2724" stroke="#120f0d" stroke-width="1" stroke-linejoin="round"/>
+<ellipse cx="16" cy="9.3" rx="9.6" ry="2.6" fill="#0f0c0b"/>
+<path d="M11 13.5Q13 19 15 25M20.8 13.8Q19.2 19 17.3 25" stroke="#5e5650" stroke-width=".8" fill="none" stroke-linecap="round"/>
+</svg>`;
+
+// Hedgehog: a pale buff cap, bumpy-edged, with its spines hanging underneath in place of gills; a short white stem.
+const HEDGEHOG = `<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+<path d="M13.2 17.5H19L19.6 28.5Q16.2 30 12.6 28.5Z" fill="#f6efe2" stroke="#b9a98d" stroke-width="1" stroke-linejoin="round"/>
+<g fill="#e2a65c" stroke="#a8702c" stroke-width=".5"><path d="M5 16.4 6 20.2 7 16.6ZM7.6 16.8 8.6 21 9.6 17ZM10.2 17 11.1 21.6 12 17.2ZM20 17.2 20.9 21.6 21.8 17ZM22.4 17 23.4 21 24.4 16.8ZM24.9 16.6 25.9 20.2 26.9 16.4ZM12.6 17.2 13.3 20 14 17.3ZM18 17.3 18.7 20 19.4 17.2Z"/></g>
+<path d="M3.5 16.6Q3.2 11.5 8 9.2Q12 7 16.4 7.3Q22 7.1 25.6 9.8Q29 12.4 28.5 16.4Q25.5 17.8 21.5 17.4Q18.5 18 16 17.6Q12.5 18.1 9.8 17.4Q6.2 17.8 3.5 16.6Z" fill="#efc98c" stroke="#a8702c" stroke-width="1" stroke-linejoin="round"/>
+<path d="M9.5 11.8Q13 10 17 10.6" stroke="#fae4bd" stroke-width="1.3" fill="none" stroke-linecap="round"/>
+</svg>`;
+
+// Winter Chanterelle, drawn yellow as he asked: a funnel cap with a wavy rim, the ridges running down onto a yellow stem.
+const WINTER_CHANTERELLE = `<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+<path d="M14.3 30.2Q16 31 17.7 30.2L17.6 19.6H14.4Z" fill="#f2c230" stroke="#b5880f" stroke-width="1" stroke-linejoin="round"/>
+<path d="M14.4 20.5Q8.5 15.5 4 9.8Q6.6 8.2 8.6 9.6Q10.4 7.4 12.8 8.8Q14.6 6.8 16.6 8.4Q18.8 6.8 20.6 8.8Q23 7.4 24.6 9.6Q26.6 8.4 28.2 10Q23.4 15.6 17.6 20.5Z" fill="#f5c63a" stroke="#b5880f" stroke-width="1" stroke-linejoin="round"/>
+<path d="M6 10.8Q15 13.6 26.4 11" stroke="#b5880f" stroke-width=".8" fill="none"/>
+<path d="M10 12.6 14.8 19.6M13.4 13.2 15.6 19.4M16.4 13.3 16.3 19.4M19.4 13 17 19.5M22.6 12.3 17.4 19.6" stroke="#d59d17" stroke-width=".8" fill="none" stroke-linecap="round"/>
+<path d="M7.6 9.9Q10.5 9 12.5 10" stroke="#fde59a" stroke-width="1.1" fill="none" stroke-linecap="round"/>
 </svg>`;
 
 export const BADGES: readonly Badge[] = [
   { key: 'penny-bun', name: 'Penny Bun', species: 'Boletus edulis', svg: PENNY_BUN },
   { key: 'fly-agaric', name: 'Fly Agaric', species: 'Amanita muscaria', svg: FLY_AGARIC },
   { key: 'birch-bolete', name: 'Birch Bolete', species: 'Leccinum scabrum', svg: BIRCH_BOLETE },
+  { key: 'horn-of-plenty', name: 'Horn of Plenty', species: 'Craterellus cornucopioides', svg: HORN_OF_PLENTY },
+  // Both hedgehogs in the guide share the picture; picking it names the Wood Hedgehog.
+  { key: 'hedgehog', name: 'Hedgehog', species: 'Hydnum repandum', alsoSpecies: ['Hydnum rufescens'], svg: HEDGEHOG },
+  // The guide calls it Trumpet Chanterelle (Craterellus tubaeformis); he calls it the Winter Chanterelle.
+  { key: 'winter-chanterelle', name: 'Winter Chanterelle', species: 'Craterellus tubaeformis', svg: WINTER_CHANTERELLE },
 ];
 
 /** The picture for a location's species, or null when it is none of the three (or not named yet). */
 export function badgeFor(species: string | null | undefined): Badge | null {
   if (!species) return null;
-  return BADGES.find((b) => b.species === species) ?? null;
+  return BADGES.find((b) => b.species === species || b.alsoSpecies?.includes(species)) ?? null;
 }
 
 export function badgeByKey(key: BadgeKey | null | undefined): Badge | null {
@@ -57,6 +92,10 @@ const NAMES_IN_WORDS: Record<BadgeKey, string[][]> = {
   'penny-bun': [['penny', 'bun'], ['cep'], ['porcini'], ['king', 'bolete'], ['boletus', 'edulis']],
   'fly-agaric': [['fly', 'agaric'], ['amanita', 'muscaria']],
   'birch-bolete': [['birch', 'bolete'], ['leccinum', 'scabrum']],
+  'horn-of-plenty': [['horn', 'of', 'plenty'], ['black', 'trumpet'], ['craterellus', 'cornucopioide']],
+  'hedgehog': [['hedgehog'], ['hydnum']],
+  // Not "yellowleg": the Yellowleg Bonnet is another mushroom altogether.
+  'winter-chanterelle': [['winter', 'chanterelle'], ['trumpet', 'chanterelle'], ['yellowfoot'], ['craterellus', 'tubaeformi']],
 };
 /** Words as they are compared: lower case, accents off, a plural "s" dropped (penny buns, ceps, fly agarics). */
 function bareWords(s: string): string[] {
