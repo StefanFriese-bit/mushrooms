@@ -46,12 +46,17 @@ const HORN_OF_PLENTY = `<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/s
 <path d="M11 13.5Q13 19 15 25M20.8 13.8Q19.2 19 17.3 25" stroke="#5e5650" stroke-width=".8" fill="none" stroke-linecap="round"/>
 </svg>`;
 
-// Hedgehog: a pale buff cap, bumpy-edged, with its spines hanging underneath in place of gills; a short white stem.
+// Hedgehog mushrooms, shown as the animal (Stefan 16/10/2026: "look like a hedgehog - not a mushroom"): a brown
+// hedgehog walking right, its spines fanned over its back, a pale pointed face and a black nose.
 const HEDGEHOG = `<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-<path d="M13.2 17.5H19L19.6 28.5Q16.2 30 12.6 28.5Z" fill="#f6efe2" stroke="#b9a98d" stroke-width="1" stroke-linejoin="round"/>
-<g fill="#e2a65c" stroke="#a8702c" stroke-width=".5"><path d="M5 16.4 6 20.2 7 16.6ZM7.6 16.8 8.6 21 9.6 17ZM10.2 17 11.1 21.6 12 17.2ZM20 17.2 20.9 21.6 21.8 17ZM22.4 17 23.4 21 24.4 16.8ZM24.9 16.6 25.9 20.2 26.9 16.4ZM12.6 17.2 13.3 20 14 17.3ZM18 17.3 18.7 20 19.4 17.2Z"/></g>
-<path d="M3.5 16.6Q3.2 11.5 8 9.2Q12 7 16.4 7.3Q22 7.1 25.6 9.8Q29 12.4 28.5 16.4Q25.5 17.8 21.5 17.4Q18.5 18 16 17.6Q12.5 18.1 9.8 17.4Q6.2 17.8 3.5 16.6Z" fill="#efc98c" stroke="#a8702c" stroke-width="1" stroke-linejoin="round"/>
-<path d="M9.5 11.8Q13 10 17 10.6" stroke="#fae4bd" stroke-width="1.3" fill="none" stroke-linecap="round"/>
+<path d="M6.0 18.0L1.9 18.4L5.9 19.5ZM6.5 16.3L3.4 16.2L6.1 17.8ZM7.3 14.8L3.4 13.6L6.6 16.1ZM8.4 13.5L5.5 12.1L7.4 14.6ZM9.7 12.4L6.6 9.7L8.5 13.3ZM11.2 11.6L9.1 9.2L9.9 12.2ZM12.9 11.1L11.0 7.4L11.4 11.5ZM14.6 10.9L13.6 7.9L13.1 11.0ZM16.3 11.1L16.0 7.0L14.8 10.9ZM17.9 11.6L18.2 8.5L16.5 11.1ZM19.4 12.5L20.8 8.6L18.1 11.7ZM20.7 13.6L22.2 10.8L19.6 12.6ZM21.8 14.9L24.6 11.9L20.9 13.7ZM22.6 16.5L25.0 14.5L21.9 15.1ZM23.0 18.2L26.7 16.5L22.6 16.7Z" fill="#4e3a2a" stroke="#2e2117" stroke-width=".5" stroke-linejoin="round"/>
+<path d="M4.5 22.5Q4 12.2 14.5 11Q22 10.6 24.5 17.5L29 21.3Q29.6 22.4 28.4 22.8L24 23.6Q22 25 18 25H7.2Q4.6 25 4.5 22.5Z" fill="#7a5a3c" stroke="#3a2a1c" stroke-width="1" stroke-linejoin="round"/>
+<path d="M7 18Q9.5 13.5 14 13.2M10 21Q12 16.5 16.5 16M15.5 22.5Q17 19 20.5 18.6" stroke="#5a412b" stroke-width="1" fill="none" stroke-linecap="round"/>
+<path d="M21 17.6Q24 16.8 25.4 18.6L29 21.3Q29.6 22.4 28.4 22.8L24 23.6Q21.5 23.4 21 21Z" fill="#e3c7a1" stroke="#3a2a1c" stroke-width=".8" stroke-linejoin="round"/>
+<circle cx="28.9" cy="22" r="1.1" fill="#1b1410"/>
+<circle cx="24.3" cy="19.6" r=".9" fill="#1b1410"/><circle cx="24.6" cy="19.3" r=".3" fill="#fff"/>
+<path d="M21.6 16.9Q22.4 15.6 23.4 16.6" fill="#e3c7a1" stroke="#3a2a1c" stroke-width=".7"/>
+<path d="M9 25V27M13 25V27M17.5 25V27M21 24.6V26.6" stroke="#3a2a1c" stroke-width="1.4" stroke-linecap="round"/>
 </svg>`;
 
 // Winter Chanterelle, drawn yellow as he asked: a funnel cap with a wavy rim, the ridges running down onto a yellow stem.
