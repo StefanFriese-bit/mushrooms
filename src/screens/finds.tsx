@@ -15,7 +15,7 @@ import { followHere } from '../finds/device';
 import { sayDistance, type Fix } from '../finds/geo';
 import { planWalk, walkLine, type Stop } from '../finds/walk';
 import { clearWalk, saveWalk, walkOf } from '../finds/walk-store';
-import { badgeFor } from '../finds/badges';
+import { badgeOfFind } from '../finds/badges';
 import { BadgeIcon } from './badges';
 
 // View map (spec 7; Stefan 10/10/2026): his saved locations as pins on his own map, his position, and the list, newest
@@ -70,7 +70,7 @@ export function Finds() {
   const pins = useMemo<Pin[]>(() => shown.filter((f) => f.spot).map((f) => ({
     id: f.id, lat: f.spot!.lat, lon: f.spot!.lon, label: findLabel(f, names), when: sayWhen(f.at), growth: growthWords(f.growth, now) ?? undefined,
     href: hrefFor({ name: 'find', id: f.id }), goHref: hrefFor({ name: 'find-go', id: f.id }), accuracy: f.spot!.accuracy,
-    stop: onWalk.get(f.id), badge: badgeFor(f.species)?.key,
+    stop: onWalk.get(f.id), badge: badgeOfFind(f)?.key,
   })), [shown, names, now, onWalk]);
   const planTheWalk = () => {
     if (!here) return;
@@ -153,7 +153,7 @@ export function Finds() {
                     <span class="loc-date" title={sayWhen(f.at)}>{sayListWhen(f.at, now)}</span>
                     <GrowthChip log={f.growth} now={now} />
                   </span>
-                  {badgeFor(f.species) && <BadgeIcon badge={badgeFor(f.species)!} size={26} />}
+                  {badgeOfFind(f) && <BadgeIcon badge={badgeOfFind(f)!} size={26} />}
                   <span class={`loc-desc${line.described ? '' : ' none'}`}>{line.text}</span>
                 </a>
                 {f.spot && (

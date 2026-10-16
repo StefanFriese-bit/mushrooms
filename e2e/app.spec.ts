@@ -31,7 +31,7 @@ function answersFor(labels: string[]): Answers {
 async function addScanPhoto(page: Page, slot: string, photo: string) {
   await page.getByLabel(`${slot} photo`, { exact: true }).setInputFiles(fileURLToPath(new URL(`../public/photos/${photo}`, import.meta.url)));
   const crop = page.locator('[data-test=cropper]');
-  await expect(crop).toBeVisible();
+  await expect(crop).toBeVisible({ timeout: 15000 }); // GitHub's machine took over 5 s on 16/10/2026
   await crop.getByRole('button', { name: 'Use this' }).click();
   await expect(crop).toHaveCount(0);
 }
@@ -965,16 +965,41 @@ test.describe('Map', () => {
     await expect(page.locator('.pin-pop strong')).toContainText('Penny Bun');
   });
 
+  test('pictures without picking one: a description naming a Penny Bun shows it on the map; an older location gets one on its page', async ({ page }) => {
+    // Stefan 16/10/2026: his locations saved before the pictures still showed the plain pin.
+    await page.goto(`${site.url}#/finds/new`);
+    await expect(page.locator('[data-test=where]')).toContainText('within 7 m', { timeout: 15000 });
+    await page.getByLabel('Description').fill('Two penny buns under the big beech');
+    await page.getByRole('button', { name: 'Save location' }).click();
+    await expect(page.locator('h1 .badge-icon')).toHaveCount(1);
+    await expect(page.locator('[data-test=map-pin][data-badge=penny-bun]')).toHaveCount(1);
+    // One that names nothing keeps the plain pin, until he chooses its picture on its page.
+    await page.goto(`${site.url}#/finds/new`);
+    await expect(page.locator('[data-test=where]')).toContainText('within 7 m', { timeout: 15000 });
+    await page.getByLabel('Description').fill('Red ones by the gate');
+    await page.getByRole('button', { name: 'Save location' }).click();
+    await expect(page.locator('[data-test=map-pin]:not([data-badge])')).toHaveCount(1);
+    await page.getByRole('button', { name: 'Edit the description, picture or what it is' }).click();
+    await page.locator('[data-test=badge-pick]').getByRole('button', { name: 'Fly Agaric' }).click();
+    await expect(page.getByLabel('What it is')).toHaveValue('Amanita muscaria');
+    await page.getByRole('button', { name: 'Save changes' }).click();
+    await expect(page.locator('.what-it-is')).toContainText('Fly Agaric');
+    await page.goto(`${site.url}#/finds`);
+    await expect(page.locator('[data-test=map-pin][data-badge=penny-bun]')).toHaveCount(1);
+    await expect(page.locator('[data-test=map-pin][data-badge=fly-agaric]')).toHaveCount(1);
+    await expect(page.locator('[data-test=map-pin]:not([data-badge])')).toHaveCount(0);
+  });
+
   test('a saved location can be described and identified afterwards, and deleted', async ({ page }) => {
     await page.goto(`${site.url}#/finds/new`);
     await expect(page.locator('[data-test=where]')).toContainText('within 7 m', { timeout: 15000 });
     await page.getByRole('button', { name: 'Save location' }).click();
     await expect(page.getByRole('heading', { name: 'Saved location', exact: true })).toBeVisible();
-    await page.getByRole('button', { name: 'Edit the description or what it is' }).click();
+    await page.getByRole('button', { name: 'Edit the description, picture or what it is' }).click();
     await page.getByLabel('What it is').selectOption('Macrolepiota procera');
     await page.getByRole('button', { name: 'Save changes' }).click();
     await expect(page.getByRole('heading', { name: 'Parasol', exact: true })).toBeVisible(); // no description: the species
-    await page.getByRole('button', { name: 'Edit the description or what it is' }).click();
+    await page.getByRole('button', { name: 'Edit the description, picture or what it is' }).click();
     await page.getByLabel('Description').fill('Three parasols by the gate');
     await page.getByRole('button', { name: 'Save changes' }).click();
     await expect(page.getByRole('heading', { name: 'Three parasols by the gate', exact: true })).toBeVisible();

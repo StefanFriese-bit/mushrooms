@@ -48,3 +48,34 @@ export function badgeFor(species: string | null | undefined): Badge | null {
 export function badgeByKey(key: BadgeKey | null | undefined): Badge | null {
   return key ? BADGES.find((b) => b.key === key) ?? null : null;
 }
+
+// Locations saved before the pictures existed (Stefan 16/10/2026: "it just shows them still as these red teardrop
+// icons … I don't have to click on each one to see what it is when I'm navigating — that's the whole point"): a
+// location that is not named as a species takes its picture from what he wrote, when the description names exactly
+// one of the three. Whole names only, so "bun" alone or "birch" alone gives nothing.
+const NAMES_IN_WORDS: Record<BadgeKey, string[][]> = {
+  'penny-bun': [['penny', 'bun'], ['cep'], ['porcini'], ['king', 'bolete'], ['boletus', 'edulis']],
+  'fly-agaric': [['fly', 'agaric'], ['amanita', 'muscaria']],
+  'birch-bolete': [['birch', 'bolete'], ['leccinum', 'scabrum']],
+};
+/** Words as they are compared: lower case, accents off, a plural "s" dropped (penny buns, ceps, fly agarics). */
+function bareWords(s: string): string[] {
+  return s.normalize('NFD').replace(/\p{Diacritic}/gu, '').toLowerCase().split(/[^\p{Letter}\p{Number}]+/u).filter(Boolean)
+    .map((w) => (w.length > 3 && w.endsWith('s') ? w.slice(0, -1) : w));
+}
+function hasName(ws: string[], name: string[]): boolean {
+  for (let i = 0; i + name.length <= ws.length; i++) if (name.every((n, k) => ws[i + k] === n)) return true;
+  return false;
+}
+/** The picture a description names — null when it names none of the three, or more than one. */
+export function badgeFromWords(text: string): Badge | null {
+  const ws = bareWords(text);
+  const named = BADGES.filter((b) => NAMES_IN_WORDS[b.key].some((n) => hasName(ws, n)));
+  return named.length === 1 ? named[0] : null;
+}
+/** A saved location's picture: the species it is named as; when it is not named at all, the one its description names.
+ * Named as another species = no picture (what he identified it as wins over what he first wrote). */
+export function badgeOfFind(f: { species: string | null; notes: string }): Badge | null {
+  if (f.species) return badgeFor(f.species);
+  return badgeFromWords(f.notes);
+}
