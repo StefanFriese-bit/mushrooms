@@ -59,7 +59,13 @@ type Props = {
    * src/finds/compass.ts). null or left out = north at the top. The pins stay upright: MapLibre holds a marker's own
    * element against the screen, not against the map. */
   facing?: number | null;
+  /** Walks he recorded (src/finds/track.ts), each a coloured line in parts — a gap breaks the line. Drawn under the
+   * planned walk and the pins. */
+  trails?: Trail[];
+  /** Frame the walks the first time they are drawn (a walk's own page, the past walks). */
+  frameTrails?: boolean;
 };
+export type Trail = { id: string; color: string; parts: LatLon[][] };
 
 type Ring = { ring: Array<[number, number]>; kind: 'find' | 'here' };
 /** Draws the accuracy circles once the map's style is ready (a map with no style yet, e.g. offline, shows none). */
@@ -112,6 +118,25 @@ function drawRoute(m: MapObj, line: LatLon[]) {
   wake(m);
 }
 
+/** His recorded walks: one line per part, each in its walk's colour, over a white casing so it reads on any ground. */
+function drawTrails(m: MapObj, trails: Trail[]) {
+  const data = {
+    type: 'FeatureCollection' as const,
+    features: trails.flatMap((t) => t.parts.filter((p) => p.length > 1).map((p) => ({ type: 'Feature' as const, properties: { color: t.color, id: t.id },
+      geometry: { type: 'LineString' as const, coordinates: p.map((q) => [q.lon, q.lat] as [number, number]) } }))),
+  };
+  const src = m.getSource('trails') as { setData: (d: typeof data) => void } | undefined;
+  if (src) { src.setData(data); m.triggerRepaint(); return; }
+  m.addSource('trails', { type: 'geojson', data });
+  const look = { 'line-cap': 'round' as const, 'line-join': 'round' as const };
+  const under = m.getLayer('route-casing') ? 'route-casing' : undefined;
+  m.addLayer({ id: 'trails-casing', type: 'line', source: 'trails', layout: look,
+    paint: { 'line-color': '#ffffff', 'line-width': 7, 'line-opacity': 0.85 } }, under);
+  m.addLayer({ id: 'trails-line', type: 'line', source: 'trails', layout: look,
+    paint: { 'line-color': ['get', 'color'] as unknown as string, 'line-width': 4, 'line-opacity': 0.9 } }, under);
+  m.triggerRepaint();
+}
+
 /** The plain grid over whatever the map shows (nothing, when there is no map for the area), redrawn as he moves. */
 function drawGrid(m: MapObj) {
   const b = m.getBounds();
@@ -126,7 +151,7 @@ function drawGrid(m: MapObj) {
   m.addLayer({ id: 'grid-lines', type: 'line', source: 'grid', paint: { 'line-color': '#7f8c76', 'line-width': 1, 'line-opacity': 0.45 } });
 }
 
-export function FindsMap({ pins = [], locate = false, pick, here = null, tall = false, short = false, facing = null, route = null }: Props) {
+export function FindsMap({ pins = [], locate = false, pick, here = null, tall = false, short = false, facing = null, route = null, trails = [], frameTrails = false }: Props) {
   const box = useRef<HTMLDivElement>(null);
   const lib = useRef<MapLib | null>(null);
   const map = useRef<MapObj | null>(null);
@@ -136,6 +161,10 @@ export function FindsMap({ pins = [], locate = false, pick, here = null, tall = 
   const framedHere = useRef(false);
   const rings = useRef<Ring[]>([]);
   const routeLine = useRef<LatLon[]>([]);
+  const trailLines = useRef<Trail[]>([]);
+  const framedTrails = useRef(false);
+  /** How many points of his walks are really on the map — read back off the map's source, as the planned walk is. */
+  const [trailPoints, setTrailPoints] = useState(0);
   const [mode, setMode] = useState<'normal' | 'fallback'>('normal');
   const [grid, setGrid] = useState(false);
   const onPick = useRef(pick?.onPick);
@@ -167,7 +196,8 @@ export function FindsMap({ pins = [], locate = false, pick, here = null, tall = 
         if (locate) {
           const geo = new ml.GeolocateControl({ positionOptions: { enableHighAccuracy: true }, trackUserLocation: true });
           made.addControl(geo, 'top-right');
-          made.once('load', () => { if (!pins.length) geo.trigger(); });
+          // Not when the map is to frame his walks: finding him first would throw the framing away.
+          made.once('load', () => { if (!pins.length && !(frameTrails && trails.length)) geo.trigger(); });
         }
         let styled = false;
         let fellBack = false;
@@ -180,6 +210,7 @@ export function FindsMap({ pins = [], locate = false, pick, here = null, tall = 
         // After any style (the first, or the fallback): the accuracy circles again, and the grid when it is on.
         made.on('style.load', () => {
           drawRings(made!, rings.current);
+          if (trailLines.current.length) drawTrails(made!, trailLines.current);
           if (routeLine.current.length > 1) drawRoute(made!, routeLine.current);
           if (gridOn) drawGrid(made!);
         });
@@ -327,6 +358,28 @@ export function FindsMap({ pins = [], locate = false, pick, here = null, tall = 
     return () => m.off('styledata', again);
   }, [ready, route]);
 
+  // His recorded walks on the map, drawn the same careful way as the planned walk; framed once when asked.
+  useEffect(() => {
+    const m = map.current;
+    if (!ready || !m) return;
+    trailLines.current = trails;
+    const pts = trails.flatMap((t) => t.parts.flat());
+    if (frameTrails && !framedTrails.current && pts.length > 0) {
+      framedTrails.current = true;
+      // The walks and his saved locations together, so ticking his walks on never loses a pin off the screen.
+      const lons = [...pts.map((p) => p.lon), ...pins.map((p) => p.lon)];
+      const lats = [...pts.map((p) => p.lat), ...pins.map((p) => p.lat)];
+      m.fitBounds([[Math.min(...lons), Math.min(...lats)], [Math.max(...lons), Math.max(...lats)]], { padding: 40, maxZoom: 18, duration: 0 });
+    }
+    const draw = () => {
+      try { drawTrails(m, trailLines.current); setTrailPoints(pts.length); return true; } catch { return false; }
+    };
+    if (draw()) return;
+    const again = () => { if (draw()) m.off('styledata', again); };
+    m.on('styledata', again);
+    return () => m.off('styledata', again);
+  }, [ready, trails]);
+
   // Turned the way he points the phone: the ground ahead of him is at the top of the map, so what he sees on the screen
   // lies the way the wood does in front of him. Only a real turn moves it (MAP_TURN_MIN_DEG), or the compass's own
   // wandering would keep the map shivering while he stands still.
@@ -362,7 +415,8 @@ export function FindsMap({ pins = [], locate = false, pick, here = null, tall = 
 
   return (
     <div class={`map-wrap${tall ? ' tall' : ''}${short ? ' short' : ''}`} data-map-mode={mode} data-grid={grid ? 'on' : 'off'}
-      data-bearing={Math.round(turnedTo)} data-route-points={drawn}>
+      data-bearing={Math.round(turnedTo)} data-route-points={drawn}
+      data-trail-points={trailPoints}>
       <div class="map" ref={box} data-test="map" />
       {/* With the map turned, where north has gone — so a turned map can still be read against a paper one. */}
       {facing !== null && (

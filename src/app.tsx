@@ -13,6 +13,7 @@ import { FindNew } from './screens/find-new';
 import { FindPage } from './screens/find-page';
 import { FindGo } from './screens/find-go';
 import { Dogs, DogsGo, DogsNew } from './screens/dogs';
+import { RecordingBar, TrackPage, Tracks } from './screens/track';
 import { UpdateBar } from './screens/update-bar';
 import brand from './brand.json';
 import { Home } from './screens/home';
@@ -81,6 +82,8 @@ function screen(route: Route) {
     case 'dogs': return <Dogs />;
     case 'dogs-new': return <DogsNew />;
     case 'dogs-go': return <DogsGo />;
+    case 'tracks': return <Tracks />;
+    case 'track': return <TrackPage id={route.id} key={route.id} />;
     default: return <><h1>Not found</h1><p><a href={hrefFor({ name: 'home' })}>Back to the start</a></p></>;
   }
 }
@@ -101,6 +104,7 @@ export function App() {
     <div class={`shell${home ? ' at-home' : ''}`}>
       <Header home={home} />
       <UpdateBar addingFind={route.name === 'find-new'} />
+      <RecordingBar hidden={route.name === 'tracks'} />
       <main>{screen(route)}</main>
       {!home && <SectionBar active={sectionOf(route)} />}
     </div>

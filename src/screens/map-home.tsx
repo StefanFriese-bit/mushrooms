@@ -25,6 +25,10 @@ export function MapHome() {
           <span class="choice-icon"><Icon name="map" size={30} /></span>
           <span class="choice-text"><strong>View map</strong><small data-test="saved-count">{saved}</small></span>
         </a>
+        <a class="choice-button" href={hrefFor({ name: 'tracks' })} data-test="record-walk">
+          <span class="choice-icon"><Icon name="trail" size={30} /></span>
+          <span class="choice-text"><strong>Record a walk</strong><small>Your route, the kilometres and the climb; your last walks on the map</small></span>
+        </a>
       </div>
       {finds && <CloudWarning b={backup} />}
       {finds && <BackupReminder b={backup} />}

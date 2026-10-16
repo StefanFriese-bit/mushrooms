@@ -20,6 +20,7 @@ const SHAPES = {
   alert: <><path d="M12 3.6 2.6 19.8h18.8z" /><path d="M12 10v4.4M12 17.2v.1" /></>,
   crop: <><path d="M6 2.5V18h15.5" /><path d="M2.5 6H18v15.5" /></>,
   paw: <><path d="M12 12.2c-2.7 0-5.2 3-5.2 5.4 0 1.5 1.1 2.4 2.5 2.4 1.1 0 1.6-.6 2.7-.6s1.6.6 2.7.6c1.4 0 2.5-.9 2.5-2.4 0-2.4-2.5-5.4-5.2-5.4z" /><ellipse cx="5.4" cy="10.6" rx="1.7" ry="2.1" /><ellipse cx="9.3" cy="6.4" rx="1.7" ry="2.2" /><ellipse cx="14.7" cy="6.4" rx="1.7" ry="2.2" /><ellipse cx="18.6" cy="10.6" rx="1.7" ry="2.1" /></>,
+  trail: <><circle cx="6" cy="18.5" r="2" /><circle cx="18" cy="5.5" r="2" /><path d="M8 18.5h5.5a3.2 3.2 0 0 0 0-6.4h-3a3.2 3.2 0 0 1 0-6.4H16" /></>,
   ruler: <><rect x="2.5" y="8" width="19" height="8" rx="1.5" /><path d="M6.5 8v3M10 8v4.5M13.5 8v3M17 8v4.5" /></>,
 } satisfies Record<string, JSX.Element>;
 export type IconName = keyof typeof SHAPES;

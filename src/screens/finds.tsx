@@ -16,6 +16,9 @@ import { sayDistance, type Fix } from '../finds/geo';
 import { planWalk, walkLine, type Stop } from '../finds/walk';
 import { clearWalk, saveWalk, walkOf } from '../finds/walk-store';
 import { badgesOfFind } from '../finds/badges';
+import { pastTrails, PAST_ON_MAP, useTracks } from './track';
+const SHOW_WALKS = 'show-walks';
+import { PAST_COLOURS, sayKm, trackStats } from '../finds/track';
 import { BadgeIcons } from './badges';
 
 // View map (spec 7; Stefan 10/10/2026): his saved locations as pins on his own map, his position, and the list, newest
@@ -72,6 +75,11 @@ export function Finds() {
     href: hrefFor({ name: 'find', id: f.id }), goHref: hrefFor({ name: 'find-go', id: f.id }), accuracy: f.spot!.accuracy,
     stop: onWalk.get(f.id), badges: badgesOfFind(f).map((b) => b.key),
   })), [shown, names, now, onWalk]);
+  // His last walks on this map too (Stefan 16/10/2026: "where the last four times I walked is"), remembered on this phone.
+  const tracks = useTracks();
+  const [showWalks, setShowWalks] = useState(() => { try { return localStorage.getItem(SHOW_WALKS) === '1'; } catch { return false; } });
+  const toggleWalks = (on: boolean) => { setShowWalks(on); try { localStorage.setItem(SHOW_WALKS, on ? '1' : '0'); } catch { /* private mode */ } };
+  const trails = useMemo(() => (showWalks && tracks ? pastTrails(tracks) : []), [showWalks, tracks]);
   const planTheWalk = () => {
     if (!here) return;
     setWalk(saveWalk(planWalk(here, walkable), here)); // saved as it is planned: the walk outlives this screen
@@ -85,7 +93,17 @@ export function Finds() {
         <a class="small-button" href={hrefFor({ name: 'find-new' })}><Icon name="plus" size={18} />Save a location</a>
       </div>
       <FindsMap pins={pins} key={filtered ? JSON.stringify(filter) : 'all'} locate tall
-        route={walk ? walkLine(walk.start, walk) : null} />
+        route={walk ? walkLine(walk.start, walk) : null} trails={trails} frameTrails={showWalks} />
+      {tracks && tracks.length > 0 && (
+        <p class="show-walks">
+          <label class="check"><input type="checkbox" checked={showWalks} data-test="show-walks"
+            onChange={(e) => toggleWalks((e.target as HTMLInputElement).checked)} />{' '}Show my last {Math.min(PAST_ON_MAP, tracks.length)} walks</label>
+          {showWalks && tracks.slice(0, PAST_ON_MAP).map((t, i) => (
+            <span class="walk-chip" key={t.id}><span class="swatch" style={{ background: PAST_COLOURS[i] }} />
+              {new Date(t.start).toLocaleDateString('en-GB', { day: 'numeric', month: 'short' })} · {sayKm(trackStats(t).distanceM)}</span>
+          ))}
+        </p>
+      )}
       <p class="muted small">Your saved locations are on this phone only. The blue dot is you. Tap a pin for the way back.
         Areas you have looked at with a signal stay on the map without one.</p>
       {problem && <p class="card alert" role="alert">{problem}</p>}

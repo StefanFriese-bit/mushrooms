@@ -428,3 +428,32 @@ a.result:active { background: var(--subtle); }
 .what-it-is .badge-icon { vertical-align: middle; margin-right: 6px; }
 .find-title { display: flex; align-items: center; gap: 10px; }
 .card .badge-pick { margin-bottom: 10px; }
+
+/* Record a walk (src/screens/track.tsx). */
+.track-start { width: 100%; text-align: left; font: inherit; cursor: pointer; }
+.track-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 8px 0 12px; }
+.track-stats > div { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 8px 10px; }
+.track-stats span { display: block; font-size: 13px; color: var(--muted, #667); }
+.track-stats strong { display: block; font-size: 22px; font-weight: 700; font-variant-numeric: tabular-nums; }
+.track-buttons { display: flex; gap: 10px; margin: 6px 0 10px; }
+.track-buttons .small-button { flex: 1; min-height: 48px; font-size: 17px; }
+.small-button.stop { background: #c92a2a; border-color: #a61e1e; color: #fff; }
+.recording-now { display: flex; align-items: center; gap: 8px; font-weight: 600; margin: 0; }
+.rec-dot { width: 10px; height: 10px; border-radius: 50%; background: #e03131; flex: none; animation: rec-blink 1.4s infinite; }
+@keyframes rec-blink { 50% { opacity: .35; } }
+.recording-bar { display: flex; align-items: center; gap: 8px; justify-content: center; padding: 8px 12px; background: #ebfbee;
+  border-bottom: 1px solid #b2f2bb; color: #1b5e20; font-weight: 600; font-size: 15px; text-decoration: none; }
+.track-legend { list-style: none; padding: 0; margin: 6px 0 12px; display: grid; gap: 4px; font-size: 15px; }
+.track-legend .swatch { display: inline-block; width: 22px; height: 6px; border-radius: 3px; vertical-align: middle; margin-right: 8px; }
+.track-profile { margin: 10px 0; }
+.track-profile svg { width: 100%; height: 90px; display: block; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); }
+
+.track-stats strong.climb { font-size: 18px; white-space: nowrap; line-height: 30px; }
+.walk-list { border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); }
+.walk-line { display: flex; align-items: center; gap: 10px; padding: 10px 12px; color: var(--fg); text-decoration: none; min-height: 56px; }
+.walk-line + .walk-line { border-top: 1px solid var(--hairline); }
+.walk-line-text { flex: 1; display: flex; flex-direction: column; gap: 2px; }
+.walk-line-text strong { font-weight: 600; }
+.show-walks { display: flex; flex-wrap: wrap; gap: 6px 12px; align-items: center; margin: 6px 0; font-size: 15px; }
+.walk-chip { display: inline-flex; align-items: center; gap: 6px; font-size: 14px; }
+.walk-chip .swatch { display: inline-block; width: 18px; height: 6px; border-radius: 3px; }

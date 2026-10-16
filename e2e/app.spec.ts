@@ -1356,3 +1356,96 @@ test('search finds a species by another name, even misspelt, and its page lists 
   await rows.first().click();
   await expect(page.locator('[data-test=other-names]')).toContainText('Porcini');
 });
+
+// Record a walk (Stefan 16/10/2026: "press start and it … tracks my kilometres and my route and it shows me where I've
+// walked … stored … I can see where the last four times I walked is").
+test.describe('Record a walk', () => {
+  test.use({ serviceWorkers: 'block', geolocation: { latitude: 51.6588, longitude: 0.0466, accuracy: 5 }, permissions: ['geolocation'] });
+  test.beforeEach(async ({ page }) => {
+    await page.route('https://tiles.openfreemap.org/**', (r) => (r.request().url().includes('/styles/') ? r.fulfill({ json: PLAIN_MAP }) : r.fulfill({ status: 404 })));
+  });
+  /** Walks him `steps` × 6 m north at walking-ish pace (the recorder does not believe a jump faster than ~22 km/h). */
+  async function walkNorth(page: Page, context: import('@playwright/test').BrowserContext, from: number, steps: number) {
+    for (let i = 1; i <= steps; i++) {
+      await page.waitForTimeout(1300);
+      await context.setGeolocation({ latitude: 51.6588 + ((from + i) * 6) / 111_320, longitude: 0.0466, accuracy: 5 });
+    }
+  }
+  /** How much of a colour is on the map, counted in a picture of it (pins and buttons hidden). */
+  async function colourOnTheMap(page: Page, rgb: [number, number, number]): Promise<number> {
+    const hide = await page.addStyleTag({ content: '.pin, .here-dot, .maplibregl-ctrl, .maplibregl-user-location-dot { display: none !important; }' });
+    await page.waitForTimeout(400);
+    const shot = await page.locator('.map-wrap').first().screenshot();
+    await hide.evaluate((el) => (el as unknown as HTMLStyleElement).remove());
+    const { data, info } = await sharp(shot).raw().toBuffer({ resolveWithObject: true });
+    let n = 0;
+    for (let i = 0; i < data.length; i += info.channels) {
+      if (Math.abs(data[i] - rgb[0]) < 35 && Math.abs(data[i + 1] - rgb[1]) < 35 && Math.abs(data[i + 2] - rgb[2]) < 35) n++;
+    }
+    return n;
+  }
+
+  test('Start, walk, save a location on the way, Stop: the walk is kept under its date with its line on the map', async ({ page, context }) => {
+    test.setTimeout(90_000);
+    await page.goto(`${site.url}#/map`);
+    await page.locator('[data-test=record-walk]').click();
+    await expect(page.getByRole('heading', { name: 'Record a walk' })).toBeVisible();
+    await page.locator('[data-test=track-start]').click();
+    await expect(page.locator('[data-test=recording-now]')).toContainText('Recording');
+    await expect(page.locator('[data-test=keep-screen]')).toBeVisible();
+    await page.waitForTimeout(800);
+    await walkNorth(page, context, 0, 12); // 72 m
+    await expect(page.locator('[data-test=track-distance]')).toHaveText(/^(6\d|7\d) m$/, { timeout: 10000 });
+    // A location saved on the way: the walk carries on, and the bar at the top says so.
+    await page.goto(`${site.url}#/finds/new`);
+    await expect(page.locator('[data-test=recording-bar]')).toContainText('Recording your walk');
+    await page.locator('[data-test=recording-bar]').click();
+    await expect(page.locator('[data-test=recording-bar]')).toHaveCount(0); // not on its own page
+    await walkNorth(page, context, 12, 6); // 36 m more
+    await expect(page.locator('[data-test=track-distance]')).toHaveText(/^(9\d|1\d\d) m$/, { timeout: 10000 });
+    page.once('dialog', (d) => d.accept());
+    await page.locator('[data-test=track-stop]').click();
+    // Its own page: named by its date, its distance, its line on the map in its green.
+    await expect(page.locator('[data-test=track-title]')).toContainText('Walk ·');
+    await expect(page.locator('[data-test=track-distance]')).toHaveText(/^(9\d|1\d\d) m$/);
+    await expect(page.locator('.map-wrap')).not.toHaveAttribute('data-trail-points', '0');
+    await expect.poll(() => colourOnTheMap(page, [43, 138, 62]), { timeout: 10000 }).toBeGreaterThan(80);
+    // The list of walks, and the map of the last ones with its legend.
+    await page.goto(`${site.url}#/walks`);
+    await expect(page.locator('[data-test=walk-row]')).toHaveCount(1);
+    await expect(page.locator('[data-test=track-legend] li')).toHaveCount(1);
+    await expect.poll(() => colourOnTheMap(page, [217, 72, 15]), { timeout: 10000 }).toBeGreaterThan(80);
+    // View map: his last walks on it too, when he ticks it (and it stays ticked).
+    await page.goto(`${site.url}#/finds`);
+    await page.locator('[data-test=show-walks]').check();
+    await expect.poll(() => colourOnTheMap(page, [217, 72, 15]), { timeout: 10000 }).toBeGreaterThan(80);
+    await page.reload();
+    await expect(page.locator('[data-test=show-walks]')).toBeChecked();
+    // Rename, then delete.
+    await page.goto(`${site.url}#/walks`);
+    await page.locator('[data-test=walk-row]').click();
+    await page.getByLabel('Name').fill('Epping, the beeches');
+    await page.locator('[data-test=track-rename]').click();
+    await expect(page.locator('[data-test=track-title]')).toHaveText('Epping, the beeches');
+    page.once('dialog', (d) => d.accept());
+    await page.locator('[data-test=track-delete]').click();
+    await expect(page.locator('[data-test=walk-row]')).toHaveCount(0);
+    await page.screenshot({ path: 'test-results/walk-none.png' });
+  });
+
+  test('the app closed mid-walk: it opens still recording, and says the closed part is not counted', async ({ page, context }) => {
+    test.setTimeout(60_000);
+    await page.goto(`${site.url}#/walks`);
+    await page.locator('[data-test=track-start]').click();
+    await page.waitForTimeout(800);
+    await walkNorth(page, context, 0, 6);
+    await expect(page.locator('[data-test=track-distance]')).not.toHaveText('0 m', { timeout: 10000 });
+    await page.waitForTimeout(10_500); // past the recorder's save-every
+    await walkNorth(page, context, 6, 1);
+    await page.reload();
+    await expect(page.locator('[data-test=recording-now]')).toContainText('Recording');
+    await expect(page.locator('[data-test=resumed]')).toBeVisible();
+    await expect(page.locator('[data-test=track-distance]')).not.toHaveText('0 m');
+    await page.screenshot({ path: 'test-results/walk-recording.png', fullPage: true });
+  });
+});

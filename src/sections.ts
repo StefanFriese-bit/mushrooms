@@ -32,7 +32,7 @@ export function onSectionTap(e: Event): void {
 /** The section a page belongs to (lit in the bar), or null: the home page, About, the speed test, Learn. */
 export function sectionOf(route: Route): SectionName | null {
   switch (route.name) {
-    case 'map': case 'finds': case 'find': case 'find-new': case 'find-go': return 'map';
+    case 'map': case 'finds': case 'find': case 'find-new': case 'find-go': case 'tracks': case 'track': return 'map';
     case 'scan': return 'scan';
     case 'guide': case 'species': case 'check': case 'lookalikes': return 'guide';
     case 'identify': return 'identify';
