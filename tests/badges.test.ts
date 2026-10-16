@@ -1,10 +1,13 @@
 import { describe, expect, it } from 'vitest';
-import { badgeFromWords, badgeOfFind } from '../src/finds/badges';
+import { badgeFromWords, badgesOfFind } from '../src/finds/badges';
+
+const keys = (f: { species: string | null; notes: string }) => badgesOfFind(f).map((b) => b.key);
+const badgeOfFind = (f: { species: string | null; notes: string }) => { const b = badgesOfFind(f); return b.length === 1 ? b[0] : null; };
 
 describe('a saved location\'s picture', () => {
   it('comes from the species it is named as', () => {
     expect(badgeOfFind({ species: 'Boletus edulis', notes: '' })?.key).toBe('penny-bun');
-    expect(badgeOfFind({ species: 'Amanita muscaria', notes: 'penny bun' })?.key).toBe('fly-agaric');
+    expect(keys({ species: 'Amanita muscaria', notes: '' })).toEqual(['fly-agaric']);
   });
   it('named as another species: none, whatever the description says', () => {
     expect(badgeOfFind({ species: 'Macrolepiota procera', notes: 'thought it was a penny bun' })).toBeNull();
@@ -40,5 +43,24 @@ describe('a saved location\'s picture', () => {
     expect(badgeFromWords('chanterelle')).toBeNull();
     expect(badgeFromWords('yellowleg bonnet')).toBeNull();
     expect(badgeFromWords('trumpet shaped')).toBeNull();
+  });
+  it('Bay Bolete: its own picture, from its name or its older names; "bay" alone gives none', () => {
+    expect(keys({ species: 'Imleria badia', notes: '' })).toEqual(['bay-bolete']);
+    expect(badgeFromWords('Bay boletes under the pines')?.key).toBe('bay-bolete');
+    expect(badgeFromWords('Boletus badius')?.key).toBe('bay-bolete');
+    expect(badgeFromWords('Xerocomus badius')?.key).toBe('bay-bolete');
+    expect(badgeFromWords('by the bay')).toBeNull();
+    // Latin names of the others match the same way.
+    expect(badgeFromWords('Boletus edulis')?.key).toBe('penny-bun');
+    expect(badgeFromWords('Craterellus cornucopioides')?.key).toBe('horn-of-plenty');
+    expect(badgeFromWords('Craterellus tubaeformis')?.key).toBe('winter-chanterelle');
+  });
+  it('two found together: both pictures (Stefan 16/10/2026: a penny bun and a bay bolete)', () => {
+    expect(keys({ species: null, notes: 'Found a penny bun and a bay bolete' })).toEqual(['penny-bun', 'bay-bolete']);
+    // Named as one of them: that one first, the other from the description, never twice.
+    expect(keys({ species: 'Imleria badia', notes: 'bay bolete next to a penny bun' })).toEqual(['bay-bolete', 'penny-bun']);
+    expect(keys({ species: 'Boletus edulis', notes: 'penny bun' })).toEqual(['penny-bun']);
+    expect(keys({ species: null, notes: 'fly agaric next to a penny bun' })).toEqual(['penny-bun', 'fly-agaric']);
+    expect(keys({ species: 'Macrolepiota procera', notes: 'penny bun and bay bolete' })).toEqual([]);
   });
 });

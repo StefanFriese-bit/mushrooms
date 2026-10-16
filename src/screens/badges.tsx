@@ -5,7 +5,13 @@ export function BadgeIcon({ badge, size = 32 }: { badge: Badge; size?: number })
   return <span class="badge-icon" style={{ width: `${size}px`, height: `${size}px` }} dangerouslySetInnerHTML={{ __html: badge.svg }} />;
 }
 
-/** The three pictures as buttons: the chosen one stays pressed; a tap on it again takes it back. */
+/** A location's pictures side by side (two mushrooms found together = two); nothing when it has none. */
+export function BadgeIcons({ badges, size = 32 }: { badges: Badge[]; size?: number }) {
+  if (!badges.length) return null;
+  return <span class="badge-icons">{badges.map((b) => <BadgeIcon key={b.key} badge={b} size={size} />)}</span>;
+}
+
+/** The pictures as buttons: the chosen one stays pressed; a tap on it again takes it back. */
 export function BadgePicker({ value, onPick }: { value: BadgeKey | null; onPick: (key: BadgeKey | null) => void }) {
   return (
     <div class="badge-pick" role="group" aria-label="What you found" data-test="badge-pick">

@@ -7,7 +7,7 @@
 // sets), so the map's species choice, the word search and the location's title all follow it. A location named any of
 // these three on its page gets the picture too.
 
-export type BadgeKey = 'penny-bun' | 'fly-agaric' | 'birch-bolete' | 'horn-of-plenty' | 'hedgehog' | 'winter-chanterelle';
+export type BadgeKey = 'penny-bun' | 'bay-bolete' | 'fly-agaric' | 'birch-bolete' | 'horn-of-plenty' | 'hedgehog' | 'winter-chanterelle';
 export type Badge = { key: BadgeKey; name: string; species: string; alsoSpecies?: string[]; svg: string };
 
 // Drawn on a 32 × 32 square, in their own colours (they are pictures, not line icons). Plain constants: never built
@@ -17,6 +17,16 @@ const PENNY_BUN = `<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" a
 <circle cx="9.5" cy="6.3" r="1.3" fill="#f2b705" stroke="#a67c00" stroke-width=".8"/><circle cx="16" cy="5.2" r="1.3" fill="#f2b705" stroke="#a67c00" stroke-width=".8"/><circle cx="22.5" cy="6.3" r="1.3" fill="#f2b705" stroke="#a67c00" stroke-width=".8"/>
 <path d="M4 21.5C4 15.5 9.5 12.5 16 12.5S28 15.5 28 21.5Z" fill="#8a5a2b" stroke="#5c3a17" stroke-width="1"/>
 <path d="M12 21.5H20L21 28.5Q16 30 11 28.5Z" fill="#efe3c8" stroke="#a89670" stroke-width="1" stroke-linejoin="round"/>
+</svg>`;
+
+// Bay Bolete (Stefan 16/10/2026: "similar to the Porcini except very orange and without the crown"): the same bolete
+// shape as the Penny Bun, larger without the crown, a bright orange-brown cap over a pale yellow stem.
+const BAY_BOLETE = `<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+<path d="M2.5 18.5C2.5 10.5 8.5 5.5 16 5.5S29.5 10.5 29.5 18.5Z" fill="#e8730c" stroke="#9a4a05" stroke-width="1"/>
+<path d="M7 11.5Q10.5 7.8 16 7.6" stroke="#f6a54b" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+<path d="M3.2 18.5H28.8L28 19.9H4Z" fill="#f2d24a" stroke="#b08a10" stroke-width=".7" stroke-linejoin="round"/>
+<path d="M12 19.9H20L21 28.5Q16 30 11 28.5Z" fill="#f1dfa8" stroke="#a8915a" stroke-width="1" stroke-linejoin="round"/>
+<path d="M13.6 22.5Q14 25.5 13.4 28M17.6 22Q18 25 17.8 28.4" stroke="#c9b27a" stroke-width=".7" fill="none" stroke-linecap="round"/>
 </svg>`;
 
 const FLY_AGARIC = `<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -70,6 +80,7 @@ const WINTER_CHANTERELLE = `<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/20
 
 export const BADGES: readonly Badge[] = [
   { key: 'penny-bun', name: 'Penny Bun', species: 'Boletus edulis', svg: PENNY_BUN },
+  { key: 'bay-bolete', name: 'Bay Bolete', species: 'Imleria badia', svg: BAY_BOLETE },
   { key: 'fly-agaric', name: 'Fly Agaric', species: 'Amanita muscaria', svg: FLY_AGARIC },
   { key: 'birch-bolete', name: 'Birch Bolete', species: 'Leccinum scabrum', svg: BIRCH_BOLETE },
   { key: 'horn-of-plenty', name: 'Horn of Plenty', species: 'Craterellus cornucopioides', svg: HORN_OF_PLENTY },
@@ -95,12 +106,13 @@ export function badgeByKey(key: BadgeKey | null | undefined): Badge | null {
 // one of the three. Whole names only, so "bun" alone or "birch" alone gives nothing.
 const NAMES_IN_WORDS: Record<BadgeKey, string[][]> = {
   'penny-bun': [['penny', 'bun'], ['cep'], ['porcini'], ['king', 'bolete'], ['boletus', 'edulis']],
+  'bay-bolete': [['bay', 'bolete'], ['imleria', 'badia'], ['boletus', 'badius'], ['xerocomus', 'badius']],
   'fly-agaric': [['fly', 'agaric'], ['amanita', 'muscaria']],
   'birch-bolete': [['birch', 'bolete'], ['leccinum', 'scabrum']],
-  'horn-of-plenty': [['horn', 'of', 'plenty'], ['black', 'trumpet'], ['craterellus', 'cornucopioide']],
+  'horn-of-plenty': [['horn', 'of', 'plenty'], ['black', 'trumpet'], ['craterellus', 'cornucopioides']],
   'hedgehog': [['hedgehog'], ['hydnum']],
   // Not "yellowleg": the Yellowleg Bonnet is another mushroom altogether.
-  'winter-chanterelle': [['winter', 'chanterelle'], ['trumpet', 'chanterelle'], ['yellowfoot'], ['craterellus', 'tubaeformi']],
+  'winter-chanterelle': [['winter', 'chanterelle'], ['trumpet', 'chanterelle'], ['yellowfoot'], ['craterellus', 'tubaeformis']],
 };
 /** Words as they are compared: lower case, accents off, a plural "s" dropped (penny buns, ceps, fly agarics). */
 function bareWords(s: string): string[] {
@@ -111,15 +123,24 @@ function hasName(ws: string[], name: string[]): boolean {
   for (let i = 0; i + name.length <= ws.length; i++) if (name.every((n, k) => ws[i + k] === n)) return true;
   return false;
 }
-/** The picture a description names — null when it names none of the three, or more than one. */
-export function badgeFromWords(text: string): Badge | null {
+/** Every picture a description names, in the order of the pictures (Stefan 16/10/2026: "a penny bun was found and a
+ * bay bolete … two little icons"). */
+export function badgesFromWords(text: string): Badge[] {
   const ws = bareWords(text);
-  const named = BADGES.filter((b) => NAMES_IN_WORDS[b.key].some((n) => hasName(ws, n)));
+  // The names go through the same plural rule as his words ("boletus" -> "boletu"), so Latin names match too.
+  return BADGES.filter((b) => NAMES_IN_WORDS[b.key].some((n) => hasName(ws, bareWords(n.join(' ')))));
+}
+/** The picture a description names — null when it names none, or more than one. */
+export function badgeFromWords(text: string): Badge | null {
+  const named = badgesFromWords(text);
   return named.length === 1 ? named[0] : null;
 }
-/** A saved location's picture: the species it is named as; when it is not named at all, the one its description names.
- * Named as another species = no picture (what he identified it as wins over what he first wrote). */
-export function badgeOfFind(f: { species: string | null; notes: string }): Badge | null {
-  if (f.species) return badgeFor(f.species);
-  return badgeFromWords(f.notes);
+/** A saved location's pictures: the species it is named as first, then every other one its description names (two
+ * mushrooms found together = two pictures). Named as a species that has no picture = none (what he identified it as
+ * wins over what he first wrote). */
+export function badgesOfFind(f: { species: string | null; notes: string }): Badge[] {
+  const named = f.species ? badgeFor(f.species) : null;
+  if (f.species && !named) return [];
+  const words = badgesFromWords(f.notes).filter((b) => b.key !== named?.key);
+  return named ? [named, ...words] : words;
 }

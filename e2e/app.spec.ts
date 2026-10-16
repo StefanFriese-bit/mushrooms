@@ -931,7 +931,7 @@ test.describe('Map', () => {
     await page.goto(`${site.url}#/finds/new`);
     await expect(page.locator('[data-test=where]')).toContainText('within 7 m', { timeout: 15000 });
     const pick = page.locator('[data-test=badge-pick]');
-    await expect(pick.getByRole('button')).toHaveText(['Penny Bun', 'Fly Agaric', 'Birch Bolete', 'Horn of Plenty', 'Hedgehog', 'Winter Chanterelle']);
+    await expect(pick.getByRole('button')).toHaveText(['Penny Bun', 'Bay Bolete', 'Fly Agaric', 'Birch Bolete', 'Horn of Plenty', 'Hedgehog', 'Winter Chanterelle']);
     // Above the description.
     const pickTop = (await pick.boundingBox())!.y;
     const descTop = (await page.getByLabel('Description').boundingBox())!.y;
@@ -988,6 +988,24 @@ test.describe('Map', () => {
     await expect(page.locator('[data-test=map-pin][data-badge=penny-bun]')).toHaveCount(1);
     await expect(page.locator('[data-test=map-pin][data-badge=fly-agaric]')).toHaveCount(1);
     await expect(page.locator('[data-test=map-pin]:not([data-badge])')).toHaveCount(0);
+  });
+
+  test('two found together: a penny bun and a bay bolete in the description = both pictures in one pin', async ({ page }) => {
+    // Stefan 16/10/2026: "a penny bun was found and a bay bolete … two little icons".
+    await page.goto(`${site.url}#/finds/new`);
+    await expect(page.locator('[data-test=badge-pick]').getByRole('button', { name: 'Bay Bolete' })).toBeVisible();
+    await expect(page.locator('[data-test=where]')).toContainText('within 7 m', { timeout: 15000 });
+    await page.getByLabel('Description').fill('Found a penny bun and a bay bolete by the oak');
+    await page.getByRole('button', { name: 'Save location' }).click();
+    await expect(page.locator('h1 .badge-icon')).toHaveCount(2);
+    const pin = page.locator('[data-test=map-pin][data-badge="penny-bun bay-bolete"]');
+    await expect(pin).toHaveCount(1);
+    await expect(pin.locator('svg')).toHaveCount(2);
+    expect((await pin.boundingBox())!.width).toBeGreaterThanOrEqual(64);
+    await page.goto(`${site.url}#/finds`);
+    await expect(page.locator('[data-test=find-row] .badge-icon')).toHaveCount(2);
+    await expect(page.locator('[data-test=map-pin][data-badge~=bay-bolete] svg')).toHaveCount(2);
+    await page.screenshot({ path: 'test-results/two-pictures.png' });
   });
 
   test('a saved location can be described and identified afterwards, and deleted', async ({ page }) => {

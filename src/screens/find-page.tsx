@@ -12,8 +12,8 @@ import { Icon } from './icons';
 import { BackLink } from './back-link';
 import { askForCompassOnTap } from '../finds/compass';
 import { GrowthCard } from './growth';
-import { BADGES, badgeFor, badgeOfFind } from '../finds/badges';
-import { BadgeIcon, BadgePicker } from './badges';
+import { BADGES, badgeFor, badgesOfFind } from '../finds/badges';
+import { BadgeIcon, BadgeIcons, BadgePicker } from './badges';
 
 // One saved location (spec 7): its photos, when it was saved, where (with "Take me there" — an arrow and the
 // distance, no signal needed — and Apple Maps' walking directions), its OS grid reference and Plus Code to copy or
@@ -79,7 +79,7 @@ export function FindPage({ id }: { id: string }) {
     <>
       <BackLink href={hrefFor({ name: 'finds' })} label="Map" />
       {justSaved && <p class="card saved-note" role="status" data-test="saved-note"><Icon name="check" size={20} />Location saved on this phone.</p>}
-      <h1 class="find-title">{badgeOfFind(find) && <BadgeIcon badge={badgeOfFind(find)!} size={34} />}{label}</h1>
+      <h1 class="find-title"><BadgeIcons badges={badgesOfFind(find)} size={34} />{label}</h1>
       <p class="muted">Saved {sayWhen(find.at)}{find.spot ? ` · ${sayAccuracy(find.spot.accuracy)}` : ''}</p>
       {find.spot && (
         // The first thing on the page (Stefan 10/10/2026): the compass, the way and the map, one tap away.
@@ -101,7 +101,7 @@ export function FindPage({ id }: { id: string }) {
           <p class="small muted">Take me there: an arrow, the distance and the map, no signal needed. Or <a href={appleMapsLink(find.spot)}
             data-test="take-me-there">walking directions in Apple Maps</a> (needs a signal).</p>
           <FindsMap pins={[{ id: find.id, lat: find.spot.lat, lon: find.spot.lon, label, href: hrefFor({ name: 'find', id: find.id }),
-            accuracy: find.spot.accuracy, badge: badgeOfFind(find)?.key }]} locate />
+            accuracy: find.spot.accuracy, badges: badgesOfFind(find).map((b) => b.key) }]} locate />
           <p class="muted small">{saySpot(find.spot)}</p>
           <References spot={find.spot} label={label} />
         </>

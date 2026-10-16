@@ -37,8 +37,9 @@ export type Pin = { id: string; lat: number; lon: number; label: string; href: s
   stop?: number;
   /** The growth last logged there: "G1 Button · 3 days ago" (src/finds/growth.ts). */
   growth?: string; goHref?: string;
-  /** One of the three pictures (src/finds/badges.ts): drawn as the pin itself, so the map says what grows where. */
-  badge?: BadgeKey };
+  /** Its pictures (src/finds/badges.ts): drawn as the pin itself, so the map says what grows where; two mushrooms found
+   * together = both pictures side by side in one pin. */
+  badges?: BadgeKey[] };
 type Props = {
   pins?: Pin[];
   /** Show his position (the blue dot) and keep following it. */
@@ -216,11 +217,12 @@ export function FindsMap({ pins = [], locate = false, pick, here = null, tall = 
       el.className = 'pin';
       el.setAttribute('aria-label', p.label);
       el.setAttribute('data-test', 'map-pin');
-      const badge = badgeByKey(p.badge);
-      if (badge) {
+      const badges = (p.badges ?? []).map((k) => badgeByKey(k)).filter((b) => b !== null);
+      if (badges.length) {
         el.classList.add('pin-badge');
-        el.setAttribute('data-badge', badge.key);
-        el.innerHTML = badge.svg; // a constant drawing (src/finds/badges.ts), never anything he typed
+        if (badges.length > 1) el.classList.add('pin-badges-2');
+        el.setAttribute('data-badge', badges.map((b) => b.key).join(' '));
+        el.innerHTML = badges.map((b) => b.svg).join(''); // constant drawings (src/finds/badges.ts), never anything he typed
       }
       if (p.stop) {
         el.classList.add('pin-stop');
