@@ -46,7 +46,9 @@ export async function putTrack(t: Track, announce = false): Promise<void> {
 /** Every walk, newest first, the one being recorded included (its `end` is null). Damaged records are left out. */
 export async function listTracks(): Promise<Track[]> {
   const db = await open();
-  const req = db.transaction('walks').objectStore('walks').getAll();
+  let req: IDBRequest;
+  // A connection the phone has closed under us (the app closed and opened again) is opened afresh, once.
+  try { req = db.transaction('walks').objectStore('walks').getAll(); } catch { opening = null; req = (await open()).transaction('walks').objectStore('walks').getAll(); }
   const all = await new Promise<unknown[]>((resolve, reject) => { req.onsuccess = () => resolve(req.result); req.onerror = () => reject(req.error); });
   return all.filter(isTrack).sort((a, b) => b.start.localeCompare(a.start));
 }

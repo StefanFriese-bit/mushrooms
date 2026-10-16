@@ -17,7 +17,9 @@ export const PAST_ON_MAP = 4;
 
 export function useRecorder(): RecorderState {
   const [s, setS] = useState(recorderState());
-  useEffect(() => onRecorder(setS), []);
+  // Look again once listening: a change between the first drawing and this (the walk being picked back up as the app
+  // opens) would otherwise never reach the screen — it showed Start over a walk that was recording (16/10/2026).
+  useEffect(() => { const off = onRecorder(setS); setS(recorderState()); return off; }, []);
   return s;
 }
 /** A clock that ticks every second while `on`, so the time on screen moves. */

@@ -70,4 +70,17 @@ describe('the recorder', () => {
     expect(trackStats(done).distanceM).toBeGreaterThan(105);
     expect(trackStats(done).distanceM).toBeLessThan(115);
   });
+  it('the database refuses the first reads when the app opens again: it keeps trying, and the walk carries on', async () => {
+    await startTrack();
+    for (let i = 0; i <= 5; i++) walkTo(i * 10, i * 8);
+    const open = structuredClone(recorderState().track!);
+    await stopTrack();
+    saved.set(open.id, open);
+    let refusals = 2;
+    useRecorderDeps({ geo: gps as unknown as Geolocation, now: () => now, save: async (t) => { saved.set(t.id, structuredClone(t)); },
+      load: async () => { if (refusals-- > 0) throw new Error('UnknownError'); return [...saved.values()]; }, id: () => 'x' });
+    await resumeAfterClose();
+    expect(recorderState().track?.id).toBe(open.id);
+    expect(recorderState().resumed).toBe(true);
+  });
 });

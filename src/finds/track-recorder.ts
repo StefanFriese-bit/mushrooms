@@ -14,6 +14,8 @@ import { listTracks, putTrack, walksChanged } from './track-store';
 // closes the app, opening it again carries the recording on — the time it was closed is a gap, never a straight line.
 
 export const SAVE_EVERY_MS = 10_000;
+/** How many times the walk being recorded is looked for when the app opens (src: resumeAfterClose). */
+export const RESUME_TRIES = 8;
 
 export type Keep = 'on' | 'cannot' | 'off';
 export type RecorderState = {
@@ -158,9 +160,17 @@ export async function stopTrack(): Promise<Track | null> {
 /** When the app opens: a walk still marked as being recorded (the app was closed mid-walk) carries on recording. */
 export async function resumeAfterClose(): Promise<void> {
   if (state.track) return;
+  // ⚠ Tried more than once: right after the app is closed and opened again, the iPhone's engine can refuse the very
+  // first read of the database while the closed copy lets go of it, and a moment later answers. Giving up on that first
+  // answer lost the walk being recorded (5 times in 8 in the test, 16/10/2026) — the walk was safe on the phone all along.
   let open: Track | undefined;
-  try { open = (await deps.load()).find((t) => t.end === null); } catch { return; }
-  if (!open) return;
+  for (let attempt = 0; ; attempt++) {
+    try { open = (await deps.load()).find((t) => t.end === null); break; } catch {
+      if (attempt >= RESUME_TRIES - 1) { set({ problem: 'A walk being recorded could not be read back from the phone. Open Record a walk again in a moment.' }); return; }
+      await new Promise((r) => setTimeout(r, 400 * (attempt + 1)));
+    }
+  }
+  if (!open || state.track) return;
   follow = freshFollow();
   follow.breakNext = true;
   const last = open.parts.at(-1)?.at(-1);
