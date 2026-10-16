@@ -31,7 +31,7 @@ function answersFor(labels: string[]): Answers {
 async function addScanPhoto(page: Page, slot: string, photo: string) {
   await page.getByLabel(`${slot} photo`, { exact: true }).setInputFiles(fileURLToPath(new URL(`../public/photos/${photo}`, import.meta.url)));
   const crop = page.locator('[data-test=cropper]');
-  await expect(crop).toBeVisible({ timeout: 15000 }); // GitHub's machine took over 5 s on 16/10/2026
+  await expect(crop).toBeVisible({ timeout: 30000 }); // GitHub's machine took over 5 s on 16/10/2026, over 15 s the same night
   await crop.getByRole('button', { name: 'Use this' }).click();
   await expect(crop).toHaveCount(0);
 }
@@ -1457,8 +1457,10 @@ test.describe('Record a walk', () => {
     await expect(page.locator('[data-test=track-distance]')).not.toHaveText('0 m', { timeout: 10000 });
     await page.waitForTimeout(10_500); // past the recorder's save-every
     await walkNorth(page, context, 6, 1);
+    await page.waitForTimeout(1500); // the reading lands and is written before the app is "closed"
     await page.reload();
-    await expect(page.locator('[data-test=recording-now]')).toContainText('Recording');
+    // GitHub's iPhone engine needed more than 5 s to open the database again after a reload (16/10/2026).
+    await expect(page.locator('[data-test=recording-now]')).toContainText('Recording', { timeout: 20000 });
     await expect(page.locator('[data-test=resumed]')).toBeVisible();
     await expect(page.locator('[data-test=track-distance]')).not.toHaveText('0 m');
     await page.screenshot({ path: 'test-results/walk-recording.png', fullPage: true });
