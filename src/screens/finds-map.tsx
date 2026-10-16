@@ -131,9 +131,9 @@ function drawTrails(m: MapObj, trails: Trail[]) {
   const look = { 'line-cap': 'round' as const, 'line-join': 'round' as const };
   const under = m.getLayer('route-casing') ? 'route-casing' : undefined;
   m.addLayer({ id: 'trails-casing', type: 'line', source: 'trails', layout: look,
-    paint: { 'line-color': '#ffffff', 'line-width': 7, 'line-opacity': 0.85 } }, under);
+    paint: { 'line-color': '#ffffff', 'line-width': 10, 'line-opacity': 0.95 } }, under);
   m.addLayer({ id: 'trails-line', type: 'line', source: 'trails', layout: look,
-    paint: { 'line-color': ['get', 'color'] as unknown as string, 'line-width': 4, 'line-opacity': 0.9 } }, under);
+    paint: { 'line-color': ['get', 'color'] as unknown as string, 'line-width': 6, 'line-opacity': 1 } }, under);
   m.triggerRepaint();
 }
 

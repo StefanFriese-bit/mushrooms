@@ -118,3 +118,17 @@ describe('how a walk reads', () => {
   });
   it('test helper is sane', () => { expect(distanceM(at(0, 0, 0), at(100, 0, 0))).toBeCloseTo(100, 0); });
 });
+
+import { lineToHere } from '../src/finds/track';
+describe('the line while he walks', () => {
+  const a = { lat: 51.6588, lon: 0.0466 }, b = { lat: 51.6589, lon: 0.0466 };
+  it('carries on to where he is now', () => {
+    const here = { lat: 51.65895, lon: 0.0466, accuracy: 8 };
+    expect(lineToHere([[a, b]], here).at(-1)!.at(-1)).toEqual({ lat: here.lat, lon: here.lon });
+  });
+  it('not from a reading the walk would not use, nor across a gap', () => {
+    expect(lineToHere([[a, b]], { lat: 51.65895, lon: 0.0466, accuracy: 80 })).toEqual([[a, b]]);
+    expect(lineToHere([[a, b]], { lat: 51.67, lon: 0.0466, accuracy: 5 })).toEqual([[a, b]]);
+    expect(lineToHere([], { lat: 51.67, lon: 0.0466, accuracy: 5 })).toEqual([]);
+  });
+});

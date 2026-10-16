@@ -1396,29 +1396,44 @@ test.describe('Record a walk', () => {
     await page.waitForTimeout(800);
     await walkNorth(page, context, 0, 12); // 72 m
     await expect(page.locator('[data-test=track-distance]')).toHaveText(/^(6\d|7\d) m$/, { timeout: 10000 });
+    // Stefan 16/10/2026, in the field: "it was recording my walk but it didn't show me on the map where I'd walked".
+    // The line must be ON THE SCREEN while he walks, and grow as he goes — counted in a picture, not asked of the map.
+    await page.locator('.map-wrap').scrollIntoViewIfNeeded();
+    await expect.poll(() => colourOnTheMap(page, [224, 49, 49]), { timeout: 10000 }).toBeGreaterThan(40);
+    const before = await colourOnTheMap(page, [224, 49, 49]);
+    await walkNorth(page, context, 12, 8);
+    await expect.poll(() => colourOnTheMap(page, [224, 49, 49]), { timeout: 10000 }).toBeGreaterThan(before + 20);
+    // …and it reaches him: a step too small for a point to be kept (3 m) still brings the line's end to where he is now.
+    await page.waitForTimeout(1300);
+    await context.setGeolocation({ latitude: 51.6588 + (20 * 6 + 3) / 111_320, longitude: 0.0466, accuracy: 5 });
+    await expect.poll(() => page.evaluate(() => {
+      const m = (window as unknown as { __map: { getSource: (id: string) => { serialize: () => { data: { features: Array<{ geometry: { coordinates: number[][] } }> } } } } }).__map;
+      const f = m.getSource('trails').serialize().data.features.at(-1)!;
+      return f.geometry.coordinates.at(-1)![1];
+    }), { timeout: 10000 }).toBeCloseTo(51.6588 + (20 * 6 + 3) / 111_320, 6);
     // A location saved on the way: the walk carries on, and the bar at the top says so.
     await page.goto(`${site.url}#/finds/new`);
     await expect(page.locator('[data-test=recording-bar]')).toContainText('Recording your walk');
     await page.locator('[data-test=recording-bar]').click();
     await expect(page.locator('[data-test=recording-bar]')).toHaveCount(0); // not on its own page
-    await walkNorth(page, context, 12, 6); // 36 m more
-    await expect(page.locator('[data-test=track-distance]')).toHaveText(/^(9\d|1\d\d) m$/, { timeout: 10000 });
+    await walkNorth(page, context, 20, 6); // 36 m more
+    await expect(page.locator('[data-test=track-distance]')).toHaveText(/^1\d\d m$/, { timeout: 10000 });
     page.once('dialog', (d) => d.accept());
     await page.locator('[data-test=track-stop]').click();
     // Its own page: named by its date, its distance, its line on the map in its green.
     await expect(page.locator('[data-test=track-title]')).toContainText('Walk ·');
-    await expect(page.locator('[data-test=track-distance]')).toHaveText(/^(9\d|1\d\d) m$/);
+    await expect(page.locator('[data-test=track-distance]')).toHaveText(/^1\d\d m$/);
     await expect(page.locator('.map-wrap')).not.toHaveAttribute('data-trail-points', '0');
-    await expect.poll(() => colourOnTheMap(page, [43, 138, 62]), { timeout: 10000 }).toBeGreaterThan(80);
+    await expect.poll(() => colourOnTheMap(page, [224, 49, 49]), { timeout: 10000 }).toBeGreaterThan(80);
     // The list of walks, and the map of the last ones with its legend.
     await page.goto(`${site.url}#/walks`);
     await expect(page.locator('[data-test=walk-row]')).toHaveCount(1);
     await expect(page.locator('[data-test=track-legend] li')).toHaveCount(1);
-    await expect.poll(() => colourOnTheMap(page, [217, 72, 15]), { timeout: 10000 }).toBeGreaterThan(80);
+    await expect.poll(() => colourOnTheMap(page, [240, 140, 0]), { timeout: 10000 }).toBeGreaterThan(80);
     // View map: his last walks on it too, when he ticks it (and it stays ticked).
     await page.goto(`${site.url}#/finds`);
     await page.locator('[data-test=show-walks]').check();
-    await expect.poll(() => colourOnTheMap(page, [217, 72, 15]), { timeout: 10000 }).toBeGreaterThan(80);
+    await expect.poll(() => colourOnTheMap(page, [240, 140, 0]), { timeout: 10000 }).toBeGreaterThan(80);
     await page.reload();
     await expect(page.locator('[data-test=show-walks]')).toBeChecked();
     // Rename, then delete.

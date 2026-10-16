@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'preact/hooks';
 import { hrefFor } from '../router';
-import { heightProfile, NOW_COLOUR, PAST_COLOURS, sayDuration, sayKm, trackStats, type Track } from '../finds/track';
+import { heightProfile, lineToHere, NOW_COLOUR, PAST_COLOURS, sayDuration, sayKm, trackStats, type Track } from '../finds/track';
 import { onRecorder, pauseTrack, recorderState, resumeTrack, startTrack, stopTrack, type RecorderState } from '../finds/track-recorder';
 import { deleteTrack, getTrack, listTracks, onWalksChanged, putTrack } from '../finds/track-store';
 import { FindsMap, type Trail } from './finds-map';
@@ -82,9 +82,10 @@ function Recording({ s, tracks }: { s: RecorderState; tracks: Track[] | null }) 
   const t = s.track!;
   const now = useTick(!s.paused);
   const [showPast, setShowPast] = useState(false);
-  const trails = useMemo<Trail[]>(() => [...(showPast && tracks ? pastTrails(tracks) : []), { id: t.id, color: NOW_COLOUR, parts: t.parts }],
-    [t, showPast, tracks]);
   const here = s.here ? { lat: s.here.lat, lon: s.here.lon, accuracy: s.here.accuracy } : null;
+  const trails = useMemo<Trail[]>(() => [...(showPast && tracks ? pastTrails(tracks) : []),
+    { id: t.id, color: NOW_COLOUR, parts: s.paused ? t.parts : lineToHere(t.parts, here) }],
+  [t, showPast, tracks, s.paused, here?.lat, here?.lon]);
   const stop = async () => {
     if (!confirm('Stop and save this walk?')) return;
     const done = await stopTrack();

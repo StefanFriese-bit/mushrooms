@@ -179,9 +179,19 @@ export function defaultTrackName(startIso: string): string {
   return `Walk · ${day}, ${time}`;
 }
 
-/** The colours of the walks on the map: the one being recorded, then the last ones, newest first. */
-export const NOW_COLOUR = '#2b8a3e';
-export const PAST_COLOURS = ['#d9480f', '#7048e8', '#0c8599', '#c2255c'];
+/** The colours of the walks on the map: the one being recorded (and a walk's own page), then the last ones, newest first.
+ * ⚠ Not green: the first one was, and on the forest map — all green — he could not see it in the field (16/10/2026). */
+export const NOW_COLOUR = '#e03131';
+export const PAST_COLOURS = ['#f08c00', '#7048e8', '#0c8599', '#c2255c'];
+
+/** The walk as it is drawn while he walks: the recorded line, carried on to where he is NOW. A point is only kept once
+ * he has moved a few metres (src/finds/track.ts stepM), so without this the line stops short of the blue dot. The
+ * reading must be one the walk would use (exact enough, near the last point); it is drawn, never counted. */
+export function lineToHere(parts: LatLon[][], here: (LatLon & { accuracy: number }) | null): LatLon[][] {
+  const last = parts.at(-1)?.at(-1);
+  if (!here || !last || here.accuracy > WEAK_M || distanceM(last, here) > 150) return parts;
+  return [...parts.slice(0, -1), [...parts[parts.length - 1], { lat: here.lat, lon: here.lon }]];
+}
 
 /** A stored walk checked before it is used (a damaged record must not break the map). */
 export function isTrack(v: unknown): v is Track {
