@@ -12,6 +12,8 @@ import { Icon } from './icons';
 import { BackLink } from './back-link';
 import { askForCompassOnTap } from '../finds/compass';
 import { GrowthCard } from './growth';
+import { badgeFor } from '../finds/badges';
+import { BadgeIcon } from './badges';
 
 // One saved location (spec 7): its photos, when it was saved, where (with "Take me there" — an arrow and the
 // distance, no signal needed — and Apple Maps' walking directions), its OS grid reference and Plus Code to copy or
@@ -91,7 +93,7 @@ export function FindPage({ id }: { id: string }) {
         </div>
       )}
       {find.species && (
-        <p>What it is: <strong>{names.get(find.species) ?? find.species}</strong>{page && <> · <a href={hrefFor({ name: 'species', slug: page.slug })}>its page in the guide</a>
+        <p class="what-it-is">{badgeFor(find.species) && <BadgeIcon badge={badgeFor(find.species)!} size={28} />}What it is: <strong>{names.get(find.species) ?? find.species}</strong>{page && <> · <a href={hrefFor({ name: 'species', slug: page.slug })}>its page in the guide</a>
           {page.lookalikes.length > 0 && <> · <a href={hrefFor({ name: 'check', slug: page.slug })}>check it against its lookalikes</a></>}</>}</p>
       )}
       {find.spot ? (
@@ -99,7 +101,7 @@ export function FindPage({ id }: { id: string }) {
           <p class="small muted">Take me there: an arrow, the distance and the map, no signal needed. Or <a href={appleMapsLink(find.spot)}
             data-test="take-me-there">walking directions in Apple Maps</a> (needs a signal).</p>
           <FindsMap pins={[{ id: find.id, lat: find.spot.lat, lon: find.spot.lon, label, href: hrefFor({ name: 'find', id: find.id }),
-            accuracy: find.spot.accuracy }]} locate />
+            accuracy: find.spot.accuracy, badge: badgeFor(find.species)?.key }]} locate />
           <p class="muted small">{saySpot(find.spot)}</p>
           <References spot={find.spot} label={label} />
         </>

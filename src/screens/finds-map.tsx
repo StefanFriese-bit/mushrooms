@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'preact/hooks';
 import type { Spot } from '../finds/store';
 import { circleRing, gridLines, type LatLon } from '../finds/geo';
 import { askForCompassOnTap, nextMapBearing } from '../finds/compass';
+import { badgeByKey, type BadgeKey } from '../finds/badges';
 
 // The map (spec 7): OpenFreeMap's tiles (OpenStreetMap data, credited on the map), his saved locations as pins, his
 // position, and — when saving a location — one pin he can move by tapping the map or dragging it. It zooms in until a
@@ -35,7 +36,9 @@ export type Pin = { id: string; lat: number; lon: number; label: string; href: s
   /** Its place on the planned walk, 1, 2, 3 … — drawn in the pin. Left out when there is no walk. */
   stop?: number;
   /** The growth last logged there: "G1 Button · 3 days ago" (src/finds/growth.ts). */
-  growth?: string; goHref?: string };
+  growth?: string; goHref?: string;
+  /** One of the three pictures (src/finds/badges.ts): drawn as the pin itself, so the map says what grows where. */
+  badge?: BadgeKey };
 type Props = {
   pins?: Pin[];
   /** Show his position (the blue dot) and keep following it. */
@@ -213,6 +216,12 @@ export function FindsMap({ pins = [], locate = false, pick, here = null, tall = 
       el.className = 'pin';
       el.setAttribute('aria-label', p.label);
       el.setAttribute('data-test', 'map-pin');
+      const badge = badgeByKey(p.badge);
+      if (badge) {
+        el.classList.add('pin-badge');
+        el.setAttribute('data-badge', badge.key);
+        el.innerHTML = badge.svg; // a constant drawing (src/finds/badges.ts), never anything he typed
+      }
       if (p.stop) {
         el.classList.add('pin-stop');
         const n = document.createElement('span');

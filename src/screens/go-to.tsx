@@ -7,6 +7,7 @@ import { allowCompass, arrowTurn, compassAsked, followHeading, mapTurnsWithMe, r
 import { FindsMap } from './finds-map';
 import { BackLink } from './back-link';
 import { Icon } from './icons';
+import type { BadgeKey } from '../finds/badges';
 
 // The walk back to a spot (spec 7), the way a geocaching app does it: how far, which way (an arrow that follows the
 // phone's compass), and — once he is as close as GPS can tell — "you are there". Everything works with no signal: GPS
@@ -22,7 +23,7 @@ type Props = {
   spot: Spot;
   back: { href: string; label: string };
   /** The spot's pin on the map, and the page its pin opens. */
-  pin: { id: string; label: string; href: string };
+  pin: { id: string; label: string; href: string; badge?: BadgeKey };
   /** Said after "You are as close as GPS can tell (…)." */
   thereText: string;
   /** Shown under that sentence, in the same card (the find's description and photos; for the dogs, "Got them"). */
@@ -149,7 +150,7 @@ export function GoTo({ title, subtitle, spot, back, pin, thereText, thereExtra, 
           <span class="muted small">{turnMap ? 'The map turns the way you point the phone.' : 'The map is held with north at the top.'}</span>
         </p>
       )}
-      <FindsMap pins={[{ id: pin.id, lat: spot.lat, lon: spot.lon, label: pin.label, href: pin.href, accuracy: spot.accuracy }]}
+      <FindsMap pins={[{ id: pin.id, lat: spot.lat, lon: spot.lon, label: pin.label, href: pin.href, accuracy: spot.accuracy, badge: pin.badge }]}
         here={here} short facing={facing} />
       <p class="go-paths"><a class="small-button" href={appleMapsLink(spot)} data-test="go-directions">
         <Icon name="map" size={18} />Walking directions</a> <span class="muted small">in Apple Maps (needs a signal)</span></p>

@@ -7,6 +7,8 @@ import { FindsMap } from './finds-map';
 import { Icon } from './icons';
 import { BackLink } from './back-link';
 import { GrowthPicker } from './growth';
+import { BadgePicker } from './badges';
+import { badgeByKey, badgeFor, type BadgeKey } from '../finds/badges';
 
 // Save a location (Stefan 10/10/2026): the exact spot where he is standing — the GPS position, getting better while
 // the screen is open, or a pin he places by hand — with a description and a photo, both optional. Saves with no
@@ -29,6 +31,8 @@ export function FindNew() {
   const placed = useRef(false);
   const [photos, setPhotos] = useState<Blob[]>(handed?.photos ?? []);
   const [notes, setNotes] = useState('');
+  // One of the three pictures (src/finds/badges.ts) = the species; a scan that named one of them starts it pressed.
+  const [badge, setBadge] = useState<BadgeKey | null>(badgeFor(handed?.species)?.key ?? null);
   const [stage, setStage] = useState<number | null>(null); // growth stage, optional (src/finds/growth.ts)
   const [busy, setBusy] = useState<string | null>(null);
   const [problem, setProblem] = useState<string | null>(null);
@@ -66,7 +70,7 @@ export function FindNew() {
     setBusy('Saving…');
     try {
       const at = new Date().toISOString();
-      const f = await addFind({ at, spot, species: handed?.species ?? null, notes: notes.trim(),
+      const f = await addFind({ at, spot, species: badgeByKey(badge)?.species ?? (badgeFor(handed?.species) ? null : handed?.species ?? null), notes: notes.trim(),
         ...(stage === null ? {} : { growth: [{ stage, at }] }) }, photos);
       try { sessionStorage.setItem(JUST_SAVED, f.id); } catch { /* the page simply does not say "saved" */ }
       location.hash = hrefFor({ name: 'find', id: f.id });
@@ -84,6 +88,11 @@ export function FindNew() {
         <p data-test="where">{where}</p>
         <FindsMap pick={{ spot, onPick: place }} />
         <p class="muted small">Not quite right? Tap the map or drag the pin.</p>
+      </section>
+      <section class="card">
+        <h2>What you found<span class="optional">optional</span></h2>
+        <p class="muted small">Tap its picture: the location shows it on the map.</p>
+        <BadgePicker value={badge} onPick={setBadge} />
       </section>
       <section class="card">
         <h2><label for="description">Description</label><span class="optional">optional</span></h2>

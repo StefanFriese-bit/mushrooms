@@ -8,6 +8,7 @@ import { Icon } from './icons';
 import { askForCompassOnTap } from '../finds/compass';
 import { nextStop, stopNumber } from '../finds/walk';
 import { walkOf } from '../finds/walk-store';
+import { badgeFor } from '../finds/badges';
 
 // Take me there (spec 7): back to a saved location — the walk-back screen (./go-to.tsx), and once he is there, the
 // find's own description and photos to recognise it by.
@@ -39,7 +40,7 @@ export function FindGo({ id }: { id: string }) {
   return (
     <GoTo title={`Back to: ${label}`} spot={find.spot} back={{ href: hrefFor({ name: 'finds' }), label: 'Map' }}
       subtitle={stop > 0 ? `Stop ${stop} of ${walk!.order.length} on your walk` : undefined}
-      pin={{ id: find.id, label, href: hrefFor({ name: 'find', id: find.id }) }}
+      pin={{ id: find.id, label, href: hrefFor({ name: 'find', id: find.id }), badge: badgeFor(find.species)?.key }}
       thereText={`Look around here${srcs.length > 0 ? ' — these are your photos of it:' : '.'}`}
       thereExtra={<>
         {find.notes && <p class="description">{find.notes}</p>}
