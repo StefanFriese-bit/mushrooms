@@ -36,6 +36,9 @@ export function FindNew() {
   const [stage, setStage] = useState<number | null>(null); // growth stage, optional (src/finds/growth.ts)
   const [busy, setBusy] = useState<string | null>(null);
   const [problem, setProblem] = useState<string | null>(null);
+  // The map is folded away (Stefan 18/10/2026: "every single time I've used it … I'm saving a location exactly where I
+  // am"): one tap opens it to move the pin. It opens by itself when the phone gives no position, so the pin can be placed.
+  const [showMap, setShowMap] = useState(false);
   const previews = useMemo(() => photos.map((p) => URL.createObjectURL(p)), [photos]);
   useEffect(() => () => previews.forEach((u) => URL.revokeObjectURL(u)), [previews]);
   useEffect(() => followSpot(
@@ -46,7 +49,7 @@ export function FindNew() {
       setWhere(`Your position, ${sayAccuracy(s.accuracy)}${readings > 1 ? `, steadied over ${readings} readings` : ''}` +
         (s.accuracy !== null && s.accuracy > 15 ? '. Under trees, standing still for half a minute usually makes it more exact.' : ''));
     },
-    (message) => { if (!placed.current) setWhere(message); },
+    (message) => { if (!placed.current) { setWhere(message); setShowMap(true); } },
   ), []);
   const place = (lat: number, lon: number) => {
     placed.current = true;
@@ -83,22 +86,28 @@ export function FindNew() {
     <>
       <BackLink href={hrefFor({ name: 'map' })} label="Map" />
       <h1>Save a location</h1>
-      <section class="card">
-        <h2>Where you are</h2>
+      {/* One screen, top to bottom (Stefan 18/10/2026): where he is, in one line; the pictures; the description; Save. */}
+      <div class="where-row">
+        <Icon name="pin" size={20} />
         <p data-test="where">{where}</p>
-        <FindsMap pick={{ spot, onPick: place }} />
-        <p class="muted small">Not quite right? Tap the map or drag the pin.</p>
-      </section>
-      <section class="card">
-        <h2>What you found<span class="optional">optional</span></h2>
-        <p class="muted small">Tap its picture: the location shows it on the map.</p>
-        <BadgePicker value={badge} onPick={setBadge} />
-      </section>
-      <section class="card">
-        <h2><label for="description">Description</label><span class="optional">optional</span></h2>
-        <textarea id="description" class="field" rows={3} value={notes} onInput={(e) => setNotes((e.target as HTMLTextAreaElement).value)}
-          placeholder="What did you find? For example: Penny Bun, five caps, under the big beech" />
-      </section>
+        <button type="button" class="small-button" aria-expanded={showMap} onClick={() => setShowMap(!showMap)} data-test="where-map">
+          <Icon name="map" size={18} />{showMap ? 'Hide map' : 'Map'}</button>
+      </div>
+      {showMap && (
+        <section class="card where-map">
+          <FindsMap pick={{ spot, onPick: place }} />
+          <p class="muted small">Not quite right? Tap the map or drag the pin.</p>
+        </section>
+      )}
+      <BadgePicker value={badge} onPick={setBadge} />
+      <label class="field-label" for="description">Description <span class="optional">optional</span></label>
+      <textarea id="description" class="field" rows={2} value={notes} onInput={(e) => setNotes((e.target as HTMLTextAreaElement).value)}
+        placeholder="For example: five caps, under the big beech" />
+      {problem && <p class="card alert" role="alert">{problem}</p>}
+      <p class="save-row"><button type="button" class="big-button wide" disabled={busy !== null} onClick={save}>
+        {busy ?? <><Icon name="pin" size={20} />Save location</>}</button></p>
+      {photos.length > 0 && <p class="muted small" data-test="photo-count">{photos.length === 1 ? '1 photo' : `${photos.length} photos`} saved with it (below).</p>}
+      <h2 class="more-title">More, if you like</h2>
       <section class="card">
         <h2>Growth stage<span class="optional">optional</span></h2>
         <p class="muted small">Just coming up? Mark how far: the location then shows the stage and how many days ago you saw it.</p>
@@ -120,9 +129,6 @@ export function FindNew() {
           <input type="file" accept="image/*" multiple aria-label="Photo" onChange={(e) => addPhotos((e.target as HTMLInputElement).files)} />
         </label>
       </section>
-      {problem && <p class="card alert" role="alert">{problem}</p>}
-      <p><button type="button" class="big-button wide" disabled={busy !== null} onClick={save}>
-        {busy ?? <><Icon name="pin" size={20} />Save location</>}</button></p>
     </>
   );
 }

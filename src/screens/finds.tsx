@@ -55,7 +55,10 @@ export function Finds() {
   useEffect(() => { void load(); }, []);
   const backup = useBackup(finds ?? [], () => void load());
   const [filter, setFilter] = useState<FindFilter>(NO_FILTER);
-  // Where he stands: the walk starts from here (the blue dot already follows it).
+  // Where he stands: drawn as the blue dot with how exact it is, and framed with his pins the first time it is known,
+  // so the map shows where he is among them (Stefan 18/10/2026: "I should also be able to see my location relative to
+  // all of those"). Until then the dot only came from the map's own locate button, which starts itself only when there
+  // are no pins — with pins on the map he never saw himself. The planned walk starts from here too.
   const [here, setHere] = useState<Fix | null>(null);
   useEffect(() => followHere(setHere, () => {}), []);
   const [walk, setWalk] = useState(() => walkOf());
@@ -93,7 +96,7 @@ export function Finds() {
         <a class="small-button" href={hrefFor({ name: 'find-new' })}><Icon name="plus" size={18} />Save a location</a>
       </div>
       <FindsMap pins={pins} key={filtered ? JSON.stringify(filter) : 'all'} locate tall
-        route={walk ? walkLine(walk.start, walk) : null} trails={trails} frameTrails={showWalks} />
+        route={walk ? walkLine(walk.start, walk) : null} trails={trails} frameTrails={showWalks} here={here} />
       {tracks && tracks.length > 0 && (
         <p class="show-walks">
           <label class="check"><input type="checkbox" checked={showWalks} data-test="show-walks"

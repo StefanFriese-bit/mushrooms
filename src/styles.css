@@ -407,9 +407,9 @@ a.result:active { background: var(--subtle); }
 /* The three pictures (src/finds/badges.ts): chosen above the description when saving, and drawn as the pin on the map. */
 .badge-icon { display: inline-block; flex: none; line-height: 0; }
 .badge-icon svg { width: 100%; height: 100%; }
-.badge-pick { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
-.badge-choice { display: flex; flex-direction: column; align-items: center; gap: 4px; min-height: 84px; padding: 8px 4px; font: inherit;
-  font-size: 13.5px; font-weight: 600; text-align: center; border: 1px solid var(--line); border-radius: var(--radius);
+.badge-pick { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; }
+.badge-choice { display: flex; flex-direction: column; align-items: center; gap: 3px; min-height: 76px; padding: 6px 2px; font: inherit;
+  font-size: 12.5px; line-height: 1.15; font-weight: 600; text-align: center; border: 1px solid var(--line); border-radius: var(--radius);
   background: var(--surface); color: var(--fg); cursor: pointer; touch-action: manipulation; -webkit-tap-highlight-color: transparent; }
 .badge-choice[aria-pressed="true"] { border-color: var(--accent); background: var(--accent-weak); box-shadow: inset 0 0 0 2px var(--accent); }
 /* On the map: a round white disc holding the picture, bigger than a plain pin so it reads at a glance. */
@@ -457,3 +457,11 @@ a.result:active { background: var(--subtle); }
 .show-walks { display: flex; flex-wrap: wrap; gap: 6px 12px; align-items: center; margin: 6px 0; font-size: 15px; }
 .walk-chip { display: inline-flex; align-items: center; gap: 6px; font-size: 14px; }
 .walk-chip .swatch { display: inline-block; width: 18px; height: 6px; border-radius: 3px; }
+
+/* Save a location on one screen (Stefan 18/10/2026). */
+.where-row { display: flex; align-items: center; gap: 8px; margin: 2px 0 10px; }
+.where-row p { flex: 1; margin: 0; font-size: 15px; line-height: 1.3; }
+.where-row .small-button { flex: none; }
+.where-map { margin-top: 0; }
+.save-row { margin: 10px 0 6px; }
+.more-title { margin-top: 22px; font-size: 17px; color: var(--muted); }

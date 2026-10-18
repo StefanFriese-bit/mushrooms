@@ -931,7 +931,7 @@ test.describe('Map', () => {
     await page.goto(`${site.url}#/finds/new`);
     await expect(page.locator('[data-test=where]')).toContainText('within 7 m', { timeout: 15000 });
     const pick = page.locator('[data-test=badge-pick]');
-    await expect(pick.getByRole('button')).toHaveText(['Penny Bun', 'Bay Bolete', 'Fly Agaric', 'Birch Bolete', 'Horn of Plenty', 'Hedgehog', 'Winter Chanterelle']);
+    await expect(pick.getByRole('button')).toHaveText(['Penny Bun', 'Bay Bolete', 'Fly Agaric', 'Birch Bolete', 'Horn of Plenty', 'Hedgehog', 'Winter Chanterelle', 'Parasol']);
     // Above the description.
     const pickTop = (await pick.boundingBox())!.y;
     const descTop = (await page.getByLabel('Description').boundingBox())!.y;
@@ -988,6 +988,47 @@ test.describe('Map', () => {
     await expect(page.locator('[data-test=map-pin][data-badge=penny-bun]')).toHaveCount(1);
     await expect(page.locator('[data-test=map-pin][data-badge=fly-agaric]')).toHaveCount(1);
     await expect(page.locator('[data-test=map-pin]:not([data-badge])')).toHaveCount(0);
+  });
+
+  test('Save a location fits one screen: where he is in a line, the pictures, the description and Save; the map one tap away', async ({ page }) => {
+    // Stefan 18/10/2026: "that screen just becomes fully navigable in one screen. There's no scrolling up and down."
+    await page.goto(`${site.url}#/finds/new`);
+    await expect(page.locator('[data-test=where]')).toContainText('within 7 m', { timeout: 15000 });
+    await expect(page.locator('[data-test=map]')).toHaveCount(0); // folded away
+    const view = page.viewportSize()!;
+    const save = page.getByRole('button', { name: 'Save location' });
+    for (const el of [page.locator('[data-test=badge-pick]'), page.getByLabel('Description'), save]) {
+      const b = (await el.boundingBox())!;
+      expect(b.y + b.height).toBeLessThanOrEqual(view.height); // on the first screen, no scrolling
+    }
+    expect((await page.locator('[data-test=badge-pick]').boundingBox())!.y).toBeLessThan((await page.getByLabel('Description').boundingBox())!.y);
+    // One tap opens the map with the pin on him, to move it.
+    await page.locator('[data-test=where-map]').click();
+    await expect(page.locator('[data-test=pick-pin]')).toBeVisible();
+    await page.locator('[data-test=badge-pick]').getByRole('button', { name: 'Parasol' }).click();
+    await save.click();
+    await expect(page.locator('h1 .badge-icon')).toHaveCount(1);
+    await expect(page.locator('[data-test=map-pin][data-badge=parasol]')).toHaveCount(1);
+  });
+
+  test('View map shows where he is among his saved locations, without pressing anything', async ({ page, context }) => {
+    // Stefan 18/10/2026: "I should also be able to see my location relative to all of those. I'm not sure that that
+    // function was working" — it was not: the dot came only from the map's own button, which starts itself only with no pins.
+    await page.goto(`${site.url}#/finds/new`);
+    await expect(page.locator('[data-test=where]')).toContainText('within 7 m', { timeout: 15000 });
+    await page.getByLabel('Description').fill('Parasols by the gate');
+    await page.getByRole('button', { name: 'Save location' }).click();
+    await expect(page.locator('h1 .badge-icon')).toHaveCount(1); // "parasols" in his words = the Parasol picture
+    await context.setGeolocation({ latitude: 51.6588 + 300 / 111_320, longitude: 0.0466, accuracy: 6 }); // 300 m north of it
+    await page.goto(`${site.url}#/finds`);
+    await expect(page.locator('[data-test=map-pin][data-badge=parasol]')).toBeVisible();
+    const dot = page.locator('[data-test=here-dot]');
+    await expect(dot).toBeVisible({ timeout: 15000 });
+    // Both on the screen at once, he above (north of) the pin.
+    const map = (await page.locator('.map-wrap').boundingBox())!;
+    const d = (await dot.boundingBox())!, p = (await page.locator('[data-test=map-pin]').boundingBox())!;
+    for (const b of [d, p]) { expect(b.y).toBeGreaterThanOrEqual(map.y); expect(b.y + b.height).toBeLessThanOrEqual(map.y + map.height); }
+    expect(d.y).toBeLessThan(p.y);
   });
 
   test('two found together: a penny bun and a bay bolete in the description = both pictures in one pin', async ({ page }) => {

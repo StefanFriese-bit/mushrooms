@@ -7,7 +7,7 @@
 // sets), so the map's species choice, the word search and the location's title all follow it. A location named any of
 // these three on its page gets the picture too.
 
-export type BadgeKey = 'penny-bun' | 'bay-bolete' | 'fly-agaric' | 'birch-bolete' | 'horn-of-plenty' | 'hedgehog' | 'winter-chanterelle';
+export type BadgeKey = 'penny-bun' | 'bay-bolete' | 'fly-agaric' | 'birch-bolete' | 'horn-of-plenty' | 'hedgehog' | 'winter-chanterelle' | 'parasol';
 export type Badge = { key: BadgeKey; name: string; species: string; alsoSpecies?: string[]; svg: string };
 
 // Drawn on a 32 × 32 square, in their own colours (they are pictures, not line icons). Plain constants: never built
@@ -78,6 +78,20 @@ const WINTER_CHANTERELLE = `<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/20
 <path d="M7.6 9.9Q10.5 9 12.5 10" stroke="#fde59a" stroke-width="1.1" fill="none" stroke-linecap="round"/>
 </svg>`;
 
+// Parasol (Stefan 18/10/2026: "a little mushroom maybe with an umbrella sticking out the top of it"): a tall, thin,
+// snakeskin stem with its ring, a broad pale-brown scaly cap, and a small blue umbrella standing out of its top.
+const PARASOL = `<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+<path d="M17.2 1.6V11.6" stroke="#3b3733" stroke-width="1.1" stroke-linecap="round"/>
+<path d="M10 7.4Q11 1.4 17.2 1.4T24.4 7.4Q23.2 6.4 22 7.4Q20.8 6.4 19.6 7.4Q18.4 6.4 17.2 7.4Q16 6.4 14.8 7.4Q13.6 6.4 12.4 7.4Q11.2 6.4 10 7.4Z" fill="#1c7ed6" stroke="#0b4f8a" stroke-width=".8" stroke-linejoin="round"/>
+<path d="M17.2 1.4Q15 3.6 14.8 7.3M17.2 1.4Q19.4 3.6 19.6 7.3" stroke="#74c0fc" stroke-width=".7" fill="none"/>
+<path d="M2.5 17.6Q4.5 11.4 16 11.2Q27.5 11.4 29.5 17.6Z" fill="#d9c3a0" stroke="#7a5c38" stroke-width="1" stroke-linejoin="round"/>
+<ellipse cx="16" cy="12.4" rx="2.6" ry="1.2" fill="#7a5230"/>
+<g fill="#8a6440"><circle cx="9" cy="14.6" r=".8"/><circle cx="12.5" cy="13.9" r=".7"/><circle cx="20" cy="13.9" r=".7"/><circle cx="23.4" cy="14.7" r=".8"/><circle cx="6.4" cy="16.4" r=".7"/><circle cx="16.4" cy="15.6" r=".7"/><circle cx="26" cy="16.5" r=".7"/><circle cx="11.4" cy="16.6" r=".6"/><circle cx="21.2" cy="16.6" r=".6"/></g>
+<path d="M14.9 17.6H17.1L17.6 30.4Q16 31 14.4 30.4Z" fill="#f3ead8" stroke="#a8916a" stroke-width=".8" stroke-linejoin="round"/>
+<path d="M13.4 20.2Q16 21.4 18.6 20.2L18.2 21.4Q16 22.4 13.8 21.4Z" fill="#fbf7ee" stroke="#a8916a" stroke-width=".6"/>
+<path d="M15 23.6l1 .6 1-.6M15.1 26.2l.9.6 1-.6M15.2 28.6l.8.5.9-.5" stroke="#9c7d55" stroke-width=".6" fill="none"/>
+</svg>`;
+
 export const BADGES: readonly Badge[] = [
   { key: 'penny-bun', name: 'Penny Bun', species: 'Boletus edulis', svg: PENNY_BUN },
   { key: 'bay-bolete', name: 'Bay Bolete', species: 'Imleria badia', svg: BAY_BOLETE },
@@ -88,6 +102,7 @@ export const BADGES: readonly Badge[] = [
   { key: 'hedgehog', name: 'Hedgehog', species: 'Hydnum repandum', alsoSpecies: ['Hydnum rufescens'], svg: HEDGEHOG },
   // The guide calls it Trumpet Chanterelle (Craterellus tubaeformis); he calls it the Winter Chanterelle.
   { key: 'winter-chanterelle', name: 'Winter Chanterelle', species: 'Craterellus tubaeformis', svg: WINTER_CHANTERELLE },
+  { key: 'parasol', name: 'Parasol', species: 'Macrolepiota procera', svg: PARASOL },
 ];
 
 /** The picture for a location's species, or null when it is none of the three (or not named yet). */
@@ -112,8 +127,11 @@ const NAMES_IN_WORDS: Record<BadgeKey, string[][]> = {
   'horn-of-plenty': [['horn', 'of', 'plenty'], ['black', 'trumpet'], ['craterellus', 'cornucopioides']],
   'hedgehog': [['hedgehog'], ['hydnum']],
   // Not "yellowleg": the Yellowleg Bonnet is another mushroom altogether.
+  'parasol': [['parasol'], ['macrolepiota', 'procera']],
   'winter-chanterelle': [['winter', 'chanterelle'], ['trumpet', 'chanterelle'], ['yellowfoot'], ['craterellus', 'tubaeformis']],
 };
+/** Names that contain a picture's name but are another mushroom: the Shaggy Parasol is not the Parasol. */
+const NOT_THIS: Partial<Record<BadgeKey, string[][]>> = { parasol: [['shaggy', 'parasol'], ['chlorophyllum']] };
 /** Words as they are compared: lower case, accents off, a plural "s" dropped (penny buns, ceps, fly agarics). */
 function bareWords(s: string): string[] {
   return s.normalize('NFD').replace(/\p{Diacritic}/gu, '').toLowerCase().split(/[^\p{Letter}\p{Number}]+/u).filter(Boolean)
@@ -128,7 +146,8 @@ function hasName(ws: string[], name: string[]): boolean {
 export function badgesFromWords(text: string): Badge[] {
   const ws = bareWords(text);
   // The names go through the same plural rule as his words ("boletus" -> "boletu"), so Latin names match too.
-  return BADGES.filter((b) => NAMES_IN_WORDS[b.key].some((n) => hasName(ws, bareWords(n.join(' ')))));
+  return BADGES.filter((b) => NAMES_IN_WORDS[b.key].some((n) => hasName(ws, bareWords(n.join(' '))))
+    && !(NOT_THIS[b.key] ?? []).some((n) => hasName(ws, bareWords(n.join(' ')))));
 }
 /** The picture a description names — null when it names none, or more than one. */
 export function badgeFromWords(text: string): Badge | null {

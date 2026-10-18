@@ -339,7 +339,9 @@ export function FindsMap({ pins = [], locate = false, pick, here = null, tall = 
       const lats = [here.lat, ...pins.map((p) => p.lat)];
       m.fitBounds([[Math.min(...lons), Math.min(...lats)], [Math.max(...lons), Math.max(...lats)]], { padding: 60, maxZoom: 19, duration: 0 });
     }
-  }, [ready, here?.lat, here?.lon]);
+  // ⚠ pins.length too: his position can arrive before his saved locations have loaded, and the framing then never
+  // happened — the map zoomed in on the pin alone and his dot sat off the screen (found 18/10/2026).
+  }, [ready, here?.lat, here?.lon, pins.length]);
 
   // The planned walk on the map.
   // ⚠ Not `isStyleLoaded()`: MapLibre answers false to that while a drawn, tiled map is still settling, and the walk

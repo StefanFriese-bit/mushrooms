@@ -10,7 +10,7 @@ describe('a saved location\'s picture', () => {
     expect(keys({ species: 'Amanita muscaria', notes: '' })).toEqual(['fly-agaric']);
   });
   it('named as another species: none, whatever the description says', () => {
-    expect(badgeOfFind({ species: 'Macrolepiota procera', notes: 'thought it was a penny bun' })).toBeNull();
+    expect(badgeOfFind({ species: 'Cantharellus cibarius', notes: 'thought it was a penny bun' })).toBeNull();
   });
   it('not named: from the description, in his own words', () => {
     expect(badgeFromWords('Penny Bun, five caps, under the big beech')?.key).toBe('penny-bun');
@@ -61,6 +61,13 @@ describe('a saved location\'s picture', () => {
     expect(keys({ species: 'Imleria badia', notes: 'bay bolete next to a penny bun' })).toEqual(['bay-bolete', 'penny-bun']);
     expect(keys({ species: 'Boletus edulis', notes: 'penny bun' })).toEqual(['penny-bun']);
     expect(keys({ species: null, notes: 'fly agaric next to a penny bun' })).toEqual(['penny-bun', 'fly-agaric']);
-    expect(keys({ species: 'Macrolepiota procera', notes: 'penny bun and bay bolete' })).toEqual([]);
+    expect(keys({ species: 'Cantharellus cibarius', notes: 'penny bun and bay bolete' })).toEqual([]);
+  });
+  it('Parasol: its picture from its name; a Shaggy Parasol is another mushroom (Stefan 18/10/2026)', () => {
+    expect(keys({ species: 'Macrolepiota procera', notes: '' })).toEqual(['parasol']);
+    expect(badgeFromWords('Two parasols by the gate')?.key).toBe('parasol');
+    expect(badgeFromWords('Macrolepiota procera')?.key).toBe('parasol');
+    expect(badgeFromWords('shaggy parasol')).toBeNull();
+    expect(badgeFromWords('Chlorophyllum, the shaggy parasol')).toBeNull();
   });
 });
