@@ -1,3 +1,4 @@
+import { Component, type ComponentChildren } from 'preact';
 import { useLayoutEffect, useState } from 'preact/hooks';
 import { parseHash, hrefFor, type Route } from './router';
 import { Guide } from './screens/guide';
@@ -88,6 +89,30 @@ function screen(route: Route) {
   }
 }
 
+/** A screen that fails never freezes the app (Stefan 24/10/2026: "I try and go back … and it doesn't respond"): it is
+ * replaced by a way out, and the boundary is keyed by the address, so the next tap on Back or the bar at the foot opens
+ * the next screen afresh. Not seen failing on the Mac — this is the guarantee, not a fix for a known fault. */
+class ScreenGuard extends Component<{ children: ComponentChildren }, { failed: boolean }> {
+  state = { failed: false };
+  static getDerivedStateFromError() { return { failed: true }; }
+  componentDidCatch(e: unknown) { console.error('A screen failed:', e); }
+  render() {
+    if (!this.state.failed) return this.props.children;
+    return (
+      <div class="card" data-test="screen-failed">
+        <p><strong>This screen stopped working.</strong> Your saved locations are safe on this phone.</p>
+        <p><a class="big-button" href={hrefFor({ name: 'map' })}>Back to the map</a></p>
+      </div>
+    );
+  }
+}
+
+/** Which screen an address opens: a new key starts the guard afresh. Search words and answers are left out, so the
+ * Guide's box (it writes each letter into the address) keeps its place while he types. */
+function screenKey(r: Route): string {
+  return 'id' in r ? `${r.name}/${r.id}` : 'slug' in r ? `${r.name}/${r.slug}` : r.name;
+}
+
 export function App() {
   const [route, setRoute] = useState<Route>(() => parseHash(location.hash));
   // Listen from the first render (a layout effect runs before the browser can deliver an event), and catch up on a
@@ -105,7 +130,7 @@ export function App() {
       <Header home={home} />
       <UpdateBar addingFind={route.name === 'find-new'} />
       <RecordingBar hidden={route.name === 'tracks'} />
-      <main>{screen(route)}</main>
+      <main><ScreenGuard key={screenKey(route)}>{screen(route)}</ScreenGuard></main>
       {!home && <SectionBar active={sectionOf(route)} />}
     </div>
   );

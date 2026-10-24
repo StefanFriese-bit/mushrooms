@@ -53,6 +53,12 @@ async function blueOnTheMap(page: Page): Promise<number> {
   return blue;
 }
 
+/** The list under View map is a drawer per month, closed until he opens it (Stefan 24/10/2026): open them all. */
+async function openMonths(page: Page) {
+  await page.locator('[data-test=loc-month], .loc-list').first().waitFor({ state: 'attached' }); // the list has loaded
+  for (const m of await page.locator('[data-test=loc-month]:not([open]) > summary').all()) await m.click();
+}
+
 test.beforeEach(async () => { site = await startServer(DIST); });
 test.afterEach(async () => { await site.stop(); });
 
@@ -395,6 +401,7 @@ test.describe('Map', () => {
     const listed = (d: Date) => `${d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short' })} ${d.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' })}`;
     const minutes = new Set<string>();
     for (let t = savedFrom.getTime() - (savedFrom.getTime() % 60000); t <= Date.now(); t += 60000) minutes.add(listed(new Date(t)));
+    await openMonths(page);
     expect([...minutes]).toContain(await page.locator('[data-test=find-row] .loc-date').innerText());
     await page.locator('[data-test=map-pin]').click();
     const go = page.locator('.pin-pop-go');
@@ -672,6 +679,7 @@ test.describe('Map', () => {
     await expect(page.locator('[data-test=backup-reminder]')).toHaveCount(0);
     // The location is deleted …
     await page.goto(`${site.url}#/finds`);
+    await openMonths(page);
     await page.locator('[data-test=find-row] .loc-main').first().click();
     page.once('dialog', (d) => d.accept());
     await page.getByRole('button', { name: 'Delete this location' }).click();
@@ -776,6 +784,7 @@ test.describe('Map', () => {
     await p2.locator('[data-test=cloud-restore]').click();
     await expect(p2.locator('[data-test=backup-said]')).toContainText('Restored 1 location from GitHub');
     await expect(p2.locator('[data-test=find-row]')).toHaveCount(1);
+    await openMonths(p2);
     await p2.locator('[data-test=find-row] .loc-main').first().click();
     await expect(p2.getByRole('heading', { name: 'Chanterelles by the stream', exact: true })).toBeVisible();
     await expect(p2.locator('.photos img')).toHaveCount(0);
@@ -914,6 +923,7 @@ test.describe('Map', () => {
     await page.clock.setSystemTime(new Date(Date.now() + 3 * 86_400_000 + 60_000));
     await page.reload();
     await expect(page.locator('[data-test=find-row] [data-test=growth-chip]')).toHaveText('G1 · 3 days');
+    await openMonths(page);
     await page.locator('[data-test=find-row] .loc-main').click();
     await expect(page.locator('[data-test=growth-now]')).toContainText('G1 Button · 3 days ago');
     // He goes back: it has grown.
@@ -1009,6 +1019,77 @@ test.describe('Map', () => {
     await save.click();
     await expect(page.locator('h1 .badge-icon')).toHaveCount(1);
     await expect(page.locator('[data-test=map-pin][data-badge=parasol]')).toHaveCount(1);
+  });
+
+  test('the list under View map is a drawer per month, closed until he opens it; every pin stays on the map', async ({ page }) => {
+    // Stefan 24/10/2026: "while I still want them all appearing on the map itself … arrange the actual finds per month …
+    // a header row … I can pop that open if I want to see any of the finds specifically".
+    for (const words of ['Cauliflower by the oak', 'Penny bun under the beech']) {
+      await page.goto(`${site.url}#/finds/new`);
+      await expect(page.locator('[data-test=where]')).toContainText('within 7 m', { timeout: 15000 });
+      await page.getByLabel('Description').fill(words);
+      await page.getByRole('button', { name: 'Save location' }).click();
+      await expect(page.getByRole('heading', { name: words, exact: true })).toBeVisible();
+    }
+    await page.goto(`${site.url}#/finds`);
+    const month = page.locator('[data-test=loc-month]');
+    await expect(month).toHaveCount(1);
+    const thisMonth = new Date().toLocaleDateString('en-GB', { month: 'long', year: 'numeric' });
+    await expect(month.locator('summary')).toHaveText(`${thisMonth}2`);
+    await expect(month).not.toHaveAttribute('open', '');
+    await expect(page.locator('[data-test=find-row]').first()).toBeHidden(); // folded
+    await expect(page.locator('[data-test=map-pin]')).toHaveCount(2); // the map still has both
+    // A tap opens it; the rows are there and work; coming back finds it as he left it.
+    await month.locator('summary').click();
+    await expect(page.locator('[data-test=find-row]')).toHaveCount(2);
+    await expect(page.locator('[data-test=find-row]').first()).toBeVisible();
+    await page.locator('[data-test=find-row] .loc-main').first().click();
+    await expect(page.getByRole('heading', { name: 'Penny bun under the beech', exact: true })).toBeVisible();
+    await page.locator('[data-test=back-link]').click();
+    await expect(page.locator('[data-test=find-row]').first()).toBeVisible();
+    // A second tap folds it away again.
+    await month.locator('summary').click();
+    await expect(page.locator('[data-test=find-row]').first()).toBeHidden();
+    // A word search lists its answers open, without drawers.
+    await page.locator('[data-test=find-search]').fill('cauliflower');
+    await expect(page.locator('[data-test=loc-month]')).toHaveCount(0);
+    await expect(page.locator('[data-test=find-row]')).toHaveCount(1);
+    await expect(page.locator('[data-test=find-row]')).toBeVisible();
+  });
+
+  test('every button on the Map screens answers a field tap: no double-tap wait, no long-press preview, at least 44 points', async ({ page }) => {
+    // Stefan 24/10/2026: "check all of them that they're not glitchy and that they're responsive". Measured that day:
+    // only Back had the tap rules, and 15 kinds of button were under Apple's 44 points.
+    await page.goto(`${site.url}#/finds/new`);
+    await expect(page.locator('[data-test=where]')).toContainText('within 7 m', { timeout: 15000 });
+    const check = async (screen: string) => {
+      await page.waitForTimeout(800);
+      const bad = await page.evaluate(() => {
+        const out: string[] = [];
+        // The app's own buttons and links; the map's copyright line and links inside a page's text are left alone.
+        for (const el of document.querySelectorAll<HTMLElement>('button, summary, .small-button, .big-button, .tab-btn, .head-button, .back-link, .choice-button, .loc-main, .loc-go')) {
+          const r = el.getBoundingClientRect();
+          if (!r.width || el.closest('.maplibregl-ctrl-attrib') || el.classList.contains('pin')) continue;
+          const cs = getComputedStyle(el) as CSSStyleDeclaration & { webkitTouchCallout?: string };
+          const name = `${el.className || el.tagName} "${(el.innerText || el.getAttribute('aria-label') || '').trim().slice(0, 24)}"`;
+          if (cs.touchAction !== 'manipulation') out.push(`${name}: touch-action ${cs.touchAction}`);
+          if (!el.closest('.maplibregl-ctrl') && r.height < 44) out.push(`${name}: ${Math.round(r.height)} points tall`);
+          if (el.closest('.maplibregl-ctrl') && r.height < 40) out.push(`${name}: ${Math.round(r.height)} points tall`);
+          if (cs.userSelect !== 'none' && cs.webkitUserSelect !== 'none') out.push(`${name}: text can be selected`);
+        }
+        return out;
+      });
+      expect(bad, screen).toEqual([]);
+    };
+    await check('Save a location');
+    await page.getByLabel('Description').fill('Cauliflower');
+    await page.getByRole('button', { name: 'Save location' }).click();
+    await expect(page.locator('h1 .badge-icon')).toHaveCount(1);
+    await check('a saved location');
+    const id = decodeURIComponent(page.url().split('#/finds/')[1]);
+    await page.goto(`${site.url}#/map`); await check('Map');
+    await page.goto(`${site.url}#/finds`); await openMonths(page); await check('View map');
+    await page.goto(`${site.url}#/finds/${encodeURIComponent(id)}/go`); await check('Take me there');
   });
 
   test('View map shows where he is among his saved locations, without pressing anything', async ({ page, context }) => {

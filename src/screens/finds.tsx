@@ -20,6 +20,8 @@ import { pastTrails, PAST_ON_MAP, useTracks } from './track';
 const SHOW_WALKS = 'show-walks';
 import { PAST_COLOURS, sayKm, trackStats } from '../finds/track';
 import { BadgeIcons } from './badges';
+import { byMonth } from '../finds/months';
+const OPEN_MONTHS = 'open-months';
 
 // View map (spec 7; Stefan 10/10/2026): his saved locations as pins on his own map, his position, and the list, newest
 // first — each with "Take me there". Everything here lives on this phone only. (In the code a saved location is still
@@ -88,6 +90,43 @@ export function Finds() {
     setWalk(saveWalk(planWalk(here, walkable), here)); // saved as it is planned: the walk outlives this screen
   };
   const dropTheWalk = () => { clearWalk(); setWalk(null); };
+  // Which month drawers he has open, kept on this phone so coming back from a location finds them as he left them.
+  const [openMonths, setOpenMonths] = useState<Set<string>>(() => {
+    try { return new Set(JSON.parse(localStorage.getItem(OPEN_MONTHS) ?? '[]') as string[]); } catch { return new Set(); }
+  });
+  const toggleMonth = (key: string, open: boolean) => setOpenMonths((was) => {
+    if (was.has(key) === open) return was;
+    const next = new Set(was);
+    if (open) next.add(key); else next.delete(key);
+    try { localStorage.setItem(OPEN_MONTHS, JSON.stringify([...next])); } catch { /* private mode */ }
+    return next;
+  });
+  // One line each, newest first (Stefan 10/10/2026): when it was saved and his note; a tap opens it, Go walks back.
+  const row = (f: Find) => {
+    const line = oneLine(f, names);
+    const stop = onWalk.get(f.id);
+    return (
+      <div class="loc-line" data-test="find-row" key={f.id}>
+        <a class="loc-main" href={hrefFor({ name: 'find', id: f.id })}>
+          {stop && <span class="loc-stop" data-test="loc-stop">{stop}</span>}
+          {/* The growth chip under the date, so his note keeps the line's width. */}
+          <span class="loc-when">
+            <span class="loc-date" title={sayWhen(f.at)}>{sayListWhen(f.at, now)}</span>
+            <GrowthChip log={f.growth} now={now} />
+          </span>
+          <BadgeIcons badges={badgesOfFind(f)} size={26} />
+          <span class={`loc-desc${line.described ? '' : ' none'}`}>{line.text}</span>
+        </a>
+        {f.spot && (
+          <a class="loc-go" href={hrefFor({ name: 'find-go', id: f.id })} aria-label={`Take me there: ${findLabel(f, names)}`}
+            onClick={askForCompassOnTap}>
+            <Icon name="navigate" size={16} />Go
+          </a>
+        )}
+      </div>
+    );
+  };
+
   return (
     <>
       <BackLink href={hrefFor({ name: 'map' })} label="Map" />
@@ -159,35 +198,22 @@ export function Finds() {
           : 'No saved locations of this species yet.'}</p>
       )}
       {shown.length > 0 && <h2>{walk ? 'Your walk' : 'Saved locations'} <span class="muted">({shown.length})</span></h2>}
-      {shown.length > 0 && (
-        // One line each, newest first (Stefan 10/10/2026): when it was saved and his note; a tap opens it, Go walks back.
-        <div class="loc-list">
-          {listed.map((f) => {
-            const line = oneLine(f, names);
-            const stop = onWalk.get(f.id);
-            return (
-              <div class="loc-line" data-test="find-row" key={f.id}>
-                <a class="loc-main" href={hrefFor({ name: 'find', id: f.id })}>
-                  {stop && <span class="loc-stop" data-test="loc-stop">{stop}</span>}
-                  {/* The growth chip under the date, so his note keeps the line's width. */}
-                  <span class="loc-when">
-                    <span class="loc-date" title={sayWhen(f.at)}>{sayListWhen(f.at, now)}</span>
-                    <GrowthChip log={f.growth} now={now} />
-                  </span>
-                  <BadgeIcons badges={badgesOfFind(f)} size={26} />
-                  <span class={`loc-desc${line.described ? '' : ' none'}`}>{line.text}</span>
-                </a>
-                {f.spot && (
-                  <a class="loc-go" href={hrefFor({ name: 'find-go', id: f.id })} aria-label={`Take me there: ${findLabel(f, names)}`}
-                    onClick={askForCompassOnTap}>
-                    <Icon name="navigate" size={16} />Go
-                  </a>
-                )}
-              </div>
-            );
-          })}
+      {shown.length > 0 && (walk || filtered ? (
+        // A walk or a search: the list IS the answer, so it stays one open list (a walk in its stop order).
+        <div class="loc-list">{listed.map(row)}</div>
+      ) : (
+        // Otherwise a drawer per month, all closed until he opens one (Stefan 24/10/2026); every pin stays on the map.
+        <div class="loc-months" data-test="loc-months">
+          {byMonth(listed).map((m) => (
+            <details class="loc-month" data-test="loc-month" data-month={m.key} key={m.key} open={openMonths.has(m.key)}
+              onToggle={(e) => toggleMonth(m.key, (e.currentTarget as HTMLDetailsElement).open)}>
+              <summary><Icon name="chevron" size={18} /><span class="loc-month-name">{m.label}</span>
+                <span class="loc-month-count">{m.finds.length}</span></summary>
+              <div class="loc-list">{m.finds.map(row)}</div>
+            </details>
+          ))}
         </div>
-      )}
+      ))}
       {finds && <BackupSection b={backup} count={finds.length} finds={finds} />}
     </>
   );

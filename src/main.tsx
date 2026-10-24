@@ -7,6 +7,9 @@ import { listFinds, onFindsChanged } from './finds/store';
 import { resumeAfterClose } from './finds/track-recorder';
 import './styles.css';
 
+// An iPhone shows a button's pressed look (:active) only on a page that listens for touches: without this every tap
+// looked as if it had not landed (Stefan 24/10/2026, "it doesn't respond"). It does nothing else.
+document.addEventListener('touchstart', () => {}, { passive: true });
 render(<App />, document.getElementById('app')!);
 startUpdates();
 void keepData(); // ask once at start; About shows the answer

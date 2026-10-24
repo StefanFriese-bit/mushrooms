@@ -42,7 +42,7 @@ a { color: var(--link); }
 .at-home .app-header { padding-bottom: 18px; }
 .at-home .brand-mark { width: 42px; height: 42px; }
 .at-home .brand-name { font-size: 22px; }
-.head-button { flex: none; width: 40px; height: 40px; display: grid; place-items: center; border-radius: var(--radius);
+.head-button { flex: none; width: 44px; height: 44px; display: grid; place-items: center; border-radius: var(--radius);
   border: 1px solid rgba(255, 255, 255, .3); background: rgba(255, 255, 255, .1); color: #fff; }
 .head-button:active { background: rgba(255, 255, 255, .22); }
 main { padding: 14px 16px 28px; max-width: 720px; margin: 0 auto; }
@@ -144,7 +144,7 @@ a.row:active { background: var(--subtle); }
 .big-button:active { background: var(--accent-hover); }
 .big-button[disabled] { opacity: .6; }
 .big-button.wide { width: 100%; }
-.small-button { display: inline-flex; align-items: center; justify-content: center; gap: 6px; padding: 7px 12px;
+.small-button { display: inline-flex; align-items: center; justify-content: center; gap: 6px; min-height: 44px; padding: 7px 12px;
   font: inherit; font-size: 14px; font-weight: 600; border-radius: var(--radius); border: 1px solid var(--line);
   background: var(--surface); color: var(--fg); text-decoration: none; cursor: pointer; }
 .small-button:active { background: var(--subtle); }
@@ -265,11 +265,26 @@ a.result:active { background: var(--subtle); }
 .pin-pop-links { display: flex; align-items: center; gap: 12px; margin-top: 8px; }
 .pin-pop-go { background: var(--accent); color: #fff !important; padding: 5px 10px; border-radius: 6px; font-weight: 600; text-decoration: none; }
 .maplibregl-ctrl-attrib { font-size: 10px; }
+/* The map's own + / − / find-me buttons: 29 points as MapLibre draws them, too small for a thumb in the field. */
+.maplibregl-map .maplibregl-ctrl-group button { width: 40px; height: 40px; }
 
 /* View map: the saved locations, one line each — when, his note, and Go (Stefan 10/10/2026). */
 .loc-list { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; margin: 8px 0 16px; }
 .loc-line { display: flex; align-items: stretch; border-top: 1px solid var(--hairline); }
 .loc-line:first-child { border-top: 0; }
+/* The list under View map, a drawer per month (Stefan 24/10/2026): a header row with the month and how many, a tap opens it. */
+.loc-months { display: flex; flex-direction: column; gap: 8px; margin: 8px 0 16px; }
+.loc-month > summary { list-style: none; display: flex; align-items: center; gap: 8px; min-height: 48px; padding: 0 12px;
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); font-weight: 600; cursor: pointer;
+  -webkit-tap-highlight-color: transparent; touch-action: manipulation; }
+.loc-month > summary::-webkit-details-marker { display: none; }
+.loc-month > summary .icon, .loc-month > summary svg { flex: none; transition: transform .15s; color: var(--muted); }
+.loc-month[open] > summary svg { transform: rotate(90deg); }
+.loc-month[open] > summary { border-bottom-left-radius: 0; border-bottom-right-radius: 0; }
+.loc-month-name { flex: 1; }
+.loc-month-count { min-width: 26px; padding: 2px 8px; border-radius: 12px; background: var(--subtle); color: var(--muted);
+  font-size: 13px; text-align: center; font-variant-numeric: tabular-nums; }
+.loc-month > .loc-list { margin: 0; border-top: 0; border-top-left-radius: 0; border-top-right-radius: 0; }
 .loc-main { flex: 1; min-width: 0; display: flex; align-items: baseline; gap: 10px; min-height: 46px; padding: 12px; color: inherit; text-decoration: none; }
 .loc-main:active { background: var(--subtle); }
 .loc-when { flex: none; min-width: 86px; display: flex; flex-direction: column; align-items: flex-start; gap: 5px; }
@@ -298,7 +313,8 @@ a.result:active { background: var(--subtle); }
 .loc-go:active { background: var(--tab-line); }
 .find-filters { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; margin: 8px 0; }
 .find-filters .field { flex: 1 1 200px; margin: 0; }
-.find-filters .check { font-size: 15px; white-space: nowrap; }
+.find-filters .check { font-size: 15px; white-space: nowrap; min-height: 44px; display: inline-flex; align-items: center; gap: 8px; }
+.find-filters .check input { width: 20px; height: 20px; }
 .find-filters p { flex-basis: 100%; margin: 0; }
 .backup-actions { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
 .backup-actions .file-button { margin-top: 0; }
@@ -466,3 +482,13 @@ a.result:active { background: var(--subtle); }
 .where-map { margin-top: 0; }
 .save-row { margin: 10px 0 6px; }
 .more-title { margin-top: 22px; font-size: 17px; color: var(--muted); }
+
+/* Every tap in the field (Stefan 24/10/2026: "I try and go back or come out of the screen and it doesn't respond"). The
+   rules the Back button got on 14/10/2026, now on every button and link the app draws: no double-tap wait
+   (touch-action), no link preview or text selection on a firm press (touch-callout, user-select). Measured 24/10 on
+   the Map screens: only Back had them. Links inside a page's text (a species' sources) keep the iPhone's own
+   long-press menu. The pressed look (:active) shows on an iPhone only because main.tsx listens for touches. */
+a, button, summary, label, select, [role="button"] { touch-action: manipulation; -webkit-tap-highlight-color: transparent; }
+button, summary, [role="button"], .head-button, .brand, .tab-btn, .home-button, .choice-button, .big-button, .small-button,
+.loc-main, .loc-go, a.row, a.result, .choice, .badge-choice {
+  -webkit-touch-callout: none; -webkit-user-select: none; user-select: none; }
