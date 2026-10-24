@@ -407,7 +407,8 @@ a.result:active { background: var(--subtle); }
 /* The three pictures (src/finds/badges.ts): chosen above the description when saving, and drawn as the pin on the map. */
 .badge-icon { display: inline-block; flex: none; line-height: 0; }
 .badge-icon svg { width: 100%; height: 100%; }
-.badge-pick { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; }
+/* Five across: nine pictures in two rows, so Save stays on the first screen. */
+.badge-pick { display: grid; grid-template-columns: repeat(5, 1fr); gap: 5px; }
 .badge-choice { display: flex; flex-direction: column; align-items: center; gap: 3px; min-height: 76px; padding: 6px 2px; font: inherit;
   font-size: 12.5px; line-height: 1.15; font-weight: 600; text-align: center; border: 1px solid var(--line); border-radius: var(--radius);
   background: var(--surface); color: var(--fg); cursor: pointer; touch-action: manipulation; -webkit-tap-highlight-color: transparent; }

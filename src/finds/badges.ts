@@ -7,7 +7,7 @@
 // sets), so the map's species choice, the word search and the location's title all follow it. A location named any of
 // these three on its page gets the picture too.
 
-export type BadgeKey = 'penny-bun' | 'bay-bolete' | 'fly-agaric' | 'birch-bolete' | 'horn-of-plenty' | 'hedgehog' | 'winter-chanterelle' | 'parasol';
+export type BadgeKey = 'penny-bun' | 'bay-bolete' | 'fly-agaric' | 'birch-bolete' | 'horn-of-plenty' | 'hedgehog' | 'winter-chanterelle' | 'parasol' | 'cauliflower';
 export type Badge = { key: BadgeKey; name: string; species: string; alsoSpecies?: string[]; svg: string };
 
 // Drawn on a 32 × 32 square, in their own colours (they are pictures, not line icons). Plain constants: never built
@@ -92,6 +92,19 @@ const PARASOL = `<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" ari
 <path d="M15 23.6l1 .6 1-.6M15.1 26.2l.9.6 1-.6M15.2 28.6l.8.5.9-.5" stroke="#9c7d55" stroke-width=".6" fill="none"/>
 </svg>`;
 
+// Wood Cauliflower (Stefan 24/10/2026: "it should just look like a cauliflower"): a creamy white head of rounded florets
+// with green leaves curling up round its foot, as the vegetable.
+const CAULIFLOWER = `<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+<path d="M15 27Q6 24.5 2 12.5Q6.5 13 10 17.5Z" fill="#3f8a2e" stroke="#25601a" stroke-width=".9" stroke-linejoin="round"/>
+<path d="M17 27Q26 24.5 30 12.5Q25.5 13 22 17.5Z" fill="#3f8a2e" stroke="#25601a" stroke-width=".9" stroke-linejoin="round"/>
+<path d="M5 19.5Q3.4 16.6 5.6 14.6Q5.2 11 8.6 10.2Q8.8 6.6 12.4 6.6Q13.6 3.6 16 3.6Q18.4 3.6 19.6 6.6Q23.2 6.6 23.4 10.2Q26.8 11 26.4 14.6Q28.6 16.6 27 19.5Z" fill="#f8f2df" stroke="#b5a06c" stroke-width="1" stroke-linejoin="round"/>
+<g fill="none" stroke="#cdbb86" stroke-width=".8" stroke-linecap="round"><path d="M8.6 10.2Q10.8 11.6 11.6 14.6M12.4 6.6Q14.6 8.4 14.8 11.2M19.6 6.6Q17.4 8.4 17.2 11.2M23.4 10.2Q21.2 11.6 20.4 14.6M5.6 14.6Q7.8 15.4 8.6 17.6M26.4 14.6Q24.2 15.4 23.4 17.6M11.6 14.6Q13.6 13.2 16 13.4Q18.4 13.2 20.4 14.6M14.8 11.2Q16 10.2 17.2 11.2"/></g>
+<g fill="#e4d6aa"><circle cx="10.4" cy="8.8" r=".6"/><circle cx="16" cy="6.6" r=".6"/><circle cx="21.6" cy="8.8" r=".6"/><circle cx="7.6" cy="13" r=".55"/><circle cx="24.4" cy="13" r=".55"/><circle cx="13.6" cy="16.4" r=".55"/><circle cx="18.4" cy="16.4" r=".55"/><circle cx="16" cy="11.8" r=".5"/></g>
+<path d="M16 29.6Q9 28.4 4.6 18.6Q8.6 18.2 12 20.6Q14.4 23.4 16 29.6Z" fill="#5aa840" stroke="#25601a" stroke-width=".9" stroke-linejoin="round"/>
+<path d="M16 29.6Q23 28.4 27.4 18.6Q23.4 18.2 20 20.6Q17.6 23.4 16 29.6Z" fill="#5aa840" stroke="#25601a" stroke-width=".9" stroke-linejoin="round"/>
+<path d="M15.6 28.8Q11 24.6 6.6 19.6M16.4 28.8Q21 24.6 25.4 19.6" stroke="#bfe0a6" stroke-width=".8" fill="none" stroke-linecap="round"/>
+</svg>`;
+
 export const BADGES: readonly Badge[] = [
   { key: 'penny-bun', name: 'Penny Bun', species: 'Boletus edulis', svg: PENNY_BUN },
   { key: 'bay-bolete', name: 'Bay Bolete', species: 'Imleria badia', svg: BAY_BOLETE },
@@ -103,6 +116,8 @@ export const BADGES: readonly Badge[] = [
   // The guide calls it Trumpet Chanterelle (Craterellus tubaeformis); he calls it the Winter Chanterelle.
   { key: 'winter-chanterelle', name: 'Winter Chanterelle', species: 'Craterellus tubaeformis', svg: WINTER_CHANTERELLE },
   { key: 'parasol', name: 'Parasol', species: 'Macrolepiota procera', svg: PARASOL },
+  // The guide calls it Wood Cauliflower; he calls it the cauliflower mushroom.
+  { key: 'cauliflower', name: 'Cauliflower', species: 'Sparassis crispa', svg: CAULIFLOWER },
 ];
 
 /** The picture for a location's species, or null when it is none of the three (or not named yet). */
@@ -128,6 +143,8 @@ const NAMES_IN_WORDS: Record<BadgeKey, string[][]> = {
   'hedgehog': [['hedgehog'], ['hydnum']],
   // Not "yellowleg": the Yellowleg Bonnet is another mushroom altogether.
   'parasol': [['parasol'], ['macrolepiota', 'procera']],
+  // "Cauliflower" alone is how he wrote his four saves of 22–23/10/2026.
+  'cauliflower': [['cauliflower'], ['sparassis', 'crispa']],
   'winter-chanterelle': [['winter', 'chanterelle'], ['trumpet', 'chanterelle'], ['yellowfoot'], ['craterellus', 'tubaeformis']],
 };
 /** Names that contain a picture's name but are another mushroom: the Shaggy Parasol is not the Parasol. */

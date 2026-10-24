@@ -70,4 +70,11 @@ describe('a saved location\'s picture', () => {
     expect(badgeFromWords('shaggy parasol')).toBeNull();
     expect(badgeFromWords('Chlorophyllum, the shaggy parasol')).toBeNull();
   });
+  it('Cauliflower: his four saves of 22–23/10/2026 ("Cauliflower", no species) take the picture (Stefan 24/10/2026)', () => {
+    expect(keys({ species: null, notes: 'Cauliflower' })).toEqual(['cauliflower']);
+    expect(keys({ species: 'Sparassis crispa', notes: '' })).toEqual(['cauliflower']);
+    expect(badgeFromWords('Wood cauliflower under the pines')?.key).toBe('cauliflower');
+    expect(badgeFromWords('Sparassis crispa')?.key).toBe('cauliflower');
+    expect(badgeFromWords('Cauli')).toBeNull();
+  });
 });
