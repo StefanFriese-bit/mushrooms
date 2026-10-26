@@ -592,7 +592,18 @@ test.describe('Map', () => {
     await context.setGeolocation({ latitude: spot.lat - 0.00036, longitude: spot.lon, accuracy: 5 }); // 40 m south of it
     await page.locator('[data-test=find-again]').click();
     await expect(page.locator('[data-test=map-pin][data-badge=penny-bun]')).toBeVisible();
-    // A hand-held phone: 60 readings a second, wandering a few degrees. The first one brings "North at the top" — once.
+    // The compass's first reading brings "North at the top" — once. Only after that does the counting start.
+    await expect(async () => {
+      await page.evaluate(() => {
+        for (const type of ['deviceorientation', 'deviceorientationabsolute']) {
+          const e = new Event(type);
+          Object.assign(e, { alpha: 272, webkitCompassHeading: 88, webkitCompassAccuracy: 10 });
+          window.dispatchEvent(e);
+        }
+      });
+      await expect(page.locator('[data-test=map-turn]')).toBeVisible({ timeout: 500 });
+    }).toPass({ timeout: 10000 });
+    // A hand-held phone: 60 readings a second, wandering a few degrees.
     const added = await page.evaluate(async () => {
       const send = (d: number) => {
         for (const type of ['deviceorientation', 'deviceorientationabsolute']) {
@@ -601,8 +612,6 @@ test.describe('Map', () => {
           window.dispatchEvent(e);
         }
       };
-      send(88);
-      await new Promise((r) => setTimeout(r, 500));
       const seen: string[] = [];
       const watch = new MutationObserver((list) => {
         for (const m of list) for (const n of m.addedNodes) {
