@@ -572,6 +572,68 @@ test.describe('Map', () => {
     await expect(page.getByText('This phone gives no compass, so the dial shows north at the top, like a map.')).toHaveCount(0);
   });
 
+  test('Take me there keeps every button tappable while the compass runs: no new button appears with each reading', async ({ page, context }) => {
+    // Stefan 26/10/2026: "none of the buttons in that page work, so i always have to cancel the app and then restart".
+    // The map pin was rebuilt on every compass reading — a new button on the page 60 times a second — and an iPhone drops
+    // a tap while new buttons keep appearing (it takes it for a "hover" that opened a menu). These test engines do not drop
+    // the tap, so what is checked is the cause: with the compass running, nothing new that can be tapped is put on the page.
+    await page.addInitScript(() => {
+      const w = window as unknown as Record<string, any>;
+      const DOE = w.DeviceOrientationEvent ?? function DeviceOrientationEvent() {};
+      DOE.requestPermission = () => Promise.resolve('granted');
+      w.DeviceOrientationEvent = DOE;
+    });
+    const spot = { lat: 51.6588, lon: 0.0466 };
+    await page.goto(`${site.url}#/finds/new`);
+    await expect(page.locator('[data-test=where]')).toContainText('within 7 m', { timeout: 15000 });
+    await page.getByLabel('Description').fill('Penny bun by the oak');
+    await page.getByRole('button', { name: 'Save location' }).click();
+    await expect(page.getByRole('heading', { name: 'Penny bun by the oak', exact: true })).toBeVisible();
+    await context.setGeolocation({ latitude: spot.lat - 0.00036, longitude: spot.lon, accuracy: 5 }); // 40 m south of it
+    await page.locator('[data-test=find-again]').click();
+    await expect(page.locator('[data-test=map-pin][data-badge=penny-bun]')).toBeVisible();
+    // A hand-held phone: 60 readings a second, wandering a few degrees. The first one brings "North at the top" — once.
+    const added = await page.evaluate(async () => {
+      const send = (d: number) => {
+        for (const type of ['deviceorientation', 'deviceorientationabsolute']) {
+          const e = new Event(type);
+          Object.assign(e, { alpha: (360 - d) % 360, webkitCompassHeading: d, webkitCompassAccuracy: 10 });
+          window.dispatchEvent(e);
+        }
+      };
+      send(88);
+      await new Promise((r) => setTimeout(r, 500));
+      const seen: string[] = [];
+      const watch = new MutationObserver((list) => {
+        for (const m of list) for (const n of m.addedNodes) {
+          if (n instanceof Element && (n.matches('a, button, summary') || n.querySelector('a, button, summary'))) seen.push(n.outerHTML.slice(0, 80));
+        }
+      });
+      watch.observe(document.body, { subtree: true, childList: true });
+      await new Promise<void>((done) => {
+        let i = 0;
+        const t = setInterval(() => { send(88 + Math.sin(i / 5) * 4); if (++i >= 120) { clearInterval(t); done(); } }, 1000 / 60);
+      });
+      await new Promise((r) => setTimeout(r, 100));
+      watch.disconnect();
+      return seen;
+    });
+    expect(added).toEqual([]);
+    await expect(page.locator('[data-test=map-pin]')).toHaveCount(1);
+    // And the way out answers while the compass is still going.
+    const going = await page.evaluateHandle(() => {
+      let i = 0;
+      return setInterval(() => {
+        const e = new Event('deviceorientation');
+        Object.assign(e, { alpha: 270, webkitCompassHeading: 90 + (i++ % 2) * 5, webkitCompassAccuracy: 10 });
+        window.dispatchEvent(e);
+      }, 1000 / 60);
+    });
+    await page.locator('[data-test=back-link]').click();
+    await expect(page.getByRole('heading', { name: 'View map' })).toBeVisible();
+    await page.evaluate((t) => clearInterval(t), going);
+  });
+
   test('a walk round the ones he is looking for: planned from where he stands, numbered on the map, walked stop to stop', async ({ page, context }, info) => {
     // Stefan 13/10/2026: "select the mushroom to look for, in this case the penny bun, and then have the map plot out
     // a walk from where I start hitting each location in a logical way".

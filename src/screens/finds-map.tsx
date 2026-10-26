@@ -176,6 +176,12 @@ export function FindsMap({ pins = [], locate = false, pick, here = null, tall = 
   const [turnedTo, setTurnedTo] = useState(0);
   /** How many points of the planned walk are really on the map — read back, not what it was asked to draw. */
   const [drawn, setDrawn] = useState(0);
+  // The pins by what they say, never by the list they arrive in. ⚠ Take me there hands over a new list on every compass
+  // reading (60 a second), and each new list used to rebuild the pin: a new button on the page 60 times a second. An
+  // iPhone drops a tap while new buttons keep appearing (it takes the tap for a "hover" that opened a menu — WebKit's
+  // ContentChangeObserver), so NO button on that screen answered and he had to close the app (Stefan 26/10/2026, the
+  // third report: 14/10 "sticky", 24/10 "doesn't respond"). Rebuilt only when a pin really changes.
+  const pinsKey = JSON.stringify(pins);
 
   useEffect(() => {
     let gone = false;
@@ -308,7 +314,7 @@ export function FindsMap({ pins = [], locate = false, pick, here = null, tall = 
         m.fitBounds([[Math.min(...lons), Math.min(...lats)], [Math.max(...lons), Math.max(...lats)]], { padding: 50, maxZoom: 18, duration: 0 });
       }
     }
-  }, [ready, pins]);
+  }, [ready, pinsKey]);
 
   // How exact each spot is: a circle round each find and round where he is now.
   useEffect(() => {
@@ -318,7 +324,7 @@ export function FindsMap({ pins = [], locate = false, pick, here = null, tall = 
     if (here) next.push({ ring: circleRing(here, here.accuracy), kind: 'here' });
     rings.current = next;
     if (m.isStyleLoaded()) drawRings(m, next); // otherwise the style's own load draws them
-  }, [ready, pins, here?.lat, here?.lon, here?.accuracy]);
+  }, [ready, pinsKey, here?.lat, here?.lon, here?.accuracy]);
 
   // Where he is now: a dot; the first time it is known, the map frames him and the find(s) together.
   useEffect(() => {
